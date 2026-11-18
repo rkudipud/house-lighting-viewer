@@ -1,0 +1,2 @@
+{ cos^m intensity about aim (A1,A2,A3); A4 = m. Ray direction points toward the source. }
+cosm = if(-(Dx*A1+Dy*A2+Dz*A3), (-(Dx*A1+Dy*A2+Dz*A3))^(A4-1), 0);

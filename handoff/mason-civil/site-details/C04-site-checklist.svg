@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1415" viewBox="0 0 1700 1415" role="img" aria-labelledby="t d">
+<title id="t">Site checklist — each floor separately</title>
+<desc id="d">Review is complete without inventing field measurements</desc>
+<metadata>{&quot;sheet&quot;:&quot;C04-site-checklist&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;construction_release&quot;:false}</metadata>
+<defs>
+<pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
+<pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
+<pattern id="loft" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#f2f0f8"/><path d="M0 0V.08" stroke="#b9b1d3" stroke-width=".010"/></pattern>
+<pattern id="beam" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#ecd9bd"/><path d="M0 0V.08" stroke="#c49a5c" stroke-width=".012"/></pattern>
+<pattern id="feature" width=".06" height=".06" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width=".06" height=".06" fill="#bfe0dc"/><path d="M0 0V.06" stroke="#5aa39b" stroke-width=".012"/></pattern>
+<pattern id="plain" width=".15" height=".15" patternUnits="userSpaceOnUse"><rect width=".15" height=".15" fill="#f3f6f6"/><path d="M0 0H.15V.15" fill="none" stroke="#d6dfdf" stroke-width=".006"/></pattern>
+<pattern id="nowall" width=".12" height=".12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".12" height=".12" fill="#fafafa"/><path d="M0 0V.12" stroke="#d9d9d9" stroke-width=".008"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#466c92"/></marker>
+</defs>
+<style>text{font-family:"Segoe UI",Arial,sans-serif;fill:#203b43}
+.mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
+.title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
+.halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
+<rect width="1700" height="1415" fill="#fcfdfc"/>
+<text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Site checklist — each floor separately</text>
+<text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >Civil coordination · review only · all site dimensions require verification</text>
+<text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 4 / 4</text>
+<text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<path d="M60 116H1640" stroke="#c8d2d3"/>
+<text x="75.00" y="165.00" font-size="18" class="sect" text-anchor="start" >COPY FOR EACH STOREY</text>
+<text x="75.00" y="195.00" font-size="16" class="red" text-anchor="start" >Master instances F1-F4 are placeholders: actual G / 1 / 2 / 3 labels and floor differences are not confirmed.</text>
+<text x="75.00" y="222.00" font-size="16" class="muted" text-anchor="start" >Actual storey: __________________   Date: __________   Surveyed by: __________________</text>
+<rect x="75" y="260" width="740" height="420" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="93.00" y="290.00" font-size="18" class="sect" text-anchor="start" >MASON / SITE SURVEY</text>
+<text x="93.00" y="325.00" font-size="15" class="" text-anchor="start" >Record room internal dimensions, wall thicknesses, openings, lintel/sill/head heights and</text>
+<text x="93.00" y="347.00" font-size="15" class="" text-anchor="start" >door swings; photograph and label each room.</text>
+<text x="93.00" y="382.00" font-size="15" class="" text-anchor="start" >Reconcile dining 110.6 mm, living 145.1 mm and master 41.1 mm model assembly residuals.</text>
+<text x="93.00" y="404.00" font-size="15" class="" text-anchor="start" >These are not measured gaps; do not fill or move walls from the model.</text>
+<text x="93.00" y="439.00" font-size="15" class="" text-anchor="start" >Confirm actual D01 leaf count, W03 offsets, W05 size, both toilet hinges and utility</text>
+<text x="93.00" y="461.00" font-size="15" class="" text-anchor="start" >parapet / corner height.</text>
+<rect x="865" y="260" width="760" height="420" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="883.00" y="290.00" font-size="18" class="sect" text-anchor="start" >CEILING / JOINERY</text>
+<text x="883.00" y="325.00" font-size="15" class="" text-anchor="start" >Survey FFL, slab underside, band, centre-panel level, beam soffit and bath / utility / lobby</text>
+<text x="883.00" y="347.00" font-size="15" class="" text-anchor="start" >ceilings; record measured floor-finish and slab thickness.</text>
+<text x="883.00" y="382.00" font-size="15" class="" text-anchor="start" >Mock up curtain pocket, two tracks, brackets, stack and the selected profile; MBR-S / CBR</text>
+<text x="883.00" y="404.00" font-size="15" class="" text-anchor="start" >modeled returns cross room boundaries, so coordinate actual ends.</text>
+<text x="883.00" y="439.00" font-size="15" class="" text-anchor="start" >Measure wardrobe, loft soffit / depth and shutter clearance. Keep the approved split layout</text>
+<text x="883.00" y="461.00" font-size="15" class="" text-anchor="start" >in principle; do not fabricate placeholder dimensions.</text>
+<text x="883.00" y="496.00" font-size="15" class="" text-anchor="start" >Dressing cabinet ST-R04a-WR01: measure clear width and door / route clearance (FH-ST-03).</text>
+<text x="883.00" y="518.00" font-size="15" class="" text-anchor="start" >Utility cabinet ST-R08-UC01: measure geometry and service access (FH-ST-12). Both selections</text>
+<text x="883.00" y="540.00" font-size="15" class="" text-anchor="start" >remain conditional.</text>
+<rect x="75" y="715" width="740" height="430" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="93.00" y="745.00" font-size="18" class="sect" text-anchor="start" >ELECTRICIAN / LIGHTING</text>
+<text x="93.00" y="780.00" font-size="15" class="" text-anchor="start" >Fixed CCT is assigned by fitting; coves and the four selected S1 strips are 2700 K. LOW</text>
+<text x="93.00" y="802.00" font-size="15" class="" text-anchor="start" >mood and HIGH general use local controls.</text>
+<text x="93.00" y="837.00" font-size="15" class="" text-anchor="start" >CBR-H1-H6 are active/switchable at accepted positions. C37 dimmer and the exact fitting /</text>
+<text x="93.00" y="859.00" font-size="15" class="" text-anchor="start" >driver / control chain are procurement holds, not construction release.</text>
+<text x="93.00" y="894.00" font-size="15" class="" text-anchor="start" >Confirm supply access, cable routes, wet-zone protection, product fit and each pocket</text>
+<text x="93.00" y="916.00" font-size="15" class="" text-anchor="start" >mock-up. W03 strip is held; pooja lights are allowances only.</text>
+<text x="93.00" y="951.00" font-size="15" class="" text-anchor="start" >Living LOW uses one selected P01 supply concept (24 V, 480 W nameplate); no product is</text>
+<text x="93.00" y="973.00" font-size="15" class="" text-anchor="start" >approved. The 20 A supply reference exceeds a candidate controller input of 12.5 A. Hold</text>
+<text x="93.00" y="995.00" font-size="15" class="" text-anchor="start" >controller / repeater, distribution, branch protection and inrush for electrical design.</text>
+<rect x="865" y="715" width="760" height="430" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="883.00" y="745.00" font-size="18" class="sect" text-anchor="start" >STRUCTURAL / SITE PROFESSIONAL</text>
+<text x="883.00" y="780.00" font-size="15" class="" text-anchor="start" >Review stair rise, going, landings, headroom and guard against applicable local requirements</text>
+<text x="883.00" y="802.00" font-size="15" class="" text-anchor="start" >on every storey.</text>
+<text x="883.00" y="837.00" font-size="15" class="" text-anchor="start" >Verify existing niche extension, platform fixing, fire clearance, load capacity and loft</text>
+<text x="883.00" y="859.00" font-size="15" class="" text-anchor="start" >supports; no new cutting or deepening authorised.</text>
+<text x="883.00" y="894.00" font-size="15" class="" text-anchor="start" >Measure actual tenant bed frame and study return: the 387.6 mm R05 model pinch is not a</text>
+<text x="883.00" y="916.00" font-size="15" class="" text-anchor="start" >comfortable route. Keep selected layout; escalate only with measured consequences.</text>
+<text x="75.00" y="1200.00" font-size="18" class="sect" text-anchor="start" >OPEN HOMEOWNER DESIGN CHOICE VS SITE / PROFESSIONAL HOLD</text>
+<text x="75.00" y="1232.00" font-size="15" class="" text-anchor="start" >Open design choice recorded in the master: pooja niche back / base finish. Small idols with a framed picture behind and the approximate platform intent are already selected; exact placement is</text>
+<text x="75.00" y="1254.00" font-size="15" class="" text-anchor="start" >a site coordination matter.</text>
+<text x="75.00" y="1285.00" font-size="15" class="" text-anchor="start" >Do not re-ask the HD-15 furniture layout, the four S1 strips, fixed CCT, CBR-H1-H6 or the split-wardrobe concept. Measurements, code compliance, product compatibility, capacities and formal</text>
+<text x="75.00" y="1307.00" font-size="15" class="" text-anchor="start" >professional approvals remain open.</text>
+<path d="M60 1376H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="1398.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="1640.00" y="1398.00" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+</svg>

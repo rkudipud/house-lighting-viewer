@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950">
+<rect width="1400" height="950" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#172b39} .dim{fill:#785718}</style>
+<text x="45.00" y="49.00" font-size="27" text-anchor="start" style="fill:#172b39;font-weight:bold">R08 UTILITY | unit plan + elevation</text>
+<text x="45.00" y="80.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">Cabinet envelopes only; not a room floorplan or approval of wall/door locations.</text>
+<line x1="45.00" y1="97.00" x2="1355.00" y2="97.00" stroke="#264d60" stroke-width="2"/>
+<text x="45.00" y="918.00" font-size="17" text-anchor="start" style="fill:#a13e2c;font-weight:normal">HOMEOWNER REVIEW ONLY | dimensions in metres | NOT FOR FABRICATION | all joinery sizes unmeasured proposals</text>
+<text x="100.00" y="145.00" font-size="19" text-anchor="start" style="fill:#172b39;font-weight:bold">UNIT PLAN</text>
+<rect x="100.00" y="285.00" width="300.24" height="148.77" fill="#edf3f3" stroke="#264d60" stroke-width="2" stroke-dasharray="8 5"/>
+<line x1="100.00" y1="255.00" x2="400.24" y2="255.00" stroke="#92712c" stroke-width="2"/>
+<line x1="100.00" y1="249.00" x2="100.00" y2="261.00" stroke="#92712c" stroke-width="2"/>
+<line x1="400.24" y1="249.00" x2="400.24" y2="261.00" stroke="#92712c" stroke-width="2"/>
+<text x="250.12" y="245.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:normal">1.112 proposed</text>
+<text x="100.00" y="468.77" font-size="17" text-anchor="start" style="fill:#172b39;font-weight:normal">Depth 0.551 proposed</text>
+<text x="710.00" y="145.00" font-size="19" text-anchor="start" style="fill:#172b39;font-weight:bold">FRONT ELEVATION</text>
+<rect x="710.00" y="566.00" width="172.36" height="124.00" fill="#edf3f3" stroke="#264d60" stroke-width="2" stroke-dasharray="8 5"/>
+<rect x="710.00" y="232.75" width="172.36" height="162.75" fill="none" stroke="#a172a5" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="796.18" y="314.12" font-size="16" text-anchor="middle" style="fill:#172b39;font-weight:normal">LOFT TBD</text>
+<text x="100.00" y="525.00" font-size="17" text-anchor="start" style="fill:#172b39;font-weight:normal">Reference loft vertical range 1.90-2.95: UNMEASURED.</text>
+<text x="100.00" y="565.00" font-size="17" text-anchor="start" style="fill:#172b39;font-weight:normal">Under-counter SELECTED; loft shutters are required ancillary.</text>
+<text x="45.00" y="785.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">LF01: 1.112 x 0.551 m plan; y=1.90-2.95 m reference. UC01: same plan, height 0.80 m proposed.</text>
+<text x="45.00" y="809.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">LD01 hooks / ladder / mop strip: 0.560 x 0.150 m, y=0.10-1.55 m; locate after D06 swing check.</text>
+<text x="45.00" y="833.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">The kitchen-to-south utility wall stays straight: no new enclosing return is drawn or authorised.</text>
+<text x="45.00" y="857.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">Utility measured-label / inferred-model scope mismatch remains open; cabinet and loft support not surveyed.</text>
+<line x1="710.00" y1="733.00" x2="882.36" y2="733.00" stroke="#92712c" stroke-width="2"/>
+<line x1="710.00" y1="727.00" x2="710.00" y2="739.00" stroke="#92712c" stroke-width="2"/>
+<line x1="882.36" y1="727.00" x2="882.36" y2="739.00" stroke="#92712c" stroke-width="2"/>
+<text x="796.18" y="723.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:normal">1.112; height 0.80</text>
+<text x="45.00" y="943.00" font-size="12" text-anchor="start" style="fill:#172b39;font-weight:normal">Master b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+</svg>

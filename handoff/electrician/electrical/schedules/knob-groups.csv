@@ -1,0 +1,22 @@
+﻿knob,room,board,label,circuits,supplies,model_W,modeled_outputs,modeled_repeaters,status
+K-LIV-LOW,LIV,SB-01,Living LOW: tray cove + TV bias + hall line,C03; C04; C05; X-CURT-LIV,P01,181.52,6,2,HOLD - exact chain / product / site
+K-LIV-POOJA-STRIP,LIV,SB-01,"Pooja niche strip (own knob, homeowner decision)",C06A,P04,21.72,1,0,HOLD - exact chain / product / site
+K-LIV-POOJA-SPOT,LIV,SB-01,Pooja pin spot (own knob: the shadow-casting source must be dimmable/off alone),C06B,P04,6,1,0,HOLD - exact chain / product / site
+K-BAL-HIGH,BAL,SB-01,Balcony HIGH,C07,P05,12,1,0,HOLD - exact chain / product / site
+K-BAL-LOW,BAL,SB-01,Balcony LOW mood,C08,P05,26.65,1,0,HOLD - exact chain / product / site
+K-DIN-PASSAGE,DIN,SB-02,Dining passage downlight (stays dimmable: homeowner rule),C10,P06,8,1,0,HOLD - exact chain / product / site
+K-DIN-LOW,DIN,SB-02,Dining LOW cove,C12; X-CURT-DIN,P07,69.28,2,0,HOLD - exact chain / product / site
+K-KIT-TASK,KIT,SB-03,Kitchen under-cabinet + sink-end task,C16,P10,31.8,1,0,HOLD - exact chain / product / site
+K-KIT-LOW,KIT,SB-03,Kitchen LOW cove,C17,P08,70.56,2,0,HOLD - exact chain / product / site
+K-UTL-TASK,UTL,SB-04,Utility wash-counter task,C19,P11,11.0,1,0,HOLD - exact chain / product / site
+K-MBR-LOW,MBR,SB-05,Master LOW: tray cove + headboard line + mood,C21; C22; C23; X-CURT-MBR-S,P12,110.24,4,1,HOLD - exact chain / product / site
+K-DRS-HIGH,DRS,SB-06,Dressing HIGH,C27,P14,14,1,0,HOLD - exact chain / product / site
+K-TL1-HIGH,TL1,SB-06B,Bath 1 HIGH: ceiling spots + vanity pair,C28; C29A,P14,43,2,0,HOLD - exact chain / product / site
+K-TL1-FACE,TL1,SB-06B,Bath 1 face pair (HD-17 independent knob),C29B,P14,10,1,0,HOLD - exact chain / product / site
+K-TL1-LOW,TL1,SB-06B,Bath 1 LOW: perimeter + mood,C30A; C30B,P14,39.12,2,0,HOLD - exact chain / product / site
+K-LOB,LOB,SB-07,Lobby HIGH + face bar,C31; C32,P15,24,2,0,HOLD - exact chain / product / site
+K-TL2-HIGH,TL2,SB-07B,Bath 2 HIGH: ceiling spots + vanity pair,C34; C35A,P15,43,2,0,HOLD - exact chain / product / site
+K-TL2-FACE,TL2,SB-07B,Bath 2 face pair (HD-17 independent knob),C35B,P15,10,1,0,HOLD - exact chain / product / site
+K-TL2-LOW,TL2,SB-07B,Bath 2 LOW: perimeter + mood,C36A; C36B,P15,39.12,2,0,HOLD - exact chain / product / site
+K-CBR-STUDY,CBR,SB-08,Children's study task,C38,P16,15.96,1,0,HOLD - exact chain / product / site
+K-CBR-LOW,CBR,SB-08,Children's LOW: tray cove + line,C39; C40; X-CURT-CBR,P16,105.04,3,0,HOLD - exact chain / product / site

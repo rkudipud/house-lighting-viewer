@@ -1,0 +1,2595 @@
+{
+  "circuits": [
+    {
+      "circuit": "C01",
+      "board": "SB-01",
+      "lane": "HIGH",
+      "rooms": [
+        "LIV"
+      ],
+      "fixtures": [
+        "LIV-H1",
+        "LIV-H2",
+        "LIV-H3",
+        "LIV-H4",
+        "LIV-H5"
+      ],
+      "n_fixtures": 5,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 40,
+      "W_envelope": 40,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "OPT-1 regroup: window half of the living room (window line LIV-H1..H4 + LIV-H5); 40 W / 5 lamps",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C02",
+      "board": "SB-01",
+      "lane": "HIGH",
+      "rooms": [
+        "LIV"
+      ],
+      "fixtures": [
+        "LIV-H6",
+        "LIV-H7",
+        "LIV-H8",
+        "LIV-H9",
+        "LIV-H10"
+      ],
+      "n_fixtures": 5,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 40,
+      "W_envelope": 40,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "OPT-1 regroup: TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10); 40 W / 5 lamps; DL8 and DL8A heads on one dimmer need the same driver family",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C03",
+      "board": "SB-01",
+      "lane": "COVE",
+      "rooms": [
+        "LIV"
+      ],
+      "fixtures": [
+        "LIV-L1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P01"
+      ],
+      "sections": 2,
+      "W_nominal": 92.24,
+      "W_envelope": 92.24,
+      "A_per_channel": 1.92,
+      "knob_group": "K-LIV-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "2 sections on 2 knob outputs (1.92 A each, 3.84 A total) from ONE PSU P01",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 80.0,
+      "switches": 0,
+      "switch_positions": [],
+      "supply_selection_status": "HOMEOWNER_SELECTED_P01_480W_REFERENCE; product, distribution and protection held"
+    },
+    {
+      "circuit": "C04",
+      "board": "SB-01",
+      "lane": "MOOD",
+      "rooms": [
+        "LIV"
+      ],
+      "fixtures": [
+        "LIV-L2"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P01"
+      ],
+      "sections": 1,
+      "W_nominal": 10.08,
+      "W_envelope": 10.08,
+      "A_per_channel": 0.42,
+      "knob_group": "K-LIV-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "TV bias light",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 17.5,
+      "switches": 0,
+      "switch_positions": [],
+      "supply_selection_status": "HOMEOWNER_SELECTED_P01_480W_REFERENCE; product, distribution and protection held"
+    },
+    {
+      "circuit": "C05",
+      "board": "SB-01",
+      "lane": "LINE",
+      "rooms": [
+        "DIN",
+        "LIV"
+      ],
+      "fixtures": [
+        "LIV-X1",
+        "LIV-X2",
+        "DIN-X1"
+      ],
+      "n_fixtures": 3,
+      "control": "KNOB1",
+      "psu": [
+        "P01"
+      ],
+      "sections": 2,
+      "W_nominal": 59.6,
+      "W_envelope": 59.6,
+      "A_per_channel": 1.24,
+      "knob_group": "K-LIV-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "hall linear; load split over 2 knob outputs",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 51.7,
+      "switches": 0,
+      "switch_positions": [],
+      "supply_selection_status": "HOMEOWNER_SELECTED_P01_480W_REFERENCE; product, distribution and protection held"
+    },
+    {
+      "circuit": "C06A",
+      "board": "SB-01",
+      "lane": "ACCENT",
+      "rooms": [
+        "LIV"
+      ],
+      "fixtures": [
+        "LIV-P1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P04"
+      ],
+      "sections": 1,
+      "W_nominal": 21.72,
+      "W_envelope": 21.72,
+      "A_per_channel": 0.9,
+      "knob_group": "K-LIV-POOJA-STRIP",
+      "cct": [
+        "2700K"
+      ],
+      "note": "pooja niche strip - own knob (user decision)",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 37.5,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C06B",
+      "board": "SB-01",
+      "lane": "ACCENT",
+      "rooms": [
+        "LIV"
+      ],
+      "fixtures": [
+        "LIV-P2"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P04"
+      ],
+      "sections": 1,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "A_per_channel": 0.25,
+      "knob_group": "K-LIV-POOJA-SPOT",
+      "cct": [
+        "2700K"
+      ],
+      "note": "pooja pin-spot - own knob",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 10.4,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C07",
+      "board": "SB-01",
+      "lane": "HIGH",
+      "rooms": [
+        "BAL"
+      ],
+      "fixtures": [
+        "BAL-H1",
+        "BAL-H2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P05"
+      ],
+      "sections": 1,
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "A_per_channel": 0.5,
+      "knob_group": "K-BAL-HIGH",
+      "cct": [
+        "3000K"
+      ],
+      "note": "balcony cylinders",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 20.8,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C08",
+      "board": "SB-01",
+      "lane": "MOOD",
+      "rooms": [
+        "BAL"
+      ],
+      "fixtures": [
+        "BAL-L1",
+        "BAL-L2",
+        "BAL-L3"
+      ],
+      "n_fixtures": 3,
+      "control": "KNOB1",
+      "psu": [
+        "P05"
+      ],
+      "sections": 1,
+      "W_nominal": 26.65,
+      "W_envelope": 26.65,
+      "A_per_channel": 1.11,
+      "knob_group": "K-BAL-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "balcony plinth + up-down",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        12.75,
+        42.0
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 46.3,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C09",
+      "board": "SB-02",
+      "lane": "HIGH",
+      "rooms": [
+        "DIN"
+      ],
+      "fixtures": [
+        "DIN-H1",
+        "DIN-H2",
+        "DIN-H3"
+      ],
+      "n_fixtures": 3,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 30,
+      "W_envelope": 30,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        15.95,
+        22.05
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C10",
+      "board": "SB-02",
+      "lane": "HIGH",
+      "rooms": [
+        "DIN"
+      ],
+      "fixtures": [
+        "DIN-H6"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P06"
+      ],
+      "sections": 1,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "A_per_channel": 0.33,
+      "knob_group": "K-DIN-PASSAGE",
+      "cct": [
+        "3000K"
+      ],
+      "note": "passage; PSU mains 2-way SB-02/SB-07 (concept), knob level at SB-02",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        15.95,
+        22.05
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 13.8,
+      "switches": 2,
+      "switch_positions": [
+        "SB-02",
+        "SB-07"
+      ]
+    },
+    {
+      "circuit": "C11",
+      "board": "SB-02",
+      "lane": "MOOD",
+      "rooms": [
+        "DIN"
+      ],
+      "fixtures": [
+        "DIN-L1"
+      ],
+      "n_fixtures": 1,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "2700K"
+      ],
+      "note": "pendant; 12 W is below many dimmers' minimum load - pick a dimmer listed for it",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        15.95,
+        22.05
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C12",
+      "board": "SB-02",
+      "lane": "COVE",
+      "rooms": [
+        "DIN"
+      ],
+      "fixtures": [
+        "DIN-L2"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P07"
+      ],
+      "sections": 1,
+      "W_nominal": 49.68,
+      "W_envelope": 49.68,
+      "A_per_channel": 2.07,
+      "knob_group": "K-DIN-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        15.95,
+        22.05
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 86.2,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C13",
+      "board": "SB-02",
+      "lane": "ACCENT",
+      "rooms": [
+        "DIN"
+      ],
+      "fixtures": [
+        "FW-T1",
+        "FW-T2",
+        "FW-T3",
+        "FW-T4"
+      ],
+      "n_fixtures": 4,
+      "control": "TRK",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 26,
+      "W_envelope": 26,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "48 V track driver + dimmer listed by the track maker",
+      "control_device": "48 V track driver + dimmer listed by the track maker",
+      "dimming": "per track maker",
+      "board_xz_ft": [
+        15.95,
+        22.05
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C14",
+      "board": "SB-03",
+      "lane": "HIGH",
+      "rooms": [
+        "KIT"
+      ],
+      "fixtures": [
+        "KIT-H1",
+        "KIT-H2",
+        "KIT-H3",
+        "KIT-H4"
+      ],
+      "n_fixtures": 4,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 40,
+      "W_envelope": 40,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "4000K"
+      ],
+      "note": "counter ring",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        15.95,
+        10.4
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C15",
+      "board": "SB-03",
+      "lane": "HIGH",
+      "rooms": [
+        "KIT"
+      ],
+      "fixtures": [
+        "KIT-H5",
+        "KIT-H6",
+        "KIT-H7",
+        "KIT-H8"
+      ],
+      "n_fixtures": 4,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 31,
+      "W_envelope": 31,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "4000K"
+      ],
+      "note": "general",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        15.95,
+        10.4
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C16",
+      "board": "SB-03",
+      "lane": "TASK",
+      "rooms": [
+        "KIT"
+      ],
+      "fixtures": [
+        "KIT-T1",
+        "KIT-T2",
+        "KIT-T3",
+        "KIT-T4"
+      ],
+      "n_fixtures": 4,
+      "control": "KNOB1",
+      "psu": [
+        "P10"
+      ],
+      "sections": 1,
+      "W_nominal": 31.8,
+      "W_envelope": 31.8,
+      "A_per_channel": 1.32,
+      "knob_group": "K-KIT-TASK",
+      "cct": [
+        "4000K"
+      ],
+      "note": "downward under-cabinet task + sink-end ceiling task linear (KIT-T4), one knob",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        15.95,
+        10.4
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 55.0,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C17",
+      "board": "SB-03",
+      "lane": "COVE",
+      "rooms": [
+        "KIT"
+      ],
+      "fixtures": [
+        "KIT-L1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P08"
+      ],
+      "sections": 2,
+      "W_nominal": 70.56,
+      "W_envelope": 70.56,
+      "A_per_channel": 1.47,
+      "knob_group": "K-KIT-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "2 sections on 2 knob outputs (1.47 A each, 2.94 A total) from ONE PSU P08",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        15.95,
+        10.4
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 61.2,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C18",
+      "board": "SB-04",
+      "lane": "HIGH",
+      "rooms": [
+        "UTL"
+      ],
+      "fixtures": [
+        "UTL-H1",
+        "UTL-H2",
+        "UTL-H3"
+      ],
+      "n_fixtures": 3,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 36,
+      "W_envelope": 36,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "4000K"
+      ],
+      "note": "dimmable IP65 bulkheads (availability to confirm)",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        15.2,
+        5.6
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C19",
+      "board": "SB-04",
+      "lane": "TASK",
+      "rooms": [
+        "UTL"
+      ],
+      "fixtures": [
+        "UTL-T1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P11"
+      ],
+      "sections": 1,
+      "W_nominal": 11.0,
+      "W_envelope": 11.0,
+      "A_per_channel": 0.46,
+      "knob_group": "K-UTL-TASK",
+      "cct": [
+        "4000K"
+      ],
+      "note": "IP67 PSU, knob indoors at SB-04",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        15.2,
+        5.6
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 19.2,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C20",
+      "board": "SB-05",
+      "lane": "HIGH",
+      "rooms": [
+        "MBR"
+      ],
+      "fixtures": [
+        "MBR-H1",
+        "MBR-H2",
+        "MBR-H3",
+        "MBR-H4",
+        "MBR-H5",
+        "MBR-H6",
+        "MBR-H7",
+        "MBR-H8"
+      ],
+      "n_fixtures": 8,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 48,
+      "W_envelope": 48,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "dimmer at door; on/off 2-way door + intermediate SB-05L + 2-way SB-05R (concept)",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        17.55,
+        12.3
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 3,
+      "switch_positions": [
+        "SB-05",
+        "SB-05L",
+        "SB-05R"
+      ]
+    },
+    {
+      "circuit": "C21",
+      "board": "SB-05",
+      "lane": "COVE",
+      "rooms": [
+        "MBR"
+      ],
+      "fixtures": [
+        "MBR-L1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P12"
+      ],
+      "sections": 1,
+      "W_nominal": 52.24,
+      "W_envelope": 52.24,
+      "A_per_channel": 2.18,
+      "knob_group": "K-MBR-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        17.55,
+        12.3
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 90.8,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C22",
+      "board": "SB-05",
+      "lane": "LINE",
+      "rooms": [
+        "MBR"
+      ],
+      "fixtures": [
+        "MBR-X1",
+        "MBR-X2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P12"
+      ],
+      "sections": 1,
+      "W_nominal": 30.88,
+      "W_envelope": 30.88,
+      "A_per_channel": 1.29,
+      "knob_group": "K-MBR-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        17.55,
+        12.3
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 53.8,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C23",
+      "board": "SB-05",
+      "lane": "MOOD",
+      "rooms": [
+        "MBR"
+      ],
+      "fixtures": [
+        "MBR-L2"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P12"
+      ],
+      "sections": 1,
+      "W_nominal": 7.68,
+      "W_envelope": 7.68,
+      "A_per_channel": 0.32,
+      "knob_group": "K-MBR-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "headboard",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        17.55,
+        12.3
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 13.3,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C24",
+      "board": "SB-05",
+      "lane": "NIGHT",
+      "rooms": [
+        "MBR"
+      ],
+      "fixtures": [
+        "MBR-N1"
+      ],
+      "n_fixtures": 1,
+      "control": "PIR",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 1,
+      "W_envelope": 1,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "2700K"
+      ],
+      "note": "unswitched-live PIR, user brightness adjust on fitting, ON/AUTO/OFF",
+      "control_device": "1 W step light with user-accessible brightness adjustment on the fitting + PIR AUTO, ON/AUTO/OFF override (exact SKU = procurement gate)",
+      "dimming": "integral user brightness adjustment (dimmable), PIR AUTO or manual ON",
+      "board_xz_ft": [
+        17.55,
+        12.3
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C25",
+      "board": "SB-05L",
+      "lane": "READ",
+      "rooms": [
+        "MBR"
+      ],
+      "fixtures": [
+        "MBR-R1"
+      ],
+      "n_fixtures": 1,
+      "control": "INT",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "integral dimmer on fitting",
+      "control_device": "integral dimmer on the fitting",
+      "dimming": "integral",
+      "board_xz_ft": [
+        29.25,
+        3.3409
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C26",
+      "board": "SB-05R",
+      "lane": "READ",
+      "rooms": [
+        "MBR"
+      ],
+      "fixtures": [
+        "MBR-R2"
+      ],
+      "n_fixtures": 1,
+      "control": "INT",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "integral dimmer on fitting",
+      "control_device": "integral dimmer on the fitting",
+      "dimming": "integral",
+      "board_xz_ft": [
+        29.25,
+        8.5902
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C27",
+      "board": "SB-06",
+      "lane": "HIGH",
+      "rooms": [
+        "DRS"
+      ],
+      "fixtures": [
+        "DRS-H1",
+        "DRS-H2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P14"
+      ],
+      "sections": 1,
+      "W_nominal": 14,
+      "W_envelope": 14,
+      "A_per_channel": 0.58,
+      "knob_group": "K-DRS-HIGH",
+      "cct": [
+        "4000K"
+      ],
+      "note": "",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        18.4
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 24.2,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C28",
+      "board": "SB-06B",
+      "lane": "HIGH",
+      "rooms": [
+        "TL1"
+      ],
+      "fixtures": [
+        "TL1-G1",
+        "TL1-G2",
+        "TL1-G3"
+      ],
+      "n_fixtures": 3,
+      "control": "KNOB1",
+      "psu": [
+        "P14"
+      ],
+      "sections": 1,
+      "W_nominal": 27,
+      "W_envelope": 27,
+      "A_per_channel": 1.12,
+      "knob_group": "K-TL1-HIGH",
+      "cct": [
+        "4000K"
+      ],
+      "note": "bath main: shower pair + WC (sealed diffused); knob outside bath on the latch (max-z) side of the door - site check (hinge side is a design interpretation)",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.6,
+        21.9
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 46.7,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C29A",
+      "board": "SB-06B",
+      "lane": "MIRROR",
+      "rooms": [
+        "TL1"
+      ],
+      "fixtures": [
+        "TL1-M1",
+        "TL1-M2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P14"
+      ],
+      "sections": 1,
+      "W_nominal": 16,
+      "W_envelope": 16,
+      "A_per_channel": 0.67,
+      "knob_group": "K-TL1-HIGH",
+      "cct": [
+        "4000K"
+      ],
+      "note": "vanity spot pair, on the HIGH knob with the ceiling spots (grooming: HIGH knob level per calculations.baths.<TL>.grooming_setting with the face light at 100 %)",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.6,
+        21.9
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 27.9,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C29B",
+      "board": "SB-06B",
+      "lane": "FACE",
+      "rooms": [
+        "TL1"
+      ],
+      "fixtures": [
+        "TL1-F1",
+        "TL1-F2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P14"
+      ],
+      "sections": 1,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "A_per_channel": 0.42,
+      "knob_group": "K-TL1-FACE",
+      "cct": [
+        "4000K"
+      ],
+      "note": "diffused face light pair (HD-14 base; HD-17 independent mirror-light wall control); own knob so it can run at 100 % while the ceiling vanity pair is dimmed",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.6,
+        21.9
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 17.5,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C30A",
+      "board": "SB-06B",
+      "lane": "PERIM",
+      "rooms": [
+        "TL1"
+      ],
+      "fixtures": [
+        "TL1-L1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P14"
+      ],
+      "sections": 1,
+      "W_nominal": 31.87,
+      "W_envelope": 31.87,
+      "A_per_channel": 1.33,
+      "knob_group": "K-TL1-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "bath perimeter slot (3 walls)",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.6,
+        21.9
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 55.4,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C30B",
+      "board": "SB-06B",
+      "lane": "MOOD",
+      "rooms": [
+        "TL1"
+      ],
+      "fixtures": [
+        "TL1-L2",
+        "TL1-L3"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P14"
+      ],
+      "sections": 1,
+      "W_nominal": 7.25,
+      "W_envelope": 7.25,
+      "A_per_channel": 0.3,
+      "knob_group": "K-TL1-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "shower-niche + under-vanity strips",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.6,
+        21.9
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 12.5,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C31",
+      "board": "SB-07",
+      "lane": "HIGH",
+      "rooms": [
+        "LOB"
+      ],
+      "fixtures": [
+        "LOB-H1",
+        "LOB-H2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P15"
+      ],
+      "sections": 1,
+      "W_nominal": 14,
+      "W_envelope": 14,
+      "A_per_channel": 0.58,
+      "knob_group": "K-LOB",
+      "cct": [
+        "3000K"
+      ],
+      "note": "",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        24.2
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 24.2,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C32",
+      "board": "SB-07",
+      "lane": "MIRROR",
+      "rooms": [
+        "LOB"
+      ],
+      "fixtures": [
+        "LOB-F1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P15"
+      ],
+      "sections": 1,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "A_per_channel": 0.42,
+      "knob_group": "K-LOB",
+      "cct": [
+        "4000K"
+      ],
+      "note": "common-basin face bar",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        24.2
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 17.5,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C33",
+      "board": "SB-07",
+      "lane": "NIGHT",
+      "rooms": [
+        "LOB"
+      ],
+      "fixtures": [
+        "LOB-N1"
+      ],
+      "n_fixtures": 1,
+      "control": "PIR",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 1,
+      "W_envelope": 1,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "2700K"
+      ],
+      "note": "unswitched-live PIR, user brightness adjust on fitting, ON/AUTO/OFF",
+      "control_device": "1 W step light with user-accessible brightness adjustment on the fitting + PIR AUTO, ON/AUTO/OFF override (exact SKU = procurement gate)",
+      "dimming": "integral user brightness adjustment (dimmable), PIR AUTO or manual ON",
+      "board_xz_ft": [
+        19.85,
+        24.2
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C34",
+      "board": "SB-07B",
+      "lane": "HIGH",
+      "rooms": [
+        "TL2"
+      ],
+      "fixtures": [
+        "TL2-G1",
+        "TL2-G2",
+        "TL2-G3"
+      ],
+      "n_fixtures": 3,
+      "control": "KNOB1",
+      "psu": [
+        "P15"
+      ],
+      "sections": 1,
+      "W_nominal": 27,
+      "W_envelope": 27,
+      "A_per_channel": 1.12,
+      "knob_group": "K-TL2-HIGH",
+      "cct": [
+        "4000K"
+      ],
+      "note": "bath main: shower pair + WC (sealed diffused); knob outside bath on the latch (max-z) side of the door - site check (hinge side is a design interpretation)",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        27.95
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 46.7,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C35A",
+      "board": "SB-07B",
+      "lane": "MIRROR",
+      "rooms": [
+        "TL2"
+      ],
+      "fixtures": [
+        "TL2-M1",
+        "TL2-M2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P15"
+      ],
+      "sections": 1,
+      "W_nominal": 16,
+      "W_envelope": 16,
+      "A_per_channel": 0.67,
+      "knob_group": "K-TL2-HIGH",
+      "cct": [
+        "4000K"
+      ],
+      "note": "vanity spot pair, on the HIGH knob with the ceiling spots (grooming: HIGH knob level per calculations.baths.<TL>.grooming_setting with the face light at 100 %)",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        27.95
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 27.9,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C35B",
+      "board": "SB-07B",
+      "lane": "FACE",
+      "rooms": [
+        "TL2"
+      ],
+      "fixtures": [
+        "TL2-F1",
+        "TL2-F2"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P15"
+      ],
+      "sections": 1,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "A_per_channel": 0.42,
+      "knob_group": "K-TL2-FACE",
+      "cct": [
+        "4000K"
+      ],
+      "note": "diffused face light pair (HD-14 base; HD-17 independent mirror-light wall control); own knob so it can run at 100 % while the ceiling vanity pair is dimmed",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        27.95
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 17.5,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C36A",
+      "board": "SB-07B",
+      "lane": "PERIM",
+      "rooms": [
+        "TL2"
+      ],
+      "fixtures": [
+        "TL2-L1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P15"
+      ],
+      "sections": 1,
+      "W_nominal": 31.87,
+      "W_envelope": 31.87,
+      "A_per_channel": 1.33,
+      "knob_group": "K-TL2-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "bath perimeter slot (3 walls)",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        27.95
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 55.4,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C36B",
+      "board": "SB-07B",
+      "lane": "MOOD",
+      "rooms": [
+        "TL2"
+      ],
+      "fixtures": [
+        "TL2-L2",
+        "TL2-L3"
+      ],
+      "n_fixtures": 2,
+      "control": "KNOB1",
+      "psu": [
+        "P15"
+      ],
+      "sections": 1,
+      "W_nominal": 7.25,
+      "W_envelope": 7.25,
+      "A_per_channel": 0.3,
+      "knob_group": "K-TL2-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "shower-niche + under-vanity strips",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        19.85,
+        27.95
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 12.5,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C37",
+      "board": "SB-08",
+      "lane": "HIGH",
+      "rooms": [
+        "CBR"
+      ],
+      "fixtures": [
+        "CBR-H1",
+        "CBR-H2",
+        "CBR-H3",
+        "CBR-H4",
+        "CBR-H5",
+        "CBR-H6"
+      ],
+      "n_fixtures": 6,
+      "control": "TE",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 36,
+      "W_envelope": 36,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "dimmer at door; on/off 2-way door + intermediate at the two bed-head plates (concept)",
+      "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
+      "dimming": "phase-cut trailing edge",
+      "board_xz_ft": [
+        21.42,
+        28.2557
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 3,
+      "switch_positions": [
+        "SB-08",
+        "SB-08RL",
+        "SB-08RR"
+      ]
+    },
+    {
+      "circuit": "C38",
+      "board": "SB-08",
+      "lane": "STUDY",
+      "rooms": [
+        "CBR"
+      ],
+      "fixtures": [
+        "CBR-S1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P16"
+      ],
+      "sections": 1,
+      "W_nominal": 15.96,
+      "W_envelope": 15.96,
+      "A_per_channel": 0.67,
+      "knob_group": "K-CBR-STUDY",
+      "cct": [
+        "4000K"
+      ],
+      "note": "desk task strip",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        21.42,
+        28.2557
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 27.9,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C39",
+      "board": "SB-08",
+      "lane": "COVE",
+      "rooms": [
+        "CBR"
+      ],
+      "fixtures": [
+        "CBR-L1"
+      ],
+      "n_fixtures": 1,
+      "control": "KNOB1",
+      "psu": [
+        "P16"
+      ],
+      "sections": 1,
+      "W_nominal": 49.76,
+      "W_envelope": 49.76,
+      "A_per_channel": 2.07,
+      "knob_group": "K-CBR-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        21.42,
+        28.2557
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 86.2,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C40",
+      "board": "SB-08",
+      "lane": "LINE",
+      "rooms": [
+        "CBR"
+      ],
+      "fixtures": [
+        "CBR-X1",
+        "CBR-X2",
+        "CBR-X3",
+        "CBR-X4"
+      ],
+      "n_fixtures": 4,
+      "control": "KNOB1",
+      "psu": [
+        "P16"
+      ],
+      "sections": 1,
+      "W_nominal": 42.88,
+      "W_envelope": 42.88,
+      "A_per_channel": 1.79,
+      "knob_group": "K-CBR-LOW",
+      "cct": [
+        "2700K"
+      ],
+      "note": "",
+      "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
+      "dimming": "PWM 2 kHz (24 V side)",
+      "board_xz_ft": [
+        21.42,
+        28.2557
+      ],
+      "design_A_per_channel": 2.4,
+      "channel_util_pct_of_design": 74.6,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C41",
+      "board": "SB-08RL",
+      "lane": "READ",
+      "rooms": [
+        "CBR"
+      ],
+      "fixtures": [
+        "CBR-R1"
+      ],
+      "n_fixtures": 1,
+      "control": "INT",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "integral dimmer on fitting",
+      "control_device": "integral dimmer on the fitting",
+      "dimming": "integral",
+      "board_xz_ft": [
+        29.25,
+        31.8646
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    },
+    {
+      "circuit": "C41b",
+      "board": "SB-08RR",
+      "lane": "READ",
+      "rooms": [
+        "CBR"
+      ],
+      "fixtures": [
+        "CBR-R2"
+      ],
+      "n_fixtures": 1,
+      "control": "INT",
+      "psu": [],
+      "sections": 1,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "A_per_channel": null,
+      "knob_group": null,
+      "cct": [
+        "3000K"
+      ],
+      "note": "integral dimmer on fitting",
+      "control_device": "integral dimmer on the fitting",
+      "dimming": "integral",
+      "board_xz_ft": [
+        29.25,
+        39.6402
+      ],
+      "design_A_per_channel": null,
+      "channel_util_pct_of_design": null,
+      "switches": 0,
+      "switch_positions": []
+    }
+  ],
+  "psus": [
+    {
+      "psu": "P01",
+      "circuits": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "W_envelope": 161.9,
+      "nameplate_min_W": 269.9,
+      "nameplate_W": 480,
+      "derated_usable_W": 288.0,
+      "loading_pct_of_usable": 56.2,
+      "loading_pct_of_heat_derated": 42.2,
+      "margin_to_usable_W": 126.1,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        12.3,
+        39.4
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)",
+      "reference_only": "Mean Well HLG-480H-24",
+      "reference_output_rating_A": 20,
+      "approval_status": "HOMEOWNER_SELECTED_TOPOLOGY_NOT_PRODUCT_OR_CONSTRUCTION_APPROVAL",
+      "hatch_coordinate_status": "PREVIOUS P01 PLACEHOLDER ONLY; final 480 W supply location, fit and ventilation are unverified",
+      "sizing_basis": "0.60 is an assumed project allowance (0.80 x 0.75), not a manufacturer rating",
+      "protection_status": "HOLD: 20 A supply reference versus 12.5 A controller input; branch distribution and protection require professional/manufacturer design"
+    },
+    {
+      "psu": "P04",
+      "circuits": [
+        "C06A",
+        "C06B"
+      ],
+      "W_envelope": 27.7,
+      "nameplate_min_W": 51.3,
+      "nameplate_W": 60,
+      "derated_usable_W": 36.0,
+      "loading_pct_of_usable": 76.9,
+      "loading_pct_of_heat_derated": 57.7,
+      "margin_to_usable_W": 8.3,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        4.4,
+        41.6
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P05",
+      "circuits": [
+        "C07",
+        "C08"
+      ],
+      "W_envelope": 38.6,
+      "nameplate_min_W": 71.5,
+      "nameplate_W": 100,
+      "derated_usable_W": 60.0,
+      "loading_pct_of_usable": 64.3,
+      "loading_pct_of_heat_derated": 48.2,
+      "margin_to_usable_W": 21.4,
+      "ip": "IP67",
+      "hatch_xz_ft": [
+        12.3,
+        43.0
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P06",
+      "circuits": [
+        "C10"
+      ],
+      "W_envelope": 8.0,
+      "nameplate_min_W": 14.8,
+      "nameplate_W": 30,
+      "derated_usable_W": 18.0,
+      "loading_pct_of_usable": 44.4,
+      "loading_pct_of_heat_derated": 33.3,
+      "margin_to_usable_W": 10.0,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        14.6,
+        22.5
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P07",
+      "circuits": [
+        "C12"
+      ],
+      "W_envelope": 49.7,
+      "nameplate_min_W": 92.0,
+      "nameplate_W": 100,
+      "derated_usable_W": 60.0,
+      "loading_pct_of_usable": 82.8,
+      "loading_pct_of_heat_derated": 62.1,
+      "margin_to_usable_W": 10.3,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        12.3,
+        23.8
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P08",
+      "circuits": [
+        "C17"
+      ],
+      "W_envelope": 70.6,
+      "nameplate_min_W": 130.7,
+      "nameplate_W": 150,
+      "derated_usable_W": 90.0,
+      "loading_pct_of_usable": 78.4,
+      "loading_pct_of_heat_derated": 58.8,
+      "margin_to_usable_W": 19.4,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        13.5,
+        12.0
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P10",
+      "circuits": [
+        "C16"
+      ],
+      "W_envelope": 31.8,
+      "nameplate_min_W": 58.9,
+      "nameplate_W": 60,
+      "derated_usable_W": 36.0,
+      "loading_pct_of_usable": 88.3,
+      "loading_pct_of_heat_derated": 66.2,
+      "margin_to_usable_W": 4.2,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        13.5,
+        11.0
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P11",
+      "circuits": [
+        "C19"
+      ],
+      "W_envelope": 11.0,
+      "nameplate_min_W": 20.4,
+      "nameplate_W": 30,
+      "derated_usable_W": 18.0,
+      "loading_pct_of_usable": 61.1,
+      "loading_pct_of_heat_derated": 45.8,
+      "margin_to_usable_W": 7.0,
+      "ip": "IP67",
+      "hatch_xz_ft": [
+        15.2,
+        4.4
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P12",
+      "circuits": [
+        "C21",
+        "C22",
+        "C23"
+      ],
+      "W_envelope": 90.8,
+      "nameplate_min_W": 168.1,
+      "nameplate_W": 200,
+      "derated_usable_W": 120.0,
+      "loading_pct_of_usable": 75.7,
+      "loading_pct_of_heat_derated": 56.8,
+      "margin_to_usable_W": 29.2,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        17.6,
+        14.4
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P14",
+      "circuits": [
+        "C27",
+        "C28",
+        "C29A",
+        "C29B",
+        "C30A",
+        "C30B"
+      ],
+      "W_envelope": 106.1,
+      "nameplate_min_W": 196.5,
+      "nameplate_W": 200,
+      "derated_usable_W": 120.0,
+      "loading_pct_of_usable": 88.4,
+      "loading_pct_of_heat_derated": 66.3,
+      "margin_to_usable_W": 13.9,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        19.55,
+        19.6
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P15",
+      "circuits": [
+        "C31",
+        "C32",
+        "C34",
+        "C35A",
+        "C35B",
+        "C36A",
+        "C36B"
+      ],
+      "W_envelope": 116.1,
+      "nameplate_min_W": 215.0,
+      "nameplate_W": 240,
+      "derated_usable_W": 144.0,
+      "loading_pct_of_usable": 80.6,
+      "loading_pct_of_heat_derated": 60.5,
+      "margin_to_usable_W": 27.9,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        18.9,
+        25.6
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    },
+    {
+      "psu": "P16",
+      "circuits": [
+        "C38",
+        "C39",
+        "C40"
+      ],
+      "W_envelope": 108.6,
+      "nameplate_min_W": 201.1,
+      "nameplate_W": 240,
+      "derated_usable_W": 144.0,
+      "loading_pct_of_usable": 75.4,
+      "loading_pct_of_heat_derated": 56.6,
+      "margin_to_usable_W": 35.4,
+      "ip": "IP20 in ventilated hatch",
+      "hatch_xz_ft": [
+        18.0623,
+        33.8331
+      ],
+      "isolator": "local double-pole isolator at hatch (electrician)"
+    }
+  ],
+  "totals": {
+    "circuits": 47,
+    "circuits_on_knobs": 31,
+    "knob_T1K": 21,
+    "knobs_total": 21,
+    "knob_outputs": 34,
+    "amplifiers": 1,
+    "dimmers_230V": 10,
+    "track_drivers_48V": 1,
+    "integral_dimmer_readers": 4,
+    "dimmable_pir_step_lights": 2,
+    "switches": 8,
+    "psus_24V": 12,
+    "psu_nameplate_total_W": 1890,
+    "psu_isolators": 13,
+    "standby_W_est": 12.6
+  },
+  "design_rule": "ASSUMED design allowances, not verified thermal curves: knob design current = 60 % of nameplate per channel at 2 kHz PWM (8 kHz NOT approved: maker states lower output current, no derating curve); PSU nameplate >= envelope / 0.60 (ASSUMED 0.80 allowance at 50 C ceiling void x 0.75 loading; confirm with the chosen PSU derating curve)",
+  "selected_curtain_S1_extension": {
+    "status": "HOMEOWNER_SELECTED_S1_REVIEW_EXTENSION",
+    "base_ledger_unchanged_until_site_measurement": false,
+    "base": {
+      "knobs": 21,
+      "knob_outputs": 34,
+      "amplifiers": 1,
+      "psus": 12,
+      "psu_nameplate_total_W": 1890,
+      "psu_over_usable": [],
+      "vd_worst_pct": null,
+      "vd_status": {
+        "HOLD": 4,
+        "OK": 27,
+        "MARGINAL": 2
+      },
+      "worst_known_dV_pct": 3.3,
+      "scope": "104-fitting base with selected living supply; excludes the four curtain strips"
+    },
+    "with_S1": {
+      "knobs": 21,
+      "knob_outputs": 38,
+      "amplifiers": 3,
+      "psus": 12,
+      "psu_nameplate_total_W": 1980,
+      "psu_over_usable": [],
+      "vd_worst_pct": null,
+      "vd_status": {
+        "OK": 30,
+        "MARGINAL": 2,
+        "HOLD": 5
+      },
+      "fittings_including_selected_strips": 108,
+      "circuits_including_selected_strips": 51,
+      "base_photometric_fittings": 104,
+      "additional_selected_strips": 4,
+      "additional_circuits": 4,
+      "selected_strip_length_m": 8.88,
+      "selected_strip_load_W": 71.04,
+      "photometry_credit_for_selected_strips": false,
+      "worst_known_dV_pct": 3.6,
+      "inrush_status": "HOLD; LT-4 and LT-5 previous screens invalid",
+      "capacity_status": "project allowance only; product, thermal and branch protection held"
+    },
+    "group_changes": [
+      {
+        "knob": "K-LIV-LOW",
+        "outputs_before": 5,
+        "outputs_after": 6,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 1,
+        "amplifiers_after": 2,
+        "W_envelope_after": 181.52,
+        "I_total_A_after": 7.563333,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 1.92,
+        "output_design_A": 2.4,
+        "status": "HOLD",
+        "reason": "Two modeled repeaters and six outputs remain; controller/repeater compatibility and branch protection are open.",
+        "psus_after": [
+          "P01"
+        ]
+      },
+      {
+        "knob": "K-DIN-LOW",
+        "outputs_before": 1,
+        "outputs_after": 2,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 0,
+        "W_envelope_after": 69.3,
+        "I_total_A_after": 2.89,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.07,
+        "output_design_A": 2.4,
+        "status": "OK"
+      },
+      {
+        "knob": "K-MBR-LOW",
+        "outputs_before": 3,
+        "outputs_after": 4,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 1,
+        "W_envelope_after": 110.2,
+        "I_total_A_after": 4.59,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.18,
+        "output_design_A": 2.4,
+        "status": "OK"
+      },
+      {
+        "knob": "K-CBR-LOW",
+        "outputs_before": 2,
+        "outputs_after": 3,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 0,
+        "W_envelope_after": 105.0,
+        "I_total_A_after": 4.38,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.07,
+        "output_design_A": 2.4,
+        "status": "OK"
+      }
+    ],
+    "supply_changes": [
+      {
+        "psu": "P01",
+        "circuits": [
+          "C03",
+          "C04",
+          "C05",
+          "X-CURT-LIV"
+        ],
+        "W_envelope_before": 161.92,
+        "W_envelope_after": 181.52,
+        "nameplate_before_W": 480,
+        "nameplate_after_W": 480,
+        "pct_of_usable_after": 63.0,
+        "margin_to_usable_W": 106.48,
+        "nameplate_min_W_for_10pct_margin": null,
+        "changed": true,
+        "status": "HOLD_PRODUCT_THERMAL_INRUSH_BRANCH_PROTECTION",
+        "reference_only": "Mean Well HLG-480H-24"
+      },
+      {
+        "psu": "P07",
+        "circuits": [
+          "C12",
+          "X-CURT-DIN"
+        ],
+        "W_envelope_before": 49.7,
+        "W_envelope_after": 69.3,
+        "nameplate_before_W": 100,
+        "nameplate_after_W": 150,
+        "pct_of_usable_after": 77.0,
+        "margin_to_usable_W": 20.7,
+        "nameplate_min_W_for_10pct_margin": 128.3,
+        "changed": true
+      },
+      {
+        "psu": "P12",
+        "circuits": [
+          "C21",
+          "C22",
+          "C23",
+          "X-CURT-MBR-S"
+        ],
+        "W_envelope_before": 90.8,
+        "W_envelope_after": 110.2,
+        "nameplate_before_W": 200,
+        "nameplate_after_W": 240,
+        "pct_of_usable_after": 76.5,
+        "margin_to_usable_W": 33.8,
+        "nameplate_min_W_for_10pct_margin": 204.1,
+        "changed": true
+      },
+      {
+        "psu": "P16",
+        "circuits": [
+          "C38",
+          "C39",
+          "C40",
+          "X-CURT-CBR"
+        ],
+        "W_envelope_before": 108.6,
+        "W_envelope_after": 121.0,
+        "nameplate_before_W": 240,
+        "nameplate_after_W": 240,
+        "pct_of_usable_after": 84.0,
+        "margin_to_usable_W": 23.0,
+        "nameplate_min_W_for_10pct_margin": 224.1,
+        "changed": true
+      }
+    ],
+    "voltage_drop_changes": [
+      {
+        "circuit": "C03",
+        "section": "A",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "C03",
+        "section": "B",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "C12",
+        "section": "all",
+        "psu": "P07",
+        "board": "SB-02",
+        "new_section": false,
+        "branch_m": 3.67,
+        "feed_psu_to_board_m": 3.52,
+        "feed_shared_I_A": 2.89,
+        "dV_pct_before": 1.6,
+        "dV_pct_after": 1.9,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C21",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 4.12,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 2.0,
+        "dV_pct_after": 2.2,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C22",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 5.23,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 1.8,
+        "dV_pct_after": 2.0,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C23",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 6.46,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 1.3,
+        "dV_pct_after": 1.5,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 0.75,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C38",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 5.55,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 2.7,
+        "dV_pct_after": 2.9,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C39",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 3.65,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 3.1,
+        "dV_pct_after": 3.3,
+        "status_before": "MARGINAL",
+        "status_after": "MARGINAL",
+        "min_mm2_for_target_after": 2.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C40",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 5.43,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 3.3,
+        "dV_pct_after": 3.6,
+        "status_before": "MARGINAL",
+        "status_after": "MARGINAL",
+        "min_mm2_for_target_after": 2.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-LIV",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": true,
+        "branch_m": 6.45,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": null,
+        "dV_pct_after": null,
+        "status_before": null,
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "X-CURT-DIN",
+        "section": "all",
+        "psu": "P07",
+        "board": "SB-02",
+        "new_section": true,
+        "branch_m": 7.14,
+        "feed_psu_to_board_m": 3.52,
+        "feed_shared_I_A": 2.89,
+        "dV_pct_before": null,
+        "dV_pct_after": 1.7,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-MBR-S",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": true,
+        "branch_m": 6.28,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": null,
+        "dV_pct_after": 1.8,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-CBR",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": true,
+        "branch_m": 7.45,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": null,
+        "dV_pct_after": 2.9,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C04",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 4.89,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 0.8,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous P03 feed no longer applies; selected single-supply route is unverified."
+      },
+      {
+        "circuit": "C05",
+        "section": "2 parallel outputs",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 7.16,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.5,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous P03 feed no longer applies; selected single-supply route is unverified."
+      }
+    ],
+    "controls_source_sha256": "fe0e6e536772f341960cf26a69c8859543e30610f070ec518e15600e03747cb1",
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "previous_base_totals_before_one_supply_selection": {
+      "knobs": 21,
+      "knob_outputs": 34,
+      "amplifiers": 1,
+      "psus": 13,
+      "psu_nameplate_total_W": 1760,
+      "psu_over_usable": [],
+      "vd_worst_pct": 3.3,
+      "vd_status": {
+        "OK": 31,
+        "MARGINAL": 2
+      }
+    },
+    "base_ledger_revision": "The homeowner-selected P01 topology changes the base electrical ledger; all 104 photometric fittings and positions remain unchanged. Actual pocket dimensions and circuit implementation remain held.",
+    "previous_S1_totals_before_one_supply_selection": {
+      "knobs": 21,
+      "knob_outputs": 38,
+      "amplifiers": 3,
+      "psus": 13,
+      "psu_nameplate_total_W": 1890,
+      "psu_over_usable": [],
+      "vd_worst_pct": 3.6,
+      "vd_status": {
+        "OK": 35,
+        "MARGINAL": 2
+      },
+      "fittings_including_selected_strips": 108,
+      "circuits_including_selected_strips": 51,
+      "base_photometric_fittings": 104,
+      "additional_selected_strips": 4,
+      "additional_circuits": 4,
+      "selected_strip_length_m": 8.88,
+      "selected_strip_load_W": 71.04,
+      "photometry_credit_for_selected_strips": false
+    },
+    "selected_one_supply_source_sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+    "retired_supply_ids": [
+      "P03"
+    ],
+    "historical_split_living_voltage_drop": [
+      {
+        "circuit": "C03",
+        "section": "A",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 4.66,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": 2.2,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C03",
+        "section": "B",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 4.66,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": 2.2,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-LIV",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": true,
+        "branch_m": 6.45,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 4.66,
+        "dV_pct_before": null,
+        "dV_pct_after": 2.0,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      }
+    ],
+    "inrush_and_branch_protection": {
+      "status": "HOLD",
+      "LT-4": "Previous inrush and breaker screen INVALID after P01 selection; grouping tentative.",
+      "LT-5": "Previous inrush and breaker screen INVALID after P03 removal.",
+      "reference_inrush_conflict": "HLG-480H datasheet lists maximum 2 B16 or 3 C16 units at 230 V; the previously retained Mean Well installation-table lookup has 1 B16 or 2 C16. These are inconsistent; obtain manufacturer guidance for the exact breaker, supply and mixture rather than treating either screen as an approval.",
+      "branch_protection": "OPEN; 20 A supply reference exceeds the T1-K candidate 12.5 A input nameplate and all branch ratings must be checked",
+      "exact_chain_proven": false
+    }
+  },
+  "totals_scope": "104-fitting base only: includes the selected one-supply living topology but excludes the four selected curtain strips and S1 P07/P12 resizes. See selected_curtain_S1_extension.with_S1 for effective totals.",
+  "selected_living_low_supply": {
+    "status": "HOMEOWNER_SELECTED_REVIEW_WITH_ELECTRICAL_HOLDS",
+    "source_option_sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+    "supply": {
+      "retain_supply_id": "P01",
+      "remove_supply_id": "P03",
+      "reassign_to_P01": [
+        "C03",
+        "C04",
+        "C05",
+        "X-CURT-LIV"
+      ],
+      "nominal_voltage_V": 24,
+      "planned_nameplate_W": 480,
+      "manufacturer_reference_only": "Mean Well HLG-480H-24",
+      "manufacturer_datasheet": "https://www.meanwell.com/Upload/PDF/HLG-480H/HLG-480H-SPEC.PDF",
+      "manufacturer_datasheet_sha256": "790048cbd6b35066dc5c7a7c29ad87a52f302e0e08e92034691087dfc552171e",
+      "reference_output_rating_A": 20,
+      "reference_input_range_VAC": [
+        90,
+        305
+      ],
+      "note": "The example is not an approved or purchased SKU; real operating capacity is subject to its input, ambient, case-temperature and installation specifications. Final hatch location, supply orientation, distribution, equipment protection and branch ratings are not designed."
+    },
+    "load": {
+      "knob_id": "K-LIV-LOW",
+      "groups": [
+        {
+          "circuit": "C03",
+          "description": "Living cove",
+          "strip_length_m": 11.53,
+          "W_per_m": 8,
+          "W": 92.24,
+          "modeled_outputs": 2,
+          "modeled_A_per_output": 1.92
+        },
+        {
+          "circuit": "C04",
+          "description": "TV bias",
+          "strip_length_m": 1.68,
+          "W_per_m": 6,
+          "W": 10.08,
+          "modeled_outputs": 1,
+          "modeled_A_per_output": 0.42
+        },
+        {
+          "circuit": "C05",
+          "description": "Living linear",
+          "strip_length_m": 7.45,
+          "W_per_m": 8,
+          "W": 59.6,
+          "modeled_outputs": 2,
+          "modeled_A_per_output": 1.24
+        },
+        {
+          "circuit": "X-CURT-LIV",
+          "fixture": "CURT-LIV",
+          "description": "Living curtain-pocket strip",
+          "strip_length_m": 2.45,
+          "W_per_m": 8,
+          "W": 19.6,
+          "modeled_outputs": 1,
+          "modeled_A_per_output": 0.82,
+          "length_status": "derived, pocket unmeasured"
+        }
+      ],
+      "strip_load_W": 181.52,
+      "strip_current_A_at_24V": 7.563333,
+      "modeled_outputs": 6,
+      "modeled_PWM_repeaters_for_this_knob": 2,
+      "new_wall_knobs": 0,
+      "auxiliary_and_feeder_losses": "unquantified and excluded"
+    },
+    "planning_allowance": {
+      "assumed_thermal_factor": 0.8,
+      "assumed_loading_factor": 0.75,
+      "combined_factor": 0.6,
+      "minimum_nameplate_W_unrounded": 302.533333,
+      "minimum_nameplate_W_rounded_up": 303,
+      "planned_nameplate_W": 480,
+      "planning_allowance_W": 288,
+      "strip_load_pct_of_nameplate": 37.816667,
+      "strip_load_pct_of_allowance": 63.027778,
+      "meaning": "0.80 and 0.75 are project assumptions, not manufacturer-specific thermal or mandatory safety factors. The former 0.90 supplemental cap is another separate project allowance and is not included in this selected 0.60 sizing rule. Verify actual manufacturer input/temperature curves and losses."
+    },
+    "holds": {
+      "construction_release": false,
+      "product_approval": false,
+      "exact_chain_proven": false,
+      "dimmer_fitting_driver_compatibility": "OPEN",
+      "single_supply_controller_repeater_and_branch_protection": "OPEN; 20 A supply reference exceeds the T1-K candidate 12.5 A input nameplate and all branch ratings must be checked",
+      "power_on_behavior_and_low_end_flicker": "OPEN",
+      "living_low_feeder_and_voltage_drop": "OPEN; old P01/P03 split-feed checks are not valid for the one-supply arrangement",
+      "LT4_LT5_breaker_inrush_and_isolation": "OPEN; old circuit screens do not apply",
+      "P16_shared_feed_and_C39_C40_drop": "OPEN; S1 modeled C39 3.3% and C40 3.6%; 2.5 mm2 shared-feed concept requires engineering",
+      "curtain_pocket_dimensions_and_profile_fit": "OPEN; measured mock-up required, no lux credit",
+      "W03_optional_pocket": "EXCLUDED and on hold",
+      "bath_zones_earthing_cables_protection_supply_separation": "OPEN for qualified local professionals",
+      "CBR": "H1-H6 accepted for review; C37 procurement and remaining CBR/site holds remain open",
+      "pooja": "Strip and spot remain independent; display decision does not approve lighting geometry, thermal clearance or fixings",
+      "pricing": "No verified current installed quote or 480 W supply cost delta"
+    },
+    "basis": "The four curtain strips are subject to site measurement and mock-up; no curtain lux credit.",
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false
+  }
+}

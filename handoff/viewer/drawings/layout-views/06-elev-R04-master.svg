@@ -1,0 +1,372 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2144.156" viewBox="0 0 1700 2144.156" role="img" aria-labelledby="t d">
+<title id="t">Elevations — R04 Master bedroom</title>
+<desc id="d">Read-only interior elevations from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; wall names by compass.</desc>
+<metadata>{&quot;sheet&quot;:&quot;06-elev-R04-master&quot;,&quot;room&quot;:&quot;master&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
+<defs>
+<pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
+<pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
+<pattern id="loft" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#f2f0f8"/><path d="M0 0V.08" stroke="#b9b1d3" stroke-width=".010"/></pattern>
+<pattern id="beam" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#ecd9bd"/><path d="M0 0V.08" stroke="#c49a5c" stroke-width=".012"/></pattern>
+<pattern id="feature" width=".06" height=".06" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width=".06" height=".06" fill="#bfe0dc"/><path d="M0 0V.06" stroke="#5aa39b" stroke-width=".012"/></pattern>
+<pattern id="plain" width=".15" height=".15" patternUnits="userSpaceOnUse"><rect width=".15" height=".15" fill="#f3f6f6"/><path d="M0 0H.15V.15" fill="none" stroke="#d6dfdf" stroke-width=".006"/></pattern>
+<pattern id="nowall" width=".12" height=".12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".12" height=".12" fill="#fafafa"/><path d="M0 0V.12" stroke="#d9d9d9" stroke-width=".008"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#466c92"/></marker>
+</defs>
+<style>text{font-family:"Segoe UI",Arial,sans-serif;fill:#203b43}
+.mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
+.title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
+.halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
+<rect width="1700" height="2144.156" fill="#fcfdfc"/>
+<text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Interior elevations — R04 Master bedroom</text>
+<text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >12'-6&quot; x 15'-4.5&quot; · every wall seen from inside · named by compass · HD-11 levels unmeasured</text>
+<text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 6 / 13</text>
+<text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
+<path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
+<text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
+<text y="-26" font-size="12" class="muted" text-anchor="middle">S</text></g>
+<path d="M60 116H1640" stroke="#c8d2d3"/>
+<rect x="60" y="130" width="22" height="14" fill="#f4f1ea" stroke="#8a9a9c"/>
+<text x="88.00" y="142.00" font-size="12" class="muted" text-anchor="start" >Wall surface</text>
+<rect x="182.8" y="130" width="22" height="14" fill="url(#nowall)" stroke="#a9b4b4"/>
+<text x="210.80" y="142.00" font-size="12" class="muted" text-anchor="start" >Open edge (no wall)</text>
+<rect x="350.40000000000003" y="130" width="22" height="14" fill="#d7ebf2" stroke="#4b6a78"/>
+<text x="378.40" y="142.00" font-size="12" class="muted" text-anchor="start" >Window / glass</text>
+<rect x="486.00000000000006" y="130" width="22" height="14" fill="#e3d3bd" stroke="#4b6a78"/>
+<text x="514.00" y="142.00" font-size="12" class="muted" text-anchor="start" >Door</text>
+<rect x="557.6" y="130" width="22" height="14" fill="#dfe7f2" stroke="#5b7795"/>
+<text x="585.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Built storage record</text>
+<rect x="731.6" y="130" width="22" height="14" fill="url(#loft)" stroke="#7a6fa8" stroke-dasharray="4 3"/>
+<text x="759.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Loft / held zone (dashed)</text>
+<rect x="937.6" y="130" width="22" height="14" fill="#e9edf1" stroke="#c8d2d3"/>
+<text x="965.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Ceiling void to slab</text>
+<rect x="1111.6" y="130" width="22" height="14" fill="#e9dff0" stroke="#7c658c" stroke-dasharray="3 2"/>
+<text x="1139.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Curtain pocket (concealed; 2 tracks in LIV/MBR/CBR)</text>
+<rect x="60" y="150" width="22" height="14" fill="#f6dede" stroke="#b02f2f" stroke-dasharray="3 2"/>
+<text x="88.00" y="162.00" font-size="12" class="muted" text-anchor="start" >Held pocket / curtain (red dashed)</text>
+<rect x="323.6" y="150" width="22" height="14" fill="#cfc4dc" stroke="#786385"/>
+<text x="351.60" y="162.00" font-size="12" class="muted" text-anchor="start" >Pooja niche PN1 (recessed, built)</text>
+<rect x="580.8000000000001" y="150" width="22" height="14" fill="url(#feature)" stroke="#4f9a98"/>
+<text x="608.80" y="162.00" font-size="12" class="muted" text-anchor="start" >Kit-kat tile (wet area)</text>
+<rect x="774.0000000000001" y="150" width="22" height="14" fill="#f1ece2" stroke="#8a7a66" stroke-dasharray="4 3"/>
+<text x="802.00" y="162.00" font-size="12" class="muted" text-anchor="start" >Footprint only (below floor)</text>
+<g data-panel-id="master-s" data-room-id="master" data-wall-dir="S">
+<rect x="60" y="178" width="619.1607200000001" height="810.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="76.00" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">Master bedroom – south wall (wardrobes, W03 bay)</text>
+<text x="76.00" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking SOUTH · left to right</text>
+<text x="76.00" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >3.85 m long · tag master-s</text>
+<text x="76.00" y="262.00" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="master-s" transform="translate(595.16 218.00) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M6.9898 1.7246L6.9898 0.6746" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="635.16" y="215.00" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(100 823.278) scale(140)">
+<rect x="0.0000" y="-3.1877" width="3.8511" height="0.2286" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.9591" width="3.8511" height="2.9591" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<g data-zone="master-wardrobe-wall-held">
+<rect x="0.0411" y="-2.9591" width="1.4484" height="2.9591" fill="url(#zone)" stroke="#5b7795" stroke-width="0.012" stroke-dasharray=".07 .04"/>
+<text x="0.7654" y="-1.5570" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >WARDROBE ZONE</text>
+<text x="0.7654" y="-1.4489" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >in principle</text>
+<text x="0.7654" y="-1.3410" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >unmeasured</text>
+<rect x="2.4027" y="-2.9591" width="1.4484" height="2.9591" fill="url(#zone)" stroke="#5b7795" stroke-width="0.012" stroke-dasharray=".07 .04"/>
+<text x="3.1269" y="-1.5570" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >WARDROBE ZONE</text>
+<text x="3.1269" y="-1.4489" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >in principle</text>
+<text x="3.1269" y="-1.3410" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >unmeasured</text>
+</g><g data-zone="master-loft-held">
+<rect x="0.0411" y="-3.1877" width="3.8100" height="0.2286" fill="url(#loft)" stroke="#7a6fa8" stroke-width="0.012" stroke-dasharray=".07 .04"/>
+<text x="0.0911" y="-3.0591" font-size="0.07" fill="#6a5f98" text-anchor="start" class="halo" stroke-width="0.0154" >LOFT held (H-LOFT: size, design and top not in master)</text>
+</g>
+<g data-opening-id="master-top-window" data-opening-code="W03" data-panel-id="master-s">
+<rect x="1.4896" y="-2.1300" width="0.9132" height="1.2300" fill="#d7ebf2" stroke="#4b6a78" stroke-width="0.018" />
+<path d="M1.9461 -2.1300L1.9461 -0.9000" fill="none" stroke="#7fa0ad" stroke-width="0.008" />
+<text x="1.9461" y="-1.6010" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >W03†</text>
+<text x="1.9461" y="-1.4810" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >sill 0.90</text>
+<text x="1.9461" y="-1.3610" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >head 2.13</text>
+</g>
+<g data-curtain-for="master-top-window">
+<rect x="1.1896" y="-2.9591" width="1.5132" height="0.0700" fill="#f6dede" stroke="#b02f2f" stroke-width="0.012" stroke-dasharray=".04 .03"/>
+<text x="1.9461" y="-2.7891" font-size="0.07" fill="#b02f2f" text-anchor="middle" class="halo" stroke-width="0.0154" >W03 pocket HELD (H-MBR-W03)</text>
+</g>
+<path d="M-0.1200 0.0000L3.9711 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L3.9711 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.9591L3.9711 -2.9591" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="3.8211" y="-2.8591" font-size="0.075" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0165" >band 2.96 (derived)</text>
+<path d="M0.0000 0.0000L0.0000 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M3.8511 0.0000L3.8511 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+</g>
+<path d="M72 843.278H667.1607200000001" stroke="#e1e8e8"/>
+<text x="74.00" y="855.28" font-size="11" class="muted" text-anchor="start" >• W03 Master window: 913 mm wide, sill 0.90 m, head 2.13 m (sill/head assumed) — centred</text>
+<text x="84.00" y="870.28" font-size="11" class="muted" text-anchor="start" >(homeowner-confirmed); offsets unmeasured.</text>
+<text x="74.00" y="885.28" font-size="11" class="muted" text-anchor="start" >• The split wardrobe around W03 is approved in principle. These are relationship bands only: size,</text>
+<text x="84.00" y="900.28" font-size="11" class="muted" text-anchor="start" >shutters and interior design remain unmeasured. Loft support and dimensions remain held; no</text>
+<text x="84.00" y="915.28" font-size="11" class="muted" text-anchor="start" >fabrication detail is drawn.</text>
+<text x="74.00" y="930.28" font-size="11" class="muted" text-anchor="start" >• Concealed ceiling curtain pocket: TWO tracks (sheer + blackout, HD-14). Clear pocket width/depth,</text>
+<text x="84.00" y="945.28" font-size="11" class="muted" text-anchor="start" >track spacing and stack are unverified; the outline is indicative only.</text>
+</g>
+<g data-panel-id="master-w" data-room-id="master" data-wall-dir="W">
+<rect x="709.1607200000001" y="178" width="736.167344" height="923.878" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="725.16" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">Master bedroom – west wall (headboard wall, W04)</text>
+<text x="725.16" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking WEST · left to right</text>
+<text x="725.16" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >4.69 m long · tag master-w</text>
+<text x="725.16" y="262.00" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="master-w" transform="translate(1361.33 218.00) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M8.9154 0.2246L8.9154 4.9115" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M7.4154 2.5681L8.4654 2.5681" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="1401.33" y="215.00" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(749.1607200000001 823.278) scale(140)">
+<rect x="0.0000" y="-3.1877" width="4.6869" height="0.2286" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.9591" width="4.6869" height="2.9591" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<g data-opening-id="master-window" data-opening-code="W04" data-panel-id="master-w">
+<rect x="2.8578" y="-2.1300" width="1.8264" height="1.2300" fill="#d7ebf2" stroke="#4b6a78" stroke-width="0.018" />
+<path d="M3.7710 -2.1300L3.7710 -0.9000" fill="none" stroke="#7fa0ad" stroke-width="0.008" />
+<text x="3.7710" y="-1.6010" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >W04</text>
+<text x="3.7710" y="-1.4810" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >sill 0.90</text>
+<text x="3.7710" y="-1.3610" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >head 2.13</text>
+</g>
+<g data-curtain-for="master-window">
+<rect x="2.5578" y="-2.9591" width="2.1291" height="0.0700" fill="#e9dff0" stroke="#7c658c" stroke-width="0.012" stroke-dasharray=".04 .03"/>
+<text x="3.6224" y="-2.7891" font-size="0.07" fill="#6a5580" text-anchor="middle" class="halo" stroke-width="0.0154" >pocket: 2 tracks (sheer + blackout)</text>
+</g>
+<path d="M-0.1200 0.0000L4.8069 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L4.8069 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.9591L4.8069 -2.9591" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="0.5939" y="-2.8591" font-size="0.075" fill="#203b43" text-anchor="start" class="halo" stroke-width="0.0165" >false-ceiling band 2.96 (derived – unmeasured)</text>
+<path d="M0.0000 0.0000L0.0000 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M4.6869 0.0000L4.6869 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<text x="0.0200" y="0.2800" font-size="0.07" fill="#9b641c" text-anchor="start" class="halo" stroke-width="0.0154" font-weight="600">FOOTPRINT ONLY — height not in master (modelled plan position; not site verified)</text>
+<g data-item-id="TENANT-BED-R04" data-item-kind="tenant-bed" data-panel-id="master-w" data-footprint-only="true">
+<rect x="0.8294" y="0.3500" width="1.8290" height="0.2500" fill="#f5f6fa" stroke="#5b7795" stroke-width="0.012" stroke-dasharray=".05 .04"/>
+<rect x="0.9819" y="0.3800" width="1.5240" height="0.1900" fill="none" stroke="#5b7795" stroke-width="0.008" stroke-dasharray=".03 .03"/>
+<text x="1.7439" y="0.5005" font-size="0.075" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0165" >tenant's bed — queen to king envelope</text>
+</g>
+</g>
+<path d="M721.1607200000001 928.878H1433.328064" stroke="#e1e8e8"/>
+<text x="723.16" y="940.88" font-size="11" class="muted" text-anchor="start" >• W04 Master side window: 1826 mm wide, sill 0.90 m, head 2.13 m (sill/head assumed).</text>
+<text x="723.16" y="955.88" font-size="11" class="muted" text-anchor="start" >• Items below the floor line are footprint only: their height is not in the master, so none is drawn.</text>
+<text x="723.16" y="970.88" font-size="11" class="muted" text-anchor="start" >• Tenant's own bed: dashed queen (1524 mm) to king (1829 mm) × 1981 mm mattress envelope, head against this wall. Not</text>
+<text x="733.16" y="985.88" font-size="11" class="muted" text-anchor="start" >joinery and not a tenant frame. Fixed bedside cabinets are omitted by the homeowner (HD-14); tenants may use movable</text>
+<text x="733.16" y="1000.88" font-size="11" class="muted" text-anchor="start" >tables.</text>
+<text x="723.16" y="1015.88" font-size="11" class="muted" text-anchor="start" >• Bed-head test wall only (H-MBR-BED; the tenant bed is not supplied): W04 sits at the end away from the wardrobe wall.</text>
+<text x="733.16" y="1030.88" font-size="11" class="muted" text-anchor="start" >W03 curtain pocket is held (H-MBR-W03).</text>
+<text x="723.16" y="1045.88" font-size="11" class="muted" text-anchor="start" >• Concealed ceiling curtain pocket: TWO tracks (sheer + blackout, HD-14). Clear pocket width/depth, track spacing and</text>
+<text x="733.16" y="1060.88" font-size="11" class="muted" text-anchor="start" >stack are unverified; the outline is indicative only.</text>
+</g>
+<g data-panel-id="master-n" data-room-id="master" data-wall-dir="N">
+<rect x="60" y="1131.8780000000002" width="619.1607200000001" height="750.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="76.00" y="1159.88" font-size="17" class="" text-anchor="start" font-weight="600">Master bedroom – north wall (dressing passage)</text>
+<text x="76.00" y="1181.88" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking NORTH · left to right</text>
+<text x="76.00" y="1198.88" font-size="11.5" class="muted mono" text-anchor="start" >3.85 m long · tag master-n</text>
+<text x="76.00" y="1215.88" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="master-n" transform="translate(595.16 1171.88) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L8.9154 4.9115" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M6.9898 3.4115L6.9898 4.4615" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="635.16" y="1168.88" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(100 1777.1560000000002) scale(140)">
+<rect x="0.0000" y="-3.1877" width="3.8511" height="0.2286" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.9591" width="2.7795" height="2.9591" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<rect x="2.8995" y="-2.9591" width="0.9517" height="2.9591" fill="url(#nowall)" stroke="#a9b4b4" stroke-width="0.008" stroke-dasharray=".06 .04"/>
+<text x="3.3753" y="-1.4557" font-size="0.07" fill="#6b7b7d" text-anchor="middle" class="halo" stroke-width="0.0154" >OPEN to Master dressing</text>
+<path d="M-0.1200 0.0000L3.9711 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L3.9711 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.9591L3.9711 -2.9591" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="3.8211" y="-2.8591" font-size="0.075" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0165" >false-ceiling band 2.96 (derived – unmeasured)</text>
+<path d="M0.0000 0.0000L0.0000 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M3.8511 0.0000L3.8511 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+</g>
+<path d="M72 1797.1560000000002H667.1607200000001" stroke="#e1e8e8"/>
+<text x="74.00" y="1809.16" font-size="11" class="muted" text-anchor="start" >• OPEN EDGE 2.90–3.85 m: open to Master dressing — no partition is drawn or implied.</text>
+<text x="74.00" y="1824.16" font-size="11" class="muted" text-anchor="start" >• Dressing passage to R04a is on this wall, beside the TV/door wall; modelled plan position, not site</text>
+<text x="84.00" y="1839.16" font-size="11" class="muted" text-anchor="start" >verified.</text>
+</g>
+<g data-panel-id="master-e" data-room-id="master" data-wall-dir="E">
+<rect x="709.1607200000001" y="1131.8780000000002" width="736.167344" height="735.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="725.16" y="1159.88" font-size="17" class="" text-anchor="start" font-weight="600">Master bedroom – east wall (TV wall, D02)</text>
+<text x="725.16" y="1181.88" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
+<text x="725.16" y="1198.88" font-size="11.5" class="muted mono" text-anchor="start" >4.69 m long · tag master-e</text>
+<text x="725.16" y="1215.88" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="master-e" transform="translate(1361.33 1171.88) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L5.0643 4.9115" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M6.5643 2.5681L5.5143 2.5681" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="1401.33" y="1168.88" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(749.1607200000001 1777.1560000000002) scale(140)">
+<rect x="0.0000" y="-3.1877" width="4.6869" height="0.2286" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.9591" width="4.6869" height="2.9591" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<g data-opening-id="master-door" data-opening-code="D02" data-panel-id="master-e">
+<rect x="0.0000" y="-2.1300" width="0.8614" height="2.1300" fill="#e3d3bd" stroke="#4b6a78" stroke-width="0.018" />
+<text x="0.4307" y="-1.0910" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >D02</text>
+<text x="0.4307" y="-0.9710" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >head 2.13</text>
+</g>
+<path d="M-0.1200 0.0000L4.8069 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L4.8069 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.9591L4.8069 -2.9591" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="4.6569" y="-2.8591" font-size="0.075" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0165" >false-ceiling band 2.96 (derived – unmeasured)</text>
+<path d="M0.0000 0.0000L0.0000 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M4.6869 0.0000L4.6869 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+</g>
+<path d="M721.1607200000001 1797.1560000000002H1433.328064" stroke="#e1e8e8"/>
+<text x="723.16" y="1809.16" font-size="11" class="muted" text-anchor="start" >• D02 Master bedroom door: 861 mm wide, head 2.13 m (sill/head assumed).</text>
+<text x="723.16" y="1824.16" font-size="11" class="muted" text-anchor="start" >• TV opposite the bed: its position along this wall is held, so it is not drawn.</text>
+</g>
+<text x="60.00" y="1916.16" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
+<text x="60.00" y="1940.16" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
+<text x="60.00" y="1958.16" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
+<text x="60.00" y="1976.16" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
+<text x="60.00" y="1998.16" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
+<text x="60.00" y="2020.16" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
+<text x="60.00" y="2042.16" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
+<text x="60.00" y="2060.16" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
+<text x="60.00" y="2078.16" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
+<text x="60.00" y="2100.16" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
+<path d="M60 2110.156H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="2132.16" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="1640.00" y="2132.16" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+</svg>

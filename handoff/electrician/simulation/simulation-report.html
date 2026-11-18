@@ -1,0 +1,858 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exploratory simulation report</title><style>
+body{font:1rem/1.6 system-ui,sans-serif;max-width:74rem;margin:auto;padding:2rem 1.25rem;color:#172a35;background:#f5f4ef}
+a{color:#075975;overflow-wrap:anywhere} .hold{border-left:.35rem solid #98610d;padding:1rem;background:white}
+.maps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+figure{margin:0 0 1rem}img{width:100%;height:auto}table{border-collapse:collapse;display:block;overflow-x:auto;background:white}
+th,td{border:1px solid #c9d1d3;padding:.5rem}code{overflow-wrap:anywhere}
+</style></head><body><a href="index.html">Simulation evidence and heatmaps</a><p class="hold">Historical report: its small-room sensitivity not-run statement is superseded only by the <a href="revision-all-rooms/index.html">six-room revision</a>. All other limitations and holds remain.</p><h1>Room-light simulation on master b6f6bf1a (exploratory)</h1>
+<blockquote>
+<p><strong>Public-copy compute note:</strong> Supplied base and paired sensitivity results are preserved. Execution-host and job details are not distributed. The source receipt's parity diagnostic is excluded from reported results. Original/public hashes and omissions are recorded in <code>repository-copy-receipt.json</code>.</p>
+</blockquote>
+<p><strong>Status:</strong> EXPLORATORY - generic provisional photometry; not product-specific, not measured, not a release. No fitting was moved; nothing was released, published or pushed.</p>
+<p>Master <code>b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</code> (read-only). Delivered <code>lighting-current-review</code> pack unchanged (check E2).</p>
+<h2>What was run</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td>Radiance rcontrib 6.0a (pyradiance wheel bundle) (backward Monte-Carlo ray tracing with full inter-reflection)</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>ab 8, ad 512, lw 1e-05; -dj 0.7 -ds 0.02 -dt 0 -dc 1 -st 0 -ss 0 -I+ -V+</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>illuminance (lx) per fitting at every analytic grid point, 0.75 m workplane (task grids at their own heights), MF 0.8 applied</td>
+</tr>
+<tr>
+<td>Photometry</td>
+<td>GENERIC: point fittings = cos^m intensity, m = ln0.5/ln(cos(beam/2)) (min 0.6), catalogue lumens taken as luminaire output; strips = Lambertian 10 mm emitters at catalogue lm/m. No IES/LDT, no product LOR, no cut-off/baffle optics.</td>
+</tr>
+<tr>
+<td>Surfaces</td>
+<td>ceiling 0.8, walls 0.55, floor 0.25, furniture 0.4 (all diffuse, assumed)</td>
+</tr>
+<tr>
+<td>Geometry</td>
+<td>lighting calculation polygons extruded (not surveyed masonry); LIV+DIN one open-plan enclosure; doors/windows/curtains not modelled (walls everywhere); unfurnished except kitchen counters/wall cabinets and the CBR desk shelf</td>
+</tr>
+<tr>
+<td>Covers</td>
+<td>tray recess at tray_h inside the tray path; cove pocket = band slab (12 mm) + lip + outer upstand; strip on the pocket floor facing up at pocket_w/2 outside the tray edge (pocket width and lip unmeasured); kitchen: flat ceiling with a shadow slot slot_w x slot_d outside the cove path; strip on the slot inner face aimed outward (variant: down-facing); slot size unmeasured</td>
+</tr>
+</tbody>
+</table>
+<h2>Independent checks</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 isotropic point source vs inverse-square cosine law</td>
+<td>PASS</td>
+<td>{"max_rel_err": 0.00372, "reused": true}</td>
+</tr>
+<tr>
+<td>A2 cos^m downlight (simulator primitive) vs I0 cos^m law, flux-normalised (-dj 0)</td>
+<td>PASS</td>
+<td>{"m": 4.819, "max_rel_err": 0.00034, "reused": true}</td>
+</tr>
+<tr>
+<td>A2b cos^m downlight with production jitter (-dj 0.7): mean of 8 passes vs law</td>
+<td>PASS</td>
+<td>{"single_pass_max_rel_err": 0.03449, "mean8_max_rel_err": 0.0056, "reused": true}</td>
+</tr>
+<tr>
+<td>A3 Lambertian strip (simulator primitive) vs exact view factor</td>
+<td>PASS</td>
+<td>{"sim": 64.165, "exact": 64.133, "reused": true}</td>
+</tr>
+<tr>
+<td>A4 integrating cube rho 0.5, ab 2: indirect vs truncated series</td>
+<td>PASS</td>
+<td>{"sim": 1.3807, "expected": 1.3708, "captured_of_infinite": 0.7555, "reused": true}</td>
+</tr>
+<tr>
+<td>A4 integrating cube rho 0.5, ab 5: indirect vs truncated series</td>
+<td>PASS</td>
+<td>{"sim": 1.7716, "expected": 1.7706, "captured_of_infinite": 0.9693, "reused": true}</td>
+</tr>
+<tr>
+<td>A4 integrating cube rho 0.5, ab 8: indirect vs truncated series</td>
+<td>PASS</td>
+<td>{"sim": 1.8248, "expected": 1.8206, "captured_of_infinite": 0.9984, "reused": true}</td>
+</tr>
+<tr>
+<td>B0 base run bound to master b6f6bf1a and units declared</td>
+<td>PASS</td>
+<td>{"master": "b6f6bf1a", "units": {"xyz": "metres; x = plan x_ft<em>0.3048, y = plan z_ft</em>0.3048 (sheet-down), z = height above local floor", "E": "lux, maintained (MF applied), per fixture at 100 % output"}}</td>
+</tr>
+<tr>
+<td>B1 every room with fixtures is simulated</td>
+<td>PASS</td>
+<td>{"missing": []}</td>
+</tr>
+<tr>
+<td>B2 fixture accounting: simulated + reported-skipped = all lux-credited fixtures in the master lighting inputs</td>
+<td>PASS</td>
+<td>{"simulated": 103, "skipped": {"LIV-P1": "inherited pooja U-strip record (x 2.15 ft, z 37.45-40.15 ft, behind the x 2.25 ft wall face) lies outside the canonical niche cavity (z 39.93-41.93 ft); not physically placeable in this geometry - pooja lighting HELD"}, "total": 104}</td>
+</tr>
+<tr>
+<td>B3 every result vector has one finite, non-negative lux value per point; room grids identical to the analytic heat-map grids/masks</td>
+<td>PASS</td>
+<td>{"bad": [], "grid_shapes": {"LIV": {"grid": [72, 56], "points": 3733}, "DIN": {"grid": [40, 56], "points": 2240}, "KIT": {"grid": [40, 56], "points": 2240}, "MBR": {"grid": [61, 50], "points": 3050}, "CBR": {"grid": [60, 50], "points": 2724}, "UTL": {"grid": [16, 58], "points": 928}, "DRS": {"grid": [25, 14], "points": 350}, "LOB": {"grid": [22, 14], "points": 308}, "TL1": {"grid": [22, 35], "points": 770}, "TL2": {"grid": [22, 35], "points": 770}, "BAL": {"grid": [32, 42], "points": 1344}}}</td>
+</tr>
+<tr>
+<td>B4 fixture positions inside their simulated enclosures (known exceptions reported, not moved)</td>
+<td>PASS</td>
+<td>{"outside": [{"fixture": "LIV-P1", "enclosure": "HALL", "n_outside": 2, "example_ft": [2.15, 37.45]}, {"fixture": "KIT-L1", "enclosure": "KIT", "n_outside": 8, "example_ft": [11.951, 15.451]}]}</td>
+</tr>
+<tr>
+<td>B5 children's room coverage: L-shaped grid fully masked, H1-H6 simulated and lighting it, desk grid inside the room</td>
+<td>PASS</td>
+<td>{"H_mean_lx_on_grid": {"CBR-H1": 19.8, "CBR-H2": 23.8, "CBR-H3": 17.8, "CBR-H4": 19.8, "CBR-H5": 20.2, "CBR-H6": 21.7}, "desk_points": 264, "desk_shape": [11, 24], "grid_points": 2724, "poly_ft": [[16.75, 28.2557], [29.25, 28.2557], [29.25, 43.2557], [19.7028, 43.2557], [19.7028, 37.5142], [16.75, 37.5142]]}</td>
+</tr>
+<tr>
+<td>B6 pooja coverage: canonical niche back/opening planes sampled inside the canonical aperture; inherited records reported</td>
+<td>PASS</td>
+<td>{"back_shape": [34, 12], "niche_z_m": [12.1690384, 12.7786384], "sill_top_m": [0.4318, 2.1336], "depth_m_HOLD": 0.381, "LIV_P2_aim_ft": [2.05, 38.8, 1.1]}</td>
+</tr>
+<tr>
+<td>D0 sampling convergence (KIT ab 8: ad 128 vs ad 1024): room-mean difference per fixture</td>
+<td>PASS</td>
+<td>{"worst_mean_diff_pct": 4.28}</td>
+</tr>
+<tr>
+<td>D1 sweep baseline sens128-base (ab 8 / ad 128) vs base run (ab 8 / ad 512): room-mean difference for MBR/CBR</td>
+<td>PASS</td>
+<td>{"max_abs_pct": 1.35}</td>
+</tr>
+<tr>
+<td>D1 sweep baseline sens512kit-base (ab 8 / ad 512) vs base run (ab 8 / ad 512): room-mean difference for KIT</td>
+<td>PASS</td>
+<td>{"max_abs_pct": 1.04}</td>
+</tr>
+<tr>
+<td>D1 sweep baseline sens128hall-base (ab 8 / ad 128) vs base run (ab 8 / ad 512): room-mean difference for LIV/DIN</td>
+<td>PASS</td>
+<td>{"max_abs_pct": 0.96}</td>
+</tr>
+<tr>
+<td>E1 master unchanged (b6f6bf1a)</td>
+<td>PASS</td>
+<td>{"sha": "b6f6bf1a"}</td>
+</tr>
+<tr>
+<td>E2 delivered lighting-current-review manifest unchanged (a852f200)</td>
+<td>PASS</td>
+<td>{"sha": "a852f200"}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>20/20 checks passed.</strong></p>
+<p>Engine accuracy: point source 0.37%, cos^m downlight 0.03% (deterministic); single-pass source jitter up to 3.4% per point (averages out: 8-pass 0.56%); strip 0.05%; integrating cube at ab 8 within 0.3% of the truncated series.</p>
+<h2>Rooms: simulation vs delivered analytic model (task area, 100 %)</h2>
+<p>Values are avg / min / U0 in lux. Grades use the same bands as the analytic pack.</p>
+<table>
+<thead>
+<tr>
+<th>Room</th>
+<th>HIGH sim</th>
+<th>HIGH analytic</th>
+<th>LOW sim</th>
+<th>LOW analytic</th>
+<th>HIGH+LOW sim</th>
+<th>HIGH+LOW analytic</th>
+<th>Grade sim / analytic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LIV</td>
+<td>159 / 51 / 0.32</td>
+<td>152 / 66 / 0.43</td>
+<td>146 / 65 / 0.45</td>
+<td>120 / 99 / 0.83</td>
+<td>305 / 142 / 0.47</td>
+<td>272 / 172 / 0.63</td>
+<td>MARGINAL / PASS</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>159 / 90 / 0.57</td>
+<td>145 / 89 / 0.61</td>
+<td>216 / 81 / 0.38</td>
+<td>199 / 114 / 0.57</td>
+<td>375 / 186 / 0.50</td>
+<td>344 / 209 / 0.61</td>
+<td>PASS / PASS</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>309 / 105 / 0.34</td>
+<td>267 / 111 / 0.42</td>
+<td>86 / 25 / 0.29</td>
+<td>77 / 77 / 1.00</td>
+<td>395 / 173 / 0.44</td>
+<td>344 / 188 / 0.55</td>
+<td>MARGINAL / PASS</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>186 / 94 / 0.51</td>
+<td>164 / 89 / 0.54</td>
+<td>166 / 84 / 0.50</td>
+<td>115 / 84 / 0.73</td>
+<td>352 / 189 / 0.54</td>
+<td>279 / 177 / 0.64</td>
+<td>PASS / PASS</td>
+</tr>
+<tr>
+<td>CBR</td>
+<td>144 / 83 / 0.58</td>
+<td>127 / 78 / 0.61</td>
+<td>186 / 91 / 0.49</td>
+<td>142 / 104 / 0.73</td>
+<td>330 / 202 / 0.61</td>
+<td>270 / 193 / 0.72</td>
+<td>PASS / PASS</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>211 / 175 / 0.83</td>
+<td>132 / 107 / 0.81</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>PASS (above band at 100 %; dim) / PASS</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>197 / 190 / 0.96</td>
+<td>157 / 151 / 0.96</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>PASS / PASS</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>264 / 255 / 0.97</td>
+<td>208 / 202 / 0.97</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>PASS (above band at 100 %; dim) / PASS (above band at 100 %; dim)</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>257 / 167 / 0.65</td>
+<td>228 / 159 / 0.70</td>
+<td>186 / 144 / 0.77</td>
+<td>159 / 159 / 1.00</td>
+<td>443 / 311 / 0.70</td>
+<td>387 / 319 / 0.82</td>
+<td>PASS (above band at 100 %; dim) / PASS</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>257 / 168 / 0.65</td>
+<td>228 / 159 / 0.70</td>
+<td>186 / 152 / 0.82</td>
+<td>159 / 159 / 1.00</td>
+<td>443 / 320 / 0.72</td>
+<td>387 / 319 / 0.82</td>
+<td>PASS (above band at 100 %; dim) / PASS</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>75 / 49 / 0.65</td>
+<td>64 / 43 / 0.67</td>
+<td>54 / 36 / 0.66</td>
+<td>40 / 31 / 0.78</td>
+<td>130 / 95 / 0.73</td>
+<td>104 / 74 / 0.71</td>
+<td>PASS / PASS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading this:</strong> simulated means are typically 5-25 % above the analytic pack (the analytic model applies an extra 0.85 factor and simpler inter-reflection). Simulated uniformity is lower, especially for coves (the analytic model treats a cove as an even line source). LIV and KIT HIGH drop to U0 0.32-0.34 (MARGINAL vs 0.40): the low points lie 2-3 ft inside the room edge, not a lumen shortfall. The LIV minimum (x 10.6, z 27.4 ft) is at the open-plan boundary with dining; counting the dining fittings, LIV HIGH U0 is 0.51. The KIT minimum is near the x 14.4 ft side (2 ft in). Cheapest response if confirmed on site: aim/spacing review in the next product-specific run, not more lumens. BAL is modelled as an enclosed room, so its numbers are overstated.</p>
+<h2>Tasks</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Simulation</th>
+<th>Analytic</th>
+<th>Target</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kitchen worktop HIGH+TASK 100 %</td>
+<td>647 / 407 / 0.63</td>
+<td>513 / 333 / 0.65</td>
+<td>500-750 lx avg, U0 &gt;= 0.60 (EN 12464-1 / criteria pack)</td>
+<td>PASS; sink/window end weakest (407 lx min)</td>
+</tr>
+<tr>
+<td>Children's desk STUDY 100 %</td>
+<td>691 / 376 / 0.54</td>
+<td>501 / 290 / 0.58</td>
+<td>500-750 lx, U0&gt;=0.6</td>
+<td>level PASS; U0 slightly short alone</td>
+</tr>
+<tr>
+<td>Children's desk HIGH+STUDY 100 %</td>
+<td>767 / 458 / 0.60</td>
+<td>583 / 355 / 0.61</td>
+<td>500-750 lx, U0&gt;=0.6</td>
+<td>U0 met; avg just above 750 - dim slightly</td>
+</tr>
+<tr>
+<td>Lobby mirror face Ev HIGH+bar</td>
+<td>398</td>
+<td>342</td>
+<td>300-500 lx, U0 0.6</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Pooja idol (canonical niche) ACCENT</td>
+<td>29.3</td>
+<td>HOLD</td>
+<td>accent &gt;= 3x surround</td>
+<td>HOLD: accent/surround ratio 0.2; LIV-P2 (as recorded) is aimed at the inherited idol point behind the wall face; its beam lands on the wall south of the canonical niche, so the canonical niche receives little accent light. Pooja accent remains HOLD until the niche is measured and the spot aim/strip are re-set.</td>
+</tr>
+</tbody>
+</table>
+<h2>Sensitivity (paired runs: each variant against a baseline at identical sampling)</h2>
+<ul>
+<li><code>sens128-*</code> (ab 8 / ad 128) reported for MBR/CBR: baseline vs ad 512 base run MBR:HIGH_100 -0.0 %, MBR:LOW_100 -0.6 %, CBR:HIGH_100 +0.0 %, CBR:LOW_100 -1.4 %; not used (superseded): KIT:HIGH_100 +0.1 %, KIT:LOW_100 +8.9 %.</li>
+<li><code>sens512kit-*</code> (ab 8 / ad 512) reported for KIT: baseline vs ad 512 base run KIT:HIGH_100 -0.0 %, KIT:LOW_100 +1.0 %.</li>
+<li><code>sens128hall-*</code> (ab 8 / ad 128) reported for LIV/DIN: baseline vs ad 512 base run LIV:HIGH_100 -0.5 %, LIV:LOW_100 +1.0 %, DIN:HIGH_100 -0.0 %, DIN:LOW_100 -0.7 %.</li>
+</ul>
+<p>KIT rows come from the ad 512 sweep. The ad 128 sweep read the fully indirect slot cove (KIT LOW) about 9 % high, so its KIT rows are superseded and not shown.</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Room</th>
+<th>Sampling</th>
+<th>HIGH avg change</th>
+<th>HIGH U0 base-&gt;var</th>
+<th>LOW avg change</th>
+<th>LOW U0 base-&gt;var</th>
+<th>Task (base -&gt; var)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>beam_minus10</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>7.9 %</td>
+<td>0.51-&gt;0.46</td>
+<td>-0.1 %</td>
+<td>0.46-&gt;0.48</td>
+<td></td>
+</tr>
+<tr>
+<td>beam_minus10</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>8.5 %</td>
+<td>0.58-&gt;0.47</td>
+<td>-0.2 %</td>
+<td>0.51-&gt;0.44</td>
+<td>avg 767-&gt;771, min 465-&gt;461</td>
+</tr>
+<tr>
+<td>beam_minus10</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>6.9 %</td>
+<td>0.34-&gt;0.28</td>
+<td>-0.3 %</td>
+<td>0.4-&gt;0.41</td>
+<td>avg 647-&gt;680, min 407-&gt;436; KIT cove avg 87-&gt;86</td>
+</tr>
+<tr>
+<td>beam_minus10</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>0.6 %</td>
+<td>0.31-&gt;0.22</td>
+<td>0.0 %</td>
+<td>0.38-&gt;0.34</td>
+<td></td>
+</tr>
+<tr>
+<td>beam_minus10</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>8.3 %</td>
+<td>0.56-&gt;0.5</td>
+<td>2.5 %</td>
+<td>0.38-&gt;0.34</td>
+<td></td>
+</tr>
+<tr>
+<td>beam_plus10</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>-7.0 %</td>
+<td>0.51-&gt;0.55</td>
+<td>0.1 %</td>
+<td>0.46-&gt;0.46</td>
+<td></td>
+</tr>
+<tr>
+<td>beam_plus10</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>-7.4 %</td>
+<td>0.58-&gt;0.64</td>
+<td>-0.0 %</td>
+<td>0.51-&gt;0.48</td>
+<td>avg 767-&gt;762, min 465-&gt;472</td>
+</tr>
+<tr>
+<td>beam_plus10</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>-6.3 %</td>
+<td>0.34-&gt;0.39</td>
+<td>0.2 %</td>
+<td>0.4-&gt;0.41</td>
+<td>avg 647-&gt;621, min 407-&gt;373; KIT cove avg 87-&gt;87</td>
+</tr>
+<tr>
+<td>beam_plus10</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>-1.6 %</td>
+<td>0.31-&gt;0.38</td>
+<td>0.6 %</td>
+<td>0.38-&gt;0.34</td>
+<td></td>
+</tr>
+<tr>
+<td>beam_plus10</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>-7.5 %</td>
+<td>0.56-&gt;0.62</td>
+<td>-1.3 %</td>
+<td>0.38-&gt;0.36</td>
+<td></td>
+</tr>
+<tr>
+<td>ceil_minus0.1</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>2.3 %</td>
+<td>0.51-&gt;0.5</td>
+<td>3.5 %</td>
+<td>0.46-&gt;0.4</td>
+<td></td>
+</tr>
+<tr>
+<td>ceil_minus0.1</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>2.4 %</td>
+<td>0.58-&gt;0.55</td>
+<td>3.2 %</td>
+<td>0.51-&gt;0.47</td>
+<td>avg 767-&gt;771, min 465-&gt;467</td>
+</tr>
+<tr>
+<td>ceil_minus0.1</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>2.5 %</td>
+<td>0.34-&gt;0.32</td>
+<td>3.7 %</td>
+<td>0.4-&gt;0.35</td>
+<td>avg 647-&gt;665, min 407-&gt;433; KIT cove avg 87-&gt;90</td>
+</tr>
+<tr>
+<td>ceil_minus0.1</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>1.1 %</td>
+<td>0.31-&gt;0.3</td>
+<td>3.5 %</td>
+<td>0.38-&gt;0.33</td>
+<td></td>
+</tr>
+<tr>
+<td>ceil_minus0.1</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>2.8 %</td>
+<td>0.56-&gt;0.56</td>
+<td>3.3 %</td>
+<td>0.38-&gt;0.32</td>
+<td></td>
+</tr>
+<tr>
+<td>ceil_plus0.1</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>-2.2 %</td>
+<td>0.51-&gt;0.52</td>
+<td>-3.2 %</td>
+<td>0.46-&gt;0.43</td>
+<td></td>
+</tr>
+<tr>
+<td>ceil_plus0.1</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>-2.4 %</td>
+<td>0.58-&gt;0.6</td>
+<td>-3.6 %</td>
+<td>0.51-&gt;0.47</td>
+<td>avg 767-&gt;763, min 465-&gt;464</td>
+</tr>
+<tr>
+<td>ceil_plus0.1</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>-2.4 %</td>
+<td>0.34-&gt;0.36</td>
+<td>-4.7 %</td>
+<td>0.4-&gt;0.37</td>
+<td>avg 647-&gt;632, min 407-&gt;388; KIT cove avg 87-&gt;83</td>
+</tr>
+<tr>
+<td>ceil_plus0.1</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>-0.8 %</td>
+<td>0.31-&gt;0.32</td>
+<td>-3.1 %</td>
+<td>0.38-&gt;0.34</td>
+<td></td>
+</tr>
+<tr>
+<td>ceil_plus0.1</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>-2.8 %</td>
+<td>0.56-&gt;0.59</td>
+<td>-2.2 %</td>
+<td>0.38-&gt;0.36</td>
+<td></td>
+</tr>
+<tr>
+<td>pocket_narrow</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>0.1 %</td>
+<td>0.51-&gt;0.5</td>
+<td>-8.5 %</td>
+<td>0.46-&gt;0.39</td>
+<td></td>
+</tr>
+<tr>
+<td>pocket_narrow</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>0.0 %</td>
+<td>0.58-&gt;0.58</td>
+<td>-7.9 %</td>
+<td>0.51-&gt;0.46</td>
+<td>avg 767-&gt;767, min 465-&gt;472</td>
+</tr>
+<tr>
+<td>pocket_narrow</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>0.1 %</td>
+<td>0.31-&gt;0.32</td>
+<td>-11.1 %</td>
+<td>0.38-&gt;0.32</td>
+<td></td>
+</tr>
+<tr>
+<td>pocket_narrow</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>0.0 %</td>
+<td>0.56-&gt;0.57</td>
+<td>-3.8 %</td>
+<td>0.38-&gt;0.35</td>
+<td></td>
+</tr>
+<tr>
+<td>pocket_wide</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>-0.0 %</td>
+<td>0.51-&gt;0.5</td>
+<td>-3.2 %</td>
+<td>0.46-&gt;0.47</td>
+<td></td>
+</tr>
+<tr>
+<td>pocket_wide</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>-0.0 %</td>
+<td>0.58-&gt;0.58</td>
+<td>-3.1 %</td>
+<td>0.51-&gt;0.49</td>
+<td>avg 767-&gt;767, min 465-&gt;467</td>
+</tr>
+<tr>
+<td>pocket_wide</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>-0.1 %</td>
+<td>0.31-&gt;0.31</td>
+<td>-5.3 %</td>
+<td>0.38-&gt;0.36</td>
+<td></td>
+</tr>
+<tr>
+<td>pocket_wide</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>-0.0 %</td>
+<td>0.56-&gt;0.56</td>
+<td>-2.9 %</td>
+<td>0.38-&gt;0.38</td>
+<td></td>
+</tr>
+<tr>
+<td>rho_high</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>13.3 %</td>
+<td>0.51-&gt;0.56</td>
+<td>25.8 %</td>
+<td>0.46-&gt;0.53</td>
+<td></td>
+</tr>
+<tr>
+<td>rho_high</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>13.6 %</td>
+<td>0.58-&gt;0.62</td>
+<td>24.2 %</td>
+<td>0.51-&gt;0.54</td>
+<td>avg 767-&gt;835, min 465-&gt;518</td>
+</tr>
+<tr>
+<td>rho_high</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>16.8 %</td>
+<td>0.34-&gt;0.41</td>
+<td>39.8 %</td>
+<td>0.4-&gt;0.49</td>
+<td>avg 647-&gt;753, min 407-&gt;500; KIT cove avg 87-&gt;121</td>
+</tr>
+<tr>
+<td>rho_high</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>17.2 %</td>
+<td>0.31-&gt;0.38</td>
+<td>23.0 %</td>
+<td>0.38-&gt;0.43</td>
+<td></td>
+</tr>
+<tr>
+<td>rho_high</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>11.3 %</td>
+<td>0.56-&gt;0.61</td>
+<td>13.8 %</td>
+<td>0.38-&gt;0.41</td>
+<td></td>
+</tr>
+<tr>
+<td>rho_low</td>
+<td>MBR</td>
+<td>ab 8 / ad 128</td>
+<td>-8.3 %</td>
+<td>0.51-&gt;0.47</td>
+<td>-22.1 %</td>
+<td>0.46-&gt;0.38</td>
+<td></td>
+</tr>
+<tr>
+<td>rho_low</td>
+<td>CBR</td>
+<td>ab 8 / ad 128</td>
+<td>-8.7 %</td>
+<td>0.58-&gt;0.55</td>
+<td>-20.9 %</td>
+<td>0.51-&gt;0.42</td>
+<td>avg 767-&gt;707, min 465-&gt;430</td>
+</tr>
+<tr>
+<td>rho_low</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>-11.3 %</td>
+<td>0.34-&gt;0.29</td>
+<td>-35.8 %</td>
+<td>0.4-&gt;0.28</td>
+<td>avg 647-&gt;571, min 407-&gt;343; KIT cove avg 87-&gt;56</td>
+</tr>
+<tr>
+<td>rho_low</td>
+<td>LIV</td>
+<td>ab 8 / ad 128</td>
+<td>-12.3 %</td>
+<td>0.31-&gt;0.24</td>
+<td>-22.1 %</td>
+<td>0.38-&gt;0.35</td>
+<td></td>
+</tr>
+<tr>
+<td>rho_low</td>
+<td>DIN</td>
+<td>ab 8 / ad 128</td>
+<td>-8.2 %</td>
+<td>0.56-&gt;0.53</td>
+<td>-11.9 %</td>
+<td>0.38-&gt;0.31</td>
+<td></td>
+</tr>
+<tr>
+<td>kit_extend</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>-1.1 %</td>
+<td>0.34-&gt;0.34</td>
+<td>11.6 %</td>
+<td>0.4-&gt;0.43</td>
+<td>avg 647-&gt;641, min 407-&gt;395; KIT cove avg 87-&gt;97</td>
+</tr>
+<tr>
+<td>kit_slot_down</td>
+<td>KIT</td>
+<td>ab 8 / ad 512</td>
+<td>0.0 %</td>
+<td>0.34-&gt;0.34</td>
+<td>69.1 %</td>
+<td>0.4-&gt;0.31</td>
+<td>avg 647-&gt;647, min 407-&gt;410; KIT cove avg 87-&gt;146</td>
+</tr>
+</tbody>
+</table>
+<p>Linear scalings (no rerun): lumens +/-20 % -&gt; linear: every value x0.8 / x1.2 (no rerun needed); MF 0.7/0.9 -&gt; linear: every value x0.875 / x1.125 relative to MF 0.8.</p>
+<p><strong>Not run:</strong> sensitivity for utility, dressing, lobby, baths and balcony (small rooms; MBR/CBR/HALL stand in for the tray/cove construction). All planned MBR/CBR/KIT/LIV/DIN variants completed.</p>
+<h2>Limitations and what stays held</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Photometry</td>
+<td>Generic shapes only; no IES/LDT files for selected products exist (no products selected). Real cut-off, LOR and beam tails will change point values and glare; NOT product-specific validation.</td>
+</tr>
+<tr>
+<td>Reflectances</td>
+<td>Assumed; paint/tile LRV unselected. Glossy floor specularity not modelled.</td>
+</tr>
+<tr>
+<td>Geometry</td>
+<td>Lighting polygons, not surveyed masonry; no doors/windows/curtains; mostly unfurnished; cove pocket, kitchen slot and pooja niche depth unmeasured (sensitivity shows their effect).</td>
+</tr>
+<tr>
+<td>Pooja</td>
+<td>HELD: LIV-P1 strip record lies outside the canonical niche; LIV-P2 aim misses the canonical niche. Re-aim/re-set after niche measurement.</td>
+</tr>
+<tr>
+<td>Kitchen cove KIT-L1</td>
+<td>Path overruns the kitchen polygon by 0.4 ft (reported, not moved); result depends strongly on the unmeasured slot.</td>
+</tr>
+<tr>
+<td>Balcony</td>
+<td>Enclosed model overestimates (open sides lose light).</td>
+</tr>
+<tr>
+<td>Curtain strips</td>
+<td>Excluded - no lux credit, pockets unmeasured, mock-up hold remains.</td>
+</tr>
+<tr>
+<td>Glare / UGR, daylight, flicker, thermal</td>
+<td>Not computed by this run.</td>
+</tr>
+<tr>
+<td>Approvals</td>
+<td>construction_release, product_approval and exact_chain_proven remain false; this run does not change any hold.</td>
+</tr>
+</tbody>
+</table>
+<h2>Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sim_radiance.py</code></td>
+<td>simulator (hash-guards the master)</td>
+</tr>
+<tr>
+<td><code>cosm.cal</code></td>
+<td>cos^m intensity function</td>
+</tr>
+<tr>
+<td><code>check_sim.py</code></td>
+<td>independent checks + analysis</td>
+</tr>
+<tr>
+<td><code>runs/base/sim-results.json</code></td>
+<td>base per-fitting lux vectors</td>
+</tr>
+<tr>
+<td><code>analysis/sim-summary.json</code></td>
+<td>summary</td>
+</tr>
+<tr>
+<td><code>analysis/checks.json</code></td>
+<td>check results</td>
+</tr>
+<tr>
+<td><code>analysis/sim-heatmaps.json</code></td>
+<td>simulated heat-map grids</td>
+</tr>
+<tr>
+<td><code>simulation-receipt.json</code></td>
+<td>hashes</td>
+</tr>
+</tbody>
+</table></body></html>

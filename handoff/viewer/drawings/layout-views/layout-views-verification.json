@@ -1,0 +1,1741 @@
+{
+  "schema": "layout_views_receipt/1",
+  "verified_utc": "2026-11-18T11:21:18.772370+00:00",
+  "purpose": "Read-only current layout views (top-down plan, reflected ceiling plan, interior elevations) from the canonical master; not a construction release.",
+  "drawing_source": {
+    "staging": false,
+    "final": false,
+    "publication_status": "REVIEW DRAFT; not construction-released",
+    "review_draft": true,
+    "lighting_pending": false,
+    "hd18": {
+      "fragment": {
+        "file": "pooja-notation-hd18.json",
+        "sha256": "598796435ba3b37d6fedf655f243d87e09c663cbf338eb5fd7a25cbff37a46ec",
+        "bytes": 2458
+      },
+      "dimensions": {
+        "status": "homeowner_estimates_unverified_not_site_measurements",
+        "width_mm": 609.6,
+        "height_mm": 1701.8,
+        "sill_m": 0.4318,
+        "top_m": 2.1336,
+        "depth_mm": 381,
+        "z_m": [
+          12.1690384,
+          12.7786384
+        ],
+        "opening_height_basis": "Derived from estimated top minus estimated sill, not separately measured.",
+        "interpretation": "Homeowner clarified feet-and-inches notation: sill 1 ft 5 in, depth 1 ft 3 in, north-corner gap 1 ft 4 in. All remain estimates."
+      },
+      "placement": {
+        "status": "provisional_from_estimated_offset_and_unverified_model_corner",
+        "corner_z_m": 13.1850384,
+        "corner_source": "visualization_geometry.rooms[living].rect north/entry-side inside edge",
+        "north_edge_clear_offset_m": 0.4064,
+        "niche_z_m_south_to_north": [
+          12.1690384,
+          12.7786384
+        ],
+        "w06_planar_gap_m": 1.1809984,
+        "w06_gap_basis": "Current modeled living-window; neither opening is site surveyed.",
+        "balcony_outline": "An edge relationship was reported, but the matching edges remain unresolved; do not claim alignment."
+      },
+      "construction_release": false
+    },
+    "note": "HD-18 clarifies feet-and-inches notation: sill 1 ft 5 in (0.4318 m), depth 1 ft 3 in (381 mm), north-corner gap 1 ft 4 in (0.4064 m). All remain homeowner estimates, not site measurements. Opening height 1701.8 mm is derived from the estimated top minus sill."
+  },
+  "source_master": {
+    "path": "house-design.json",
+    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "bytes": 1591969,
+    "expected_sha256_matched": true
+  },
+  "live_master": null,
+  "compass": {
+    "read_from": "visualization_geometry.orientation",
+    "evidence_status": "homeowner_confirmed",
+    "sheet_to_compass": {
+      "+z_sheet_down": "north",
+      "-z_sheet_top": "south",
+      "+x_sheet_right": "west",
+      "-x_sheet_left": "east"
+    },
+    "true_north_vector_xz": [
+      0,
+      1
+    ],
+    "scope": "cardinal directions only; true bearing and magnetic declination are not surveyed"
+  },
+  "heights": "HD-11: homeowner-stated or derived, all unmeasured (decisions.ceiling_heights); bath/utility/lobby/balcony not provided; heads and sills assumed",
+  "hd14": {
+    "decision": "HD-14",
+    "construction_release": false,
+    "bedside_units_omitted_not_drawn": [
+      "ST-R04-NS01",
+      "ST-R04-NS02",
+      "ST-R05-NS01"
+    ],
+    "curtains": "two tracks (sheer + blackout) in LIV, MBR, CBR; pocket sizes unverified, none invented",
+    "raised_centre": "separate gypsum/POP panel below the slab; clear cavity depth and panel level unmeasured; conditional product-fit/access detail only; no slab chasing or structural cutting authorised"
+  },
+  "hd15": {
+    "decision": "HD-15",
+    "geometry_changed": false,
+    "estimated_clearance_mm": 387.6,
+    "status": "layout_retained_site_clearance_hold",
+    "recheck": "Measure the actual bed frame, fixed study-return edge and unobstructed route on site; do not describe the gap as a comfortable walking route."
+  },
+  "open_item_compass_correction": null,
+  "lighting_status": "OPT-1 calculated review candidate from the bound master (104 base fittings, 47 controlled groups). Four selected 2700 K curtain strips bring the review schedule to 108 fittings / 51 circuits; no new knobs or photometry credit. Kitchen task option K-2 is homeowner-selected for review: it adds the sink-end linear KIT-T4 and lowers KIT-T1 output. Generic-optics analytic estimates, not measured or manufacturer-validated; no photometry is shown on this sheet. Not construction-released; product, driver, dimmer and site-fit holds remain open. Each bathroom face-light pair has its own knob (HD-17). Pooja fittings remain count/load allowances only, with inherited positions held (H-POOJA-GEOMETRY); no corrected placement is implied.",
+  "canonical_lighting_status": "FIXED_WHITE_HOMEOWNER_SIGNED_REVIEW_CANDIDATE_NOT_CONSTRUCTION_RELEASED",
+  "lighting_design_inputs_sha256": "4fd1b24c521a37a0ebe7b345805827a64bf7c43579cf12133171a514b3c7f7e7",
+  "lighting_selection": {
+    "kitchen_worktop": {
+      "option": "K-2",
+      "status": "selected_for_review_not_construction_release",
+      "scope": "Add KIT-T4 sink-end task linear and use lower-output KIT-T1 at 650 lm/m.",
+      "nominal_result": "518 lx average / 323 lx minimum / U0 0.623",
+      "residual_risk": "Sensitivity cases at reflectance 0.30, flux -12.5%, and cabinets +0.2 ft are MARGINAL; confirm measured geometry, optics, and fitting clearance before task-light sign-off."
+    },
+    "fixtures": 104,
+    "controlled_groups": 47,
+    "construction_release": false,
+    "product_approval": false,
+    "photometry_basis": "OPT-1 full analytic rerun from recorded design-input changes; generic optics and provisional geometry; not measured or manufacturer-validated photometry."
+  },
+  "style": "original sheet theme restored (HD-12 style-only rollback); layout data is the current finalised master; original layout retired (HD-13), not used",
+  "pooja_niche": {
+    "built_status": "Already built, confirmed by homeowner; do not ask whether the niche exists",
+    "location": "homeowner_estimated_offset_from_unsurveyed_model_corner",
+    "dimensions": {
+      "status": "homeowner_estimates_unverified_not_site_measurements",
+      "width_mm": 609.6,
+      "height_mm": 1701.8,
+      "sill_m": 0.4318,
+      "top_m": 2.1336,
+      "depth_mm": 381.0,
+      "z_m": [
+        12.1690384,
+        12.7786384
+      ],
+      "opening_height_basis": "Derived from estimated top minus estimated sill, not separately measured.",
+      "interpretation": "Homeowner clarified feet-and-inches notation: sill 1 ft 5 in, depth 1 ft 3 in, north-corner gap 1 ft 4 in. All remain estimates."
+    },
+    "geometry_hold": {
+      "status": "HOLD_estimated_depth_exceeds_modeled_wall_extension_not_modeled",
+      "estimated_depth_m": 0.381,
+      "modeled_wall_thickness_m": 0.2273808,
+      "estimated_back_x_m": 0.3044952,
+      "modeled_exterior_face_x_m": 0.4581144,
+      "excess_over_modeled_wall_m": 0.1536192,
+      "homeowner_report": "The existing niche extends beyond the 9-inch wall and is reinforced, with an extended slab top to bottom throughout the building, as reported by the homeowner.",
+      "meaning": "The reported extension is not represented or dimensioned in this model. The mismatch is not evidence that the existing niche is impossible or structurally unsafe.",
+      "required": "Measure the existing niche and wall/extension on site and confirm relevant support and capacity with the responsible structural professional.",
+      "new_or_deeper_cutting_authorized": false
+    },
+    "outside_wall_extension": {
+      "reported": true,
+      "description": "The existing niche extends beyond the 9-inch wall and is reinforced, with an extended slab top to bottom throughout the building, as reported by the homeowner.",
+      "source_request": {
+        "id": "92c6f806-d9e2-4f2c-b293-2bf84de98abb",
+        "revision": 1
+      },
+      "independently_verified": false,
+      "measured_geometry": null,
+      "allowable_load": null
+    },
+    "representation": "estimated front outline only; no physical back or structural section drawn",
+    "reinforcement": "homeowner-reported, not structurally certified",
+    "new_cutting_requested": false
+  },
+  "sheets": [
+    {
+      "id": "01-plan-furnished",
+      "title": "Furnished floor plan (top-down)",
+      "page_px": [
+        1700.0,
+        2234.0
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "01-plan-furnished.svg",
+        "sha256": "3452ab485d7cf5a402b53fb394f69aa65d579e4d2f55bde849c04c5ae45b8616",
+        "bytes": 56913
+      },
+      "png": {
+        "file": "01-plan-furnished.png",
+        "sha256": "993833149fc7c8efe8e618b0f544fd90adc043e503996213cdcd0b8be1122a9f",
+        "bytes": 1149566
+      },
+      "counts": {
+        "rooms": 12,
+        "walls": 21,
+        "openings": 21,
+        "storageDrawn": 11,
+        "storageSuppressed": 5,
+        "furniture": 16,
+        "tenantBeds": 2,
+        "stairParts": 3,
+        "baths": 2
+      },
+      "svg_elements": 531,
+      "svg_text_elements": 188,
+      "pdf_page": 1
+    },
+    {
+      "id": "02-rcp",
+      "title": "Reflected ceiling plan (bottoms-up)",
+      "page_px": [
+        1700.0,
+        4085.0
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "02-rcp.svg",
+        "sha256": "65758485b986e7943af281bb524faf08cca19ad5e7265088f592b703bab33c1f",
+        "bytes": 91415
+      },
+      "png": {
+        "file": "02-rcp.png",
+        "sha256": "799ed5b0338af4f74b27c0fb49ff517e12d505caf5b73b47f3add34dd803a36d",
+        "bytes": 1888671
+      },
+      "counts": {
+        "fixtures": 104,
+        "circuits": 47,
+        "selectedCurtainStrips": 4,
+        "reviewFixtures": 108,
+        "reviewCircuits": 51,
+        "paths": 30,
+        "points": 74,
+        "fans": 3,
+        "curtainPockets": 5,
+        "grooves": 6,
+        "holdMarks": 11,
+        "rooms": 12,
+        "walls": 21
+      },
+      "svg_elements": 952,
+      "svg_text_elements": 233,
+      "pdf_page": 2
+    },
+    {
+      "id": "03-elev-R01-living",
+      "title": "Elevations — R01 Living",
+      "page_px": [
+        1700.0,
+        3087.7560000000003
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "03-elev-R01-living.svg",
+        "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
+        "bytes": 58459
+      },
+      "png": {
+        "file": "03-elev-R01-living.png",
+        "sha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
+        "bytes": 1068711
+      },
+      "counts": {
+        "panels": 5,
+        "openEdgesNotElevated": 1,
+        "openingsDrawn": 5,
+        "itemsDrawn": 2,
+        "curtains": 1,
+        "openEdgeNotes": 1
+      },
+      "svg_elements": 478,
+      "svg_text_elements": 163,
+      "pdf_page": 3
+    },
+    {
+      "id": "04-elev-R02-dining",
+      "title": "Elevations — R02 Dining",
+      "page_px": [
+        1700.0,
+        2172.556
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "04-elev-R02-dining.svg",
+        "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
+        "bytes": 36369
+      },
+      "png": {
+        "file": "04-elev-R02-dining.png",
+        "sha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
+        "bytes": 719231
+      },
+      "counts": {
+        "panels": 3,
+        "openEdgesNotElevated": 1,
+        "openingsDrawn": 2,
+        "itemsDrawn": 3,
+        "curtains": 1,
+        "openEdgeNotes": 2
+      },
+      "svg_elements": 301,
+      "svg_text_elements": 93,
+      "pdf_page": 4
+    },
+    {
+      "id": "05-elev-R03-kitchen",
+      "title": "Elevations — R03 Kitchen",
+      "page_px": [
+        1700.0,
+        2204.156
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "05-elev-R03-kitchen.svg",
+        "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
+        "bytes": 47449
+      },
+      "png": {
+        "file": "05-elev-R03-kitchen.png",
+        "sha256": "7459c5f3e9a526c8665dd6994c5a0bc457d1cec29f64e472d18eff9f0b83ef1e",
+        "bytes": 842465
+      },
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 4,
+        "itemsDrawn": 11,
+        "curtains": 0,
+        "openEdgeNotes": 1
+      },
+      "svg_elements": 396,
+      "svg_text_elements": 117,
+      "pdf_page": 5
+    },
+    {
+      "id": "06-elev-R04-master",
+      "title": "Elevations — R04 Master bedroom",
+      "page_px": [
+        1700.0,
+        2144.156
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "06-elev-R04-master.svg",
+        "sha256": "7bf79310c91f6a7133ee3a16321578e5aa0b3a94b0840fa1f965df625e832309",
+        "bytes": 43507
+      },
+      "png": {
+        "file": "06-elev-R04-master.png",
+        "sha256": "94b2230f591a365efe83da51f37d93033667dc314a57cc9a6136cfcca0acb9c0",
+        "bytes": 832838
+      },
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 1,
+        "curtains": 2,
+        "openEdgeNotes": 1
+      },
+      "svg_elements": 363,
+      "svg_text_elements": 104,
+      "pdf_page": 6
+    },
+    {
+      "id": "07-elev-R04a-dressing",
+      "title": "Elevations — R04a Master dressing",
+      "page_px": [
+        1700.0,
+        2120.556
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "07-elev-R04a-dressing.svg",
+        "sha256": "a638178863df93d3812895b920596f83f5c5e258aad367468c260defc840c66b",
+        "bytes": 42017
+      },
+      "png": {
+        "file": "07-elev-R04a-dressing.png",
+        "sha256": "db1bc1b846e2b0add9007e0f2b14307b6f08ac324cf847123d0466c1692fd331",
+        "bytes": 651781
+      },
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 1,
+        "itemsDrawn": 6,
+        "curtains": 0,
+        "openEdgeNotes": 1
+      },
+      "svg_elements": 355,
+      "svg_text_elements": 102,
+      "pdf_page": 7
+    },
+    {
+      "id": "08-elev-R05-children",
+      "title": "Elevations — R05 Children's bedroom",
+      "page_px": [
+        1700.0,
+        3054.434
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "08-elev-R05-children.svg",
+        "sha256": "d8f02b551adc330fe59da4acea87221fc2cf9241b4eb3863598322f6799e03fa",
+        "bytes": 61496
+      },
+      "png": {
+        "file": "08-elev-R05-children.png",
+        "sha256": "c2f561ab07ea6f8f92adb84ed2cf425ebc69302adc4a5609f50f1afbc428accd",
+        "bytes": 1010804
+      },
+      "counts": {
+        "panels": 6,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 2,
+        "itemsDrawn": 12,
+        "curtains": 1,
+        "openEdgeNotes": 0
+      },
+      "svg_elements": 515,
+      "svg_text_elements": 146,
+      "pdf_page": 8
+    },
+    {
+      "id": "09-elev-R06-TL1",
+      "title": "Elevations — R06 TL1 attached toilet",
+      "page_px": [
+        1700.0,
+        1985.556
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "09-elev-R06-TL1.svg",
+        "sha256": "84060a662b8752dbcee187d1f0adc7fdbe8324ccaea9a7f02499146be577df84",
+        "bytes": 42195
+      },
+      "png": {
+        "file": "09-elev-R06-TL1.png",
+        "sha256": "fb45e4f7d14334aff83cea80dc605b12a197a5476341f941a780aede86d9bda7",
+        "bytes": 593698
+      },
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 4,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "svg_elements": 366,
+      "svg_text_elements": 95,
+      "pdf_page": 9
+    },
+    {
+      "id": "10-elev-R07-TL2",
+      "title": "Elevations — R07 TL2 common toilet",
+      "page_px": [
+        1700.0,
+        1985.556
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "10-elev-R07-TL2.svg",
+        "sha256": "7d3650c204fa049a1522baaec6496eba838b4975454cebab195983e315659c43",
+        "bytes": 42184
+      },
+      "png": {
+        "file": "10-elev-R07-TL2.png",
+        "sha256": "b1d78fc8cea97d975dbecf9676d566ef9f5943d25505017ce3922c14d4c54315",
+        "bytes": 596725
+      },
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 4,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "svg_elements": 366,
+      "svg_text_elements": 95,
+      "pdf_page": 10
+    },
+    {
+      "id": "11-elev-R08-utility",
+      "title": "Elevations — R08 Utility + washing",
+      "page_px": [
+        1700.0,
+        2264.156
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "11-elev-R08-utility.svg",
+        "sha256": "627d109d239a41a498da1a2416f8b5761699d1ea5ec78fffb14d06b482a895f8",
+        "bytes": 48705
+      },
+      "png": {
+        "file": "11-elev-R08-utility.png",
+        "sha256": "d61ef0c5caaf8aefac91c477499c27b59e06cce6a22f1e65920e14fa51d43cf0",
+        "bytes": 833447
+      },
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 14,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "svg_elements": 401,
+      "svg_text_elements": 122,
+      "pdf_page": 11
+    },
+    {
+      "id": "12-elev-R09-entry",
+      "title": "Elevations — R09 Entry / balcony",
+      "page_px": [
+        1700.0,
+        1227.278
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "12-elev-R09-entry.svg",
+        "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
+        "bytes": 18177
+      },
+      "png": {
+        "file": "12-elev-R09-entry.png",
+        "sha256": "a38d873ece403259659f32333e102244568be8623d7eb5d68114e0649262d1c4",
+        "bytes": 413294
+      },
+      "counts": {
+        "panels": 1,
+        "openEdgesNotElevated": 3,
+        "openingsDrawn": 2,
+        "itemsDrawn": 1,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "svg_elements": 152,
+      "svg_text_elements": 51,
+      "pdf_page": 12
+    },
+    {
+      "id": "13-elev-R12-lobby",
+      "title": "Elevations — R12 Common lobby",
+      "page_px": [
+        1700.0,
+        1280.8780000000002
+      ],
+      "png_scale": 2,
+      "svg": {
+        "file": "13-elev-R12-lobby.svg",
+        "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
+        "bytes": 30637
+      },
+      "png": {
+        "file": "13-elev-R12-lobby.png",
+        "sha256": "1b38b2a02425ffbb1157b9d50b300d5f5453e3262127ae4b72cbd406e0381f9b",
+        "bytes": 428106
+      },
+      "counts": {
+        "panels": 3,
+        "openEdgesNotElevated": 1,
+        "openingsDrawn": 2,
+        "itemsDrawn": 1,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "svg_elements": 263,
+      "svg_text_elements": 67,
+      "pdf_page": 13
+    }
+  ],
+  "combined_pdf": {
+    "file": "current-layout-views.pdf",
+    "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+    "bytes": 6815041,
+    "pages": 13,
+    "page_points": [
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1675.9
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        3065.0
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        2317.0
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1630.1
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1654.1
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1609.0
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1591.0
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        2292.0
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1489.9
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1489.9
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        1699.0
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        920.9
+      ],
+      [
+        0.0,
+        0.0,
+        1275.1,
+        961.0
+      ]
+    ],
+    "searchable": true,
+    "order": "plan, RCP, elevations by room"
+  },
+  "readme": {
+    "file": "README.md",
+    "sha256": "5895543248a610b386e61f46eae54fbe9c59a351dc4900d9f46f6c66fc14d7d1",
+    "bytes": 11349
+  },
+  "manifest": {
+    "file": "sheets.json",
+    "sha256": "28b915bc8c506df1e51c06c3b3dc84d1725932962d3e6e2d2ac398c3eadca4e6",
+    "bytes": 25257
+  },
+  "reconciliation": {
+    "plan": {
+      "rooms": 12,
+      "walls": 21,
+      "openings": 21,
+      "storage_drawn": 11,
+      "storage_superseded_suppressed": [
+        "ST-R04-BED01",
+        "ST-R04-LF01",
+        "ST-R04-NS01",
+        "ST-R04-NS02",
+        "ST-R04-WR01"
+      ],
+      "storage_not_drawn_tenant_beds": [
+        "ST-R05-BED01",
+        "ST-R05-NS01"
+      ],
+      "tenant_bed_envelopes": 2,
+      "furniture_items_drawn": 16
+    },
+    "rcp": {
+      "fixtures": 104,
+      "circuits": 47,
+      "circuit_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06A",
+        "C06B",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C29A",
+        "C29B",
+        "C30A",
+        "C30B",
+        "C31",
+        "C32",
+        "C33",
+        "C34",
+        "C35A",
+        "C35B",
+        "C36A",
+        "C36B",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41",
+        "C41b"
+      ],
+      "held_CBR_fixtures_drawn_faded": 8,
+      "selected_curtain_strips": [
+        "CURT-CBR",
+        "CURT-DIN",
+        "CURT-LIV",
+        "CURT-MBR-S"
+      ],
+      "review_fittings": 108,
+      "review_circuits": 51,
+      "count_load_only_allowances": [
+        "LIV-P1",
+        "LIV-P2"
+      ],
+      "bathroom_face_bar_ids": [
+        "TL1-F1",
+        "TL1-F2",
+        "TL2-F1",
+        "TL2-F2"
+      ],
+      "hold_marks": [
+        "DIN-H2",
+        "DIN-H3",
+        "DIN-L1",
+        "DIN-X1",
+        "DRS-H1",
+        "DRS-H2",
+        "FW-T1",
+        "LIV-P1",
+        "LIV-P2",
+        "LIV-X1",
+        "LIV-X2"
+      ],
+      "fans": [
+        "children",
+        "living",
+        "master"
+      ],
+      "curtain_pockets": [
+        "CBR",
+        "DIN",
+        "LIV",
+        "MBR-rear",
+        "MBR-side"
+      ]
+    },
+    "elevations": {
+      "sheets": 11,
+      "panels": 42,
+      "open_edges_not_elevated": 6,
+      "openings_covered": 15,
+      "master_openings": 15,
+      "plan_only_items_with_no_elevation_face": [
+        "FURN-coffee",
+        "FURN-dining-table",
+        "FURN-plant-2",
+        "FURN-rug",
+        "FURN-sofa-return"
+      ]
+    },
+    "master_counts": {
+      "rooms": 10,
+      "walls": 21,
+      "openings": 15,
+      "storage_records": 18,
+      "lighting_fixtures": 104,
+      "fans": 3
+    }
+  },
+  "render": {
+    "browser": "headless Edge 157.0.4341.60",
+    "python": "3.15.1",
+    "node": "v26.6.0",
+    "page_errors": [],
+    "console_errors": [],
+    "http_requests": [],
+    "out_of_page_text": {},
+    "text_overlaps": {}
+  },
+  "checks": [
+    {
+      "check": "zero page errors",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "zero console errors",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "no network requests",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "expected sheet count 13 (plan, RCP, 11 room elevations)",
+      "ok": true
+    },
+    {
+      "check": "every SVG text sits inside its page",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "check": "no text-on-text overlaps (bounding boxes)",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "check": "generated SVG final bytes match the sheet manifest",
+      "ok": true
+    },
+    {
+      "check": "plan: every master room drawn once (10 visualization rooms + 2 bathrooms)",
+      "ok": true,
+      "detail": [
+        12,
+        10,
+        2
+      ]
+    },
+    {
+      "check": "plan: wall ids match master",
+      "ok": true
+    },
+    {
+      "check": "plan: all 15 master openings drawn plus the 3 openings (door, niche, vent) of each bathroom record",
+      "ok": true,
+      "detail": [
+        "bath1-door",
+        "bath1-niche",
+        "bath1-vent",
+        "bath2-door",
+        "bath2-niche",
+        "bath2-vent"
+      ]
+    },
+    {
+      "check": "plan: drawn storage = master storage minus 5 superseded R04 records minus built beds and the 3 HD-14 omitted bedside units",
+      "ok": true,
+      "detail": {
+        "want": [
+          "ST-R04a-LF01",
+          "ST-R04a-WR01",
+          "ST-R05-DK01",
+          "ST-R05-LF01",
+          "ST-R05-OH01",
+          "ST-R05-TV01",
+          "ST-R05-WR01",
+          "ST-R08-LD01",
+          "ST-R08-LF01",
+          "ST-R08-UC01",
+          "ST-R09-SH01"
+        ],
+        "got": [
+          "ST-R04a-LF01",
+          "ST-R04a-WR01",
+          "ST-R05-DK01",
+          "ST-R05-LF01",
+          "ST-R05-OH01",
+          "ST-R05-TV01",
+          "ST-R05-WR01",
+          "ST-R08-LD01",
+          "ST-R08-LF01",
+          "ST-R08-UC01",
+          "ST-R09-SH01"
+        ]
+      }
+    },
+    {
+      "check": "plan: no superseded R04 footprint drawn as storage",
+      "ok": true
+    },
+    {
+      "check": "HD-14: omitted bedside units are not drawn as an item, storage record or optional outline on any sheet",
+      "ok": true
+    },
+    {
+      "check": "plan: both tenant bed envelopes drawn, none labelled joinery",
+      "ok": true,
+      "detail": [
+        "FURN-coffee",
+        "FURN-dining-table",
+        "FURN-kitchen-bar",
+        "FURN-kitchen-fridge",
+        "FURN-kitchen-left",
+        "FURN-kitchen-top",
+        "FURN-lobby-vanity",
+        "FURN-plant-1",
+        "FURN-plant-2",
+        "FURN-rug",
+        "FURN-sofa",
+        "FURN-sofa-return",
+        "FURN-tv",
+        "FURN-utility-counter",
+        "FURN-wash-basin",
+        "FURN-washer",
+        "TENANT-BED-R04",
+        "TENANT-BED-R05"
+      ]
+    },
+    {
+      "check": "plan: 3 stair parts, lift shaft and 2 bath blocks",
+      "ok": true
+    },
+    {
+      "check": "plan: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "plan: pooja shown only as an estimated front outline with the PN1 callout",
+      "ok": true
+    },
+    {
+      "check": "master: pooja already built and reinforcement homeowner-reported (decisions.pooja_niche)",
+      "ok": true
+    },
+    {
+      "check": "master: niche extension is reported, not a surveyed structural design",
+      "ok": true
+    },
+    {
+      "check": "rcp: all master lighting fixtures drawn, ids equal",
+      "ok": true,
+      "detail": 104
+    },
+    {
+      "check": "rcp: CBR H1-H6 active for review; remaining CBR fittings faded and held",
+      "ok": true,
+      "detail": [
+        "CBR-L1",
+        "CBR-R1",
+        "CBR-R2",
+        "CBR-S1",
+        "CBR-X1",
+        "CBR-X2",
+        "CBR-X3",
+        "CBR-X4"
+      ]
+    },
+    {
+      "check": "rcp: circuit ids reconcile with canonical controls",
+      "ok": true
+    },
+    {
+      "check": "rcp: fixture type and room counts reconcile with canonical records",
+      "ok": true
+    },
+    {
+      "check": "rcp: path and point counts reconcile with canonical records",
+      "ok": true
+    },
+    {
+      "check": "rcp: 3 fan points",
+      "ok": true
+    },
+    {
+      "check": "rcp: 5 curtain pockets (4 windows + held W03)",
+      "ok": true
+    },
+    {
+      "check": "rcp: four selected strips drawn without new knobs or photometry credit",
+      "ok": true
+    },
+    {
+      "check": "rcp: hold marks drawn for centre, hall beam, dressing sweep and pooja allowances",
+      "ok": true,
+      "detail": [
+        "DIN-H2",
+        "DIN-H3",
+        "DIN-L1",
+        "DIN-X1",
+        "DRS-H1",
+        "DRS-H2",
+        "FW-T1",
+        "LIV-P1",
+        "LIV-P2",
+        "LIV-X1",
+        "LIV-X2"
+      ]
+    },
+    {
+      "check": "rcp: LIV-P1/P2 retained only as held count/load allowances",
+      "ok": true
+    },
+    {
+      "check": "rcp: four bathroom face bars retain their separate HD-17 groups",
+      "ok": true
+    },
+    {
+      "check": "rcp: master holds named (H-MBR-BED, H-MBR-W03) and children held (H-CBR-*)",
+      "ok": true
+    },
+    {
+      "check": "rcp: integrated proposal wording, not released, and no photometry words",
+      "ok": true
+    },
+    {
+      "check": "rcp: same openings and walls as the plan",
+      "ok": true
+    },
+    {
+      "check": "01-plan-furnished: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "01-plan-furnished: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "01-plan-furnished: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "02-rcp: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "02-rcp: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "02-rcp: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "03-elev-R01-living: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "03-elev-R01-living: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "03-elev-R01-living: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "04-elev-R02-dining: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "04-elev-R02-dining: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "04-elev-R02-dining: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "05-elev-R03-kitchen: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "05-elev-R03-kitchen: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "05-elev-R03-kitchen: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "06-elev-R04-master: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "06-elev-R04-master: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "06-elev-R04-master: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "07-elev-R04a-dressing: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "07-elev-R04a-dressing: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "07-elev-R04a-dressing: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "08-elev-R05-children: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "08-elev-R05-children: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "08-elev-R05-children: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "09-elev-R06-TL1: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "09-elev-R06-TL1: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "09-elev-R06-TL1: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "10-elev-R07-TL2: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "10-elev-R07-TL2: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "10-elev-R07-TL2: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "11-elev-R08-utility: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "11-elev-R08-utility: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "11-elev-R08-utility: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "12-elev-R09-entry: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "12-elev-R09-entry: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "12-elev-R09-entry: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "13-elev-R12-lobby: no stale or retired wording",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "13-elev-R12-lobby: master SHA and HD-11 datum wording",
+      "ok": true
+    },
+    {
+      "check": "13-elev-R12-lobby: no 1.68 x 2.13 tenant frame drawn or quoted",
+      "ok": true
+    },
+    {
+      "check": "master: HD-14 recorded, not a construction release",
+      "ok": true
+    },
+    {
+      "check": "master: HD-15 retains geometry and records a site-clearance hold",
+      "ok": true
+    },
+    {
+      "check": "plan and children elevation: HD-15 pinch is labelled, not a comfortable walking route",
+      "ok": true
+    },
+    {
+      "check": "02-rcp: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "03-elev-R01-living: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "04-elev-R02-dining: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "05-elev-R03-kitchen: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "06-elev-R04-master: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "07-elev-R04a-dressing: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "08-elev-R05-children: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "09-elev-R06-TL1: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "10-elev-R07-TL2: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "11-elev-R08-utility: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "12-elev-R09-entry: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "13-elev-R12-lobby: HD-14 curtain wording (two tracks, sheer + blackout)",
+      "ok": true
+    },
+    {
+      "check": "rcp: integrated lighting totals and conditional status shown",
+      "ok": true
+    },
+    {
+      "check": "OPT-1: 104 fittings in 47 groups, status not construction-released, K-2 selected",
+      "ok": true
+    },
+    {
+      "check": "OPT-1 rcp: K-2 kitchen fittings KIT-T4 (new sink-end linear) and lower-output KIT-T1 are drawn as lit paths",
+      "ok": true
+    },
+    {
+      "check": "OPT-1 rcp: generic-optics estimate label shown; no heat map or numerical lighting results drawn",
+      "ok": true
+    },
+    {
+      "check": "rcp: conditional details drawn (raised-centre product fit/access, curtain pocket two tracks)",
+      "ok": true
+    },
+    {
+      "check": "rcp and living elevation: raised centre is a separate gypsum/POP panel; depth and level unmeasured; cutting not authorised",
+      "ok": true
+    },
+    {
+      "check": "03-elev-R01-living: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "living-e",
+          "living-n",
+          "living-n-lift",
+          "living-w",
+          "living-w-lift"
+        ],
+        [
+          "living-w",
+          "living-n-lift",
+          "living-w-lift",
+          "living-n",
+          "living-e"
+        ]
+      ]
+    },
+    {
+      "check": "04-elev-R02-dining: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "dining-e",
+          "dining-s",
+          "dining-w"
+        ],
+        [
+          "dining-s",
+          "dining-w",
+          "dining-e"
+        ]
+      ]
+    },
+    {
+      "check": "05-elev-R03-kitchen: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "kitchen-e",
+          "kitchen-n",
+          "kitchen-s",
+          "kitchen-w"
+        ],
+        [
+          "kitchen-s",
+          "kitchen-w",
+          "kitchen-n",
+          "kitchen-e"
+        ]
+      ]
+    },
+    {
+      "check": "06-elev-R04-master: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "master-e",
+          "master-n",
+          "master-s",
+          "master-w"
+        ],
+        [
+          "master-s",
+          "master-w",
+          "master-n",
+          "master-e"
+        ]
+      ]
+    },
+    {
+      "check": "07-elev-R04a-dressing: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "dressing-e",
+          "dressing-n",
+          "dressing-s",
+          "dressing-w"
+        ],
+        [
+          "dressing-s",
+          "dressing-w",
+          "dressing-n",
+          "dressing-e"
+        ]
+      ]
+    },
+    {
+      "check": "08-elev-R05-children: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "children-e",
+          "children-e-lift",
+          "children-n",
+          "children-n-lift",
+          "children-s",
+          "children-w"
+        ],
+        [
+          "children-s",
+          "children-w",
+          "children-n",
+          "children-e-lift",
+          "children-n-lift",
+          "children-e"
+        ]
+      ]
+    },
+    {
+      "check": "09-elev-R06-TL1: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "bath1-e",
+          "bath1-n",
+          "bath1-s",
+          "bath1-w"
+        ],
+        [
+          "bath1-s",
+          "bath1-w",
+          "bath1-n",
+          "bath1-e"
+        ]
+      ]
+    },
+    {
+      "check": "10-elev-R07-TL2: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "bath2-e",
+          "bath2-n",
+          "bath2-s",
+          "bath2-w"
+        ],
+        [
+          "bath2-s",
+          "bath2-w",
+          "bath2-n",
+          "bath2-e"
+        ]
+      ]
+    },
+    {
+      "check": "11-elev-R08-utility: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "utility-e",
+          "utility-n",
+          "utility-s",
+          "utility-w"
+        ],
+        [
+          "utility-s",
+          "utility-w",
+          "utility-n",
+          "utility-e"
+        ]
+      ]
+    },
+    {
+      "check": "12-elev-R09-entry: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "balcony-s"
+        ],
+        [
+          "balcony-s"
+        ]
+      ]
+    },
+    {
+      "check": "13-elev-R12-lobby: DOM panels = generator panels",
+      "ok": true,
+      "detail": [
+        [
+          "lobby-n",
+          "lobby-s",
+          "lobby-w"
+        ],
+        [
+          "lobby-s",
+          "lobby-w",
+          "lobby-n"
+        ]
+      ]
+    },
+    {
+      "check": "elevations: every master opening appears on at least one elevation",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "elevations: every drawn storage record appears on an elevation",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "elevations: no superseded R04 record",
+      "ok": true
+    },
+    {
+      "check": "elevations: tenant beds appear as envelopes on the bedroom elevations",
+      "ok": true
+    },
+    {
+      "check": "01-plan-furnished: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "02-rcp: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "03-elev-R01-living: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "04-elev-R02-dining: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "05-elev-R03-kitchen: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "06-elev-R04-master: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "07-elev-R04a-dressing: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "08-elev-R05-children: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "09-elev-R06-TL1: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "10-elev-R07-TL2: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "11-elev-R08-utility: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "12-elev-R09-entry: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "13-elev-R12-lobby: 'unmeasured' and 'assumed' wording present",
+      "ok": true
+    },
+    {
+      "check": "03-elev-R01-living: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "03-elev-R01-living: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "04-elev-R02-dining: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "04-elev-R02-dining: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "05-elev-R03-kitchen: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "05-elev-R03-kitchen: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "06-elev-R04-master: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "06-elev-R04-master: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "07-elev-R04a-dressing: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "07-elev-R04a-dressing: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "08-elev-R05-children: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "08-elev-R05-children: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "09-elev-R06-TL1: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "09-elev-R06-TL1: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "10-elev-R07-TL2: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "10-elev-R07-TL2: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "11-elev-R08-utility: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "11-elev-R08-utility: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "12-elev-R09-entry: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "12-elev-R09-entry: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "13-elev-R12-lobby: master SHA in footer",
+      "ok": true
+    },
+    {
+      "check": "13-elev-R12-lobby: north arrow present",
+      "ok": true
+    },
+    {
+      "check": "living elevation: titled as the east-wall pooja niche at the NE corner beside the main door",
+      "ok": true
+    },
+    {
+      "check": "living elevation: pooja-niche opening drawn and H-CENTRE-RECESS noted",
+      "ok": true
+    },
+    {
+      "check": "living elevation: HD-16 estimates and reported extension, without a structural section",
+      "ok": true
+    },
+    {
+      "check": "master elevation: W03 wording",
+      "ok": true
+    },
+    {
+      "check": "master elevation: tenant bed wording",
+      "ok": true
+    },
+    {
+      "check": "children elevation: only recorded switch zone drawn",
+      "ok": true
+    },
+    {
+      "check": "children elevation: curtain top is the assumed HD-11 drawing level; the retired 2.64 m appears only as retired",
+      "ok": true
+    },
+    {
+      "check": "pdf: 13 pages in plan -> RCP -> elevation order",
+      "ok": true
+    },
+    {
+      "check": "pdf: master SHA is searchable on every page",
+      "ok": true
+    },
+    {
+      "check": "pdf: sheet titles searchable",
+      "ok": true
+    },
+    {
+      "check": "pdf: bookmarks list every sheet",
+      "ok": true
+    },
+    {
+      "check": "HD-18: fragment-bound dimensions and derived height are shown with estimate qualifiers",
+      "ok": true,
+      "detail": {
+        "fragment": {
+          "file": "pooja-notation-hd18.json",
+          "sha256": "598796435ba3b37d6fedf655f243d87e09c663cbf338eb5fd7a25cbff37a46ec",
+          "bytes": 2458
+        },
+        "dimensions": {
+          "status": "homeowner_estimates_unverified_not_site_measurements",
+          "width_mm": 609.6,
+          "height_mm": 1701.8,
+          "sill_m": 0.4318,
+          "top_m": 2.1336,
+          "depth_mm": 381,
+          "z_m": [
+            12.1690384,
+            12.7786384
+          ],
+          "opening_height_basis": "Derived from estimated top minus estimated sill, not separately measured.",
+          "interpretation": "Homeowner clarified feet-and-inches notation: sill 1 ft 5 in, depth 1 ft 3 in, north-corner gap 1 ft 4 in. All remain estimates."
+        },
+        "placement": {
+          "status": "provisional_from_estimated_offset_and_unverified_model_corner",
+          "corner_z_m": 13.1850384,
+          "corner_source": "visualization_geometry.rooms[living].rect north/entry-side inside edge",
+          "north_edge_clear_offset_m": 0.4064,
+          "niche_z_m_south_to_north": [
+            12.1690384,
+            12.7786384
+          ],
+          "w06_planar_gap_m": 1.1809984,
+          "w06_gap_basis": "Current modeled living-window; neither opening is site surveyed.",
+          "balcony_outline": "An edge relationship was reported, but the matching edges remain unresolved; do not claim alignment."
+        },
+        "construction_release": false
+      }
+    },
+    {
+      "check": "HD-18: approximate homeowner north, not a surveyed true bearing, on every sheet",
+      "ok": true
+    },
+    {
+      "check": "review draft: every sheet and the README marked REVIEW DRAFT, not construction released, on the OPT-1 integrated master",
+      "ok": true
+    },
+    {
+      "check": "open-item correction: superseded OI compass wording and loft-load figure absent from every sheet, PDF page and README",
+      "ok": true,
+      "detail": {}
+    }
+  ],
+  "checks_passed": 158,
+  "checks_total": 158,
+  "generators": {
+    "layout_views.mjs": "e2491173271f00bcfbdea524e897d710b8bc4a06f165532b3cee086fb47893a7",
+    "drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656",
+    "layout_views/data.mjs": "8f2268cbffb1d43ecc5beecf6dd2c3dfae306d8731ccbff3d7a1f7b72e653de0",
+    "layout_views/elev.mjs": "17fc2e3d4dc6e90b089af009889466efe635cfab4f580466aa6f0dc4f65e0a9f",
+    "layout_views/plan.mjs": "c9e631d9b1793db90cf1ca71d4570072182af4aace9c7e27f512cb6174654e55",
+    "layout_views/rcp.mjs": "21ac2c41bed65df2d7a773e00b36aadc8ac51c17f202881c0f7ed45f4e45d2b7",
+    "layout_views/svg.mjs": "b0d674725edeb45234a8cd38dd520625d1e8b28aaa239a5e8e2040d81585e5e1",
+    "src/master-adapter.js": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da",
+    "render_layout_views.py": "6765a7f18f08c200c39fca18aa090820bcf7805f96a973e49cbce59ffebac8a5"
+  },
+  "pdf_note": "PDF carries creation timestamps; SVG/PNG are reproducible from the same master and generators."
+}

@@ -1,0 +1,3170 @@
+{
+ "name": "Fixed-white switch, dimmer and wiring plan (one 2BHK floor) - review candidate",
+ "date_hyderabad": "18 Nov 2026",
+ "status": "review candidate; curtain strips and S1 await homeowner sign-off; construction_release false; product_approval false; exact_chain_proven false",
+ "construction_release": false,
+ "product_approval": false,
+ "exact_chain_proven": false,
+ "bindings": {
+  "master_sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
+  "d7_inputs_sha256": {
+   "lighting-fragment-fixed-white.json": "31b65875cb603a43d107c91a4a54bb8afffa3134cc1134dd1cf74dc66f42be1b",
+   "lighting-design-inputs-fixed-white.json": "a96a3467f3ca9e7cb0b6e9e7aaafe93f1c8993ec43bd527d90c5d702ada92926",
+   "curtain-pocket-candidate.json": "1135224d612b4f6cb8fb8bac6bbb87ea3e53a1b29d6a973aa8ca63e670a269d7",
+   "circuit-control-psu-ledger.json": "5c37255c374acb8647a67403255224d77331a46135f5cc9d06fbbeff709ae17e",
+   "electrical-checks.json": "df6019388caa7adc3cfff093497427e7e2f430c26ef7ae77227284536156bf86",
+   "bom.json": "2a9e76f8b45f3d9379fbb94e365f93b31e5f636c3e8de801bdd71c8f92c80cad",
+   "fixed-cost.json": "9997cfa66058f5daf084cf277df89e217d59e99c040f6511ca3ebf2830d8e388",
+   "fixed-receipt.json": "effb92fe61bf202d3a75e2432d4efccf0596f18b416a628ff9de9cf357e3d5cc",
+   "fixed-cct-map.json": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+   "verification.json": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9",
+   "README.md": "dba4d6250c642745b89cda0147dce8d0ebea2fbfd33b7cbc69475f88e145d709"
+  },
+  "d7_fragment_canonical_sha256": "ec1253aa9642d78113a98042f014bae3fabe0c91d64290de2baee4ec8998d0c9",
+  "d7_design_inputs_canonical_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
+  "d7_verification_bound_design_inputs_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
+  "d7_verification_current": true,
+  "d7_verification_summary": {
+   "PASS": 82
+  },
+  "low_load_dimmer_research_status": "research_only_not_for_ordering_or_construction"
+ },
+ "decisions_applied": [
+  "fixed colour temperature per fitting: 2700 K coves, lines, mood, perimeter and pooja; 3000 K main living/dining/bedroom/lobby lights; 4000 K kitchen, utility, baths, mirror/face, dressing and study task; proposed curtain strips 2700 K",
+  "brightness-only local wall controls; separate LOW and HIGH per room; no colour-temperature knobs, two-channel strips or tunable drivers",
+  "conditional S1 proposal, not a decision: warm 2700 K strips in four curtain pockets on the room LOW knob; no new knob if compatible and signed off",
+  "pooja strip and pooja pin-spot keep their own knobs; bath face pair keeps its own knob (HD-17)",
+  "no DALI, hub, app or internet dependency"
+ ],
+ "totals": {
+  "base": {
+   "fittings": 104,
+   "circuits": 47,
+   "wall_controls": 31,
+   "knobs": 21,
+   "knob_outputs": 34,
+   "amplifiers": 1,
+   "mains_dimmers": 10,
+   "supplies": 13,
+   "supply_nameplate_W": 1760,
+   "envelope_W": 1173.9,
+   "isolators": 14
+  },
+  "with_curtain_strips_S1": {
+   "fittings": 104,
+   "curtain_strip_m": 8.88,
+   "circuits": 47,
+   "wall_controls": 31,
+   "knobs": 21,
+   "knob_outputs": 38,
+   "amplifiers": 3,
+   "mains_dimmers": 10,
+   "supplies": 13,
+   "supply_nameplate_W": 1890,
+   "envelope_W": 1244.9,
+   "isolators": 14
+  },
+  "tunable_before": {
+   "knobs_single": 26,
+   "knobs_two_channel": 5,
+   "amplifiers": 2,
+   "supplies": 17,
+   "supply_nameplate_W": 2420,
+   "isolators": 18
+  }
+ },
+ "wall_controls": [
+  {
+   "board": "SB-01",
+   "control": "D-C01",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "LIV",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Living HIGH, window half (window-line downlights LIV-H1..H4 + LIV-H5)",
+   "circuits": [
+    "C01"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 40.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-01",
+   "control": "D-C02",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "LIV",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Living HIGH, TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10)",
+   "circuits": [
+    "C02"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 40.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-01",
+   "control": "K-LIV-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "LIV",
+   "lanes": [
+    "COVE",
+    "LINE",
+    "MOOD"
+   ],
+   "label": "Living LOW: tray cove + TV bias + hall line",
+   "circuits": [
+    "C03",
+    "C04",
+    "C05",
+    "CURT-LIV"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 181.5,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-01",
+   "control": "K-LIV-POOJA-SPOT",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "LIV",
+   "lanes": [
+    "ACCENT"
+   ],
+   "label": "Pooja pin spot (own knob: the shadow-casting source must be dimmable/off alone)",
+   "circuits": [
+    "C06B"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 6.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-01",
+   "control": "K-LIV-POOJA-STRIP",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "LIV",
+   "lanes": [
+    "ACCENT"
+   ],
+   "label": "Pooja niche strip (own knob, homeowner decision)",
+   "circuits": [
+    "C06A"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 21.7,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-01",
+   "control": "K-BAL-HIGH",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "BAL",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Balcony HIGH",
+   "circuits": [
+    "C07"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 12.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-01",
+   "control": "K-BAL-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "BAL",
+   "lanes": [
+    "MOOD"
+   ],
+   "label": "Balcony LOW mood",
+   "circuits": [
+    "C08"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 26.6,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-02",
+   "control": "D-C09",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "DIN",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Dining HIGH downlights",
+   "circuits": [
+    "C09"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 30.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-02",
+   "control": "D-C11",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "DIN",
+   "lanes": [
+    "MOOD"
+   ],
+   "label": "Dining pendant",
+   "circuits": [
+    "C11"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 12.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-02",
+   "control": "D-C13",
+   "device": "230 V dimmer listed by the 48 V track maker",
+   "room": "DIN",
+   "lanes": [
+    "ACCENT"
+   ],
+   "label": "Dining 48 V track accent (driver + dimmer listed by the track maker)",
+   "circuits": [
+    "C13"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 26.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-02",
+   "control": "K-DIN-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "DIN",
+   "lanes": [
+    "COVE"
+   ],
+   "label": "Dining LOW cove",
+   "circuits": [
+    "C12",
+    "CURT-DIN"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 69.3,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-02",
+   "control": "K-DIN-PASSAGE",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "DIN",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Dining passage downlight (stays dimmable: homeowner rule)",
+   "circuits": [
+    "C10"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 8.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-03",
+   "control": "D-C14",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "KIT",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Kitchen HIGH, counter ring",
+   "circuits": [
+    "C14"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 40.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-03",
+   "control": "D-C15",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "KIT",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Kitchen HIGH, general",
+   "circuits": [
+    "C15"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 31.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-03",
+   "control": "K-KIT-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "KIT",
+   "lanes": [
+    "COVE"
+   ],
+   "label": "Kitchen LOW cove",
+   "circuits": [
+    "C17"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 70.6,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-03",
+   "control": "K-KIT-TASK",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "KIT",
+   "lanes": [
+    "TASK"
+   ],
+   "label": "Kitchen under-cabinet + sink-end task",
+   "circuits": [
+    "C16"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 31.8,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-04",
+   "control": "D-C18",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "UTL",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Utility HIGH, dimmable IP65 bulkheads (availability to confirm)",
+   "circuits": [
+    "C18"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 36.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-04",
+   "control": "K-UTL-TASK",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "UTL",
+   "lanes": [
+    "TASK"
+   ],
+   "label": "Utility wash-counter task",
+   "circuits": [
+    "C19"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 11.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-05",
+   "control": "D-C20",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "MBR",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Master HIGH downlights (dimmer at the door)",
+   "circuits": [
+    "C20"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 48.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-05",
+   "control": "K-MBR-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "MBR",
+   "lanes": [
+    "COVE",
+    "LINE",
+    "MOOD"
+   ],
+   "label": "Master LOW: tray cove + headboard line + mood",
+   "circuits": [
+    "C21",
+    "C22",
+    "C23",
+    "CURT-MBR-S"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 110.2,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-06",
+   "control": "K-DRS-HIGH",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "DRS",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Dressing HIGH",
+   "circuits": [
+    "C27"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 14.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-06B",
+   "control": "K-TL1-FACE",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "TL1",
+   "lanes": [
+    "FACE"
+   ],
+   "label": "Bath 1 face pair (HD-17 independent knob)",
+   "circuits": [
+    "C29B"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 10.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-06B",
+   "control": "K-TL1-HIGH",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "TL1",
+   "lanes": [
+    "HIGH",
+    "MIRROR"
+   ],
+   "label": "Bath 1 HIGH: ceiling spots + vanity pair",
+   "circuits": [
+    "C28",
+    "C29A"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 43.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-06B",
+   "control": "K-TL1-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "TL1",
+   "lanes": [
+    "MOOD",
+    "PERIM"
+   ],
+   "label": "Bath 1 LOW: perimeter + mood",
+   "circuits": [
+    "C30A",
+    "C30B"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 39.1,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-07",
+   "control": "K-LOB",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "LOB",
+   "lanes": [
+    "HIGH",
+    "MIRROR"
+   ],
+   "label": "Lobby HIGH + face bar",
+   "circuits": [
+    "C31",
+    "C32"
+   ],
+   "cct": [
+    "3000K",
+    "4000K"
+   ],
+   "W": 24.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-07B",
+   "control": "K-TL2-FACE",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "TL2",
+   "lanes": [
+    "FACE"
+   ],
+   "label": "Bath 2 face pair (HD-17 independent knob)",
+   "circuits": [
+    "C35B"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 10.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-07B",
+   "control": "K-TL2-HIGH",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "TL2",
+   "lanes": [
+    "HIGH",
+    "MIRROR"
+   ],
+   "label": "Bath 2 HIGH: ceiling spots + vanity pair",
+   "circuits": [
+    "C34",
+    "C35A"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 43.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-07B",
+   "control": "K-TL2-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "TL2",
+   "lanes": [
+    "MOOD",
+    "PERIM"
+   ],
+   "label": "Bath 2 LOW: perimeter + mood",
+   "circuits": [
+    "C36A",
+    "C36B"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 39.1,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-08",
+   "control": "D-C37",
+   "device": "230 V trailing-edge LED rotary dimmer (module)",
+   "room": "CBR",
+   "lanes": [
+    "HIGH"
+   ],
+   "label": "Children's HIGH downlights (dimmer at the door)",
+   "circuits": [
+    "C37"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "W": 36.0,
+   "status": "PROCUREMENT HOLD"
+  },
+  {
+   "board": "SB-08",
+   "control": "K-CBR-LOW",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "CBR",
+   "lanes": [
+    "COVE",
+    "LINE"
+   ],
+   "label": "Children's LOW: tray cove + line",
+   "circuits": [
+    "C39",
+    "C40",
+    "CURT-CBR"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "W": 105.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  },
+  {
+   "board": "SB-08",
+   "control": "K-CBR-STUDY",
+   "device": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+   "room": "CBR",
+   "lanes": [
+    "STUDY"
+   ],
+   "label": "Children's study task",
+   "circuits": [
+    "C38"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "W": 16.0,
+   "status": "candidate; exact strip + supply + knob chain unproven"
+  }
+ ],
+ "fitting_mounted_controls": [
+  {
+   "circuit": "C24",
+   "room": "MBR",
+   "board": "SB-05",
+   "device": "PIR night step light, brightness set on the fitting",
+   "W": 1,
+   "cct": [
+    "2700K"
+   ]
+  },
+  {
+   "circuit": "C25",
+   "room": "MBR",
+   "board": "SB-05L",
+   "device": "reading light with integral dimmer (on the fitting)",
+   "W": 3,
+   "cct": [
+    "3000K"
+   ]
+  },
+  {
+   "circuit": "C26",
+   "room": "MBR",
+   "board": "SB-05R",
+   "device": "reading light with integral dimmer (on the fitting)",
+   "W": 3,
+   "cct": [
+    "3000K"
+   ]
+  },
+  {
+   "circuit": "C33",
+   "room": "LOB",
+   "board": "SB-07",
+   "device": "PIR night step light, brightness set on the fitting",
+   "W": 1,
+   "cct": [
+    "2700K"
+   ]
+  },
+  {
+   "circuit": "C41",
+   "room": "CBR",
+   "board": "SB-08RL",
+   "device": "reading light with integral dimmer (on the fitting)",
+   "W": 3,
+   "cct": [
+    "3000K"
+   ]
+  },
+  {
+   "circuit": "C41b",
+   "room": "CBR",
+   "board": "SB-08RR",
+   "device": "reading light with integral dimmer (on the fitting)",
+   "W": 3,
+   "cct": [
+    "3000K"
+   ]
+  }
+ ],
+ "switches": [
+  {
+   "circuit": "C10",
+   "room": "DIN",
+   "switch_modules": 2,
+   "positions": [
+    "SB-02",
+    "SB-07"
+   ],
+   "note": "passage; PSU mains 2-way SB-02/SB-07 (concept), knob level at SB-02"
+  },
+  {
+   "circuit": "C20",
+   "room": "MBR",
+   "switch_modules": 3,
+   "positions": [
+    "SB-05",
+    "SB-05L",
+    "SB-05R"
+   ],
+   "note": "dimmer at door; on/off 2-way door + intermediate SB-05L + 2-way SB-05R (concept)"
+  },
+  {
+   "circuit": "C37",
+   "room": "CBR",
+   "switch_modules": 3,
+   "positions": [
+    "SB-08",
+    "SB-08RL",
+    "SB-08RR"
+   ],
+   "note": "dimmer at door; on/off 2-way door + intermediate at the two bed-head plates (concept)"
+  }
+ ],
+ "mains_dimmer_nominal_screen": {
+  "candidates": [
+   {
+    "name": "Legrand Lyncus 677304",
+    "min": 3,
+    "max": 50,
+    "max_lamps": 8,
+    "unit": "W",
+    "ref": "L1"
+   },
+   {
+    "name": "Schneider AvatarOn E8331RD250_WE",
+    "min": 3,
+    "max": 100,
+    "max_lamps": null,
+    "unit": "VA",
+    "ref": "S2"
+   },
+   {
+    "name": "Legrand Arteor AA24107MB",
+    "min": 7,
+    "max": 200,
+    "max_lamps": 10,
+    "unit": "VA",
+    "ref": "L2"
+   }
+  ],
+  "rows": [
+   {
+    "circuit": "C01",
+    "label": "Living HIGH, window half (window-line downlights LIV-H1..H4 + LIV-H5)",
+    "W": 40,
+    "lamps": 5,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C02",
+    "label": "Living HIGH, TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10)",
+    "W": 40,
+    "lamps": 5,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C09",
+    "label": "Dining HIGH downlights",
+    "W": 30,
+    "lamps": 3,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C11",
+    "label": "Dining pendant",
+    "W": 12,
+    "lamps": 1,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C14",
+    "label": "Kitchen HIGH, counter ring",
+    "W": 40,
+    "lamps": 4,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C15",
+    "label": "Kitchen HIGH, general",
+    "W": 31,
+    "lamps": 4,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C18",
+    "label": "Utility HIGH, dimmable IP65 bulkheads (availability to confirm)",
+    "W": 36,
+    "lamps": 3,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C20",
+    "label": "Master HIGH downlights (dimmer at the door)",
+    "W": 48,
+    "lamps": 8,
+    "Legrand Lyncus 677304": "at limit",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   },
+   {
+    "circuit": "C37",
+    "label": "Children's HIGH downlights (dimmer at the door)",
+    "W": 36,
+    "lamps": 6,
+    "Legrand Lyncus 677304": "nominal pass",
+    "Schneider AvatarOn E8331RD250_WE": "nominal pass",
+    "Legrand Arteor AA24107MB": "nominal pass"
+   }
+  ],
+  "rule": "nominal: connected W within the maker's LED range and lamp count within the maker's limit; 'at limit' = at least 90 % of the maximum or exactly the lamp limit; for VA-rated dimmers W is only a lower bound of VA (driver power factor unknown), so a W pass is not a VA pass",
+  "excluded": "C13 48 V track: driver and dimmer must be listed by the track maker; Havells ATADEXB102 (60 W minimum) excluded",
+  "status": "screen only; no dimmer approved; every mains group stays PROCUREMENT HOLD until the fitting/driver maker lists the dimmer and the sample passes"
+ },
+ "knob_groups": [
+  {
+   "knob": "K-LIV-LOW",
+   "room": "LIV",
+   "board": "SB-01",
+   "label": "Living LOW: tray cove + TV bias + hall line",
+   "circuits": [
+    "C03",
+    "C04",
+    "C05"
+   ],
+   "lanes": [
+    "COVE",
+    "LINE",
+    "MOOD"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P01",
+    "P03"
+   ],
+   "outputs": 5,
+   "amplifiers": 1,
+   "W": 161.9,
+   "curtain_strip": [
+    "CURT-LIV"
+   ],
+   "outputs_with_curtain": 6,
+   "amplifiers_with_curtain": 2,
+   "W_with_curtain": 181.5,
+   "I_max_output_A_with_curtain": 1.92,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-LIV-POOJA-STRIP",
+   "room": "LIV",
+   "board": "SB-01",
+   "label": "Pooja niche strip (own knob, homeowner decision)",
+   "circuits": [
+    "C06A"
+   ],
+   "lanes": [
+    "ACCENT"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P04"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 21.7,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 21.7,
+   "I_max_output_A_with_curtain": 0.9,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-LIV-POOJA-SPOT",
+   "room": "LIV",
+   "board": "SB-01",
+   "label": "Pooja pin spot (own knob: the shadow-casting source must be dimmable/off alone)",
+   "circuits": [
+    "C06B"
+   ],
+   "lanes": [
+    "ACCENT"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P04"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 6.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 6.0,
+   "I_max_output_A_with_curtain": 0.25,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-BAL-HIGH",
+   "room": "BAL",
+   "board": "SB-01",
+   "label": "Balcony HIGH",
+   "circuits": [
+    "C07"
+   ],
+   "lanes": [
+    "HIGH"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "psus": [
+    "P05"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 12.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 12.0,
+   "I_max_output_A_with_curtain": 0.5,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-BAL-LOW",
+   "room": "BAL",
+   "board": "SB-01",
+   "label": "Balcony LOW mood",
+   "circuits": [
+    "C08"
+   ],
+   "lanes": [
+    "MOOD"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P05"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 26.6,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 26.6,
+   "I_max_output_A_with_curtain": 1.11,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-DIN-PASSAGE",
+   "room": "DIN",
+   "board": "SB-02",
+   "label": "Dining passage downlight (stays dimmable: homeowner rule)",
+   "circuits": [
+    "C10"
+   ],
+   "lanes": [
+    "HIGH"
+   ],
+   "cct": [
+    "3000K"
+   ],
+   "psus": [
+    "P06"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 8.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 8.0,
+   "I_max_output_A_with_curtain": 0.33,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-DIN-LOW",
+   "room": "DIN",
+   "board": "SB-02",
+   "label": "Dining LOW cove",
+   "circuits": [
+    "C12"
+   ],
+   "lanes": [
+    "COVE"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P07"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 49.7,
+   "curtain_strip": [
+    "CURT-DIN"
+   ],
+   "outputs_with_curtain": 2,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 69.3,
+   "I_max_output_A_with_curtain": 2.07,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-KIT-TASK",
+   "room": "KIT",
+   "board": "SB-03",
+   "label": "Kitchen under-cabinet + sink-end task",
+   "circuits": [
+    "C16"
+   ],
+   "lanes": [
+    "TASK"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P10"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 31.8,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 31.8,
+   "I_max_output_A_with_curtain": 1.32,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-KIT-LOW",
+   "room": "KIT",
+   "board": "SB-03",
+   "label": "Kitchen LOW cove",
+   "circuits": [
+    "C17"
+   ],
+   "lanes": [
+    "COVE"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P08"
+   ],
+   "outputs": 2,
+   "amplifiers": 0,
+   "W": 70.6,
+   "curtain_strip": [],
+   "outputs_with_curtain": 2,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 70.6,
+   "I_max_output_A_with_curtain": 1.47,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-UTL-TASK",
+   "room": "UTL",
+   "board": "SB-04",
+   "label": "Utility wash-counter task",
+   "circuits": [
+    "C19"
+   ],
+   "lanes": [
+    "TASK"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P11"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 11.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 11.0,
+   "I_max_output_A_with_curtain": 0.46,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-MBR-LOW",
+   "room": "MBR",
+   "board": "SB-05",
+   "label": "Master LOW: tray cove + headboard line + mood",
+   "circuits": [
+    "C21",
+    "C22",
+    "C23"
+   ],
+   "lanes": [
+    "COVE",
+    "LINE",
+    "MOOD"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P12"
+   ],
+   "outputs": 3,
+   "amplifiers": 0,
+   "W": 90.8,
+   "curtain_strip": [
+    "CURT-MBR-S"
+   ],
+   "outputs_with_curtain": 4,
+   "amplifiers_with_curtain": 1,
+   "W_with_curtain": 110.2,
+   "I_max_output_A_with_curtain": 2.18,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-DRS-HIGH",
+   "room": "DRS",
+   "board": "SB-06",
+   "label": "Dressing HIGH",
+   "circuits": [
+    "C27"
+   ],
+   "lanes": [
+    "HIGH"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P14"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 14.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 14.0,
+   "I_max_output_A_with_curtain": 0.58,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-TL1-HIGH",
+   "room": "TL1",
+   "board": "SB-06B",
+   "label": "Bath 1 HIGH: ceiling spots + vanity pair",
+   "circuits": [
+    "C28",
+    "C29A"
+   ],
+   "lanes": [
+    "HIGH",
+    "MIRROR"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P14"
+   ],
+   "outputs": 2,
+   "amplifiers": 0,
+   "W": 43.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 2,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 43.0,
+   "I_max_output_A_with_curtain": 1.12,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-TL1-FACE",
+   "room": "TL1",
+   "board": "SB-06B",
+   "label": "Bath 1 face pair (HD-17 independent knob)",
+   "circuits": [
+    "C29B"
+   ],
+   "lanes": [
+    "FACE"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P14"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 10.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 10.0,
+   "I_max_output_A_with_curtain": 0.42,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-TL1-LOW",
+   "room": "TL1",
+   "board": "SB-06B",
+   "label": "Bath 1 LOW: perimeter + mood",
+   "circuits": [
+    "C30A",
+    "C30B"
+   ],
+   "lanes": [
+    "MOOD",
+    "PERIM"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P14"
+   ],
+   "outputs": 2,
+   "amplifiers": 0,
+   "W": 39.1,
+   "curtain_strip": [],
+   "outputs_with_curtain": 2,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 39.1,
+   "I_max_output_A_with_curtain": 1.33,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-LOB",
+   "room": "LOB",
+   "board": "SB-07",
+   "label": "Lobby HIGH + face bar",
+   "circuits": [
+    "C31",
+    "C32"
+   ],
+   "lanes": [
+    "HIGH",
+    "MIRROR"
+   ],
+   "cct": [
+    "3000K",
+    "4000K"
+   ],
+   "psus": [
+    "P15"
+   ],
+   "outputs": 2,
+   "amplifiers": 0,
+   "W": 24.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 2,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 24.0,
+   "I_max_output_A_with_curtain": 0.58,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-TL2-HIGH",
+   "room": "TL2",
+   "board": "SB-07B",
+   "label": "Bath 2 HIGH: ceiling spots + vanity pair",
+   "circuits": [
+    "C34",
+    "C35A"
+   ],
+   "lanes": [
+    "HIGH",
+    "MIRROR"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P15"
+   ],
+   "outputs": 2,
+   "amplifiers": 0,
+   "W": 43.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 2,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 43.0,
+   "I_max_output_A_with_curtain": 1.12,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-TL2-FACE",
+   "room": "TL2",
+   "board": "SB-07B",
+   "label": "Bath 2 face pair (HD-17 independent knob)",
+   "circuits": [
+    "C35B"
+   ],
+   "lanes": [
+    "FACE"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P15"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 10.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 10.0,
+   "I_max_output_A_with_curtain": 0.42,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-TL2-LOW",
+   "room": "TL2",
+   "board": "SB-07B",
+   "label": "Bath 2 LOW: perimeter + mood",
+   "circuits": [
+    "C36A",
+    "C36B"
+   ],
+   "lanes": [
+    "MOOD",
+    "PERIM"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P15"
+   ],
+   "outputs": 2,
+   "amplifiers": 0,
+   "W": 39.1,
+   "curtain_strip": [],
+   "outputs_with_curtain": 2,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 39.1,
+   "I_max_output_A_with_curtain": 1.33,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-CBR-STUDY",
+   "room": "CBR",
+   "board": "SB-08",
+   "label": "Children's study task",
+   "circuits": [
+    "C38"
+   ],
+   "lanes": [
+    "STUDY"
+   ],
+   "cct": [
+    "4000K"
+   ],
+   "psus": [
+    "P16"
+   ],
+   "outputs": 1,
+   "amplifiers": 0,
+   "W": 16.0,
+   "curtain_strip": [],
+   "outputs_with_curtain": 1,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 16.0,
+   "I_max_output_A_with_curtain": 0.67,
+   "status_with_curtain": "OK"
+  },
+  {
+   "knob": "K-CBR-LOW",
+   "room": "CBR",
+   "board": "SB-08",
+   "label": "Children's LOW: tray cove + line",
+   "circuits": [
+    "C39",
+    "C40"
+   ],
+   "lanes": [
+    "COVE",
+    "LINE"
+   ],
+   "cct": [
+    "2700K"
+   ],
+   "psus": [
+    "P16"
+   ],
+   "outputs": 2,
+   "amplifiers": 0,
+   "W": 92.6,
+   "curtain_strip": [
+    "CURT-CBR"
+   ],
+   "outputs_with_curtain": 3,
+   "amplifiers_with_curtain": 0,
+   "W_with_curtain": 105.0,
+   "I_max_output_A_with_curtain": 2.07,
+   "status_with_curtain": "OK"
+  }
+ ],
+ "supplies": [
+  {
+   "supply": "P01",
+   "lt": "LT-4",
+   "circuits": [
+    "C03",
+    "X-CURT-LIV"
+   ],
+   "W": 92.2,
+   "nameplate_W": 200,
+   "pct_usable": 76.8,
+   "W_with_curtain": 111.8,
+   "nameplate_with_curtain_W": 240,
+   "pct_usable_with_curtain": 77.6,
+   "class_change": "",
+   "ref_model": "ELG-240",
+   "hatch_xz_ft": [
+    12.3,
+    39.4
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P03",
+   "lt": "LT-5",
+   "circuits": [
+    "C04",
+    "C05"
+   ],
+   "W": 69.7,
+   "nameplate_W": 150,
+   "pct_usable": 77.4,
+   "W_with_curtain": 69.7,
+   "nameplate_with_curtain_W": 150,
+   "pct_usable_with_curtain": 77.4,
+   "class_change": "",
+   "ref_model": "ELG-150",
+   "hatch_xz_ft": [
+    12.3,
+    38.6
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P04",
+   "lt": "LT-5",
+   "circuits": [
+    "C06A",
+    "C06B"
+   ],
+   "W": 27.7,
+   "nameplate_W": 60,
+   "pct_usable": 76.9,
+   "W_with_curtain": 27.7,
+   "nameplate_with_curtain_W": 60,
+   "pct_usable_with_curtain": 76.9,
+   "class_change": "",
+   "ref_model": "HLG-60H",
+   "hatch_xz_ft": [
+    4.4,
+    41.6
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P05",
+   "lt": "LT-5",
+   "circuits": [
+    "C07",
+    "C08"
+   ],
+   "W": 38.6,
+   "nameplate_W": 100,
+   "pct_usable": 64.3,
+   "W_with_curtain": 38.6,
+   "nameplate_with_curtain_W": 100,
+   "pct_usable_with_curtain": 64.3,
+   "class_change": "",
+   "ref_model": "ELG-100",
+   "hatch_xz_ft": [
+    12.3,
+    43.0
+   ],
+   "ip": "IP67"
+  },
+  {
+   "supply": "P06",
+   "lt": "LT-3",
+   "circuits": [
+    "C10"
+   ],
+   "W": 8.0,
+   "nameplate_W": 30,
+   "pct_usable": 44.4,
+   "W_with_curtain": 8.0,
+   "nameplate_with_curtain_W": 30,
+   "pct_usable_with_curtain": 44.4,
+   "class_change": "",
+   "ref_model": "HLG-40H",
+   "hatch_xz_ft": [
+    14.6,
+    22.5
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P07",
+   "lt": "LT-4",
+   "circuits": [
+    "C12",
+    "X-CURT-DIN"
+   ],
+   "W": 49.7,
+   "nameplate_W": 100,
+   "pct_usable": 82.8,
+   "W_with_curtain": 69.3,
+   "nameplate_with_curtain_W": 150,
+   "pct_usable_with_curtain": 77.0,
+   "class_change": "",
+   "ref_model": "ELG-150",
+   "hatch_xz_ft": [
+    12.3,
+    23.8
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P08",
+   "lt": "LT-6",
+   "circuits": [
+    "C17"
+   ],
+   "W": 70.6,
+   "nameplate_W": 150,
+   "pct_usable": 78.4,
+   "W_with_curtain": 70.6,
+   "nameplate_with_curtain_W": 150,
+   "pct_usable_with_curtain": 78.4,
+   "class_change": "",
+   "ref_model": "ELG-150",
+   "hatch_xz_ft": [
+    13.5,
+    12.0
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P10",
+   "lt": "LT-6",
+   "circuits": [
+    "C16"
+   ],
+   "W": 31.8,
+   "nameplate_W": 60,
+   "pct_usable": 88.3,
+   "W_with_curtain": 31.8,
+   "nameplate_with_curtain_W": 60,
+   "pct_usable_with_curtain": 88.3,
+   "class_change": "",
+   "ref_model": "HLG-60H",
+   "hatch_xz_ft": [
+    13.5,
+    11.0
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P11",
+   "lt": "LT-6",
+   "circuits": [
+    "C19"
+   ],
+   "W": 11.0,
+   "nameplate_W": 30,
+   "pct_usable": 61.1,
+   "W_with_curtain": 11.0,
+   "nameplate_with_curtain_W": 30,
+   "pct_usable_with_curtain": 61.1,
+   "class_change": "",
+   "ref_model": "HLG-40H",
+   "hatch_xz_ft": [
+    15.2,
+    4.4
+   ],
+   "ip": "IP67"
+  },
+  {
+   "supply": "P12",
+   "lt": "LT-7",
+   "circuits": [
+    "C21",
+    "C22",
+    "C23",
+    "X-CURT-MBR-S"
+   ],
+   "W": 90.8,
+   "nameplate_W": 200,
+   "pct_usable": 75.7,
+   "W_with_curtain": 110.2,
+   "nameplate_with_curtain_W": 240,
+   "pct_usable_with_curtain": 76.5,
+   "class_change": "",
+   "ref_model": "ELG-240",
+   "hatch_xz_ft": [
+    17.6,
+    14.4
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P14",
+   "lt": "LT-3",
+   "circuits": [
+    "C27",
+    "C28",
+    "C29A",
+    "C29B",
+    "C30A",
+    "C30B"
+   ],
+   "W": 106.1,
+   "nameplate_W": 200,
+   "pct_usable": 88.4,
+   "W_with_curtain": 106.1,
+   "nameplate_with_curtain_W": 200,
+   "pct_usable_with_curtain": 88.4,
+   "class_change": "",
+   "ref_model": "ELG-200",
+   "hatch_xz_ft": [
+    19.55,
+    19.6
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P15",
+   "lt": "LT-3",
+   "circuits": [
+    "C31",
+    "C32",
+    "C34",
+    "C35A",
+    "C35B",
+    "C36A",
+    "C36B"
+   ],
+   "W": 116.1,
+   "nameplate_W": 240,
+   "pct_usable": 80.6,
+   "W_with_curtain": 116.1,
+   "nameplate_with_curtain_W": 240,
+   "pct_usable_with_curtain": 80.6,
+   "class_change": "",
+   "ref_model": "ELG-240",
+   "hatch_xz_ft": [
+    18.9,
+    25.6
+   ],
+   "ip": "IP20 in ventilated hatch"
+  },
+  {
+   "supply": "P16",
+   "lt": "LT-3",
+   "circuits": [
+    "C38",
+    "C39",
+    "C40",
+    "X-CURT-CBR"
+   ],
+   "W": 108.6,
+   "nameplate_W": 240,
+   "pct_usable": 75.4,
+   "W_with_curtain": 121.0,
+   "nameplate_with_curtain_W": 240,
+   "pct_usable_with_curtain": 84.0,
+   "class_change": "",
+   "ref_model": "ELG-240",
+   "hatch_xz_ft": [
+    18.0623,
+    33.8331
+   ],
+   "ip": "IP20 in ventilated hatch"
+  }
+ ],
+ "lighting_circuits": {
+  "base": [
+   {
+    "lt": "LT-1",
+    "name": "230 V fittings, living side",
+    "kind": "230 V",
+    "members": [
+     "C01",
+     "C02",
+     "C09",
+     "C11",
+     "C13",
+     "C14",
+     "C15",
+     "C18"
+    ],
+    "W": 255.0,
+    "W_input_est": 255.0,
+    "n_supplies": 0,
+    "screen": {
+     "B10": null,
+     "B16": null,
+     "C10": null
+    },
+    "screen_note": "230 V fitting drivers: switch-on surge not documented; screen incomplete (electrician)",
+    "leakage_mA": null,
+    "inverter_default": true
+   },
+   {
+    "lt": "LT-2",
+    "name": "230 V fittings, bedroom side",
+    "kind": "230 V",
+    "members": [
+     "C20",
+     "C24",
+     "C25",
+     "C26",
+     "C33",
+     "C37",
+     "C41",
+     "C41b"
+    ],
+    "W": 98.0,
+    "W_input_est": 98.0,
+    "n_supplies": 0,
+    "screen": {
+     "B10": null,
+     "B16": null,
+     "C10": null
+    },
+    "screen_note": "230 V fitting drivers: switch-on surge not documented; screen incomplete (electrician)",
+    "leakage_mA": null,
+    "inverter_default": true
+   },
+   {
+    "lt": "LT-3",
+    "name": "24 V essentials: passage, dressing, both baths, lobby, children's room",
+    "kind": "24 V",
+    "members": [
+     "P06",
+     "P14",
+     "P15",
+     "P16"
+    ],
+    "W": 338.8,
+    "W_input_est": 376.4,
+    "n_supplies": 4,
+    "screen": {
+     "B10": 1.643,
+     "B16": 0.833,
+     "C10": 0.827
+    },
+    "screen_note": "reference models P06=HLG-40H, P14=ELG-200, P15=ELG-240, P16=ELG-240",
+    "leakage_mA": 3.0,
+    "inverter_default": true
+   },
+   {
+    "lt": "LT-4",
+    "name": "24 V coves: living and dining",
+    "kind": "24 V",
+    "members": [
+     "P01",
+     "P07"
+    ],
+    "W": 141.9,
+    "W_input_est": 157.7,
+    "n_supplies": 2,
+    "screen": {
+     "B10": 1.0,
+     "B16": 0.583,
+     "C10": 0.5
+    },
+    "screen_note": "reference models P01=ELG-200, P07=ELG-100",
+    "leakage_mA": 1.5,
+    "inverter_default": false
+   },
+   {
+    "lt": "LT-5",
+    "name": "24 V living mood, hall line, pooja, balcony",
+    "kind": "24 V",
+    "members": [
+     "P03",
+     "P04",
+     "P05"
+    ],
+    "W": 136.0,
+    "W_input_est": 151.1,
+    "n_supplies": 3,
+    "screen": {
+     "B10": 1.167,
+     "B16": 0.778,
+     "C10": 0.683
+    },
+    "screen_note": "reference models P03=ELG-150, P04=HLG-60H, P05=ELG-100",
+    "leakage_mA": 2.25,
+    "inverter_default": false
+   },
+   {
+    "lt": "LT-6",
+    "name": "24 V kitchen and utility",
+    "kind": "24 V",
+    "members": [
+     "P08",
+     "P10",
+     "P11"
+    ],
+    "W": 113.4,
+    "W_input_est": 126.0,
+    "n_supplies": 3,
+    "screen": {
+     "B10": 0.81,
+     "B16": 0.528,
+     "C10": 0.51
+    },
+    "screen_note": "reference models P08=ELG-150, P10=HLG-60H, P11=HLG-40H",
+    "leakage_mA": 2.25,
+    "inverter_default": false
+   },
+   {
+    "lt": "LT-7",
+    "name": "24 V master bedroom cove, line and mood",
+    "kind": "24 V",
+    "members": [
+     "P12"
+    ],
+    "W": 90.8,
+    "W_input_est": 100.9,
+    "n_supplies": 1,
+    "screen": {
+     "B10": 0.5,
+     "B16": 0.25,
+     "C10": 0.25
+    },
+    "screen_note": "reference models P12=ELG-200",
+    "leakage_mA": 0.75,
+    "inverter_default": false
+   }
+  ],
+  "with_curtain_strips": [
+   {
+    "lt": "LT-1",
+    "name": "230 V fittings, living side",
+    "kind": "230 V",
+    "members": [
+     "C01",
+     "C02",
+     "C09",
+     "C11",
+     "C13",
+     "C14",
+     "C15",
+     "C18"
+    ],
+    "W": 255.0,
+    "W_input_est": 255.0,
+    "n_supplies": 0,
+    "screen": {
+     "B10": null,
+     "B16": null,
+     "C10": null
+    },
+    "screen_note": "230 V fitting drivers: switch-on surge not documented; screen incomplete (electrician)",
+    "leakage_mA": null,
+    "inverter_default": true
+   },
+   {
+    "lt": "LT-2",
+    "name": "230 V fittings, bedroom side",
+    "kind": "230 V",
+    "members": [
+     "C20",
+     "C24",
+     "C25",
+     "C26",
+     "C33",
+     "C37",
+     "C41",
+     "C41b"
+    ],
+    "W": 98.0,
+    "W_input_est": 98.0,
+    "n_supplies": 0,
+    "screen": {
+     "B10": null,
+     "B16": null,
+     "C10": null
+    },
+    "screen_note": "230 V fitting drivers: switch-on surge not documented; screen incomplete (electrician)",
+    "leakage_mA": null,
+    "inverter_default": true
+   },
+   {
+    "lt": "LT-3",
+    "name": "24 V essentials: passage, dressing, both baths, lobby, children's room",
+    "kind": "24 V",
+    "members": [
+     "P06",
+     "P14",
+     "P15",
+     "P16"
+    ],
+    "W": 351.2,
+    "W_input_est": 390.2,
+    "n_supplies": 4,
+    "screen": {
+     "B10": 1.643,
+     "B16": 0.833,
+     "C10": 0.827
+    },
+    "screen_note": "reference models P06=HLG-40H, P14=ELG-200, P15=ELG-240, P16=ELG-240",
+    "leakage_mA": 3.0,
+    "inverter_default": true
+   },
+   {
+    "lt": "LT-4",
+    "name": "24 V coves: living and dining",
+    "kind": "24 V",
+    "members": [
+     "P01",
+     "P07"
+    ],
+    "W": 181.1,
+    "W_input_est": 201.2,
+    "n_supplies": 2,
+    "screen": {
+     "B10": 1.0,
+     "B16": 0.583,
+     "C10": 0.583
+    },
+    "screen_note": "reference models P01=ELG-240, P07=ELG-150",
+    "leakage_mA": 1.5,
+    "inverter_default": false
+   },
+   {
+    "lt": "LT-5",
+    "name": "24 V living mood, hall line, pooja, balcony",
+    "kind": "24 V",
+    "members": [
+     "P03",
+     "P04",
+     "P05"
+    ],
+    "W": 136.0,
+    "W_input_est": 151.1,
+    "n_supplies": 3,
+    "screen": {
+     "B10": 1.167,
+     "B16": 0.778,
+     "C10": 0.683
+    },
+    "screen_note": "reference models P03=ELG-150, P04=HLG-60H, P05=ELG-100",
+    "leakage_mA": 2.25,
+    "inverter_default": false
+   },
+   {
+    "lt": "LT-6",
+    "name": "24 V kitchen and utility",
+    "kind": "24 V",
+    "members": [
+     "P08",
+     "P10",
+     "P11"
+    ],
+    "W": 113.4,
+    "W_input_est": 126.0,
+    "n_supplies": 3,
+    "screen": {
+     "B10": 0.81,
+     "B16": 0.528,
+     "C10": 0.51
+    },
+    "screen_note": "reference models P08=ELG-150, P10=HLG-60H, P11=HLG-40H",
+    "leakage_mA": 2.25,
+    "inverter_default": false
+   },
+   {
+    "lt": "LT-7",
+    "name": "24 V master bedroom cove, line and mood",
+    "kind": "24 V",
+    "members": [
+     "P12"
+    ],
+    "W": 110.2,
+    "W_input_est": 122.4,
+    "n_supplies": 1,
+    "screen": {
+     "B10": 0.5,
+     "B16": 0.25,
+     "C10": 0.25
+    },
+    "screen_note": "reference models P12=ELG-240",
+    "leakage_mA": 0.75,
+    "inverter_default": false
+   }
+  ]
+ },
+ "inverter_default_W": {
+  "base": 691.8,
+  "with_curtain_strips": 704.2,
+  "with_curtain_input_est_W": 743.2
+ },
+ "earth_leakage_screen_mA": 9.75,
+ "curtain_pockets": [
+  {
+   "pocket": "CURT-LIV",
+   "room": "LIV",
+   "status": "ACTIVE candidate",
+   "length_m": 2.45,
+   "W": 19.6,
+   "A_24V": 0.82,
+   "knob": "K-LIV-LOW",
+   "board": "SB-01",
+   "supply": "P01",
+   "branch_m": 6.45,
+   "dV_pct": 2.0,
+   "vd_status": "OK",
+   "min_mm2_for_3pct": 1.0
+  },
+  {
+   "pocket": "CURT-DIN",
+   "room": "DIN",
+   "status": "ACTIVE candidate",
+   "length_m": 2.45,
+   "W": 19.6,
+   "A_24V": 0.82,
+   "knob": "K-DIN-LOW",
+   "board": "SB-02",
+   "supply": "P07",
+   "branch_m": 7.14,
+   "dV_pct": 1.7,
+   "vd_status": "OK",
+   "min_mm2_for_3pct": 1.0
+  },
+  {
+   "pocket": "CURT-MBR-S",
+   "room": "MBR",
+   "status": "ACTIVE candidate",
+   "length_m": 2.43,
+   "W": 19.4,
+   "A_24V": 0.81,
+   "knob": "K-MBR-LOW",
+   "board": "SB-05",
+   "supply": "P12",
+   "branch_m": 6.28,
+   "dV_pct": 1.8,
+   "vd_status": "OK",
+   "min_mm2_for_3pct": 1.0
+  },
+  {
+   "pocket": "CURT-CBR",
+   "room": "CBR",
+   "status": "ACTIVE candidate",
+   "length_m": 1.55,
+   "W": 12.4,
+   "A_24V": 0.52,
+   "knob": "K-CBR-LOW",
+   "board": "SB-08",
+   "supply": "P16",
+   "branch_m": 7.45,
+   "dV_pct": 2.9,
+   "vd_status": "OK",
+   "min_mm2_for_3pct": 1.5
+  },
+  {
+   "pocket": "CURT-MBR-W03",
+   "room": "MBR",
+   "status": "HELD (OI-MBR-04 / OI-MBR-02)",
+   "length_m": 1.51,
+   "W": 12.1,
+   "A_24V": 0.5,
+   "knob": "K-MBR-LOW",
+   "board": "SB-05",
+   "supply": "P12",
+   "branch_m": 6.17,
+   "dV_pct": 1.7,
+   "vd_status": "OK",
+   "min_mm2_for_3pct": 1.0
+  }
+ ],
+ "curtain_shared_output_option": {
+  "CURT-LIV": {
+   "fits_within_2_4A": [
+    {
+     "circuit": "C04",
+     "psu": "P03",
+     "I_A": 1.24,
+     "supply_needed_W": 200
+    },
+    {
+     "circuit": "C05",
+     "psu": "P03",
+     "I_A": 2.06,
+     "supply_needed_W": 200
+    }
+   ],
+   "note": "a shared output joins two strips on one knob output (daisy chain); the licensed electrician decides; voltage drop of a shared chain is NOT computed here"
+  },
+  "CURT-DIN": {
+   "fits_within_2_4A": [],
+   "note": "a shared output joins two strips on one knob output (daisy chain); the licensed electrician decides; voltage drop of a shared chain is NOT computed here"
+  },
+  "CURT-MBR-S": {
+   "fits_within_2_4A": [
+    {
+     "circuit": "C22",
+     "psu": "P12",
+     "I_A": 2.1,
+     "supply_needed_W": 240
+    },
+    {
+     "circuit": "C23",
+     "psu": "P12",
+     "I_A": 1.13,
+     "supply_needed_W": 240
+    }
+   ],
+   "note": "a shared output joins two strips on one knob output (daisy chain); the licensed electrician decides; voltage drop of a shared chain is NOT computed here"
+  },
+  "CURT-CBR": {
+   "fits_within_2_4A": [
+    {
+     "circuit": "C40",
+     "psu": "P16",
+     "I_A": 2.3,
+     "supply_needed_W": 240
+    }
+   ],
+   "note": "a shared output joins two strips on one knob output (daisy chain); the licensed electrician decides; voltage drop of a shared chain is NOT computed here"
+  },
+  "CURT-MBR-W03": {
+   "fits_within_2_4A": [
+    {
+     "circuit": "C22",
+     "psu": "P12",
+     "I_A": 1.79,
+     "supply_needed_W": 200
+    },
+    {
+     "circuit": "C23",
+     "psu": "P12",
+     "I_A": 0.82,
+     "supply_needed_W": 200
+    }
+   ],
+   "note": "a shared output joins two strips on one knob output (daisy chain); the licensed electrician decides; voltage drop of a shared chain is NOT computed here"
+  }
+ },
+ "curtain_conflicts": [
+  {
+   "id": "K-SHARED",
+   "severity": "CONSTRAINT",
+   "text": "a curtain strip has no switch or knob of its own (no new knobs): it follows the room's LOW knob, so it cannot stay dark while the cove is on, and it dims with it. In MBR and CBR that is the bedtime mood layer; in LIV it is the tray cove + TV bias + hall line."
+  },
+  {
+   "id": "LIV-AMP",
+   "severity": "CONFLICT",
+   "text": "K-LIV-LOW already uses its one amplifier (5 outputs = 3 knob + 2 amplifier); the curtain strip is output 6, so a second amplifier is needed (or a shared output, see output_sharing_options). P01 goes 92.2 -> 111.8 W, which the 10 % margin rule sizes at 240 W (was 200 W)."
+  },
+  {
+   "id": "DIN-PSU",
+   "severity": "CONFLICT",
+   "text": "P07 (100 W, usable 60.0 W) cannot carry the DIN cove plus the curtain strip (69.3 W = 116 % of its usable): it needs 150 W, which supersedes the controls proposal's P07 resize to 100 W. K-DIN-LOW then has 2 of 3 outputs, no amplifier."
+  },
+  {
+   "id": "MBR-OUT",
+   "severity": "CONFLICT",
+   "text": "K-MBR-LOW has all 3 knob outputs used (3 -> 4); the 4th needs an amplifier, or the strip shares the C23 headboard output (1.13 A, fits the 2.4 A design limit) which is itself pending OI-MBR-04. P12 goes 90.8 -> 110.2 W, sized 240 W (was 200 W)."
+  },
+  {
+   "id": "CBR-VD",
+   "severity": "CHECK",
+   "text": "CBR strip is on P16 (108.6 -> 121.0 W, 84.0 % of usable, still 240 W). The shared P16 to SB-08 feed carries more current: C40 3.3 -> 3.6 % (MARGINAL, needs 2.5 mm2); the earlier remedy (2.5 mm2 feed, or keep P17 separate) now applies to the CBR strip as well. K-CBR-LOW goes to 3 of 3 outputs."
+  },
+  {
+   "id": "W03",
+   "severity": "HOLD",
+   "text": "MBR W03 pocket is HELD (OI-MBR-04 / OI-MBR-02); if released, K-MBR-LOW needs 5 outputs (still 1 amplifier) and P12 reaches 122.3 W (84.9 % of the 240 W usable)."
+  },
+  {
+   "id": "POCKET-FIT",
+   "severity": "HOLD",
+   "text": "H-CURTAIN-POCKET: the pocket is ASSUMED 0.25 / 0.20 m and unmeasured; whether sheer + blackout tracks, brackets, the stack and a strip profile fit, the strip's setback behind the lip (hidden from standing and seated eye height), fabric clearance and heat of the sealed pocket are UNVERIFIED and need a site mock-up. The recorded clearance of the LIV-H2/H3 and DIN-H1 downlight cut-outs to the pocket (0.193 m at 0.25 m) tightens if the real pocket is wider than about 0.34 m."
+  },
+  {
+   "id": "NO-CREDIT",
+   "severity": "CHECK",
+   "text": "no lux, luminance, uniformity or compliance credit is given to the curtain strips anywhere; every existing compliance status is unchanged. Curtains-closed (sheer / blackout) effect on the strip is not modelled."
+  },
+  {
+   "id": "PHOTOS",
+   "severity": "CHECK",
+   "text": "the two photos show a stepped gypsum pocket (hall) and a recessed panel with a lip groove (children's room) but carry no scale and do not say which hall window (LIV or DIN) the hall photo shows; there is no photo for the MBR-side pocket. No dimension is read from them."
+  }
+ ],
+ "cost": {
+  "basis": "INR allowances from the lighting BoM (no quote; GST, freight, carpentry, curtain tracks, MCB/RCD/DB works excluded); ranges are [low-allowance case, high-allowance case] and are subtracted case by case",
+  "per_flat": {
+   "tunable_cove_route_total": [
+    349057,
+    847689
+   ],
+   "fixed_white_total": [
+    302846,
+    744666
+   ],
+   "fixed_white_saving": [
+    46211,
+    103023
+   ],
+   "curtain_strips_S1_with_contingency": [
+    9667,
+    24417
+   ],
+   "fixed_white_plus_curtain_total": [
+    312513,
+    769083
+   ],
+   "net_saving_vs_tunable": [
+    36544,
+    78606
+   ]
+  },
+  "four_flats": {
+   "tunable_cove_route_total": [
+    1396228,
+    3390756
+   ],
+   "fixed_white_total": [
+    1211384,
+    2978664
+   ],
+   "fixed_white_saving": [
+    184844,
+    412092
+   ],
+   "curtain_strips_S1": [
+    38668,
+    97668
+   ],
+   "fixed_white_plus_curtain_total": [
+    1250052,
+    3076332
+   ],
+   "net_saving_vs_tunable": [
+    146176,
+    314424
+   ]
+  },
+  "premium_tunable_over_fixed_pct": [
+   15.3,
+   13.8
+  ],
+  "changed_lines": [
+   {
+    "key": "amp",
+    "item": "24 V single-colour PWM amplifier/repeater (2 outputs)",
+    "qty_before": 2,
+    "qty_after": 1,
+    "delta_inr_lo": -1200,
+    "delta_inr_hi": -3000
+   },
+   {
+    "key": "box86",
+    "item": "86 mm square back box + mounting",
+    "qty_before": 31,
+    "qty_after": 21,
+    "delta_inr_lo": -1500,
+    "delta_inr_hi": -4000
+   },
+   {
+    "key": "isolator",
+    "item": "Local PSU isolator",
+    "qty_before": 18,
+    "qty_after": 14,
+    "delta_inr_lo": -600,
+    "delta_inr_hi": -2000
+   },
+   {
+    "key": "labour_pt",
+    "item": "Labour per point (fixture/control/PSU)",
+    "qty_before": 140,
+    "qty_after": 126,
+    "delta_inr_lo": -2100,
+    "delta_inr_hi": -4900
+   },
+   {
+    "key": "psu_200",
+    "item": "24 V PSU 200-240 W allowance",
+    "qty_before": 7,
+    "qty_after": 5,
+    "delta_inr_lo": -5000,
+    "delta_inr_hi": -11000
+   },
+   {
+    "key": "psu_big",
+    "item": "24 V PSU 100-150 W",
+    "qty_before": 5,
+    "qty_after": 3,
+    "delta_inr_lo": -2600,
+    "delta_inr_hi": -7000
+   },
+   {
+    "key": "pwm_1",
+    "item": "T1-K-class single-colour PWM knob",
+    "qty_before": 26,
+    "qty_after": 21,
+    "delta_inr_lo": -9000,
+    "delta_inr_hi": -19000
+   },
+   {
+    "key": "pwm_2",
+    "item": "T2-K-class CCT PWM knob",
+    "qty_before": 5,
+    "qty_after": 0,
+    "delta_inr_lo": -11000,
+    "delta_inr_hi": -22500
+   },
+   {
+    "key": "strip_1c",
+    "item": "24 V COB strip single colour (m)",
+    "qty_before": 25.7,
+    "qty_after": 67.0,
+    "delta_inr_lo": 12390.0,
+    "delta_inr_hi": 30975.0
+   },
+   {
+    "key": "strip_tw",
+    "item": "24 V tunable-white COB strip (m)",
+    "qty_before": 41.3,
+    "qty_after": 0,
+    "delta_inr_lo": -20650.0,
+    "delta_inr_hi": -49560.0
+   }
+  ],
+  "curtain_lines_S1": [
+   {
+    "item": "CURT-LIV: strip (m, with cut allowance)",
+    "qty": 2.6,
+    "unit_lo": 300,
+    "unit_hi": 750,
+    "delta_lo": 780,
+    "delta_hi": 1950,
+    "basis": "strip_1c"
+   },
+   {
+    "item": "CURT-LIV: profile + diffuser (m)",
+    "qty": 2.45,
+    "unit_lo": 200,
+    "unit_hi": 550,
+    "delta_lo": 490,
+    "delta_hi": 1348,
+    "basis": "profile"
+   },
+   {
+    "item": "CURT-LIV: labour strip/profile (m)",
+    "qty": 2.45,
+    "unit_lo": 60,
+    "unit_hi": 150,
+    "delta_lo": 147,
+    "delta_hi": 368,
+    "basis": "labour_m"
+   },
+   {
+    "item": "CURT-LIV: labour per point",
+    "qty": 1,
+    "unit_lo": 150,
+    "unit_hi": 350,
+    "delta_lo": 150,
+    "delta_hi": 350,
+    "basis": "labour_pt"
+   },
+   {
+    "item": "CURT-LIV: SELV cable share (wire_extra / 34 knob outputs)",
+    "qty": 1,
+    "unit_lo": 117.6470588235294,
+    "unit_hi": 264.70588235294116,
+    "delta_lo": 118,
+    "delta_hi": 265,
+    "basis": "wire_extra pro rata, ASSUMED"
+   },
+   {
+    "item": "CURT-DIN: strip (m, with cut allowance)",
+    "qty": 2.6,
+    "unit_lo": 300,
+    "unit_hi": 750,
+    "delta_lo": 780,
+    "delta_hi": 1950,
+    "basis": "strip_1c"
+   },
+   {
+    "item": "CURT-DIN: profile + diffuser (m)",
+    "qty": 2.45,
+    "unit_lo": 200,
+    "unit_hi": 550,
+    "delta_lo": 490,
+    "delta_hi": 1348,
+    "basis": "profile"
+   },
+   {
+    "item": "CURT-DIN: labour strip/profile (m)",
+    "qty": 2.45,
+    "unit_lo": 60,
+    "unit_hi": 150,
+    "delta_lo": 147,
+    "delta_hi": 368,
+    "basis": "labour_m"
+   },
+   {
+    "item": "CURT-DIN: labour per point",
+    "qty": 1,
+    "unit_lo": 150,
+    "unit_hi": 350,
+    "delta_lo": 150,
+    "delta_hi": 350,
+    "basis": "labour_pt"
+   },
+   {
+    "item": "CURT-DIN: SELV cable share (wire_extra / 34 knob outputs)",
+    "qty": 1,
+    "unit_lo": 117.6470588235294,
+    "unit_hi": 264.70588235294116,
+    "delta_lo": 118,
+    "delta_hi": 265,
+    "basis": "wire_extra pro rata, ASSUMED"
+   },
+   {
+    "item": "CURT-MBR-S: strip (m, with cut allowance)",
+    "qty": 2.6,
+    "unit_lo": 300,
+    "unit_hi": 750,
+    "delta_lo": 780,
+    "delta_hi": 1950,
+    "basis": "strip_1c"
+   },
+   {
+    "item": "CURT-MBR-S: profile + diffuser (m)",
+    "qty": 2.43,
+    "unit_lo": 200,
+    "unit_hi": 550,
+    "delta_lo": 486,
+    "delta_hi": 1336,
+    "basis": "profile"
+   },
+   {
+    "item": "CURT-MBR-S: labour strip/profile (m)",
+    "qty": 2.43,
+    "unit_lo": 60,
+    "unit_hi": 150,
+    "delta_lo": 146,
+    "delta_hi": 364,
+    "basis": "labour_m"
+   },
+   {
+    "item": "CURT-MBR-S: labour per point",
+    "qty": 1,
+    "unit_lo": 150,
+    "unit_hi": 350,
+    "delta_lo": 150,
+    "delta_hi": 350,
+    "basis": "labour_pt"
+   },
+   {
+    "item": "CURT-MBR-S: SELV cable share (wire_extra / 34 knob outputs)",
+    "qty": 1,
+    "unit_lo": 117.6470588235294,
+    "unit_hi": 264.70588235294116,
+    "delta_lo": 118,
+    "delta_hi": 265,
+    "basis": "wire_extra pro rata, ASSUMED"
+   },
+   {
+    "item": "CURT-CBR: strip (m, with cut allowance)",
+    "qty": 1.7,
+    "unit_lo": 300,
+    "unit_hi": 750,
+    "delta_lo": 510,
+    "delta_hi": 1275,
+    "basis": "strip_1c"
+   },
+   {
+    "item": "CURT-CBR: profile + diffuser (m)",
+    "qty": 1.55,
+    "unit_lo": 200,
+    "unit_hi": 550,
+    "delta_lo": 310,
+    "delta_hi": 852,
+    "basis": "profile"
+   },
+   {
+    "item": "CURT-CBR: labour strip/profile (m)",
+    "qty": 1.55,
+    "unit_lo": 60,
+    "unit_hi": 150,
+    "delta_lo": 93,
+    "delta_hi": 232,
+    "basis": "labour_m"
+   },
+   {
+    "item": "CURT-CBR: labour per point",
+    "qty": 1,
+    "unit_lo": 150,
+    "unit_hi": 350,
+    "delta_lo": 150,
+    "delta_hi": 350,
+    "basis": "labour_pt"
+   },
+   {
+    "item": "CURT-CBR: SELV cable share (wire_extra / 34 knob outputs)",
+    "qty": 1,
+    "unit_lo": 117.6470588235294,
+    "unit_hi": 264.70588235294116,
+    "delta_lo": 118,
+    "delta_hi": 265,
+    "basis": "wire_extra pro rata, ASSUMED"
+   },
+   {
+    "item": "PWM amplifier/repeater (2 outputs)",
+    "qty": 2,
+    "unit_lo": 1200,
+    "unit_hi": 3000,
+    "delta_lo": 2400,
+    "delta_hi": 6000,
+    "basis": "amp"
+   }
+  ],
+  "curtain_not_priced": [
+   "supply size steps inside one BoM class (P01 200->240 W, P12 200->240 W, P07 100->150 W) carry zero allowance delta; the real maker price step is probably positive and is UNVERIFIED (get quotes)",
+   "false-ceiling / pocket carpentry, curtain tracks and the ceiling-void access hatch work are excluded (as in the base BoM)",
+   "a shared-output option (output_sharing_options) would save the amplifier allowance but is not priced"
+  ],
+  "scenarios": {
+   "S1": {
+    "meaning": "each pocket strip becomes one more output of the room's existing LOW knob group and joins that room's existing cove supply (no new knob, no CCT control, no new supply)",
+    "totals": {
+     "knobs": 21,
+     "knob_outputs": 38,
+     "amplifiers": 3,
+     "psus": 13,
+     "psu_nameplate_total_W": 1890,
+     "psu_over_usable": [],
+     "vd_worst_pct": 3.6,
+     "vd_status": {
+      "OK": 35,
+      "MARGINAL": 2
+     }
+    },
+    "per_flat_with_contingency": [
+     9667,
+     24417
+    ],
+    "four_flats_with_contingency": [
+     38668,
+     97668
+    ]
+   },
+   "S2": {
+    "meaning": "alternative: one small dedicated 24 V supply per pocket beside the knob board; no existing supply is resized, but 4 more supplies/isolators/hatch spaces",
+    "totals": {
+     "knobs": 21,
+     "knob_outputs": 38,
+     "amplifiers": 3,
+     "psus": 17,
+     "psu_nameplate_total_W": 1970,
+     "psu_over_usable": [],
+     "vd_worst_pct": 3.3,
+     "vd_status": {
+      "OK": 35,
+      "MARGINAL": 2
+     }
+    },
+    "per_flat_with_contingency": [
+     14595,
+     39425
+    ],
+    "four_flats_with_contingency": [
+     58380,
+     157700
+    ]
+   },
+   "S3": {
+    "meaning": "S1 plus the held MBR W03 pocket (only if OI-MBR-04 / OI-MBR-02 release it); shown so the supply sizing is not a surprise later",
+    "totals": {
+     "knobs": 21,
+     "knob_outputs": 39,
+     "amplifiers": 3,
+     "psus": 13,
+     "psu_nameplate_total_W": 1890,
+     "psu_over_usable": [],
+     "vd_worst_pct": 3.6,
+     "vd_status": {
+      "OK": 36,
+      "MARGINAL": 2
+     }
+    },
+    "per_flat_with_contingency": [
+     10945,
+     27633
+    ],
+    "four_flats_with_contingency": [
+     43780,
+     110532
+    ]
+   }
+  }
+ },
+ "holds_new": [
+  {
+   "id": "FW-H1",
+   "text": "Knob, amplifiers and supplies share the 0 V (common negative) exactly as the knob/amplifier maker shows; K-LIV-LOW spans two supplies (P01 + P03), so its P03 outputs need a matched PWM amplifier fed from P03 with a common 0 V. Confirm on the sample bench (3 amplifiers with the curtain strips); fallback if the bench fails: split the living LOW layer onto a second knob (one more control)."
+  },
+  {
+   "id": "FW-H2",
+   "text": "Children's room C39/C40 voltage drop is MARGINAL (3.3 % and 3.6 % with the curtain strip): a 2.5 mm2 shared feed from P16 to SB-08, or a separate supply, is needed; the electrician decides."
+  },
+  {
+   "id": "FW-H3",
+   "text": "Grooming levels: bath HIGH, mirror pair and face pair levels are set on site with the homeowner; no lux credit is claimed for knob positions."
+  },
+  {
+   "id": "FW-H4",
+   "text": "2700 K strip RFQ: 24 V constant-voltage single-channel COB strip with maker-stated PWM dimming, CRI >= 90, R9 >= 50, lumens per metre at 2700 K, aluminium profile + opal diffuser, IP variant per location; no product is approved."
+  },
+  {
+   "id": "FW-H5",
+   "text": "Passage C10: its supply is switched upstream 2-way (SB-02 / SB-07); the T1-K power-on state (memory of last level vs. default) must be confirmed so the passage light returns at a usable level."
+  },
+  {
+   "id": "FW-H6",
+   "text": "24 V spots (balcony, baths, dressing, lobby, study) must be maker-stated constant-voltage PWM-dimmable 24 V fittings; constant-current modules are not put on a CV knob."
+  },
+  {
+   "id": "FW-H7",
+   "text": "Curtain-pocket strips: pocket width/depth/run unmeasured; two tracks (sheer + blackout) plus brackets, stack and profile must fit; strip set back behind the lip; fabric must not touch the strip or profile; no driver inside the pocket; CBR window is a placeholder; MBR W03 pocket held; site mock-up before any order."
+  }
+ ],
+ "holds_carried": [
+  "0 proven fitting + driver + control chains (exact_chain_proven false)",
+  "10 mains-dimmer procurement holds",
+  "16 placement holds incl. H-CURTAIN-POCKET, H-MBR-W03, H-CBR-CURTAIN, H-POOJA-GEOMETRY",
+  "evidence gaps G01-G14"
+ ],
+ "proposed_master_patches": [
+  {
+   "path": "/decisions/current_lighting_brief/lighting/tunable_white_scope",
+   "from": "main_ceiling_coves_only",
+   "to": "none"
+  },
+  {
+   "path": "/decisions/current_lighting_brief/lighting/cove_and_led_mood_strip_cct_K",
+   "op": "add",
+   "to": 2700
+  },
+  {
+   "path": "/decisions/current_lighting_brief/lighting/wall_control_model",
+   "op": "add",
+   "to": "brightness_only_low_and_high_rails_per_room"
+  },
+  {
+   "path": "/decisions/current_lighting_brief/curtains/curtain_pocket_is_not_automatically_an_led_cove",
+   "from": true,
+   "to": false,
+   "requires_homeowner_signoff": true,
+   "or": "conditional proposal: warm 2700 K strips in LIV, DIN, MBR side and CBR pockets, on existing LOW knobs; MBR W03 held"
+  }
+ ],
+ "electrician_owns": [
+  "protective devices and their ratings",
+  "conductor sizes",
+  "earthing",
+  "RCD selection",
+  "circuit separation and flat/common separation",
+  "final inrush and leakage checks",
+  "compliance with current Indian standards and local rules"
+ ],
+ "checks": [
+  {
+   "id": "H-lighting-fragment-fixed-white.json",
+   "check": "d7 input lighting-fragment-fixed-white.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "31b65875cb603a43d107c91a4a54bb8afffa3134cc1134dd1cf74dc66f42be1b"
+  },
+  {
+   "id": "H-lighting-design-inputs-fixed-white.json",
+   "check": "d7 input lighting-design-inputs-fixed-white.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "a96a3467f3ca9e7cb0b6e9e7aaafe93f1c8993ec43bd527d90c5d702ada92926"
+  },
+  {
+   "id": "H-curtain-pocket-candidate.json",
+   "check": "d7 input curtain-pocket-candidate.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "1135224d612b4f6cb8fb8bac6bbb87ea3e53a1b29d6a973aa8ca63e670a269d7"
+  },
+  {
+   "id": "H-circuit-control-psu-ledger.json",
+   "check": "d7 input circuit-control-psu-ledger.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "5c37255c374acb8647a67403255224d77331a46135f5cc9d06fbbeff709ae17e"
+  },
+  {
+   "id": "H-electrical-checks.json",
+   "check": "d7 input electrical-checks.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "df6019388caa7adc3cfff093497427e7e2f430c26ef7ae77227284536156bf86"
+  },
+  {
+   "id": "H-bom.json",
+   "check": "d7 input bom.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "2a9e76f8b45f3d9379fbb94e365f93b31e5f636c3e8de801bdd71c8f92c80cad"
+  },
+  {
+   "id": "H-fixed-cost.json",
+   "check": "d7 input fixed-cost.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "9997cfa66058f5daf084cf277df89e217d59e99c040f6511ca3ebf2830d8e388"
+  },
+  {
+   "id": "H-fixed-receipt.json",
+   "check": "d7 input fixed-receipt.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "effb92fe61bf202d3a75e2432d4efccf0596f18b416a628ff9de9cf357e3d5cc"
+  },
+  {
+   "id": "H-fixed-cct-map.json",
+   "check": "d7 input fixed-cct-map.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396"
+  },
+  {
+   "id": "H-verification.json",
+   "check": "d7 input verification.json matches the reviewed hash",
+   "status": "PASS",
+   "detail": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9"
+  },
+  {
+   "id": "H-README.md",
+   "check": "d7 input README.md matches the reviewed hash",
+   "status": "PASS",
+   "detail": "dba4d6250c642745b89cda0147dce8d0ebea2fbfd33b7cbc69475f88e145d709"
+  },
+  {
+   "id": "H-master",
+   "check": "live master is the bound master e0bf1af2",
+   "status": "PASS",
+   "detail": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72"
+  },
+  {
+   "id": "H-verif",
+   "check": "d7 verification is bound to the current design inputs and all checks PASS",
+   "status": "PASS",
+   "detail": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e {'PASS': 82}"
+  },
+  {
+   "id": "F-curtain-construction_release",
+   "check": "curtain what-if construction_release is false",
+   "status": "PASS",
+   "detail": "False"
+  },
+  {
+   "id": "F-curtain-product_approval",
+   "check": "curtain what-if product_approval is false",
+   "status": "PASS",
+   "detail": "False"
+  },
+  {
+   "id": "F-curtain-exact_chain_proven",
+   "check": "curtain what-if exact_chain_proven is false",
+   "status": "PASS",
+   "detail": "False"
+  },
+  {
+   "id": "F-receipt-construction_release",
+   "check": "receipt construction_release is false",
+   "status": "PASS",
+   "detail": "False"
+  },
+  {
+   "id": "F-receipt-product_approval",
+   "check": "receipt product_approval is false",
+   "status": "PASS",
+   "detail": "False"
+  },
+  {
+   "id": "F-receipt-exact_chain_proven",
+   "check": "receipt exact_chain_proven is false",
+   "status": "PASS",
+   "detail": "False"
+  },
+  {
+   "id": "B-circuits",
+   "check": "47 circuits",
+   "status": "PASS",
+   "detail": "47"
+  },
+  {
+   "id": "B-fittings",
+   "check": "104 fittings",
+   "status": "PASS",
+   "detail": "104"
+  },
+  {
+   "id": "B-knobs",
+   "check": "21 T1-K knobs, 0 two-channel knobs",
+   "status": "PASS",
+   "detail": "{'circuits': 47, 'circuits_on_knobs': 31, 'knob_T1K': 21, 'knobs_total': 21, 'knob_outputs': 34, 'amplifiers': 1, 'dimmers_230V': 10, 'track_drivers_48V': 1, 'integral_dimmer_readers': 4, 'dimmable_pir_step_lights': 2, 'switches': 8, 'psus_24V': 13, 'psu_nameplate_total_W': 1760, 'psu_isolators': 14, 'standby_W_est': 13.1}"
+  },
+  {
+   "id": "B-psus",
+   "check": "13 supplies, 1,760 W nameplate",
+   "status": "PASS",
+   "detail": "1760"
+  },
+  {
+   "id": "B-dimmers",
+   "check": "10 mains dimmers",
+   "status": "PASS",
+   "detail": "10"
+  },
+  {
+   "id": "P-2700",
+   "check": "every cove, line, mood, perimeter, night and pooja-strip group is 2700 K",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "P-fixed",
+   "check": "every group has exactly one fixed CCT",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "P-T1K",
+   "check": "every knob group uses the single-colour T1-K class",
+   "status": "PASS",
+   "detail": "{'T1-K-class 24 V PWM wall knob (3 out'}"
+  },
+  {
+   "id": "K-count",
+   "check": "21 knobs in the knob-group table",
+   "status": "PASS",
+   "detail": "21"
+  },
+  {
+   "id": "K-out-base",
+   "check": "knob outputs add to 34 and amplifiers to 1",
+   "status": "PASS",
+   "detail": "34 / 1"
+  },
+  {
+   "id": "K-out-S1",
+   "check": "with curtain strips: 38 outputs, 3 amplifiers, still 21 knobs (no new knob)",
+   "status": "PASS",
+   "detail": "38 / 3"
+  },
+  {
+   "id": "K-amp-rule",
+   "check": "amplifiers = ceil(max(0, outputs-3)/2) for every knob (with curtain strips)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "K-current",
+   "check": "no knob output above the 2.4 A design allowance (with curtain strips)",
+   "status": "PASS",
+   "detail": "2.18"
+  },
+  {
+   "id": "K-curtain-low",
+   "check": "every active curtain strip is on its room LOW knob; no new knob",
+   "status": "PASS",
+   "detail": "['K-CBR-LOW', 'K-DIN-LOW', 'K-LIV-LOW', 'K-MBR-LOW']"
+  },
+  {
+   "id": "G-CURT-LIV",
+   "check": "CURT-LIV strip length = window span + 2 x 0.30 m return",
+   "status": "PASS",
+   "detail": "2.450 vs 2.45 m"
+  },
+  {
+   "id": "G-CURT-DIN",
+   "check": "CURT-DIN strip length = window span + 2 x 0.30 m return",
+   "status": "PASS",
+   "detail": "2.450 vs 2.45 m"
+  },
+  {
+   "id": "G-CURT-MBR-S",
+   "check": "CURT-MBR-S strip length = window span + 2 x 0.30 m return",
+   "status": "PASS",
+   "detail": "2.426 vs 2.43 m"
+  },
+  {
+   "id": "G-CURT-CBR",
+   "check": "CURT-CBR strip length = window span + 2 x 0.30 m return",
+   "status": "PASS",
+   "detail": "1.552 vs 1.55 m"
+  },
+  {
+   "id": "G-CURT-MBR-W03",
+   "check": "CURT-MBR-W03 strip length = window span + 2 x 0.30 m return",
+   "status": "PASS",
+   "detail": "1.513 vs 1.51 m"
+  },
+  {
+   "id": "G-total",
+   "check": "active strips total 8.88 m / 71.0 W",
+   "status": "PASS",
+   "detail": "8.88 m 71.0 W"
+  },
+  {
+   "id": "S-P01",
+   "check": "P01 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "111.8 W / 240 W"
+  },
+  {
+   "id": "S-P03",
+   "check": "P03 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "69.7 W / 150 W"
+  },
+  {
+   "id": "S-P04",
+   "check": "P04 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "27.7 W / 60 W"
+  },
+  {
+   "id": "S-P05",
+   "check": "P05 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "38.6 W / 100 W"
+  },
+  {
+   "id": "S-P06",
+   "check": "P06 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "8.0 W / 30 W"
+  },
+  {
+   "id": "S-P07",
+   "check": "P07 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "69.3 W / 150 W"
+  },
+  {
+   "id": "S-P08",
+   "check": "P08 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "70.6 W / 150 W"
+  },
+  {
+   "id": "S-P10",
+   "check": "P10 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "31.8 W / 60 W"
+  },
+  {
+   "id": "S-P11",
+   "check": "P11 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "11.0 W / 30 W"
+  },
+  {
+   "id": "S-P12",
+   "check": "P12 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "110.2 W / 240 W"
+  },
+  {
+   "id": "S-P14",
+   "check": "P14 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "106.1 W / 200 W"
+  },
+  {
+   "id": "S-P15",
+   "check": "P15 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "116.1 W / 240 W"
+  },
+  {
+   "id": "S-P16",
+   "check": "P16 within the 90 % sizing rule (with curtain strips)",
+   "status": "PASS",
+   "detail": "121.0 W / 240 W"
+  },
+  {
+   "id": "S-total",
+   "check": "with curtain strips: 13 supplies, 1,890 W nameplate",
+   "status": "PASS",
+   "detail": "1890"
+  },
+  {
+   "id": "S-lt",
+   "check": "each supply is in exactly one lighting circuit (LT)",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "S-lt230",
+   "check": "each 230 V group is in exactly one 230 V lighting circuit",
+   "status": "PASS",
+   "detail": "[]"
+  },
+  {
+   "id": "L-sum0",
+   "check": "lighting-circuit loads add up to the flat envelope 1,174 W",
+   "status": "PASS",
+   "detail": "1173.9"
+  },
+  {
+   "id": "L-sum1",
+   "check": "with curtain strips the flat envelope rises by 71.0 W",
+   "status": "PASS",
+   "detail": "71.0"
+  },
+  {
+   "id": "L-inv",
+   "check": "inverter default (LT-1..3) baseline 691.8 W",
+   "status": "PASS",
+   "detail": "691.8 -> 704.2"
+  },
+  {
+   "id": "L-inrush",
+   "check": "with curtain strips every 24 V LT passes the B16 and C10 reference screens",
+   "status": "PASS",
+   "detail": "B10 over 1.0: ['LT-3', 'LT-5']; B16: []; C10: []"
+  },
+  {
+   "id": "L-leak",
+   "check": "earth-leakage screen 13 x 0.75 = 9.75 mA (unchanged with curtain strips)",
+   "status": "PASS",
+   "detail": "9.75"
+  },
+  {
+   "id": "C-31",
+   "check": "31 wall controls (21 knobs + 10 mains dimmers)",
+   "status": "PASS",
+   "detail": "31"
+  },
+  {
+   "id": "C-room",
+   "check": "wall controls per room LIV 5, BAL 2, DIN 5, KIT 4, UTL 2, MBR 2, DRS 1, TL1 3, LOB 1, TL2 3, CBR 3",
+   "status": "PASS",
+   "detail": "{'LIV': 5, 'BAL': 2, 'DIN': 5, 'KIT': 4, 'UTL': 2, 'MBR': 2, 'DRS': 1, 'TL1': 3, 'LOB': 1, 'TL2': 3, 'CBR': 3}"
+  },
+  {
+   "id": "C-fitted",
+   "check": "4 readers with integral dimmers + 2 PIR step lights",
+   "status": "PASS",
+   "detail": "6"
+  },
+  {
+   "id": "C-switch",
+   "check": "8 on/off switch modules (2-way / intermediate points ahead of dimmers and supplies)",
+   "status": "PASS",
+   "detail": "8"
+  },
+  {
+   "id": "D-screen",
+   "check": "9 phase-cut groups screened against 3 dimmer leads (C13 track excluded); C20 at the Lyncus limit",
+   "status": "PASS",
+   "detail": "9"
+  },
+  {
+   "id": "V-29",
+   "check": "viewer: 29 sliders (19 primary + 10 secondary), each tied to wall controls",
+   "status": "PASS",
+   "detail": "29 = 19 + 10"
+  },
+  {
+   "id": "V-cct",
+   "check": "fixture CCT map covers 104 fittings",
+   "status": "PASS",
+   "detail": "104"
+  },
+  {
+   "id": "$-base",
+   "check": "d7 BoM total = fixed-cost total",
+   "status": "PASS",
+   "detail": "[302846, 744666]"
+  },
+  {
+   "id": "$-save",
+   "check": "fixed-white saving per flat = 46,211 to 103,023 INR (with contingency)",
+   "status": "PASS",
+   "detail": "[46211, 103023]"
+  },
+  {
+   "id": "$-curt",
+   "check": "fixed-white + curtain strips = BoM total plus curtain delta (+-2 INR rounding)",
+   "status": "PASS",
+   "detail": "[312513, 769083]"
+  }
+ ]
+}

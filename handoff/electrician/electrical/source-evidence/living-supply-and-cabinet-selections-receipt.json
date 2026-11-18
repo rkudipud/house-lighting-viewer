@@ -1,0 +1,118 @@
+{
+  "before_master_sha256": "f7a5e3e827ebd7f9e2cccf479fc8bb05b4f786d1f99f86176547af509ff59d9a",
+  "after_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+  "rollback_sha256": "f7a5e3e827ebd7f9e2cccf479fc8bb05b4f786d1f99f86176547af509ff59d9a",
+  "fragment_sha256": "5d5f1182238e0cdf6ee26df227a8afde44077d74c6f1d84925c9c7ae83be5a72",
+  "source_option_sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+  "decision_source": {
+    "kind": "project_ask_user_answers_reported_by_coordinator",
+    "coordinator_assignment_id": "assignment:c40feaae-bd23-4667-9a64-9c2a607f3cd4:toolu_0178rP2F6zXKX468MvweWf2C",
+    "original_ask_user_request_id": null,
+    "note": "The original ask_user request identifiers were not supplied in the forwarding message."
+  },
+  "selected_supply": {
+    "retain_supply_id": "P01",
+    "remove_supply_id": "P03",
+    "reassign_to_P01": [
+      "C03",
+      "C04",
+      "C05",
+      "X-CURT-LIV"
+    ],
+    "nominal_voltage_V": 24,
+    "planned_nameplate_W": 480,
+    "manufacturer_reference_only": "Mean Well HLG-480H-24",
+    "manufacturer_datasheet": "https://www.meanwell.com/Upload/PDF/HLG-480H/HLG-480H-SPEC.PDF",
+    "manufacturer_datasheet_sha256": "790048cbd6b35066dc5c7a7c29ad87a52f302e0e08e92034691087dfc552171e",
+    "reference_output_rating_A": 20,
+    "reference_input_range_VAC": [
+      90,
+      305
+    ],
+    "note": "The example is not an approved or purchased SKU; real operating capacity is subject to its input, ambient, case-temperature and installation specifications. Final hatch location, supply orientation, distribution, equipment protection and branch ratings are not designed."
+  },
+  "selected_S1_totals": {
+    "knobs": 21,
+    "knob_outputs": 38,
+    "amplifiers": 3,
+    "psus": 12,
+    "psu_nameplate_total_W": 1980,
+    "psu_over_usable": [],
+    "vd_worst_pct": null,
+    "vd_status": {
+      "OK": 30,
+      "MARGINAL": 2,
+      "HOLD": 5
+    },
+    "fittings_including_selected_strips": 108,
+    "circuits_including_selected_strips": 51,
+    "base_photometric_fittings": 104,
+    "additional_selected_strips": 4,
+    "additional_circuits": 4,
+    "selected_strip_length_m": 8.88,
+    "selected_strip_load_W": 71.04,
+    "photometry_credit_for_selected_strips": false,
+    "worst_known_dV_pct": 3.6,
+    "inrush_status": "HOLD; LT-4 and LT-5 previous screens invalid",
+    "capacity_status": "project allowance only; product, thermal and branch protection held"
+  },
+  "selected_cabinets": {
+    "status": "homeowner_selected_subject_to_site_holds",
+    "items": [
+      {
+        "id": "ST-R04a-WR01",
+        "title": "Dressing cabinet",
+        "condition": "conditional on FH-ST-03 measured clear width and door/route clearance"
+      },
+      {
+        "id": "ST-R08-UC01",
+        "title": "Utility under-counter cabinet",
+        "condition": "conditional on FH-ST-12 measured utility geometry and services/access"
+      }
+    ],
+    "cost_status": "previous optional allowances are not a revised measured or quoted total",
+    "source": {
+      "kind": "project_ask_user_answers_reported_by_coordinator",
+      "coordinator_assignment_id": "assignment:c40feaae-bd23-4667-9a64-9c2a607f3cd4:toolu_0178rP2F6zXKX468MvweWf2C",
+      "original_ask_user_request_id": null,
+      "note": "The original ask_user request identifiers were not supplied in the forwarding message."
+    },
+    "construction_release": false
+  },
+  "validation": {
+    "rooms": 14,
+    "confirmed_room_dimensions": 21,
+    "fixtures": 104,
+    "controlled_groups": 47,
+    "floor_instances": 4
+  },
+  "base_voltage_drop_status": {
+    "HOLD": 4,
+    "OK": 27,
+    "MARGINAL": 2
+  },
+  "unchanged": [
+    "architecture",
+    "bathrooms",
+    "visualization_geometry",
+    "lighting fixtures",
+    "lighting design_inputs"
+  ],
+  "holds": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "dimmer_fitting_driver_compatibility": "OPEN",
+    "single_supply_controller_repeater_and_branch_protection": "OPEN; 20 A supply reference exceeds the T1-K candidate 12.5 A input nameplate and all branch ratings must be checked",
+    "power_on_behavior_and_low_end_flicker": "OPEN",
+    "living_low_feeder_and_voltage_drop": "OPEN; old P01/P03 split-feed checks are not valid for the one-supply arrangement",
+    "LT4_LT5_breaker_inrush_and_isolation": "OPEN; old circuit screens do not apply",
+    "P16_shared_feed_and_C39_C40_drop": "OPEN; S1 modeled C39 3.3% and C40 3.6%; 2.5 mm2 shared-feed concept requires engineering",
+    "curtain_pocket_dimensions_and_profile_fit": "OPEN; measured mock-up required, no lux credit",
+    "W03_optional_pocket": "EXCLUDED and on hold",
+    "bath_zones_earthing_cables_protection_supply_separation": "OPEN for qualified local professionals",
+    "CBR": "H1-H6 accepted for review; C37 procurement and remaining CBR/site holds remain open",
+    "pooja": "Strip and spot remain independent; display decision does not approve lighting geometry, thermal clearance or fixings",
+    "pricing": "No verified current installed quote or 480 W supply cost delta"
+  }
+}

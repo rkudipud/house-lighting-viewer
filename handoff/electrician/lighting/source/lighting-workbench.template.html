@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:">
+<title>Lighting workbench | House design review</title>
+<style>
+  :root{color-scheme:light;--ink:#1a303c;--muted:#536b78;--line:#c4d2d7;--paper:#edf3f4;--white:#fff;--blue:#22678a;--amber:#a75c1b;--hold:#9d4b28}
+  *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.48 "Segoe UI",sans-serif}
+  header{background:#193c4d;color:#fff;padding:22px max(24px,calc((100vw - 1500px)/2));display:flex;justify-content:space-between;align-items:end;gap:24px}
+  h1,h2,h3{font-family:Bahnschrift,"Arial Narrow","Segoe UI",sans-serif;margin:0;font-weight:600;line-height:1.13}
+  h1{font-size:clamp(27px,3vw,39px);letter-spacing:.01em}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+  .status{font-size:12px;max-width:330px;color:#e3edf0}
+  main{max-width:1500px;margin:auto;padding:20px 24px 35px}.notice{background:#fff6e8;border:1px solid #e8cda8;border-radius:4px;padding:12px 15px;margin-bottom:18px}
+  .notice strong{color:#7b3e1a}.tools{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr)) auto;gap:12px;align-items:end;margin-bottom:15px}
+  label{font-size:12px;font-weight:700;color:var(--muted);display:block}.tools select,.fixture-select{display:block;width:100%;margin-top:5px}
+  select{font:inherit;color:var(--ink);background:#fff;border:1px solid #aebfc6;border-radius:4px;padding:9px 10px;min-height:42px}
+  select:focus-visible,input:focus-visible,a:focus-visible,canvas:focus-visible{outline:3px solid #e39b3d;outline-offset:3px}
+  .check{display:flex;align-items:center;gap:8px;min-height:42px;color:var(--ink);font-size:13px;white-space:nowrap}
+  .check input{width:17px;height:17px;accent-color:var(--blue)}
+  .layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(290px,.8fr);gap:16px;align-items:start}
+  .plan,.panel{background:var(--white);border:1px solid var(--line);border-radius:5px}
+  .plan-head,.panel-section{padding:16px 18px}.plan-head{border-bottom:1px solid #e0e8ea;display:flex;justify-content:space-between;gap:16px;align-items:start}
+  .plan-head h2{font-size:20px}.small{color:var(--muted);font-size:12px}.drawing{padding:8px 12px 12px;background:#f8fbfb}
+  canvas{display:block;width:100%;background:#fbfdfd;touch-action:manipulation}.legend{display:flex;flex-wrap:wrap;gap:10px 19px;padding:12px 18px;border-top:1px solid #e0e8ea;font-size:12px}
+  .key{display:inline-flex;align-items:center;gap:6px}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.held{border:2px dashed var(--hold);background:white}
+  .scale{display:flex;align-items:center;gap:7px;min-width:225px}.ramp{width:116px;height:9px;background:linear-gradient(90deg,#d9e8ec,#82bacb,#d8b561,#cf793d,#813931)}
+  .panel-section+.panel-section{border-top:1px solid #e0e8ea}.panel h2{font-size:19px}.panel h3{font-size:15px;margin-bottom:7px}
+  .readout{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.metric{border-top:2px solid #b8cfd8;padding-top:7px}
+  .metric strong{display:block;font:600 23px/1.1 Bahnschrift,"Segoe UI",sans-serif}.metric span{font-size:11px;color:var(--muted)}
+  .note{font-size:13px;color:var(--muted);margin:9px 0 0}.warning{font-size:13px;color:#783f20;margin:10px 0 0}
+  dl{margin:12px 0 0;display:grid;grid-template-columns:82px 1fr;gap:6px 9px;font-size:13px}dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
+  .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}.links a{color:#165e82;font-weight:600;font-size:13px}
+  footer{color:var(--muted);font-size:11px;margin-top:17px;overflow-wrap:anywhere}
+  @media(max-width:850px){header{align-items:start;flex-direction:column;gap:12px}.tools{grid-template-columns:1fr 1fr}.layout{grid-template-columns:1fr}.status{max-width:none}main{padding:15px}.plan-head{flex-direction:column}}
+  @media(max-width:480px){.tools{grid-template-columns:1fr}.check{min-height:30px}.plan-head,.panel-section{padding:14px}.legend{gap:8px 12px}.readout{gap:4px}.metric strong{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <div><div class="eyebrow">Hyderabad house / typical 2BHK floor</div><h1>Lighting workbench</h1></div>
+  <div class="status"><strong>Design review only</strong><br>One floor repeated four times. Site, product and electrical checks remain open.</div>
+</header>
+<main>
+  <div class="notice"><strong>Calculated, not measured.</strong> The coloured map is a saved analytic estimate using generic optics, not a live or physically validated simulation. The four selected curtain strips have no lux credit.</div>
+  <div class="tools" aria-label="Plan filters">
+    <label for="room">Room<select id="room"><option value="all">All rooms</option></select></label>
+    <label for="scene">Saved calculation<select id="scene">
+      <option value="HIGH_100">Main lights - 100%</option><option value="LOW_100">Mood layer - 100%</option>
+      <option value="HIGH+LOW_100">Main + mood - 100%</option><option value="Mood">Mood scene</option>
+      <option value="Relax">Relax scene</option><option value="Work">Work scene</option><option value="Full">Full scene</option>
+      <option value="Off">Off - no stored map</option><option value="Night">Night - no stored map</option>
+    </select></label>
+    <label for="layer">Show fittings<select id="layer"><option value="all">All fittings</option><option value="main">Main lights</option><option value="mood">Coves and mood</option><option value="task">Task, accent and night</option></select></label>
+    <label class="check" for="show-grid"><input id="show-grid" type="checkbox" checked>Show calculated map</label>
+  </div>
+  <div class="layout">
+    <section class="plan" aria-labelledby="plan-heading">
+      <div class="plan-head"><div><h2 id="plan-heading">Typical floor</h2><div class="small">Lighting zones are approximate traces, not measured walls. Select a symbol or use the fitting list.</div></div><div class="small">Sheet coordinates: +x west / +z north</div></div>
+      <div class="drawing"><canvas id="plan" role="img" aria-label="Lighting plan with optional calculated illuminance overlay. Use the fitting list for keyboard access."></canvas></div>
+      <div class="legend">
+        <span class="key"><i class="dot" style="background:#b96b27"></i>2700 K</span><span class="key"><i class="dot" style="background:#356e8b"></i>3000 K</span><span class="key"><i class="dot" style="background:#5475ae"></i>4000 K</span><span class="key"><i class="dot held"></i>Placement / site hold</span>
+        <span class="scale"><span>0 lx</span><i class="ramp"></i><span>750+ lx</span></span>
+      </div>
+    </section>
+    <aside class="panel">
+      <section class="panel-section" aria-labelledby="calc-title"><h2 id="calc-title">Saved calculation</h2>
+        <p id="calc-context" class="note" aria-live="polite"></p>
+        <div class="readout"><div class="metric"><strong id="avg">--</strong><span>average lx</span></div><div class="metric"><strong id="min">--</strong><span>minimum lx</span></div><div class="metric"><strong id="u0">--</strong><span>uniformity U0</span></div></div>
+        <p id="calc-warning" class="warning"></p>
+        <p class="note">Statistics use the scheduled receiver plane and a 0.5 m border exclusion. A room map is not a worktop, face or reading-task measurement.</p>
+      </section>
+      <section class="panel-section" aria-labelledby="fitting-title"><h2 id="fitting-title">Inspect a fitting</h2>
+        <label for="fixture" class="note">Choose a fitting or select it on the plan</label><select class="fixture-select" id="fixture"><option value="">Choose a fitting</option></select>
+        <div id="fixture-info" aria-live="polite"><p class="note">The selected fitting's group, colour and holds appear here.</p></div>
+      </section>
+      <section class="panel-section"><h3>Controls and handoff</h3>
+        <p class="note">The installed concept uses brightness-only controls. This review does not operate switches or recalculate lux when controls change.</p>
+        <p class="warning">P01 supply distribution, protection, inrush and the exact dimming chain remain open. A licensed electrician and manufacturers must resolve them.</p>
+        <div class="links"><a href="lighting-specification.md">Review specification</a><a href="fixture-ledger.csv">Fitting schedule</a><a href="switchboard-schedule.csv">Control schedule</a><a href="heatmaps-summary.pdf">Heatmaps PDF</a></div>
+      </section>
+    </aside>
+  </div>
+  <footer>Master SHA-256: <span id="master-hash"></span><br>Photometry source inputs: <span id="photometry-hash"></span>. Saved maps retain their original calculation provenance; no new product photometry is claimed.</footer>
+</main>
+<script id="workbench-data" type="application/json">__DATA__</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById("workbench-data").textContent);
+const $=id=>document.getElementById(id);
+const roomSelect=$("room"), sceneSelect=$("scene"), layerSelect=$("layer"), fixtureSelect=$("fixture"), canvas=$("plan");
+const ctx=canvas.getContext("2d"), FT=.3048, colours={2700:"#b96b27",3000:"#356e8b",4000:"#5475ae"};
+const roomById=Object.fromEntries(data.rooms.map(r=>[r.id,r]));
+let selected="", projection=null, visibleFixtures=[];
+for(const r of data.rooms){const o=document.createElement("option");o.value=r.id;o.textContent=r.name+" ("+r.id+")";roomSelect.appendChild(o)}
+$("master-hash").textContent=data.master_sha256;
+$("photometry-hash").textContent=data.photometry_source_design_inputs_sha256;
+
+function layerOf(f){
+  if(f.lane==="HIGH")return "main";
+  if(["COVE","MOOD","LINE","PERIM","LOW"].includes(f.lane))return "mood";
+  return "task";
+}
+function isVisible(f){
+  return (roomSelect.value==="all"||f.room===roomSelect.value)&&(layerSelect.value==="all"||layerOf(f)===layerSelect.value);
+}
+function pointsOf(f){
+  if(f.path_ft&&f.path_ft.length)return f.path_ft;
+  return Number.isFinite(f.x_ft)&&Number.isFinite(f.z_ft)?[[f.x_ft,f.z_ft]]:[];
+}
+function bounds(){
+  const rooms=data.rooms.filter(r=>roomSelect.value==="all"||r.id===roomSelect.value);
+  const pts=rooms.flatMap(r=>r.poly_ft).concat(data.fixtures.filter(isVisible).flatMap(pointsOf));
+  const xs=pts.map(p=>p[0]),zs=pts.map(p=>p[1]);let x0=Math.min(...xs),x1=Math.max(...xs),z0=Math.min(...zs),z1=Math.max(...zs);
+  const pad=roomSelect.value==="all"?.6:.9;return {x0:x0-pad,x1:x1+pad,z0:z0-pad,z1:z1+pad};
+}
+function colour(v){
+  const stops=[[0,[229,239,241]],[100,[130,186,203]],[300,[216,181,97]],[500,[207,121,61]],[750,[129,57,49]]];
+  const n=Math.max(0,Math.min(750,v));
+  for(let i=1;i<stops.length;i++){if(n<=stops[i][0]){const a=stops[i-1],b=stops[i],t=(n-a[0])/(b[0]-a[0]);return "rgb("+a[1].map((x,j)=>Math.round(x+(b[1][j]-x)*t)).join(",")+")"}}
+  return "rgb(129,57,49)";
+}
+function labelRoom(r){
+  const p=r.poly_ft,x=p.reduce((s,v)=>s+v[0],0)/p.length,z=p.reduce((s,v)=>s+v[1],0)/p.length;
+  const [a,b]=projection.xy(x,z);ctx.font="600 11px Segoe UI";ctx.textAlign="center";ctx.textBaseline="middle";
+  const text=r.id+" / "+r.name,w=ctx.measureText(text).width+8;ctx.fillStyle="rgba(255,255,255,.82)";ctx.fillRect(a-w/2,b-8,w,16);ctx.fillStyle="#274754";ctx.fillText(text,a,b);
+}
+function draw(){
+  const width=Math.max(250,canvas.parentElement.clientWidth-24), b=bounds();
+  const height=Math.min(1050,Math.max(360,Math.round(width*(b.z1-b.z0)/(b.x1-b.x0))));
+  const dpr=Math.min(window.devicePixelRatio||1,2);canvas.style.height=height+"px";canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
+  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,width,height);
+  const pad=17,scale=Math.min((width-2*pad)/(b.x1-b.x0),(height-2*pad)/(b.z1-b.z0));
+  const left=(width-(b.x1-b.x0)*scale)/2,top=(height-(b.z1-b.z0)*scale)/2;
+  projection={xy:(x,z)=>[left+(x-b.x0)*scale,top+(z-b.z0)*scale],scale};
+  const rooms=data.rooms.filter(r=>roomSelect.value==="all"||r.id===roomSelect.value);
+  for(const r of rooms){
+    ctx.beginPath();r.poly_ft.forEach((v,i)=>{const [x,y]=projection.xy(...v);if(i)ctx.lineTo(x,y);else ctx.moveTo(x,y)});ctx.closePath();ctx.fillStyle="#eaf0f0";ctx.fill();
+    const grid=data.heatmaps.rooms[r.id],values=grid&&grid.E[sceneSelect.value];
+    if($("show-grid").checked&&values){
+      const step=grid.step_m/FT,size=step*scale+.55;
+      for(let zi=0;zi<values.length;zi++)for(let xi=0;xi<values[zi].length;xi++){
+        const v=values[zi][xi];if(v===null||!Number.isFinite(v))continue;
+        const [x,y]=projection.xy(grid.x_m[xi]/FT-step/2,grid.z_m[zi]/FT-step/2);
+        ctx.fillStyle=colour(v);ctx.fillRect(x,y,size,size);
+      }
+    }
+    ctx.beginPath();r.poly_ft.forEach((v,i)=>{const [x,y]=projection.xy(...v);if(i)ctx.lineTo(x,y);else ctx.moveTo(x,y)});ctx.closePath();ctx.strokeStyle="#617f8a";ctx.lineWidth=1;ctx.stroke();
+  }
+  for(const r of rooms)labelRoom(r);
+  visibleFixtures=data.fixtures.filter(isVisible);
+  for(const f of visibleFixtures){
+    const pts=pointsOf(f);if(!pts.length)continue;
+    const isHeld=f.hold_ids.length>0, isSelected=f.id===selected, col=colours[f.cct_k]||"#4b6269";
+    if(pts.length>1){
+      ctx.beginPath();pts.forEach((v,i)=>{const [x,y]=projection.xy(...v);if(i)ctx.lineTo(x,y);else ctx.moveTo(x,y)});
+      ctx.setLineDash(isHeld?[5,4]:[]);ctx.strokeStyle=isSelected?"#121f2b":col;ctx.lineWidth=isSelected?4.5:3;ctx.stroke();ctx.setLineDash([]);
+    }else{
+      const [x,y]=projection.xy(...pts[0]);ctx.beginPath();ctx.arc(x,y,isSelected?6:4,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();ctx.strokeStyle="#fff";ctx.lineWidth=1;ctx.stroke();
+      if(isHeld){ctx.beginPath();ctx.arc(x,y,8,0,Math.PI*2);ctx.setLineDash([3,3]);ctx.strokeStyle="#9d4b28";ctx.lineWidth=1.5;ctx.stroke();ctx.setLineDash([])}
+    }
+  }
+}
+function updateOptions(){
+  const old=selected;fixtureSelect.replaceChildren(new Option("Choose a fitting",""));
+  for(const f of data.fixtures.filter(isVisible))fixtureSelect.add(new Option(f.id+" / "+f.room+" / "+f.cct_k+" K",f.id));
+  if([...fixtureSelect.options].some(o=>o.value===old))fixtureSelect.value=old;else{selected="";fixtureSelect.value=""}
+  showFixture();
+}
+function showFixture(){
+  const f=data.fixtures.find(v=>v.id===selected),el=$("fixture-info");el.replaceChildren();
+  if(!f){const p=document.createElement("p");p.className="note";p.textContent="The selected fitting's group, colour and holds appear here.";el.appendChild(p);return}
+  const dl=document.createElement("dl");
+  for(const [k,v] of [["Fitting",f.id+" / "+f.room],["Use",f.description],["Control",f.group_id+" / "+f.circuit],["Colour",f.cct_k+" K fixed"],["Supply",f.supply||"See circuit schedule"],["Placement",f.hold_ids.length?"HOLD: "+f.hold_ids.join(", "):"Shown for design review"],["Status",f.status]]){
+    const dt=document.createElement("dt"),dd=document.createElement("dd");dt.textContent=k;dd.textContent=v;dl.append(dt,dd)
+  }el.appendChild(dl);
+}
+function updateStats(){
+  const id=roomSelect.value,scene=sceneSelect.value,calc=data.room_results[id];
+  $("plan-heading").textContent=id==="all"?"Typical floor":roomById[id].name+" / "+id;
+  for(const key of ["avg","min","u0"])$(key).textContent="--";
+  let warning="";if(id==="all"||id==="LIV")if(scene!=="HIGH_100"&&scene!=="Off"&&scene!=="Night")warning="Living LOW and scenes using accent retain an inherited pooja allowance; the revised niche is held.";
+  if(id==="CBR"||id==="all")warning+=(warning?" ":"")+"Children's room geometry is a planned, unmeasured frame; H1-H6 are shown as active, while specific ceiling, bed and desk holds remain.";
+  if(scene==="Off"||scene==="Night"){
+    $("calc-context").textContent="No stored "+scene.toLowerCase()+" room-grid calculation. No substitute grid is shown.";
+  }else if(!calc){$("calc-context").textContent="Choose one room to see its saved "+scene+" statistics."}
+  else{
+    const row=(calc.combinations||{})[scene]||(calc.scenes||{})[scene];
+    if(row){$("avg").textContent=row.avg;$("min").textContent=row.min;$("u0").textContent=row.U0;$("calc-context").textContent=(roomById[id].name+" / "+scene+" / "+calc.plane_m+" m receiver plane.")}
+    else $("calc-context").textContent="No saved statistics for this room and setting.";
+  }$("calc-warning").textContent=warning;
+}
+function pointDistance(p,a,b){
+  const dx=b[0]-a[0],dy=b[1]-a[1],den=dx*dx+dy*dy,t=den?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/den)):0;
+  return Math.hypot(p[0]-(a[0]+t*dx),p[1]-(a[1]+t*dy));
+}
+canvas.addEventListener("click",event=>{
+  if(!projection)return;const rect=canvas.getBoundingClientRect(),p=[event.clientX-rect.left,event.clientY-rect.top];let nearest=null,best=13;
+  for(const f of visibleFixtures){const pts=pointsOf(f).map(v=>projection.xy(...v));for(let i=0;i<pts.length;i++){
+    const d=i?pointDistance(p,pts[i-1],pts[i]):Math.hypot(p[0]-pts[i][0],p[1]-pts[i][1]);if(d<best){best=d;nearest=f}
+  }}
+  if(nearest){selected=nearest.id;fixtureSelect.value=selected;showFixture();draw()}
+});
+fixtureSelect.addEventListener("change",()=>{selected=fixtureSelect.value;showFixture();draw()});
+for(const el of [roomSelect,sceneSelect,layerSelect,$("show-grid")])el.addEventListener("change",()=>{updateOptions();updateStats();draw()});
+window.addEventListener("resize",draw);updateOptions();updateStats();draw();
+</script>
+</body>
+</html>

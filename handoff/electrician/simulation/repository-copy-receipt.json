@@ -1,0 +1,343 @@
+{
+  "status": "EXPLORATORY_local_design_review_only",
+  "constructionRelease": false,
+  "publicationAuthorized": false,
+  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceManifest": "simulation-receipt.json",
+  "sourceManifestSha256": "504395aadbff043b1e5d2e4fad7ed9356b974ec44e8f3d4dc4a8a6446b6f0960",
+  "sourceReportSha256": "bcf194bdf33ea3a78bd10aafa7bdb211a346925fd1374ca050308305d280b2dd",
+  "verifiedUpstreamReceiptEntries": 40,
+  "radianceExecutedDuringIntegration": false,
+  "sourcePacksModified": false,
+  "omittedFiles": [
+    {
+      "path": "run_remote_sens.py",
+      "sourceSha256": "e587d41b6e5d9477102e8afb002ed80fb95ac427258af7096f7c377807d0431e",
+      "reason": "Private compute-host/job submission tooling is not distributed."
+    },
+    {
+      "path": "make_report.py",
+      "sourceSha256": "c1b1000ec855c999409ff9452a769a593d9854545b3ad5f2f050aed1a2935ceb",
+      "reason": "Upstream report-regeneration/job bookkeeping is not required for reading results."
+    },
+    {
+      "path": "run_sens.py",
+      "sourceSha256": "792d9ff76744649daf10afb0eed4e3c60ea8cbe9415a3ec1e808de4edba1a4f0",
+      "reason": "Historical low-sampling driver includes superseded kitchen cases; not a reproduction recipe."
+    }
+  ],
+  "unlistedArtifactPolicy": "Nonreceipt scratch scenes, binaries, host/job logs and excluded parity artifacts are not copied.",
+  "sourceManifestNote": "The public simulation receipt describes original upstream hashes, including omitted tooling; delivered hashes are in this copy receipt and the main repository inventory.",
+  "files": [
+    {
+      "path": "sim_radiance.py",
+      "bytes": 30623,
+      "sha256": "ec21eb86e707c32b7f12e1fc202d6ec94b56fecdf816141321af3b5b9f51349c",
+      "sourceSha256": "77efc712e58c9596f77be67f3a9068bff72644e0eed08aaad83f26cd6b743fd3",
+      "publicCopyModified": true,
+      "transformations": [
+        "Private master path redacted; host/user/shared-filesystem constants and remote execution body removed; remote call explicitly fails. Local model mathematics retained."
+      ]
+    },
+    {
+      "path": "cosm.cal",
+      "bytes": 157,
+      "sha256": "20096de3e942178b4b8518c6718c868473c21552ff55517ae4901432a473ae72",
+      "sourceSha256": "20096de3e942178b4b8518c6718c868473c21552ff55517ae4901432a473ae72",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "check_sim.py",
+      "bytes": 27231,
+      "sha256": "1de92017777b80f0b8cef4923354838d9fc4829a70f170bc8c7ec5179425d8cd",
+      "sourceSha256": "1de92017777b80f0b8cef4923354838d9fc4829a70f170bc8c7ec5179425d8cd",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "simulation-report.md",
+      "bytes": 16928,
+      "sha256": "7e2e9d4161c18b264e372b978db71249c780eef8f7799654eb500d23f0be0d36",
+      "sourceSha256": "bcf194bdf33ea3a78bd10aafa7bdb211a346925fd1374ca050308305d280b2dd",
+      "publicCopyModified": true,
+      "transformations": [
+        "Compute-host/job paragraph replaced with public provenance note; three omitted tooling rows removed. All numerical findings, assumptions and holds retained."
+      ]
+    },
+    {
+      "path": "analysis/checks.json",
+      "bytes": 6036,
+      "sha256": "9738c2137747be814452299db785d49c870559f270ae24b5d04d6313d4a12fbf",
+      "sourceSha256": "9738c2137747be814452299db785d49c870559f270ae24b5d04d6313d4a12fbf",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "analysis/sim-heatmaps.json",
+      "bytes": 228815,
+      "sha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "analysis/sim-summary.json",
+      "bytes": 55486,
+      "sha256": "cd99054fcf2592828b255c2f815785b82f9c9a8e203a5e642babc84d2c63575c",
+      "sourceSha256": "cd99054fcf2592828b255c2f815785b82f9c9a8e203a5e642babc84d2c63575c",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/base/sim-results.json",
+      "bytes": 2900193,
+      "sha256": "9729b22945ba944e204e3e1537a414f58b9ea634dc46487a4b9b271cf7028e40",
+      "sourceSha256": "9729b22945ba944e204e3e1537a414f58b9ea634dc46487a4b9b271cf7028e40",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-base/sim-results.json",
+      "bytes": 1144375,
+      "sha256": "71f13afa8d27978a93790dc9b0b399d488647e30a2506f906ec9569380ebaecc",
+      "sourceSha256": "71f13afa8d27978a93790dc9b0b399d488647e30a2506f906ec9569380ebaecc",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-beam_minus10/sim-results.json",
+      "bytes": 1141569,
+      "sha256": "0a6982f65d1a08f2d4755a970a08f25ad1126bb701560f959ab4acaef88bb2d4",
+      "sourceSha256": "0a6982f65d1a08f2d4755a970a08f25ad1126bb701560f959ab4acaef88bb2d4",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-beam_plus10/sim-results.json",
+      "bytes": 1146718,
+      "sha256": "afbadb3cb86d62c5b74cb173eca395deaab8dbffaa7fcda2a0669e1646dfd414",
+      "sourceSha256": "afbadb3cb86d62c5b74cb173eca395deaab8dbffaa7fcda2a0669e1646dfd414",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-ceil_minus0.1/sim-results.json",
+      "bytes": 1143874,
+      "sha256": "fb936255dbfd5642cb0ffabd667806a38066682fd9672e62693e7a774b16f3dd",
+      "sourceSha256": "fb936255dbfd5642cb0ffabd667806a38066682fd9672e62693e7a774b16f3dd",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-ceil_plus0.1/sim-results.json",
+      "bytes": 1144740,
+      "sha256": "d034bbf1881e71759686078309c4c7afad7be8cbd6b75df0da31814d88f5b10a",
+      "sourceSha256": "d034bbf1881e71759686078309c4c7afad7be8cbd6b75df0da31814d88f5b10a",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-pocket_narrow/sim-results.json",
+      "bytes": 818367,
+      "sha256": "c1f7fa568b8588344e9c55e1ae318ea292992c300d87f24014fa59c0605b213f",
+      "sourceSha256": "c1f7fa568b8588344e9c55e1ae318ea292992c300d87f24014fa59c0605b213f",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-pocket_wide/sim-results.json",
+      "bytes": 818470,
+      "sha256": "16614b6a9cc2d60ef1f968cc5e9665727d24402edcd9b0814139b698583eb90c",
+      "sourceSha256": "16614b6a9cc2d60ef1f968cc5e9665727d24402edcd9b0814139b698583eb90c",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-rho_high/sim-results.json",
+      "bytes": 1158687,
+      "sha256": "1883a65d800dd925fb3b3c53a87c017796cb606ae13c6778d8c686f270e0bd9a",
+      "sourceSha256": "1883a65d800dd925fb3b3c53a87c017796cb606ae13c6778d8c686f270e0bd9a",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128-rho_low/sim-results.json",
+      "bytes": 1134942,
+      "sha256": "49039d6ac360a78d3224c310fbba4b328a310e4faa777505daf9004008f5670d",
+      "sourceSha256": "49039d6ac360a78d3224c310fbba4b328a310e4faa777505daf9004008f5670d",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-base/sim-results.json",
+      "bytes": 1378642,
+      "sha256": "75e62ce0b044ed2c19b150ca33db8d4e20198a804f5eb780a473fce23d3e4012",
+      "sourceSha256": "75e62ce0b044ed2c19b150ca33db8d4e20198a804f5eb780a473fce23d3e4012",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-beam_minus10/sim-results.json",
+      "bytes": 1375972,
+      "sha256": "29bf37e5d067866ff81af3a678a0566ed08a4543c01885b57a6ccc027826d8d4",
+      "sourceSha256": "29bf37e5d067866ff81af3a678a0566ed08a4543c01885b57a6ccc027826d8d4",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-beam_plus10/sim-results.json",
+      "bytes": 1380295,
+      "sha256": "afeed678074b6c106d02a7d1b791667daf9df49a2c5f8e07de0b12e03d98e444",
+      "sourceSha256": "afeed678074b6c106d02a7d1b791667daf9df49a2c5f8e07de0b12e03d98e444",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-ceil_minus0.1/sim-results.json",
+      "bytes": 1378410,
+      "sha256": "873a28d7984b2ba7c8ca0fd147e02fdc2dd15c79342b4441279837dd05004539",
+      "sourceSha256": "873a28d7984b2ba7c8ca0fd147e02fdc2dd15c79342b4441279837dd05004539",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-ceil_plus0.1/sim-results.json",
+      "bytes": 1378414,
+      "sha256": "ebcace653d4de4afdd64ac223d790c84fefa1dde3b6eb9c15e02293ce3437000",
+      "sourceSha256": "ebcace653d4de4afdd64ac223d790c84fefa1dde3b6eb9c15e02293ce3437000",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-pocket_narrow/sim-results.json",
+      "bytes": 1377216,
+      "sha256": "cddf18d438e679d78da7cdedacf951334508ed09caae4ba12052f34d118c847e",
+      "sourceSha256": "cddf18d438e679d78da7cdedacf951334508ed09caae4ba12052f34d118c847e",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-pocket_wide/sim-results.json",
+      "bytes": 1377923,
+      "sha256": "0023a9bed4036d19a8873b7eba4a9983219afdf6501db96d2f064a9de70acf1f",
+      "sourceSha256": "0023a9bed4036d19a8873b7eba4a9983219afdf6501db96d2f064a9de70acf1f",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-rho_high/sim-results.json",
+      "bytes": 1391280,
+      "sha256": "63d995bd9708c4f89805c639c182b54c2def80b9f194ec52b0bffedf0e6a1728",
+      "sourceSha256": "63d995bd9708c4f89805c639c182b54c2def80b9f194ec52b0bffedf0e6a1728",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens128hall-rho_low/sim-results.json",
+      "bytes": 1371339,
+      "sha256": "51f62442f9b8946edf13e35bfc711a805218e8da367ba77d9f2850c108099c0e",
+      "sourceSha256": "51f62442f9b8946edf13e35bfc711a805218e8da367ba77d9f2850c108099c0e",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-base/sim-results.json",
+      "bytes": 328271,
+      "sha256": "265e1ba7a2f6e62c27e15dcf411739603402f0da3d881899e7bf881c77f6956a",
+      "sourceSha256": "265e1ba7a2f6e62c27e15dcf411739603402f0da3d881899e7bf881c77f6956a",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-beam_minus10/sim-results.json",
+      "bytes": 327665,
+      "sha256": "ca84aafb3b56d0b74e791c7e09cdf01467e8a9dab659156bcca973d888546310",
+      "sourceSha256": "ca84aafb3b56d0b74e791c7e09cdf01467e8a9dab659156bcca973d888546310",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-beam_plus10/sim-results.json",
+      "bytes": 328696,
+      "sha256": "c3e555208198f37b69c6fbda4175bf6d38a35013c532607a8c01691b7df78142",
+      "sourceSha256": "c3e555208198f37b69c6fbda4175bf6d38a35013c532607a8c01691b7df78142",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-ceil_minus0.1/sim-results.json",
+      "bytes": 328503,
+      "sha256": "336477e16805d4547e06900f3cdd9bffdd573ae8c37309c8a315f20cb72376e9",
+      "sourceSha256": "336477e16805d4547e06900f3cdd9bffdd573ae8c37309c8a315f20cb72376e9",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-ceil_plus0.1/sim-results.json",
+      "bytes": 328125,
+      "sha256": "15297873739f316e2867aaa3b20826e5a875cb20020e52d4313d5ccd9c347a26",
+      "sourceSha256": "15297873739f316e2867aaa3b20826e5a875cb20020e52d4313d5ccd9c347a26",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-kit_extend/sim-results.json",
+      "bytes": 328365,
+      "sha256": "da40c3aff31f4a070810cb484ada9425e60bdc45a451d793a857ca441cd2b47f",
+      "sourceSha256": "da40c3aff31f4a070810cb484ada9425e60bdc45a451d793a857ca441cd2b47f",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-kit_slot_down/sim-results.json",
+      "bytes": 329959,
+      "sha256": "1b86d978ec6830455d3a77adf00d8d39343f0996db8850e4aed3bc0dd51b0937",
+      "sourceSha256": "1b86d978ec6830455d3a77adf00d8d39343f0996db8850e4aed3bc0dd51b0937",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-rho_high/sim-results.json",
+      "bytes": 336493,
+      "sha256": "b41cd733ba9af8957ec3a432814dbf6f8f9390490066eaac9a7ba58872a6ed70",
+      "sourceSha256": "b41cd733ba9af8957ec3a432814dbf6f8f9390490066eaac9a7ba58872a6ed70",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/sens512kit-rho_low/sim-results.json",
+      "bytes": 324644,
+      "sha256": "f7c6b1e5ac1aa5c87e7dfc10d043440b1f84eec06a2c9892f5f050002d253455",
+      "sourceSha256": "f7c6b1e5ac1aa5c87e7dfc10d043440b1f84eec06a2c9892f5f050002d253455",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/smoke3/sim-results.json",
+      "bytes": 328341,
+      "sha256": "e00d67f50d3d2536ab1f4d8b753202ad0ac8260de9ddbf62a5652d70002055a9",
+      "sourceSha256": "e00d67f50d3d2536ab1f4d8b753202ad0ac8260de9ddbf62a5652d70002055a9",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "runs/smoke4/sim-results.json",
+      "bytes": 328488,
+      "sha256": "c962636ef2818faebe59e5089f63fe26a886fdb057818908028f74e170087205",
+      "sourceSha256": "c962636ef2818faebe59e5089f63fe26a886fdb057818908028f74e170087205",
+      "publicCopyModified": false,
+      "transformations": []
+    },
+    {
+      "path": "simulation-receipt.json",
+      "bytes": 6028,
+      "sha256": "b779a6fde455f3a36f72f1937bae3ad65a0728603796ab6f9157f01cc1366ee4",
+      "sourceSha256": "504395aadbff043b1e5d2e4fad7ed9356b974ec44e8f3d4dc4a8a6446b6f0960",
+      "publicCopyModified": true,
+      "transformations": [
+        "Absolute source paths replaced with repository-relative references."
+      ]
+    }
+  ]
+}

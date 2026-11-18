@@ -1,0 +1,13 @@
+﻿supply_id,circuits,modeled_load_W,planning_nameplate_W,planning_allowance_factor,planning_allowance_W,load_pct_of_planning_allowance,site_location_status,reference_only,release_status
+P01,C03; C04; C05; X-CURT-LIV,181.52,480,0.6,288.0,63.0,OPEN; previous placeholder not sized for 480 W,HLG-480H-24,PRODUCT / THERMAL / PROTECTION HOLD
+P04,C06A; C06B,27.72,60,0.6,36.0,77.0,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P05,C07; C08,38.65,100,0.6,60.0,64.4,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P06,C10,8,30,0.6,18.0,44.4,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P07,C12; X-CURT-DIN,69.28,150,0.6,90.0,77.0,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P08,C17,70.56,150,0.6,90.0,78.4,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P10,C16,31.8,60,0.6,36.0,88.3,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P11,C19,11.0,30,0.6,18.0,61.1,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P12,C21; C22; C23; X-CURT-MBR-S,110.24,240,0.6,144.0,76.6,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P14,C27; C28; C29A; C29B; C30A; C30B,106.12,200,0.6,120.0,88.4,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P15,C31; C32; C34; C35A; C35B; C36A; C36B,116.12,240,0.6,144.0,80.6,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD
+P16,C38; C39; C40; X-CURT-CBR,121.0,240,0.6,144.0,84.0,OPEN; indicative hatch only,generic class / refer to source index,PRODUCT / THERMAL / PROTECTION HOLD

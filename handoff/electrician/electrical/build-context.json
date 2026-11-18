@@ -1,0 +1,15 @@
+{
+  "built_utc": "2026-11-18T11:21:08+00:00",
+  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "latest_master_receipt_sha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
+  "living_supply_decision_receipt_sha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
+  "one_supply_option_sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+  "prior_control_sha256": "fe0e6e536772f341960cf26a69c8859543e30610f070ec518e15600e03747cb1",
+  "historic_photometry_verification_sha256": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9",
+  "release_flags": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false
+  },
+  "note": "PDF/PNG export and independent validation are still required before final receipt."
+}

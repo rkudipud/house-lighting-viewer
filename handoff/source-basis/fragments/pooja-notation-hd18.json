@@ -1,0 +1,54 @@
+{
+  "decision": "HD-18",
+  "source": {
+    "kind": "homeowner_answers_to_individual_ask_user_questions",
+    "answers": {
+      "depth": "1 foot 3 inches",
+      "north_corner_to_edge": "1 foot 4 inches",
+      "sill_height": "1 foot 5 inches"
+    },
+    "status": "estimates_only_not_site_measured"
+  },
+  "dimensions": {
+    "status": "homeowner_estimates_unverified_not_site_measurements",
+    "width_mm": 609.6,
+    "height_mm": 1701.8,
+    "sill_m": 0.4318,
+    "top_m": 2.1336,
+    "depth_mm": 381.0,
+    "z_m": [
+      12.1690384,
+      12.7786384
+    ],
+    "opening_height_basis": "Derived from estimated top minus estimated sill, not separately measured.",
+    "interpretation": "Homeowner clarified feet-and-inches notation: sill 1 ft 5 in, depth 1 ft 3 in, north-corner gap 1 ft 4 in. All remain estimates."
+  },
+  "placement": {
+    "status": "provisional_from_estimated_offset_and_unverified_model_corner",
+    "corner_z_m": 13.1850384,
+    "corner_source": "visualization_geometry.rooms[living].rect north/entry-side inside edge",
+    "north_edge_clear_offset_m": 0.4064,
+    "niche_z_m_south_to_north": [
+      12.1690384,
+      12.7786384
+    ],
+    "w06_planar_gap_m": 1.1809984,
+    "w06_gap_basis": "Current modeled living-window; neither opening is site surveyed.",
+    "balcony_outline": "An edge relationship was reported, but the matching edges remain unresolved; do not claim alignment."
+  },
+  "depth_hold": {
+    "status": "HOLD_estimated_depth_exceeds_modeled_wall_extension_not_modeled",
+    "estimated_depth_m": 0.381,
+    "modeled_wall_thickness_m": 0.2273808,
+    "estimated_back_x_m": 0.3044952,
+    "modeled_exterior_face_x_m": 0.4581144,
+    "excess_over_modeled_wall_m": 0.1536192,
+    "homeowner_report": "The existing niche extends beyond the 9-inch wall and is reinforced, with an extended slab top to bottom throughout the building, as reported by the homeowner.",
+    "meaning": "The reported extension is not represented or dimensioned in this model. The mismatch is not evidence that the existing niche is impossible or structurally unsafe.",
+    "required": "Measure the existing niche and wall/extension on site and confirm relevant support and capacity with the responsible structural professional.",
+    "new_or_deeper_cutting_authorized": false
+  },
+  "master_interface_compass": "east (sheet-left), model residual only",
+  "construction_release": false,
+  "recorded_utc": "2026-11-18T01:37:36.672239+00:00"
+}

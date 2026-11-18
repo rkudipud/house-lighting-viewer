@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1375" viewBox="0 0 1700 1375" role="img" aria-labelledby="t d">
+<title id="t">Openings and stair — site register</title>
+<desc id="d">All opening dimensions and stair geometry require field survey</desc>
+<metadata>{&quot;sheet&quot;:&quot;C02-openings-stair&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;construction_release&quot;:false}</metadata>
+<defs>
+<pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
+<pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
+<pattern id="loft" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#f2f0f8"/><path d="M0 0V.08" stroke="#b9b1d3" stroke-width=".010"/></pattern>
+<pattern id="beam" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#ecd9bd"/><path d="M0 0V.08" stroke="#c49a5c" stroke-width=".012"/></pattern>
+<pattern id="feature" width=".06" height=".06" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width=".06" height=".06" fill="#bfe0dc"/><path d="M0 0V.06" stroke="#5aa39b" stroke-width=".012"/></pattern>
+<pattern id="plain" width=".15" height=".15" patternUnits="userSpaceOnUse"><rect width=".15" height=".15" fill="#f3f6f6"/><path d="M0 0H.15V.15" fill="none" stroke="#d6dfdf" stroke-width=".006"/></pattern>
+<pattern id="nowall" width=".12" height=".12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".12" height=".12" fill="#fafafa"/><path d="M0 0V.12" stroke="#d9d9d9" stroke-width=".008"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#466c92"/></marker>
+</defs>
+<style>text{font-family:"Segoe UI",Arial,sans-serif;fill:#203b43}
+.mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
+.title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
+.halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
+<rect width="1700" height="1375" fill="#fcfdfc"/>
+<text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Openings and stair — site register</text>
+<text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >Civil coordination · review only · all site dimensions require verification</text>
+<text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 2 / 4</text>
+<text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<path d="M60 116H1640" stroke="#c8d2d3"/>
+<text x="75.00" y="165.00" font-size="18" class="sect" text-anchor="start" >OPENING IDS / MODEL REFERENCE ONLY</text>
+<text x="75.00" y="195.00" font-size="16" class="red" text-anchor="start" >Widths below are rounded model spans, NOT measured openings, clear leaves or fabrication sizes.</text>
+<text x="75.00" y="220.00" font-size="16" class="muted" text-anchor="start" >For each F1-F4: record actual clear width, height, jamb offsets, sill/head, leaf/hinge and swing.</text>
+<text x="75.00" y="260.00" font-size="14" class="sect" text-anchor="start" >ID</text>
+<text x="170.00" y="260.00" font-size="14" class="sect" text-anchor="start" >LOCATION / BASIS</text>
+<text x="700.00" y="260.00" font-size="14" class="sect" text-anchor="start" >MODEL m</text>
+<path d="M75 278H795" stroke="#d7e0df"/>
+<text x="75.00" y="299.00" font-size="16" class="mono" text-anchor="start" >D01</text>
+<text x="170.00" y="298.00" font-size="16" class="" text-anchor="start" >Main entrance</text>
+<text x="700.00" y="298.00" font-size="16" class="mono" text-anchor="start" >1.10</text>
+<text x="170.00" y="318.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M75 331H795" stroke="#d7e0df"/>
+<text x="75.00" y="352.00" font-size="16" class="mono" text-anchor="start" >D02</text>
+<text x="170.00" y="351.00" font-size="16" class="" text-anchor="start" >Master bedroom door</text>
+<text x="700.00" y="351.00" font-size="16" class="mono" text-anchor="start" >0.86</text>
+<text x="170.00" y="371.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M75 384H795" stroke="#d7e0df"/>
+<text x="75.00" y="405.00" font-size="16" class="mono" text-anchor="start" >D03</text>
+<text x="170.00" y="404.00" font-size="16" class="" text-anchor="start" >Children bedroom door</text>
+<text x="700.00" y="404.00" font-size="16" class="mono" text-anchor="start" >0.85</text>
+<text x="170.00" y="424.00" font-size="13" class="muted" text-anchor="start" >assumed / proposed</text>
+<path d="M75 437H795" stroke="#d7e0df"/>
+<text x="75.00" y="458.00" font-size="16" class="mono" text-anchor="start" >D04</text>
+<text x="170.00" y="457.00" font-size="16" class="" text-anchor="start" >Attached toilet door</text>
+<text x="700.00" y="457.00" font-size="16" class="mono" text-anchor="start" >0.80</text>
+<text x="170.00" y="477.00" font-size="13" class="muted" text-anchor="start" >assumed / proposed</text>
+<path d="M75 490H795" stroke="#d7e0df"/>
+<text x="75.00" y="511.00" font-size="16" class="mono" text-anchor="start" >D05</text>
+<text x="170.00" y="510.00" font-size="16" class="" text-anchor="start" >Common toilet door</text>
+<text x="700.00" y="510.00" font-size="16" class="mono" text-anchor="start" >0.79</text>
+<text x="170.00" y="530.00" font-size="13" class="muted" text-anchor="start" >assumed / proposed</text>
+<path d="M75 543H795" stroke="#d7e0df"/>
+<text x="75.00" y="564.00" font-size="16" class="mono" text-anchor="start" >D06</text>
+<text x="170.00" y="563.00" font-size="16" class="" text-anchor="start" >Kitchen / utility door</text>
+<text x="700.00" y="563.00" font-size="16" class="mono" text-anchor="start" >0.91</text>
+<text x="170.00" y="583.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M75 596H795" stroke="#d7e0df"/>
+<text x="75.00" y="617.00" font-size="16" class="mono" text-anchor="start" >W01</text>
+<text x="170.00" y="616.00" font-size="16" class="" text-anchor="start" >Kitchen exterior window</text>
+<text x="700.00" y="616.00" font-size="16" class="mono" text-anchor="start" >1.22</text>
+<text x="170.00" y="636.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M75 649H795" stroke="#d7e0df"/>
+<text x="75.00" y="670.00" font-size="16" class="mono" text-anchor="start" >W02</text>
+<text x="170.00" y="669.00" font-size="16" class="" text-anchor="start" >Kitchen / utility window</text>
+<text x="700.00" y="669.00" font-size="16" class="mono" text-anchor="start" >1.22</text>
+<text x="170.00" y="689.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M75 702H795" stroke="#d7e0df"/>
+<text x="75.00" y="723.00" font-size="16" class="mono" text-anchor="start" >W03</text>
+<text x="170.00" y="722.00" font-size="16" class="" text-anchor="start" >Master south window</text>
+<text x="700.00" y="722.00" font-size="16" class="mono" text-anchor="start" >0.91</text>
+<text x="170.00" y="742.00" font-size="13" class="muted" text-anchor="start" >roughly centred; width / offsets unmeasured</text>
+<path d="M75 755H795" stroke="#d7e0df"/>
+<text x="75.00" y="776.00" font-size="16" class="mono" text-anchor="start" >W04</text>
+<text x="170.00" y="775.00" font-size="16" class="" text-anchor="start" >Master west window</text>
+<text x="700.00" y="775.00" font-size="16" class="mono" text-anchor="start" >1.83</text>
+<text x="170.00" y="795.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M75 808H795" stroke="#d7e0df"/>
+<text x="75.00" y="829.00" font-size="16" class="mono" text-anchor="start" >W05</text>
+<text x="170.00" y="828.00" font-size="16" class="" text-anchor="start" >Children west window</text>
+<text x="700.00" y="828.00" font-size="16" class="mono" text-anchor="start" >0.75</text>
+<text x="170.00" y="848.00" font-size="13" class="muted" text-anchor="start" >concealed placeholder; not surveyed</text>
+<text x="885.00" y="260.00" font-size="14" class="sect" text-anchor="start" >ID</text>
+<text x="980.00" y="260.00" font-size="14" class="sect" text-anchor="start" >LOCATION / BASIS</text>
+<text x="1510.00" y="260.00" font-size="14" class="sect" text-anchor="start" >MODEL m</text>
+<path d="M885 278H1605" stroke="#d7e0df"/>
+<text x="885.00" y="299.00" font-size="16" class="mono" text-anchor="start" >W06</text>
+<text x="980.00" y="298.00" font-size="16" class="" text-anchor="start" >Living east window</text>
+<text x="1510.00" y="298.00" font-size="16" class="mono" text-anchor="start" >1.83</text>
+<text x="980.00" y="318.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M885 331H1605" stroke="#d7e0df"/>
+<text x="885.00" y="352.00" font-size="16" class="mono" text-anchor="start" >W07</text>
+<text x="980.00" y="351.00" font-size="16" class="" text-anchor="start" >Dining east window</text>
+<text x="1510.00" y="351.00" font-size="16" class="mono" text-anchor="start" >1.83</text>
+<text x="980.00" y="371.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M885 384H1605" stroke="#d7e0df"/>
+<text x="885.00" y="405.00" font-size="16" class="mono" text-anchor="start" >V01</text>
+<text x="980.00" y="404.00" font-size="16" class="" text-anchor="start" >Attached toilet vent</text>
+<text x="1510.00" y="404.00" font-size="16" class="mono" text-anchor="start" >1.00</text>
+<text x="980.00" y="424.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M885 437H1605" stroke="#d7e0df"/>
+<text x="885.00" y="458.00" font-size="16" class="mono" text-anchor="start" >V02</text>
+<text x="980.00" y="457.00" font-size="16" class="" text-anchor="start" >Common toilet vent</text>
+<text x="1510.00" y="457.00" font-size="16" class="mono" text-anchor="start" >1.00</text>
+<text x="980.00" y="477.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M885 490H1605" stroke="#d7e0df"/>
+<text x="885.00" y="511.00" font-size="16" class="mono" text-anchor="start" >G01</text>
+<text x="980.00" y="510.00" font-size="16" class="" text-anchor="start" >Entry glazed panel 1</text>
+<text x="1510.00" y="510.00" font-size="16" class="mono" text-anchor="start" >0.56</text>
+<text x="980.00" y="530.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M885 543H1605" stroke="#d7e0df"/>
+<text x="885.00" y="564.00" font-size="16" class="mono" text-anchor="start" >G02</text>
+<text x="980.00" y="563.00" font-size="16" class="" text-anchor="start" >Entry glazed panel 2</text>
+<text x="1510.00" y="563.00" font-size="16" class="mono" text-anchor="start" >0.56</text>
+<text x="980.00" y="583.00" font-size="13" class="muted" text-anchor="start" >scaled model; site unverified</text>
+<path d="M885 596H1605" stroke="#d7e0df"/>
+<text x="885.00" y="617.00" font-size="16" class="mono" text-anchor="start" >PN1</text>
+<text x="980.00" y="616.00" font-size="16" class="" text-anchor="start" >Pooja niche front</text>
+<text x="1510.00" y="616.00" font-size="16" class="mono" text-anchor="start" >0.61</text>
+<text x="980.00" y="636.00" font-size="13" class="muted" text-anchor="start" >homeowner estimate; built</text>
+<path d="M885 649H1605" stroke="#d7e0df"/>
+<text x="885.00" y="670.00" font-size="16" class="mono" text-anchor="start" >SN1</text>
+<text x="980.00" y="669.00" font-size="16" class="" text-anchor="start" >Attached shower niche</text>
+<text x="1510.00" y="669.00" font-size="16" class="mono" text-anchor="start" >0.75</text>
+<text x="980.00" y="689.00" font-size="13" class="muted" text-anchor="start" >proposed model; existing recess to verify</text>
+<path d="M885 702H1605" stroke="#d7e0df"/>
+<text x="885.00" y="723.00" font-size="16" class="mono" text-anchor="start" >SN2</text>
+<text x="980.00" y="722.00" font-size="16" class="" text-anchor="start" >Common shower niche</text>
+<text x="1510.00" y="722.00" font-size="16" class="mono" text-anchor="start" >0.75</text>
+<text x="980.00" y="742.00" font-size="13" class="muted" text-anchor="start" >proposed model; existing recess to verify</text>
+<path d="M885 755H1605" stroke="#d7e0df"/>
+<text x="885.00" y="776.00" font-size="16" class="mono" text-anchor="start" >UP1</text>
+<text x="980.00" y="775.00" font-size="16" class="" text-anchor="start" >Utility parapet opening</text>
+<text x="1510.00" y="775.00" font-size="16" class="mono" text-anchor="start" >4.12</text>
+<text x="980.00" y="795.00" font-size="13" class="muted" text-anchor="start" >assumed / proposed</text>
+<text x="75.00" y="900.00" font-size="18" class="sect" text-anchor="start" >OPENING CONFLICTS / HOLD</text>
+<text x="75.00" y="932.00" font-size="16" class="" text-anchor="start" >D01: the architecture description says double-leaf while the current visualization</text>
+<text x="75.00" y="955.00" font-size="16" class="" text-anchor="start" >shows a single leaf. Confirm the actual entrance, sidelights and swing per floor;</text>
+<text x="75.00" y="978.00" font-size="16" class="" text-anchor="start" >neither depiction is a joinery order.</text>
+<text x="75.00" y="1012.00" font-size="16" class="" text-anchor="start" >W03 is roughly centred by homeowner description, not measured. W05 is a 0.75 m visual</text>
+<text x="75.00" y="1035.00" font-size="16" class="" text-anchor="start" >placeholder behind a curtain; its real width, jambs and sill/head are unknown.</text>
+<text x="75.00" y="1069.00" font-size="16" class="" text-anchor="start" >D03 and D04/D05 hinge/swing are proposed. Confirm existing frames, bathroom door swing</text>
+<text x="75.00" y="1092.00" font-size="16" class="" text-anchor="start" >and loft clearance; no re-hanging or cutting is authorised.</text>
+<text x="885.00" y="900.00" font-size="18" class="sect" text-anchor="start" >S01 / STAIR — SURVEY, DO NOT SET OUT</text>
+<text x="885.00" y="932.00" font-size="16" class="" text-anchor="start" >The model shows two flights and a turning bay beside the balcony. Its 7 and 15 drawn</text>
+<text x="885.00" y="955.00" font-size="16" class="" text-anchor="start" >tread lines are illustrative, not verified riser counts.</text>
+<text x="885.00" y="989.00" font-size="16" class="" text-anchor="start" >Measure each floor’s rise, tread/going, width, landings, arrival direction, headroom</text>
+<text x="885.00" y="1012.00" font-size="16" class="" text-anchor="start" >and guard geometry. Confirm the actual entry connection and the applicable local rules</text>
+<text x="885.00" y="1035.00" font-size="16" class="" text-anchor="start" >with the responsible professional.</text>
+<text x="885.00" y="1069.00" font-size="16" class="" text-anchor="start" >The master has four requested floor instances F1-F4, but actual storey labels,</text>
+<text x="885.00" y="1092.00" font-size="16" class="" text-anchor="start" >elevations and differences are unknown. Record each separately; do not assume four</text>
+<text x="885.00" y="1115.00" font-size="16" class="" text-anchor="start" >identical as-built flats.</text>
+<path d="M60 1336H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="1358.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="1640.00" y="1358.00" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+</svg>

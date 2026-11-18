@@ -1,0 +1,54 @@
+{
+  "before_master_sha256": "235fb7ec347b788bb9b42578b2fdd40527e1a00cca3ae2bd5a14985e29bb1736",
+  "after_master_sha256": "f7a5e3e827ebd7f9e2cccf479fc8bb05b4f786d1f99f86176547af509ff59d9a",
+  "decision": {
+    "decision_id": "HS-POOJA-DISPLAY",
+    "answer": "Small idols with a framed picture behind",
+    "source": {
+      "kind": "project_ask_user_answer_reported_by_coordinator",
+      "forwarding_tool_call_id": "call_d5lgF8Z7rGi04OED4FrRmmWw",
+      "original_ask_user_request_id": null,
+      "note": "The original ask_user request identifier was not provided in the forwarding message."
+    },
+    "scope": "Conceptual display arrangement only.",
+    "not_approved": [
+      "dimensions",
+      "loads",
+      "fixings",
+      "light locations",
+      "construction"
+    ],
+    "retained_checks": [
+      "site measurement",
+      "thermal/fire clearance",
+      "support and capacity",
+      "pooja lighting geometry"
+    ],
+    "source_master_sha256": "235fb7ec347b788bb9b42578b2fdd40527e1a00cca3ae2bd5a14985e29bb1736",
+    "recorded_utc": "2026-11-18T10:45:59.322367+00:00"
+  },
+  "fragment_sha256": "a75d4b9431c8bec9545de00e59b4c57af4be0b7426c6964ba62bcbf5da967eda",
+  "rollback_sha256": "235fb7ec347b788bb9b42578b2fdd40527e1a00cca3ae2bd5a14985e29bb1736",
+  "validation": {
+    "rooms": 14,
+    "confirmed_room_dimensions": 21,
+    "fixtures": 104,
+    "controlled_groups": 47,
+    "floor_instances": 4
+  },
+  "unchanged_sections": [
+    "architecture",
+    "storage",
+    "bathrooms",
+    "lighting"
+  ],
+  "retained": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "pooja_geometry_hold": true,
+    "site_measurement": "open",
+    "thermal_fire_clearance": "open",
+    "support_and_capacity": "open"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "house-wardrobe-interiors-provenance-correction/1",
+  "scope": "Correct the prior-lighting-manifest reference in the wardrobe-interiors integration receipt. This does not alter the canonical master or its decisions.",
+  "original_receipt": {
+    "path": "wardrobe-interiors-reference-receipt.json",
+    "sha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
+    "preserved_unchanged": true
+  },
+  "historical_manifest": {
+    "recorded_path": "not-distributed/manifest.json",
+    "recorded_sha256": "4f78694c8b0f983138e6462d10b0c447c76556d87b56e67ced7eda4a52340cd7",
+    "bound_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+    "status": "UNAVAILABLE_AT_RECORDED_PATH",
+    "explanation": "The subsequent lighting export overwrote this intermediate manifest while rebinding the review package. No byte-identical copy was found in the session files; its recorded digest is retained, but its bytes and previous package cannot now be verified from that path. The current manifest is a different artifact and must not be presented as the historical one."
+  },
+  "independently_checked_compatibility": {
+    "rollback_path": "archive\\before-wardrobe-interiors-review.json",
+    "rollback_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+    "new_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "unchanged_sections": [
+      "architecture",
+      "decisions",
+      "bathrooms",
+      "lighting",
+      "visualization_geometry",
+      "open_items",
+      "all pre-existing storage data"
+    ],
+    "meaning": "The master-record comparison supports geometric and optical source compatibility; it does not recreate or verify the missing historical manifest."
+  },
+  "current_review_package": {
+    "path": "not-distributed/lighting-current-review",
+    "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "manifest_sha256": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b",
+    "verification_sha256": "159fef18909993180b7f634c0ad7a6da4fd0feeae89ab02604cf269fad3e61d0",
+    "status": "CURRENT_REVIEW_ARTIFACT_NOT_HISTORICAL_MANIFEST"
+  },
+  "prevention": "The lighting exporter now refuses to write into a non-empty output directory. Future rebinding requires a new output directory.",
+  "retained": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false
+  }
+}

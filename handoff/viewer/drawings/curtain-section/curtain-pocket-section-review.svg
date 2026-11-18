@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1280" viewBox="0 0 1680 1280" role="img" aria-labelledby="title description">
+<title id="title">Curtain pocket section - review diagram</title>
+<desc id="description">Schematic only: two recessed curtain tracks and a selected warm strip, with all dimensions and detailing unmeasured. W03 is held and unlit.</desc>
+<metadata>Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac; review draft; no photometry credit</metadata>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#9b641c"/></marker>
+ <linearGradient id="warm" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f8cb7c" stop-opacity=".55"/><stop offset="1" stop-color="#f8cb7c" stop-opacity="0"/></linearGradient>
+</defs>
+<style>text{font-family:"Segoe UI",Arial,sans-serif;fill:#203b43} .muted{fill:#5d7174} .mono{font-family:Consolas,monospace} .label{font-size:15px;fill:#45636a}</style>
+<rect width="1680" height="1280" fill="#fcfdfc"/>
+<text x="60" y="58" font-size="34" font-weight="600">Curtain pocket - indicative section</text>
+<text x="60" y="90" font-size="18" class="muted">REVIEW DRAFT / schematic only / not a construction or fabrication detail</text>
+<text x="1620" y="58" text-anchor="end" font-size="14" class="mono">house-design.json</text>
+<path d="M60 116H1620" stroke="#c8d2d3"/>
+<rect x="60" y="146" width="960" height="615" rx="8" fill="#fff" stroke="#d2dcda"/>
+<text x="88" y="180" font-size="20" font-weight="650">SECTION THROUGH WINDOW AND CEILING</text>
+<text x="88" y="207" font-size="14" class="muted">Illustrative arrangement only; track order and mounting must be checked on site.</text>
+<rect x="118" y="245" width="830" height="42" fill="#b9c9cc" stroke="#6b8083"/>
+<text x="533" y="272" text-anchor="middle" font-size="15">Existing slab reference - no cutting or chasing authorised</text>
+<rect x="118" y="287" width="88" height="393" fill="#d9e0db" stroke="#80938e"/>
+<rect x="137" y="335" width="52" height="276" fill="#d9edf1" stroke="#76949c" stroke-width="2"/>
+<path d="M163 336V611M137 470H189" stroke="#9bb5b8" stroke-width="2"/>
+<rect x="635" y="357" width="313" height="62" fill="#e1e4dc" stroke="#899a95"/>
+<rect x="614" y="335" width="21" height="84" fill="#e1e4dc" stroke="#899a95"/>
+<text x="794" y="396" text-anchor="middle" font-size="15">False-ceiling band</text>
+<path d="M229 310H610" stroke="#9b641c" stroke-width="1.5" stroke-dasharray="5 4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="420" y="304" text-anchor="middle" font-size="14" fill="#9b641c">CLEAR POCKET WIDTH UNMEASURED</text>
+<path d="M592 318V350" stroke="#9b641c" stroke-width="1.5" stroke-dasharray="4 3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="574" y="335" text-anchor="end" font-size="13" fill="#9b641c">depth unmeasured</text>
+<g data-track="sheer">
+ <rect x="303" y="331" width="40" height="15" rx="3" fill="#607b82"/>
+ <path d="M323 346V670" stroke="#bdced0" stroke-width="16" opacity=".7"/>
+ <path d="M315 348Q326 360 315 372T315 396T315 420T315 444T315 468T315 492T315 516T315 540T315 564T315 588T315 612T315 636T315 660" fill="none" stroke="#94adb0" stroke-width="2"/>
+ <text x="323" y="700" text-anchor="middle" class="label">Sheer track</text>
+</g>
+<g data-track="blackout">
+ <rect x="421" y="331" width="40" height="15" rx="3" fill="#607b82"/>
+ <path d="M441 346V670" stroke="#b09b82" stroke-width="22" opacity=".75"/>
+ <path d="M433 348Q444 360 433 372T433 396T433 420T433 444T433 468T433 492T433 516T433 540T433 564T433 588T433 612T433 636T433 660" fill="none" stroke="#8f7960" stroke-width="2"/>
+ <text x="441" y="700" text-anchor="middle" class="label">Blackout track</text>
+</g>
+<path d="M552 343L580 343L570 587L440 587Z" fill="url(#warm)"/>
+<rect x="558" y="334" width="24" height="9" rx="3" fill="#e3a442" data-strip="selected-2700K"/>
+<path d="M570 329V310H785" fill="none" stroke="#b47e2c"/>
+<text x="790" y="314" font-size="14" fill="#9b641c">2700 K strip / seat to verify</text>
+<text x="163" y="735" text-anchor="middle" font-size="14" class="muted">WINDOW SIDE</text>
+<text x="810" y="735" text-anchor="middle" font-size="14" class="muted">ROOM SIDE</text>
+<rect x="1045" y="146" width="575" height="615" rx="8" fill="#f3f6f2" stroke="#d2dcda"/>
+<text x="1073" y="183" font-size="19" font-weight="650">BEFORE SITE WORK</text>
+<text x="1073" y="225" font-size="16" font-weight="650">01 / Measure the built pocket</text>
+<text x="1073" y="252" font-size="15" class="muted">Verify width, depth, return, window opening and</text>
+<text x="1073" y="274" font-size="15" class="muted">curtain stack. The drawing is not to scale.</text>
+<text x="1073" y="322" font-size="16" font-weight="650">02 / Check both tracks and fabric</text>
+<text x="1073" y="349" font-size="15" class="muted">Confirm bracket spacing, fixing substrate, cleaning</text>
+<text x="1073" y="371" font-size="15" class="muted">access and free travel for sheer and blackout.</text>
+<text x="1073" y="419" font-size="16" font-weight="650">03 / Mock up the strip</text>
+<text x="1073" y="446" font-size="15" class="muted">Confirm clearance, heat, feed and service access;</text>
+<text x="1073" y="468" font-size="15" class="muted">hide the source from seated and standing sightlines.</text>
+<text x="1073" y="516" font-size="16" font-weight="650">04 / Keep controls simple</text>
+<text x="1073" y="543" font-size="15" class="muted">Selected strips follow the room's existing LOW</text>
+<text x="1073" y="565" font-size="15" class="muted">dimmer. No new knob and no adjustable CCT.</text>
+<text x="1073" y="613" font-size="16" font-weight="650" fill="#9b641c">No lux credit</text>
+<text x="1073" y="640" font-size="15" class="muted">Strip light is illustrative and excluded from frozen</text>
+<text x="1073" y="662" font-size="15" class="muted">photometric estimates. Products are not approved.</text>
+<text x="1073" y="706" font-size="14" class="muted">MBR-S and CBR assumed returns exceed modeled</text>
+<text x="1073" y="728" font-size="14" class="muted">corners by about 0.30 m; verify actual ends on site.</text>
+<text x="60" y="815" font-size="20" font-weight="650">CURTAIN STRIP STATUS / FIXED 2700 K</text>
+<text x="84" y="852" font-size="13" font-weight="700" class="muted">RECORD</text>
+<text x="315" y="852" font-size="13" font-weight="700" class="muted">ROOM</text>
+<text x="425" y="852" font-size="13" font-weight="700" class="muted">EXISTING LOW CONTROL</text>
+<text x="665" y="852" font-size="13" font-weight="700" class="muted">STATUS</text>
+<text x="975" y="852" font-size="13" font-weight="700" class="muted">MEASUREMENT / HOLD</text>
+<path d="M75 903H1605" stroke="#d8e0de"/><text x="84" y="890" class="mono" font-size="16">CURT-LIV</text><text x="315" y="890" font-size="16">LIV</text><text x="425" y="890" class="mono" font-size="15">K-LIV-LOW</text><text x="665" y="890" fill="#8b5d19" font-size="15" font-weight="700">SELECTED FOR REVIEW</text><text x="975" y="890" font-size="15" class="muted">Pocket and returns unmeasured</text><path d="M75 951H1605" stroke="#d8e0de"/><text x="84" y="938" class="mono" font-size="16">CURT-DIN</text><text x="315" y="938" font-size="16">DIN</text><text x="425" y="938" class="mono" font-size="15">K-DIN-LOW</text><text x="665" y="938" fill="#8b5d19" font-size="15" font-weight="700">SELECTED FOR REVIEW</text><text x="975" y="938" font-size="15" class="muted">Pocket and returns unmeasured</text><path d="M75 999H1605" stroke="#d8e0de"/><text x="84" y="986" class="mono" font-size="16">CURT-MBR-S</text><text x="315" y="986" font-size="16">MBR</text><text x="425" y="986" class="mono" font-size="15">K-MBR-LOW</text><text x="665" y="986" fill="#8b5d19" font-size="15" font-weight="700">SELECTED FOR REVIEW</text><text x="975" y="986" font-size="15" class="muted">Pocket and returns unmeasured</text><path d="M75 1047H1605" stroke="#d8e0de"/><text x="84" y="1034" class="mono" font-size="16">CURT-CBR</text><text x="315" y="1034" font-size="16">CBR</text><text x="425" y="1034" class="mono" font-size="15">K-CBR-LOW</text><text x="665" y="1034" fill="#8b5d19" font-size="15" font-weight="700">SELECTED FOR REVIEW</text><text x="975" y="1034" font-size="15" class="muted">Window and pocket unmeasured</text><path d="M75 1095H1605" stroke="#d8e0de"/><text x="84" y="1082" class="mono" font-size="16">CURT-MBR-W03</text><text x="315" y="1082" font-size="16">MBR</text><text x="425" y="1082" class="mono" font-size="15">K-MBR-LOW</text><text x="665" y="1082" fill="#a3403b" font-size="15" font-weight="700">HELD / UNLIT</text><text x="975" y="1082" font-size="15" class="muted">W03 pocket and window coordination held</text>
+<text x="60" y="1180" font-size="15" class="muted">All selected strip positions, sizes, returns and feed access remain unmeasured. Site mock-up and qualified coordination required.</text>
+<path d="M60 1212H1620" stroke="#c8d2d3"/>
+<text x="60" y="1242" font-size="12" class="mono muted">Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="1620" y="1242" text-anchor="end" font-size="14" fill="#9b641c">REVIEW ONLY - not for construction</text>
+</svg>

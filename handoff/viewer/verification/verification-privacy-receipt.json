@@ -1,0 +1,24 @@
+{
+  "status": "REVIEW DRAFT - not a construction release",
+  "authoritative_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "viewer_html_sha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+  "original_browser_receipt_sha256": "a75fd6e2a4cbd7b1d2b83c76eaa1d00388a162af7e22e8bb139d3aafa0ac0126",
+  "public_browser_receipt_sha256": "e61fd4072f3ca93a6f7ea7ff79377c7ddf68c0c5867b7af887f7c2102c8edfbf",
+  "transformation": "Only file URLs were replaced with offline: paths relative to the verified site; all other browser verification fields and values are unchanged.",
+  "redacted_fields": [
+    "url",
+    "checks[90].detail",
+    "checks[94].detail",
+    "checks[98].detail",
+    "checks[102].detail",
+    "checks[201].detail",
+    "checks[205].detail",
+    "checks[209].detail",
+    "checks[213].detail"
+  ],
+  "checks": {
+    "total": 222,
+    "passed": 222,
+    "failed": []
+  }
+}

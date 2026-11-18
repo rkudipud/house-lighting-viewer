@@ -1,0 +1,727 @@
+{
+  "generated_utc": "2026-11-18T11:20:24.803Z",
+  "source_master": {
+    "file": "house-design.json",
+    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "bytes": 1591969
+  },
+  "release": "decision_floorplan_only",
+  "construction_release": false,
+  "all_models_reconciled": false,
+  "geometry_source": "Canonical visualization_geometry + bathrooms + storage; no retired drawing loaded",
+  "rooms": 12,
+  "storage_items": 12,
+  "unique_storage_ids": 12,
+  "loft_items": [
+    "ST-R04a-LF01",
+    "ST-R05-LF01",
+    "ST-R08-LF01"
+  ],
+  "source_open_items": [
+    {
+      "id": "OI-R05-01",
+      "status": "fixed_unit_conflict_not_applicable_after_HD14",
+      "topic": "Children's bedside vs ceiling curtain",
+      "issue": "Fixed bedside ST-R05-NS01 is omitted by homeowner; its historical curtain conflict is not an active fixed-joinery condition.",
+      "resolution": "No fixed bedside is supplied. Keep the current curtain/room geometry; verify any tenant movable table and two-layer curtain stack on site."
+    },
+    {
+      "id": "OI-R05-02",
+      "status": "open",
+      "topic": "Children's window size",
+      "issue": "Children's-room window width, jamb offsets, sill and head are unmeasured. Verify the as-built opening and curtain/bed-head relationship on site; this current layout's window placeholder is not site verified."
+    },
+    {
+      "id": "OI-R05-03",
+      "status": "homeowner_selected_layout_site_clearance_hold",
+      "topic": "Children's study return",
+      "issue": "Homeowner selected keeping the finalized layout (HD-15). The proposed bed-foot to study-return gap is approximately 387.6 mm and remains a pinch point, not a comfortable walking route. Verify actual tenant bed-frame envelope, fixed return, and unobstructed route on site; do not relocate furniture in drawings.",
+      "resolution": "No furniture-position change authorized; retain existing geometry and clearly mark the clearance hold."
+    },
+    {
+      "id": "OI-R05-04",
+      "status": "open",
+      "topic": "Children's door and loft over door",
+      "issue": "Children's door position, hinge and inward swing are proposed; confirm on site. Loft soffit 2.13 m is assumed and 2.20 m is a project clearance target, not a verified statutory minimum. Loft clear height, depth, support and allowable load are unmeasured; obtain site and professional checks."
+    },
+    {
+      "id": "OI-R05-05",
+      "status": "resolved_homeowner_confirmed",
+      "topic": "Children's room orientation",
+      "issue": "4.572 m assumed along the headboard wall, 3.810 m along the entry/wardrobe wall.",
+      "resolution": "15 ft side is the outer west wall (bed head/curtained window); 12 ft 6 in along the wardrobe/door wall (HD-03). Matches the current model."
+    },
+    {
+      "id": "OI-SH-01",
+      "status": "open",
+      "topic": "Assembled shell residuals",
+      "issue": "Dining 110.6 mm and living 145.1 mm open/entry bands; master 41.1 mm compass-east (sheet-left) model interface; utility and balcony label scope unresolved; overall area 1643 vs 1590 ft2. These are reconciliation holds, not measured gaps."
+    },
+    {
+      "id": "OI-ST-01",
+      "status": "open",
+      "topic": "Storage inputs",
+      "issue": "Basis set: typical tenant family of 3-4 (HD-04); beds are tenant-supplied (HD-05); budget target mid INR 2.5-3.5 lakh per flat before GST excluding beds (HD-06). Still unknown: loft clear geometry and load per floor."
+    },
+    {
+      "id": "OI-BATH-01",
+      "status": "open",
+      "topic": "Bath door hinge side",
+      "issue": "Vanity orientation resolved (HD-07: cabinet faces north, user faces south, as drawn). Hinge side remains a provisional interpretation; confirm on site."
+    },
+    {
+      "id": "OI-MBR-01",
+      "status": "resolved_in_proposed_geometry",
+      "topic": "Master-bedroom layout and openings",
+      "issue": "Current placement challenged; reconcile selected new reference pages with recessed-curtain site evidence. Preserve confirmed nominal dimensions.",
+      "resolution": "Wardrobes are on the compass-south wall with W03 in the middle bay; the headboard is on the west wall with W04 at the far corner; TV and door are on the east wall. Dressing is adjacent. No room or wall was moved; W03 remains an unmeasured placeholder (OI-MBR-02)."
+    },
+    {
+      "id": "OI-UTL-01",
+      "status": "resolved_in_proposed_geometry",
+      "topic": "Straight utility wall",
+      "issue": "Wall continues from kitchen toward user's south without a turn enclosing the corner; identify the exact sheet wall and endpoints without assuming compass north.",
+      "resolution": "The continuous utility side wall is on the compass-east side (legacy drawing ID west-upper). The full-height return at the utility end is removed in the current proposal by extending the parapet opening to the side-wall inner face. Cardinal orientation is homeowner-confirmed; the true bearing is not surveyed."
+    },
+    {
+      "id": "OI-REF-01",
+      "status": "excluded_reference_not_used",
+      "topic": "Children's interiro_1 page range",
+      "issue": "The PDF has 35 pages. '19 till 13' could mean 13-19 or 9-13. Clarification was unavailable; do not revise the children's layout from an assumed range.",
+      "resolution": "No range selected. Ambiguous interiro_1 pages are unused; R05 retains its independently authorised Rajesh16-18 relationships unchanged."
+    },
+    {
+      "id": "OI-MBR-02",
+      "status": "open",
+      "topic": "W03 as-built position",
+      "issue": "Homeowner confirmed W03 is roughly centred on the master's south (sheet-N) wall (HD-02). Still measure jamb offsets, width, sill and head; confirm site photo N1 is this room."
+    },
+    {
+      "id": "OI-MBR-03",
+      "status": "open_site_measurement",
+      "topic": "R04 storage re-placement",
+      "issue": "R04 split wardrobe approved in principle. Keep all dimensions as placeholders until site measurement; no geometry or lighting positions are released by this decision."
+    },
+    {
+      "id": "OI-MBR-04",
+      "status": "open",
+      "topic": "R04 curtain/lighting recheck",
+      "issue": "The master-bedroom curtain pocket must follow W03 on the south wall; recheck MBR-L2 and the W04 curtain stack against the tenant bedside arrangement. The headboard is on the compass-west wall. Verify actual bed placement and switch access on site."
+    },
+    {
+      "id": "OI-UTL-02",
+      "status": "open",
+      "topic": "Utility corner wall height",
+      "issue": "Photo U1 may show the sheet-left wall stepping to parapet height near the corner; parapet height, grille and corner nib unmeasured."
+    },
+    {
+      "id": "OI-BED-01",
+      "status": "partially_resolved",
+      "topic": "Tenant-supplied beds",
+      "issue": "Check actual queen/king bed-frame envelopes, curtain stacks, movable-table allowances and accessible bedside switches/sockets/readers. Do not reintroduce fixed bedside cabinets."
+    },
+    {
+      "id": "OI-POOJA-01",
+      "status": "homeowner_estimates_recorded_site_structure_and_lighting_hold",
+      "topic": "Existing recessed pooja niche: estimated dimensions and depth hold (HD-16)",
+      "issue": "Homeowner estimates: width about 2 ft, sill about 1 ft 5 in, top about 7 ft, depth about 1 ft 3 in and north-corner-to-edge gap about 1 ft 4 in. These are not site measurements. The reported extension beyond the modeled wall is not dimensioned and the balcony-edge pair is unresolved. Measure niche, extension and light feeds; obtain professional review of support and permissible loads. No cutting or deepening is requested. One fixed platform is intended roughly halfway up the niche; exact elevation and idol/picture sizes and positions remain unmeasured. The homeowner selected small idols with a framed picture behind for display only; site fit, thermal/fire clearance and support/capacity require verification."
+    },
+    {
+      "id": "OI-HEIGHT-01",
+      "status": "open",
+      "topic": "Floor-to-floor, slab and false-ceiling levels (HD-11)",
+      "issue": "Measure on one finished flat: finished floor to slab underside, slab thickness, floor-finish build-up, perimeter band underside, raised centre-panel level and any step, the hall cross-beam depth and soffit, and the kitchen, bathroom, utility and lobby ceiling levels. The drawings use 11 ft floor-to-floor, a 5 in slab and 1.5 in finish (so 3.188 m to the soffit) and a 9 in band drop (2.959 m). These are homeowner-stated or derived figures, not site measurements."
+    }
+  ],
+  "register_quoted_in_full": [
+    {
+      "id": "OI-R05-01",
+      "field": "resolution",
+      "text": "No fixed bedside is supplied. Keep the current curtain/room geometry; verify any tenant movable table and two-layer curtain stack on site."
+    },
+    {
+      "id": "OI-R05-02",
+      "field": "issue",
+      "text": "Children's-room window width, jamb offsets, sill and head are unmeasured. Verify the as-built opening and curtain/bed-head relationship on site; this current layout's window placeholder is not site verified."
+    },
+    {
+      "id": "OI-R05-03",
+      "field": "issue",
+      "text": "Homeowner selected keeping the finalized layout (HD-15). The proposed bed-foot to study-return gap is approximately 387.6 mm and remains a pinch point, not a comfortable walking route. Verify actual tenant bed-frame envelope, fixed return, and unobstructed route on site; do not relocate furniture in drawings."
+    },
+    {
+      "id": "OI-R05-04",
+      "field": "issue",
+      "text": "Children's door position, hinge and inward swing are proposed; confirm on site. Loft soffit 2.13 m is assumed and 2.20 m is a project clearance target, not a verified statutory minimum. Loft clear height, depth, support and allowable load are unmeasured; obtain site and professional checks."
+    },
+    {
+      "id": "OI-R05-05",
+      "field": "resolution",
+      "text": "15 ft side is the outer west wall (bed head/curtained window); 12 ft 6 in along the wardrobe/door wall (HD-03). Matches the current model."
+    },
+    {
+      "id": "OI-SH-01",
+      "field": "issue",
+      "text": "Dining 110.6 mm and living 145.1 mm open/entry bands; master 41.1 mm compass-east (sheet-left) model interface; utility and balcony label scope unresolved; overall area 1643 vs 1590 ft2. These are reconciliation holds, not measured gaps."
+    },
+    {
+      "id": "OI-ST-01",
+      "field": "issue",
+      "text": "Basis set: typical tenant family of 3-4 (HD-04); beds are tenant-supplied (HD-05); budget target mid INR 2.5-3.5 lakh per flat before GST excluding beds (HD-06). Still unknown: loft clear geometry and load per floor."
+    },
+    {
+      "id": "OI-BATH-01",
+      "field": "issue",
+      "text": "Vanity orientation resolved (HD-07: cabinet faces north, user faces south, as drawn). Hinge side remains a provisional interpretation; confirm on site."
+    },
+    {
+      "id": "OI-MBR-01",
+      "field": "resolution",
+      "text": "Wardrobes are on the compass-south wall with W03 in the middle bay; the headboard is on the west wall with W04 at the far corner; TV and door are on the east wall. Dressing is adjacent. No room or wall was moved; W03 remains an unmeasured placeholder (OI-MBR-02)."
+    },
+    {
+      "id": "OI-UTL-01",
+      "field": "resolution",
+      "text": "The continuous utility side wall is on the compass-east side (legacy drawing ID west-upper). The full-height return at the utility end is removed in the current proposal by extending the parapet opening to the side-wall inner face. Cardinal orientation is homeowner-confirmed; the true bearing is not surveyed."
+    },
+    {
+      "id": "OI-REF-01",
+      "field": "resolution",
+      "text": "No range selected. Ambiguous interiro_1 pages are unused; R05 retains its independently authorised Rajesh16-18 relationships unchanged."
+    },
+    {
+      "id": "OI-MBR-02",
+      "field": "issue",
+      "text": "Homeowner confirmed W03 is roughly centred on the master's south (sheet-N) wall (HD-02). Still measure jamb offsets, width, sill and head; confirm site photo N1 is this room."
+    },
+    {
+      "id": "OI-MBR-03",
+      "field": "issue",
+      "text": "R04 split wardrobe approved in principle. Keep all dimensions as placeholders until site measurement; no geometry or lighting positions are released by this decision."
+    },
+    {
+      "id": "OI-MBR-04",
+      "field": "issue",
+      "text": "The master-bedroom curtain pocket must follow W03 on the south wall; recheck MBR-L2 and the W04 curtain stack against the tenant bedside arrangement. The headboard is on the compass-west wall. Verify actual bed placement and switch access on site."
+    },
+    {
+      "id": "OI-UTL-02",
+      "field": "issue",
+      "text": "Photo U1 may show the sheet-left wall stepping to parapet height near the corner; parapet height, grille and corner nib unmeasured."
+    },
+    {
+      "id": "OI-BED-01",
+      "field": "issue",
+      "text": "Check actual queen/king bed-frame envelopes, curtain stacks, movable-table allowances and accessible bedside switches/sockets/readers. Do not reintroduce fixed bedside cabinets."
+    },
+    {
+      "id": "OI-POOJA-01",
+      "field": "issue",
+      "text": "Homeowner estimates: width about 2 ft, sill about 1 ft 5 in, top about 7 ft, depth about 1 ft 3 in and north-corner-to-edge gap about 1 ft 4 in. These are not site measurements. The reported extension beyond the modeled wall is not dimensioned and the balcony-edge pair is unresolved. Measure niche, extension and light feeds; obtain professional review of support and permissible loads. No cutting or deepening is requested. One fixed platform is intended roughly halfway up the niche; exact elevation and idol/picture sizes and positions remain unmeasured. The homeowner selected small idols with a framed picture behind for display only; site fit, thermal/fire clearance and support/capacity require verification."
+    },
+    {
+      "id": "OI-HEIGHT-01",
+      "field": "issue",
+      "text": "Measure on one finished flat: finished floor to slab underside, slab thickness, floor-finish build-up, perimeter band underside, raised centre-panel level and any step, the hall cross-beam depth and soffit, and the kitchen, bathroom, utility and lobby ceiling levels. The drawings use 11 ft floor-to-floor, a 5 in slab and 1.5 in finish (so 3.188 m to the soffit) and a 9 in band drop (2.959 m). These are homeowner-stated or derived figures, not site measurements."
+    }
+  ],
+  "obsolete_wording_checked": [
+    "Door v 0.16-1.01",
+    "prefer >= 2.20",
+    "Wardrobe wall N with W03",
+    "headboard E with W04",
+    "TV/door W;",
+    "Topology-derived",
+    "west-upper is the continuous wall",
+    "north-utility return",
+    "Compass not established",
+    "re-place to N wardrobe",
+    "N wardrobe / E headboard",
+    "bedside and bay base are later holds",
+    "MBR-rear pocket must follow",
+    "bed head now E",
+    "(sheet N)",
+    "(sheet E)",
+    "(sheet W)",
+    "(sheet S)",
+    "pre-compass wording",
+    "TRUE NORTH",
+    "Decimal-foot interpretation also needs confirmation",
+    "master 41.1 mm west interface"
+  ],
+  "open_item_compass_correction": null,
+  "measurements": [
+    {
+      "room_id": "R01",
+      "nominal_size_m": [
+        4.2672,
+        5.334
+      ],
+      "local_model_size_m": [
+        4.2672,
+        5.333999999999999
+      ],
+      "assembly_delta_m": [
+        0.0021335999999996247,
+        0.14508479999999935
+      ],
+      "state": "ASSEMBLY HOLD"
+    },
+    {
+      "room_id": "R02",
+      "nominal_size_m": [
+        4.2672,
+        2.9718
+      ],
+      "local_model_size_m": [
+        4.2672,
+        2.9718
+      ],
+      "assembly_delta_m": [
+        0.0021335999999996247,
+        0.11064240000000014
+      ],
+      "state": "ASSEMBLY HOLD"
+    },
+    {
+      "room_id": "R03",
+      "nominal_size_m": [
+        4.2672,
+        3.048
+      ],
+      "local_model_size_m": [
+        4.2672,
+        3.048
+      ],
+      "assembly_delta_m": [
+        0.0021335999999996247,
+        -0.00030479999999988294
+      ],
+      "state": "ASSEMBLY HOLD"
+    },
+    {
+      "room_id": "R04",
+      "nominal_size_m": [
+        3.81,
+        4.6863
+      ],
+      "local_model_size_m": [
+        3.81,
+        4.6863
+      ],
+      "assembly_delta_m": [
+        0.04114800000000063,
+        0.0006096000000006541
+      ],
+      "state": "ASSEMBLY HOLD"
+    },
+    {
+      "room_id": "R05",
+      "nominal_size_m": [
+        3.81,
+        4.572
+      ],
+      "local_model_size_m": [
+        3.81,
+        4.572
+      ],
+      "assembly_delta_m": [
+        0,
+        0
+      ],
+      "state": "LOCAL MATCH"
+    },
+    {
+      "room_id": "R06",
+      "nominal_size_m": [
+        2.667,
+        1.6764
+      ],
+      "local_model_size_m": [
+        2.6670000000000003,
+        1.676399999999999
+      ],
+      "assembly_delta_m": [
+        0,
+        0
+      ],
+      "state": "LOCAL MATCH"
+    },
+    {
+      "room_id": "R07",
+      "nominal_size_m": [
+        2.667,
+        1.6764
+      ],
+      "local_model_size_m": [
+        2.6670000000000003,
+        1.6764000000000012
+      ],
+      "assembly_delta_m": [
+        0,
+        0
+      ],
+      "state": "LOCAL MATCH"
+    },
+    {
+      "room_id": "R08",
+      "nominal_size_m": [
+        4.7244,
+        1.3716
+      ],
+      "local_model_size_m": [
+        4.384548,
+        1.232916
+      ],
+      "assembly_delta_m": [
+        -0.3398520000000014,
+        -0.1386839999999998
+      ],
+      "state": "SCOPE HOLD"
+    },
+    {
+      "room_id": "R09",
+      "nominal_size_m": [
+        3.3528,
+        2.4384
+      ],
+      "local_model_size_m": [
+        3.2004,
+        2.4399239999999995
+      ],
+      "assembly_delta_m": [
+        -0.15239999999999965,
+        0.0015239999999985265
+      ],
+      "state": "SCOPE HOLD"
+    }
+  ],
+  "storage_frame_rounding_checks": [
+    {
+      "id": "ST-R05-WR01",
+      "max_rounding_residual_m": 0.0004000000000008441
+    },
+    {
+      "id": "ST-R05-LF01",
+      "max_rounding_residual_m": 0.0004000000000008441
+    },
+    {
+      "id": "ST-R05-BED01",
+      "max_rounding_residual_m": 0.0004000000000008441
+    },
+    {
+      "id": "ST-R05-TV01",
+      "max_rounding_residual_m": 0.00039999999999995595
+    },
+    {
+      "id": "ST-R05-DK01",
+      "max_rounding_residual_m": 0.0004000000000008441
+    },
+    {
+      "id": "ST-R05-OH01",
+      "max_rounding_residual_m": 0.0004000000000008441
+    }
+  ],
+  "curtain_nightstand_clearance_m": null,
+  "curtain_nightstand_clearance_note": "not applicable: ST-R05-NS01 is omitted by the homeowner (HD-14); the earlier nightstand-to-curtain clearance check is retired",
+  "hd14": {
+    "decision": "HD-14",
+    "construction_release": false,
+    "bedside_units_omitted_not_drawn": [
+      "ST-R04-NS01",
+      "ST-R04-NS02",
+      "ST-R05-NS01"
+    ],
+    "curtains": "two tracks (sheer + blackout) in living, master and children rooms; pocket sizes unverified, none invented",
+    "raised_centre": "separate gypsum/POP panel below the slab; clear cavity depth and panel level unmeasured; no slab chasing or structural cutting authorised"
+  },
+  "hd15": {
+    "decision": "HD-15",
+    "geometry_changed": false,
+    "estimated_clearance_mm": 387.6,
+    "status": "layout_retained_site_clearance_hold",
+    "recheck": "Measure the actual bed frame, fixed study-return edge and unobstructed route on site; do not describe the gap as a comfortable walking route."
+  },
+  "nominal_geometry_agreement_tolerance_m": 1e-08,
+  "review_flags": [
+    "Frame-based bed/study corner distance from the preserved storage record is 387.6 mm; not drawn (the bed is shown as a mattress-only envelope) and not a certified usable passage. Requires ergonomic review under OI-BED-01 / OI-R05-03.",
+    "Pooja niche is already built; dimensions and position are homeowner estimates (HD-16 / OI-POOJA-01). The reinforced slab extension is homeowner-reported, not independently verified. Front outline only; no back or structural section is drawn. No cutting or deepening is authorised."
+  ],
+  "page": {
+    "width_px": 1800,
+    "height_px": 2815
+  },
+  "canonical_storage_records": 18,
+  "suppressed_storage_ids": [
+    "ST-R04-WR01",
+    "ST-R04-LF01",
+    "ST-R04-BED01",
+    "ST-R04-NS01",
+    "ST-R04-NS02",
+    "ST-R05-NS01"
+  ],
+  "optional_outline_storage_ids": [],
+  "item_applicability_honoured": {
+    "ST-R04-WR01": {
+      "render_footprint": false,
+      "render_as": null
+    },
+    "ST-R04-LF01": {
+      "render_footprint": false,
+      "render_as": null
+    },
+    "ST-R04-BED01": {
+      "render_footprint": false,
+      "render_as": null
+    },
+    "ST-R04-NS01": {
+      "render_footprint": false,
+      "render_as": null
+    },
+    "ST-R04-NS02": {
+      "render_footprint": false,
+      "render_as": null
+    },
+    "ST-R05-BED01": {
+      "render_footprint": true,
+      "render_as": "labelled tenant-bed planning envelope (queen frame 1.68 x 2.13); not a supplied or costed item"
+    },
+    "ST-R05-NS01": {
+      "render_footprint": false,
+      "render_as": null
+    },
+    "ST-R04a-WR01": {
+      "render_footprint": true,
+      "render_as": "clearly labelled unmeasured placeholder; not fabrication geometry"
+    },
+    "ST-R08-UC01": {
+      "render_footprint": true,
+      "render_as": "clearly labelled unmeasured placeholder; not fabrication geometry"
+    }
+  },
+  "orientation": {
+    "schema": "house_orientation/1",
+    "evidence_status": "homeowner_confirmed",
+    "sheet_to_compass": {
+      "+z_sheet_down": "north",
+      "-z_sheet_top": "south",
+      "+x_sheet_right": "west",
+      "-x_sheet_left": "east"
+    },
+    "true_north_vector_xz": [
+      0,
+      1
+    ],
+    "north_arrow": "points to sheet-bottom; drawing not rotated"
+  },
+  "tenant_bed_envelopes": {
+    "mattress_mm": {
+      "queen": [
+        1524,
+        1981
+      ],
+      "king": [
+        1829,
+        1981
+      ]
+    },
+    "drawn": [
+      "R04",
+      "R05"
+    ],
+    "basis": "storage.item_applicability + decisions.bedrooms; mattress-only, no frame/bedside/walking gap implied; 1.68 x 2.13 frame not drawn (coordinator instruction)"
+  },
+  "pooja_niche": {
+    "decision": "HD-16",
+    "built_status": "Already built, confirmed by homeowner; do not ask whether the niche exists",
+    "reinforcement": "homeowner-reported, not structurally certified",
+    "new_cutting_requested": false,
+    "compass_wall": "east",
+    "style": "recessed_niche",
+    "location_src": "homeowner_estimated_offset_from_unsurveyed_model_corner",
+    "size_src": "homeowner_estimate_unverified",
+    "wall_id": "west-lower",
+    "room_face_x_m": 0.6854952,
+    "physical_back_drawn": false,
+    "structural_section_drawn": false,
+    "z_m": [
+      12.1690384,
+      12.7786384
+    ],
+    "estimated_size": {
+      "widthMm": 609.6,
+      "heightMm": 1701.8,
+      "sillM": 0.4318,
+      "depthMm": 381
+    },
+    "outside_wall_extension": {
+      "reported": true,
+      "description": "The existing niche extends beyond the 9-inch wall and is reinforced, with an extended slab top to bottom throughout the building, as reported by the homeowner.",
+      "source_request": {
+        "id": "92c6f806-d9e2-4f2c-b293-2bf84de98abb",
+        "revision": 1
+      },
+      "independently_verified": false,
+      "measured_geometry": null,
+      "allowable_load": null
+    },
+    "geometry_hold": {
+      "status": "HOLD_estimated_depth_exceeds_modeled_wall_extension_not_modeled",
+      "estimated_depth_m": 0.381,
+      "modeled_wall_thickness_m": 0.2273808,
+      "estimated_back_x_m": 0.3044952,
+      "modeled_exterior_face_x_m": 0.4581144,
+      "excess_over_modeled_wall_m": 0.1536192,
+      "homeowner_report": "The existing niche extends beyond the 9-inch wall and is reinforced, with an extended slab top to bottom throughout the building, as reported by the homeowner.",
+      "meaning": "The reported extension is not represented or dimensioned in this model. The mismatch is not evidence that the existing niche is impossible or structurally unsafe.",
+      "required": "Measure the existing niche and wall/extension on site and confirm relevant support and capacity with the responsible structural professional.",
+      "new_or_deeper_cutting_authorized": false
+    },
+    "open_item": "OI-POOJA-01",
+    "construction_release": false,
+    "drawn_as": "estimated front outline only, with dimensions and explicit extension geometry hold"
+  },
+  "master_layout": {
+    "decision_status": "planned",
+    "evidence_status": "render_relations_only",
+    "relations": {
+      "wardrobe_wall": {
+        "sheet_wall": "N",
+        "compass_wall": "south"
+      },
+      "headboard_wall": {
+        "sheet_wall": "E",
+        "compass_wall": "west"
+      },
+      "tv_door_wall": {
+        "sheet_wall": "W",
+        "compass_wall": "east"
+      },
+      "dressing_wall": {
+        "sheet_wall": "S",
+        "compass_wall": "north"
+      }
+    },
+    "w03_span_m": [
+      6.5538096,
+      7.4669904
+    ],
+    "w03_status": "homeowner_confirmed_roughly_centred_offsets_unmeasured",
+    "utility_open_span_m": [
+      0.5702808,
+      4.69392
+    ]
+  },
+  "expected_symbols": {
+    "house_storage": 12,
+    "children_lofts": 1,
+    "house_beds": 1,
+    "children_beds": 1,
+    "master_overlay": 1,
+    "bed_envelopes": 3,
+    "pooja_niche": 1,
+    "north_arrows": 2
+  },
+  "artifacts": {
+    "svg": {
+      "file": "house-working-floorplan.svg",
+      "sha256": "fdeb6af2d75b32ff001c0560bd8b4174571653d9f447bea1a8c6b7158f2c4e23",
+      "bytes": 77331
+    },
+    "png": {
+      "file": "house-working-floorplan.png",
+      "sha256": "c070a1163a8fe51b7a2e80e915f6c66a7b6bea4ed528109dd25af00329e24475",
+      "bytes": 567298
+    },
+    "pdf": {
+      "file": "house-working-floorplan.pdf",
+      "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
+      "bytes": 864756
+    }
+  },
+  "drawing_source": {
+    "staging": false,
+    "final": false,
+    "publication_status": "REVIEW DRAFT; not construction-released",
+    "review_draft": true,
+    "lighting_pending": false,
+    "hd18": {
+      "fragment": {
+        "file": "pooja-notation-hd18.json",
+        "sha256": "598796435ba3b37d6fedf655f243d87e09c663cbf338eb5fd7a25cbff37a46ec",
+        "bytes": 2458
+      },
+      "dimensions": {
+        "status": "homeowner_estimates_unverified_not_site_measurements",
+        "width_mm": 609.6,
+        "height_mm": 1701.8,
+        "sill_m": 0.4318,
+        "top_m": 2.1336,
+        "depth_mm": 381,
+        "z_m": [
+          12.1690384,
+          12.7786384
+        ],
+        "opening_height_basis": "Derived from estimated top minus estimated sill, not separately measured.",
+        "interpretation": "Homeowner clarified feet-and-inches notation: sill 1 ft 5 in, depth 1 ft 3 in, north-corner gap 1 ft 4 in. All remain estimates."
+      },
+      "placement": {
+        "status": "provisional_from_estimated_offset_and_unverified_model_corner",
+        "corner_z_m": 13.1850384,
+        "corner_source": "visualization_geometry.rooms[living].rect north/entry-side inside edge",
+        "north_edge_clear_offset_m": 0.4064,
+        "niche_z_m_south_to_north": [
+          12.1690384,
+          12.7786384
+        ],
+        "w06_planar_gap_m": 1.1809984,
+        "w06_gap_basis": "Current modeled living-window; neither opening is site surveyed.",
+        "balcony_outline": "An edge relationship was reported, but the matching edges remain unresolved; do not claim alignment."
+      },
+      "construction_release": false
+    },
+    "note": "HD-18 clarifies feet-and-inches notation: sill 1 ft 5 in (0.4318 m), depth 1 ft 3 in (381 mm), north-corner gap 1 ft 4 in (0.4064 m). All remain homeowner estimates, not site measurements. Opening height 1701.8 mm is derived from the estimated top minus sill."
+  },
+  "verified_utc": "2026-11-18T11:20:44.263265+00:00",
+  "render": {
+    "browser": "headless Edge",
+    "errors": [],
+    "console_errors": [],
+    "http_requests": [],
+    "out_of_page_text": [],
+    "symbols": {
+      "house_storage": 12,
+      "children_lofts": 1,
+      "house_beds": 1,
+      "children_beds": 1,
+      "master_overlay": 1,
+      "bed_envelopes": 3,
+      "pooja_niche": 1,
+      "north_arrows": 2
+    },
+    "pdf_pages": 1,
+    "pdf_page_points": [
+      0.0,
+      0.0,
+      1684.0799560546875,
+      2679.119873046875
+    ],
+    "open_item_wording": {
+      "phrases_checked": 22,
+      "dom_hits": [],
+      "pdf_hits": [],
+      "register_items_quoted_in_full": 18
+    }
+  },
+  "readme": {
+    "file": "README.md",
+    "sha256": "980911488a9e82d2259dfd4d001c26340dd91722cc64579d3c56596a953836cb",
+    "bytes": 1024
+  },
+  "generators": {
+    "floorplan.mjs": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a",
+    "render_floorplan.py": "a5c370223cb264cfa5774e6e6a9cac90b33d41834bfb1977c983fb986c5917b2",
+    "drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656",
+    "src/master-adapter.js": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da"
+  }
+}

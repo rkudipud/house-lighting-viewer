@@ -1,0 +1,411 @@
+{
+  "status": "PASS_supplied_grid_fidelity_not_a_simulation_rerun",
+  "radianceExecuted": false,
+  "constructionRelease": false,
+  "publicationAuthorized": false,
+  "sourceHeatmapsSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98",
+  "rooms": 11,
+  "mapPairs": 33,
+  "svgNumericalCellsAndMaskVerified": 55371,
+  "csv": "heatmap-cells.csv",
+  "csvSha256": "36d0478a7b11746dbc5f52c66a562eb5b4c7765c252fd7efe2bc949c8fd6ff98",
+  "rendering": "SVG rectangles preserve every supplied non-null value and mask; PNGs rasterize those SVGs at 1100x1030. Fixed scale 0-750 lux clips colour only, never numerical exports.",
+  "files": [
+    {
+      "path": "heatmaps/LIV-HIGH_100.svg",
+      "sha256": "f011740073f5bf7baea57d0a432398d262a81b94dedaf2c940cc3d8e215ce911",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LIV-HIGH_100.png",
+      "sha256": "de220ef2f6f9ce9c7628566fcf32694d553ede49d6d49f49dd7021566b2494b0",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LIV-LOW_100.svg",
+      "sha256": "0fc3e4bd9742d7fc35dd9bdd363d5d45f69429f278191b0fc29a440cce4803eb",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LIV-LOW_100.png",
+      "sha256": "1ad762216cdfd9508e5c88450dad6d980f55db1f0ac8569419e622296eb990c0",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LIV-HIGH+LOW_100.svg",
+      "sha256": "1844ceee972e2d4ba148554b3e7f88d4f3f72f146e444388a697e5e7d2265ce9",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LIV-HIGH+LOW_100.png",
+      "sha256": "5c4eb9d281d755f65cb95412aff42d71dc5c0a661eab216b002bfdf17fbc8bfb",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DIN-HIGH_100.svg",
+      "sha256": "185aec9de870ad1c9f89af74874ffbbc3d1717f96151f471fc6d5051b6a4e591",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DIN-HIGH_100.png",
+      "sha256": "83c2129bff2ba440511775dea4be4c634ac34da463e70bf0f76c6f24a84b3bb2",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DIN-LOW_100.svg",
+      "sha256": "fa355e25d502b6b8069a60bdeb4c4cae0282eaa727a54d314cdedf425293624e",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DIN-LOW_100.png",
+      "sha256": "72c366ee31aba0ad289c9221a5ccf2c956877fbfca6141b1c97ed40ac5345d3b",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DIN-HIGH+LOW_100.svg",
+      "sha256": "a91395cfafac698322c12784f4429e6d0679f99202062809f4204c7193c1712b",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DIN-HIGH+LOW_100.png",
+      "sha256": "bcedc5dda57ed76ca92e5eebc84c50b42d72c456486f8f9eeb1ec2c4b412f2a7",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/KIT-HIGH_100.svg",
+      "sha256": "4d9e69686b1c569f396c0c0b23e24b353f7d7fbe72057e2366ab5073b15defa6",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/KIT-HIGH_100.png",
+      "sha256": "ef5b1f050cecd7071d2b8ae582867f691dd9b27ed53d142534853b8b48acbc79",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/KIT-LOW_100.svg",
+      "sha256": "b279bb64690bb50ee351428fbdac30510e2045298c513905fcc64e6466394906",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/KIT-LOW_100.png",
+      "sha256": "60905a5184e27051ee8b62936e2ba769e1eb1db16cfb254191062600d5a2db57",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/KIT-HIGH+LOW_100.svg",
+      "sha256": "d22eb1883c5b4d066b23162a86c7b595ee31f19385e44201bacd5e7926a0fc88",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/KIT-HIGH+LOW_100.png",
+      "sha256": "6b54b31677223e9a019259731c3bd64c6a7e157748fa3340765d2328e8566c53",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/MBR-HIGH_100.svg",
+      "sha256": "3dfd525f8baca41ecb2e10127cb0214de198978f245ae6d204f479086e4ace39",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/MBR-HIGH_100.png",
+      "sha256": "be0a82f9db4cc6fec76689c76788d91a12eea15bc14e44f33b26a390da55a191",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/MBR-LOW_100.svg",
+      "sha256": "39623e37c2292609951656524b2e7be0d6ea779c5b66ad58181ec736f8a29a4f",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/MBR-LOW_100.png",
+      "sha256": "52d0d7e476caf843a8d7e7d6bc77f46d00a7968fd288df71b10c55d0d833f84c",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/MBR-HIGH+LOW_100.svg",
+      "sha256": "10cfab7b671aeef0618a6c083e7567673fab9f6f8e344aa5242d45c5af1bfc2a",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/MBR-HIGH+LOW_100.png",
+      "sha256": "0b439ea4c412c43cfb227e52360f1ffb7b988db89e73457056faa9d3b27970dd",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/CBR-HIGH_100.svg",
+      "sha256": "addf19f83fc2a9a2fcbe13ae4b29c6b308c3ae30770297c676251485c02760ce",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/CBR-HIGH_100.png",
+      "sha256": "477bcc610970a7b74ed3d9b78a2765c2b0409b45f106bd5c15faceb72f41f636",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/CBR-LOW_100.svg",
+      "sha256": "f3749231ada8aca8e62742e8dcf18b254c52447169463e7cbdfb3636c601d0a7",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/CBR-LOW_100.png",
+      "sha256": "4afb48c7db882b2b2040a7b6660d693885b074f3509428c189af37d071cdb492",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/CBR-HIGH+LOW_100.svg",
+      "sha256": "1dcb5467610d313aa7dd0ee510ad50baa02072e5c7e157003c7c60936524504e",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/CBR-HIGH+LOW_100.png",
+      "sha256": "22bf18bc605b88f1abf373ea5da86d570f39be4707a44ca3b55ce312a12ed86a",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/UTL-HIGH_100.svg",
+      "sha256": "861befebbcf94c62c90ed29add24378bc5aaab8311864cb1818c0bfba7941ecc",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/UTL-HIGH_100.png",
+      "sha256": "fbb505732731e7488fb576763de8067f83119c82aa34365c861505201bf871e9",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/UTL-LOW_100.svg",
+      "sha256": "aa77557fdfb96aa66e57542cd7354406a1c46328f9177d84adfae35d84eef7d1",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/UTL-LOW_100.png",
+      "sha256": "ec9d15c45b19be76831a24aee6932c3199feaf987fe16086f7e3f1114e1cff04",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/UTL-HIGH+LOW_100.svg",
+      "sha256": "f64dafa52c427c2b74c44ad0aded08e86f41b1b0ae6eada26940a62854972f96",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/UTL-HIGH+LOW_100.png",
+      "sha256": "b78f77be6476907b823dfc1bfb2eb2a7084ebb6988d3a07f08e20453468cd4bf",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DRS-HIGH_100.svg",
+      "sha256": "eb7baa613c263e402c1ea06903100bc17bff788ee9b24a5db88eddcb4a71851a",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DRS-HIGH_100.png",
+      "sha256": "de62c4992259d347637dd325f8bad0c5e48a8dc0d56950ceff42e233a57763ed",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DRS-LOW_100.svg",
+      "sha256": "7aa51a190d623e44c421726d1d5c378e61e6185eb1eb371515dc421869223822",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DRS-LOW_100.png",
+      "sha256": "5a1dc168debd1a539dc3aada243a180ea3d3b2eb9b1c0ec7277ccf6c41431f6f",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DRS-HIGH+LOW_100.svg",
+      "sha256": "46fdcbcc834f95998d05b5f0f1ebda8d702df3a05a29b9625e48fdc78032f026",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/DRS-HIGH+LOW_100.png",
+      "sha256": "19dfa8a7bf5a7b401d832d87b3dc20bcb954ccd22474a396134c6f8aa8120c38",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LOB-HIGH_100.svg",
+      "sha256": "a309e8633925acf1e6200895eabeb0bebac5ef31ba56dbbb90a83ab6d64783fb",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LOB-HIGH_100.png",
+      "sha256": "16cc5ceffdf2725fcd6ef93f45e11c53df849d6886094f34cb5f812ba8800367",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LOB-LOW_100.svg",
+      "sha256": "3781481be1d73d3870b9762c5faa4e52c70cb08161793e4e53800c2554a919e6",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LOB-LOW_100.png",
+      "sha256": "921141c472eddf3ce86e27f17a5830bea14afa635de064bfa46ff4f1e7ae6851",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LOB-HIGH+LOW_100.svg",
+      "sha256": "928be852549b0aa6990eb6288103176d38ac7de37bfe5aaf226bbe634cf0ba94",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/LOB-HIGH+LOW_100.png",
+      "sha256": "7cb1dec069cadee8e335e169f125ba4f2508adba1204cfe9c1f688032235db22",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL1-HIGH_100.svg",
+      "sha256": "3ba4393ecc5fec2cf6dc3bade68cd54c9c110be4d7c84abf90f43a6644d296ae",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL1-HIGH_100.png",
+      "sha256": "dc972b8c9adaf0935f002444d0a524941bcef48697f4f6ecb9df8a4e3010c4f0",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL1-LOW_100.svg",
+      "sha256": "b1bbae7239beb6f7f66383a99a58e51c3ba58581a6152b3a00e6b22ac30482ab",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL1-LOW_100.png",
+      "sha256": "a3eee7edee4a88da1bb69b3fab14053e7222d54453470b1fda60096fe48ceeb6",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL1-HIGH+LOW_100.svg",
+      "sha256": "cac91627ca0c2fcff3d4e90a493ada26f107f01b7a827e385b9ef1c526202a07",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL1-HIGH+LOW_100.png",
+      "sha256": "16ce746de84c09fe13e9b1e4ef5b61f48013fae4bf19f7275b4826a180edff9b",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL2-HIGH_100.svg",
+      "sha256": "a2044247ddb351d83a330161ddb2f9e4673f4298ddc605f0ee8879fb6c1b629f",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL2-HIGH_100.png",
+      "sha256": "4d63103a103c1f2ec5aee3787f47a71070a6948ddf302917927c6bf9aecbcac6",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL2-LOW_100.svg",
+      "sha256": "7219edbbff3027d4b97d012ae5d8147f0d893637487334b36564fb57ba099365",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL2-LOW_100.png",
+      "sha256": "2e32f5734e06906775c896eb219c2c186ad121965f68ae0a75a8e9b8ba05d10e",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL2-HIGH+LOW_100.svg",
+      "sha256": "fbf388d0c48766adc6a2314a54913c49199d9a3a0bafcb3d0655587fa8fd37e3",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/TL2-HIGH+LOW_100.png",
+      "sha256": "8bd324105c7e879c7d2ca72faa65bfb0d18e4a056dfc8a678d1340e8fef618fc",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/BAL-HIGH_100.svg",
+      "sha256": "b0d3d82c3284362ff9bdc61146edfe45979e4bc9b96e86426bf3f430fbbebf75",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/BAL-HIGH_100.png",
+      "sha256": "0fa78c5df4761a1d92b58e3e0390727066ecedc683a0c1d5cbbed39b32f6317f",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/BAL-LOW_100.svg",
+      "sha256": "e9ab999ff6877a5eec29584b8d8a122beaba97e4ee6a52ee991bd684d2652903",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/BAL-LOW_100.png",
+      "sha256": "9c5936401c57ac26915dd6af4583a90c8756a103bd24ffc77e8414df075a53ae",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/BAL-HIGH+LOW_100.svg",
+      "sha256": "ad76c4970a94bb31418e9003ff8feef5b1ee77d560d4e3624d67269c32c6108c",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    },
+    {
+      "path": "heatmaps/BAL-HIGH+LOW_100.png",
+      "sha256": "aff4100ac99f14afa24f697ae07afd5bad95eb845dd1dbb321800649f625e087",
+      "sourcePath": "analysis/sim-heatmaps.json",
+      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-11-18T11:21:16+00:00",
+  "mode": "final",
+  "publication_hold": false,
+  "pending_markers": 0,
+  "dali_mentions": 0,
+  "pages": 15,
+  "images": [
+    "figures/concept-flat.svg",
+    "figures/concept-living-low.svg",
+    "figures/controls-plan.svg",
+    "figures/curtain-pocket.svg",
+    "figures/photos/site-photo-hall-curtain-pocket.jpeg",
+    "figures/photos/site-photo-children-curtain-pocket.jpeg"
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "overflow": [],
+  "out_of_bounds_text": [],
+  "near_empty_pages": [],
+  "md_sha256": "4fe78eea286a386091fb98533f7b7fb5786009cd35225c6af08ccccf09c19741",
+  "html_sha256": "02d503a97538652b66ffd13277ad9a5cf025505a955bf31d53c8090d30ebbb97",
+  "pdf_sha256": "8d518b8a7295bbe4da277cc7aec51fb9a9247922bdd591c2f8941cf985ed278d"
+}

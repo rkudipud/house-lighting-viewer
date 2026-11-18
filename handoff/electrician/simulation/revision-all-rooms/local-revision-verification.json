@@ -1,0 +1,21 @@
+{
+  "status": "PASS_public_revision_fidelity_not_a_simulation_rerun",
+  "upstreamReceiptEntriesVerifiedDuringImport": 128,
+  "publicCopiesHashVerified": 69,
+  "modelPayloadDigestsVerified": 10,
+  "roomVariantCases": 54,
+  "rawStatisticSetsRecomputed": 612,
+  "identicalSceneControlComparisons": 12,
+  "pairedPhysicalSensitivityReportRowsChecked": 36,
+  "csvRowsChecked": 54,
+  "editableScenesIncluded": 54,
+  "sourcePublicReceiptSha256": "143e83b4f00bed9e47957eaca98bd7d5d25f354774dd5f79d1ba01d877e4fa90",
+  "publicReportSha256": "1aaf5e6deab12ec41a6e7c4d4a0e6597f4ea81141e33f013cf98a2240345f4f6",
+  "publicSourceReceiptSha256": "e18c78ff4eeb697ab1cf3a35b0bcb73238bfdc0a70f038ffd12c467cf4ead012",
+  "analysisSha256": "d79da1c7f42a814c4456a87b9f59622b449c746a982df9d6659da68024b402f5",
+  "csvSha256": "b74a7a1d1efdc3c8659879d269c5a78c8bde02a432b5e594a62e37ef5490cfa5",
+  "radianceExecuted": false,
+  "masterApprovalChainVerifiedInPublicMode": false,
+  "constructionRelease": false,
+  "publicationAuthorized": false
+}

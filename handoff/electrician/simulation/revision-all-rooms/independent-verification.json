@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "independent_statistic_recomputations": 612,
+  "room_variant_cases": 54,
+  "receipt_files_verified": 128,
+  "report_sha256": "520968933b162cf398eb57368195f83f5e4a298a9528a74c89e26b74d8653759",
+  "receipt_sha256": "0a28c98621b2523156370f062d922d6872850af4438824d2ca7776f8f686dbcb",
+  "verifier_sha256": "b2b53c099b52550ee2e2d4029025be2547dabd4bb5e1456bcec772132d4c83c7",
+  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+}

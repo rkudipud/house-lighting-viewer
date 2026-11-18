@@ -1,0 +1,70 @@
+{
+  "before_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+  "after_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "rollback_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+  "source_file_sha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+  "copied_fragment_sha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+  "source_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+  "source_assignment_id": "assignment:c40feaae-bd23-4667-9a64-9c2a607f3cd4:call_vdecaxVNpONlLUMKOSHCTC3L",
+  "reference": {
+    "schema": "wardrobe-interiors-reference/1",
+    "status": "PROVISIONAL_REVIEW_NOT_HOMEOWNER_APPROVED_OR_FABRICATION_RELEASED",
+    "file": "fragments\\wardrobe-interiors-review.json",
+    "sha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+    "source_schema": "wardrobe-interiors/1",
+    "source_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+    "room_ids": [
+      "R04",
+      "R05",
+      "R04a",
+      "R08",
+      "R09"
+    ],
+    "basis": "Unmeasured placeholder dimensions and provisional compartment layout; retain source ergonomic and fit caveats.",
+    "scope": "A versioned reference only: no historical storage item, footprint, height, geometry or approval is replaced.",
+    "wardrobe_lighting": "None newly selected or costed; any later wardrobe light requires separate coordination.",
+    "pricing": "Hardware amounts are unverified allowances and do not include every unpriced item; not a quote.",
+    "review_flags": [
+      "R04 placeholder bays are 458.8 mm clear versus a 480 mm working hanger-width target; verify actual hangers and revise after measurement.",
+      "The R09 source estimates up to about 16 shoe pairs if they fit; the retained older item says about 18-20. Neither capacity is verified.",
+      "Dressing cabinet FH-ST-03 and utility geometry/access FH-ST-12 remain open; the selected cabinets are not fabrication-ready."
+    ],
+    "homeowner_interior_approval": false,
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "source_assignment_id": "assignment:c40feaae-bd23-4667-9a64-9c2a607f3cd4:call_vdecaxVNpONlLUMKOSHCTC3L",
+    "recorded_utc": "2026-11-18T11:17:03.801385+00:00"
+  },
+  "validation": {
+    "rooms": 14,
+    "confirmed_room_dimensions": 21,
+    "fixtures": 104,
+    "controlled_groups": 47,
+    "floor_instances": 4
+  },
+  "unchanged": [
+    "architecture",
+    "decisions",
+    "bathrooms",
+    "lighting",
+    "visualization_geometry",
+    "open_items",
+    "all existing storage items, fields, geometry and approvals"
+  ],
+  "prior_review_pack_compatibility": {
+    "basis": "Only a versioned interior source reference and source-register metadata were added. Lighting, architecture, bathroom and visualization sections and all existing storage data are identical. Prior 2ce3fcb4 review outputs remain evidence-compatible, but their master binding is stale; rebind and revalidate before publishing them as current.",
+    "prior_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+    "lighting_manifest_path": "not-distributed/manifest.json",
+    "lighting_manifest_sha256": "4f78694c8b0f983138e6462d10b0c447c76556d87b56e67ced7eda4a52340cd7",
+    "no_circular_hash": "The copied interior source references only the previous master; this receipt references the new master and is not included in the master hash."
+  },
+  "retained": {
+    "homeowner_interior_approval": false,
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "measurement_and_fit": "open",
+    "wardrobe_lighting": "none newly selected"
+  }
+}

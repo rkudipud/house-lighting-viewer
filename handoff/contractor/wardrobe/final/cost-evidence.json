@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "schema": "storage_cost_evidence/1",
+    "collected": "2026-11 (web research by research sub-agent; secondary sources)",
+    "nature": "Article, e-commerce listing, catalogue and forum evidence only. NO dealer or contractor quotes. Every figure needs re-quoting in Hyderabad before purchase.",
+    "unverified_rule": "Any rate used in cost_model.py without a figure ID here is tagged UNVERIFIED there."
+  },
+  "figures": [
+    {
+      "id": "F1",
+      "item": "Century Club Prime IS710 marine brand list price",
+      "value": "171 (dealers 128-150)",
+      "unit": "INR/sq ft incl GST",
+      "source_url": "https://www.plyprice.com/blog/centuryply-plywood-price",
+      "source_type": "article estimate citing manufacturer MRP",
+      "date": "2026-10-15",
+      "confidence": "M"
+    },
+    {
+      "id": "F2",
+      "item": "Century Sainik 710 (IS 303 BWP)",
+      "value": "122 MRP; dealers 94-122",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/centuryply-plywood-price",
+      "source_type": "article estimate",
+      "date": "2026-10-15",
+      "confidence": "M"
+    },
+    {
+      "id": "F3",
+      "item": "Greenply 710 Marine IS710 19mm / 16mm",
+      "value": "125 / 112",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/greenply-plywood-price",
+      "source_type": "article estimate (dealer)",
+      "date": "2026",
+      "confidence": "M"
+    },
+    {
+      "id": "F4",
+      "item": "Greenply Gold 19mm (grade labelling inconsistent)",
+      "value": "134-136",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/greenply-plywood-price",
+      "source_type": "article estimate",
+      "date": "2026",
+      "confidence": "L"
+    },
+    {
+      "id": "F5",
+      "item": "Kitply Gold 18-19mm; Archidply; Duro Plus 18mm (IS grade unverified)",
+      "value": "111-140; 86-110; 109",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/best-plywood-brands-india-2026",
+      "source_type": "article estimate",
+      "date": "2026",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F6",
+      "item": "IS303 MR 18-19mm (Sainik MR); MR band; BWR band",
+      "value": "88-97; 45-130; 45-160",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/best-plywood-brands-india-2026",
+      "source_type": "article estimate",
+      "date": "2026",
+      "confidence": "M"
+    },
+    {
+      "id": "F7",
+      "item": "Branded BWP/marine band; local BWP/marine 18-19mm",
+      "value": "120-175; 78-113",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/best-plywood-brands-india-2026",
+      "source_type": "article estimate",
+      "date": "2026",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F8",
+      "item": "HDHMR plain 18mm",
+      "value": "90-130 (2880-4160 per 8x4 sheet)",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.hdhmr.in/blog/hdhmr-board-price-list-india/",
+      "source_type": "article estimate",
+      "date": "2026-03",
+      "confidence": "M"
+    },
+    {
+      "id": "F9",
+      "item": "Action TESA HDHMR 18mm dealer; density >850 kg/m3; moisture/borer/termite resistance claim",
+      "value": "70-104 (typ 87-98)",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/action-tesa-plywood-price",
+      "source_type": "article estimate relaying brand-page claims",
+      "date": "2026-10-15",
+      "confidence": "M"
+    },
+    {
+      "id": "F10",
+      "item": "Greenpanel Club HDWR 18mm online listing",
+      "value": "113 (MRP 211)",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.plyprice.com/blog/action-tesa-plywood-price",
+      "source_type": "e-commerce listing via article",
+      "date": "2026-10",
+      "confidence": "L"
+    },
+    {
+      "id": "F11",
+      "item": "Prelam HDHMR; prelam add-on; acrylic/UV add-on",
+      "value": "105-160; +15-30; +60-120",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.hdhmr.in/blog/hdhmr-board-price-list-india/",
+      "source_type": "article estimate",
+      "date": "2026",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F12",
+      "item": "1mm decorative laminate 8x4: premium/mid/value/economy",
+      "value": "1800-3200 / 1200-2000 / 850-1300 / 600-900",
+      "unit": "INR/sheet",
+      "source_url": "https://www.hdhmr.in/blog/sunmica-sheet-8x4-price/",
+      "source_type": "article estimate",
+      "date": "2026-01-26",
+      "confidence": "M"
+    },
+    {
+      "id": "F13",
+      "item": "Dealer laminate: Woodline 1mm; Greenlam 0.8; Century 0.8",
+      "value": "1100; 800; 700-975",
+      "unit": "INR/sheet",
+      "source_url": "https://www.jainbr.com/laminate-sheets.html",
+      "source_type": "dealer listing (IndiaMART-based, indicative)",
+      "date": "2026-11",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F14",
+      "item": "Compact HPL 12mm",
+      "value": "180 / 189 / 255 (=5760 / 6048 / 8160 per 8x4)",
+      "unit": "INR/sq ft",
+      "source_url": "https://indiamart.com/proddetail/12-mm-hpl-compact-laminate-sheet-for-interior-and-exterior-2851621432273.html",
+      "source_type": "e-commerce listing (also IndiaMART ID 16120299191 Noida; TradeIndia Ahmedabad)",
+      "date": "2026-11",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F15",
+      "item": "Aluminium sliding/hinged wardrobe installed (Coimbatore)",
+      "value": "950-1300 sliding 2-door; 800-1400 hinged; 1200-1700 3-door mirror",
+      "unit": "INR/sq ft",
+      "source_url": "https://interiorhubcbe.wordpress.com/2026/03/30/aluminium-wardrobe-price-guide-what-it-really-costs-in-2026/",
+      "source_type": "article estimate",
+      "date": "2026-03-30",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F16",
+      "item": "Hyderabad aluminium wardrobe price (page body had no prices)",
+      "value": "850-1800; 8x7ft 47000-100000",
+      "unit": "INR/sq ft",
+      "source_url": "https://metalandmore.in/aluminium-wardrobe-price-in-hyderabad-2026/",
+      "source_type": "search snippet only",
+      "date": "2026",
+      "confidence": "L"
+    },
+    {
+      "id": "F17",
+      "item": "Aluminium profile wardrobe listings (Bengaluru, excl. tax)",
+      "value": "750-1150; outlier 2500",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.indiamart.com/proddetail/aluminium-sliding-wardrobe-shutters-profile-2853802928948.html",
+      "source_type": "e-commerce listing",
+      "date": "2026",
+      "confidence": "M-L"
+    },
+    {
+      "id": "F18",
+      "item": "Aluminium extrusion mill finish, Jindal-make, Secunderabad",
+      "value": "430 (profiles 455, tube 475; snippet showed 370)",
+      "unit": "INR/kg",
+      "source_url": "https://www.indiamart.com/proddetail/aluminium-extrusions-8143247462.html",
+      "source_type": "e-commerce listing",
+      "date": "2026-11",
+      "confidence": "M-L"
+    },
+    {
+      "id": "F19",
+      "item": "Granite Hyderabad standard/black/Black Galaxy; labour",
+      "value": "38-65 / 45-85 / 50-95; labour 20-40",
+      "unit": "INR/sq ft",
+      "source_url": "https://rmsstonex.in/granite-price-india-per-sqft-city-guide/",
+      "source_type": "article estimate",
+      "date": "2026-04-23",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F20",
+      "item": "Granite India Jet Black/Tan Brown/Steel Grey; installation",
+      "value": "40-85 / 40-75 / 45-80; 20-50",
+      "unit": "INR/sq ft",
+      "source_url": "https://rmsstonex.in/granite-price-india-per-sqft-city-guide/",
+      "source_type": "article estimate",
+      "date": "2026-04-23",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F21",
+      "item": "Granite Hyderabad basic Indian; labour (conflicts with F19)",
+      "value": "65-140; labour 50-120",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.bhumicalculator.com/",
+      "source_type": "search snippet only",
+      "date": "2026-04",
+      "confidence": "L"
+    },
+    {
+      "id": "F22",
+      "item": "Kadappa/cuddapah stone Hyderabad",
+      "value": "45 (directory); black slab 32 (snippet)",
+      "unit": "INR/sq ft",
+      "source_url": "https://dir.indiamart.com/hyderabad/kadappa-stone.html",
+      "source_type": "e-commerce listing / snippet",
+      "date": "2026-11",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F23",
+      "item": "Kota stone Hyderabad (outside window)",
+      "value": "36-80",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.kotastonesupplier.com/kota-stone-price-in-hyderabad-per-square-feet/",
+      "source_type": "dealer/supplier site (snippet)",
+      "date": "2023-12-15",
+      "confidence": "L"
+    },
+    {
+      "id": "F24",
+      "item": "Hettich Sensys 8645i soft-close hinge",
+      "value": "500 per set of 2 (MRP 882); cranked 529-557",
+      "unit": "INR/set of 2",
+      "source_url": "https://wizzybuilds.com/blog/modular-kitchen-accessories-price-list-india/",
+      "source_type": "article citing retail listings",
+      "date": "2026-08-21",
+      "confidence": "M"
+    },
+    {
+      "id": "F25",
+      "item": "Hettich Sensys 8657i 165 deg",
+      "value": "1327 per set of 2 (MRP 1730)",
+      "unit": "INR/set of 2",
+      "source_url": "https://wizzybuilds.com/blog/modular-kitchen-accessories-price-list-india/",
+      "source_type": "article citing retail listings",
+      "date": "2026-08-21",
+      "confidence": "M"
+    },
+    {
+      "id": "F26",
+      "item": "Hettich 500mm ball-bearing channel (NOT soft-close)",
+      "value": "1254 (MRP 2000)",
+      "unit": "INR/pair",
+      "source_url": "https://wizzybuilds.com/blog/modular-kitchen-accessories-price-list-india/",
+      "source_type": "article citing Moglix listing",
+      "date": "2026-08-21",
+      "confidence": "M"
+    },
+    {
+      "id": "F27",
+      "item": "Soft-close tandem boxes (Ebco S3; Hettich InnoTech 470mm 30kg)",
+      "value": "2536; 3400 (range 2536-5192)",
+      "unit": "INR/set",
+      "source_url": "https://wizzybuilds.com/blog/modular-kitchen-accessories-price-list-india/",
+      "source_type": "article citing retail listings",
+      "date": "2026-08-21",
+      "confidence": "M-L"
+    },
+    {
+      "id": "F28",
+      "item": "Hettich TopLine L 3-door soft-close, 50 kg/door, door <=28mm thick, <=2500mm high",
+      "value": "17400 (2-door Mumbai listing 22000 anomalous)",
+      "unit": "INR/set excl. tax",
+      "source_url": "https://www.indiamart.com/proddetail/hettich-topline-22-3-door-sliding-wardrobe-mechanism-with-soft-close-21571527612.html",
+      "source_type": "e-commerce listing",
+      "date": "2026",
+      "confidence": "M"
+    },
+    {
+      "id": "F29",
+      "item": "Hettich Lift Advanced HF (flap lift); Ebco Pro-Lift gas spring set of 2",
+      "value": "12173-13525; 239-326",
+      "unit": "INR/set",
+      "source_url": "https://wizzybuilds.com/blog/modular-kitchen-accessories-price-list-india/",
+      "source_type": "article citing retail listings",
+      "date": "2026-08-21",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F30",
+      "item": "Hydraulic bed lift mechanism set of 2 (80-150 kg options)",
+      "value": "2900 (directory 'starting 475')",
+      "unit": "INR/set",
+      "source_url": "https://www.indiamart.com/proddetail/hydraulic-bed-lift-11352562288.html",
+      "source_type": "e-commerce listing",
+      "date": "2026-07",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F31",
+      "item": "Sensys hinges per door vs height (door width <=600mm; 19mm chipboard 750 kg/m3; guide only; no kg rating)",
+      "value": "2 to 900mm; 3 to 1600; 4 to 2000; 5 to 2400",
+      "unit": "hinges per door",
+      "source_url": "https://web.hettich.com/fileadmin/media/Sensys_Catalogue_11309_en.pdf",
+      "source_type": "manufacturer spec (catalogue p.14)",
+      "date": "read 2026-11",
+      "confidence": "M-H"
+    },
+    {
+      "id": "F32",
+      "item": "Sensys rated cycles (EN 15570)",
+      "value": "80000",
+      "unit": "cycles",
+      "source_url": "https://wizzybuilds.com/blog/modular-kitchen-accessories-price-list-india/",
+      "source_type": "article relaying manufacturer",
+      "date": "2026-08-22",
+      "confidence": "M"
+    },
+    {
+      "id": "F33",
+      "item": "Turnkey wardrobe Hyderabad: MDF+lam; BWR+lam; BWP+lam; veneer; PU",
+      "value": "1500-2200; 2200-3000; 2800-3800; 3500-5500; 4000-6500+",
+      "unit": "INR/sq ft (basis undefined)",
+      "source_url": "https://simplifyhome.in/journal/wardrobe-cost-in-hyderabad",
+      "source_type": "article estimate",
+      "date": "2026-06-24",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F34",
+      "item": "Livspace wardrobe estimates: hinged; sliding; walk-in; plywood; MDF; acrylic",
+      "value": "1000-1400; 1200-1800; 1400-2200; 1000-1500; 800-1200; 1600-2200",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.livspace.com/in/interiors/wardrobe-price-calculator",
+      "source_type": "article estimate (service-provider calculator)",
+      "date": "2026-11",
+      "confidence": "M"
+    },
+    {
+      "id": "F35",
+      "item": "Carpenter labour only, Hyderabad wardrobe",
+      "value": "150-250 (100 sq ft: 15000-25000)",
+      "unit": "INR/sq ft",
+      "source_url": "https://www.nobroker.in/forum/what-is-woodwork-cost-per-square-foot-in-hyderabad-without-material/",
+      "source_type": "article estimate (forum)",
+      "date": "2026-11-02",
+      "confidence": "L-M"
+    },
+    {
+      "id": "F36",
+      "item": "Labour-only outlier (likely includes material)",
+      "value": "900-1800",
+      "unit": "INR/sq ft",
+      "source_url": "https://solve24.in/prices/carpenter-in-hyderabad",
+      "source_type": "search snippet only",
+      "date": "2026-05-10",
+      "confidence": "L"
+    },
+    {
+      "id": "F37",
+      "item": "Wakefit Castor Queen hydraulic bed (mattress 78x60 in; frame dims not found)",
+      "value": "22997 (UPI 22797)",
+      "unit": "INR",
+      "source_url": "https://www.wakefit.co/bed/engineered-wood-bed-with-hydraulic-storage-castor/WEWB7860HYSCTR",
+      "source_type": "search snippet (page 403)",
+      "date": "2026",
+      "confidence": "M"
+    },
+    {
+      "id": "F38",
+      "item": "Pepperfry queen hydraulic: Furnline Elcitd; HomeTown Magnum (both out of stock; no dimensions in page body)",
+      "value": "21149 (MRP 29499); 39900 (MRP 92500)",
+      "unit": "INR",
+      "source_url": "https://www.pepperfry.com/product/elcitd-queen-hydraulic-bed-with-hydraulic-storage-in-black-colour-by-furnline-1820340.html",
+      "source_type": "e-commerce listing",
+      "date": "2026-11",
+      "confidence": "M"
+    }
+  ],
+  "not_found": [
+    "powder-coated extrusion INR/kg",
+    "section weight per m",
+    "honeycomb/solid aluminium wardrobe price",
+    "Hafele Slido price",
+    "hanging rail INR/m",
+    "soft-close telescopic channel pair price",
+    "pull-down wardrobe rail price",
+    "granite cutting/polish/edge INR per running ft",
+    "12mm thin granite availability",
+    "Cheema Pink / Sadarahalli price",
+    "acrylic/PU price per sheet",
+    "HDHMR+laminate and aluminium turnkey from Livspace/HomeLane/DesignCafe/UrbanCompany",
+    "bed frame external dimensions",
+    "primary-site termite/density claims from Century/Greenpanel/Greenply"
+  ]
+}

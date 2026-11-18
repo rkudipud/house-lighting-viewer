@@ -1,0 +1,38 @@
+﻿circuit,section,psu,dV_pct,status,comment
+C03,A,P01,,HOLD,Previous split-feed result invalid for selected single supply.
+C03,B,P01,,HOLD,Previous split-feed result invalid for selected single supply.
+C04,all,P01,,HOLD,Previous P03 feed no longer applies; selected single-supply route is unverified.
+C05,2 parallel outputs,P01,,HOLD,Previous P03 feed no longer applies; selected single-supply route is unverified.
+C06A,all,P04,1.1,OK,
+C06B,all,P04,0.7,OK,
+C07,all,P05,0.7,OK,
+C08,all,P05,1.3,OK,
+C10,all,P06,0.2,OK,
+C12,all,P07,1.9,OK,Planning screen only; route and protective design unverified
+C16,all,P10,1.4,OK,
+C17,A,P08,1.7,OK,
+C17,B,P08,1.7,OK,
+C19,all,P11,0.2,OK,
+C21,all,P12,2.2,OK,Planning screen only; route and protective design unverified
+C22,all,P12,2.0,OK,Planning screen only; route and protective design unverified
+C23,all,P12,1.5,OK,Planning screen only; route and protective design unverified
+C27,all,P14,0.3,OK,
+C28,all,P14,1.8,OK,
+C29A,all,P14,1.4,OK,
+C29B,all,P14,1.3,OK,
+C30A,all,P14,1.4,OK,
+C30B,all,P14,1.3,OK,
+C31,all,P15,0.5,OK,
+C32,all,P15,0.4,OK,
+C34,all,P15,1.9,OK,
+C35A,all,P15,1.5,OK,
+C35B,all,P15,1.4,OK,
+C36A,all,P15,1.5,OK,
+C36B,all,P15,1.4,OK,
+C38,all,P16,2.9,OK,Planning screen only; route and protective design unverified
+C39,all,P16,3.3,MARGINAL,Planning screen only; route and protective design unverified
+C40,all,P16,3.6,MARGINAL,Planning screen only; route and protective design unverified
+X-CURT-LIV,all,P01,,HOLD,Previous split-feed result invalid for selected single supply.
+X-CURT-DIN,all,P07,1.7,OK,Planning screen only; route and protective design unverified
+X-CURT-MBR-S,all,P12,1.8,OK,Planning screen only; route and protective design unverified
+X-CURT-CBR,all,P16,2.9,OK,Planning screen only; route and protective design unverified

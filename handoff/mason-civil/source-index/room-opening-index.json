@@ -1,0 +1,995 @@
+{
+  "schema": "civil_room_opening_source_index/1",
+  "source_master": {
+    "path": "handoff/source-basis/house-design.json",
+    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+  },
+  "source_opening_register": {
+    "path": "handoff/mason-civil/site-details/opening-register.json",
+    "sha256": "d8be1578c523854175f22dcf9131dfe38fbb6755dfe95a27a0865f7c908f25cf"
+  },
+  "status": "review_only_not_for_construction",
+  "scope": "14 room/area records, 21 model openings, 10 carry-forward connections and S01 stair; survey each floor separately",
+  "source_policy": "Current house-design.json is the active source. Historical P page references are retained only as provenance of separately homeowner-confirmed numerical labels; the retired original layout was not consulted or used as geometry.",
+  "orientation": {
+    "source_ref": "house-design.json#/visualization_geometry/orientation",
+    "sheet_top": "south",
+    "sheet_bottom": "north",
+    "sheet_left": "east",
+    "sheet_right": "west",
+    "bearing": "homeowner-described; not surveyed"
+  },
+  "storeys": [
+    {
+      "id": "F1",
+      "actual_storey_label": null,
+      "site_variations": null
+    },
+    {
+      "id": "F2",
+      "actual_storey_label": null,
+      "site_variations": null
+    },
+    {
+      "id": "F3",
+      "actual_storey_label": null,
+      "site_variations": null
+    },
+    {
+      "id": "F4",
+      "actual_storey_label": null,
+      "site_variations": null
+    }
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "Living",
+      "lighting_room_id": "LIV",
+      "canonical_ref": "house-design.json#/architecture/rooms/0",
+      "dimensions": [
+        {
+          "original_feet_inches": "14'",
+          "value_ft": 14,
+          "value_m": 4.2672,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/0/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "17'-6\"",
+          "value_ft": 17.5,
+          "value_m": 5.334,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/0/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": "Nominal label includes a lift-side cutout; not a full clear rectangle."
+    },
+    {
+      "id": "R02",
+      "name": "Dining",
+      "lighting_room_id": "DIN",
+      "canonical_ref": "house-design.json#/architecture/rooms/1",
+      "dimensions": [
+        {
+          "original_feet_inches": "14'",
+          "value_ft": 14,
+          "value_m": 4.2672,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/1/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "9'-9\"",
+          "value_ft": 9.75,
+          "value_m": 2.9718,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/1/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": null
+    },
+    {
+      "id": "R03",
+      "name": "Kitchen",
+      "lighting_room_id": "KIT",
+      "canonical_ref": "house-design.json#/architecture/rooms/2",
+      "dimensions": [
+        {
+          "original_feet_inches": "14'",
+          "value_ft": 14,
+          "value_m": 4.2672,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/2/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "10'",
+          "value_ft": 10,
+          "value_m": 3.048,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/2/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": null
+    },
+    {
+      "id": "R04",
+      "name": "M bed room",
+      "lighting_room_id": "MBR",
+      "canonical_ref": "house-design.json#/architecture/rooms/3",
+      "dimensions": [
+        {
+          "original_feet_inches": "12'-6\"",
+          "value_ft": 12.5,
+          "value_m": 3.81,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/3/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "15'-4.5\"",
+          "value_ft": 15.375,
+          "value_m": 4.6863,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/3/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": null
+    },
+    {
+      "id": "R04a",
+      "name": "M bedroom dressing / ensuite approach",
+      "lighting_room_id": "DRS",
+      "canonical_ref": "house-design.json#/architecture/rooms/4",
+      "dimensions": [],
+      "dimension_status": "not_provided_measure_on_site",
+      "note": null
+    },
+    {
+      "id": "R05",
+      "name": "C bed room",
+      "lighting_room_id": "CBR",
+      "canonical_ref": "house-design.json#/architecture/rooms/5",
+      "dimensions": [
+        {
+          "original_feet_inches": "12'-6\"",
+          "value_ft": 12.5,
+          "value_m": 3.81,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/5/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "15'",
+          "value_ft": 15,
+          "value_m": 4.572,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/5/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": "Current children's arrangement is a proposed metric reconstruction; its return and openings require site survey."
+    },
+    {
+      "id": "R06",
+      "name": "Toilet, rear/upper",
+      "lighting_room_id": "TL1",
+      "canonical_ref": "house-design.json#/architecture/rooms/6",
+      "dimensions": [
+        {
+          "original_feet_inches": "8'-9\"",
+          "value_ft": 8.75,
+          "value_m": 2.667,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/6/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "5'-6\"",
+          "value_ft": 5.5,
+          "value_m": 1.6764,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/6/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": null
+    },
+    {
+      "id": "R07",
+      "name": "Toilet, front/lower",
+      "lighting_room_id": "TL2",
+      "canonical_ref": "house-design.json#/architecture/rooms/7",
+      "dimensions": [
+        {
+          "original_feet_inches": "8'-9\"",
+          "value_ft": 8.75,
+          "value_m": 2.667,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/7/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "5'-6\"",
+          "value_ft": 5.5,
+          "value_m": 1.6764,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/7/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": null
+    },
+    {
+      "id": "R08",
+      "name": "Utility, labelled area",
+      "lighting_room_id": "UTL",
+      "canonical_ref": "house-design.json#/architecture/rooms/8",
+      "dimensions": [
+        {
+          "original_feet_inches": "15'-6\"",
+          "value_ft": 15.5,
+          "value_m": 4.7244,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/8/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "4'-6\"",
+          "value_ft": 4.5,
+          "value_m": 1.3716,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/8/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": "Utility / washing nominal-size scope and assembled model need site reconciliation."
+    },
+    {
+      "id": "R08a",
+      "name": "Washing bay",
+      "lighting_room_id": null,
+      "canonical_ref": "house-design.json#/architecture/rooms/9",
+      "dimensions": [],
+      "dimension_status": "not_provided_measure_on_site",
+      "note": "Washing bay is a subdivision of the utility area, not an additional room."
+    },
+    {
+      "id": "R09",
+      "name": "Balcony / front arrival",
+      "lighting_room_id": "BAL",
+      "canonical_ref": "house-design.json#/architecture/rooms/10",
+      "dimensions": [
+        {
+          "original_feet_inches": "11'",
+          "value_ft": 11,
+          "value_m": 3.3528,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/10/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "8'",
+          "value_ft": 8,
+          "value_m": 2.4384,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/10/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": null
+    },
+    {
+      "id": "R10",
+      "name": "Lift footprint",
+      "lighting_room_id": null,
+      "canonical_ref": "house-design.json#/architecture/rooms/11",
+      "dimensions": [
+        {
+          "original_feet_inches": "5'",
+          "value_ft": 5,
+          "value_m": 1.524,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/11/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        },
+        {
+          "original_feet_inches": "5'",
+          "value_ft": 5,
+          "value_m": 1.524,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/11/dimensions/1",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": "Lift footprint only; lift door and interior are not established."
+    },
+    {
+      "id": "R12",
+      "name": "Common washbasin niche and access",
+      "lighting_room_id": "LOB",
+      "canonical_ref": "house-design.json#/architecture/rooms/12",
+      "dimensions": [],
+      "dimension_status": "not_provided_measure_on_site",
+      "note": null
+    },
+    {
+      "id": "R13",
+      "name": "Side margin / setback strip",
+      "lighting_room_id": null,
+      "canonical_ref": "house-design.json#/architecture/rooms/13",
+      "dimensions": [
+        {
+          "original_feet_inches": "1'-6\"",
+          "value_ft": 1.5,
+          "value_m": 0.4572,
+          "confidence_in_master": "homeowner_confirmed_measured",
+          "independently_verified": false,
+          "confirmation_request": {
+            "id": "ca36edc8-f448-494b-b655-8eca8e851a8d",
+            "revision": 2
+          },
+          "canonical_ref": "house-design.json#/architecture/rooms/13/dimensions/0",
+          "historical_numeric_provenance_only": {
+            "document": "P",
+            "page": 1
+          }
+        }
+      ],
+      "dimension_status": "homeowner_reported_measured_not_independently_verified",
+      "note": "The one recorded offset is not a continuous legal setback or wall thickness."
+    }
+  ],
+  "openings": [
+    {
+      "code": "D01",
+      "name": "Main entrance door",
+      "kind": "door",
+      "model_opening_id": "entrance",
+      "model_wall_id": "front-living",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/12/span",
+      "model_width_m": 1.1,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/0",
+      "architecture_geometry_not_used": true,
+      "note": "Architecture describes double-leaf; current visualization depicts single-leaf. Existing leaf count and swing unverified."
+    },
+    {
+      "code": "D02",
+      "name": "Master bedroom door",
+      "kind": "door",
+      "model_opening_id": "master-door",
+      "model_wall_id": "master-west",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/9/span",
+      "model_width_m": 0.86,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/1",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "D03",
+      "name": "Children's bedroom door",
+      "kind": "door",
+      "model_opening_id": "children-door",
+      "model_wall_id": "children-north",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/10/span",
+      "model_width_m": 0.85,
+      "model_width_status": "assumed_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/2",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "D04",
+      "name": "TL1 door",
+      "kind": "door",
+      "model_opening_id": "bath1-door",
+      "model_wall_id": "bath1-west",
+      "model_geometry_ref": "house-design.json#/bathrooms/rooms/0/entrance/opening_segment_m",
+      "model_width_m": 0.8,
+      "model_width_status": "assumed_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/3",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "D05",
+      "name": "TL2 door",
+      "kind": "door",
+      "model_opening_id": "bath2-door",
+      "model_wall_id": "bath2-west",
+      "model_geometry_ref": "house-design.json#/bathrooms/rooms/1/entrance/opening_segment_m",
+      "model_width_m": 0.79,
+      "model_width_status": "assumed_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/4",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "D06",
+      "name": "Kitchen-utility double-leaf door",
+      "kind": "door",
+      "model_opening_id": "utility-door",
+      "model_wall_id": "kitchen-utility",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/6/span",
+      "model_width_m": 0.91,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/5",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "G01",
+      "name": "Entry side panel",
+      "kind": "window",
+      "model_opening_id": "entry-glass-left",
+      "model_wall_id": "front-living",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/13/span",
+      "model_width_m": 0.56,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/15",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "G02",
+      "name": "Entry side panel",
+      "kind": "window",
+      "model_opening_id": "entry-glass-right",
+      "model_wall_id": "front-living",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/14/span",
+      "model_width_m": 0.56,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/16",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "PN1",
+      "name": "Pooja niche, recessed (built; HD-16 / HD-18 estimates)",
+      "kind": "niche",
+      "model_opening_id": "pooja-niche",
+      "model_wall_id": "west-lower",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/4/span",
+      "model_width_m": 0.61,
+      "model_width_status": "homeowner_estimate_unverified",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "estimate_ref": "house-design.json#/decisions/pooja_niche/dimensions"
+    },
+    {
+      "code": "SN1",
+      "name": "TL1 shower niche",
+      "kind": "bath-niche",
+      "model_opening_id": "bath1-niche",
+      "model_wall_id": "east",
+      "model_geometry_ref": "house-design.json#/bathrooms/rooms/0/shower/niche_width_m",
+      "model_width_m": 0.75,
+      "model_width_status": "proposed_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4"
+    },
+    {
+      "code": "SN2",
+      "name": "TL2 shower niche",
+      "kind": "bath-niche",
+      "model_opening_id": "bath2-niche",
+      "model_wall_id": "east",
+      "model_geometry_ref": "house-design.json#/bathrooms/rooms/1/shower/niche_width_m",
+      "model_width_m": 0.75,
+      "model_width_status": "proposed_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4"
+    },
+    {
+      "code": "UP1",
+      "name": "Utility parapet opening (assumed, OI-UTL-01)",
+      "kind": "open",
+      "model_opening_id": "utility-open",
+      "model_wall_id": "north-utility",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/3/span",
+      "model_width_m": 4.12,
+      "model_width_status": "assumed_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4"
+    },
+    {
+      "code": "V01",
+      "name": "TL1 vent / window",
+      "kind": "vent",
+      "model_opening_id": "bath1-vent",
+      "model_wall_id": "east",
+      "model_geometry_ref": "house-design.json#/bathrooms/rooms/0/window/segment_m",
+      "model_width_m": 1,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/13",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "V02",
+      "name": "TL2 vent / window",
+      "kind": "vent",
+      "model_opening_id": "bath2-vent",
+      "model_wall_id": "east",
+      "model_geometry_ref": "house-design.json#/bathrooms/rooms/1/window/segment_m",
+      "model_width_m": 1,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/14",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "W01",
+      "name": "Kitchen exterior window",
+      "kind": "window",
+      "model_opening_id": "kitchen-window",
+      "model_wall_id": "west-upper",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/0/span",
+      "model_width_m": 1.22,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/6",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "W02",
+      "name": "Kitchen-to-utility window",
+      "kind": "window",
+      "model_opening_id": "kitchen-utility-window",
+      "model_wall_id": "kitchen-utility",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/5/span",
+      "model_width_m": 1.22,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/7",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "W03",
+      "name": "Master window",
+      "kind": "window",
+      "model_opening_id": "master-top-window",
+      "model_wall_id": "north-master",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/7/span",
+      "model_width_m": 0.91,
+      "model_width_status": "assumed_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/8",
+      "architecture_geometry_not_used": true,
+      "note": "Homeowner says roughly centred; actual offsets and width unmeasured."
+    },
+    {
+      "code": "W04",
+      "name": "Master side window",
+      "kind": "window",
+      "model_opening_id": "master-window",
+      "model_wall_id": "east",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/8/span",
+      "model_width_m": 1.83,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/9",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "W05",
+      "name": "Children's side window",
+      "kind": "window",
+      "model_opening_id": "children-window",
+      "model_wall_id": "east",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/11/span",
+      "model_width_m": 0.75,
+      "model_width_status": "assumed_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/10",
+      "architecture_geometry_not_used": true,
+      "active_image_relationship_ref": "house-design.json#/source_register/current_children_visual_layout",
+      "note": "Visual placeholder behind curtain; actual location and width unverified."
+    },
+    {
+      "code": "W06",
+      "name": "Living side window",
+      "kind": "window",
+      "model_opening_id": "living-window",
+      "model_wall_id": "west-lower",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/2/span",
+      "model_width_m": 1.83,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/11",
+      "architecture_geometry_not_used": true
+    },
+    {
+      "code": "W07",
+      "name": "Dining side window",
+      "kind": "window",
+      "model_opening_id": "dining-window",
+      "model_wall_id": "west-lower",
+      "model_geometry_ref": "house-design.json#/visualization_geometry/openings/1/span",
+      "model_width_m": 1.83,
+      "model_width_status": "scaled_model_not_measured",
+      "actual_width_m": null,
+      "actual_height_m": null,
+      "actual_jamb_offsets_m": null,
+      "storey_measurements": "required_separately_F1_to_F4",
+      "architecture_identity_ref": "house-design.json#/architecture/openings/12",
+      "architecture_geometry_not_used": true
+    }
+  ],
+  "connections": [
+    {
+      "id": "O01",
+      "connects": [
+        "R01",
+        "R02"
+      ],
+      "width_m": null,
+      "note": "Open furnishing division; no doorway.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/0"
+    },
+    {
+      "id": "O02",
+      "connects": [
+        "R02",
+        "R03"
+      ],
+      "width_m": null,
+      "note": "Open beside counter/peninsula; no leaf.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/1"
+    },
+    {
+      "id": "O03",
+      "connects": [
+        "C01",
+        "R12"
+      ],
+      "width_m": null,
+      "note": "Common circulation to wash niche.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/2"
+    },
+    {
+      "id": "O04",
+      "connects": [
+        "R09",
+        "S01"
+      ],
+      "width_m": null,
+      "note": "Open stair approach; no access gate shown.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/3"
+    },
+    {
+      "id": "O05",
+      "connects": [
+        "R08",
+        "R08a"
+      ],
+      "width_m": null,
+      "note": "Service-strip continuity; subdivision is graphical.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/4"
+    },
+    {
+      "id": "O06",
+      "connects": [
+        "R04",
+        "R04a"
+      ],
+      "width_m": null,
+      "note": "Private dressing extension off M bedroom; no separating leaf.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/5"
+    },
+    {
+      "id": "O07",
+      "connects": [
+        "R01",
+        "C01"
+      ],
+      "width_m": null,
+      "note": "Conceptual link from living to common lane; not another wall opening.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/6"
+    },
+    {
+      "id": "O08",
+      "connects": [
+        "R02",
+        "C01"
+      ],
+      "width_m": null,
+      "note": "Conceptual link from dining to common lane; not another wall opening.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/7"
+    },
+    {
+      "id": "O09",
+      "connects": [
+        "R03",
+        "C01"
+      ],
+      "width_m": null,
+      "note": "Conceptual link from kitchen to common lane; not another wall opening.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/8"
+    },
+    {
+      "id": "LX01",
+      "connects": [
+        "R10",
+        null
+      ],
+      "width_m": null,
+      "note": "Lift door is not shown; no route through shaft.",
+      "status": "carry_forward_relationship_not_site_verified",
+      "canonical_ref": "house-design.json#/architecture/open_connections/9"
+    }
+  ],
+  "stair": {
+    "id": "S01",
+    "current_model_ref": "house-design.json#/visualization_geometry/stairs",
+    "width_m": null,
+    "riser_height_m": null,
+    "tread_depth_m": null,
+    "riser_count": null,
+    "clear_headroom_m": null,
+    "guard_height_m": null,
+    "status": "assumed_model_only_all_site_dimensions_unverified",
+    "note": "The drawn 7 and 15 lines are illustrative, not verified riser counts. Verify rise, going, width, landing, arrival and safety on each floor."
+  },
+  "height_datum": {
+    "source_ref": "house-design.json#/decisions/ceiling_heights",
+    "floor_to_floor_m": 3.3528,
+    "band_drop_m": 0.2286,
+    "status": "homeowner_stated_unmeasured",
+    "note": "The 3.188 m slab and 2.959 m band elevations depend on assumed slab and finish thicknesses; centre-panel and other room levels are unmeasured."
+  },
+  "active_children_relationship_source": {
+    "canonical_ref": "house-design.json#/source_register/current_children_visual_layout",
+    "document": "MR.RAJESH_INTERIOR_RENDERS.pdf",
+    "pages_1_based": [
+      16,
+      17,
+      18
+    ],
+    "status": "undimensioned perspectives; not a measured scale drawing"
+  }
+}

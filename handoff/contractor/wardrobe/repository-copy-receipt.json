@@ -1,0 +1,124 @@
+{
+  "status": "public-snapshot-reproduction-not-master-chain-verification",
+  "constructionRelease": false,
+  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceManifest": "SHA256SUMS.json",
+  "sourceManifestSha256": "90001ce78593faf8e3d8c49591cd1c29598f50891a830e4de5806942d1e3f5f9",
+  "sourceFiles": 13,
+  "omittedFiles": [],
+  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2738,
+      "sha256": "3331facc56b41c2fbf87071a8223e25e27d30ef8a8916022e64cbddb2dc4a1bd",
+      "sourceSha256": "3331facc56b41c2fbf87071a8223e25e27d30ef8a8916022e64cbddb2dc4a1bd",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "signoff_pack.py",
+      "bytes": 75685,
+      "sha256": "fdac69008d7f701a9f73a53fb5500af93ff69a73d3800a173c0f87dbe70b51f0",
+      "sourceSha256": "fdac69008d7f701a9f73a53fb5500af93ff69a73d3800a173c0f87dbe70b51f0",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "interiors_model.py",
+      "bytes": 25532,
+      "sha256": "dd7e8c624c54e242d0f53fbf58fe71e665b6b2ec7fc19508c80c8309cad5cb2f",
+      "sourceSha256": "dd7e8c624c54e242d0f53fbf58fe71e665b6b2ec7fc19508c80c8309cad5cb2f",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "cost_model.py",
+      "bytes": 8749,
+      "sha256": "e5f2c57d762c8285e3f4bedcc80d0cc708298b4d9003193a7ab9f8f391cc3471",
+      "sourceSha256": "e5f2c57d762c8285e3f4bedcc80d0cc708298b4d9003193a7ab9f8f391cc3471",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "verify_public.py",
+      "bytes": 11539,
+      "sha256": "5ad41f73424df69234cba7beb6a42c253f638b972f35055b60d4e23dc50dd0c3",
+      "sourceSha256": "5ad41f73424df69234cba7beb6a42c253f638b972f35055b60d4e23dc50dd0c3",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "requirements-wardrobe.txt",
+      "bytes": 35,
+      "sha256": "692abce62f52226ec0b43cb464db29e9a214791877f2443ec357af63d0729631",
+      "sourceSha256": "692abce62f52226ec0b43cb464db29e9a214791877f2443ec357af63d0729631",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "storage-current.json",
+      "bytes": 119639,
+      "sha256": "4c6c17b50fa634bbe545e5b840d6092de4ef8c8b847e1eb99599632415757adb",
+      "sourceSha256": "4c6c17b50fa634bbe545e5b840d6092de4ef8c8b847e1eb99599632415757adb",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "cost-evidence.json",
+      "bytes": 15657,
+      "sha256": "70b2e5469c71bff99b01cf41ce25e88e184e590ab2aa4d945a39989967b3517e",
+      "sourceSha256": "70b2e5469c71bff99b01cf41ce25e88e184e590ab2aa4d945a39989967b3517e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "cost-evidence.md",
+      "bytes": 10213,
+      "sha256": "0765ee5c38613ea51d4178c3d2418ae3d8da2932a9bcea9099811d605191c5a4",
+      "sourceSha256": "0765ee5c38613ea51d4178c3d2418ae3d8da2932a9bcea9099811d605191c5a4",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "final/CLEANUP-MANIFEST.md",
+      "bytes": 3261,
+      "sha256": "5b3bc6e6d053dad3f7817f1ae3bff138d16ab3cf97af34ebf46e47d77691b161",
+      "sourceSha256": "5b3bc6e6d053dad3f7817f1ae3bff138d16ab3cf97af34ebf46e47d77691b161",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "reproduction-inputs/wardrobe-interiors-original.json",
+      "bytes": 18872,
+      "sha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+      "sourceSha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "public-reproduction-expected.json",
+      "bytes": 6106,
+      "sha256": "b658e45f512eefae616c4833d5e800b153494de84e00d3337c3ec77b8db79821",
+      "sourceSha256": "b658e45f512eefae616c4833d5e800b153494de84e00d3337c3ec77b8db79821",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "public-reproduction-receipt.json",
+      "bytes": 3000,
+      "sha256": "a813758652392bdfe13374000578dc7836ec64cf8c5674426fa3c8ea9b89bd5a",
+      "sourceSha256": "a813758652392bdfe13374000578dc7836ec64cf8c5674426fa3c8ea9b89bd5a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "SHA256SUMS.json",
+      "bytes": 1446,
+      "sha256": "90001ce78593faf8e3d8c49591cd1c29598f50891a830e4de5806942d1e3f5f9",
+      "sourceSha256": "90001ce78593faf8e3d8c49591cd1c29598f50891a830e4de5806942d1e3f5f9",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    }
+  ]
+}

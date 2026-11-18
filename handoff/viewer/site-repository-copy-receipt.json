@@ -1,0 +1,68 @@
+{
+  "status": "local-review-only-not-published",
+  "constructionRelease": false,
+  "publicationAuthorized": false,
+  "masterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceDeliveryManifestSha256": "bb643fb1539550aaba2c182a607154a64bd37222d9cd030d868a26acec93b75c",
+  "viewerHtmlUnchangedFromProducer": true,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 2590423,
+      "sha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+      "sourceSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e"
+    },
+    {
+      "path": "build-info.json",
+      "bytes": 2455,
+      "sha256": "8e1bd2df2e7308dad979ac826ddfe88f5c4b4ac0b5b8a28ece31cfcc74567312",
+      "sourceSha256": "8e1bd2df2e7308dad979ac826ddfe88f5c4b4ac0b5b8a28ece31cfcc74567312"
+    },
+    {
+      "path": "privacy-transform.json",
+      "bytes": 1185,
+      "sha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77",
+      "sourceSha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77"
+    },
+    {
+      "path": "THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "sourceSha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "downloads/layout-views-review-draft-b6f6bf1a.pdf",
+      "bytes": 6815041,
+      "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+      "sourceSha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3"
+    },
+    {
+      "path": "downloads/working-floor-plan-review-draft-b6f6bf1a.pdf",
+      "bytes": 864756,
+      "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
+      "sourceSha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603"
+    },
+    {
+      "path": "downloads/curtain-pocket-section-review-b6f6bf1a.pdf",
+      "bytes": 71474,
+      "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
+      "sourceSha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d"
+    },
+    {
+      "path": "downloads/wardrobe-interiors-review-b6f6bf1a.pdf",
+      "bytes": 245180,
+      "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3",
+      "sourceSha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3"
+    }
+  ],
+  "retiredBaselineDownloadsRemoved": [
+    "downloads/layout-views-review-draft-e0bf1af2.pdf",
+    "downloads/working-floor-plan-review-draft-e0bf1af2.pdf"
+  ]
+}

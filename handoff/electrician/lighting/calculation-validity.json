@@ -1,0 +1,188 @@
+{
+  "basis": "OPT-1 full analytic rerun from recorded design-input changes; generic optics and provisional geometry; not measured or manufacturer-validated photometry.",
+  "source_master_sha256": "7315308ec0b9803e39ea3716dd9c6842505f921d10dbbfc434f1961032a069a1",
+  "design_inputs_sha256": "4fd1b24c521a37a0ebe7b345805827a64bf7c43579cf12133171a514b3c7f7e7",
+  "numerical_dependencies": {
+    "sections": {
+      "architecture": "2e4758b2845abe74fb48cf8fb02955edd2d46f4795dde8df0cfc79c3f192981e",
+      "visualization_geometry": "0e3247c7302102cf379580194999fae2d97d2f8135f1b23da6608b7d467af0f2",
+      "bathrooms": "5916797481e1d38264983fe5313426ba326bf5e8194130912b34c783cc3d98c0",
+      "storage": "1ea0ff1d658c562b9cc68fd44e1137faa4177005598befadf07380d1e94c6510"
+    },
+    "numeric_only_sha256": {
+      "architecture": "ee997bc7ed20ffa93e3762f15ffbdd1f81bc6f6d2a6ee0c856b49c74d58d35dc",
+      "visualization_geometry": "985c0a8b7b0a2e58297e011794aeaf3b0d5db6a6b7639c8e9a4d96a6342c95c1",
+      "bathrooms": "0036aae5e6db9a56ebb5423db2e60c2d0b908ae63932b8e17724e092395788d8",
+      "storage": "23ae096447b9e2156b0de0d60532ad9799a0be8588d41732a2fb1ec067e5a2a2"
+    },
+    "rule": "Full geometry sections and lighting DI are numerical dependencies. decisions.pooja_niche is also a geometry dependency, explicitly hashed; other decisions/open items are recorded and reviewed, not presumed harmless.",
+    "numeric_only_rule": "sha256 of each section with every string value removed (keys, numbers, booleans and structure kept): label-only edits leave it unchanged",
+    "history": "visualization_geometry full hash changed 16e72257 (4c64b404) -> d73e2b6a by pooja labels only (house-current pooja-niche-hd10-receipt.json: geometry_changed false); then NUMERICALLY at 1346cfab by HD-11 provisional_heights (ceiling-heights-hd11-receipt.json: lighting_stale_against_new_levels true) -> this CPL-1 rebuild rebases every ceiling level; HD-18 changes estimated niche geometry only: the niche audit is recomputed; unchanged optical results retain HD-17 provenance.",
+    "pooja_decision_sha256": "24810d93dc83cc0d2ea79dc619edabb7643faed631f9606d7503509d7b7cb04e"
+  },
+  "height_field_applicability": {
+    "children_curtain": {
+      "superseded_paths": [
+        "visualization_geometry.openings[children-window].curtainTopM",
+        "visualization_geometry.children_layout.curtain_and_window.curtain_top_m"
+      ],
+      "superseded_value_m": 2.64,
+      "proposed_source": "lighting.design_inputs.provenance.layout_basis.height_basis.derived_assumptions.curtain_top_m",
+      "proposed_value_m": 2.939,
+      "status": "Use only as an assumed HD-11 drawing level, not a measured curtain-track or fabric dimension"
+    },
+    "loft_top": {
+      "status": "Retain old 3.08 m only as an unmeasured legacy placeholder; do not raise or resize storage",
+      "release": "Site loft/support/shutter and W03 curtain-pocket section; HD-11 is not storage approval"
+    }
+  },
+  "bathroom_mirror_control_selection": {
+    "status": "homeowner_selected_pending_compatible_products_and_site_installation",
+    "arrangement": "One separate independently dimmable wall control for each bathroom mirror light.",
+    "control_count": 2,
+    "other_bathroom_lighting": "Mirror-light controls operate independently of each bathroom's ceiling-light controls.",
+    "remaining": "Confirm the selected mirror fitting, driver and dimmer work together, coordinate wiring and location, and review bathroom electrical safety with the responsible electrician.",
+    "source": {
+      "kind": "homeowner_answer_to_ask_user_in_coordinator_conversation",
+      "answer_record": "warning_answers:bathroom-mirror-dimmers",
+      "selection": "Separate mirror dimmers (Recommended)"
+    },
+    "construction_release": false
+  },
+  "pooja_geometry_hold": {
+    "status": "HOLD_PROVISIONAL_GEOMETRY",
+    "scope": "LIV-P1/P2 and C06A/C06B remain count/load allowances only; no idol photometry, aim or ordering dimensions are released.",
+    "remaining": "Measure the existing niche and reported extension, confirm the balcony edge, and coordinate the strip and spot positions."
+  },
+  "hold_ids": [
+    "H-MBR-BED",
+    "H-MBR-W03",
+    "H-MBR-STACK",
+    "H-DRS-SWEEP",
+    "H-UTL-PARAPET",
+    "H-CBR-CEIL",
+    "H-CBR-CURTAIN",
+    "H-CBR-BED",
+    "H-CBR-DESK",
+    "H-LOFT",
+    "H-HD11-LEVELS",
+    "H-CENTRE-RECESS",
+    "H-HALL-BEAM",
+    "H-CEIL-PLACEHOLDER",
+    "H-CURTAIN-POCKET",
+    "H-POOJA-GEOMETRY"
+  ],
+  "compliance_summary": {
+    "PASS": 60,
+    "MARGINAL": 9,
+    "HOLD": 2
+  },
+  "not_verified": [
+    "exact product chain, India stock, certification (procurement gate); dimmable HIGH (black baffle preferred, all-white deep-recess accepted per HD-14), PWM 24 V strip, 24 V bath face light and dual-white cove are 'allowance pending documented chain'",
+    "230 V dimmers: Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load LED-dimmer candidates (Legrand 677304, Legrand AA24107MB, Schneider E8331RD250_WE; binding\\low-load-dimmer-options.md) are leads only; no exact fitting + driver + dimmer chain is documented or sample-tested, so all 12 holds remain",
+    "HD-17 mirror lights: the selected fitting, its 24 V driver/PSU and the knob dimmer are not a documented, compatible chain; wall-control location, wiring and bathroom-zone/wet-zone approval rest with the electrician and manufacturer",
+    "knob 8 kHz derating (no maker curve) - 2 kHz design",
+    "60 % knob / 0.8 PSU 50 C allowances, 1.5 mm2 cable, Manhattan cable routes and 5 m reels are ASSUMED, not maker data",
+    "analytic point/line-source photometry (generic optics, no IES/LDT files): not validated lux; cove uniformity not claimed",
+    "CBR on the planned R05 frame (not surveyed); MBR bed items at the HELD test centreline; curtain pockets, cabinet boxes, dining table and book positions ASSUMED",
+    "HD-18 pooja dimensions are clarified feet-and-inches homeowner estimates, not site measurements. HD-18 was a partial recomputation (the pooja geometry audit only; other results were rebound unchanged); OPT-1 is a full analytic rerun of every room, task, scene, ledger, electrical check and BoM line on the candidate design inputs. The reported beyond-wall extension/reinforcement is not a measured section or certified capacity; LIV-P1/P2 remain count/load allowances with photometry/placement/order release held (OI-POOJA-01)",
+    "OPT-1: the Legrand Lyncus 677304 3-50 W / 8-lamp figures are a listing reading by the electrical session, not an approved limit or a proven fitting+driver+dimmer chain; the 40 W / 7-lamp planning margin is a project assumption used only as a flag (C20 carries a procurement condition instead of an added dimmer)",
+    "OPT-1 heat maps, position sweeps, kitchen alternatives and the fixture-count reduction study use the same analytic engine (generic optics); the reduction study's one-size-up variants assume the next catalogue size has the same cost allowance; UGR is not calculated; the pooja-platform study is a provisional geometric ray study (share of sampled rays blocked), not lux",
+    "lighting zones other than baths are approximate traces (RECONCILIATION_REQUIRED)",
+    "bath occlusion (head, body, shower head, door, screen) not modelled",
+    "knob state after power restoration"
+  ],
+  "product_approval": false,
+  "construction_release": false,
+  "niche_notation_update": {
+    "status": "coordinated_estimates_not_site_measured",
+    "method": "Niche geometry audit recomputed; other optical calculations retained with their original source, not rerun.",
+    "scope": "Pooja photometry and fixture placement remain held pending measurements."
+  },
+  "pooja_platform_review": {
+    "status": "fixed_mid_height_platform_idol_position_and_exact_height_unresolved",
+    "note": "The existing pooja photometry and placement hold remains. Assess plausible human positions and adjustable aims; no shadow-free result is certified."
+  },
+  "exact_chain_proven": false,
+  "calculation_status": "analytic design estimates (full rerun on fixed-white DI); site/product holds remain explicit",
+  "pooja_geometry_status": "HOLD_PROVISIONAL_GEOMETRY",
+  "dimmer_listing_screen": {
+    "candidate": "Legrand Lyncus 677304",
+    "led_min_W": 3,
+    "led_max_W": 50,
+    "max_lamps": 8,
+    "source": "electrical session preliminary finding (listing reading only; no fitting + driver + dimmer chain documented or sample-tested)",
+    "approved": false,
+    "exact_chain_proven": false,
+    "planning_margin": {
+      "max_W": 40,
+      "max_lamps": 7,
+      "basis": "project planning assumption: <= 80 % of the 50 W listing and one lamp below the 8-lamp listing; NOT a manufacturer or approved limit and NOT a reason on its own to add dimmers; 45 W is not treated as an approved limit"
+    },
+    "power_tolerance": {
+      "typical_pct": 10,
+      "status": "UNVERIFIED",
+      "basis": "a +10 % allowance on rated input power is a common product-standard tolerance (IEC 62722-2-1 family); the exact clause is not verified here; use the selected fitting's documented input power, not its nominal W"
+    },
+    "C20_condition": "accept the single C20 dimmer only if the selected DL6's documented input power is <= 6.25 W per lamp and the dimmer maker lists 8 such lamps; otherwise use the fallback below (decide at OI-MBR-04, MBR HELD)",
+    "C20_fallback": {
+      "splits": {
+        "C20": {
+          "C20A": [
+            "MBR-H1",
+            "MBR-H2",
+            "MBR-H4",
+            "MBR-H6",
+            "MBR-H7"
+          ],
+          "C20B": [
+            "MBR-H3",
+            "MBR-H5",
+            "MBR-H8"
+          ]
+        }
+      },
+      "dimmers_added": 1,
+      "cost_delta_flat_incl_contingency": [
+        1512,
+        4312
+      ],
+      "other_routes": [
+        "a dimmer documented for > 50 W LED with the selected fitting (product evidence pending)",
+        "remove one MBR downlight if the homeowner accepts it: see the MBR variants in reduction.json (removing MBR-H4 alone lowers the wardrobe-face grade; the robust variant fits the other seven one size up, so it still needs the documented per-lamp input check)"
+      ]
+    },
+    "applies_to": "230 V TE groups; the TRK group (C13) is screened against the track maker's driver/dimmer listing, not this one",
+    "use": "grouping screen only; every 230 V group keeps its PROCUREMENT HOLD until the exact fitting + driver + dimmer chain is documented and sample-tested"
+  },
+  "mains_dimmer_holds": [
+    "C01",
+    "C02",
+    "C09",
+    "C11",
+    "C13",
+    "C14",
+    "C15",
+    "C18",
+    "C20",
+    "C37"
+  ],
+  "research_sha256": "cfb01ab85ba6774de09f99fd3b17774dbdfefc7253457cf9737a181c7d84f8b4",
+  "homeowner_selections": {
+    "kitchen_worktop": {
+      "option": "K-2",
+      "status": "selected_for_review_not_construction_release",
+      "scope": "Add KIT-T4 sink-end task linear and use lower-output KIT-T1 at 650 lm/m.",
+      "nominal_result": "518 lx average / 323 lx minimum / U0 0.623",
+      "residual_risk": "Sensitivity cases at reflectance 0.30, flux -12.5%, and cabinets +0.2 ft are MARGINAL; confirm measured geometry, optics, and fitting clearance before task-light sign-off."
+    }
+  },
+  "fixture_reductions": {
+    "status": "not_selected",
+    "scope": "Keep the accepted room layout; optional room-specific reductions in OPT-1 are not adopted."
+  },
+  "photometry_scope": "104 base fittings only; the four selected curtain-pocket strips have no lux/heat-map credit.",
+  "photometry_source_design_inputs_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
+  "post_calculation_status_delta": "CBR H1-H6 release and homeowner sign-off labels only; no coordinates, optics or calculation values changed.",
+  "electrical_source_status": "The original design_inputs electrical topology and earlier cost/optical-source outputs predate the selected one-supply revision. Current controls and S1 extension supersede them; living feeder and inrush screens are invalid. No lamp positions or optical calculations changed."
+}

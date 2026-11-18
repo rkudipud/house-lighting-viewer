@@ -1,0 +1,5063 @@
+{
+  "schema": "lighting.simulation.remaining-rooms/1",
+  "status": "EXPLORATORY - not measured or product-specific, not a release",
+  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "prior_receipt_sha256": "504395aadbff043b1e5d2e4fad7ed9356b974ec44e8f3d4dc4a8a6446b6f0960",
+  "parameters": {
+    "ab": 8,
+    "ad": 512,
+    "lw": 1e-05,
+    "other": "-dj 0.7 -ds 0.02 -dt 0 -dc 1 -st 0 -ss 0 -I+ -V+"
+  },
+  "MF": 0.8,
+  "units": {
+    "xyz": "metres; x = plan x_ft*0.3048, y = plan z_ft*0.3048 (sheet-down), z = height above local floor",
+    "E": "lux, maintained (MF applied), per fixture at 100 % output"
+  },
+  "scenes": {
+    "Off": {},
+    "Mood": {
+      "COVE": 0.4,
+      "LINE": 0.3,
+      "MOOD": 0.6,
+      "ACCENT": null,
+      "PERIM": 0.25
+    },
+    "Relax": {
+      "HIGH": 0.3,
+      "COVE": 0.6,
+      "LINE": 0.5,
+      "MOOD": 0.5,
+      "ACCENT": null,
+      "READ": 0.6,
+      "PERIM": 0.35
+    },
+    "Work": {
+      "HIGH": 1.0,
+      "COVE": 0.5,
+      "TASK": 0.85,
+      "MIRROR": 1.0,
+      "STUDY": 1.0,
+      "READ": 1.0,
+      "PERIM": 1.0,
+      "FACE": 1.0
+    },
+    "Full": {
+      "HIGH": 1.0,
+      "COVE": 1.0,
+      "LINE": 1.0,
+      "MOOD": 1.0,
+      "ACCENT": 1.0,
+      "TASK": 1.0,
+      "MIRROR": 1.0,
+      "STUDY": 1.0,
+      "READ": 1.0,
+      "PERIM": 1.0,
+      "FACE": 1.0
+    },
+    "Night": {
+      "NIGHT": 1.0
+    }
+  },
+  "rooms": {
+    "UTL": {
+      "base": {
+        "lanes": {
+          "HIGH": {
+            "avg": 211.1417,
+            "min": 172.201,
+            "max": 230.281,
+            "U0": 0.81557
+          },
+          "TASK": {
+            "avg": 78.0972,
+            "min": 7.258,
+            "max": 293.712,
+            "U0": 0.09294
+          }
+        },
+        "HIGH": {
+          "avg": 211.1417,
+          "min": 172.201,
+          "max": 230.281,
+          "U0": 0.81557
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 63.3425,
+            "min": 51.6603,
+            "max": 69.0843,
+            "U0": 0.81557
+          },
+          "Work": {
+            "avg": 277.5244,
+            "min": 178.5692,
+            "max": 443.5647,
+            "U0": 0.64344
+          },
+          "Full": {
+            "avg": 289.239,
+            "min": 179.693,
+            "max": 487.257,
+            "U0": 0.62126
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 289.239,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": 0.0,
+          "LOW": null,
+          "HIGH_LOW": null
+        },
+        "identical_scene_range_pct": {
+          "HIGH": 0.069
+        }
+      },
+      "rho_low": {
+        "lanes": {
+          "HIGH": {
+            "avg": 167.2657,
+            "min": 133.739,
+            "max": 184.896,
+            "U0": 0.79956
+          },
+          "TASK": {
+            "avg": 66.8271,
+            "min": 3.535,
+            "max": 265.16,
+            "U0": 0.0529
+          }
+        },
+        "HIGH": {
+          "avg": 167.2657,
+          "min": 133.739,
+          "max": 184.896,
+          "U0": 0.79956
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 50.1797,
+            "min": 40.1217,
+            "max": 55.4688,
+            "U0": 0.79956
+          },
+          "Work": {
+            "avg": 224.0687,
+            "min": 136.7437,
+            "max": 375.0086,
+            "U0": 0.61028
+          },
+          "Full": {
+            "avg": 234.0928,
+            "min": 137.274,
+            "max": 414.418,
+            "U0": 0.58641
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 234.0928,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": -20.78,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "rho_high": {
+        "lanes": {
+          "HIGH": {
+            "avg": 270.1797,
+            "min": 228.794,
+            "max": 292.711,
+            "U0": 0.84682
+          },
+          "TASK": {
+            "avg": 93.9975,
+            "min": 14.616,
+            "max": 325.687,
+            "U0": 0.15549
+          }
+        },
+        "HIGH": {
+          "avg": 270.1797,
+          "min": 228.794,
+          "max": 292.711,
+          "U0": 0.84682
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 81.0539,
+            "min": 68.6382,
+            "max": 87.8133,
+            "U0": 0.84682
+          },
+          "Work": {
+            "avg": 350.0776,
+            "min": 242.3277,
+            "max": 525.428,
+            "U0": 0.69221
+          },
+          "Full": {
+            "avg": 364.1772,
+            "min": 244.716,
+            "max": 573.544,
+            "U0": 0.67197
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 364.1772,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": 27.961,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "beam_minus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 224.4675,
+            "min": 184.185,
+            "max": 247.173,
+            "U0": 0.82054
+          },
+          "TASK": {
+            "avg": 78.1465,
+            "min": 7.04,
+            "max": 293.511,
+            "U0": 0.09009
+          }
+        },
+        "HIGH": {
+          "avg": 224.4675,
+          "min": 184.185,
+          "max": 247.173,
+          "U0": 0.82054
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 67.3403,
+            "min": 55.2555,
+            "max": 74.1519,
+            "U0": 0.82054
+          },
+          "Work": {
+            "avg": 290.8921,
+            "min": 190.579,
+            "max": 452.4299,
+            "U0": 0.65515
+          },
+          "Full": {
+            "avg": 302.6141,
+            "min": 191.635,
+            "max": 496.144,
+            "U0": 0.63327
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 302.6141,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": 6.311,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "beam_plus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 200.2631,
+            "min": 165.931,
+            "max": 218.981,
+            "U0": 0.82857
+          },
+          "TASK": {
+            "avg": 78.2,
+            "min": 7.051,
+            "max": 293.962,
+            "U0": 0.09017
+          }
+        },
+        "HIGH": {
+          "avg": 200.2631,
+          "min": 165.931,
+          "max": 218.981,
+          "U0": 0.82857
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 60.0789,
+            "min": 49.7793,
+            "max": 65.6943,
+            "U0": 0.82857
+          },
+          "Work": {
+            "avg": 266.7331,
+            "min": 172.1383,
+            "max": 433.2231,
+            "U0": 0.64536
+          },
+          "Full": {
+            "avg": 278.4631,
+            "min": 173.196,
+            "max": 476.892,
+            "U0": 0.62197
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 278.4631,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": -5.152,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "ceil_minus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 223.2197,
+            "min": 183.24,
+            "max": 245.227,
+            "U0": 0.8209
+          },
+          "TASK": {
+            "avg": 78.5784,
+            "min": 7.448,
+            "max": 295.854,
+            "U0": 0.09478
+          }
+        },
+        "HIGH": {
+          "avg": 223.2197,
+          "min": 183.24,
+          "max": 245.227,
+          "U0": 0.8209
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 66.9659,
+            "min": 54.972,
+            "max": 73.5681,
+            "U0": 0.8209
+          },
+          "Work": {
+            "avg": 290.0113,
+            "min": 189.6889,
+            "max": 452.4026,
+            "U0": 0.65407
+          },
+          "Full": {
+            "avg": 301.798,
+            "min": 190.827,
+            "max": 496.283,
+            "U0": 0.6323
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 301.798,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": 5.72,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "ceil_plus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 200.0696,
+            "min": 164.777,
+            "max": 219.128,
+            "U0": 0.8236
+          },
+          "TASK": {
+            "avg": 77.8067,
+            "min": 6.784,
+            "max": 293.503,
+            "U0": 0.08719
+          }
+        },
+        "HIGH": {
+          "avg": 200.0696,
+          "min": 164.777,
+          "max": 219.128,
+          "U0": 0.8236
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 60.0209,
+            "min": 49.4331,
+            "max": 65.7384,
+            "U0": 0.8236
+          },
+          "Work": {
+            "avg": 266.2053,
+            "min": 171.0865,
+            "max": 430.1376,
+            "U0": 0.64269
+          },
+          "Full": {
+            "avg": 277.8763,
+            "min": 172.2,
+            "max": 474.163,
+            "U0": 0.6197
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 277.8763,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": -5.244,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "pocket_narrow": {
+        "lanes": {
+          "HIGH": {
+            "avg": 211.2812,
+            "min": 174.563,
+            "max": 232.025,
+            "U0": 0.82621
+          },
+          "TASK": {
+            "avg": 78.1821,
+            "min": 6.629,
+            "max": 296.506,
+            "U0": 0.08479
+          }
+        },
+        "HIGH": {
+          "avg": 211.2812,
+          "min": 174.563,
+          "max": 232.025,
+          "U0": 0.82621
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 63.3844,
+            "min": 52.3689,
+            "max": 69.6075,
+            "U0": 0.82621
+          },
+          "Work": {
+            "avg": 277.7359,
+            "min": 181.0681,
+            "max": 441.4995,
+            "U0": 0.65194
+          },
+          "Full": {
+            "avg": 289.4633,
+            "min": 182.176,
+            "max": 485.027,
+            "U0": 0.62936
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 289.4633,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": 0.066,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "pocket_wide": {
+        "lanes": {
+          "HIGH": {
+            "avg": 211.2873,
+            "min": 174.555,
+            "max": 231.469,
+            "U0": 0.82615
+          },
+          "TASK": {
+            "avg": 78.1716,
+            "min": 7.361,
+            "max": 294.56,
+            "U0": 0.09416
+          }
+        },
+        "HIGH": {
+          "avg": 211.2873,
+          "min": 174.555,
+          "max": 231.469,
+          "U0": 0.82615
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 63.3862,
+            "min": 52.3665,
+            "max": 69.4407,
+            "U0": 0.82615
+          },
+          "Work": {
+            "avg": 277.7331,
+            "min": 180.8118,
+            "max": 441.7715,
+            "U0": 0.65103
+          },
+          "Full": {
+            "avg": 289.4589,
+            "min": 181.916,
+            "max": 484.972,
+            "U0": 0.62847
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "utility_HIGH_TASK": {
+          "avg": 289.4589,
+          "note": "All modelled utility fixtures at 100%; 0.9 m room grid, not a counter patch"
+        },
+        "delta_pct": {
+          "HIGH": 0.069,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      }
+    },
+    "DRS": {
+      "base": {
+        "lanes": {
+          "HIGH": {
+            "avg": 197.8725,
+            "min": 190.153,
+            "max": 203.572,
+            "U0": 0.96099
+          }
+        },
+        "HIGH": {
+          "avg": 197.8725,
+          "min": 190.153,
+          "max": 203.572,
+          "U0": 0.96099
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 59.3618,
+            "min": 57.0459,
+            "max": 61.0716,
+            "U0": 0.96099
+          },
+          "Work": {
+            "avg": 197.8725,
+            "min": 190.153,
+            "max": 203.572,
+            "U0": 0.96099
+          },
+          "Full": {
+            "avg": 197.8725,
+            "min": 190.153,
+            "max": 203.572,
+            "U0": 0.96099
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 0.0,
+          "LOW": null,
+          "HIGH_LOW": null
+        },
+        "identical_scene_range_pct": {
+          "HIGH": 0.093
+        }
+      },
+      "rho_low": {
+        "lanes": {
+          "HIGH": {
+            "avg": 168.4022,
+            "min": 160.767,
+            "max": 173.381,
+            "U0": 0.95466
+          }
+        },
+        "HIGH": {
+          "avg": 168.4022,
+          "min": 160.767,
+          "max": 173.381,
+          "U0": 0.95466
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 50.5206,
+            "min": 48.2301,
+            "max": 52.0143,
+            "U0": 0.95466
+          },
+          "Work": {
+            "avg": 168.4022,
+            "min": 160.767,
+            "max": 173.381,
+            "U0": 0.95466
+          },
+          "Full": {
+            "avg": 168.4022,
+            "min": 160.767,
+            "max": 173.381,
+            "U0": 0.95466
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -14.894,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "rho_high": {
+        "lanes": {
+          "HIGH": {
+            "avg": 239.1267,
+            "min": 230.21,
+            "max": 245.29,
+            "U0": 0.96271
+          }
+        },
+        "HIGH": {
+          "avg": 239.1267,
+          "min": 230.21,
+          "max": 245.29,
+          "U0": 0.96271
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 71.738,
+            "min": 69.063,
+            "max": 73.587,
+            "U0": 0.96271
+          },
+          "Work": {
+            "avg": 239.1267,
+            "min": 230.21,
+            "max": 245.29,
+            "U0": 0.96271
+          },
+          "Full": {
+            "avg": 239.1267,
+            "min": 230.21,
+            "max": 245.29,
+            "U0": 0.96271
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 20.849,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "beam_minus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 239.2193,
+            "min": 228.124,
+            "max": 246.007,
+            "U0": 0.95362
+          }
+        },
+        "HIGH": {
+          "avg": 239.2193,
+          "min": 228.124,
+          "max": 246.007,
+          "U0": 0.95362
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 71.7658,
+            "min": 68.4372,
+            "max": 73.8021,
+            "U0": 0.95362
+          },
+          "Work": {
+            "avg": 239.2193,
+            "min": 228.124,
+            "max": 246.007,
+            "U0": 0.95362
+          },
+          "Full": {
+            "avg": 239.2193,
+            "min": 228.124,
+            "max": 246.007,
+            "U0": 0.95362
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 20.896,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "beam_plus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 169.855,
+            "min": 163.744,
+            "max": 173.314,
+            "U0": 0.96402
+          }
+        },
+        "HIGH": {
+          "avg": 169.855,
+          "min": 163.744,
+          "max": 173.314,
+          "U0": 0.96402
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 50.9565,
+            "min": 49.1232,
+            "max": 51.9942,
+            "U0": 0.96402
+          },
+          "Work": {
+            "avg": 169.855,
+            "min": 163.744,
+            "max": 173.314,
+            "U0": 0.96402
+          },
+          "Full": {
+            "avg": 169.855,
+            "min": 163.744,
+            "max": 173.314,
+            "U0": 0.96402
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -14.159,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "ceil_minus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 210.5503,
+            "min": 201.608,
+            "max": 216.294,
+            "U0": 0.95753
+          }
+        },
+        "HIGH": {
+          "avg": 210.5503,
+          "min": 201.608,
+          "max": 216.294,
+          "U0": 0.95753
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 63.1651,
+            "min": 60.4824,
+            "max": 64.8882,
+            "U0": 0.95753
+          },
+          "Work": {
+            "avg": 210.5503,
+            "min": 201.608,
+            "max": 216.294,
+            "U0": 0.95753
+          },
+          "Full": {
+            "avg": 210.5503,
+            "min": 201.608,
+            "max": 216.294,
+            "U0": 0.95753
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 6.407,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "ceil_plus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 185.9508,
+            "min": 179.729,
+            "max": 190.284,
+            "U0": 0.96654
+          }
+        },
+        "HIGH": {
+          "avg": 185.9508,
+          "min": 179.729,
+          "max": 190.284,
+          "U0": 0.96654
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 55.7852,
+            "min": 53.9187,
+            "max": 57.0852,
+            "U0": 0.96654
+          },
+          "Work": {
+            "avg": 185.9508,
+            "min": 179.729,
+            "max": 190.284,
+            "U0": 0.96654
+          },
+          "Full": {
+            "avg": 185.9508,
+            "min": 179.729,
+            "max": 190.284,
+            "U0": 0.96654
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -6.025,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "pocket_narrow": {
+        "lanes": {
+          "HIGH": {
+            "avg": 197.6887,
+            "min": 190.175,
+            "max": 203.13,
+            "U0": 0.96199
+          }
+        },
+        "HIGH": {
+          "avg": 197.6887,
+          "min": 190.175,
+          "max": 203.13,
+          "U0": 0.96199
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 59.3066,
+            "min": 57.0525,
+            "max": 60.939,
+            "U0": 0.96199
+          },
+          "Work": {
+            "avg": 197.6887,
+            "min": 190.175,
+            "max": 203.13,
+            "U0": 0.96199
+          },
+          "Full": {
+            "avg": 197.6887,
+            "min": 190.175,
+            "max": 203.13,
+            "U0": 0.96199
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -0.093,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "pocket_wide": {
+        "lanes": {
+          "HIGH": {
+            "avg": 197.7812,
+            "min": 190.068,
+            "max": 202.811,
+            "U0": 0.961
+          }
+        },
+        "HIGH": {
+          "avg": 197.7812,
+          "min": 190.068,
+          "max": 202.811,
+          "U0": 0.961
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 59.3344,
+            "min": 57.0204,
+            "max": 60.8433,
+            "U0": 0.961
+          },
+          "Work": {
+            "avg": 197.7812,
+            "min": 190.068,
+            "max": 202.811,
+            "U0": 0.961
+          },
+          "Full": {
+            "avg": 197.7812,
+            "min": 190.068,
+            "max": 202.811,
+            "U0": 0.961
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -0.046,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      }
+    },
+    "LOB": {
+      "base": {
+        "lanes": {
+          "HIGH": {
+            "avg": 264.1681,
+            "min": 255.71,
+            "max": 268.43,
+            "U0": 0.96798
+          },
+          "MIRROR": {
+            "avg": 85.1732,
+            "min": 80.838,
+            "max": 87.469,
+            "U0": 0.9491
+          },
+          "NIGHT": {
+            "avg": 0.5935,
+            "min": 0.541,
+            "max": 0.706,
+            "U0": 0.91154
+          }
+        },
+        "HIGH": {
+          "avg": 264.1681,
+          "min": 255.71,
+          "max": 268.43,
+          "U0": 0.96798
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 79.2504,
+            "min": 76.713,
+            "max": 80.529,
+            "U0": 0.96798
+          },
+          "Work": {
+            "avg": 349.3414,
+            "min": 339.235,
+            "max": 355.174,
+            "U0": 0.97107
+          },
+          "Full": {
+            "avg": 349.3414,
+            "min": 339.235,
+            "max": 355.174,
+            "U0": 0.97107
+          },
+          "Night": {
+            "avg": 0.5935,
+            "min": 0.541,
+            "max": 0.706,
+            "U0": 0.91154
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 399.5377,
+          "min": 396.953,
+          "max": 404.187,
+          "U0": 0.99353
+        },
+        "delta_pct": {
+          "HIGH": 0.0,
+          "LOW": null,
+          "HIGH_LOW": null
+        },
+        "identical_scene_range_pct": {
+          "HIGH": 0.03
+        }
+      },
+      "rho_low": {
+        "lanes": {
+          "HIGH": {
+            "avg": 228.1119,
+            "min": 219.867,
+            "max": 231.97,
+            "U0": 0.96386
+          },
+          "MIRROR": {
+            "avg": 61.3922,
+            "min": 57.507,
+            "max": 63.348,
+            "U0": 0.93671
+          },
+          "NIGHT": {
+            "avg": 0.1835,
+            "min": 0.167,
+            "max": 0.203,
+            "U0": 0.91008
+          }
+        },
+        "HIGH": {
+          "avg": 228.1119,
+          "min": 219.867,
+          "max": 231.97,
+          "U0": 0.96386
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 68.4336,
+            "min": 65.9601,
+            "max": 69.591,
+            "U0": 0.96386
+          },
+          "Work": {
+            "avg": 289.5041,
+            "min": 280.816,
+            "max": 295.096,
+            "U0": 0.96999
+          },
+          "Full": {
+            "avg": 289.5041,
+            "min": 280.816,
+            "max": 295.096,
+            "U0": 0.96999
+          },
+          "Night": {
+            "avg": 0.1835,
+            "min": 0.167,
+            "max": 0.203,
+            "U0": 0.91008
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 341.4133,
+          "min": 339.555,
+          "max": 344.802,
+          "U0": 0.99456
+        },
+        "delta_pct": {
+          "HIGH": -13.649,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "rho_high": {
+        "lanes": {
+          "HIGH": {
+            "avg": 313.0874,
+            "min": 303.845,
+            "max": 317.353,
+            "U0": 0.97048
+          },
+          "MIRROR": {
+            "avg": 116.3901,
+            "min": 112.28,
+            "max": 118.206,
+            "U0": 0.96469
+          },
+          "NIGHT": {
+            "avg": 1.4601,
+            "min": 1.32,
+            "max": 1.633,
+            "U0": 0.90403
+          }
+        },
+        "HIGH": {
+          "avg": 313.0874,
+          "min": 303.845,
+          "max": 317.353,
+          "U0": 0.97048
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 93.9262,
+            "min": 91.1535,
+            "max": 95.2059,
+            "U0": 0.97048
+          },
+          "Work": {
+            "avg": 429.4775,
+            "min": 418.287,
+            "max": 435.336,
+            "U0": 0.97394
+          },
+          "Full": {
+            "avg": 429.4775,
+            "min": 418.287,
+            "max": 435.336,
+            "U0": 0.97394
+          },
+          "Night": {
+            "avg": 1.4601,
+            "min": 1.32,
+            "max": 1.633,
+            "U0": 0.90403
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 479.6623,
+          "min": 473.953,
+          "max": 486.696,
+          "U0": 0.9881
+        },
+        "delta_pct": {
+          "HIGH": 18.518,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "beam_minus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 323.4345,
+            "min": 311.283,
+            "max": 329.02,
+            "U0": 0.96243
+          },
+          "MIRROR": {
+            "avg": 85.2595,
+            "min": 81.184,
+            "max": 87.738,
+            "U0": 0.9522
+          },
+          "NIGHT": {
+            "avg": 0.5486,
+            "min": 0.5,
+            "max": 0.58,
+            "U0": 0.91137
+          }
+        },
+        "HIGH": {
+          "avg": 323.4345,
+          "min": 311.283,
+          "max": 329.02,
+          "U0": 0.96243
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 97.0303,
+            "min": 93.3849,
+            "max": 98.706,
+            "U0": 0.96243
+          },
+          "Work": {
+            "avg": 408.694,
+            "min": 395.043,
+            "max": 415.693,
+            "U0": 0.9666
+          },
+          "Full": {
+            "avg": 408.694,
+            "min": 395.043,
+            "max": 415.693,
+            "U0": 0.9666
+          },
+          "Night": {
+            "avg": 0.5486,
+            "min": 0.5,
+            "max": 0.58,
+            "U0": 0.91137
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 402.2593,
+          "min": 398.734,
+          "max": 407.764,
+          "U0": 0.99124
+        },
+        "delta_pct": {
+          "HIGH": 22.435,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "beam_plus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 224.3096,
+            "min": 217.735,
+            "max": 228.437,
+            "U0": 0.97069
+          },
+          "MIRROR": {
+            "avg": 85.076,
+            "min": 81.777,
+            "max": 87.393,
+            "U0": 0.96122
+          },
+          "NIGHT": {
+            "avg": 0.6002,
+            "min": 0.531,
+            "max": 0.704,
+            "U0": 0.88463
+          }
+        },
+        "HIGH": {
+          "avg": 224.3096,
+          "min": 217.735,
+          "max": 228.437,
+          "U0": 0.97069
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 67.2929,
+            "min": 65.3205,
+            "max": 68.5311,
+            "U0": 0.97069
+          },
+          "Work": {
+            "avg": 309.3856,
+            "min": 301.241,
+            "max": 315.61,
+            "U0": 0.97367
+          },
+          "Full": {
+            "avg": 309.3856,
+            "min": 301.241,
+            "max": 315.61,
+            "U0": 0.97367
+          },
+          "Night": {
+            "avg": 0.6002,
+            "min": 0.531,
+            "max": 0.704,
+            "U0": 0.88463
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 396.187,
+          "min": 392.23,
+          "max": 402.549,
+          "U0": 0.99001
+        },
+        "delta_pct": {
+          "HIGH": -15.088,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "ceil_minus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 284.3634,
+            "min": 274.467,
+            "max": 289.724,
+            "U0": 0.9652
+          },
+          "MIRROR": {
+            "avg": 88.0014,
+            "min": 84.199,
+            "max": 90.005,
+            "U0": 0.95679
+          },
+          "NIGHT": {
+            "avg": 0.6002,
+            "min": 0.539,
+            "max": 0.646,
+            "U0": 0.89796
+          }
+        },
+        "HIGH": {
+          "avg": 284.3634,
+          "min": 274.467,
+          "max": 289.724,
+          "U0": 0.9652
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 85.309,
+            "min": 82.3401,
+            "max": 86.9172,
+            "U0": 0.9652
+          },
+          "Work": {
+            "avg": 372.3647,
+            "min": 362.341,
+            "max": 378.804,
+            "U0": 0.97308
+          },
+          "Full": {
+            "avg": 372.3647,
+            "min": 362.341,
+            "max": 378.804,
+            "U0": 0.97308
+          },
+          "Night": {
+            "avg": 0.6002,
+            "min": 0.539,
+            "max": 0.646,
+            "U0": 0.89796
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 409.8047,
+          "min": 406.679,
+          "max": 412.752,
+          "U0": 0.99237
+        },
+        "delta_pct": {
+          "HIGH": 7.645,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "ceil_plus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 246.0298,
+            "min": 238.938,
+            "max": 249.546,
+            "U0": 0.97118
+          },
+          "MIRROR": {
+            "avg": 82.8644,
+            "min": 79.325,
+            "max": 85.673,
+            "U0": 0.95729
+          },
+          "NIGHT": {
+            "avg": 0.5896,
+            "min": 0.551,
+            "max": 0.705,
+            "U0": 0.93449
+          }
+        },
+        "HIGH": {
+          "avg": 246.0298,
+          "min": 238.938,
+          "max": 249.546,
+          "U0": 0.97118
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 73.8089,
+            "min": 71.6814,
+            "max": 74.8638,
+            "U0": 0.97118
+          },
+          "Work": {
+            "avg": 328.8941,
+            "min": 321.243,
+            "max": 334.437,
+            "U0": 0.97674
+          },
+          "Full": {
+            "avg": 328.8941,
+            "min": 321.243,
+            "max": 334.437,
+            "U0": 0.97674
+          },
+          "Night": {
+            "avg": 0.5896,
+            "min": 0.551,
+            "max": 0.705,
+            "U0": 0.93449
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 390.3043,
+          "min": 388.191,
+          "max": 393.907,
+          "U0": 0.99459
+        },
+        "delta_pct": {
+          "HIGH": -6.866,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "pocket_narrow": {
+        "lanes": {
+          "HIGH": {
+            "avg": 264.0876,
+            "min": 254.714,
+            "max": 268.352,
+            "U0": 0.96451
+          },
+          "MIRROR": {
+            "avg": 85.3239,
+            "min": 82.3,
+            "max": 87.402,
+            "U0": 0.96456
+          },
+          "NIGHT": {
+            "avg": 0.5789,
+            "min": 0.532,
+            "max": 0.643,
+            "U0": 0.91902
+          }
+        },
+        "HIGH": {
+          "avg": 264.0876,
+          "min": 254.714,
+          "max": 268.352,
+          "U0": 0.96451
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 79.2263,
+            "min": 76.4142,
+            "max": 80.5056,
+            "U0": 0.96451
+          },
+          "Work": {
+            "avg": 349.4115,
+            "min": 338.39,
+            "max": 355.754,
+            "U0": 0.96846
+          },
+          "Full": {
+            "avg": 349.4115,
+            "min": 338.39,
+            "max": 355.754,
+            "U0": 0.96846
+          },
+          "Night": {
+            "avg": 0.5789,
+            "min": 0.532,
+            "max": 0.643,
+            "U0": 0.91902
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 398.2993,
+          "min": 396.493,
+          "max": 401.737,
+          "U0": 0.99546
+        },
+        "delta_pct": {
+          "HIGH": -0.03,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      },
+      "pocket_wide": {
+        "lanes": {
+          "HIGH": {
+            "avg": 264.0929,
+            "min": 255.327,
+            "max": 268.025,
+            "U0": 0.96681
+          },
+          "MIRROR": {
+            "avg": 85.0709,
+            "min": 81.833,
+            "max": 87.246,
+            "U0": 0.96194
+          },
+          "NIGHT": {
+            "avg": 0.5792,
+            "min": 0.551,
+            "max": 0.636,
+            "U0": 0.95123
+          }
+        },
+        "HIGH": {
+          "avg": 264.0929,
+          "min": 255.327,
+          "max": 268.025,
+          "U0": 0.96681
+        },
+        "LOW": null,
+        "HIGH_LOW": null,
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Relax": {
+            "avg": 79.2279,
+            "min": 76.5981,
+            "max": 80.4075,
+            "U0": 0.96681
+          },
+          "Work": {
+            "avg": 349.1637,
+            "min": 339.836,
+            "max": 355.271,
+            "U0": 0.97329
+          },
+          "Full": {
+            "avg": 349.1637,
+            "min": 339.836,
+            "max": 355.271,
+            "U0": 0.97329
+          },
+          "Night": {
+            "avg": 0.5792,
+            "min": 0.551,
+            "max": 0.636,
+            "U0": 0.95123
+          }
+        },
+        "lobby_face_HIGH_MIRROR": {
+          "avg": 400.298,
+          "min": 397.512,
+          "max": 405.024,
+          "U0": 0.99304
+        },
+        "delta_pct": {
+          "HIGH": -0.028,
+          "LOW": null,
+          "HIGH_LOW": null
+        }
+      }
+    },
+    "TL1": {
+      "base": {
+        "lanes": {
+          "FACE": {
+            "avg": 37.0759,
+            "min": 21.519,
+            "max": 50.893,
+            "U0": 0.5804
+          },
+          "HIGH": {
+            "avg": 257.3172,
+            "min": 166.974,
+            "max": 306.181,
+            "U0": 0.6489
+          },
+          "MIRROR": {
+            "avg": 159.1816,
+            "min": 36.223,
+            "max": 383.018,
+            "U0": 0.22756
+          },
+          "MOOD": {
+            "avg": 40.7998,
+            "min": 19.221,
+            "max": 256.923,
+            "U0": 0.47111
+          },
+          "PERIM": {
+            "avg": 146.0688,
+            "min": 121.589,
+            "max": 165.697,
+            "U0": 0.83241
+          }
+        },
+        "HIGH": {
+          "avg": 257.3172,
+          "min": 166.974,
+          "max": 306.181,
+          "U0": 0.6489
+        },
+        "LOW": {
+          "avg": 186.8685,
+          "min": 150.362,
+          "max": 389.053,
+          "U0": 0.80464
+        },
+        "HIGH_LOW": {
+          "avg": 444.1858,
+          "min": 323.741,
+          "max": 562.496,
+          "U0": 0.72884
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.9971,
+            "min": 45.5996,
+            "max": 187.1863,
+            "U0": 0.74757
+          },
+          "Relax": {
+            "avg": 148.7191,
+            "min": 108.794,
+            "max": 226.7399,
+            "U0": 0.73154
+          },
+          "Work": {
+            "avg": 599.6435,
+            "min": 495.029,
+            "max": 730.884,
+            "U0": 0.82554
+          },
+          "Full": {
+            "avg": 640.4433,
+            "min": 546.949,
+            "max": 987.807,
+            "U0": 0.85402
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 0.0,
+          "LOW": 0.0,
+          "HIGH_LOW": 0.0
+        },
+        "identical_scene_range_pct": {
+          "HIGH": 0.02,
+          "LOW": 0.35
+        }
+      },
+      "rho_low": {
+        "lanes": {
+          "FACE": {
+            "avg": 25.6586,
+            "min": 13.003,
+            "max": 43.897,
+            "U0": 0.50677
+          },
+          "HIGH": {
+            "avg": 225.1064,
+            "min": 139.156,
+            "max": 270.838,
+            "U0": 0.61818
+          },
+          "MIRROR": {
+            "avg": 141.4838,
+            "min": 23.272,
+            "max": 360.502,
+            "U0": 0.16449
+          },
+          "MOOD": {
+            "avg": 33.0631,
+            "min": 14.512,
+            "max": 245.323,
+            "U0": 0.43892
+          },
+          "PERIM": {
+            "avg": 107.4591,
+            "min": 92.386,
+            "max": 122.816,
+            "U0": 0.85973
+          }
+        },
+        "HIGH": {
+          "avg": 225.1064,
+          "min": 139.156,
+          "max": 270.838,
+          "U0": 0.61818
+        },
+        "LOW": {
+          "avg": 140.5221,
+          "min": 108.492,
+          "max": 340.169,
+          "U0": 0.77206
+        },
+        "HIGH_LOW": {
+          "avg": 365.6285,
+          "min": 247.648,
+          "max": 485.273,
+          "U0": 0.67732
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 46.7026,
+            "min": 32.6744,
+            "max": 170.9053,
+            "U0": 0.69963
+          },
+          "Relax": {
+            "avg": 121.6741,
+            "min": 82.0982,
+            "max": 199.3888,
+            "U0": 0.67474
+          },
+          "Work": {
+            "avg": 499.7078,
+            "min": 400.851,
+            "max": 631.739,
+            "U0": 0.80217
+          },
+          "Full": {
+            "avg": 532.7708,
+            "min": 445.944,
+            "max": 877.062,
+            "U0": 0.83703
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -12.518,
+          "LOW": -24.802,
+          "HIGH_LOW": -17.686
+        }
+      },
+      "rho_high": {
+        "lanes": {
+          "FACE": {
+            "avg": 52.6308,
+            "min": 33.865,
+            "max": 74.368,
+            "U0": 0.64344
+          },
+          "HIGH": {
+            "avg": 304.9939,
+            "min": 209.596,
+            "max": 356.824,
+            "U0": 0.68721
+          },
+          "MIRROR": {
+            "avg": 186.5625,
+            "min": 57.118,
+            "max": 419.175,
+            "U0": 0.30616
+          },
+          "MOOD": {
+            "avg": 52.0124,
+            "min": 28.325,
+            "max": 264.093,
+            "U0": 0.54458
+          },
+          "PERIM": {
+            "avg": 201.8587,
+            "min": 173.986,
+            "max": 242.799,
+            "U0": 0.86192
+          }
+        },
+        "HIGH": {
+          "avg": 304.9939,
+          "min": 209.596,
+          "max": 356.824,
+          "U0": 0.68721
+        },
+        "LOW": {
+          "avg": 253.8711,
+          "min": 204.191,
+          "max": 440.095,
+          "U0": 0.80431
+        },
+        "HIGH_LOW": {
+          "avg": 558.865,
+          "min": 413.787,
+          "max": 657.26,
+          "U0": 0.74041
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 81.6721,
+            "min": 61.6195,
+            "max": 202.4563,
+            "U0": 0.75447
+          },
+          "Relax": {
+            "avg": 188.1549,
+            "min": 138.8764,
+            "max": 258.7967,
+            "U0": 0.7381
+          },
+          "Work": {
+            "avg": 746.0459,
+            "min": 634.355,
+            "max": 877.802,
+            "U0": 0.85029
+          },
+          "Full": {
+            "avg": 798.0583,
+            "min": 697.982,
+            "max": 1141.895,
+            "U0": 0.8746
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 18.528,
+          "LOW": 35.855,
+          "HIGH_LOW": 25.818
+        }
+      },
+      "beam_minus10": {
+        "lanes": {
+          "FACE": {
+            "avg": 37.0215,
+            "min": 22.281,
+            "max": 56.911,
+            "U0": 0.60184
+          },
+          "HIGH": {
+            "avg": 305.6027,
+            "min": 177.493,
+            "max": 378.348,
+            "U0": 0.5808
+          },
+          "MIRROR": {
+            "avg": 171.9809,
+            "min": 22.832,
+            "max": 594.953,
+            "U0": 0.13276
+          },
+          "MOOD": {
+            "avg": 40.5115,
+            "min": 20.622,
+            "max": 256.31,
+            "U0": 0.50904
+          },
+          "PERIM": {
+            "avg": 145.7847,
+            "min": 129.28,
+            "max": 166.612,
+            "U0": 0.88679
+          }
+        },
+        "HIGH": {
+          "avg": 305.6027,
+          "min": 177.493,
+          "max": 378.348,
+          "U0": 0.5808
+        },
+        "LOW": {
+          "avg": 186.2962,
+          "min": 152.576,
+          "max": 388.528,
+          "U0": 0.819
+        },
+        "HIGH_LOW": {
+          "avg": 491.8989,
+          "min": 330.069,
+          "max": 590.926,
+          "U0": 0.67101
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.7531,
+            "min": 45.473,
+            "max": 186.8405,
+            "U0": 0.74849
+          },
+          "Relax": {
+            "avg": 162.9612,
+            "min": 109.7905,
+            "max": 230.8916,
+            "U0": 0.67372
+          },
+          "Work": {
+            "avg": 660.3898,
+            "min": 545.619,
+            "max": 957.808,
+            "U0": 0.82621
+          },
+          "Full": {
+            "avg": 700.9013,
+            "min": 599.424,
+            "max": 1214.118,
+            "U0": 0.85522
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 18.765,
+          "LOW": -0.306,
+          "HIGH_LOW": 10.742
+        }
+      },
+      "beam_plus10": {
+        "lanes": {
+          "FACE": {
+            "avg": 36.8731,
+            "min": 21.749,
+            "max": 53.179,
+            "U0": 0.58983
+          },
+          "HIGH": {
+            "avg": 223.3192,
+            "min": 155.589,
+            "max": 259.391,
+            "U0": 0.69671
+          },
+          "MIRROR": {
+            "avg": 142.4373,
+            "min": 49.097,
+            "max": 276.614,
+            "U0": 0.34469
+          },
+          "MOOD": {
+            "avg": 40.1777,
+            "min": 19.016,
+            "max": 254.029,
+            "U0": 0.4733
+          },
+          "PERIM": {
+            "avg": 146.1671,
+            "min": 125.056,
+            "max": 175.347,
+            "U0": 0.85557
+          }
+        },
+        "HIGH": {
+          "avg": 223.3192,
+          "min": 155.589,
+          "max": 259.391,
+          "U0": 0.69671
+        },
+        "LOW": {
+          "avg": 186.3448,
+          "min": 153.186,
+          "max": 379.667,
+          "U0": 0.82206
+        },
+        "HIGH_LOW": {
+          "avg": 409.6641,
+          "min": 317.927,
+          "max": 540.688,
+          "U0": 0.77607
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.6484,
+            "min": 45.4846,
+            "max": 183.8269,
+            "U0": 0.74997
+          },
+          "Relax": {
+            "avg": 138.2431,
+            "min": 107.3422,
+            "max": 219.2941,
+            "U0": 0.77647
+          },
+          "Work": {
+            "avg": 548.7968,
+            "min": 465.625,
+            "max": 614.506,
+            "U0": 0.84845
+          },
+          "Full": {
+            "avg": 588.9745,
+            "min": 520.356,
+            "max": 859.232,
+            "U0": 0.88349
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -13.212,
+          "LOW": -0.28,
+          "HIGH_LOW": -7.772
+        }
+      },
+      "ceil_minus0.1": {
+        "lanes": {
+          "FACE": {
+            "avg": 38.2369,
+            "min": 22.921,
+            "max": 60.932,
+            "U0": 0.59945
+          },
+          "HIGH": {
+            "avg": 270.1941,
+            "min": 170.051,
+            "max": 325.453,
+            "U0": 0.62937
+          },
+          "MIRROR": {
+            "avg": 162.5622,
+            "min": 34.279,
+            "max": 411.632,
+            "U0": 0.21087
+          },
+          "MOOD": {
+            "avg": 40.6372,
+            "min": 18.549,
+            "max": 253.423,
+            "U0": 0.45645
+          },
+          "PERIM": {
+            "avg": 152.4556,
+            "min": 126.507,
+            "max": 176.114,
+            "U0": 0.8298
+          }
+        },
+        "HIGH": {
+          "avg": 270.1941,
+          "min": 170.051,
+          "max": 325.453,
+          "U0": 0.62937
+        },
+        "LOW": {
+          "avg": 193.0927,
+          "min": 150.908,
+          "max": 385.569,
+          "U0": 0.78153
+        },
+        "HIGH_LOW": {
+          "avg": 463.2869,
+          "min": 320.959,
+          "max": 563.795,
+          "U0": 0.69279
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 62.4962,
+            "min": 44.8239,
+            "max": 185.0903,
+            "U0": 0.71723
+          },
+          "Relax": {
+            "avg": 154.7363,
+            "min": 106.8747,
+            "max": 226.4304,
+            "U0": 0.69069
+          },
+          "Work": {
+            "avg": 623.4488,
+            "min": 527.56,
+            "max": 764.378,
+            "U0": 0.8462
+          },
+          "Full": {
+            "avg": 664.0859,
+            "min": 577.313,
+            "max": 1017.801,
+            "U0": 0.86933
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 5.004,
+          "LOW": 3.331,
+          "HIGH_LOW": 4.3
+        }
+      },
+      "ceil_plus0.1": {
+        "lanes": {
+          "FACE": {
+            "avg": 35.8418,
+            "min": 22.428,
+            "max": 52.109,
+            "U0": 0.62575
+          },
+          "HIGH": {
+            "avg": 245.3274,
+            "min": 163.54,
+            "max": 289.74,
+            "U0": 0.66662
+          },
+          "MIRROR": {
+            "avg": 155.711,
+            "min": 38.592,
+            "max": 357.738,
+            "U0": 0.24784
+          },
+          "MOOD": {
+            "avg": 40.5591,
+            "min": 19.471,
+            "max": 252.931,
+            "U0": 0.48007
+          },
+          "PERIM": {
+            "avg": 139.1525,
+            "min": 118.6,
+            "max": 158.09,
+            "U0": 0.8523
+          }
+        },
+        "HIGH": {
+          "avg": 245.3274,
+          "min": 163.54,
+          "max": 289.74,
+          "U0": 0.66662
+        },
+        "LOW": {
+          "avg": 179.7115,
+          "min": 144.049,
+          "max": 376.892,
+          "U0": 0.80156
+        },
+        "HIGH_LOW": {
+          "avg": 425.0389,
+          "min": 312.07,
+          "max": 544.896,
+          "U0": 0.73422
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 59.1236,
+            "min": 42.8271,
+            "max": 182.7489,
+            "U0": 0.72437
+          },
+          "Relax": {
+            "avg": 142.5811,
+            "min": 104.4674,
+            "max": 220.2531,
+            "U0": 0.73269
+          },
+          "Work": {
+            "avg": 576.0327,
+            "min": 479.448,
+            "max": 693.398,
+            "U0": 0.83233
+          },
+          "Full": {
+            "avg": 616.5918,
+            "min": 531.763,
+            "max": 943.498,
+            "U0": 0.86242
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -4.66,
+          "LOW": -3.83,
+          "HIGH_LOW": -4.311
+        }
+      },
+      "pocket_narrow": {
+        "lanes": {
+          "FACE": {
+            "avg": 36.6908,
+            "min": 22.35,
+            "max": 53.096,
+            "U0": 0.60914
+          },
+          "HIGH": {
+            "avg": 257.3692,
+            "min": 167.726,
+            "max": 306.343,
+            "U0": 0.65169
+          },
+          "MIRROR": {
+            "avg": 159.1797,
+            "min": 37.053,
+            "max": 383.339,
+            "U0": 0.23277
+          },
+          "MOOD": {
+            "avg": 40.189,
+            "min": 20.147,
+            "max": 251.662,
+            "U0": 0.50131
+          },
+          "PERIM": {
+            "avg": 146.4152,
+            "min": 123.571,
+            "max": 173.355,
+            "U0": 0.84398
+          }
+        },
+        "HIGH": {
+          "avg": 257.3692,
+          "min": 167.726,
+          "max": 306.343,
+          "U0": 0.65169
+        },
+        "LOW": {
+          "avg": 186.6043,
+          "min": 150.775,
+          "max": 381.748,
+          "U0": 0.80799
+        },
+        "HIGH_LOW": {
+          "avg": 443.9735,
+          "min": 318.501,
+          "max": 554.48,
+          "U0": 0.71739
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.7172,
+            "min": 46.285,
+            "max": 183.5187,
+            "U0": 0.7623
+          },
+          "Relax": {
+            "avg": 148.5506,
+            "min": 107.1696,
+            "max": 223.1807,
+            "U0": 0.72144
+          },
+          "Work": {
+            "avg": 599.655,
+            "min": 502.964,
+            "max": 732.348,
+            "U0": 0.83876
+          },
+          "Full": {
+            "avg": 639.8441,
+            "min": 557.361,
+            "max": 984.01,
+            "U0": 0.87109
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 0.02,
+          "LOW": -0.141,
+          "HIGH_LOW": -0.048
+        }
+      },
+      "pocket_wide": {
+        "lanes": {
+          "FACE": {
+            "avg": 37.0173,
+            "min": 22.356,
+            "max": 61.989,
+            "U0": 0.60393
+          },
+          "HIGH": {
+            "avg": 257.359,
+            "min": 166.83,
+            "max": 306.751,
+            "U0": 0.64824
+          },
+          "MIRROR": {
+            "avg": 159.2375,
+            "min": 37.29,
+            "max": 384.347,
+            "U0": 0.23418
+          },
+          "MOOD": {
+            "avg": 40.293,
+            "min": 18.249,
+            "max": 252.382,
+            "U0": 0.45291
+          },
+          "PERIM": {
+            "avg": 145.9206,
+            "min": 123.534,
+            "max": 167.464,
+            "U0": 0.84658
+          }
+        },
+        "HIGH": {
+          "avg": 257.359,
+          "min": 166.83,
+          "max": 306.751,
+          "U0": 0.64824
+        },
+        "LOW": {
+          "avg": 186.2136,
+          "min": 144.43,
+          "max": 378.768,
+          "U0": 0.77561
+        },
+        "HIGH_LOW": {
+          "avg": 443.5726,
+          "min": 311.26,
+          "max": 552.212,
+          "U0": 0.70171
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.6559,
+            "min": 43.4211,
+            "max": 183.0257,
+            "U0": 0.71586
+          },
+          "Relax": {
+            "avg": 148.4264,
+            "min": 103.7339,
+            "max": 222.4593,
+            "U0": 0.69889
+          },
+          "Work": {
+            "avg": 599.5344,
+            "min": 501.502,
+            "max": 728.228,
+            "U0": 0.83649
+          },
+          "Full": {
+            "avg": 639.8274,
+            "min": 554.403,
+            "max": 979.67,
+            "U0": 0.86649
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 0.016,
+          "LOW": -0.35,
+          "HIGH_LOW": -0.138
+        }
+      }
+    },
+    "TL2": {
+      "base": {
+        "lanes": {
+          "FACE": {
+            "avg": 37.0085,
+            "min": 21.721,
+            "max": 52.801,
+            "U0": 0.58692
+          },
+          "HIGH": {
+            "avg": 257.4129,
+            "min": 167.346,
+            "max": 305.946,
+            "U0": 0.65011
+          },
+          "MIRROR": {
+            "avg": 159.2195,
+            "min": 36.028,
+            "max": 384.82,
+            "U0": 0.22628
+          },
+          "MOOD": {
+            "avg": 40.1028,
+            "min": 20.032,
+            "max": 251.475,
+            "U0": 0.49952
+          },
+          "PERIM": {
+            "avg": 145.6578,
+            "min": 121.833,
+            "max": 173.332,
+            "U0": 0.83643
+          }
+        },
+        "HIGH": {
+          "avg": 257.4129,
+          "min": 167.346,
+          "max": 305.946,
+          "U0": 0.65011
+        },
+        "LOW": {
+          "avg": 185.7606,
+          "min": 147.023,
+          "max": 373.308,
+          "U0": 0.79147
+        },
+        "HIGH_LOW": {
+          "avg": 443.1734,
+          "min": 321.198,
+          "max": 546.662,
+          "U0": 0.72477
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.4761,
+            "min": 45.2972,
+            "max": 181.3432,
+            "U0": 0.74901
+          },
+          "Relax": {
+            "avg": 148.2555,
+            "min": 107.6645,
+            "max": 220.3852,
+            "U0": 0.72621
+          },
+          "Work": {
+            "avg": 599.2986,
+            "min": 501.568,
+            "max": 729.681,
+            "U0": 0.83692
+          },
+          "Full": {
+            "avg": 639.4014,
+            "min": 551.775,
+            "max": 975.513,
+            "U0": 0.86296
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 0.0,
+          "LOW": 0.0,
+          "HIGH_LOW": 0.0
+        },
+        "identical_scene_range_pct": {
+          "HIGH": 0.033,
+          "LOW": 0.618
+        }
+      },
+      "rho_low": {
+        "lanes": {
+          "FACE": {
+            "avg": 25.662,
+            "min": 13.973,
+            "max": 38.271,
+            "U0": 0.5445
+          },
+          "HIGH": {
+            "avg": 225.0996,
+            "min": 139.28,
+            "max": 271.704,
+            "U0": 0.61875
+          },
+          "MIRROR": {
+            "avg": 141.5151,
+            "min": 22.768,
+            "max": 360.111,
+            "U0": 0.16089
+          },
+          "MOOD": {
+            "avg": 33.14,
+            "min": 13.674,
+            "max": 248.567,
+            "U0": 0.41261
+          },
+          "PERIM": {
+            "avg": 107.4428,
+            "min": 90.67,
+            "max": 123.457,
+            "U0": 0.84389
+          }
+        },
+        "HIGH": {
+          "avg": 225.0996,
+          "min": 139.28,
+          "max": 271.704,
+          "U0": 0.61875
+        },
+        "LOW": {
+          "avg": 140.5828,
+          "min": 108.623,
+          "max": 340.552,
+          "U0": 0.77266
+        },
+        "HIGH_LOW": {
+          "avg": 365.6824,
+          "min": 247.903,
+          "max": 485.807,
+          "U0": 0.67792
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 46.7447,
+            "min": 32.3689,
+            "max": 172.1364,
+            "U0": 0.69246
+          },
+          "Relax": {
+            "avg": 121.7049,
+            "min": 82.2085,
+            "max": 200.0548,
+            "U0": 0.67547
+          },
+          "Work": {
+            "avg": 499.7195,
+            "min": 404.363,
+            "max": 629.342,
+            "U0": 0.80918
+          },
+          "Full": {
+            "avg": 532.8595,
+            "min": 450.877,
+            "max": 877.423,
+            "U0": 0.84615
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -12.553,
+          "LOW": -24.32,
+          "HIGH_LOW": -17.485
+        }
+      },
+      "rho_high": {
+        "lanes": {
+          "FACE": {
+            "avg": 51.818,
+            "min": 36.033,
+            "max": 71.388,
+            "U0": 0.69538
+          },
+          "HIGH": {
+            "avg": 305.0261,
+            "min": 211.303,
+            "max": 357.242,
+            "U0": 0.69274
+          },
+          "MIRROR": {
+            "avg": 186.5873,
+            "min": 57.479,
+            "max": 417.86,
+            "U0": 0.30805
+          },
+          "MOOD": {
+            "avg": 52.1518,
+            "min": 28.279,
+            "max": 270.611,
+            "U0": 0.54224
+          },
+          "PERIM": {
+            "avg": 201.5053,
+            "min": 174.198,
+            "max": 227.785,
+            "U0": 0.86448
+          }
+        },
+        "HIGH": {
+          "avg": 305.0261,
+          "min": 211.303,
+          "max": 357.242,
+          "U0": 0.69274
+        },
+        "LOW": {
+          "avg": 253.6571,
+          "min": 213.093,
+          "max": 454.668,
+          "U0": 0.84008
+        },
+        "HIGH_LOW": {
+          "avg": 558.6832,
+          "min": 425.695,
+          "max": 671.026,
+          "U0": 0.76196
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 81.6674,
+            "min": 64.4441,
+            "max": 208.3808,
+            "U0": 0.7891
+          },
+          "Relax": {
+            "avg": 188.1106,
+            "min": 143.0764,
+            "max": 264.6328,
+            "U0": 0.7606
+          },
+          "Work": {
+            "avg": 744.9367,
+            "min": 641.82,
+            "max": 876.299,
+            "U0": 0.86158
+          },
+          "Full": {
+            "avg": 797.0885,
+            "min": 702.296,
+            "max": 1146.91,
+            "U0": 0.88108
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 18.497,
+          "LOW": 36.551,
+          "HIGH_LOW": 26.064
+        }
+      },
+      "beam_minus10": {
+        "lanes": {
+          "FACE": {
+            "avg": 36.749,
+            "min": 22.467,
+            "max": 51.955,
+            "U0": 0.61136
+          },
+          "HIGH": {
+            "avg": 305.6067,
+            "min": 177.175,
+            "max": 377.071,
+            "U0": 0.57975
+          },
+          "MIRROR": {
+            "avg": 172.121,
+            "min": 21.474,
+            "max": 594.324,
+            "U0": 0.12476
+          },
+          "MOOD": {
+            "avg": 40.2545,
+            "min": 21.712,
+            "max": 255.381,
+            "U0": 0.53937
+          },
+          "PERIM": {
+            "avg": 145.3249,
+            "min": 123.584,
+            "max": 169.112,
+            "U0": 0.8504
+          }
+        },
+        "HIGH": {
+          "avg": 305.6067,
+          "min": 177.175,
+          "max": 377.071,
+          "U0": 0.57975
+        },
+        "LOW": {
+          "avg": 185.5794,
+          "min": 151.017,
+          "max": 378.965,
+          "U0": 0.81376
+        },
+        "HIGH_LOW": {
+          "avg": 491.1861,
+          "min": 336.396,
+          "max": 592.525,
+          "U0": 0.68486
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.4839,
+            "min": 45.6292,
+            "max": 184.1246,
+            "U0": 0.7544
+          },
+          "Relax": {
+            "avg": 162.673,
+            "min": 112.8391,
+            "max": 227.4244,
+            "U0": 0.69366
+          },
+          "Work": {
+            "avg": 659.8016,
+            "min": 545.404,
+            "max": 949.345,
+            "U0": 0.82662
+          },
+          "Full": {
+            "avg": 700.0561,
+            "min": 601.473,
+            "max": 1204.726,
+            "U0": 0.85918
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 18.722,
+          "LOW": -0.098,
+          "HIGH_LOW": 10.834
+        }
+      },
+      "beam_plus10": {
+        "lanes": {
+          "FACE": {
+            "avg": 36.6662,
+            "min": 22.005,
+            "max": 49.791,
+            "U0": 0.60014
+          },
+          "HIGH": {
+            "avg": 223.3149,
+            "min": 156.052,
+            "max": 258.678,
+            "U0": 0.6988
+          },
+          "MIRROR": {
+            "avg": 142.3701,
+            "min": 49.137,
+            "max": 277.656,
+            "U0": 0.34514
+          },
+          "MOOD": {
+            "avg": 40.1312,
+            "min": 19.344,
+            "max": 250.922,
+            "U0": 0.48202
+          },
+          "PERIM": {
+            "avg": 146.1422,
+            "min": 125.816,
+            "max": 163.016,
+            "U0": 0.86091
+          }
+        },
+        "HIGH": {
+          "avg": 223.3149,
+          "min": 156.052,
+          "max": 258.678,
+          "U0": 0.6988
+        },
+        "LOW": {
+          "avg": 186.2735,
+          "min": 151.084,
+          "max": 379.637,
+          "U0": 0.81109
+        },
+        "HIGH_LOW": {
+          "avg": 409.5883,
+          "min": 307.136,
+          "max": 540.54,
+          "U0": 0.74987
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.6143,
+            "min": 45.9186,
+            "max": 182.732,
+            "U0": 0.75755
+          },
+          "Relax": {
+            "avg": 138.2099,
+            "min": 103.1868,
+            "max": 218.7822,
+            "U0": 0.7466
+          },
+          "Work": {
+            "avg": 548.4935,
+            "min": 470.392,
+            "max": 624.939,
+            "U0": 0.85761
+          },
+          "Full": {
+            "avg": 588.6247,
+            "min": 522.659,
+            "max": 860.476,
+            "U0": 0.88793
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -13.246,
+          "LOW": 0.276,
+          "HIGH_LOW": -7.578
+        }
+      },
+      "ceil_minus0.1": {
+        "lanes": {
+          "FACE": {
+            "avg": 37.6922,
+            "min": 22.908,
+            "max": 64.989,
+            "U0": 0.60777
+          },
+          "HIGH": {
+            "avg": 270.2056,
+            "min": 170.146,
+            "max": 325.47,
+            "U0": 0.62969
+          },
+          "MIRROR": {
+            "avg": 162.5651,
+            "min": 33.654,
+            "max": 413.55,
+            "U0": 0.20702
+          },
+          "MOOD": {
+            "avg": 40.2986,
+            "min": 19.741,
+            "max": 252.906,
+            "U0": 0.48987
+          },
+          "PERIM": {
+            "avg": 152.2064,
+            "min": 129.27,
+            "max": 168.198,
+            "U0": 0.84931
+          }
+        },
+        "HIGH": {
+          "avg": 270.2056,
+          "min": 170.146,
+          "max": 325.47,
+          "U0": 0.62969
+        },
+        "LOW": {
+          "avg": 192.5051,
+          "min": 150.725,
+          "max": 393.555,
+          "U0": 0.78297
+        },
+        "HIGH_LOW": {
+          "avg": 462.7106,
+          "min": 336.981,
+          "max": 571.423,
+          "U0": 0.72828
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 62.2308,
+            "min": 44.5906,
+            "max": 186.9058,
+            "U0": 0.71654
+          },
+          "Relax": {
+            "avg": 154.4832,
+            "min": 112.8297,
+            "max": 229.0405,
+            "U0": 0.73037
+          },
+          "Work": {
+            "avg": 622.6693,
+            "min": 518.914,
+            "max": 778.863,
+            "U0": 0.83337
+          },
+          "Full": {
+            "avg": 662.968,
+            "min": 574.319,
+            "max": 1031.769,
+            "U0": 0.86628
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 4.97,
+          "LOW": 3.631,
+          "HIGH_LOW": 4.408
+        }
+      },
+      "ceil_plus0.1": {
+        "lanes": {
+          "FACE": {
+            "avg": 35.9088,
+            "min": 22.074,
+            "max": 53.84,
+            "U0": 0.61472
+          },
+          "HIGH": {
+            "avg": 245.2473,
+            "min": 163.459,
+            "max": 288.761,
+            "U0": 0.66651
+          },
+          "MIRROR": {
+            "avg": 155.7843,
+            "min": 38.73,
+            "max": 357.2,
+            "U0": 0.24861
+          },
+          "MOOD": {
+            "avg": 40.0592,
+            "min": 19.32,
+            "max": 250.555,
+            "U0": 0.48229
+          },
+          "PERIM": {
+            "avg": 139.4023,
+            "min": 119.999,
+            "max": 166.585,
+            "U0": 0.86081
+          }
+        },
+        "HIGH": {
+          "avg": 245.2473,
+          "min": 163.459,
+          "max": 288.761,
+          "U0": 0.66651
+        },
+        "LOW": {
+          "avg": 179.4614,
+          "min": 145.645,
+          "max": 370.554,
+          "U0": 0.81157
+        },
+        "HIGH_LOW": {
+          "avg": 424.7087,
+          "min": 309.104,
+          "max": 539.255,
+          "U0": 0.7278
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 58.8861,
+            "min": 43.2429,
+            "max": 180.3327,
+            "U0": 0.73435
+          },
+          "Relax": {
+            "avg": 142.3946,
+            "min": 102.9413,
+            "max": 217.8874,
+            "U0": 0.72293
+          },
+          "Work": {
+            "avg": 576.3426,
+            "min": 472.758,
+            "max": 694.224,
+            "U0": 0.82027
+          },
+          "Full": {
+            "avg": 616.4018,
+            "min": 525.619,
+            "max": 937.69,
+            "U0": 0.85272
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -4.726,
+          "LOW": -3.391,
+          "HIGH_LOW": -4.166
+        }
+      },
+      "pocket_narrow": {
+        "lanes": {
+          "FACE": {
+            "avg": 36.9912,
+            "min": 22.767,
+            "max": 55.563,
+            "U0": 0.61547
+          },
+          "HIGH": {
+            "avg": 257.3275,
+            "min": 167.213,
+            "max": 306.584,
+            "U0": 0.64981
+          },
+          "MIRROR": {
+            "avg": 159.2138,
+            "min": 34.802,
+            "max": 386.817,
+            "U0": 0.21859
+          },
+          "MOOD": {
+            "avg": 40.4364,
+            "min": 19.514,
+            "max": 255.099,
+            "U0": 0.48259
+          },
+          "PERIM": {
+            "avg": 146.1189,
+            "min": 121.881,
+            "max": 172.116,
+            "U0": 0.83412
+          }
+        },
+        "HIGH": {
+          "avg": 257.3275,
+          "min": 167.213,
+          "max": 306.584,
+          "U0": 0.64981
+        },
+        "LOW": {
+          "avg": 186.5553,
+          "min": 145.782,
+          "max": 387.836,
+          "U0": 0.78144
+        },
+        "HIGH_LOW": {
+          "avg": 443.8828,
+          "min": 316.174,
+          "max": 560.518,
+          "U0": 0.71229
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.7916,
+            "min": 44.8109,
+            "max": 186.2436,
+            "U0": 0.73712
+          },
+          "Relax": {
+            "avg": 148.5581,
+            "min": 105.7264,
+            "max": 225.812,
+            "U0": 0.71168
+          },
+          "Work": {
+            "avg": 599.6514,
+            "min": 509.058,
+            "max": 733.239,
+            "U0": 0.84892
+          },
+          "Full": {
+            "avg": 640.0878,
+            "min": 561.903,
+            "max": 988.338,
+            "U0": 0.87785
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -0.033,
+          "LOW": 0.428,
+          "HIGH_LOW": 0.16
+        }
+      },
+      "pocket_wide": {
+        "lanes": {
+          "FACE": {
+            "avg": 36.8971,
+            "min": 23.353,
+            "max": 63.353,
+            "U0": 0.63292
+          },
+          "HIGH": {
+            "avg": 257.3494,
+            "min": 167.26,
+            "max": 306.56,
+            "U0": 0.64993
+          },
+          "MIRROR": {
+            "avg": 159.1354,
+            "min": 35.917,
+            "max": 384.001,
+            "U0": 0.2257
+          },
+          "MOOD": {
+            "avg": 40.6469,
+            "min": 20.596,
+            "max": 253.125,
+            "U0": 0.50671
+          },
+          "PERIM": {
+            "avg": 146.262,
+            "min": 126.037,
+            "max": 179.183,
+            "U0": 0.86172
+          }
+        },
+        "HIGH": {
+          "avg": 257.3494,
+          "min": 167.26,
+          "max": 306.56,
+          "U0": 0.64993
+        },
+        "LOW": {
+          "avg": 186.909,
+          "min": 148.751,
+          "max": 391.858,
+          "U0": 0.79585
+        },
+        "HIGH_LOW": {
+          "avg": 444.2584,
+          "min": 318.524,
+          "max": 565.466,
+          "U0": 0.71698
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 60.9537,
+            "min": 44.3963,
+            "max": 186.5582,
+            "U0": 0.72836
+          },
+          "Relax": {
+            "avg": 148.72,
+            "min": 106.4904,
+            "max": 227.2015,
+            "U0": 0.71605
+          },
+          "Work": {
+            "avg": 599.6439,
+            "min": 502.085,
+            "max": 737.9,
+            "U0": 0.83731
+          },
+          "Full": {
+            "avg": 640.2908,
+            "min": 551.407,
+            "max": 991.025,
+            "U0": 0.86118
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -0.025,
+          "LOW": 0.618,
+          "HIGH_LOW": 0.245
+        }
+      }
+    },
+    "BAL": {
+      "base": {
+        "lanes": {
+          "HIGH": {
+            "avg": 75.3049,
+            "min": 49.027,
+            "max": 90.81,
+            "U0": 0.65105
+          },
+          "MOOD": {
+            "avg": 54.7407,
+            "min": 33.879,
+            "max": 258.986,
+            "U0": 0.6189
+          }
+        },
+        "HIGH": {
+          "avg": 75.3049,
+          "min": 49.027,
+          "max": 90.81,
+          "U0": 0.65105
+        },
+        "LOW": {
+          "avg": 54.7407,
+          "min": 33.879,
+          "max": 258.986,
+          "U0": 0.6189
+        },
+        "HIGH_LOW": {
+          "avg": 130.0456,
+          "min": 97.101,
+          "max": 315.491,
+          "U0": 0.74667
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 32.8444,
+            "min": 20.3274,
+            "max": 155.3916,
+            "U0": 0.6189
+          },
+          "Relax": {
+            "avg": 49.9618,
+            "min": 37.5137,
+            "max": 146.4445,
+            "U0": 0.75085
+          },
+          "Work": {
+            "avg": 75.3049,
+            "min": 49.027,
+            "max": 90.81,
+            "U0": 0.65105
+          },
+          "Full": {
+            "avg": 130.0456,
+            "min": 97.101,
+            "max": 315.491,
+            "U0": 0.74667
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 0.0,
+          "LOW": 0.0,
+          "HIGH_LOW": 0.0
+        },
+        "identical_scene_range_pct": {
+          "HIGH": 0.023,
+          "LOW": 0.739
+        }
+      },
+      "rho_low": {
+        "lanes": {
+          "HIGH": {
+            "avg": 66.601,
+            "min": 40.413,
+            "max": 81.673,
+            "U0": 0.60679
+          },
+          "MOOD": {
+            "avg": 32.5976,
+            "min": 18.133,
+            "max": 83.721,
+            "U0": 0.55627
+          }
+        },
+        "HIGH": {
+          "avg": 66.601,
+          "min": 40.413,
+          "max": 81.673,
+          "U0": 0.60679
+        },
+        "LOW": {
+          "avg": 32.5976,
+          "min": 18.133,
+          "max": 83.721,
+          "U0": 0.55627
+        },
+        "HIGH_LOW": {
+          "avg": 99.1986,
+          "min": 66.193,
+          "max": 159.458,
+          "U0": 0.66728
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 19.5586,
+            "min": 10.8798,
+            "max": 50.2326,
+            "U0": 0.55627
+          },
+          "Relax": {
+            "avg": 36.2791,
+            "min": 24.5983,
+            "max": 64.5618,
+            "U0": 0.67803
+          },
+          "Work": {
+            "avg": 66.601,
+            "min": 40.413,
+            "max": 81.673,
+            "U0": 0.60679
+          },
+          "Full": {
+            "avg": 99.1986,
+            "min": 66.193,
+            "max": 159.458,
+            "U0": 0.66728
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -11.558,
+          "LOW": -40.451,
+          "HIGH_LOW": -23.72
+        }
+      },
+      "rho_high": {
+        "lanes": {
+          "HIGH": {
+            "avg": 88.5066,
+            "min": 61.585,
+            "max": 104.434,
+            "U0": 0.69582
+          },
+          "MOOD": {
+            "avg": 84.0188,
+            "min": 59.986,
+            "max": 148.24,
+            "U0": 0.71396
+          }
+        },
+        "HIGH": {
+          "avg": 88.5066,
+          "min": 61.585,
+          "max": 104.434,
+          "U0": 0.69582
+        },
+        "LOW": {
+          "avg": 84.0188,
+          "min": 59.986,
+          "max": 148.24,
+          "U0": 0.71396
+        },
+        "HIGH_LOW": {
+          "avg": 172.5254,
+          "min": 137.744,
+          "max": 248.819,
+          "U0": 0.7984
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 50.4113,
+            "min": 35.9916,
+            "max": 88.944,
+            "U0": 0.71396
+          },
+          "Relax": {
+            "avg": 68.5614,
+            "min": 55.5963,
+            "max": 104.2937,
+            "U0": 0.8109
+          },
+          "Work": {
+            "avg": 88.5066,
+            "min": 61.585,
+            "max": 104.434,
+            "U0": 0.69582
+          },
+          "Full": {
+            "avg": 172.5254,
+            "min": 137.744,
+            "max": 248.819,
+            "U0": 0.7984
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 17.531,
+          "LOW": 53.485,
+          "HIGH_LOW": 32.665
+        }
+      },
+      "beam_minus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 87.1607,
+            "min": 49.823,
+            "max": 108.947,
+            "U0": 0.57162
+          },
+          "MOOD": {
+            "avg": 49.8815,
+            "min": 34.818,
+            "max": 111.163,
+            "U0": 0.69801
+          }
+        },
+        "HIGH": {
+          "avg": 87.1607,
+          "min": 49.823,
+          "max": 108.947,
+          "U0": 0.57162
+        },
+        "LOW": {
+          "avg": 49.8815,
+          "min": 34.818,
+          "max": 111.163,
+          "U0": 0.69801
+        },
+        "HIGH_LOW": {
+          "avg": 137.0422,
+          "min": 92.342,
+          "max": 204.904,
+          "U0": 0.67382
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 29.9289,
+            "min": 20.8908,
+            "max": 66.6978,
+            "U0": 0.69801
+          },
+          "Relax": {
+            "avg": 51.0889,
+            "min": 36.2036,
+            "max": 81.0548,
+            "U0": 0.70864
+          },
+          "Work": {
+            "avg": 87.1607,
+            "min": 49.823,
+            "max": 108.947,
+            "U0": 0.57162
+          },
+          "Full": {
+            "avg": 137.0422,
+            "min": 92.342,
+            "max": 204.904,
+            "U0": 0.67382
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 15.744,
+          "LOW": -8.877,
+          "HIGH_LOW": 5.38
+        }
+      },
+      "beam_plus10": {
+        "lanes": {
+          "HIGH": {
+            "avg": 66.4681,
+            "min": 46.767,
+            "max": 77.942,
+            "U0": 0.7036
+          },
+          "MOOD": {
+            "avg": 57.6906,
+            "min": 38.114,
+            "max": 133.845,
+            "U0": 0.66066
+          }
+        },
+        "HIGH": {
+          "avg": 66.4681,
+          "min": 46.767,
+          "max": 77.942,
+          "U0": 0.7036
+        },
+        "LOW": {
+          "avg": 57.6906,
+          "min": 38.114,
+          "max": 133.845,
+          "U0": 0.66066
+        },
+        "HIGH_LOW": {
+          "avg": 124.1586,
+          "min": 92.462,
+          "max": 190.235,
+          "U0": 0.74471
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 34.6143,
+            "min": 22.8684,
+            "max": 80.307,
+            "U0": 0.66066
+          },
+          "Relax": {
+            "avg": 48.7857,
+            "min": 36.4488,
+            "max": 83.8395,
+            "U0": 0.74712
+          },
+          "Work": {
+            "avg": 66.4681,
+            "min": 46.767,
+            "max": 77.942,
+            "U0": 0.7036
+          },
+          "Full": {
+            "avg": 124.1586,
+            "min": 92.462,
+            "max": 190.235,
+            "U0": 0.74471
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -11.735,
+          "LOW": 5.389,
+          "HIGH_LOW": -4.527
+        }
+      },
+      "ceil_minus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 78.0835,
+            "min": 49.53,
+            "max": 95.166,
+            "U0": 0.63432
+          },
+          "MOOD": {
+            "avg": 56.245,
+            "min": 36.746,
+            "max": 246.695,
+            "U0": 0.65332
+          }
+        },
+        "HIGH": {
+          "avg": 78.0835,
+          "min": 49.53,
+          "max": 95.166,
+          "U0": 0.63432
+        },
+        "LOW": {
+          "avg": 56.245,
+          "min": 36.746,
+          "max": 246.695,
+          "U0": 0.65332
+        },
+        "HIGH_LOW": {
+          "avg": 134.3285,
+          "min": 98.84,
+          "max": 316.092,
+          "U0": 0.73581
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 33.747,
+            "min": 22.0476,
+            "max": 148.017,
+            "U0": 0.65332
+          },
+          "Relax": {
+            "avg": 51.5475,
+            "min": 38.9671,
+            "max": 144.1666,
+            "U0": 0.75594
+          },
+          "Work": {
+            "avg": 78.0835,
+            "min": 49.53,
+            "max": 95.166,
+            "U0": 0.63432
+          },
+          "Full": {
+            "avg": 134.3285,
+            "min": 98.84,
+            "max": 316.092,
+            "U0": 0.73581
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 3.69,
+          "LOW": 2.748,
+          "HIGH_LOW": 3.293
+        }
+      },
+      "ceil_plus0.1": {
+        "lanes": {
+          "HIGH": {
+            "avg": 72.6414,
+            "min": 47.69,
+            "max": 87.059,
+            "U0": 0.65651
+          },
+          "MOOD": {
+            "avg": 53.812,
+            "min": 34.354,
+            "max": 140.615,
+            "U0": 0.63841
+          }
+        },
+        "HIGH": {
+          "avg": 72.6414,
+          "min": 47.69,
+          "max": 87.059,
+          "U0": 0.65651
+        },
+        "LOW": {
+          "avg": 53.812,
+          "min": 34.354,
+          "max": 140.615,
+          "U0": 0.63841
+        },
+        "HIGH_LOW": {
+          "avg": 126.4534,
+          "min": 94.743,
+          "max": 224.104,
+          "U0": 0.74923
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 32.2872,
+            "min": 20.6124,
+            "max": 84.369,
+            "U0": 0.63841
+          },
+          "Relax": {
+            "avg": 48.6984,
+            "min": 37.1387,
+            "max": 95.3542,
+            "U0": 0.76263
+          },
+          "Work": {
+            "avg": 72.6414,
+            "min": 47.69,
+            "max": 87.059,
+            "U0": 0.65651
+          },
+          "Full": {
+            "avg": 126.4534,
+            "min": 94.743,
+            "max": 224.104,
+            "U0": 0.74923
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -3.537,
+          "LOW": -1.697,
+          "HIGH_LOW": -2.762
+        }
+      },
+      "pocket_narrow": {
+        "lanes": {
+          "HIGH": {
+            "avg": 75.3027,
+            "min": 48.616,
+            "max": 90.868,
+            "U0": 0.64561
+          },
+          "MOOD": {
+            "avg": 55.1455,
+            "min": 30.263,
+            "max": 130.616,
+            "U0": 0.54878
+          }
+        },
+        "HIGH": {
+          "avg": 75.3027,
+          "min": 48.616,
+          "max": 90.868,
+          "U0": 0.64561
+        },
+        "LOW": {
+          "avg": 55.1455,
+          "min": 30.263,
+          "max": 130.616,
+          "U0": 0.54878
+        },
+        "HIGH_LOW": {
+          "avg": 130.4482,
+          "min": 95.644,
+          "max": 211.703,
+          "U0": 0.7332
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 33.0873,
+            "min": 18.1578,
+            "max": 78.3696,
+            "U0": 0.54878
+          },
+          "Relax": {
+            "avg": 50.1636,
+            "min": 38.0002,
+            "max": 89.6341,
+            "U0": 0.75753
+          },
+          "Work": {
+            "avg": 75.3027,
+            "min": 48.616,
+            "max": 90.868,
+            "U0": 0.64561
+          },
+          "Full": {
+            "avg": 130.4482,
+            "min": 95.644,
+            "max": 211.703,
+            "U0": 0.7332
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": -0.003,
+          "LOW": 0.739,
+          "HIGH_LOW": 0.31
+        }
+      },
+      "pocket_wide": {
+        "lanes": {
+          "HIGH": {
+            "avg": 75.3198,
+            "min": 48.514,
+            "max": 90.984,
+            "U0": 0.64411
+          },
+          "MOOD": {
+            "avg": 54.9013,
+            "min": 34.676,
+            "max": 116.02,
+            "U0": 0.63161
+          }
+        },
+        "HIGH": {
+          "avg": 75.3198,
+          "min": 48.514,
+          "max": 90.984,
+          "U0": 0.64411
+        },
+        "LOW": {
+          "avg": 54.9013,
+          "min": 34.676,
+          "max": 116.02,
+          "U0": 0.63161
+        },
+        "HIGH_LOW": {
+          "avg": 130.221,
+          "min": 97.549,
+          "max": 203.193,
+          "U0": 0.7491
+        },
+        "scenes": {
+          "Off": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          },
+          "Mood": {
+            "avg": 32.9408,
+            "min": 20.8056,
+            "max": 69.612,
+            "U0": 0.63161
+          },
+          "Relax": {
+            "avg": 50.0466,
+            "min": 38.6956,
+            "max": 84.1619,
+            "U0": 0.77319
+          },
+          "Work": {
+            "avg": 75.3198,
+            "min": 48.514,
+            "max": 90.984,
+            "U0": 0.64411
+          },
+          "Full": {
+            "avg": 130.221,
+            "min": 97.549,
+            "max": 203.193,
+            "U0": 0.7491
+          },
+          "Night": {
+            "avg": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "U0": null
+          }
+        },
+        "delta_pct": {
+          "HIGH": 0.02,
+          "LOW": 0.293,
+          "HIGH_LOW": 0.135
+        }
+      }
+    }
+  },
+  "grid_shapes": {
+    "UTL": {
+      "grid_shape": [
+        16,
+        58
+      ],
+      "sampled_points": 928,
+      "task_points": 132,
+      "plane_m": 0.9,
+      "other_planes": {}
+    },
+    "DRS": {
+      "grid_shape": [
+        25,
+        14
+      ],
+      "sampled_points": 350,
+      "task_points": 12,
+      "plane_m": 0.75,
+      "other_planes": {}
+    },
+    "LOB": {
+      "grid_shape": [
+        22,
+        14
+      ],
+      "sampled_points": 308,
+      "task_points": 8,
+      "plane_m": 0.75,
+      "other_planes": {
+        "lobby_face": 3
+      }
+    },
+    "TL1": {
+      "grid_shape": [
+        22,
+        35
+      ],
+      "sampled_points": 770,
+      "task_points": 168,
+      "plane_m": 0.0,
+      "other_planes": {}
+    },
+    "TL2": {
+      "grid_shape": [
+        22,
+        35
+      ],
+      "sampled_points": 770,
+      "task_points": 168,
+      "plane_m": 0.0,
+      "other_planes": {}
+    },
+    "BAL": {
+      "grid_shape": [
+        32,
+        42
+      ],
+      "sampled_points": 1344,
+      "task_points": 522,
+      "plane_m": 0.0,
+      "other_planes": {}
+    }
+  },
+  "parity": {
+    "UTL": {
+      "HIGH": {
+        "local_avg": 211.1541,
+        "remote_avg": 211.1417,
+        "difference_pct": -0.006,
+        "absolute_lx": 0.0124,
+        "limit_lx": 12.6692
+      },
+      "per_fixture": [
+        {
+          "fixture": "UTL-H1",
+          "plane": "grid:UTL",
+          "local_avg": 60.8402,
+          "remote_avg": 60.8378,
+          "difference_lx": 0.0023,
+          "limit_lx": 3.6504,
+          "difference_pct": -0.004
+        },
+        {
+          "fixture": "UTL-H2",
+          "plane": "grid:UTL",
+          "local_avg": 67.8043,
+          "remote_avg": 67.8191,
+          "difference_lx": 0.0149,
+          "limit_lx": 4.0683,
+          "difference_pct": 0.022
+        },
+        {
+          "fixture": "UTL-H3",
+          "plane": "grid:UTL",
+          "local_avg": 59.9806,
+          "remote_avg": 59.9859,
+          "difference_lx": 0.0053,
+          "limit_lx": 3.5988,
+          "difference_pct": 0.009
+        },
+        {
+          "fixture": "UTL-T1",
+          "plane": "grid:UTL",
+          "local_avg": 83.6383,
+          "remote_avg": 83.6609,
+          "difference_lx": 0.0225,
+          "limit_lx": 5.0183,
+          "difference_pct": 0.027
+        }
+      ]
+    },
+    "DRS": {
+      "HIGH": {
+        "local_avg": 197.4697,
+        "remote_avg": 197.8725,
+        "difference_pct": 0.204,
+        "absolute_lx": 0.4028,
+        "limit_lx": 11.8482
+      },
+      "per_fixture": [
+        {
+          "fixture": "DRS-H1",
+          "plane": "grid:DRS",
+          "local_avg": 86.5644,
+          "remote_avg": 86.5875,
+          "difference_lx": 0.0231,
+          "limit_lx": 5.1939,
+          "difference_pct": 0.027
+        },
+        {
+          "fixture": "DRS-H2",
+          "plane": "grid:DRS",
+          "local_avg": 84.3351,
+          "remote_avg": 84.3622,
+          "difference_lx": 0.0271,
+          "limit_lx": 5.0601,
+          "difference_pct": 0.032
+        }
+      ]
+    },
+    "LOB": {
+      "HIGH": {
+        "local_avg": 264.2632,
+        "remote_avg": 264.1681,
+        "difference_pct": -0.036,
+        "absolute_lx": 0.0951,
+        "limit_lx": 15.8558
+      },
+      "per_fixture": [
+        {
+          "fixture": "LOB-H1",
+          "plane": "grid:LOB",
+          "local_avg": 113.0551,
+          "remote_avg": 113.0433,
+          "difference_lx": 0.0117,
+          "limit_lx": 6.7833,
+          "difference_pct": -0.01
+        },
+        {
+          "fixture": "LOB-H1",
+          "plane": "lobby_face",
+          "local_avg": 68.548,
+          "remote_avg": 68.986,
+          "difference_lx": 0.438,
+          "limit_lx": 4.1129,
+          "difference_pct": 0.639
+        },
+        {
+          "fixture": "LOB-H2",
+          "plane": "grid:LOB",
+          "local_avg": 109.8551,
+          "remote_avg": 109.8393,
+          "difference_lx": 0.0159,
+          "limit_lx": 6.5913,
+          "difference_pct": -0.014
+        },
+        {
+          "fixture": "LOB-H2",
+          "plane": "lobby_face",
+          "local_avg": 20.822,
+          "remote_avg": 20.7173,
+          "difference_lx": 0.1047,
+          "limit_lx": 1.2493,
+          "difference_pct": -0.503
+        },
+        {
+          "fixture": "LOB-F1",
+          "plane": "grid:LOB",
+          "local_avg": 68.267,
+          "remote_avg": 68.3472,
+          "difference_lx": 0.0803,
+          "limit_lx": 4.096,
+          "difference_pct": 0.118
+        },
+        {
+          "fixture": "LOB-F1",
+          "plane": "lobby_face",
+          "local_avg": 309.0533,
+          "remote_avg": 309.8343,
+          "difference_lx": 0.781,
+          "limit_lx": 18.5432,
+          "difference_pct": 0.253
+        },
+        {
+          "fixture": "LOB-N1",
+          "plane": "grid:LOB",
+          "local_avg": 0.7137,
+          "remote_avg": 0.7168,
+          "difference_lx": 0.0031,
+          "limit_lx": 0.3,
+          "difference_pct": 0.435
+        },
+        {
+          "fixture": "LOB-N1",
+          "plane": "lobby_face",
+          "local_avg": 0.614,
+          "remote_avg": 0.509,
+          "difference_lx": 0.105,
+          "limit_lx": 0.3,
+          "difference_pct": -17.101
+        }
+      ]
+    },
+    "TL1": {
+      "HIGH": {
+        "local_avg": 257.3339,
+        "remote_avg": 257.3172,
+        "difference_pct": -0.006,
+        "absolute_lx": 0.0167,
+        "limit_lx": 15.44
+      },
+      "LOW": {
+        "local_avg": 186.0681,
+        "remote_avg": 186.8685,
+        "difference_pct": 0.43,
+        "absolute_lx": 0.8004,
+        "limit_lx": 11.1641
+      },
+      "per_fixture": [
+        {
+          "fixture": "TL1-M1",
+          "plane": "grid:TL1",
+          "local_avg": 67.3281,
+          "remote_avg": 67.3567,
+          "difference_lx": 0.0286,
+          "limit_lx": 4.0397,
+          "difference_pct": 0.043
+        },
+        {
+          "fixture": "TL1-M2",
+          "plane": "grid:TL1",
+          "local_avg": 82.2786,
+          "remote_avg": 82.3161,
+          "difference_lx": 0.0375,
+          "limit_lx": 4.9367,
+          "difference_pct": 0.046
+        },
+        {
+          "fixture": "TL1-G1",
+          "plane": "grid:TL1",
+          "local_avg": 68.4472,
+          "remote_avg": 68.4295,
+          "difference_lx": 0.0176,
+          "limit_lx": 4.1068,
+          "difference_pct": -0.026
+        },
+        {
+          "fixture": "TL1-G2",
+          "plane": "grid:TL1",
+          "local_avg": 68.8245,
+          "remote_avg": 68.8081,
+          "difference_lx": 0.0164,
+          "limit_lx": 4.1295,
+          "difference_pct": -0.024
+        },
+        {
+          "fixture": "TL1-G3",
+          "plane": "grid:TL1",
+          "local_avg": 79.659,
+          "remote_avg": 79.6329,
+          "difference_lx": 0.0261,
+          "limit_lx": 4.7795,
+          "difference_pct": -0.033
+        },
+        {
+          "fixture": "TL1-L1",
+          "plane": "grid:TL1",
+          "local_avg": 133.8271,
+          "remote_avg": 134.1295,
+          "difference_lx": 0.3024,
+          "limit_lx": 8.0296,
+          "difference_pct": 0.226
+        },
+        {
+          "fixture": "TL1-L2",
+          "plane": "grid:TL1",
+          "local_avg": 27.7221,
+          "remote_avg": 27.6466,
+          "difference_lx": 0.0756,
+          "limit_lx": 1.6633,
+          "difference_pct": -0.273
+        },
+        {
+          "fixture": "TL1-L3",
+          "plane": "grid:TL1",
+          "local_avg": 42.3099,
+          "remote_avg": 42.3071,
+          "difference_lx": 0.0028,
+          "limit_lx": 2.5386,
+          "difference_pct": -0.007
+        },
+        {
+          "fixture": "TL1-F1",
+          "plane": "grid:TL1",
+          "local_avg": 14.0294,
+          "remote_avg": 14.065,
+          "difference_lx": 0.0356,
+          "limit_lx": 0.8418,
+          "difference_pct": 0.254
+        },
+        {
+          "fixture": "TL1-F2",
+          "plane": "grid:TL1",
+          "local_avg": 17.5541,
+          "remote_avg": 17.5676,
+          "difference_lx": 0.0134,
+          "limit_lx": 1.0532,
+          "difference_pct": 0.077
+        }
+      ]
+    },
+    "TL2": {
+      "HIGH": {
+        "local_avg": 257.3597,
+        "remote_avg": 257.4129,
+        "difference_pct": 0.021,
+        "absolute_lx": 0.0532,
+        "limit_lx": 15.4416
+      },
+      "LOW": {
+        "local_avg": 186.0011,
+        "remote_avg": 185.7606,
+        "difference_pct": -0.129,
+        "absolute_lx": 0.2405,
+        "limit_lx": 11.1601
+      },
+      "per_fixture": [
+        {
+          "fixture": "TL2-M1",
+          "plane": "grid:TL2",
+          "local_avg": 67.3647,
+          "remote_avg": 67.3657,
+          "difference_lx": 0.0009,
+          "limit_lx": 4.0419,
+          "difference_pct": 0.001
+        },
+        {
+          "fixture": "TL2-M2",
+          "plane": "grid:TL2",
+          "local_avg": 82.2952,
+          "remote_avg": 82.3005,
+          "difference_lx": 0.0053,
+          "limit_lx": 4.9377,
+          "difference_pct": 0.006
+        },
+        {
+          "fixture": "TL2-G1",
+          "plane": "grid:TL2",
+          "local_avg": 68.4295,
+          "remote_avg": 68.4523,
+          "difference_lx": 0.0228,
+          "limit_lx": 4.1058,
+          "difference_pct": 0.033
+        },
+        {
+          "fixture": "TL2-G2",
+          "plane": "grid:TL2",
+          "local_avg": 68.8288,
+          "remote_avg": 68.8408,
+          "difference_lx": 0.012,
+          "limit_lx": 4.1297,
+          "difference_pct": 0.017
+        },
+        {
+          "fixture": "TL2-G3",
+          "plane": "grid:TL2",
+          "local_avg": 79.6423,
+          "remote_avg": 79.6257,
+          "difference_lx": 0.0166,
+          "limit_lx": 4.7785,
+          "difference_pct": -0.021
+        },
+        {
+          "fixture": "TL2-L1",
+          "plane": "grid:TL2",
+          "local_avg": 134.0607,
+          "remote_avg": 134.0599,
+          "difference_lx": 0.0008,
+          "limit_lx": 8.0436,
+          "difference_pct": -0.001
+        },
+        {
+          "fixture": "TL2-L2",
+          "plane": "grid:TL2",
+          "local_avg": 27.6263,
+          "remote_avg": 27.5788,
+          "difference_lx": 0.0475,
+          "limit_lx": 1.6576,
+          "difference_pct": -0.172
+        },
+        {
+          "fixture": "TL2-L3",
+          "plane": "grid:TL2",
+          "local_avg": 42.2945,
+          "remote_avg": 42.2926,
+          "difference_lx": 0.0019,
+          "limit_lx": 2.5377,
+          "difference_pct": -0.004
+        },
+        {
+          "fixture": "TL2-F1",
+          "plane": "grid:TL2",
+          "local_avg": 13.8878,
+          "remote_avg": 14.0427,
+          "difference_lx": 0.1549,
+          "limit_lx": 0.8333,
+          "difference_pct": 1.115
+        },
+        {
+          "fixture": "TL2-F2",
+          "plane": "grid:TL2",
+          "local_avg": 17.5596,
+          "remote_avg": 17.5688,
+          "difference_lx": 0.0091,
+          "limit_lx": 1.0536,
+          "difference_pct": 0.052
+        }
+      ]
+    },
+    "BAL": {
+      "HIGH": {
+        "local_avg": 75.3029,
+        "remote_avg": 75.3049,
+        "difference_pct": 0.003,
+        "absolute_lx": 0.002,
+        "limit_lx": 4.5182
+      },
+      "LOW": {
+        "local_avg": 54.4853,
+        "remote_avg": 54.7407,
+        "difference_pct": 0.469,
+        "absolute_lx": 0.2554,
+        "limit_lx": 3.2691
+      },
+      "per_fixture": [
+        {
+          "fixture": "BAL-H1",
+          "plane": "grid:BAL",
+          "local_avg": 32.4371,
+          "remote_avg": 32.4323,
+          "difference_lx": 0.0048,
+          "limit_lx": 1.9462,
+          "difference_pct": -0.015
+        },
+        {
+          "fixture": "BAL-H2",
+          "plane": "grid:BAL",
+          "local_avg": 31.9824,
+          "remote_avg": 31.9857,
+          "difference_lx": 0.0033,
+          "limit_lx": 1.9189,
+          "difference_pct": 0.01
+        },
+        {
+          "fixture": "BAL-L1",
+          "plane": "grid:BAL",
+          "local_avg": 33.4362,
+          "remote_avg": 33.2317,
+          "difference_lx": 0.2045,
+          "limit_lx": 2.0062,
+          "difference_pct": -0.612
+        },
+        {
+          "fixture": "BAL-L2",
+          "plane": "grid:BAL",
+          "local_avg": 15.4044,
+          "remote_avg": 15.2669,
+          "difference_lx": 0.1375,
+          "limit_lx": 0.9243,
+          "difference_pct": -0.893
+        },
+        {
+          "fixture": "BAL-L3",
+          "plane": "grid:BAL",
+          "local_avg": 12.2598,
+          "remote_avg": 12.6821,
+          "difference_lx": 0.4223,
+          "limit_lx": 0.7356,
+          "difference_pct": 3.445
+        }
+      ]
+    }
+  },
+  "engines": {
+    "base": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "rho_low": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "rho_high": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "beam_minus10": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "beam_plus10": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "ceil_minus0.1": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "ceil_plus0.1": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "pocket_narrow": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    },
+    "pocket_wide": {
+      "rcontrib_sha256": "db374fe9c78d9e49c43f5df488bec666253d96be21da6d49f09bb5a994eb6c69",
+      "oconv_sha256": "9033617bb079df6e5dafcb0b1758ac5ba630d86bc3eb191725e7bffff2209dc5",
+      "procs": 16
+    }
+  },
+  "checks": [
+    {
+      "check": "Previous receipt, source files, outputs, master and delivered review unchanged",
+      "status": "PASS",
+      "problems": [],
+      "details": null
+    },
+    {
+      "check": "All nine variants, units, optical parameters and remote engine hashes",
+      "status": "PASS",
+      "problems": [],
+      "details": {
+        "variants": 9,
+        "enclosures": 54
+      }
+    },
+    {
+      "check": "All result vectors finite, non-negative and aligned with original grids and workplanes",
+      "status": "PASS",
+      "problems": [],
+      "details": {
+        "UTL": {
+          "grid_shape": [
+            16,
+            58
+          ],
+          "sampled_points": 928,
+          "task_points": 132,
+          "plane_m": 0.9,
+          "other_planes": {}
+        },
+        "DRS": {
+          "grid_shape": [
+            25,
+            14
+          ],
+          "sampled_points": 350,
+          "task_points": 12,
+          "plane_m": 0.75,
+          "other_planes": {}
+        },
+        "LOB": {
+          "grid_shape": [
+            22,
+            14
+          ],
+          "sampled_points": 308,
+          "task_points": 8,
+          "plane_m": 0.75,
+          "other_planes": {
+            "lobby_face": 3
+          }
+        },
+        "TL1": {
+          "grid_shape": [
+            22,
+            35
+          ],
+          "sampled_points": 770,
+          "task_points": 168,
+          "plane_m": 0.0,
+          "other_planes": {}
+        },
+        "TL2": {
+          "grid_shape": [
+            22,
+            35
+          ],
+          "sampled_points": 770,
+          "task_points": 168,
+          "plane_m": 0.0,
+          "other_planes": {}
+        },
+        "BAL": {
+          "grid_shape": [
+            32,
+            42
+          ],
+          "sampled_points": 1344,
+          "task_points": 522,
+          "plane_m": 0.0,
+          "other_planes": {}
+        }
+      }
+    },
+    {
+      "check": "Unchanged fixture identities and plan polygons",
+      "status": "PASS",
+      "problems": [],
+      "details": null
+    },
+    {
+      "check": "Ceiling perturbations and flat/no-tray scene construction",
+      "status": "PASS",
+      "problems": [],
+      "details": null
+    },
+    {
+      "check": "Baseline scene matches previous local scene; pocket cases are identical-scene controls",
+      "status": "PASS",
+      "problems": [],
+      "details": null
+    },
+    {
+      "check": "Identical-settings local/remote parity on room lanes and every fixture/plane",
+      "status": "PASS",
+      "problems": [],
+      "details": {
+        "threshold": "6% of mean, with 0.30 lx absolute floor"
+      }
+    }
+  ],
+  "failures": []
+}

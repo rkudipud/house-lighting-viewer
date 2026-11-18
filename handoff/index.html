@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>House handoff - design review</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #172a35; background: #f5f4ef; }
+    body { max-width: 64rem; margin: auto; padding: 2rem 1.25rem 4rem; line-height: 1.6; }
+    h1, h2 { line-height: 1.2; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    a { color: #075975; text-underline-offset: .2em; }
+    section, aside { background: white; border: 1px solid #c9d1d3; border-radius: .4rem; padding: 1.25rem; margin-top: 1.25rem; }
+    .hold { border-left: .35rem solid #98610d; }
+    .status { font-weight: 700; color: #744700; }
+    code { overflow-wrap: anywhere; }
+    dt { font-weight: 700; margin-top: .75rem; }
+    dd { margin-left: 0; }
+    figure { margin: 1.5rem 0; }
+    img { display: block; max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="status">DESIGN REVIEW ONLY - NOT FOR CONSTRUCTION</p>
+    <h1>House handoff</h1>
+    <p>The coordinated local review handoff includes the current viewer, three final illustrative
+      renders and all trade review packs. Coordinator review is accepted for local design review
+      only, not construction, product, procurement, fabrication or publication approval.
+      All site and professional holds remain. Nothing in this update has been pushed or published.</p>
+    <p class="status">The verified
+      <a href="electrician/simulation/revision-all-rooms/index.html">six-room sensitivity revision</a>
+      is included alongside the historical report. Its integration awaits coordinator review;
+      no technical, construction or publication approval is implied.</p>
+    <nav aria-label="Trade handoff sections">
+      <a href="#electrician">Electrician</a>
+      <a href="#mason-civil">Mason / civil</a>
+      <a href="#contractor">Contractor / joinery</a>
+      <a href="viewer/index.html">Viewer / three renders</a>
+      <a href="electrician/simulation/index.html">Exploratory simulation addendum</a>
+      <a href="#site-views">Site views</a>
+      <a href="#release">Release checks</a>
+    </nav>
+  </header>
+  <aside class="hold" aria-label="Construction holds">
+    <h2>Before ordering or site work</h2>
+    <p>Site measurements and service positions must be verified. Fixture selection, driver and dimmer
+      compatibility, wiring and protection require the responsible electrician's approval. Structural
+      work, wall changes, slab cutting and load-bearing fixings require qualified site approval.
+      Public availability of plans or images is not construction approval.</p>
+  </aside>
+  <main>
+    <section id="electrician">
+      <h2>Electrician</h2>
+      <p class="status">Current-master lighting, electrical/control-options and procurement review staged.</p>
+      <p><a href="electrician/index.html">Open the electrician and lighting pack</a>: offline workbench,
+        lighting plans, fixture/control/circuit schedules, generic product search, and inherited analytic
+        heatmaps. Maps are estimates, not measured or physically validated simulation; selected curtain
+        strips receive no lux credit. Product, protection and dimming compatibility holds remain.</p>
+    </section>
+    <section id="mason-civil">
+      <h2>Mason / civil</h2>
+      <p class="status">Civil review pack rebound to current master; construction holds remain.</p>
+      <p><a href="mason-civil/index.html">Open the civil pack</a>: source room/opening index, dimensioned
+        review floorplan, ceiling and wall sheets, PDFs, SVGs, PNGs and drawing generators.
+        Measurement and structural holds remain; retired floorplans are not the current geometry.</p>
+    </section>
+    <section id="contractor">
+      <h2>Contractor / joinery</h2>
+      <p class="status">Wardrobe pack and viewer bound to current master; interiors remain provisional.</p>
+      <p><a href="contractor/index.html">Open the wardrobe and contractor pack</a>: placement and provisional
+        interiors, PDFs, SVGs, PNGs, editable data and cost allowances. Interior and shutter choices,
+        measured fit and professional approval remain open. Generator sources are included with explicit
+        public-copy reproducibility limits. The <a href="viewer/index.html">coordinated viewer and three renders</a>
+        illustrate the current proposals, not measured joinery.
+        Retired G-series joinery is not current.</p>
+    </section>
+    <section id="release">
+      <h2>Release checks</h2>
+      <dl>
+        <dt>Provenance</dt>
+        <dd>Final source packs must identify the coordinator-confirmed canonical master SHA-256.
+          The <a href="manifest.json">complete inventory</a> records repository-relative paths, byte sizes
+          and SHA-256 values; the <a href="integration-receipt.json">local integration receipt</a> records scope and checks.</dd>
+        <dt>Current staged source basis</dt>
+        <dd>The <a href="source-basis/house-design.json">editable public-safe master copy</a> is derived
+          from canonical SHA-256 <code>b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</code>.
+          Path redaction changes its delivered byte hash; the
+          <a href="source-basis/repository-copy-receipt.json">source-versus-copy receipt</a> records both.
+          The <a href="source-basis/fragments/wardrobe-interiors-review.json">provisional wardrobe reference</a>
+          is included alongside it. The
+          <a href="source-basis/generated/wardrobe-interiors-provenance-correction.json">historical-manifest correction</a>
+          documents an unavailable prior lighting manifest; compatibility does not mean its missing bytes were verified.
+          Delivered trade packs and the final viewer are rebound to this source identifier.</dd>
+        <dt>Completeness</dt>
+        <dd>Trade coverage, source receipts, PDF readability, SVG and PNG rendering, relative links,
+          viewer behavior and visible review holds are checked locally. Source/public byte hashes are
+          distinguished, and unlicensed manufacturer documents are official links rather than copies.</dd>
+        <dt>Publication hold</dt>
+        <dd>No push, remote update or account switching. Local preparation does not approve construction
+          or authorize publication; explicit later user go-ahead is required.</dd>
+      </dl>
+    </section>
+    <section id="site-views">
+      <h2>Site views - not measured evidence</h2>
+      <p>These three user-supplied photos are visual references only. Their filenames do not verify
+        curtain-pocket dimensions, clearances or construction geometry. Use verified site measurements
+        and the coordinated drawings for review; do not scale these photographs.</p>
+      <figure>
+        <a href="references/site-photo-hall-curtain-pocket.jpeg">
+          <img src="references/site-photo-hall-curtain-pocket.jpeg" alt="User-supplied hall site view" loading="lazy">
+        </a>
+        <figcaption>Hall site view. Pocket dimensions are unverified.</figcaption>
+      </figure>
+      <figure>
+        <a href="references/site-photo-children-curtain-pocket.jpeg">
+          <img src="references/site-photo-children-curtain-pocket.jpeg" alt="User-supplied children's room site view" loading="lazy">
+        </a>
+        <figcaption>Children's room site view. Pocket dimensions are unverified.</figcaption>
+      </figure>
+      <figure>
+        <a href="references/site-photo-hall-from-kitchen.jpeg">
+          <img src="references/site-photo-hall-from-kitchen.jpeg" alt="User-supplied hall site view looking from the kitchen" loading="lazy">
+        </a>
+        <figcaption>Hall viewed from the kitchen. Not a measured survey.</figcaption>
+      </figure>
+      <p><a href="references/receipt.json">Site-view file hashes and provenance</a></p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,554 @@
+{
+  "schema": "wardrobe-interiors/1",
+  "source_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+  "status": "provisional_design_not_homeowner_approved_or_fabrication_released",
+  "parameter_basis": {
+    "widths_and_depths": "Recomputed from current storage section/item bounds on each generation; all are placeholders until surveyed.",
+    "panel_mm": 18,
+    "back_mm": 9,
+    "top_shelf_ffl_mm": 1900,
+    "long_rail_ffl_mm": 1750,
+    "long_rail_to_base_mm": 1650,
+    "double_rail_ffl_mm": [
+      1800,
+      950
+    ],
+    "double_upper_rail_to_lower_mm": 850,
+    "double_lower_rail_to_base_mm": 850,
+    "drawer_fronts_ffl_mm": [
+      [
+        300,
+        480
+      ],
+      [
+        480,
+        660
+      ]
+    ],
+    "accessory_pullout_ffl_mm": [
+      700,
+      820
+    ],
+    "short_hang_caveat": "Two 1000 mm drops do not fit below a 1900 mm shelf over a 100 mm plinth; the 850/850 mm rail-to-obstruction distances are for short items only, before hanger and clearance deductions. The upper rail has 82 mm to the assumed 18 mm shelf underside; verify the hanger hook and hardware. Adjust after measurement.",
+    "reach_and_load_caveat": "Rail and shelf heights are working ergonomic targets, not a code requirement. Confirm user reach, hanger/garment sizes, shutter swing, support and load on site."
+  },
+  "rooms": {
+    "R04": {
+      "name": "Master split wardrobe",
+      "sections": [
+        {
+          "id": "A",
+          "item_id": "R04 split placeholder",
+          "width_mm": 1448.4,
+          "depth_envelope_mm": 630.0,
+          "estimated_clear_depth_mm": 571.0,
+          "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+          "width_status": "proposed_placeholder_not_site_measured",
+          "bays": [
+            {
+              "id": "A1",
+              "kind": "long_hang",
+              "clear_width_mm": 458.8,
+              "shelf_heights_ffl_mm": [
+                1900
+              ],
+              "rail_heights_ffl_mm": [
+                1750
+              ],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Long dresses/kurtas, suits or folded sarees on smooth hangers; verify garment length."
+            },
+            {
+              "id": "A2",
+              "kind": "double_short",
+              "clear_width_mm": 458.8,
+              "shelf_heights_ffl_mm": [
+                1900
+              ],
+              "rail_heights_ffl_mm": [
+                1800,
+                950
+              ],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Two rows for short shirts, blouses or kurtas; verify actual lengths."
+            },
+            {
+              "id": "A3",
+              "kind": "fold_drawers",
+              "clear_width_mm": 458.8,
+              "shelf_heights_ffl_mm": [
+                1050,
+                1400,
+                1650,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [
+                [
+                  300,
+                  480
+                ],
+                [
+                  480,
+                  660
+                ]
+              ],
+              "pullouts_ffl_mm": [
+                [
+                  700,
+                  820
+                ]
+              ],
+              "lockable_drawer": true,
+              "contents": "Folded clothes, two drawers and one removable pull-out tray."
+            }
+          ],
+          "checks": [
+            "Bay under the 480 mm working hanger-width target; test actual adult hangers and revise if tight."
+          ]
+        },
+        {
+          "id": "B",
+          "item_id": "R04 split placeholder",
+          "width_mm": 1448.4,
+          "depth_envelope_mm": 630.0,
+          "estimated_clear_depth_mm": 571.0,
+          "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+          "width_status": "proposed_placeholder_not_site_measured",
+          "bays": [
+            {
+              "id": "B1",
+              "kind": "long_hang",
+              "clear_width_mm": 458.8,
+              "shelf_heights_ffl_mm": [
+                1900
+              ],
+              "rail_heights_ffl_mm": [
+                1750
+              ],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Long dresses/kurtas, suits or folded sarees on smooth hangers; verify garment length."
+            },
+            {
+              "id": "B2",
+              "kind": "double_short",
+              "clear_width_mm": 458.8,
+              "shelf_heights_ffl_mm": [
+                1900
+              ],
+              "rail_heights_ffl_mm": [
+                1800,
+                950
+              ],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Two rows for short shirts, blouses or kurtas; verify actual lengths."
+            },
+            {
+              "id": "B3",
+              "kind": "fold_drawers",
+              "clear_width_mm": 458.8,
+              "shelf_heights_ffl_mm": [
+                1050,
+                1400,
+                1650,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [
+                [
+                  300,
+                  480
+                ],
+                [
+                  480,
+                  660
+                ]
+              ],
+              "pullouts_ffl_mm": [
+                [
+                  700,
+                  820
+                ]
+              ],
+              "lockable_drawer": true,
+              "contents": "Folded clothes, two drawers and one removable pull-out tray."
+            }
+          ],
+          "checks": [
+            "Bay under the 480 mm working hanger-width target; test actual adult hangers and revise if tight."
+          ]
+        }
+      ],
+      "height_mm": 2100,
+      "plinth_top_mm": 100,
+      "window_gap_mm": 913.2,
+      "loft_height_range_mm": [
+        2130,
+        3080
+      ],
+      "loft": "Concept above the split and W03; actual section, support and curtain pocket unmeasured.",
+      "holds": [
+        "Split widths are placeholders; W03 and curtain pocket require site measurement.",
+        "Adult hangers must fit the computed clear bay/depth; long-hang clearance is before hanger allowance."
+      ]
+    },
+    "R05": {
+      "name": "Children's wardrobe",
+      "sections": [
+        {
+          "id": "C",
+          "item_id": "ST-R05-WR01",
+          "width_mm": 2025.0,
+          "depth_envelope_mm": 630.0,
+          "estimated_clear_depth_mm": 571.0,
+          "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+          "width_status": "proposed_placeholder_not_site_measured",
+          "bays": [
+            {
+              "id": "C1",
+              "kind": "long_hang",
+              "clear_width_mm": 483.8,
+              "shelf_heights_ffl_mm": [
+                1900
+              ],
+              "rail_heights_ffl_mm": [
+                1750
+              ],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Long uniforms, dresses or coats; adjust the rail as the child grows."
+            },
+            {
+              "id": "C2",
+              "kind": "double_short",
+              "clear_width_mm": 483.8,
+              "shelf_heights_ffl_mm": [
+                1900
+              ],
+              "rail_heights_ffl_mm": [
+                1800,
+                950
+              ],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Two rows for child clothes or short shirts; actual lengths must be checked."
+            },
+            {
+              "id": "C3",
+              "kind": "child_fold_drawers",
+              "clear_width_mm": 483.8,
+              "shelf_heights_ffl_mm": [
+                1050,
+                1250,
+                1450,
+                1650,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [
+                [
+                  300,
+                  480
+                ],
+                [
+                  480,
+                  660
+                ]
+              ],
+              "pullouts_ffl_mm": [
+                [
+                  700,
+                  820
+                ]
+              ],
+              "lockable_drawer": true,
+              "contents": "Folded clothes, two drawers and one accessory pull-out tray."
+            },
+            {
+              "id": "C4",
+              "kind": "child_linen",
+              "clear_width_mm": 483.8,
+              "shelf_heights_ffl_mm": [
+                500,
+                800,
+                1100,
+                1500,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Adjustable folded clothes and light linen; bulky bedding goes to a verified loft."
+            }
+          ],
+          "checks": []
+        }
+      ],
+      "height_mm": 2100.0,
+      "plinth_top_mm": 100.0,
+      "door_segment_mm": 1785.0,
+      "door_opening_mm": [
+        160.0,
+        1010.0
+      ],
+      "loft_height_range_mm": [
+        2130.0,
+        3080.0
+      ],
+      "loft": "One continuous door-to-wardrobe loft; dimensions/support unmeasured and six vs eight leaves unresolved.",
+      "holds": [
+        "Keep existing room layout; the bed/study 387.6 mm corner gap is a site hold.",
+        "Use the short double-hang for short items only; adjust for a growing child."
+      ]
+    },
+    "R04a": {
+      "name": "Dressing cabinet",
+      "sections": [
+        {
+          "id": "D",
+          "item_id": "ST-R04a-WR01",
+          "width_mm": 1550.0,
+          "depth_envelope_mm": 300.0,
+          "estimated_clear_depth_mm": 271.0,
+          "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+          "width_status": "proposed_placeholder_not_site_measured",
+          "bays": [
+            {
+              "id": "D1",
+              "kind": "shallow_locked",
+              "clear_width_mm": 365.0,
+              "shelf_heights_ffl_mm": [
+                400,
+                650,
+                1100,
+                1450,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [
+                [
+                  700,
+                  880
+                ]
+              ],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": true,
+              "contents": "Small folded items and one lockable drawer; not a security safe."
+            },
+            {
+              "id": "D2",
+              "kind": "shallow_shelves",
+              "clear_width_mm": 365.0,
+              "shelf_heights_ffl_mm": [
+                400,
+                700,
+                1000,
+                1300,
+                1600,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Folded clothes, toiletries or accessories; no normal-depth hanging."
+            },
+            {
+              "id": "D3",
+              "kind": "shallow_shelves",
+              "clear_width_mm": 365.0,
+              "shelf_heights_ffl_mm": [
+                400,
+                700,
+                1000,
+                1300,
+                1600,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Folded clothes, toiletries or accessories; no normal-depth hanging."
+            },
+            {
+              "id": "D4",
+              "kind": "shallow_shelves_five",
+              "clear_width_mm": 365.0,
+              "shelf_heights_ffl_mm": [
+                450,
+                800,
+                1150,
+                1500,
+                1900
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Adjustable shallow shelves for folded garments and accessories."
+            }
+          ],
+          "checks": []
+        }
+      ],
+      "height_mm": 2100.0,
+      "plinth_top_mm": 100.0,
+      "loft_height_range_mm": [
+        2130.0,
+        3080.0
+      ],
+      "loft": "Existing/proposed loft envelope unmeasured; support and clearance require checking.",
+      "holds": [
+        "Selected in scope, but clear dressing width and opening/door operation remain unmeasured.",
+        "Shallow cabinet: shelves and a drawer only; normal full-depth hanging is not provided."
+      ]
+    },
+    "R08": {
+      "name": "Utility under-counter",
+      "sections": [
+        {
+          "id": "U",
+          "item_id": "ST-R08-UC01",
+          "width_mm": 1112.0,
+          "depth_envelope_mm": 551.0,
+          "estimated_clear_depth_mm": 524.0,
+          "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+          "width_status": "proposed_placeholder_not_site_measured",
+          "bays": [
+            {
+              "id": "U1",
+              "kind": "utility_shelf",
+              "clear_width_mm": 529.0,
+              "shelf_heights_ffl_mm": [
+                400
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "One adjustable shelf; leave any plumbing, leaks and service access clear."
+            },
+            {
+              "id": "U2",
+              "kind": "utility_tall",
+              "clear_width_mm": 529.0,
+              "shelf_heights_ffl_mm": [],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Small cleaning bin or supplies below the counter; keep plumbing accessible."
+            }
+          ],
+          "checks": []
+        }
+      ],
+      "height_mm": 800.0,
+      "plinth_top_mm": 0.0,
+      "loft_height_range_mm": [
+        1900.0,
+        2950.0
+      ],
+      "loft": "Utility loft shutters are separately allowed; shelf support and dimensions unmeasured.",
+      "holds": [
+        "Selected in scope; plumbing and service access may alter the shelf layout.",
+        "Keep the kitchen-to-south wall straight; no enclosing return is proposed."
+      ]
+    },
+    "R09": {
+      "name": "Entry shoe cabinet",
+      "sections": [
+        {
+          "id": "S",
+          "item_id": "ST-R09-SH01",
+          "width_mm": 1200.0,
+          "depth_envelope_mm": 350.0,
+          "estimated_clear_depth_mm": 323.0,
+          "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+          "width_status": "proposed_placeholder_not_site_measured",
+          "bays": [
+            {
+              "id": "S1",
+              "kind": "shoe_shelves",
+              "clear_width_mm": 573.0,
+              "shelf_heights_ffl_mm": [
+                250,
+                450,
+                650
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Four levels including the base; adjust a shelf for taller footwear."
+            },
+            {
+              "id": "S2",
+              "kind": "shoe_shelves",
+              "clear_width_mm": 573.0,
+              "shelf_heights_ffl_mm": [
+                250,
+                450,
+                650
+              ],
+              "rail_heights_ffl_mm": [],
+              "drawers_ffl_mm": [],
+              "pullouts_ffl_mm": [],
+              "lockable_drawer": false,
+              "contents": "Four levels including the base; adjust a shelf for taller footwear."
+            }
+          ],
+          "checks": []
+        }
+      ],
+      "height_mm": 900.0,
+      "plinth_top_mm": 0.0,
+      "loft": "No entry loft is assumed or costed.",
+      "holds": [
+        "Confirm shoe length, egress, rain exposure and anti-tip restraint.",
+        "Four levels in each of two bays: up to about 16 pairs only if pairs fit; not guaranteed."
+      ]
+    }
+  },
+  "hardware_delta": {
+    "reference_allowances": {
+      "wardrobe_and_loft_hinges_each_per_flat": 92,
+      "drawer_channel_pairs_per_flat": 7,
+      "locks_each_per_flat": 4,
+      "note": "Reference counts from the previous single-run R04 and eight-leaf R05-loft cost model; not final quantities. Runner low-end evidence is not soft-close."
+    },
+    "additional_pullout_trays_per_flat": 3,
+    "tray_allocation": {
+      "R04": 2,
+      "R05": 1
+    },
+    "tray_unit_inr": [
+      1000,
+      2500
+    ],
+    "per_flat_inr": [
+      3000,
+      7500
+    ],
+    "four_flats_inr": [
+      12000,
+      30000
+    ],
+    "status": "UNVERIFIED allowance; provisional interior choice, not a quote or approved purchase",
+    "includes": "One tray/basket and compatible slide pair per proposed pull-out, in addition to the reference drawers.",
+    "unpriced": "R04 split panel/shutter/rail changes; utility carcass, partition, base and shelf; shoe carcass, shelf supports and fitments not demonstrably included in the front/top allowances; upgrading baseline runners to soft-close, locks/anchors/lighting and final installation. Re-quantity and quote; do not add items already included by a supplier.",
+    "wardrobe_lighting": "None newly selected or costed; coordinate any later switched light with the electrical plan."
+  }
+}

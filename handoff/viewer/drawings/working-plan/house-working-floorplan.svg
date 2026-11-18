@@ -1,0 +1,608 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2815" viewBox="0 0 1800 2815" role="img" aria-labelledby="title description">
+<title id="title">Current working floor plan - Hyderabad 2BHK</title>
+<desc id="description">Master-derived decision drawing. Confirmed nominal dimensions are distinguished from proposed layouts, carried-forward shell interfaces and unresolved measurement scope. No construction release.</desc>
+<metadata>{&quot;source&quot;:&quot;house-design.json&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;construction_release&quot;:false,&quot;storage_status&quot;:&quot;data_only_rebased_88cb5c3c_homeowner_decisions_R04_suppressed_beds_tenant_supplied_cost_indicative&quot;}</metadata>
+<defs><pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".023"/></pattern>
+<pattern id="structure" width=".12" height=".12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".12" height=".12" fill="#edf0f0"/><path d="M0 0V.12" stroke="#c5cdcf" stroke-width=".012"/></pattern>
+<pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".012"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#466c92"/></marker>
+<clipPath id="children-wall-clip"><rect x="4.9754000000000005" y="8.4923376" width="4.18" height="4.9319999999999995"/></clipPath></defs>
+<style>text{font-family:"Segoe UI",Arial,sans-serif;fill:#203b43} .mono{font-family:Consolas,monospace}.muted{fill:#63777a}.confirmed{fill:#266c5c}.proposed{fill:#466c92}.hold{fill:#9b641c}.dim{font-family:Consolas,monospace;fill:#266c5c}.small{font-size:15px}.note{font-size:17px}.section{font-size:18px;font-weight:650;letter-spacing:1px}</style>
+<rect width="1800" height="2815" fill="#fcfdfc"/>
+<text x="68" y="62" font-size="36" class="" text-anchor="start">Current working floor plan</text>
+<text x="70" y="102" font-size="19" class="muted" text-anchor="start">REVIEW DRAFT / Hyderabad 2BHK / decision drawing / not an as-built or construction release</text>
+<text x="1730" y="57" font-size="15" class="muted" text-anchor="end">SINGLE SOURCE</text>
+<text x="1730" y="83" font-size="18" class="mono" text-anchor="end">house-design.json</text>
+<text x="1730" y="110" font-size="14" class="mono muted" text-anchor="end">b6f6bf1a127c7e39086deb9f...</text>
+<path d="M70 140H1730" stroke="#c8d2d3"/>
+<text x="80" y="183" font-size="18" class="section" text-anchor="start">HOUSE / CURRENT COORDINATED ASSEMBLY</text>
+<text x="915" y="183" font-size="18" class="section" text-anchor="start">R05 / RENDER-LED CHILDREN'S ROOM</text>
+<text x="915" y="207" font-size="16" class="muted" text-anchor="start">Pages 16-18 relationships; metric placement proposed</text>
+<g id="house-plan" transform="translate(80 220) scale(70)">
+<rect x="0" y="0" width="9.4488" height="16.1544" fill="none" stroke="#b8c5c4" stroke-width="0.012" stroke-dasharray=".08 .06"/>
+<rect x="0.5702808" y="0.2276856" width="1.524" height="1.232916" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="2.0942808" y="0.2276856" width="2.8605479999999996" height="1.232916" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="0.6854952" y="1.5755112" width="4.2672" height="0.000304800000000105" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="0.6854952" y="1.575816" width="4.2672" height="3.0476952" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="4.9526952" y="1.575816" width="0.0021335999999996247" height="3.0476952" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="0.6854952" y="4.6235112" width="4.2672" height="2.9718" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="0.6854952" y="7.5953112" width="4.2672" height="0.1106423999999997" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="4.9526952" y="4.6235112" width="0.0021335999999996247" height="2.9718" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="4.9526952" y="7.5953112" width="0.0021335999999996247" height="0.1106423999999997" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="0.6854952" y="7.7059536" width="3.3159191999999997" height="3.7392864" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="0.6854952" y="11.44524" width="3.3159191999999997" height="1.5947135999999986" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="0.6854952" y="13.039953599999999" width="3.3159191999999997" height="0.14508480000000112" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="4.0014144" y="7.7059536" width="0.9512808000000001" height="3.7392864" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="4.9526952" y="7.7059536" width="0.0021335999999996247" height="3.7392864" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="5.064252" y="0.22463760000000002" width="0.04114800000000063" height="4.686299999999999" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="5.064252" y="4.9109376" width="0.04114800000000063" height="0.0006096000000006541" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="5.1054" y="0.22463760000000002" width="3.8099999999999996" height="4.686299999999999" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="5.1054" y="4.9109376" width="3.8099999999999996" height="0.0006096000000006541" fill="url(#hold)" stroke="none" stroke-width="0" />
+<rect x="5.064252" y="4.9115472" width="1.0716768000000005" height="1.7919191999999997" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="4.9548288" y="7.245096" width="1.1811000000000007" height="1.2502896000000003" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="5.1054" y="8.6123376" width="0.9000000000000004" height="2.821999999999999" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="6.005400000000001" y="8.6123376" width="2.9099999999999993" height="2.821999999999999" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="6.005400000000001" y="11.4343376" width="2.9099999999999993" height="1.75" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="0.2276856" y="13.412724" width="3.2004" height="2.4399239999999995" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="6.2484" y="5.0267616" width="2.667" height="1.6763999999999992" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="6.2484" y="6.8159376" width="2.667" height="1.676400000000001" fill="#f6f8f6" stroke="none" stroke-width="0" />
+<rect x="5.1054" y="11.4343376" width="0.8999999999999995" height="1.75" fill="url(#structure)" stroke="#a8b5b7" stroke-width="0.012" />
+<rect x="0.80772" y="7.97052" width="1.143" height="2.8803600000000005" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="1.95072" y="7.97052" width="1.3106399999999998" height="0.8077200000000007" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="2.25552" y="9.38784" width="0.6095999999999999" height="1.0667999999999989" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" rx=".08"/>
+<rect x="4.674828799999999" y="9.1584" width="0.28000000000000025" height="1.8000000000000007" fill="#ccd8df" stroke="#82949d" stroke-width="0.014" />
+<rect x="1.55448" y="6.12648" width="1.6764" height="0.9143999999999997" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="1.7935800000000002" y="5.8964799999999995" width="0.3600000000000001" height="0.20000000000000018" fill="#f4f3ef" stroke="#a1aaa1" stroke-width="0.01" />
+<rect x="1.7935800000000002" y="7.07088" width="0.3600000000000001" height="0.20000000000000018" fill="#f4f3ef" stroke="#a1aaa1" stroke-width="0.01" />
+<rect x="2.6317799999999996" y="5.8964799999999995" width="0.3600000000000003" height="0.20000000000000018" fill="#f4f3ef" stroke="#a1aaa1" stroke-width="0.01" />
+<rect x="2.6317799999999996" y="7.07088" width="0.3600000000000003" height="0.20000000000000018" fill="#f4f3ef" stroke="#a1aaa1" stroke-width="0.01" />
+<rect x="1.32448" y="6.40368" width="0.19999999999999996" height="0.35999999999999943" fill="#f4f3ef" stroke="#a1aaa1" stroke-width="0.01" />
+<rect x="3.26088" y="6.40368" width="0.20000000000000018" height="0.35999999999999943" fill="#f4f3ef" stroke="#a1aaa1" stroke-width="0.01" />
+<rect x="0.6854952" y="1.575816" width="0.6108192" height="3.0476952" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="1.2963144" y="1.575816" width="2.1375624" height="0.618744" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="4.3440096" y="2.98704" width="0.6108191999999999" height="1.0229088000000002" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="1.2963144" y="4.0235112" width="1.8000001" height="0.6000000000000005" fill="#dbe6dd" stroke="#8e998e" stroke-width="0.014" />
+<circle cx="1.7763144" cy="4.4435112000000005" r=".14" fill="#fff" stroke="#8e998e" stroke-width=".012"/>
+<circle cx="2.6163145" cy="4.4435112000000005" r=".14" fill="#fff" stroke="#8e998e" stroke-width=".012"/>
+<text x="2.19631445" y="4.2435111999999995" font-size="0.13" fill="#203b43" text-anchor="middle">1800 x 600 BAR</text>
+<rect x="5.064252" y="6.8159376" width="1.0716768000000005" height="0.4291584000000004" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="4.40436" y="0.41148" width="0.4876800000000001" height="0.54864" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="0.67056" y="0.32004" width="0.67056" height="0.67056" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<rect x="4.40436" y="0.3048" width="0.5504688" height="1.11252" fill="#e8e7df" stroke="#8e998e" stroke-width="0.014" />
+<g data-storage-id="ST-R04a-WR01" data-storage-kind="shallow_cabinet_conditional">
+<rect x="5.064" y="5.05" width="0.2999999999999998" height="1.5499999999999998" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+<path d="M5.064 5.4375L5.364 5.4375" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<path d="M5.064 5.824999999999999L5.364 5.824999999999999" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<path d="M5.064 6.2124999999999995L5.364 6.2124999999999995" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+</g>
+<g data-storage-id="ST-R05-WR01" data-storage-kind="wardrobe_hinged">
+<rect x="6.8904000000000005" y="8.6123376" width="2.0249999999999995" height="0.6300000000000008" fill="#dce4ef" stroke="#5b7795" stroke-width="0.014" />
+<path d="M7.39665 8.6123376L7.39665 9.2423376" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<path d="M7.902900000000001 8.6123376L7.902900000000001 9.2423376" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<path d="M8.40915 8.6123376L8.40915 9.2423376" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<text x="7.902900000000001" y="8.982337600000001" font-size="0.115" fill="#466c92" text-anchor="middle">WR01</text>
+</g>
+<g data-storage-id="ST-R05-BED01" data-storage-kind="queen_storage_bed">
+<g data-bed-envelope="R05" data-storage-kind="tenant-bed">
+<rect x="6.9344" y="9.917837599999999" width="1.9809999999999999" height="1.8290000000000006" fill="none" stroke="#5a7a84" stroke-width="0.016" stroke-dasharray=".07 .04"/>
+<rect x="6.9344" y="10.070337599999998" width="1.9809999999999999" height="1.524000000000001" fill="#eef3f3" stroke="#5a7a84" stroke-width="0.01" rx=".03"/>
+<text x="7.9249" y="10.6423376" font-size="0.12" fill="#3f5f68" text-anchor="middle">TENANT'S BED</text>
+<text x="7.9249" y="10.7823376" font-size="0.095" fill="#466c92" text-anchor="middle">queen to king</text>
+<text x="7.9249" y="10.912337599999999" font-size="0.095" fill="#466c92" text-anchor="middle">mattress envelope</text>
+<text x="7.9249" y="11.0423376" font-size="0.09" fill="#466c92" text-anchor="middle">1524-1829 x 1981 mm</text>
+</g>
+</g>
+<g data-storage-id="ST-R05-TV01" data-storage-kind="tv_console_floating">
+<rect x="5.1054" y="10.1623376" width="0.3799999999999999" height="1.1999999999999993" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+</g>
+<g data-storage-id="ST-R05-DK01" data-storage-kind="study_desk_floating">
+<rect x="6.005400000000001" y="11.9843376" width="0.5499999999999998" height="1.1999999999999993" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+</g>
+<g data-storage-id="ST-R09-SH01" data-storage-kind="shoe_cabinet_exterior">
+<rect x="0.552" y="13.413" width="1.2" height="0.34999999999999964" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+</g>
+<g data-storage-id="ST-R08-UC01" data-storage-kind="under_counter_shutters_optional">
+<rect x="4.404" y="0.305" width="0.5510000000000002" height="1.112" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+</g>
+<g data-storage-id="ST-R08-LD01" data-storage-kind="wall_hooks_ladder_mop">
+<rect x="2.72" y="1.311" width="0.5599999999999996" height="0.15000000000000013" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+</g>
+<g data-storage-id="ST-R04a-LF01" data-storage-kind="loft">
+<rect x="5.064" y="5.03" width="0.33999999999999986" height="1.67" fill="none" stroke="#526d9a" stroke-width="0.022" stroke-dasharray=".07 .04"/>
+</g>
+<g data-storage-id="ST-R05-LF01" data-storage-kind="loft_continuous">
+<rect x="5.1054" y="8.6123376" width="3.8099999999999996" height="0.5999999999999996" fill="none" stroke="#526d9a" stroke-width="0.022" stroke-dasharray=".07 .04"/>
+</g>
+<g data-storage-id="ST-R05-OH01" data-storage-kind="study_overhead_unit">
+<rect x="6.005400000000001" y="11.9843376" width="0.34999999999999964" height="1.1999999999999993" fill="none" stroke="#526d9a" stroke-width="0.022" stroke-dasharray=".07 .04"/>
+</g>
+<g data-storage-id="ST-R08-LF01" data-storage-kind="loft_existing_rcc_shelf_with_shutters">
+<rect x="4.404" y="0.305" width="0.5510000000000002" height="1.112" fill="none" stroke="#526d9a" stroke-width="0.022" stroke-dasharray=".07 .04"/>
+</g>
+<rect x="0.4581144" y="0.1124712" width="0.11216640000000005" height="4.51104" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="0.4581144" y="4.6235112" width="0.2273808" height="8.789212800000001" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="0.4581144" y="0.1124712" width="4.496714399999999" height="0.1152144" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.9548288" y="0" width="4.1916096" height="0.22463760000000002" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="8.9154" y="0" width="0.2310383999999992" height="13.412724" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="0.5702808" y="1.4606016" width="4.384548" height="0.11521440000000016" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.9548288" y="0.1124712" width="0.10942320000000016" height="4.9142904000000005" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.9490376" y="5.0267616" width="0.11521440000000016" height="2.2183344" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="5.064252" y="6.7034664" width="1.0716768000000005" height="0.11247119999999988" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="6.1359288" y="4.9115472" width="2.7794711999999997" height="0.11521440000000016" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="6.1359288" y="5.0267616" width="0.11247119999999988" height="1.6763999999999992" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="6.1359288" y="6.7031616" width="2.7794711999999997" height="0.11277600000000021" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="6.1359288" y="6.8159376" width="0.11247119999999988" height="1.676400000000001" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.9548288" y="8.4923376" width="3.9605712000000004" height="0.11999999999999922" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.9548288" y="8.4923376" width="0.1505712000000008" height="2.9419999999999984" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.0014144" y="11.4343376" width="2.003985600000001" height="0.23828320000000147" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.0014144" y="11.6726208" width="0.2273808000000006" height="1.7401032" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="5.7527951999999996" y="11.6726208" width="0.2526048000000012" height="1.7401032" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="0.4581144" y="13.1850384" width="3.5433" height="0.22768560000000093" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.2287952" y="13.1850384" width="1.5239999999999991" height="0.22768560000000093" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="6.005400000000001" y="13.1843376" width="3.1410383999999985" height="0.22838640000000154" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="0.4551144" y="3.4049208" width="0.11816640000000006" height="1.2185904" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M0.5141976 3.4049208L0.5141976 4.6235112" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="0.4551144" y="5.803392" width="0.2333808" height="1.8288000000000002" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M0.5718048 5.803392L0.5718048 7.632192" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="0.4551144" y="9.15924" width="0.2333808" height="1.8287999999999993" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M0.5718048 9.15924L0.5718048 10.98804" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="0.5702808" y="0.10947119999999999" width="4.1236392" height="0.1212144" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M0.5702808 0.1700784L4.69392 0.1700784" fill="none" stroke="#31818d" stroke-width="0.045" />
+<g id="pooja-niche" data-pooja-niche="HD-16" data-niche-representation="front-outline-only" data-size-status="homeowner_estimate_unverified">
+<path d="M0.6854952 12.169038400000002L0.6854952 12.7786384" fill="none" stroke="#d3b8e5" stroke-width="0.06" stroke-dasharray=".08 .04"/>
+<path d="M0.6354951999999999 12.169038400000002L0.7354952 12.169038400000002" fill="none" stroke="#5b4668" stroke-width="0.025" />
+<path d="M0.6354951999999999 12.7786384L0.7354952 12.7786384" fill="none" stroke="#5b4668" stroke-width="0.025" />
+<text x="0.7854952" y="12.299038400000002" font-size="0.15" fill="#4d3a5c" font-weight="700">POOJA NICHE</text>
+<text x="0.7854952" y="12.419038400000002" font-size="0.09" fill="#4d3a5c" font-weight="700">built; front only (HD-16)</text>
+<text x="0.7854952" y="12.5390384" font-size="0.085" fill="#4d3a5c">size / offset estimated</text>
+<text x="0.7854952" y="12.659038400000002" font-size="0.08" fill="#4d3a5c">extension unmeasured</text>
+<text x="0.7854952" y="12.769038400000001" font-size="0.08" fill="#4d3a5c">OI-POOJA-01 / no section drawn</text>
+</g>
+<rect x="1.4490192" y="1.4576016" width="1.2185903999999996" height="0.12121439999999994" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M1.4490192 1.5182088L2.6676095999999996 1.5182088" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="3.4338768" y="1.4576016" width="0.9101327999999995" height="0.12121439999999994" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M3.4588768 1.5182088L3.4588768 1.9232751999999997" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M3.4588768 1.5182088L3.8639432 1.5182088" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M3.8639432 1.5182088L3.8626945154728767 1.5499899434537336L3.858956160446846 1.5815751455897722L3.8527511831237735 1.6127696731338017L3.844117839252219 1.6433812014502802L3.8331093562680296 1.6732210002877703L3.819793605129495 1.702105097363699L3.80425268187032 1.7298554126146564L3.7865824014502802 1.7563008561192037L3.7668917070241283 1.7812783829241334L3.7453019982708224 1.8046339982708224L3.7219463829241333 1.8262237070241283L3.696968856119204 1.8459144014502802L3.6705234126146564 1.8635846818703203L3.6427730973636994 1.879125605129495L3.6138890002877706 1.8924413562680296L3.5840492014502803 1.903449839252219L3.5534376731338018 1.9120831831237732L3.5222431455897723 1.918288160446846L3.4906579434537335 1.9220265154728766L3.4588768 1.9232751999999997" fill="none" stroke="#8095aa" stroke-width=".009"/>
+<path d="M4.319009599999999 1.5182088L4.319009599999999 1.9232751999999997" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M4.319009599999999 1.5182088L3.9139431999999994 1.5182088" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M3.9139431999999994 1.5182088L3.9151918845271227 1.5499899434537336L3.9189302395531533 1.5815751455897722L3.9251352168762264 1.6127696731338017L3.9337685607477804 1.6433812014502802L3.94477704373197 1.6732210002877703L3.9580927948705042 1.702105097363699L3.9736337181296792 1.7298554126146564L3.991303998549719 1.7563008561192037L4.0109946929758715 1.7812783829241334L4.032584401729177 1.8046339982708224L4.055940017075866 1.8262237070241283L4.080917543880796 1.8459144014502802L4.1073629873853434 1.8635846818703203L4.1351133026363005 1.879125605129495L4.163997399712229 1.8924413562680296L4.193837198549719 1.903449839252219L4.224448726866198 1.9120831831237732L4.255643254410227 1.918288160446846L4.2872284565462655 1.9220265154728766L4.319009599999999 1.9232751999999997" fill="none" stroke="#8095aa" stroke-width=".009"/>
+<rect x="6.5538096" y="-0.003" width="0.913180800000001" height="0.23063760000000003" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M6.5538096 0.11231880000000001L7.466990400000001 0.11231880000000001" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="8.9124" y="3.0824424" width="0.23703839999999943" height="1.8263615999999998" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M9.0309192 3.0824424L9.0309192 4.908804" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="4.9518287999999995" y="4.0501824" width="0.11542320000000039" height="0.8613648000000005" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M5.0095404 4.0751824L5.8209052 4.0751824" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M5.0095404 4.0751824L5.0095404 4.886547200000001" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M5.0095404 4.886547200000001L5.073199348513404 4.884046033100913L5.136465818440474 4.876557952929306L5.198949750955874 4.864129125989478L5.26026591183763 4.846836180132515L5.320036266564214 4.824785732120114L5.377892311023078 4.798113730296791L5.433477343461043 4.766984616423126L5.486448663669232 4.731590311837631L5.53647968584381 4.692149034197876L5.583261952096067 4.6489039520960675L5.626507034197876 4.6021216858438105L5.665948311837631 4.552090663669232L5.701342616423125 4.499119343461043L5.7324717302967905 4.443534311023078L5.759143732120114 4.385678266564215L5.781194180132514 4.32590791183763L5.798487125989477 4.264591750955874L5.810915952929306 4.202107818440474L5.818404033100912 4.138841348513404L5.8209052 4.0751824" fill="none" stroke="#8095aa" stroke-width=".009"/>
+<rect x="5.2654" y="8.4893376" width="0.8500000000000005" height="0.12599999999999945" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M5.2904 8.552337600000001L5.2904 9.352337600000002" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M5.2904 8.552337600000001L6.090400000000001 8.552337600000001" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M6.090400000000001 8.552337600000001L6.087933866986503 8.615104876582278L6.080550672476111 8.677485172032187L6.068295936318142 8.739093891084726L6.051245213036124 8.799551195499959L6.02950362600903 8.858484345892073L6.003205219350694 8.915529999791639L5.972512131483274 8.970336451772761L5.9376135954999585 9.02256580183398L5.898724772480025 9.071896038664148L5.856085424949239 9.11802302494924L5.809958438664148 9.160662372480026L5.7606282018339785 9.199551195499959L5.70839885177276 9.234449731483275L5.653592399791638 9.265142819350697L5.596546745892072 9.29144122600903L5.537613595499958 9.313182813036125L5.477156291084724 9.330233536318143L5.415547572032184 9.342488272476112L5.353167276582276 9.349871466986505L5.2904 9.352337600000002" fill="none" stroke="#8095aa" stroke-width=".009"/>
+<rect x="8.9124" y="12.3123376" width="0.23703839999999943" height="0.75" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M9.0309192 12.3123376L9.0309192 13.0623376" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="2.34696" y="13.1820384" width="1.09728" height="0.23368560000000116" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M2.37196 13.2988812L2.37196 12.2516012" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M2.37196 13.2988812L3.4192400000000003 13.2988812" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M3.4192400000000003 13.2988812L3.41601158527203 13.216712558226142L3.406346245338476 13.135050513452667L3.390303570234079 13.054398539340987L3.3679824683855886 12.975253882131005L3.3395205568084205 12.898104494952689L3.305093312651994 12.823426029432767L3.2649129913247537 12.751678903144281L3.219227317868995 12.683305460979138L3.1683179596536 12.618727247944765L3.1124987898010477 12.558342410198954L3.052113952055235 12.5025232403464L2.9875357390208612 12.451613882131005L2.919162296855719 12.405928208675247L2.8474151705672326 12.365747887348007L2.7727367050473113 12.33132064319158L2.695587317868995 12.302858731614412L2.616442660659013 12.280537629765922L2.535790686547333 12.264494954661524L2.4541286417738575 12.25482961472797L2.37196 12.2516012" fill="none" stroke="#8095aa" stroke-width=".009"/>
+<rect x="1.7919192" y="13.1820384" width="0.5550408000000002" height="0.23368560000000116" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M1.7919192 13.2988812L2.34696 13.2988812" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="3.44424" y="13.1820384" width="0.5571743999999996" height="0.23368560000000116" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M3.44424 13.2988812L4.0014144 13.2988812" fill="none" stroke="#31818d" stroke-width="0.045" />
+<rect x="6.1329288" y="5.8451496" width="0.11847120000000011" height="0.7994903999999998" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M6.1921644 5.8701496L6.9416548 5.8701496" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M6.1921644 5.8701496L6.1921644 6.61964" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M6.1921644 6.61964L6.250968739040701 6.617329571226576L6.309410529776789 6.610412529467986L6.3671294591345085 6.598931520586823L6.423769670720877 6.582957328820662L6.478981958796684 6.562588440373697L6.532425921245993 6.5379504362165495L6.583772058268383 6.5091952178378145L6.6327038038547865 6.476500070720878L6.678919477522209 6.440066571319954L6.722134144274218 6.400119344274218L6.762081371319954 6.356904677522209L6.798514870720878 6.310689003854787L6.831210017837814 6.261757258268383L6.859965236216549 6.210411121245993L6.884603240373697 6.156967158796684L6.904972128820662 6.101754870720877L6.920946320586823 6.045114659134509L6.932427329467986 5.9873957297767895L6.939344371226576 5.928953939040701L6.9416548 5.8701496" fill="none" stroke="#8095aa" stroke-width=".009"/>
+<rect x="8.9124" y="5.413248000000001" width="0.23703839999999943" height="0.9997439999999989" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M9.0309192 5.413248000000001L9.0309192 6.412992" fill="none" stroke="#31818d" stroke-width="0.045" stroke-dasharray=".06 .03"/>
+<path d="M9.0309192 5.6017616L9.0309192 6.3517616" fill="none" stroke="#786385" stroke-width="0.07" stroke-dasharray=".05 .03"/>
+<rect x="6.1329288" y="7.636764" width="0.11847120000000011" height="0.7909560000000004" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M6.1921644 7.661764000000001L6.933120400000001 7.661764000000001" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M6.1921644 7.661764000000001L6.1921644 8.40272" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M6.1921644 8.40272L6.250299137734121 8.400435879933564L6.30807545547835 8.393597602094012L6.365137143021217 8.382247326738181L6.421132396084084 8.366455032087993L6.475715985311508 8.346318082891434L6.5285513847250165 8.321960630136518L6.579312846517671 8.293532845619152L6.627687409397622 8.261209996084084L6.67337682809854 8.225191362647138L6.71609941216086 8.18569901216086L6.755591762647137 8.14297642809854L6.791610396084084 8.097287009397622L6.823933245619151 8.048912446517672L6.8523610301365165 7.998150984725016L6.876718482891434 7.9453155853115085L6.8968554320879925 7.890731996084084L6.912647726738181 7.834736743021217L6.923998002094011 7.77767505547835L6.9308362799335645 7.7198987377341215L6.933120400000001 7.661764000000001" fill="none" stroke="#8095aa" stroke-width=".009"/>
+<rect x="8.9124" y="7.120128" width="0.23703839999999943" height="0.9997440000000006" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M9.0309192 7.120128L9.0309192 8.119872" fill="none" stroke="#31818d" stroke-width="0.045" stroke-dasharray=".06 .03"/>
+<path d="M9.0309192 7.3909376L9.0309192 8.1409376" fill="none" stroke="#786385" stroke-width="0.07" stroke-dasharray=".05 .03"/>
+<rect x="7.86384" y="5.0267616" width="1.0515600000000003" height="1.6763999999999992" fill="#eef5f3" stroke="none" stroke-width="0" />
+<path d="M7.86384 5.0267616L8.9154 5.0267616" fill="none" stroke="#6b9f99" stroke-width="0.065" />
+<path d="M8.9154 5.0267616L8.9154 6.7031616" fill="none" stroke="#6b9f99" stroke-width="0.065" />
+<path d="M7.86384 5.0267616L7.86384 6.0031616" fill="none" stroke="#77a4b0" stroke-width="0.025" />
+<rect x="6.27392" y="5.0267616" width="0.6499999999999995" height="0.4499999999999993" fill="#dbe5e7" stroke="#66878d" stroke-width="0.014" />
+<ellipse cx="6.59892" cy="5.2517616" rx=".20" ry=".13" fill="#fff" stroke="#779199" stroke-width=".012"/>
+<rect x="7.01616" y="5.0267616" width="0.7199999999999998" height="0.1999999999999993" fill="#eef0ee" stroke="#8e999b" stroke-width="0.014" />
+<rect x="7.18616" y="5.2267616" width="0.3799999999999999" height="0.41999999999999993" fill="#fff" stroke="#8e999b" stroke-width="0.012" rx=".16"/>
+<text x="7.5819" y="6.473161599999999" font-size="0.17" fill="#203b43" text-anchor="middle">TL1 / ATTACHED</text>
+<rect x="7.86384" y="6.8159376" width="1.0515600000000003" height="1.676400000000001" fill="#eef5f3" stroke="none" stroke-width="0" />
+<path d="M7.86384 6.8159376L8.9154 6.8159376" fill="none" stroke="#6b9f99" stroke-width="0.065" />
+<path d="M8.9154 6.8159376L8.9154 8.4923376" fill="none" stroke="#6b9f99" stroke-width="0.065" />
+<path d="M7.86384 6.8159376L7.86384 7.7923376" fill="none" stroke="#77a4b0" stroke-width="0.025" />
+<rect x="6.27392" y="6.8159376" width="0.6499999999999995" height="0.4500000000000002" fill="#dbe5e7" stroke="#66878d" stroke-width="0.014" />
+<ellipse cx="6.59892" cy="7.0409375999999995" rx=".20" ry=".13" fill="#fff" stroke="#779199" stroke-width=".012"/>
+<rect x="7.01616" y="6.8159376" width="0.7199999999999998" height="0.20000000000000018" fill="#eef0ee" stroke="#8e999b" stroke-width="0.014" />
+<rect x="7.18616" y="7.0159376" width="0.3799999999999999" height="0.41999999999999993" fill="#fff" stroke="#8e999b" stroke-width="0.012" rx=".16"/>
+<text x="7.5819" y="8.2623376" font-size="0.17" fill="#203b43" text-anchor="middle">TL2 / COMMON</text>
+<path d="M8.81 12.2323376L8.81 13.1843376" fill="none" stroke="#7c658c" stroke-width="0.045" stroke-dasharray=".06 .025"/>
+<g id="master-relationship-overlay" data-decision-status="planned" data-suppressed-storage="ST-R04-WR01 ST-R04-LF01 ST-R04-BED01 ST-R04-NS01 ST-R04-NS02 ST-R05-NS01">
+<rect x="5.1054" y="0.2246376" width="3.8099999999999996" height="0.6300000000000008" fill="url(#zone)" stroke="#5b7795" stroke-width="0.012" stroke-dasharray=".06 .035"/>
+<rect x="6.5538096" y="0.2246376" width="0.9131808000000001" height="0.6300000000000008" fill="#fcfdfc" stroke="#5b7795" stroke-width="0.012" stroke-dasharray=".06 .035"/>
+<text x="5.8296048" y="0.5246375999999999" font-size="0.115" fill="#466c92" text-anchor="middle">WARDROBE ZONE</text>
+<text x="8.1911952" y="0.5246375999999999" font-size="0.115" fill="#466c92" text-anchor="middle">WARDROBE ZONE</text>
+<text x="7.010400000000001" y="1.0146376000000008" font-size="0.095" fill="#466c92" text-anchor="middle">loft over / sizes + shutters held</text>
+<text x="7.010400000000001" y="0.4746376" font-size="0.105" fill="#466c92" text-anchor="middle">W03 BAY</text>
+<text x="7.010400000000001" y="0.6046376" font-size="0.075" fill="#9b641c" text-anchor="middle">centred; offsets</text>
+<text x="7.010400000000001" y="0.6946376" font-size="0.075" fill="#9b641c" text-anchor="middle">unmeasured</text>
+<path d="M6.4738096 0.32463759999999997L7.5469904 0.32463759999999997" fill="none" stroke="#7c658c" stroke-width="0.035" stroke-dasharray=".06 .025"/>
+<path d="M8.8154 3.0824424L8.8154 4.908804" fill="none" stroke="#7c658c" stroke-width="0.035" stroke-dasharray=".06 .025"/>
+<g data-bed-envelope="R04" data-storage-kind="tenant-bed">
+<rect x="6.9344" y="1.0540400000000005" width="1.9809999999999999" height="1.8289999999999997" fill="none" stroke="#5a7a84" stroke-width="0.016" stroke-dasharray=".07 .04"/>
+<rect x="6.9344" y="1.2065400000000004" width="1.9809999999999999" height="1.524" fill="#eef3f3" stroke="#5a7a84" stroke-width="0.01" rx=".03"/>
+<text x="7.9249" y="1.7785400000000005" font-size="0.12" fill="#3f5f68" text-anchor="middle">TENANT'S BED</text>
+<text x="7.9249" y="1.9185400000000006" font-size="0.095" fill="#466c92" text-anchor="middle">queen to king</text>
+<text x="7.9249" y="2.0485400000000005" font-size="0.095" fill="#466c92" text-anchor="middle">mattress envelope</text>
+<text x="7.9249" y="2.1785400000000004" font-size="0.09" fill="#466c92" text-anchor="middle">1524-1829 x 1981 mm</text>
+</g>
+<text x="7.9249" y="3.03304" font-size="0.1" fill="#466c92" text-anchor="middle">BED HEAD ON WEST WALL</text>
+<text x="7.9249" y="3.1530400000000003" font-size="0.085" fill="#9b641c" text-anchor="middle">indicative position only</text>
+<path d="M5.1554 1.5185400000000004L5.1554 2.4185400000000006" fill="none" stroke="#466c92" stroke-width="0.05" />
+<text x="5.2754" y="2.0085400000000004" font-size="0.12" fill="#466c92" text-anchor="start">TV</text>
+<text x="5.2754" y="2.1585400000000003" font-size="0.09" fill="#466c92" text-anchor="start">opposite bed</text>
+</g>
+<text x="1.3301404" y="1.15" font-size="0.09" fill="#466c92" text-anchor="middle">PARAPET OPEN ON SOUTH WALL</text>
+<text x="1.3301404" y="1.28" font-size="0.085" fill="#466c92" text-anchor="middle">no corner return</text>
+<text x="3.2" y="11.25" font-size="0.19" fill="#203b43" text-anchor="middle">R01 LIVING</text>
+<text x="3.2" y="11.5" font-size="0.125" fill="#266c5c" text-anchor="middle">14' x 17'-6&quot;</text>
+<text x="2.8" y="5.55" font-size="0.19" fill="#203b43" text-anchor="middle">R02 DINING</text>
+<text x="2.8" y="5.8" font-size="0.125" fill="#266c5c" text-anchor="middle">14' x 9'-9&quot;</text>
+<text x="2.85" y="2.85" font-size="0.19" fill="#203b43" text-anchor="middle">R03 KITCHEN</text>
+<text x="2.85" y="3.1" font-size="0.125" fill="#266c5c" text-anchor="middle">14' x 10'</text>
+<text x="6.75" y="3.8" font-size="0.19" fill="#203b43" text-anchor="middle">R04 MASTER</text>
+<text x="6.75" y="4.05" font-size="0.125" fill="#266c5c" text-anchor="middle">12'-6&quot; x 15'-4.5&quot;</text>
+<text x="7.85" y="12.75" font-size="0.19" fill="#203b43" text-anchor="middle">R05 CHILDREN</text>
+<text x="7.85" y="13" font-size="0.125" fill="#266c5c" text-anchor="middle">12'-6&quot; x 15'</text>
+<text x="2.8" y="0.85" font-size="0.19" fill="#203b43" text-anchor="middle">R08 UTILITY + WASH</text>
+<text x="1.85" y="14.85" font-size="0.19" fill="#203b43" text-anchor="middle">R09 ENTRY / BALCONY</text>
+<text x="1.85" y="15.1" font-size="0.125" fill="#266c5c" text-anchor="middle">11' x 8' / scope hold</text>
+<text x="5.76" y="6.45" font-size="0.14" fill="#203b43" text-anchor="middle">R04a DRESS</text>
+<text x="5.56" y="8.15" font-size="0.14" fill="#203b43" text-anchor="middle">R12 LOBBY</text>
+<text x="4.95" y="12.55" font-size="0.17" fill="#203b43" text-anchor="middle">LIFT</text>
+<text x="4.95" y="12.8" font-size="0.11" fill="#9b641c" text-anchor="middle">INTERFACE HOLD</text>
+<rect x="5.6634888" y="13.412724" width="1.9559016000000007" height="1.2213335999999995" fill="#f1f3f1" stroke="#839693" stroke-width="0.014" />
+<path d="M5.9079765 13.412724L5.9079765 14.6340576" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M6.1524642 13.412724L6.1524642 14.6340576" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M6.3969518999999995 13.412724L6.3969518999999995 14.6340576" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M6.6414396 13.412724L6.6414396 14.6340576" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M6.8859273000000005 13.412724L6.8859273000000005 14.6340576" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M7.130415 13.412724L7.130415 14.6340576" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M7.3749027 13.412724L7.3749027 14.6340576" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<rect x="7.6193904" y="13.412724" width="1.5270479999999989" height="2.4399239999999995" fill="#f1f3f1" stroke="#839693" stroke-width="0.014" />
+<rect x="3.4280856" y="14.6340576" width="4.1913048" height="1.2185904" fill="#f1f3f1" stroke="#839693" stroke-width="0.014" />
+<path d="M3.9519987000000003 14.6340576L3.9519987000000003 15.852648" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M4.4759118 14.6340576L4.4759118 15.852648" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M4.9998249 14.6340576L4.9998249 15.852648" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M5.523738 14.6340576L5.523738 15.852648" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M6.0476511 14.6340576L6.0476511 15.852648" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M6.5715642 14.6340576L6.5715642 15.852648" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<path d="M7.095477300000001 14.6340576L7.095477300000001 15.852648" fill="none" stroke="#a1adab" stroke-width="0.009" />
+<text x="6.7" y="14.9" font-size="0.17" fill="#203b43" text-anchor="middle">STAIR / CARRY-FORWARD</text>
+</g>
+<g id="north-arrow-house" data-north-arrow="sheet-bottom"><circle cx="830" cy="300" r="30" fill="#fcfdfc" stroke="#203b43" stroke-width="1.6"/><path d="M830 276V314" stroke="#203b43" stroke-width="2.4"/><path d="M830 326L821 304L830 309L839 304Z" fill="#203b43"/></g>
+<text x="830" y="262" font-size="12.5" class="mono" text-anchor="middle">APPROX. NORTH</text>
+<text x="830" y="354" font-size="12.5" class="mono" text-anchor="middle">N = sheet-bottom</text>
+<text x="410" y="212" font-size="14" class="muted" text-anchor="middle">SOUTH  (utility / washing end, sheet-top)</text>
+<text transform="translate(62 780) rotate(-90)" text-anchor="middle" font-size="14" class="muted">EAST  (kitchen / dining / living, sheet-left)</text>
+<text transform="translate(764 780) rotate(90)" text-anchor="middle" font-size="14" class="muted">WEST  (bedrooms, sheet-right)</text>
+<text x="80" y="1372" font-size="14" class="muted" text-anchor="start">Scale bar (model metres)</text>
+<path d="M80 1390H220M80 1384V1396M150 1384V1396M220 1384V1396" stroke="#203b43" stroke-width="2"/>
+<text x="80" y="1414" font-size="13" class="mono" text-anchor="start">0</text>
+<text x="150" y="1414" font-size="13" class="mono" text-anchor="middle">1</text>
+<text x="220" y="1414" font-size="13" class="mono" text-anchor="end">2 m</text>
+<text x="300" y="1374" font-size="15" class="muted" text-anchor="start">Drawn south-up: approximate homeowner north, not a surveyed true bearing.</text>
+<text x="300" y="1395" font-size="15" class="muted" text-anchor="start">Sheet-top = south, sheet-bottom = north, sheet-left = east, sheet-right =</text>
+<text x="300" y="1416" font-size="15" class="muted" text-anchor="start">west. Doors/swings require site confirmation.</text>
+<g id="children-plan" transform="translate(960 270) scale(118) translate(-5.1054 -8.6123376)">
+<rect x="5.1054" y="8.6123376" width="3.8099999999999996" height="4.571999999999999" fill="#f6f9f8" stroke="#799a94" stroke-width="0.016" />
+<rect x="5.1054" y="11.4343376" width="0.8999999999999995" height="1.75" fill="url(#structure)" stroke="#9cabad" stroke-width="0.016" />
+<g data-storage-id="ST-R05-WR01" data-storage-kind="wardrobe_hinged">
+<rect x="6.8904000000000005" y="8.6123376" width="2.0249999999999995" height="0.6300000000000008" fill="#dce4ef" stroke="#5b7795" stroke-width="0.014" />
+<path d="M7.39665 8.6123376L7.39665 9.2423376" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<path d="M7.902900000000001 8.6123376L7.902900000000001 9.2423376" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<path d="M8.40915 8.6123376L8.40915 9.2423376" fill="none" stroke="#90a3b9" stroke-width="0.008" />
+<text x="7.902900000000001" y="8.982337600000001" font-size="0.14" fill="#466c92" text-anchor="middle">WR01</text>
+</g>
+<g data-storage-id="ST-R05-BED01" data-storage-kind="queen_storage_bed">
+<g data-bed-envelope="R05" data-storage-kind="tenant-bed">
+<rect x="6.9344" y="9.917837599999999" width="1.9809999999999999" height="1.8290000000000006" fill="none" stroke="#5a7a84" stroke-width="0.016" stroke-dasharray=".07 .04"/>
+<rect x="6.9344" y="10.070337599999998" width="1.9809999999999999" height="1.524000000000001" fill="#eef3f3" stroke="#5a7a84" stroke-width="0.01" rx=".03"/>
+<text x="7.9249" y="10.575837599999998" font-size="0.162" fill="#3f5f68" text-anchor="middle">TENANT'S BED</text>
+<text x="7.9249" y="10.764837599999998" font-size="0.12825" fill="#466c92" text-anchor="middle">queen to king</text>
+<text x="7.9249" y="10.940337599999998" font-size="0.12825" fill="#466c92" text-anchor="middle">mattress envelope</text>
+<text x="7.9249" y="11.115837599999999" font-size="0.1215" fill="#466c92" text-anchor="middle">1524-1829 x 1981 mm</text>
+<text x="7.9249" y="11.291337599999999" font-size="0.11475000000000002" fill="#9b641c" text-anchor="middle">no frame / gap implied</text>
+</g>
+</g>
+<g data-storage-id="ST-R05-TV01" data-storage-kind="tv_console_floating">
+<rect x="5.1054" y="10.1623376" width="0.3799999999999999" height="1.1999999999999993" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+<text x="5.295400000000001" y="10.8173376" font-size="0.14" fill="#466c92" text-anchor="middle">TV01</text>
+</g>
+<g data-storage-id="ST-R05-DK01" data-storage-kind="study_desk_floating">
+<rect x="6.005400000000001" y="11.9843376" width="0.5499999999999998" height="1.1999999999999993" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
+<text x="6.2804" y="12.6393376" font-size="0.14" fill="#466c92" text-anchor="middle">DK01</text>
+</g>
+<g data-storage-id="ST-R05-LF01" data-storage-kind="loft_continuous">
+<rect x="5.1054" y="8.6123376" width="3.8099999999999996" height="0.5999999999999996" fill="none" stroke="#526d9a" stroke-width="0.022" stroke-dasharray=".07 .04"/>
+<text x="7.010400000000001" y="8.8123376" font-size="0.115" fill="#466c92" text-anchor="middle">CONTINUOUS LOFT / ABOVE DOOR + WARDROBE</text>
+</g>
+<g data-storage-id="ST-R05-OH01" data-storage-kind="study_overhead_unit">
+<rect x="6.005400000000001" y="11.9843376" width="0.34999999999999964" height="1.1999999999999993" fill="none" stroke="#526d9a" stroke-width="0.022" stroke-dasharray=".07 .04"/>
+</g>
+<g clip-path="url(#children-wall-clip)">
+<rect x="4.9548288" y="8.4923376" width="3.9605712000000004" height="0.11999999999999922" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.9548288" y="8.4923376" width="0.1505712000000008" height="2.9419999999999984" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="4.0014144" y="11.4343376" width="2.003985600000001" height="0.23828320000000147" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="5.7527951999999996" y="11.6726208" width="0.2526048000000012" height="1.7401032" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="6.005400000000001" y="13.1843376" width="3.1410383999999985" height="0.22838640000000154" fill="#42545a" stroke="#42545a" stroke-width="0.003" />
+<rect x="5.2654" y="8.4893376" width="0.8500000000000005" height="0.12599999999999945" fill="#fcfdfc" stroke="none" stroke-width="0" />
+<path d="M5.2904 8.552337600000001L5.2904 9.352337600000002" fill="none" stroke="#405f7e" stroke-width="0.022" />
+<path d="M5.2904 8.552337600000001L6.090400000000001 8.552337600000001" fill="none" stroke="#8095aa" stroke-width="0.009" stroke-dasharray=".04 .03"/>
+<path d="M6.090400000000001 8.552337600000001L6.087933866986503 8.615104876582278L6.080550672476111 8.677485172032187L6.068295936318142 8.739093891084726L6.051245213036124 8.799551195499959L6.02950362600903 8.858484345892073L6.003205219350694 8.915529999791639L5.972512131483274 8.970336451772761L5.9376135954999585 9.02256580183398L5.898724772480025 9.071896038664148L5.856085424949239 9.11802302494924L5.809958438664148 9.160662372480026L5.7606282018339785 9.199551195499959L5.70839885177276 9.234449731483275L5.653592399791638 9.265142819350697L5.596546745892072 9.29144122600903L5.537613595499958 9.313182813036125L5.477156291084724 9.330233536318143L5.415547572032184 9.342488272476112L5.353167276582276 9.349871466986505L5.2904 9.352337600000002" fill="none" stroke="#8095aa" stroke-width=".009"/>
+</g>
+<path d="M8.9154 12.3123376L8.9154 13.0623376" fill="none" stroke="#31818d" stroke-width="0.045" />
+<path d="M8.81 12.2323376L8.81 13.1843376" fill="none" stroke="#7c658c" stroke-width="0.045" stroke-dasharray=".06 .025"/>
+<text x="5.3554" y="12.0843376" font-size="0.115" fill="#203b43" text-anchor="middle">RETURN</text>
+<text x="5.3554" y="12.2643376" font-size="0.085" fill="#466c92" text-anchor="middle">900 x 1750</text>
+<text x="5.3554" y="12.4343376" font-size="0.085" fill="#466c92" text-anchor="middle">PROPOSED</text>
+<path d="M5.1054 8.6123376L5.1054 8.4123376" fill="none" stroke="#467d70" stroke-width="0.009" />
+<path d="M8.9154 8.6123376L8.9154 8.4123376" fill="none" stroke="#467d70" stroke-width="0.009" />
+<path d="M5.1054 8.4123376L8.9154 8.4123376" fill="none" stroke="#467d70" stroke-width="0.012" />
+<text x="7.010400000000001" y="8.3523376" font-size="0.14" fill="#266c5c" text-anchor="middle">v = 3.810 m / nominal</text>
+<path d="M5.1054 8.6123376L4.8354 8.6123376" fill="none" stroke="#467d70" stroke-width="0.009" />
+<path d="M5.1054 13.1843376L4.8354 13.1843376" fill="none" stroke="#467d70" stroke-width="0.009" />
+<path d="M4.8354 8.6123376L4.8354 13.1843376" fill="none" stroke="#467d70" stroke-width="0.012" />
+<text transform="translate(4.7654 10.8983376) rotate(-90)" text-anchor="middle" font-size=".14" fill="#266c5c">u = 4.572 m / nominal</text>
+<path d="M5.4554 9.6823376L6.2554 9.6823376" fill="none" stroke="#466c92" stroke-width="0.018" />
+<text x="5.8554" y="9.5823376" font-size="0.1" fill="#466c92" text-anchor="middle">+v: east (TV) to west (bed head)</text>
+<path d="M5.4554 9.6823376L5.4554 10.2623376" fill="none" stroke="#466c92" stroke-width="0.018" />
+<text x="5.555400000000001" y="10.2623376" font-size="0.115" fill="#466c92" text-anchor="start">+u: north</text>
+</g>
+<g id="north-arrow-children" data-north-arrow="sheet-bottom"><circle cx="1698" cy="238" r="22" fill="#fcfdfc" stroke="#203b43" stroke-width="1.4"/><path d="M1698 221V248" stroke="#203b43" stroke-width="2.2"/><path d="M1698 257L1691 241L1698 245L1705 241Z" fill="#203b43"/></g>
+<text x="1666" y="234" font-size="12.5" class="mono" text-anchor="end">APPROX. NORTH</text>
+<text x="1666" y="250" font-size="12.5" class="mono" text-anchor="end">= sheet-bottom</text>
+<text x="1460" y="282" font-size="14.5" class="" text-anchor="start">CONFIRMED NUMBERS: 3.810 x 4.572 m</text>
+<text x="1460" y="302" font-size="14.5" class="" text-anchor="start">nominal; 15 ft side on the outer west</text>
+<text x="1460" y="322" font-size="14.5" class="" text-anchor="start">wall (homeowner-confirmed). Axis</text>
+<text x="1460" y="342" font-size="14.5" class="" text-anchor="start">allocation and global position are</text>
+<text x="1460" y="362" font-size="14.5" class="" text-anchor="start">proposed.</text>
+<text x="1460" y="398" font-size="14.5" class="" text-anchor="start">RELATIONS (compass): wardrobe south</text>
+<text x="1460" y="418" font-size="14.5" class="" text-anchor="start">(u=0); entry south wall, beside wardrobe</text>
+<text x="1460" y="438" font-size="14.5" class="" text-anchor="start">toward east; headboard west (v=max, 15</text>
+<text x="1460" y="458" font-size="14.5" class="" text-anchor="start">ft outer wall); TV east (v=0); study</text>
+<text x="1460" y="478" font-size="14.5" class="" text-anchor="start">east side, toward the north end; curtain</text>
+<text x="1460" y="498" font-size="14.5" class="" text-anchor="start">north-west corner on the west wall.</text>
+<text x="1460" y="534" font-size="14.5" class="" text-anchor="start">LOFT: one continuous assembly above</text>
+<text x="1460" y="554" font-size="14.5" class="" text-anchor="start">entrance and wardrobe. Dashed outline is</text>
+<text x="1460" y="574" font-size="14.5" class="" text-anchor="start">overhead, not a second cabinet slab.</text>
+<text x="1460" y="610" font-size="14.5" class="" text-anchor="start">BED: tenant-supplied queen-to-king</text>
+<text x="1460" y="630" font-size="14.5" class="" text-anchor="start">mattress envelope (1524-1829 x 1981 mm),</text>
+<text x="1460" y="650" font-size="14.5" class="" text-anchor="start">not joinery. No frame or walking gap</text>
+<text x="1460" y="670" font-size="14.5" class="" text-anchor="start">implied. Fixed bedside cabinets are</text>
+<text x="1460" y="690" font-size="14.5" class="" text-anchor="start">omitted by the homeowner (HD-14);</text>
+<text x="1460" y="710" font-size="14.5" class="" text-anchor="start">tenants may use movable tables. See</text>
+<text x="1460" y="730" font-size="14.5" class="" text-anchor="start">OI-BED-01 / OI-R05-03.</text>
+<text x="1460" y="766" font-size="14.5" class="" text-anchor="start">WET AREAS: basin left on entry. Feature</text>
+<text x="1460" y="786" font-size="14.5" class="" text-anchor="start">tile only on the two shower walls. Close</text>
+<text x="1460" y="806" font-size="14.5" class="" text-anchor="start">bath door before basin use.</text>
+<text x="915" y="850" font-size="18" class="section" text-anchor="start">DIMENSION RECONCILIATION</text>
+<text x="915" y="878" font-size="15" class="muted" text-anchor="start">Local geometry may agree while the assembled shell remains unresolved.</text>
+<text x="915" y="913" font-size="15" class="muted" text-anchor="start">Room</text>
+<text x="1088" y="913" font-size="15" class="muted" text-anchor="start">Nominal m</text>
+<text x="1265" y="913" font-size="15" class="muted" text-anchor="start">Local model m</text>
+<text x="1450" y="913" font-size="15" class="muted" text-anchor="start">Shell delta mm</text>
+<text x="1610" y="913" font-size="15" class="muted" text-anchor="start">State</text>
+<path d="M915 925H1730" stroke="#bdcdcc"/>
+<text x="915" y="953" font-size="14.5" class="mono" text-anchor="start">R01 LIVING</text>
+<text x="1088" y="953" font-size="14.5" class="mono confirmed" text-anchor="start">4.267 x 5.334</text>
+<text x="1265" y="953" font-size="14.5" class="mono" text-anchor="start">4.267 x 5.334</text>
+<text x="1450" y="953" font-size="14.5" class="mono hold" text-anchor="start">+2.1 / +145.1</text>
+<text x="1610" y="953" font-size="12.5" class="mono hold" text-anchor="start">ASSEMBLY HOLD</text>
+<text x="915" y="985" font-size="14.5" class="mono" text-anchor="start">R02 DINING</text>
+<text x="1088" y="985" font-size="14.5" class="mono confirmed" text-anchor="start">4.267 x 2.972</text>
+<text x="1265" y="985" font-size="14.5" class="mono" text-anchor="start">4.267 x 2.972</text>
+<text x="1450" y="985" font-size="14.5" class="mono hold" text-anchor="start">+2.1 / +110.6</text>
+<text x="1610" y="985" font-size="12.5" class="mono hold" text-anchor="start">ASSEMBLY HOLD</text>
+<text x="915" y="1017" font-size="14.5" class="mono" text-anchor="start">R03 KITCHEN</text>
+<text x="1088" y="1017" font-size="14.5" class="mono confirmed" text-anchor="start">4.267 x 3.048</text>
+<text x="1265" y="1017" font-size="14.5" class="mono" text-anchor="start">4.267 x 3.048</text>
+<text x="1450" y="1017" font-size="14.5" class="mono hold" text-anchor="start">+2.1 / -0.3</text>
+<text x="1610" y="1017" font-size="12.5" class="mono hold" text-anchor="start">ASSEMBLY HOLD</text>
+<text x="915" y="1049" font-size="14.5" class="mono" text-anchor="start">R04 MASTER</text>
+<text x="1088" y="1049" font-size="14.5" class="mono confirmed" text-anchor="start">3.810 x 4.686</text>
+<text x="1265" y="1049" font-size="14.5" class="mono" text-anchor="start">3.810 x 4.686</text>
+<text x="1450" y="1049" font-size="14.5" class="mono hold" text-anchor="start">+41.1 / +0.6</text>
+<text x="1610" y="1049" font-size="12.5" class="mono hold" text-anchor="start">ASSEMBLY HOLD</text>
+<text x="915" y="1081" font-size="14.5" class="mono" text-anchor="start">R05 CHILDREN</text>
+<text x="1088" y="1081" font-size="14.5" class="mono confirmed" text-anchor="start">3.810 x 4.572</text>
+<text x="1265" y="1081" font-size="14.5" class="mono" text-anchor="start">3.810 x 4.572</text>
+<text x="1450" y="1081" font-size="14.5" class="mono hold" text-anchor="start">+0.0 / +0.0</text>
+<text x="1610" y="1081" font-size="12.5" class="mono hold" text-anchor="start">LOCAL MATCH</text>
+<text x="915" y="1113" font-size="14.5" class="mono" text-anchor="start">R06 TL1</text>
+<text x="1088" y="1113" font-size="14.5" class="mono confirmed" text-anchor="start">2.667 x 1.676</text>
+<text x="1265" y="1113" font-size="14.5" class="mono" text-anchor="start">2.667 x 1.676</text>
+<text x="1450" y="1113" font-size="14.5" class="mono hold" text-anchor="start">+0.0 / +0.0</text>
+<text x="1610" y="1113" font-size="12.5" class="mono hold" text-anchor="start">LOCAL MATCH</text>
+<text x="915" y="1145" font-size="14.5" class="mono" text-anchor="start">R07 TL2</text>
+<text x="1088" y="1145" font-size="14.5" class="mono confirmed" text-anchor="start">2.667 x 1.676</text>
+<text x="1265" y="1145" font-size="14.5" class="mono" text-anchor="start">2.667 x 1.676</text>
+<text x="1450" y="1145" font-size="14.5" class="mono hold" text-anchor="start">+0.0 / +0.0</text>
+<text x="1610" y="1145" font-size="12.5" class="mono hold" text-anchor="start">LOCAL MATCH</text>
+<text x="915" y="1177" font-size="14.5" class="mono" text-anchor="start">R08 UTILITY + WASH</text>
+<text x="1088" y="1177" font-size="14.5" class="mono confirmed" text-anchor="start">4.724 x 1.372</text>
+<text x="1265" y="1177" font-size="14.5" class="mono" text-anchor="start">4.385 x 1.233</text>
+<text x="1450" y="1177" font-size="14.5" class="mono hold" text-anchor="start">-339.9 / -138.7</text>
+<text x="1610" y="1177" font-size="12.5" class="mono hold" text-anchor="start">SCOPE HOLD</text>
+<text x="915" y="1209" font-size="14.5" class="mono" text-anchor="start">R09 ENTRY</text>
+<text x="1088" y="1209" font-size="14.5" class="mono confirmed" text-anchor="start">3.353 x 2.438</text>
+<text x="1265" y="1209" font-size="14.5" class="mono" text-anchor="start">3.200 x 2.440</text>
+<text x="1450" y="1209" font-size="14.5" class="mono hold" text-anchor="start">-152.4 / +1.5</text>
+<text x="1610" y="1209" font-size="12.5" class="mono hold" text-anchor="start">SCOPE HOLD</text>
+<text x="915" y="1270" font-size="15" class="muted" text-anchor="start">LOCAL MATCH means the proposed model binds to the confirmed nominal numbers. It does not confirm walls,</text>
+<text x="915" y="1292" font-size="15" class="muted" text-anchor="start">returns, openings, materials or construction approval.</text>
+<rect x="915" y="1330" width="16" height="10" fill="#266c5c"/>
+<text x="940" y="1340" font-size="15" class="" text-anchor="start">Confirmed numerical dimension</text>
+<rect x="1325" y="1330" width="16" height="10" fill="#466c92"/>
+<text x="1350" y="1340" font-size="15" class="" text-anchor="start">Proposed layout / storage</text>
+<rect x="915" y="1360" width="16" height="10" fill="#9b641c"/>
+<text x="940" y="1370" font-size="15" class="" text-anchor="start">Unresolved assembly / scope</text>
+<rect x="1325" y="1360" width="16" height="10" fill="#526d9a"/>
+<text x="1350" y="1370" font-size="15" class="" text-anchor="start">Dashed outline: overhead loft (held)</text>
+<rect x="915" y="1390" width="16" height="10" fill="#5b4668"/>
+<text x="940" y="1400" font-size="15" class="" text-anchor="start">Pooja niche (built): estimated front only (HD-16); depth held</text>
+<path d="M70 1440H1730" stroke="#c8d2d3"/>
+<text x="70" y="1475" font-size="18" class="section" text-anchor="start">R04 MASTER, UTILITY AND POOJA / LAYOUT CORRECTIONS</text>
+<text x="70" y="1508" font-size="15" class="proposed" text-anchor="start">WALL ROLES (COMPASS)</text>
+<text x="70" y="1532" font-size="14.5" class="muted" text-anchor="start">South wall (sheet top): wardrobe | W03 bay |</text>
+<text x="70" y="1552" font-size="14.5" class="muted" text-anchor="start">wardrobe, loft over. West wall (sheet right):</text>
+<text x="70" y="1572" font-size="14.5" class="muted" text-anchor="start">headboard, with the W04 corner window at its north</text>
+<text x="70" y="1592" font-size="14.5" class="muted" text-anchor="start">end. East wall (sheet left): TV opposite the bed and</text>
+<text x="70" y="1612" font-size="14.5" class="muted" text-anchor="start">door D02 at its north end. North wall (sheet</text>
+<text x="70" y="1632" font-size="14.5" class="muted" text-anchor="start">bottom): dressing passage at its east end. A</text>
+<text x="70" y="1652" font-size="14.5" class="muted" text-anchor="start">wardrobe on the west wall is excluded by topology:</text>
+<text x="70" y="1672" font-size="14.5" class="muted" text-anchor="start">the wall opposite holds the room entry. No room,</text>
+<text x="70" y="1692" font-size="14.5" class="muted" text-anchor="start">wall or nominal size moved.</text>
+<text x="490" y="1508" font-size="15" class="proposed" text-anchor="start">OPENINGS / HOLDS</text>
+<text x="490" y="1532" font-size="14.5" class="muted" text-anchor="start">D01 is single-leaf in this model, while the</text>
+<text x="490" y="1552" font-size="14.5" class="muted" text-anchor="start">architecture description says double-leaf; confirm</text>
+<text x="490" y="1572" font-size="14.5" class="muted" text-anchor="start">on site. W03 keeps its inherited 913 mm width,</text>
+<text x="490" y="1592" font-size="14.5" class="muted" text-anchor="start">centred (homeowner-confirmed); offsets unmeasured.</text>
+<text x="490" y="1612" font-size="14.5" class="muted" text-anchor="start">The split wardrobe is approved in principle, but the</text>
+<text x="490" y="1632" font-size="14.5" class="muted" text-anchor="start">zones are illustrative and unmeasured; the five</text>
+<text x="490" y="1652" font-size="14.5" class="muted" text-anchor="start">superseded R04 storage records are not drawn</text>
+<text x="490" y="1672" font-size="14.5" class="muted" text-anchor="start">(OI-MBR-03). Beds are tenant-supplied: only the</text>
+<text x="490" y="1692" font-size="14.5" class="muted" text-anchor="start">queen-to-king mattress envelope is shown, with no</text>
+<text x="490" y="1712" font-size="14.5" class="muted" text-anchor="start">frame or walking gap implied (OI-BED-01); fixed</text>
+<text x="490" y="1732" font-size="14.5" class="muted" text-anchor="start">bedside cabinets are omitted by the homeowner</text>
+<text x="490" y="1752" font-size="14.5" class="muted" text-anchor="start">(HD-14: ST-R04-NS01, ST-R04-NS02, ST-R05-NS01; no</text>
+<text x="490" y="1772" font-size="14.5" class="muted" text-anchor="start">optional outline). Concealed curtains in the living,</text>
+<text x="490" y="1792" font-size="14.5" class="muted" text-anchor="start">master and children rooms need two tracks, sheer +</text>
+<text x="490" y="1812" font-size="14.5" class="muted" text-anchor="start">blackout (HD-14); pocket sizes are unverified. The</text>
+<text x="490" y="1832" font-size="14.5" class="muted" text-anchor="start">W03 curtain pocket and the master bed position are</text>
+<text x="490" y="1852" font-size="14.5" class="muted" text-anchor="start">held for lighting (H-MBR-W03, H-MBR-BED).</text>
+<text x="910" y="1508" font-size="15" class="proposed" text-anchor="start">UTILITY</text>
+<text x="910" y="1532" font-size="14.5" class="muted" text-anchor="start">One continuous east wall runs from the kitchen to</text>
+<text x="910" y="1552" font-size="14.5" class="muted" text-anchor="start">the south corner; no return encloses the washing</text>
+<text x="910" y="1572" font-size="14.5" class="muted" text-anchor="start">corner. The parapet opening reaches that wall face</text>
+<text x="910" y="1592" font-size="14.5" class="muted" text-anchor="start">(0.570 to 4.694 m). Corner wall height to be</text>
+<text x="910" y="1612" font-size="14.5" class="muted" text-anchor="start">site-checked (OI-UTL-02).</text>
+<text x="1330" y="1508" font-size="15" class="proposed" text-anchor="start">POOJA NICHE (HD-16 / HD-18)</text>
+<text x="1330" y="1532" font-size="14.5" class="muted" text-anchor="start">Already built, flush with the east wall's room face</text>
+<text x="1330" y="1552" font-size="14.5" class="muted" text-anchor="start">as reported (x 0.685 m, estimated z 12.169 to 12.779</text>
+<text x="1330" y="1572" font-size="14.5" class="muted" text-anchor="start">m). Front outline only. HD-18 clarifies</text>
+<text x="1330" y="1592" font-size="14.5" class="muted" text-anchor="start">feet-and-inches notation: sill 1 ft 5 in (0.4318 m),</text>
+<text x="1330" y="1612" font-size="14.5" class="muted" text-anchor="start">depth 1 ft 3 in (381 mm), north-corner gap 1 ft 4 in</text>
+<text x="1330" y="1632" font-size="14.5" class="muted" text-anchor="start">(0.4064 m). All remain homeowner estimates, not site</text>
+<text x="1330" y="1652" font-size="14.5" class="muted" text-anchor="start">measurements. Opening height 1701.8 mm is derived</text>
+<text x="1330" y="1672" font-size="14.5" class="muted" text-anchor="start">from the estimated top minus sill. The homeowner</text>
+<text x="1330" y="1692" font-size="14.5" class="muted" text-anchor="start">reports a reinforced slab extension beyond the wall.</text>
+<text x="1330" y="1712" font-size="14.5" class="muted" text-anchor="start">Its geometry and capacity are unverified: no</text>
+<text x="1330" y="1732" font-size="14.5" class="muted" text-anchor="start">physical back or structural section is drawn.</text>
+<text x="1330" y="1752" font-size="14.5" class="muted" text-anchor="start">Confirm dimensions and balcony-edge relation on site</text>
+<text x="1330" y="1772" font-size="14.5" class="muted" text-anchor="start">(OI-POOJA-01). No cutting or deepening is</text>
+<text x="1330" y="1792" font-size="14.5" class="muted" text-anchor="start">authorised.</text>
+<path d="M70 1878H1730" stroke="#c8d2d3"/>
+<text x="70" y="1914" font-size="18" class="section" text-anchor="start">DECISIONS &amp; SITE CHECKS / SOURCE OPEN-ITEM REGISTER</text>
+<text x="1730" y="1914" font-size="13.5" class="muted" text-anchor="end">Quoted in full from the master. &quot;sheet-N&quot; and legacy wall IDs are drawing labels, not compass; compass names govern.</text>
+<text x="70" y="1947" font-size="14" class="muted" text-anchor="start">OI-R05-01 / Children's bedside vs ceiling curtain [FIXED UNIT CONFLICT</text>
+<text x="70" y="1965" font-size="14" class="muted" text-anchor="start">NOT APPLICABLE AFTER HD14]</text>
+<text x="70" y="1986" font-size="13.5" class="muted" text-anchor="start">No fixed bedside is supplied. Keep the current curtain/room geometry;</text>
+<text x="70" y="2004" font-size="13.5" class="muted" text-anchor="start">verify any tenant movable table and two-layer curtain stack on site.</text>
+<text x="630" y="1947" font-size="14" class="hold" text-anchor="start">OI-R05-02 / Children's window size [OPEN]</text>
+<text x="630" y="1968" font-size="13.5" class="muted" text-anchor="start">Children's-room window width, jamb offsets, sill and head are unmeasured.</text>
+<text x="630" y="1986" font-size="13.5" class="muted" text-anchor="start">Verify the as-built opening and curtain/bed-head relationship on site; this</text>
+<text x="630" y="2004" font-size="13.5" class="muted" text-anchor="start">current layout's window placeholder is not site verified.</text>
+<text x="1190" y="1947" font-size="14" class="muted" text-anchor="start">OI-R05-03 / Children's study return [HOMEOWNER SELECTED LAYOUT SITE</text>
+<text x="1190" y="1965" font-size="14" class="muted" text-anchor="start">CLEARANCE HOLD]</text>
+<text x="1190" y="1986" font-size="13.5" class="muted" text-anchor="start">Homeowner selected keeping the finalized layout (HD-15). The proposed</text>
+<text x="1190" y="2004" font-size="13.5" class="muted" text-anchor="start">bed-foot to study-return gap is approximately 387.6 mm and remains a pinch</text>
+<text x="1190" y="2022" font-size="13.5" class="muted" text-anchor="start">point, not a comfortable walking route. Verify actual tenant bed-frame</text>
+<text x="1190" y="2040" font-size="13.5" class="muted" text-anchor="start">envelope, fixed return, and unobstructed route on site; do not relocate</text>
+<text x="1190" y="2058" font-size="13.5" class="muted" text-anchor="start">furniture in drawings.</text>
+<text x="70" y="2088" font-size="14" class="hold" text-anchor="start">OI-R05-04 / Children's door and loft over door [OPEN]</text>
+<text x="70" y="2109" font-size="13.5" class="muted" text-anchor="start">Children's door position, hinge and inward swing are proposed; confirm on</text>
+<text x="70" y="2127" font-size="13.5" class="muted" text-anchor="start">site. Loft soffit 2.13 m is assumed and 2.20 m is a project clearance</text>
+<text x="70" y="2145" font-size="13.5" class="muted" text-anchor="start">target, not a verified statutory minimum. Loft clear height, depth, support</text>
+<text x="70" y="2163" font-size="13.5" class="muted" text-anchor="start">and allowable load are unmeasured; obtain site and professional checks.</text>
+<text x="630" y="2088" font-size="14" class="muted" text-anchor="start">OI-R05-05 / Children's room orientation [RESOLVED HOMEOWNER CONFIRMED]</text>
+<text x="630" y="2109" font-size="13.5" class="muted" text-anchor="start">15 ft side is the outer west wall (bed head/curtained window); 12 ft 6 in</text>
+<text x="630" y="2127" font-size="13.5" class="muted" text-anchor="start">along the wardrobe/door wall (HD-03). Matches the current model.</text>
+<text x="1190" y="2088" font-size="14" class="hold" text-anchor="start">OI-SH-01 / Assembled shell residuals [OPEN]</text>
+<text x="1190" y="2109" font-size="13.5" class="muted" text-anchor="start">Dining 110.6 mm and living 145.1 mm open/entry bands; master 41.1 mm</text>
+<text x="1190" y="2127" font-size="13.5" class="muted" text-anchor="start">compass-east (sheet-left) model interface; utility and balcony label scope</text>
+<text x="1190" y="2145" font-size="13.5" class="muted" text-anchor="start">unresolved; overall area 1643 vs 1590 ft2. These are reconciliation holds,</text>
+<text x="1190" y="2163" font-size="13.5" class="muted" text-anchor="start">not measured gaps.</text>
+<text x="70" y="2193" font-size="14" class="hold" text-anchor="start">OI-ST-01 / Storage inputs [OPEN]</text>
+<text x="70" y="2214" font-size="13.5" class="muted" text-anchor="start">Basis set: typical tenant family of 3-4 (HD-04); beds are tenant-supplied</text>
+<text x="70" y="2232" font-size="13.5" class="muted" text-anchor="start">(HD-05); budget target mid INR 2.5-3.5 lakh per flat before GST excluding</text>
+<text x="70" y="2250" font-size="13.5" class="muted" text-anchor="start">beds (HD-06). Still unknown: loft clear geometry and load per floor.</text>
+<text x="630" y="2193" font-size="14" class="hold" text-anchor="start">OI-BATH-01 / Bath door hinge side [OPEN]</text>
+<text x="630" y="2214" font-size="13.5" class="muted" text-anchor="start">Vanity orientation resolved (HD-07: cabinet faces north, user faces south,</text>
+<text x="630" y="2232" font-size="13.5" class="muted" text-anchor="start">as drawn). Hinge side remains a provisional interpretation; confirm on</text>
+<text x="630" y="2250" font-size="13.5" class="muted" text-anchor="start">site.</text>
+<text x="1190" y="2193" font-size="14" class="proposed" text-anchor="start">OI-MBR-01 / Master-bedroom layout and openings [PROPOSED RESOLUTION]</text>
+<text x="1190" y="2214" font-size="13.5" class="muted" text-anchor="start">Wardrobes are on the compass-south wall with W03 in the middle bay; the</text>
+<text x="1190" y="2232" font-size="13.5" class="muted" text-anchor="start">headboard is on the west wall with W04 at the far corner; TV and door are</text>
+<text x="1190" y="2250" font-size="13.5" class="muted" text-anchor="start">on the east wall. Dressing is adjacent. No room or wall was moved; W03</text>
+<text x="1190" y="2268" font-size="13.5" class="muted" text-anchor="start">remains an unmeasured placeholder (OI-MBR-02).</text>
+<text x="70" y="2298" font-size="14" class="proposed" text-anchor="start">OI-UTL-01 / Straight utility wall [PROPOSED RESOLUTION]</text>
+<text x="70" y="2319" font-size="13.5" class="muted" text-anchor="start">The continuous utility side wall is on the compass-east side (legacy</text>
+<text x="70" y="2337" font-size="13.5" class="muted" text-anchor="start">drawing ID west-upper). The full-height return at the utility end is</text>
+<text x="70" y="2355" font-size="13.5" class="muted" text-anchor="start">removed in the current proposal by extending the parapet opening to the</text>
+<text x="70" y="2373" font-size="13.5" class="muted" text-anchor="start">side-wall inner face. Cardinal orientation is homeowner-confirmed; the true</text>
+<text x="70" y="2391" font-size="13.5" class="muted" text-anchor="start">bearing is not surveyed.</text>
+<text x="630" y="2298" font-size="14" class="muted" text-anchor="start">OI-REF-01 / Children's interiro_1 page range [EXCLUDED REFERENCE NOT</text>
+<text x="630" y="2316" font-size="14" class="muted" text-anchor="start">USED]</text>
+<text x="630" y="2337" font-size="13.5" class="muted" text-anchor="start">No range selected. Ambiguous interiro_1 pages are unused; R05 retains its</text>
+<text x="630" y="2355" font-size="13.5" class="muted" text-anchor="start">independently authorised Rajesh16-18 relationships unchanged.</text>
+<text x="1190" y="2298" font-size="14" class="hold" text-anchor="start">OI-MBR-02 / W03 as-built position [OPEN]</text>
+<text x="1190" y="2319" font-size="13.5" class="muted" text-anchor="start">Homeowner confirmed W03 is roughly centred on the master's south (sheet-N)</text>
+<text x="1190" y="2337" font-size="13.5" class="muted" text-anchor="start">wall (HD-02). Still measure jamb offsets, width, sill and head; confirm</text>
+<text x="1190" y="2355" font-size="13.5" class="muted" text-anchor="start">site photo N1 is this room.</text>
+<text x="70" y="2421" font-size="14" class="muted" text-anchor="start">OI-MBR-03 / R04 storage re-placement [OPEN SITE MEASUREMENT]</text>
+<text x="70" y="2442" font-size="13.5" class="muted" text-anchor="start">R04 split wardrobe approved in principle. Keep all dimensions as</text>
+<text x="70" y="2460" font-size="13.5" class="muted" text-anchor="start">placeholders until site measurement; no geometry or lighting positions are</text>
+<text x="70" y="2478" font-size="13.5" class="muted" text-anchor="start">released by this decision.</text>
+<text x="630" y="2421" font-size="14" class="hold" text-anchor="start">OI-MBR-04 / R04 curtain/lighting recheck [OPEN]</text>
+<text x="630" y="2442" font-size="13.5" class="muted" text-anchor="start">The master-bedroom curtain pocket must follow W03 on the south wall;</text>
+<text x="630" y="2460" font-size="13.5" class="muted" text-anchor="start">recheck MBR-L2 and the W04 curtain stack against the tenant bedside</text>
+<text x="630" y="2478" font-size="13.5" class="muted" text-anchor="start">arrangement. The headboard is on the compass-west wall. Verify actual bed</text>
+<text x="630" y="2496" font-size="13.5" class="muted" text-anchor="start">placement and switch access on site.</text>
+<text x="1190" y="2421" font-size="14" class="hold" text-anchor="start">OI-UTL-02 / Utility corner wall height [OPEN]</text>
+<text x="1190" y="2442" font-size="13.5" class="muted" text-anchor="start">Photo U1 may show the sheet-left wall stepping to parapet height near the</text>
+<text x="1190" y="2460" font-size="13.5" class="muted" text-anchor="start">corner; parapet height, grille and corner nib unmeasured.</text>
+<text x="70" y="2526" font-size="14" class="muted" text-anchor="start">OI-BED-01 / Tenant-supplied beds [PARTIALLY RESOLVED]</text>
+<text x="70" y="2547" font-size="13.5" class="muted" text-anchor="start">Check actual queen/king bed-frame envelopes, curtain stacks, movable-table</text>
+<text x="70" y="2565" font-size="13.5" class="muted" text-anchor="start">allowances and accessible bedside switches/sockets/readers. Do not</text>
+<text x="70" y="2583" font-size="13.5" class="muted" text-anchor="start">reintroduce fixed bedside cabinets.</text>
+<text x="630" y="2526" font-size="14" class="muted" text-anchor="start">OI-POOJA-01 / Existing recessed pooja niche: estimated dimensions and</text>
+<text x="630" y="2544" font-size="14" class="muted" text-anchor="start">depth hold (HD-16) [HOMEOWNER ESTIMATES RECORDED SITE STRUCTURE AND</text>
+<text x="630" y="2562" font-size="14" class="muted" text-anchor="start">LIGHTING HOLD]</text>
+<text x="630" y="2583" font-size="13.5" class="muted" text-anchor="start">Homeowner estimates: width about 2 ft, sill about 1 ft 5 in, top about 7</text>
+<text x="630" y="2601" font-size="13.5" class="muted" text-anchor="start">ft, depth about 1 ft 3 in and north-corner-to-edge gap about 1 ft 4 in.</text>
+<text x="630" y="2619" font-size="13.5" class="muted" text-anchor="start">These are not site measurements. The reported extension beyond the modeled</text>
+<text x="630" y="2637" font-size="13.5" class="muted" text-anchor="start">wall is not dimensioned and the balcony-edge pair is unresolved. Measure</text>
+<text x="630" y="2655" font-size="13.5" class="muted" text-anchor="start">niche, extension and light feeds; obtain professional review of support and</text>
+<text x="630" y="2673" font-size="13.5" class="muted" text-anchor="start">permissible loads. No cutting or deepening is requested. One fixed platform</text>
+<text x="630" y="2691" font-size="13.5" class="muted" text-anchor="start">is intended roughly halfway up the niche; exact elevation and idol/picture</text>
+<text x="630" y="2709" font-size="13.5" class="muted" text-anchor="start">sizes and positions remain unmeasured. The homeowner selected small idols</text>
+<text x="630" y="2727" font-size="13.5" class="muted" text-anchor="start">with a framed picture behind for display only; site fit, thermal/fire</text>
+<text x="630" y="2745" font-size="13.5" class="muted" text-anchor="start">clearance and support/capacity require verification.</text>
+<text x="1190" y="2526" font-size="14" class="hold" text-anchor="start">OI-HEIGHT-01 / Floor-to-floor, slab and false-ceiling levels (HD-11)</text>
+<text x="1190" y="2544" font-size="14" class="hold" text-anchor="start">[OPEN]</text>
+<text x="1190" y="2565" font-size="13.5" class="muted" text-anchor="start">Measure on one finished flat: finished floor to slab underside, slab</text>
+<text x="1190" y="2583" font-size="13.5" class="muted" text-anchor="start">thickness, floor-finish build-up, perimeter band underside, raised</text>
+<text x="1190" y="2601" font-size="13.5" class="muted" text-anchor="start">centre-panel level and any step, the hall cross-beam depth and soffit, and</text>
+<text x="1190" y="2619" font-size="13.5" class="muted" text-anchor="start">the kitchen, bathroom, utility and lobby ceiling levels. The drawings use</text>
+<text x="1190" y="2637" font-size="13.5" class="muted" text-anchor="start">11 ft floor-to-floor, a 5 in slab and 1.5 in finish (so 3.188 m to the</text>
+<text x="1190" y="2655" font-size="13.5" class="muted" text-anchor="start">soffit) and a 9 in band drop (2.959 m). These are homeowner-stated or</text>
+<text x="1190" y="2673" font-size="13.5" class="muted" text-anchor="start">derived figures, not site measurements.</text>
+<text x="70" y="2793" font-size="13" class="mono muted" text-anchor="start">Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="1730" y="2793" font-size="14" class="hold" text-anchor="end">Readable decision plan / all_models_reconciled = false</text>
+</svg>

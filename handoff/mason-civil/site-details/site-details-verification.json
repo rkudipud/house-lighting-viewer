@@ -1,0 +1,162 @@
+{
+  "schema": "civil_details_receipt/1",
+  "verified_utc": "2026-11-18T11:19:56.785459+00:00",
+  "source_master": {
+    "path": "handoff/source-basis/house-design.json",
+    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "bytes": 1591969
+  },
+  "construction_release": false,
+  "source_manifest": {
+    "file": "details-source.json",
+    "sha256": "f0226f57c7f62e9d63ee8aebe9d8253f42a3fe0b38c86c3fcf1adbd4b3f30cb6",
+    "bytes": 1459
+  },
+  "opening_register": {
+    "file": "opening-register.json",
+    "sha256": "d8be1578c523854175f22dcf9131dfe38fbb6755dfe95a27a0865f7c908f25cf",
+    "bytes": 11792
+  },
+  "pdf": {
+    "file": "site-coordination-details.pdf",
+    "sha256": "459724dd50f3c989631496ede69596cc7c18e07c58be15e65295413d603c1ce8",
+    "bytes": 193689
+  },
+  "sheets": [
+    {
+      "id": "C01-ceiling-section",
+      "title": "Ceiling, cove and curtain section",
+      "svg": {
+        "file": "C01-ceiling-section.svg",
+        "sha256": "8dfbd5064b621efa66229603e1cdc1815f9cbb2cdbfaa6a78ccf3e3e0015bac7",
+        "bytes": 9657
+      },
+      "png": {
+        "file": "C01-ceiling-section.png",
+        "sha256": "17f9563b1e6d7cde8b77aa18265d084c83c45e5f9218dd00fb51709e162e3b7e",
+        "bytes": 447734
+      },
+      "text_count": 42,
+      "outside_text": [],
+      "text_overlaps": []
+    },
+    {
+      "id": "C02-openings-stair",
+      "title": "Opening register and stair site survey",
+      "svg": {
+        "file": "C02-openings-stair.svg",
+        "sha256": "baae1a72e0417b4d79e24631af1c063532429d7b52260bf1d17735be0661d3ed",
+        "bytes": 16326
+      },
+      "png": {
+        "file": "C02-openings-stair.png",
+        "sha256": "188ca9943cfd3c384c62ac5cd7f72b56eb5178c958e81dfbb1dc9d85e24e94ab",
+        "bytes": 513587
+      },
+      "text_count": 117,
+      "outside_text": [],
+      "text_overlaps": []
+    },
+    {
+      "id": "C03-pooja-lofts",
+      "title": "Pooja front, loft and wardrobe coordination",
+      "svg": {
+        "file": "C03-pooja-lofts.svg",
+        "sha256": "e015f51966aeaff6ba069bda202428a5b2175313d4841a54135ebd534e19718e",
+        "bytes": 8884
+      },
+      "png": {
+        "file": "C03-pooja-lofts.png",
+        "sha256": "ebe7f0de7dec435ef1bd63549e3bb81487dcedd5932c0043220a7ea480058c0d",
+        "bytes": 376677
+      },
+      "text_count": 38,
+      "outside_text": [],
+      "text_overlaps": []
+    },
+    {
+      "id": "C04-site-checklist",
+      "title": "Per-floor site and professional checklist",
+      "svg": {
+        "file": "C04-site-checklist.svg",
+        "sha256": "7b9cd73b64b08384232d6bfa7049016cad651542a006a0fa5d89ec8fe4861136",
+        "bytes": 10393
+      },
+      "png": {
+        "file": "C04-site-checklist.png",
+        "sha256": "f128d3f6c07b28a9d2975f3de068a133d761b6a2fb564e23944ec730101114e5",
+        "bytes": 493431
+      },
+      "text_count": 49,
+      "outside_text": [],
+      "text_overlaps": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "no browser errors or network requests",
+      "ok": true,
+      "detail": {
+        "page_errors": [],
+        "console_errors": [],
+        "requests": []
+      }
+    },
+    {
+      "check": "all text is inside the page",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "check": "no text-on-text overlaps",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "check": "all pages carry source hash and construction hold",
+      "ok": true
+    },
+    {
+      "check": "all opening identifiers present in schedule",
+      "ok": true
+    },
+    {
+      "check": "unverified dimensions and floor labels remain explicitly unmeasured",
+      "ok": true
+    },
+    {
+      "check": "site-selected strips and W03 exclusion represented",
+      "ok": true
+    },
+    {
+      "check": "return clash is identified without construction set-out",
+      "ok": true
+    },
+    {
+      "check": "pooja choice and structural holds represented",
+      "ok": true
+    },
+    {
+      "check": "CBR accepted layout and site pinch represented",
+      "ok": true
+    },
+    {
+      "check": "conditional cabinets and single-supply engineering holds represented",
+      "ok": true
+    },
+    {
+      "check": "four searchable PDF pages in sheet order",
+      "ok": true
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "render": {
+    "browser": "headless Edge 157.0.4341.60",
+    "network_requests": []
+  },
+  "generators": {
+    "civil_details.mjs": "94c8ebefa6ec6f914d0fa3438601a084794ff8e3c2380bfc93d4dad08392afaa",
+    "render_civil_details.py": "d256e52b8e2022d310e1602565d2513d99ba0b867e8952128ac7d98ccc557cf3"
+  }
+}

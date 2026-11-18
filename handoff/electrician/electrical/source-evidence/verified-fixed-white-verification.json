@@ -1,0 +1,768 @@
+{
+  "generated": "2026-11-18T01:02:56",
+  "scope": "FIXED-WHITE-1 final-draft single scheme (fixed CCT, brightness-only), one 2BHK floor x4",
+  "design_inputs": {
+    "source_path": "not-distributed/lighting-fragment-fixed.json",
+    "sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e"
+  },
+  "summary": {
+    "PASS": 82
+  },
+  "checks": [
+    {
+      "check": "fixture-ledger.csv agrees with JSON",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "circuit-ledger.csv agrees with JSON",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "psu-ledger.csv agrees with JSON",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "bom.csv agrees with JSON",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "compliance.csv agrees with JSON",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "104 unique fixtures (= design_inputs)",
+      "result": "PASS",
+      "detail": "104 rows, 104 unique"
+    },
+    {
+      "check": "each fixture in exactly one circuit",
+      "result": "PASS",
+      "detail": "104 assigned, max multiplicity 1"
+    },
+    {
+      "check": "fixture.circuit agrees with circuit ledger",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "47 circuits (= design_inputs), ids unique",
+      "result": "PASS",
+      "detail": "47"
+    },
+    {
+      "check": "every group specifies dimmability (not product-chain approval)",
+      "result": "PASS",
+      "detail": "non-dimmable: []"
+    },
+    {
+      "check": "no tunable / CCT-control infrastructure in the ledgers: no KNOB2, no two-channel strip, no tunable flag",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pooja strip and spot on separate groups",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "knob channel current <= design current (60 % nameplate @2 kHz, ASSUMED)",
+      "result": "PASS",
+      "detail": "max 90.8 %"
+    },
+    {
+      "check": "PSU envelope <= 90 % of usable (nameplate x 0.8 x 0.75, ASSUMED)",
+      "result": "PASS",
+      "detail": "max 88.4 % of usable"
+    },
+    {
+      "check": "PSU denominators consistent: % usable = % heat-derated / 0.75; margin = usable - envelope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "PSU nameplate >= envelope / (0.60 x headroom)",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "PSU envelopes reconcile with circuits",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "W nominal: fixtures = circuits = totals",
+      "result": "PASS",
+      "detail": "1174.0 / 1174.0"
+    },
+    {
+      "check": "W envelope: fixtures = circuits",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "single-channel coves: envelope = nominal for every fitting and in the totals (was 2 x nominal for the two-channel coves)",
+      "result": "PASS",
+      "detail": "cove 314.5 W; flat 1174.0 W"
+    },
+    {
+      "check": "four-flat envelope = flats x per-flat envelope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "control counts match ledger (31 knob circuits on 21 knob groups; 9 mains dimmers + 1 track driver)",
+      "result": "PASS",
+      "detail": "{\"TE\": 9, \"KNOB1\": 31, \"TRK\": 1, \"PIR\": 2, \"INT\": 4}"
+    },
+    {
+      "check": "BOM quantities = ledger counts (+5 % on metre items)",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "BOM carries no tunable lines (two-channel strip, two-channel knob, tunable-white strip)",
+      "result": "PASS",
+      "detail": "pwm_2 None, strip_tw None"
+    },
+    {
+      "check": "BOM PSU lines = PSU count",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "BOM arithmetic (lines, subtotal, 12 % contingency, x4 flats)",
+      "result": "PASS",
+      "detail": "flat [302846, 744666] building [1211384, 2978664]"
+    },
+    {
+      "check": "fixed CCT: every one of the 104 fittings has exactly one fixed value from {2700, 3000, 4000 K}; all five coves are fixed-white single-channel 2700 K and the 11 LOW-layer strips beside them are 2700 K (bins 30/40/34); no range-valued CCT remains",
+      "result": "PASS",
+      "detail": "{'3000K': 40, '2700K': 30, '4000K': 34}"
+    },
+    {
+      "check": "21 single-colour knob groups cover every KNOB1 circuit exactly once; group outputs, amplifiers and envelope reconcile with the circuits; every group status OK",
+      "result": "PASS",
+      "detail": "21 groups, 34 outputs, 1 amplifier"
+    },
+    {
+      "check": "supply consolidation adopted from the controls session as data: P02/P09/P13/P17 absent; C03 on P01 and C17 on P08 (one supply per cove); P12 = C21+C22+C23; P16 = C38+C39+C40; 13 supplies, 1,760 W nameplate, 1 amplifier, 10 mains dimmers",
+      "result": "PASS",
+      "detail": "13 supplies, 1760 W"
+    },
+    {
+      "check": "merged / single-coves supplies P01, P08, P12, P16 are inside their usable capacity (nameplate x 0.60) and none is over",
+      "result": "PASS",
+      "detail": "P01 76.8 %; P08 78.4 %; P12 75.7 %; P16 75.4 %"
+    },
+    {
+      "check": "voltage-drop: no FAIL; every MARGINAL feed is reported with its minimum cable size in the results sheet (single-supply coves C03 and C17 are OK)",
+      "result": "PASS",
+      "detail": "{'OK': 31, 'MARGINAL': 2}; marginal [('C39', 'all', 3.1, 2.5), ('C40', 'all', 3.3, 2.5)]"
+    },
+    {
+      "check": "fixed-cct-map.json (published to the viewer): 104 fittings, each in exactly one group, CCT/circuit/lumens/watts equal the ledger, group fittings equal circuit membership, bound to this DI and master",
+      "result": "PASS",
+      "detail": "37 groups"
+    },
+    {
+      "check": "cost test: like-for-like total installed premium of the tunable route is above the <= ~5 % rule (strict two-channel minimum >= 5 %), so the design stays FIXED-WHITE; allowances, not quotes",
+      "result": "PASS",
+      "detail": "premium [15.3, 13.8] %, strict minimum [5.6, 5.1] %"
+    },
+    {
+      "check": "grooming re-check with the vanity pair on the HIGH knob and the face pair on its own knob: face 100 % + HIGH 30 % and 50 % inside the Ev / modelling / fill / U0 band; HIGH 0 % (modelling too hard) and 100 % (Ev too high) outside it",
+      "result": "PASS",
+      "detail": "TL1: HIGH30 Ev 328, HIGH50 Ev 407, HIGH100 Ev 605; TL2: HIGH30 Ev 328, HIGH50 Ev 407, HIGH100 Ev 605"
+    },
+    {
+      "check": "photometry identical to OPT-1: heatmaps.json byte-identical to the pinned OPT-1 baseline; fixture lumens, positions, aims and optics unchanged; compliance statuses row-for-row equal",
+      "result": "PASS",
+      "detail": "heatmaps e81bf2fbe181"
+    },
+    {
+      "check": "no tunable / CCT-control wording in the active ledgers, BoM lines or compliance rows",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "curtain-pocket candidate: 4 active pockets + CURT-MBR-W03 HELD (OI-MBR-04/OI-MBR-02); every pocket fixed 2700 K R27-STRIP in the room LOW lane on an existing knob group, no new knob; length = master window span + 2 x 0.30 m ASSUMED return; W03 excluded from the active totals",
+      "result": "PASS",
+      "detail": "active 8.88 m / 71.0 W; held ['CURT-MBR-W03']"
+    },
+    {
+      "check": "curtain what-if is separate from the base: base model = the current ledgers (104/47/21 knobs/34 outputs/1 amplifier/13 PSUs/1,760 W/10 dimmers); S1/S2/S3 keep 21 knobs, add 4 (5 with W03) outputs, have no supply over usable, no voltage-drop FAIL; cost lines add up; W03 only in S3",
+      "result": "PASS",
+      "detail": "S1 38 outputs/3 amp/1890 W/VD 3.6 %; S1 INR [9667, 24417] per flat"
+    },
+    {
+      "check": "curtain candidate in the viewer map: 5 ghost pockets (W03 held), counts_toward_104 false, no new knobs, map fittings still 104; candidate file SHA bound in the map; no lux / illuminance credit; photos are SHA-matched master library references only",
+      "result": "PASS",
+      "detail": "lux keys []; photos match"
+    },
+    {
+      "check": "kitchen worktop target is U0 >= 0.6 (unchanged) and the grade follows the calculated U0",
+      "result": "PASS",
+      "detail": "U0 0.623"
+    },
+    {
+      "check": "night PASS only where one dim level gives avg<=5 and min>=1",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "reading settings: every dimmable reader has bed cases; lux = level x 100 % output; ok flags agree with bands",
+      "result": "PASS",
+      "detail": "out of band (reported, not hidden): [('CBR-R2 king_anchored', 'sustained')]"
+    },
+    {
+      "check": "optional items excluded from base ledger, loads and totals",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "CPL-1 layout basis: named, not construction-released, every HELD placement states basis and release condition",
+      "result": "PASS",
+      "detail": "16 holds: ['H-MBR-BED', 'H-MBR-W03', 'H-MBR-STACK', 'H-DRS-SWEEP', 'H-UTL-PARAPET', 'H-CBR-CEIL', 'H-CBR-CURTAIN', 'H-CBR-BED', 'H-CBR-DESK', 'H-LOFT', 'H-HD11-LEVELS', 'H-CENTRE-RECESS', 'H-HALL-BEAM', 'H-CEIL-PLACEHOLDER', 'H-CURTAIN-POCKET', 'H-POOJA-GEOMETRY']"
+    },
+    {
+      "check": "HOLD compliance rows identify the MBR placement/night route or current pooja geometry",
+      "result": "PASS",
+      "detail": "[('MBR', 'Night route floor: MBR-bedexit'), ('LIV', 'Pooja geometry and inherited fittings')]"
+    },
+    {
+      "check": "Pooja unmeasured geometry withholds idol photometry and dim settings even if no conflict is detected",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HD-14 face lights: 4 base fixtures (TL1/TL2-F1/F2) on own knobs C29B/C35B; C29/C35 replaced by C29A/C35A; no face optional item",
+      "result": "PASS",
+      "detail": "face [('TL1-F1', 'C29B'), ('TL1-F2', 'C29B'), ('TL2-F1', 'C35B'), ('TL2-F2', 'C35B')]; BoM 'face' qty 5 (incl. lobby bar)"
+    },
+    {
+      "check": "HD-14 bath grooming setting (face light + vanity pair) PASS in both baths",
+      "result": "PASS",
+      "detail": "{'TL1': 'PASS', 'TL2': 'PASS'}"
+    },
+    {
+      "check": "HD-17: one independent mirror-light wall control per bathroom (C29B, C35B = 2 single-colour knob groups), separate from every ceiling-light circuit and counted once",
+      "result": "PASS",
+      "detail": "face circuits ['C29B', 'C35B']; independent of {'TL1': ['C28', 'C29A', 'C30A', 'C30B'], 'TL2': ['C34', 'C35A', 'C36A', 'C36B']}"
+    },
+    {
+      "check": "HD-14 panel: actual level and cavity unmeasured, reference distinguished, product fit held",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HD-14 kitchen: existing fittings adjusted and calculated first (U0 < 0.60), then the permitted sink-end task fitting added; U0 target unchanged",
+      "result": "PASS",
+      "detail": "existing fittings adjusted first (HD-14 KIT-H2/H7, OPT-1 KIT-H1): HIGH+TASK U0 0.54, still < 0.60; the HD-14-permitted discreet sink-end task fitting is therefore added (KIT-T4, clear of the KIT-H2/H7 cut-outs) and the left-run strip output lowered (KIT-T1): HIGH+TASK 562/304/U0 0.54 -> 518/323/U0 0.623; Work U0 0.603 -> 0.651. The HD-14 x 2.9 ft test line is superseded: it runs through the KIT-H2 cut-out"
+    },
+    {
+      "check": "HD-14 provenance bound to warning_resolution with applied changes, design choices and open checks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "the live canonical master equals the bound master (a mismatch means rebind before integration)",
+      "result": "PASS",
+      "detail": "live e0bf1af228509054, bound e0bf1af228509054"
+    },
+    {
+      "check": "HD-14 warning_resolution hash equals the bound master",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "HD-17 control_selection read from the bound master (hash, status, arrangement, count) equals the pack's record",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "FIXED-WHITE-1 receipt: rebuilt independently and equal; bound to the master read and this DI;     DI diff reproduces the recorded 84 paths (five coves + 11 strips relabelled 2700 K, controls/catalogue/budget/text and the curtain candidate only); heat maps identical; compliance statuses row-for-row equal; no release/approval claim",
+      "result": "PASS",
+      "detail": "DI diff, dependency hashes, carried OPT-1 evidence, photometry identity and deltas independently reproduced"
+    },
+    {
+      "check": "numerical dependency hashes equal the master's geometry sections; the master's lighting DI is the OPT-1 baseline this candidate was built from",
+      "result": "PASS",
+      "detail": "master read e0bf1af228509054; geometry same; master DI 4fd1b24c521a -> candidate DI ca19a7b5cf2c"
+    },
+    {
+      "check": "HD-18 niche decision is an explicit numerical dependency, not merely metadata",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "ceiling levels follow the master (HD-11): calc band/tray, level table and band-room ceilings equal provisional_heights",
+      "result": "PASS",
+      "detail": "band 2.9591 / tray 3.1877 vs master 2.9591 / 3.1877"
+    },
+    {
+      "check": "voltage-drop.csv agrees with electrical-checks.json",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "psu-loading.csv agrees with electrical-checks.json",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "mains-dimmer-check.csv agrees with electrical-checks.json",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "board-devices.csv agrees with electrical-checks.json",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "24 V voltage-drop status follows 3 % / 5 % rule and covers every knob circuit",
+      "result": "PASS",
+      "detail": "{'OK': 31, 'MARGINAL': 2}, worst 3.3 %"
+    },
+    {
+      "check": "230 V dimmer rows: every TE/track circuit below the excluded Havells 60 W minimum stays a PROCUREMENT HOLD (low-load candidates unproven until exact chain documented and sample-tested)",
+      "result": "PASS",
+      "detail": "holds ['C01', 'C02', 'C09', 'C11', 'C13', 'C14', 'C15', 'C18', 'C20', 'C37']"
+    },
+    {
+      "check": "dimmer procurement wording: research pinned; candidates kept distinct from proven compatibility; no stale 'no LED-rated dimmer' claims",
+      "result": "PASS",
+      "detail": "research cfb01ab85ba6...; stale []"
+    },
+    {
+      "check": "230 V group screen (unchanged by the fixed-white revision): every TE group recomputed against the Legrand Lyncus 677304 listing (3-50 W, 8 lamps); all within the listing; the 40 W / 7-lamp planning margin is a flag only (the exceedance carries a procurement condition, not an added dimmer); listing not approved; track groups left to the track maker",
+      "result": "PASS",
+      "detail": "max 48 W / 8 lamps; above planning margin ['C20']; bad []"
+    },
+    {
+      "check": "OPT-1 regroup retained: C01 = LIV-H1..H5 and C02 = LIV-H6..H10 on the existing two dimmers, C20 single (MBR-H1..H8) under a stated procurement condition; no dimmer added; 104 fittings (KIT-T4 on C16)",
+      "result": "PASS",
+      "detail": "47 circuits; 104 fittings"
+    },
+    {
+      "check": "R-1 independent bath spot supplies shown as an alternative only (no extra bath PSU in ledgers or BoM)",
+      "result": "PASS",
+      "detail": "PSUs 13"
+    },
+    {
+      "check": "carried OPT-1 studies (kitchen alternatives, reduction) were computed on the OPT-1 DI = this candidate's baseline; their adopted/accepted values still equal this pack's calc-results (photometry unchanged), so they remain valid evidence without a rerun",
+      "result": "PASS",
+      "detail": "worktop 518 lx / U0 0.623; 120 reduction variants"
+    },
+    {
+      "check": "OPT-1 pooja: study used as supporting evidence only; LIV-P1/P2 unchanged and HELD; separate C06A/C06B knobs",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "strip reels: pieces = ledger strip metres; reel capacity covers every piece; per-flat reels x4 >= pooled",
+      "result": "PASS",
+      "detail": "reels flat 26, pooled x4 78"
+    },
+    {
+      "check": "PSU loading table = PSU ledger (nameplate, envelope) and within usable",
+      "result": "PASS",
+      "detail": "ledger 13 PSUs, loading table 13"
+    },
+    {
+      "check": "every lighting zone has a stated basis/purpose; bath zones agree with confirmed sizes",
+      "result": "PASS",
+      "detail": "Counter({'RECONCILIATION_REQUIRED': 5, 'AGREES_WITHIN_1MM': 4, 'NO_CONFIRMED_SIZE': 2})"
+    },
+    {
+      "check": "selected meal setting reaches 200-300 lx on the assumed table",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "draft distinguishes completion from construction release",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "outputs bound to current lighting.design_inputs (SHA-256)",
+      "result": "PASS",
+      "detail": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e vs ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e"
+    },
+    {
+      "check": "no retired scheme strings in outputs (DALI / Lean / Option A-C / old revs / non-dimmable)",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "HD-14 current diagnostics/report do not revive zero-cavity, slab-chase or optional-face claims",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "results md quotes current totals",
+      "result": "PASS",
+      "detail": "['1174.0', '1174.0', '4696.0', '302846', '744666']"
+    },
+    {
+      "check": "fixed-white specification quotes the current counts (104 fittings, 21 knobs, 13 supplies, 1760 W, 10 dimmers) and the cost verdict",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "floor-plan PNG present",
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "compliance_summary": {
+    "PASS": 60,
+    "MARGINAL": 9,
+    "HOLD": 2
+  },
+  "not_verified": [
+    "exact product chain, India stock, certification (procurement gate); dimmable HIGH (black baffle preferred, all-white deep-recess accepted per HD-14), PWM 24 V strip and 24 V bath face light are 'allowance pending documented chain'",
+    "230 V dimmers: Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load LED-dimmer candidates (Legrand 677304, Legrand AA24107MB, Schneider E8331RD250_WE; binding\\low-load-dimmer-options.md) are leads only; no exact fitting + driver + dimmer chain is documented or sample-tested, so all 12 holds remain",
+    "fixed-white coves use a GENERIC 720 lm/m, 8 W/m single-channel class (the same lumens and watts as OPT-1); no replacement product, IES/LDT file or maker lumen/CCT/CRI/SDCM data is evidenced, so no certified, equivalent or identical-photometry claim is made and prices are allowances",
+    "ff3336cd's consolidation is adopted as data; the 24 V single-supply coves C03/C17 each carry two knob outputs, so LIV LOW needs one single-colour amplifier/repeater; maker-confirmed output ratings, common 0 V reference and PWM-signal matching are NOT verified",
+    "cost comparison fixed vs tunable uses project allowances, not quotes; ff3336cd owns the authoritative costs",
+    "HD-17 mirror lights: the selected fitting, its 24 V driver/PSU and the knob dimmer are not a documented, compatible chain; wall-control location, wiring and bathroom-zone/wet-zone approval rest with the electrician and manufacturer",
+    "knob 8 kHz derating (no maker curve) - 2 kHz design",
+    "60 % knob / 0.8 PSU 50 C allowances, 1.5 mm2 cable, Manhattan cable routes and 5 m reels are ASSUMED, not maker data; the two MARGINAL P16 -> SB-08 feeds (C39, C40) need 2.5 mm2 or a separate supply",
+    "analytic point/line-source photometry (generic optics, no IES/LDT files): not validated lux; cove uniformity not claimed",
+    "CBR on the planned R05 frame (not surveyed); MBR bed items at the HELD test centreline; curtain pockets, cabinet boxes, dining table and book positions ASSUMED",
+    "HD-18 pooja dimensions are clarified feet-and-inches homeowner estimates, not site measurements; the reported beyond-wall extension/reinforcement is not a measured section or certified capacity; LIV-P1/P2 remain count/load allowances with photometry/placement/order release held (OI-POOJA-01)",
+    "Legrand Lyncus 677304 3-50 W / 8-lamp figures are a listing reading by the electrical session, not an approved limit or a proven fitting+driver+dimmer chain; the 40 W / 7-lamp planning margin is a project assumption used only as a flag (C20 carries a procurement condition)",
+    "OPT-1 position sweeps, kitchen alternatives, fixture-count reduction study, CBR supine study and pooja-platform study are CARRIED by hash from the OPT-1 pack, not rerun: nothing they depend on changed (fitting positions, lumens and optics are identical); the reduction study's one-size-up variants assume the next catalogue size has the same cost allowance; UGR is not calculated; the pooja-platform study is a provisional geometric ray study (share of sampled rays blocked), not lux",
+    "lighting zones other than baths are approximate traces (RECONCILIATION_REQUIRED)",
+    "bath occlusion (head, body, shower head, door, screen) not modelled",
+    "knob state after power restoration"
+  ],
+  "files": {
+    "out\\board-devices.csv": {
+      "sha256": "197413628c554fd02850408f4f9eea8e4c7158942d2f86ae7073732824341de2",
+      "bytes": 661
+    },
+    "out\\bom.csv": {
+      "sha256": "5488efd38b1463248d426d979e5cca4869a9d7a80a69b9e835be53a845c3ad08",
+      "bytes": 10071
+    },
+    "out\\bom.json": {
+      "sha256": "2a9e76f8b45f3d9379fbb94e365f93b31e5f636c3e8de801bdd71c8f92c80cad",
+      "bytes": 19632
+    },
+    "out\\calc-results.json": {
+      "sha256": "bdb789736ac942d5c8c4b1f0abc9d6ee61272bc083b71ef1824243e0477cfcf7",
+      "bytes": 236672
+    },
+    "out\\calculation-results.md": {
+      "sha256": "b31b8d4229a7a732b0d6235bcc79fcfe2a328a2c6bec3a1f0f70b81ebabb0997",
+      "bytes": 56128
+    },
+    "out\\circuit-control-psu-ledger.json": {
+      "sha256": "5c37255c374acb8647a67403255224d77331a46135f5cc9d06fbbeff709ae17e",
+      "bytes": 43122
+    },
+    "out\\circuit-ledger.csv": {
+      "sha256": "1ac83ff9de6f0e6b2b6aadcfc89478435b9cd7534ccd2de6e03bab5407c9eb80",
+      "bytes": 14256
+    },
+    "out\\compliance.csv": {
+      "sha256": "e6b243f7a7e9357348ef4db946982f47fbe39b66e49f9d5112b6d0b69f83d3c6",
+      "bytes": 18598
+    },
+    "out\\curtain-pocket-candidate.csv": {
+      "sha256": "efe51120f7a1d8a46c4bd6e690ff15322de67a3ded107e97b29b006a13756530",
+      "bytes": 3397
+    },
+    "out\\curtain-pocket-candidate.json": {
+      "sha256": "1135224d612b4f6cb8fb8bac6bbb87ea3e53a1b29d6a973aa8ca63e670a269d7",
+      "bytes": 66736
+    },
+    "out\\electrical-checks.json": {
+      "sha256": "df6019388caa7adc3cfff093497427e7e2f430c26ef7ae77227284536156bf86",
+      "bytes": 63659
+    },
+    "out\\fixed-cct-map.csv": {
+      "sha256": "6420505e370bf9302ab9f251f8bcface41e11e6af48b3b124dfa2919d7dfb9b3",
+      "bytes": 30079
+    },
+    "out\\fixed-cct-map.json": {
+      "sha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+      "bytes": 97300
+    },
+    "out\\fixed-cost.json": {
+      "sha256": "9997cfa66058f5daf084cf277df89e217d59e99c040f6511ca3ebf2830d8e388",
+      "bytes": 4996
+    },
+    "out\\fixed-receipt.json": {
+      "sha256": "effb92fe61bf202d3a75e2432d4efccf0596f18b416a628ff9de9cf357e3d5cc",
+      "bytes": 24409
+    },
+    "out\\fixture-ledger.csv": {
+      "sha256": "953734aba07ebfc32749cd1d3afd200e389f2ab527b88cf85fd328aa047c17c9",
+      "bytes": 28424
+    },
+    "out\\fixture-ledger.json": {
+      "sha256": "d03b53b29bed4a3c2b66102659ed9385d66f807caeab949e32051084544cd0ab",
+      "bytes": 66224
+    },
+    "out\\floor-plan-final.png": {
+      "sha256": "4196c999040eae73b3f1db3096e9816e99beefcd070b3b4cdfc73b160365938a",
+      "bytes": 264265
+    },
+    "out\\group-table.csv": {
+      "sha256": "22b8791e601807a57f74675f572e68493db2f6dcb0351fc7f4c8589c8681ded1",
+      "bytes": 5159
+    },
+    "out\\heatmaps.json": {
+      "sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+      "bytes": 1801418
+    },
+    "out\\hold-list.md": {
+      "sha256": "b92bb30c89f8b43f5a3fed75dea75691b1aae5589092be2450f0ad7663a4cb57",
+      "bytes": 12105
+    },
+    "out\\lighting-fixed-white-spec.md": {
+      "sha256": "21c7754d0c39fc58c2b6e3c650fcc27b8b70826f97c57bde10867716eae948e7",
+      "bytes": 22943
+    },
+    "out\\mains-dimmer-check.csv": {
+      "sha256": "40b451aca429b22d7e40b47dfc9e159ebdbf504123a65b3bbd9f302045c008cc",
+      "bytes": 5441
+    },
+    "out\\psu-ledger.csv": {
+      "sha256": "f34bf7841de827dabef75f3ff98bdf38d74a66743a87bd85cfa55b14f285e2a0",
+      "bytes": 2140
+    },
+    "out\\psu-loading.csv": {
+      "sha256": "9e4a6b82f25977d1821adb8e33dfa2399227cfb0dc11a619f9dd34b886da0615",
+      "bytes": 1414
+    },
+    "out\\schemas.json": {
+      "sha256": "fa6504a73fd5dab90cbbde4a57e58dff5c17aae2dff0d6d66733f8033432b47c",
+      "bytes": 7252
+    },
+    "out\\strip-reels.csv": {
+      "sha256": "2c2eb4d801692b91c4d063025b39acfef321a507ea66846db5f04285912247e9",
+      "bytes": 2473
+    },
+    "out\\voltage-drop.csv": {
+      "sha256": "e4e93a3e080d838ea60c4b2cf83d985e60705d12d7b5e29ad2b5bc971d35499f",
+      "bytes": 4080
+    },
+    "src\\export_fixed.py": {
+      "sha256": "600eab1eb4e43f2e170bd150f8c2b501d07b455b2cecbee804d9953db5f6ddf5",
+      "bytes": 10334
+    },
+    "src\\fixed_cost.py": {
+      "sha256": "67f04c7d3f23395deedbfc373a62eccc29bddce6e0a0ed383b956c69572f0a08",
+      "bytes": 6851
+    },
+    "src\\fixed_receipt.py": {
+      "sha256": "4ccaa6282267c151f0ead91e07a506c62ac308949b43bb8301b57a65dd4f61b3",
+      "bytes": 19853
+    },
+    "src\\fm_calc_accent.py": {
+      "sha256": "5ff4321a4c1fc706273ce12a8eeafbb9849c190816b2b25ac8d26d0c219b0cba",
+      "bytes": 9833
+    },
+    "src\\fm_calc_rooms.py": {
+      "sha256": "d53f53ecf81770996b810b2aeffdf9cc7f07b7f34fc8f3c1a2c6bab866a1a764",
+      "bytes": 8507
+    },
+    "src\\fm_calc_tasks.py": {
+      "sha256": "ad7a45f66bd1e35f1fa0a2d4cf11c8caf80b8dfc84d3cfc146cadc68a79bb37b",
+      "bytes": 29499
+    },
+    "src\\fm_catalog.py": {
+      "sha256": "e9b24ea3bb0ee55dff9c6061f74a8561d6a011fcaf536599b8cf33da6dec7b70",
+      "bytes": 177
+    },
+    "src\\fm_circuits.py": {
+      "sha256": "dced7091fda4c2983716d886784c8f92abe793ddccf616bd74e88ca20de69e57",
+      "bytes": 4441
+    },
+    "src\\fm_elec.py": {
+      "sha256": "218e75029acba4b1156ae56dac044d45fe2aeaf402432047b4c56aac9d13c6b1",
+      "bytes": 14470
+    },
+    "src\\fm_hd11.py": {
+      "sha256": "35108b251cec8d515765d79c6e7fb8d0e26d322693ae26861db0c32a949f493b",
+      "bytes": 18675
+    },
+    "src\\fm_hd14.py": {
+      "sha256": "ec9c9b85bbfd333faf819cbc7d4fc902d355f68b26ef0bae99c80929294c299c",
+      "bytes": 8995
+    },
+    "src\\fm_out.py": {
+      "sha256": "7346033dfa89be43fdc55aa0cf540b9059e50d4039086557e8580e53981c0e98",
+      "bytes": 7357
+    },
+    "src\\fm_rooms.py": {
+      "sha256": "5b4bbc0f73c86c8f34cdba6067ac3b83675cd454b3a8ef6709bec4eba37bdb2f",
+      "bytes": 2585
+    },
+    "src\\fm_schemas.py": {
+      "sha256": "8cf4c3ef8ca4054cd4a061075309b2a45b19630e640c88cf84c82021649770ba",
+      "bytes": 7142
+    },
+    "src\\fm_source.py": {
+      "sha256": "ade2ef471ba7dbf4cc1b8494b2426ae760e1d6c1540bf7278a3643a88a7511f1",
+      "bytes": 1549
+    },
+    "src\\lc_engine.py": {
+      "sha256": "5b24def69f504a1826dde0466a8577558fc2c0ce333009071fed968aceb9f546",
+      "bytes": 9528
+    },
+    "src\\make_curtain.py": {
+      "sha256": "7788b5287b1af1f8f3ea226b633efe471806673a8710a549b0585828d61a60eb",
+      "bytes": 24943
+    },
+    "src\\make_fixed_di.py": {
+      "sha256": "e53e690bb4965e687b5bbc3b5d563205c87e2e6a8180fededbfff8b5f08703c2",
+      "bytes": 30854
+    },
+    "src\\make_fixed_spec.py": {
+      "sha256": "33dd7bd3d247f0cc3b312ede059b98c59e3110b4a51d3130029a423c98637202",
+      "bytes": 29815
+    },
+    "src\\make_plan.py": {
+      "sha256": "515c5f0915399131f27102978cd2204f311db69db3a19c1e45bc68037081d341",
+      "bytes": 6747
+    },
+    "src\\make_report.py": {
+      "sha256": "5872f8c54da96e53ce56d2a41db69c8444cfcd8f01726361aed6bc1054f38715",
+      "bytes": 36991
+    },
+    "src\\procurement_hd18.py": {
+      "sha256": "27bdbee87b0326c4d5d137daae78d023bfed39f23054683f7f53a2252e003944",
+      "bytes": 10565
+    },
+    "src\\run_final.py": {
+      "sha256": "27fa27ba2f58885489856477dfc8a2130320c6993b7ba627b9957959f729eca4",
+      "bytes": 37440
+    },
+    "src\\test_verification.py": {
+      "sha256": "ad2aa46724bddeda4b7df02e5ab36cb07844838fbe76c8fdfea1656d34a925f0",
+      "bytes": 12160
+    },
+    "src\\verify.py": {
+      "sha256": "5453c4e4b634b0bbf9a24d649a2f6f8ecbf3cb261eced1d7344eb51432dd95cf",
+      "bytes": 51313
+    },
+    "data\\lighting-fragment-fixed.json": {
+      "sha256": "a96a3467f3ca9e7cb0b6e9e7aaafe93f1c8993ec43bd527d90c5d702ada92926",
+      "bytes": 303198
+    },
+    "data\\lighting_criteria.json": {
+      "sha256": "ee97059858ffb56c64fe6f9888c684b61c240b1a5ef80f01401f173f4a890e80",
+      "bytes": 45747
+    },
+    "layout\\hd14_block.py": {
+      "sha256": "51885ae18d7a4494a8a623e3fd16cf27fd1e8b7d7cbe9ba07bb02339a5852790",
+      "bytes": 14668
+    },
+    "layout\\make_cpl1.py": {
+      "sha256": "1ebef169fadc169c8e40d9534bbe59ddc427ebb65bdfd667439404b7adeef1f1",
+      "bytes": 39129
+    },
+    "binding\\low-load-dimmer-options.md": {
+      "sha256": "cfb01ab85ba6774de09f99fd3b17774dbdfefc7253457cf9737a181c7d84f8b4",
+      "bytes": 13257
+    },
+    "binding\\master-7315308e.json": {
+      "sha256": "7315308ec0b9803e39ea3716dd9c6842505f921d10dbbfc434f1961032a069a1",
+      "bytes": 1227612
+    },
+    "binding\\pooja-platform-study\\pooja-platform-study.json": {
+      "sha256": "88f1046c85ee069c33594591a1f7eb6a2532d5920eb9c56b07c75a7943ff4876",
+      "bytes": 743225
+    },
+    "binding\\pooja-platform-study\\pooja-platform-study.md": {
+      "sha256": "4471b3331ec376fdc63234a183966faf2c5a2a635ab3838814b72cc8950e43bd",
+      "bytes": 9333
+    },
+    "input\\baseline-OPT1-fragment.json": {
+      "sha256": "e8e2b4d2e61a54ff6e037fc767a1fc650bfc407aa1baeb074acfa34590c30578",
+      "bytes": 845690
+    },
+    "input\\house-design-e0bf1af2.json": {
+      "sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
+      "bytes": 1289947
+    },
+    "baseline-opt1\\baseline-manifest.json": {
+      "sha256": "ccd19418feaf1f81c0bcaacbdb6e5598b40a19cfdb4c4b2e89597afeb3f5a852",
+      "bytes": 2080
+    },
+    "baseline-opt1\\board-devices.csv": {
+      "sha256": "449133fc8b72b01948a217a867d626ca86add690d665c3e8793fb15accd9e7a3",
+      "bytes": 707
+    },
+    "baseline-opt1\\bom.csv": {
+      "sha256": "a04fa7f4e532f8593a6a0ad3fed9770030b601318b8a14401c60151f029d9dba",
+      "bytes": 10338
+    },
+    "baseline-opt1\\bom.json": {
+      "sha256": "06a1b03eda0553174b53571219fe689cab110bb940e4eef19d1b899521d3b212",
+      "bytes": 20381
+    },
+    "baseline-opt1\\calc-results.json": {
+      "sha256": "4bfaf60857864109e9669d4404d6f5a653079694bd8b2a4d6a52eadc27d125a5",
+      "bytes": 232902
+    },
+    "baseline-opt1\\circuit-control-psu-ledger.json": {
+      "sha256": "18fa8a0f3e8b287dfaf178f7b0aa04f8e2a43d71fcb1c341bc267e0caf4be084",
+      "bytes": 43725
+    },
+    "baseline-opt1\\circuit-ledger.csv": {
+      "sha256": "2c5274730841eeca605ae70d5dcc45f23615bd63e3c9c641721765e5a85862d4",
+      "bytes": 13288
+    },
+    "baseline-opt1\\compliance.csv": {
+      "sha256": "3a8f78d14fab4e1e4437b16e2e15c7c8269dfc97ea1809845049b0579b7cb7a5",
+      "bytes": 18130
+    },
+    "baseline-opt1\\electrical-checks.json": {
+      "sha256": "706779d80d5d66015bb363d04e43f6e710f23d38a1e132d2e8d644558b03d72d",
+      "bytes": 55285
+    },
+    "baseline-opt1\\fixture-ledger.csv": {
+      "sha256": "517cc95d639a1858641715ecce87c23c6890c0d94e48895a3aaf2edad6ff0eef",
+      "bytes": 27554
+    },
+    "baseline-opt1\\fixture-ledger.json": {
+      "sha256": "89db002a5cd425f3d09957560cbb24005f4bd4cf4351141afb49eca90a0b5811",
+      "bytes": 65663
+    },
+    "baseline-opt1\\mains-dimmer-check.csv": {
+      "sha256": "40b451aca429b22d7e40b47dfc9e159ebdbf504123a65b3bbd9f302045c008cc",
+      "bytes": 5441
+    },
+    "baseline-opt1\\psu-ledger.csv": {
+      "sha256": "85639b2defd8ee48e22494ac4212378a339745c6b5e6df3a149a7518e8ee8ff5",
+      "bytes": 2696
+    },
+    "baseline-opt1\\psu-loading.csv": {
+      "sha256": "7e1eec3d5a1e73f98790e34a419401d4edbfa041a5448ea51dc93752343de855",
+      "bytes": 1733
+    },
+    "baseline-opt1\\schemas.json": {
+      "sha256": "448ef05ef3af4d52b2ad52934629041e9fb9f62e59dbb585b7700ed5d3638bbb",
+      "bytes": 6922
+    },
+    "baseline-opt1\\strip-reels.csv": {
+      "sha256": "3f8b7154b532ef007c4b664a92efed7c04b4b78f9b25a38af4cbe4d1b785e050",
+      "bytes": 2308
+    },
+    "baseline-opt1\\voltage-drop.csv": {
+      "sha256": "cfd498c1a6905df4a9a0572358d2cdda1bcee337bd3ed0965bbcdb038dcf5766",
+      "bytes": 3931
+    }
+  }
+}

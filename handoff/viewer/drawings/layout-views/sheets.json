@@ -1,0 +1,1058 @@
+{
+  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "master_bytes": 1591969,
+  "drawing_source": {
+    "staging": false,
+    "final": false,
+    "publication_status": "REVIEW DRAFT; not construction-released",
+    "review_draft": true,
+    "lighting_pending": false,
+    "hd18": {
+      "fragment": {
+        "file": "pooja-notation-hd18.json",
+        "sha256": "598796435ba3b37d6fedf655f243d87e09c663cbf338eb5fd7a25cbff37a46ec",
+        "bytes": 2458
+      },
+      "dimensions": {
+        "status": "homeowner_estimates_unverified_not_site_measurements",
+        "width_mm": 609.6,
+        "height_mm": 1701.8,
+        "sill_m": 0.4318,
+        "top_m": 2.1336,
+        "depth_mm": 381,
+        "z_m": [
+          12.1690384,
+          12.7786384
+        ],
+        "opening_height_basis": "Derived from estimated top minus estimated sill, not separately measured.",
+        "interpretation": "Homeowner clarified feet-and-inches notation: sill 1 ft 5 in, depth 1 ft 3 in, north-corner gap 1 ft 4 in. All remain estimates."
+      },
+      "placement": {
+        "status": "provisional_from_estimated_offset_and_unverified_model_corner",
+        "corner_z_m": 13.1850384,
+        "corner_source": "visualization_geometry.rooms[living].rect north/entry-side inside edge",
+        "north_edge_clear_offset_m": 0.4064,
+        "niche_z_m_south_to_north": [
+          12.1690384,
+          12.7786384
+        ],
+        "w06_planar_gap_m": 1.1809984,
+        "w06_gap_basis": "Current modeled living-window; neither opening is site surveyed.",
+        "balcony_outline": "An edge relationship was reported, but the matching edges remain unresolved; do not claim alignment."
+      },
+      "construction_release": false
+    },
+    "note": "HD-18 clarifies feet-and-inches notation: sill 1 ft 5 in (0.4318 m), depth 1 ft 3 in (381 mm), north-corner gap 1 ft 4 in (0.4064 m). All remain homeowner estimates, not site measurements. Opening height 1701.8 mm is derived from the estimated top minus sill."
+  },
+  "sheets": [
+    {
+      "id": "01-plan-furnished",
+      "title": "Furnished floor plan (top-down)",
+      "counts": {
+        "rooms": 12,
+        "walls": 21,
+        "openings": 21,
+        "storageDrawn": 11,
+        "storageSuppressed": 5,
+        "furniture": 16,
+        "tenantBeds": 2,
+        "stairParts": 3,
+        "baths": 2
+      },
+      "drawn": {
+        "storage": [
+          "ST-R04a-WR01",
+          "ST-R05-WR01",
+          "ST-R05-TV01",
+          "ST-R05-DK01",
+          "ST-R09-SH01",
+          "ST-R08-UC01",
+          "ST-R08-LD01",
+          "ST-R04a-LF01",
+          "ST-R05-LF01",
+          "ST-R05-OH01",
+          "ST-R08-LF01"
+        ],
+        "furniture": [
+          "FURN-sofa",
+          "FURN-sofa-return",
+          "FURN-coffee",
+          "FURN-tv",
+          "FURN-dining-table",
+          "FURN-kitchen-left",
+          "FURN-kitchen-top",
+          "FURN-kitchen-fridge",
+          "FURN-kitchen-bar",
+          "FURN-lobby-vanity",
+          "FURN-wash-basin",
+          "FURN-washer",
+          "FURN-utility-counter",
+          "FURN-rug",
+          "FURN-plant-1",
+          "FURN-plant-2"
+        ],
+        "suppressed": [
+          "ST-R04-WR01",
+          "ST-R04-LF01",
+          "ST-R04-BED01",
+          "ST-R04-NS01",
+          "ST-R04-NS02"
+        ]
+      },
+      "file": "01-plan-furnished.svg",
+      "sha256": "3452ab485d7cf5a402b53fb394f69aa65d579e4d2f55bde849c04c5ae45b8616"
+    },
+    {
+      "id": "02-rcp",
+      "title": "Reflected ceiling plan (bottoms-up)",
+      "counts": {
+        "fixtures": 104,
+        "circuits": 47,
+        "selectedCurtainStrips": 4,
+        "reviewFixtures": 108,
+        "reviewCircuits": 51,
+        "paths": 30,
+        "points": 74,
+        "fans": 3,
+        "curtainPockets": 5,
+        "grooves": 6,
+        "holdMarks": 11,
+        "rooms": 12,
+        "walls": 21
+      },
+      "drawn": {
+        "fixtureTypes": {
+          "DL8": 7,
+          "DL8A": 3,
+          "COVE_FW": 5,
+          "BACK": 3,
+          "LIN": 10,
+          "PIN6V": 1,
+          "DL10": 8,
+          "DL8V": 1,
+          "PEND": 1,
+          "TRK6": 3,
+          "TRKLIN": 1,
+          "DL7": 3,
+          "TASK_LO": 1,
+          "TASK": 2,
+          "BULKD": 3,
+          "TASKW": 1,
+          "DL6": 14,
+          "READ": 4,
+          "STEP": 2,
+          "DL7V": 4,
+          "BSPOT8V": 4,
+          "BDIF9V": 6,
+          "BCOVE": 2,
+          "NICHE": 2,
+          "VANITY": 2,
+          "FACEV": 4,
+          "FACE10V": 1,
+          "TASK_HO": 1,
+          "CYLSV": 2,
+          "PLINTH": 1,
+          "UPDNV": 2
+        },
+        "fixtureRooms": {
+          "LIV": 16,
+          "DIN": 11,
+          "KIT": 13,
+          "UTL": 4,
+          "MBR": 15,
+          "DRS": 2,
+          "TL1": 10,
+          "LOB": 4,
+          "TL2": 10,
+          "CBR": 14,
+          "BAL": 5
+        },
+        "fixtureIds": [
+          "LIV-H1",
+          "LIV-H2",
+          "LIV-H3",
+          "LIV-H4",
+          "LIV-H5",
+          "LIV-H6",
+          "LIV-H7",
+          "LIV-H8",
+          "LIV-H9",
+          "LIV-H10",
+          "LIV-L1",
+          "LIV-L2",
+          "LIV-X1",
+          "LIV-X2",
+          "LIV-P1",
+          "LIV-P2",
+          "DIN-H1",
+          "DIN-H2",
+          "DIN-H3",
+          "DIN-H6",
+          "DIN-L1",
+          "DIN-L2",
+          "DIN-X1",
+          "FW-T1",
+          "FW-T2",
+          "FW-T3",
+          "FW-T4",
+          "KIT-H1",
+          "KIT-H2",
+          "KIT-H3",
+          "KIT-H4",
+          "KIT-H5",
+          "KIT-H6",
+          "KIT-H7",
+          "KIT-H8",
+          "KIT-T1",
+          "KIT-T2",
+          "KIT-T3",
+          "KIT-L1",
+          "KIT-T4",
+          "UTL-H1",
+          "UTL-H2",
+          "UTL-H3",
+          "UTL-T1",
+          "MBR-H1",
+          "MBR-H2",
+          "MBR-H3",
+          "MBR-H4",
+          "MBR-H5",
+          "MBR-H6",
+          "MBR-H7",
+          "MBR-H8",
+          "MBR-L1",
+          "MBR-L2",
+          "MBR-X1",
+          "MBR-X2",
+          "MBR-R1",
+          "MBR-R2",
+          "MBR-N1",
+          "DRS-H1",
+          "DRS-H2",
+          "TL1-M1",
+          "TL1-M2",
+          "TL1-G1",
+          "TL1-G2",
+          "TL1-G3",
+          "TL1-L1",
+          "TL1-L2",
+          "TL1-L3",
+          "TL1-F1",
+          "TL1-F2",
+          "LOB-H1",
+          "LOB-H2",
+          "LOB-F1",
+          "LOB-N1",
+          "TL2-M1",
+          "TL2-M2",
+          "TL2-G1",
+          "TL2-G2",
+          "TL2-G3",
+          "TL2-L1",
+          "TL2-L2",
+          "TL2-L3",
+          "TL2-F1",
+          "TL2-F2",
+          "CBR-H1",
+          "CBR-H2",
+          "CBR-H3",
+          "CBR-H4",
+          "CBR-H5",
+          "CBR-H6",
+          "CBR-L1",
+          "CBR-X1",
+          "CBR-X2",
+          "CBR-X3",
+          "CBR-X4",
+          "CBR-S1",
+          "CBR-R1",
+          "CBR-R2",
+          "BAL-H1",
+          "BAL-H2",
+          "BAL-L1",
+          "BAL-L2",
+          "BAL-L3"
+        ],
+        "circuitIds": [
+          "C01",
+          "C02",
+          "C03",
+          "C04",
+          "C05",
+          "C06A",
+          "C06B",
+          "C07",
+          "C08",
+          "C09",
+          "C10",
+          "C11",
+          "C12",
+          "C13",
+          "C14",
+          "C15",
+          "C16",
+          "C17",
+          "C18",
+          "C19",
+          "C20",
+          "C21",
+          "C22",
+          "C23",
+          "C24",
+          "C25",
+          "C26",
+          "C27",
+          "C28",
+          "C29A",
+          "C29B",
+          "C30A",
+          "C30B",
+          "C31",
+          "C32",
+          "C33",
+          "C34",
+          "C35A",
+          "C35B",
+          "C36A",
+          "C36B",
+          "C37",
+          "C38",
+          "C39",
+          "C40",
+          "C41",
+          "C41b"
+        ],
+        "curtainStrips": [
+          "CURT-LIV",
+          "CURT-DIN",
+          "CURT-MBR-S",
+          "CURT-CBR"
+        ]
+      },
+      "file": "02-rcp.svg",
+      "sha256": "65758485b986e7943af281bb524faf08cca19ad5e7265088f592b703bab33c1f"
+    },
+    {
+      "id": "03-elev-R01-living",
+      "title": "Elevations — R01 Living",
+      "counts": {
+        "panels": 5,
+        "openEdgesNotElevated": 1,
+        "openingsDrawn": 5,
+        "itemsDrawn": 2,
+        "curtains": 1,
+        "openEdgeNotes": 1
+      },
+      "drawn": {
+        "panels": [
+          "living-w",
+          "living-n-lift",
+          "living-w-lift",
+          "living-n",
+          "living-e"
+        ],
+        "openPanels": [
+          "living-s"
+        ],
+        "openings": [
+          {
+            "id": "entrance",
+            "panel": "living-n"
+          },
+          {
+            "id": "entry-glass-left",
+            "panel": "living-n"
+          },
+          {
+            "id": "entry-glass-right",
+            "panel": "living-n"
+          },
+          {
+            "id": "living-window",
+            "panel": "living-e"
+          },
+          {
+            "id": "pooja-niche",
+            "panel": "living-e"
+          }
+        ],
+        "items": [
+          {
+            "id": "FURN-tv",
+            "panel": "living-w",
+            "footprintOnly": true
+          },
+          {
+            "id": "FURN-sofa",
+            "panel": "living-e",
+            "footprintOnly": true
+          }
+        ],
+        "curtains": [
+          {
+            "opening": "living-window",
+            "panel": "living-e",
+            "kind": "assumed"
+          }
+        ],
+        "switchStrip": null
+      },
+      "file": "03-elev-R01-living.svg",
+      "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b"
+    },
+    {
+      "id": "04-elev-R02-dining",
+      "title": "Elevations — R02 Dining",
+      "counts": {
+        "panels": 3,
+        "openEdgesNotElevated": 1,
+        "openingsDrawn": 2,
+        "itemsDrawn": 3,
+        "curtains": 1,
+        "openEdgeNotes": 2
+      },
+      "drawn": {
+        "panels": [
+          "dining-s",
+          "dining-w",
+          "dining-e"
+        ],
+        "openPanels": [
+          "dining-n"
+        ],
+        "openings": [
+          {
+            "id": "master-door",
+            "panel": "dining-w"
+          },
+          {
+            "id": "dining-window",
+            "panel": "dining-e"
+          }
+        ],
+        "items": [
+          {
+            "id": "FURN-kitchen-left",
+            "panel": "dining-s"
+          },
+          {
+            "id": "FURN-kitchen-bar",
+            "panel": "dining-s"
+          },
+          {
+            "id": "FURN-plant-1",
+            "panel": "dining-e"
+          }
+        ],
+        "curtains": [
+          {
+            "opening": "dining-window",
+            "panel": "dining-e",
+            "kind": "assumed"
+          }
+        ],
+        "switchStrip": null
+      },
+      "file": "04-elev-R02-dining.svg",
+      "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a"
+    },
+    {
+      "id": "05-elev-R03-kitchen",
+      "title": "Elevations — R03 Kitchen",
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 4,
+        "itemsDrawn": 11,
+        "curtains": 0,
+        "openEdgeNotes": 1
+      },
+      "drawn": {
+        "panels": [
+          "kitchen-s",
+          "kitchen-w",
+          "kitchen-n",
+          "kitchen-e"
+        ],
+        "openPanels": [],
+        "openings": [
+          {
+            "id": "kitchen-utility-window",
+            "panel": "kitchen-s"
+          },
+          {
+            "id": "utility-door",
+            "panel": "kitchen-s"
+          },
+          {
+            "id": "master-door",
+            "panel": "kitchen-w"
+          },
+          {
+            "id": "kitchen-window",
+            "panel": "kitchen-e"
+          }
+        ],
+        "items": [
+          {
+            "id": "FURN-kitchen-left",
+            "panel": "kitchen-s"
+          },
+          {
+            "id": "FURN-kitchen-top",
+            "panel": "kitchen-s"
+          },
+          {
+            "id": "FURN-kitchen-wallcab-1",
+            "panel": "kitchen-s"
+          },
+          {
+            "id": "FURN-kitchen-wallcab-2",
+            "panel": "kitchen-s"
+          },
+          {
+            "id": "FURN-kitchen-wallcab-3",
+            "panel": "kitchen-s"
+          },
+          {
+            "id": "FURN-kitchen-fridge",
+            "panel": "kitchen-w",
+            "footprintOnly": true
+          },
+          {
+            "id": "FURN-kitchen-bar",
+            "panel": "kitchen-n"
+          },
+          {
+            "id": "FURN-kitchen-left",
+            "panel": "kitchen-n"
+          },
+          {
+            "id": "FURN-kitchen-left",
+            "panel": "kitchen-e"
+          },
+          {
+            "id": "FURN-kitchen-wallcab-1",
+            "panel": "kitchen-e"
+          },
+          {
+            "id": "FURN-kitchen-wallcab-2",
+            "panel": "kitchen-e"
+          }
+        ],
+        "curtains": [],
+        "switchStrip": null
+      },
+      "file": "05-elev-R03-kitchen.svg",
+      "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2"
+    },
+    {
+      "id": "06-elev-R04-master",
+      "title": "Elevations — R04 Master bedroom",
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 1,
+        "curtains": 2,
+        "openEdgeNotes": 1
+      },
+      "drawn": {
+        "panels": [
+          "master-s",
+          "master-w",
+          "master-n",
+          "master-e"
+        ],
+        "openPanels": [],
+        "openings": [
+          {
+            "id": "master-top-window",
+            "panel": "master-s"
+          },
+          {
+            "id": "master-window",
+            "panel": "master-w"
+          },
+          {
+            "id": "master-door",
+            "panel": "master-e"
+          }
+        ],
+        "items": [
+          {
+            "id": "TENANT-BED-R04",
+            "panel": "master-w",
+            "footprintOnly": true
+          }
+        ],
+        "curtains": [
+          {
+            "opening": "master-top-window",
+            "panel": "master-s",
+            "kind": "held"
+          },
+          {
+            "opening": "master-window",
+            "panel": "master-w",
+            "kind": "assumed"
+          }
+        ],
+        "switchStrip": null
+      },
+      "file": "06-elev-R04-master.svg",
+      "sha256": "7bf79310c91f6a7133ee3a16321578e5aa0b3a94b0840fa1f965df625e832309"
+    },
+    {
+      "id": "07-elev-R04a-dressing",
+      "title": "Elevations — R04a Master dressing",
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 1,
+        "itemsDrawn": 6,
+        "curtains": 0,
+        "openEdgeNotes": 1
+      },
+      "drawn": {
+        "panels": [
+          "dressing-s",
+          "dressing-w",
+          "dressing-n",
+          "dressing-e"
+        ],
+        "openPanels": [],
+        "openings": [
+          {
+            "id": "bath1-door",
+            "panel": "dressing-w"
+          }
+        ],
+        "items": [
+          {
+            "id": "ST-R04a-WR01",
+            "panel": "dressing-s"
+          },
+          {
+            "id": "ST-R04a-LF01",
+            "panel": "dressing-s"
+          },
+          {
+            "id": "ST-R04a-WR01",
+            "panel": "dressing-n"
+          },
+          {
+            "id": "ST-R04a-LF01",
+            "panel": "dressing-n"
+          },
+          {
+            "id": "ST-R04a-WR01",
+            "panel": "dressing-e"
+          },
+          {
+            "id": "ST-R04a-LF01",
+            "panel": "dressing-e"
+          }
+        ],
+        "curtains": [],
+        "switchStrip": null
+      },
+      "file": "07-elev-R04a-dressing.svg",
+      "sha256": "a638178863df93d3812895b920596f83f5c5e258aad367468c260defc840c66b"
+    },
+    {
+      "id": "08-elev-R05-children",
+      "title": "Elevations — R05 Children's bedroom",
+      "counts": {
+        "panels": 6,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 2,
+        "itemsDrawn": 12,
+        "curtains": 1,
+        "openEdgeNotes": 0
+      },
+      "drawn": {
+        "panels": [
+          "children-s",
+          "children-w",
+          "children-n",
+          "children-e-lift",
+          "children-n-lift",
+          "children-e"
+        ],
+        "openPanels": [],
+        "openings": [
+          {
+            "id": "children-door",
+            "panel": "children-s"
+          },
+          {
+            "id": "children-window",
+            "panel": "children-w"
+          }
+        ],
+        "items": [
+          {
+            "id": "ST-R05-WR01",
+            "panel": "children-s"
+          },
+          {
+            "id": "ST-R05-LF01",
+            "panel": "children-s"
+          },
+          {
+            "id": "ST-R05-WR01",
+            "panel": "children-w"
+          },
+          {
+            "id": "ST-R05-LF01",
+            "panel": "children-w"
+          },
+          {
+            "id": "TENANT-BED-R05",
+            "panel": "children-w",
+            "footprintOnly": true
+          },
+          {
+            "id": "ST-R05-DK01",
+            "panel": "children-n"
+          },
+          {
+            "id": "ST-R05-OH01",
+            "panel": "children-n"
+          },
+          {
+            "id": "ST-R05-DK01",
+            "panel": "children-e-lift"
+          },
+          {
+            "id": "ST-R05-OH01",
+            "panel": "children-e-lift"
+          },
+          {
+            "id": "ST-R05-TV01",
+            "panel": "children-n-lift"
+          },
+          {
+            "id": "ST-R05-TV01",
+            "panel": "children-e"
+          },
+          {
+            "id": "ST-R05-LF01",
+            "panel": "children-e"
+          }
+        ],
+        "curtains": [
+          {
+            "opening": "children-window",
+            "panel": "children-w",
+            "kind": "cbr-unmeasured-assumed-top"
+          }
+        ],
+        "switchStrip": "children-s"
+      },
+      "file": "08-elev-R05-children.svg",
+      "sha256": "d8f02b551adc330fe59da4acea87221fc2cf9241b4eb3863598322f6799e03fa"
+    },
+    {
+      "id": "09-elev-R06-TL1",
+      "title": "Elevations — R06 TL1 attached toilet",
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 4,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "drawn": {
+        "panels": [
+          "bath1-s",
+          "bath1-w",
+          "bath1-n",
+          "bath1-e"
+        ],
+        "openPanels": [],
+        "openings": [
+          {
+            "id": "bath1-vent",
+            "panel": "bath1-w"
+          },
+          {
+            "id": "bath1-niche",
+            "panel": "bath1-w"
+          },
+          {
+            "id": "bath1-door",
+            "panel": "bath1-e"
+          }
+        ],
+        "items": [
+          {
+            "id": "BATH-TL1-WC",
+            "panel": "bath1-s"
+          },
+          {
+            "id": "BATH-TL1-SHOWER",
+            "panel": "bath1-s"
+          },
+          {
+            "id": "BATH-TL1-VANITY",
+            "panel": "bath1-s"
+          },
+          {
+            "id": "BATH-TL1-SHOWER",
+            "panel": "bath1-w"
+          }
+        ],
+        "curtains": [],
+        "switchStrip": null
+      },
+      "file": "09-elev-R06-TL1.svg",
+      "sha256": "84060a662b8752dbcee187d1f0adc7fdbe8324ccaea9a7f02499146be577df84"
+    },
+    {
+      "id": "10-elev-R07-TL2",
+      "title": "Elevations — R07 TL2 common toilet",
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 4,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "drawn": {
+        "panels": [
+          "bath2-s",
+          "bath2-w",
+          "bath2-n",
+          "bath2-e"
+        ],
+        "openPanels": [],
+        "openings": [
+          {
+            "id": "bath2-vent",
+            "panel": "bath2-w"
+          },
+          {
+            "id": "bath2-niche",
+            "panel": "bath2-w"
+          },
+          {
+            "id": "bath2-door",
+            "panel": "bath2-e"
+          }
+        ],
+        "items": [
+          {
+            "id": "BATH-TL2-WC",
+            "panel": "bath2-s"
+          },
+          {
+            "id": "BATH-TL2-SHOWER",
+            "panel": "bath2-s"
+          },
+          {
+            "id": "BATH-TL2-VANITY",
+            "panel": "bath2-s"
+          },
+          {
+            "id": "BATH-TL2-SHOWER",
+            "panel": "bath2-w"
+          }
+        ],
+        "curtains": [],
+        "switchStrip": null
+      },
+      "file": "10-elev-R07-TL2.svg",
+      "sha256": "7d3650c204fa049a1522baaec6496eba838b4975454cebab195983e315659c43"
+    },
+    {
+      "id": "11-elev-R08-utility",
+      "title": "Elevations — R08 Utility + washing",
+      "counts": {
+        "panels": 4,
+        "openEdgesNotElevated": 0,
+        "openingsDrawn": 3,
+        "itemsDrawn": 14,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "drawn": {
+        "panels": [
+          "utility-s",
+          "utility-w",
+          "utility-n",
+          "utility-e"
+        ],
+        "openPanels": [],
+        "openings": [
+          {
+            "id": "utility-open",
+            "panel": "utility-s"
+          },
+          {
+            "id": "kitchen-utility-window",
+            "panel": "utility-n"
+          },
+          {
+            "id": "utility-door",
+            "panel": "utility-n"
+          }
+        ],
+        "items": [
+          {
+            "id": "ST-R08-UC01",
+            "panel": "utility-s"
+          },
+          {
+            "id": "FURN-utility-counter",
+            "panel": "utility-s"
+          },
+          {
+            "id": "ST-R08-LF01",
+            "panel": "utility-s"
+          },
+          {
+            "id": "FURN-washer",
+            "panel": "utility-s",
+            "footprintOnly": true
+          },
+          {
+            "id": "FURN-wash-basin",
+            "panel": "utility-s",
+            "footprintOnly": true
+          },
+          {
+            "id": "FURN-utility-counter",
+            "panel": "utility-w"
+          },
+          {
+            "id": "ST-R08-UC01",
+            "panel": "utility-w"
+          },
+          {
+            "id": "ST-R08-LF01",
+            "panel": "utility-w"
+          },
+          {
+            "id": "FURN-wash-basin",
+            "panel": "utility-w",
+            "footprintOnly": true
+          },
+          {
+            "id": "FURN-utility-counter",
+            "panel": "utility-n"
+          },
+          {
+            "id": "ST-R08-UC01",
+            "panel": "utility-n"
+          },
+          {
+            "id": "ST-R08-LD01",
+            "panel": "utility-n"
+          },
+          {
+            "id": "ST-R08-LF01",
+            "panel": "utility-n"
+          },
+          {
+            "id": "FURN-washer",
+            "panel": "utility-e",
+            "footprintOnly": true
+          }
+        ],
+        "curtains": [],
+        "switchStrip": null
+      },
+      "file": "11-elev-R08-utility.svg",
+      "sha256": "627d109d239a41a498da1a2416f8b5761699d1ea5ec78fffb14d06b482a895f8"
+    },
+    {
+      "id": "12-elev-R09-entry",
+      "title": "Elevations — R09 Entry / balcony",
+      "counts": {
+        "panels": 1,
+        "openEdgesNotElevated": 3,
+        "openingsDrawn": 2,
+        "itemsDrawn": 1,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "drawn": {
+        "panels": [
+          "balcony-s"
+        ],
+        "openPanels": [
+          "balcony-w",
+          "balcony-n",
+          "balcony-e"
+        ],
+        "openings": [
+          {
+            "id": "entrance",
+            "panel": "balcony-s"
+          },
+          {
+            "id": "entry-glass-left",
+            "panel": "balcony-s"
+          }
+        ],
+        "items": [
+          {
+            "id": "ST-R09-SH01",
+            "panel": "balcony-s"
+          }
+        ],
+        "curtains": [],
+        "switchStrip": null
+      },
+      "file": "12-elev-R09-entry.svg",
+      "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e"
+    },
+    {
+      "id": "13-elev-R12-lobby",
+      "title": "Elevations — R12 Common lobby",
+      "counts": {
+        "panels": 3,
+        "openEdgesNotElevated": 1,
+        "openingsDrawn": 2,
+        "itemsDrawn": 1,
+        "curtains": 0,
+        "openEdgeNotes": 0
+      },
+      "drawn": {
+        "panels": [
+          "lobby-s",
+          "lobby-w",
+          "lobby-n"
+        ],
+        "openPanels": [
+          "lobby-e"
+        ],
+        "openings": [
+          {
+            "id": "bath2-door",
+            "panel": "lobby-w"
+          },
+          {
+            "id": "children-door",
+            "panel": "lobby-n"
+          }
+        ],
+        "items": [
+          {
+            "id": "FURN-lobby-vanity",
+            "panel": "lobby-s",
+            "footprintOnly": true
+          }
+        ],
+        "curtains": [],
+        "switchStrip": null
+      },
+      "file": "13-elev-R12-lobby.svg",
+      "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333"
+    }
+  ]
+}

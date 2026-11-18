@@ -1,0 +1,50 @@
+{
+  "schema": "wardrobe-public-reproduction-receipt/1",
+  "status": "PASS_public_snapshot_reproduction_not_provenance_or_fabrication_approval",
+  "recorded_current_review_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "recorded_interior_generation_basis_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+  "inputs_sha256": {
+    "signoff_pack.py": "fdac69008d7f701a9f73a53fb5500af93ff69a73d3800a173c0f87dbe70b51f0",
+    "interiors_model.py": "dd7e8c624c54e242d0f53fbf58fe71e665b6b2ec7fc19508c80c8309cad5cb2f",
+    "cost_model.py": "e5f2c57d762c8285e3f4bedcc80d0cc708298b4d9003193a7ab9f8f391cc3471",
+    "verify_public.py": "5ad41f73424df69234cba7beb6a42c253f638b972f35055b60d4e23dc50dd0c3",
+    "requirements-wardrobe.txt": "692abce62f52226ec0b43cb464db29e9a214791877f2443ec357af63d0729631",
+    "storage-current.json": "4c6c17b50fa634bbe545e5b840d6092de4ef8c8b847e1eb99599632415757adb",
+    "cost-evidence.json": "70b2e5469c71bff99b01cf41ce25e88e184e590ab2aa4d945a39989967b3517e",
+    "cost-evidence.md": "0765ee5c38613ea51d4178c3d2418ae3d8da2932a9bcea9099811d605191c5a4",
+    "final/CLEANUP-MANIFEST.md": "5b3bc6e6d053dad3f7817f1ae3bff138d16ab3cf97af34ebf46e47d77691b161",
+    "reproduction-inputs/wardrobe-interiors-original.json": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d"
+  },
+  "expected_reference_sha256": "b658e45f512eefae616c4833d5e800b153494de84e00d3337c3ec77b8db79821",
+  "byte_identical_outputs": 31,
+  "pdf_pages_text_and_render_identical": 17,
+  "not_reproduced": {
+    "wardrobe-signoff-pack.pdf": "trailer ID regenerates; text and 72-dpi render compared",
+    "rollup-receipt.json": "written only by verify_rollup.py with private master chain",
+    "file-hashes.json": "contains the regenerated PDF hash"
+  },
+  "verified": [
+    "snapshot-internal cost arithmetic and 21 option/unit calculations",
+    "interiors model rebuild equals immutable interior source; parametric failure guards",
+    "31 published outputs byte-identical; PDF text/render identical",
+    "relative image links; PNG/SVG validity; recorded decisions/holds present",
+    "no local absolute paths (drive-user, file URI, session/AppData, /home) in public inputs or outputs"
+  ],
+  "not_verified": [
+    "that the snapshot matches any canonical master (master hashes are recorded strings only)",
+    "homeowner sign-off and cabinet/interior receipt chains",
+    "unchanged geometry versus earlier masters",
+    "byte-exact historical 2ce3fcb4 delivery"
+  ],
+  "private_inputs_absent": [
+    "current-review-master.json",
+    "interior-generation-master.json",
+    "original-signoff-master.json",
+    "pre-cabinets-master.json",
+    "interior-reference-receipt.json",
+    "original-signoff-receipt.json",
+    "cabinet-selection-receipt.json"
+  ],
+  "construction_release": false,
+  "holds": "all measurement, fit, support/load and fabrication holds retained; review-only"
+}

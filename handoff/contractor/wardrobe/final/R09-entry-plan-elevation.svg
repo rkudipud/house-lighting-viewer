@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950">
+<rect width="1400" height="950" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#172b39} .dim{fill:#785718}</style>
+<text x="45.00" y="49.00" font-size="27" text-anchor="start" style="fill:#172b39;font-weight:bold">R09 ENTRY SHOE STORAGE | unit plan + elevation</text>
+<text x="45.00" y="80.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">Cabinet envelopes only; not a room floorplan or approval of wall/door locations.</text>
+<line x1="45.00" y1="97.00" x2="1355.00" y2="97.00" stroke="#264d60" stroke-width="2"/>
+<text x="45.00" y="918.00" font-size="17" text-anchor="start" style="fill:#a13e2c;font-weight:normal">HOMEOWNER REVIEW ONLY | dimensions in metres | NOT FOR FABRICATION | all joinery sizes unmeasured proposals</text>
+<text x="100.00" y="145.00" font-size="19" text-anchor="start" style="fill:#172b39;font-weight:bold">UNIT PLAN</text>
+<rect x="100.00" y="285.00" width="324.00" height="94.50" fill="#edf3f3" stroke="#264d60" stroke-width="2"/>
+<line x1="100.00" y1="255.00" x2="424.00" y2="255.00" stroke="#92712c" stroke-width="2"/>
+<line x1="100.00" y1="249.00" x2="100.00" y2="261.00" stroke="#92712c" stroke-width="2"/>
+<line x1="424.00" y1="249.00" x2="424.00" y2="261.00" stroke="#92712c" stroke-width="2"/>
+<text x="262.00" y="245.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:normal">1.200 proposed</text>
+<text x="100.00" y="414.50" font-size="17" text-anchor="start" style="fill:#172b39;font-weight:normal">Depth 0.350 proposed</text>
+<text x="710.00" y="145.00" font-size="19" text-anchor="start" style="fill:#172b39;font-weight:bold">FRONT ELEVATION</text>
+<rect x="710.00" y="550.50" width="186.00" height="139.50" fill="#edf3f3" stroke="#264d60" stroke-width="2"/>
+<text x="803.00" y="620.25" font-size="16" text-anchor="middle" style="fill:#172b39;font-weight:normal">LOUVRED</text>
+<text x="100.00" y="525.00" font-size="17" text-anchor="start" style="fill:#172b39;font-weight:normal">Powder-coated aluminium, drained stone top, legs.</text>
+<text x="45.00" y="785.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">SH01: 1.200 x 0.350 x 0.900 m proposed; up to about 16 pairs only if the actual pairs fit.</text>
+<text x="45.00" y="809.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">Confirm door/gate and stair/arrival egress on site. No reduction of required escape width is approved.</text>
+<text x="45.00" y="833.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">No fabrication location is implied by this isolated unit view; exposure, fixings and anti-tip restraint require checking.</text>
+<text x="45.00" y="857.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">Shoe cabinet is included in required ancillary cost; it is repeated in every flat, not a building-common item.</text>
+<line x1="710.00" y1="733.00" x2="896.00" y2="733.00" stroke="#92712c" stroke-width="2"/>
+<line x1="710.00" y1="727.00" x2="710.00" y2="739.00" stroke="#92712c" stroke-width="2"/>
+<line x1="896.00" y1="727.00" x2="896.00" y2="739.00" stroke="#92712c" stroke-width="2"/>
+<text x="803.00" y="723.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:normal">1.200; height 0.90</text>
+<text x="45.00" y="943.00" font-size="12" text-anchor="start" style="fill:#172b39;font-weight:normal">Master b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+</svg>

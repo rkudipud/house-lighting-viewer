@@ -1,0 +1,44 @@
+{
+  "status": "session-bound-export-source-snapshots-not-repository-portable",
+  "constructionRelease": false,
+  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceManifest": "selected-source-file-hashes.json",
+  "sourceManifestSha256": "a4c20c991c9378fdeba88145c9a904f9dddf0b3c9dd3a1407542f8728fc9e7f8",
+  "sourceFiles": 3,
+  "omittedFiles": [],
+  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
+  "files": [
+    {
+      "path": "export_current_lighting.py",
+      "bytes": 51501,
+      "sha256": "29ee1f5cdcd563a2fead0c4c7c465d5b3f8407bd9f48a4e6b2daaeb129e322d1",
+      "sourceSha256": "562d38b17a131543dd89952b457cac3359d52f193cbe10a092be50c381a06ea5",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
+    },
+    {
+      "path": "verify_current_lighting.py",
+      "bytes": 17684,
+      "sha256": "8e540e581a47716e6d163524aa5ebe5aef924ff35708b6157ad1c468bc18a9c5",
+      "sourceSha256": "bc670bcdc17d6bd3ce1fb09f24c941f78f029f564deaa52fa6162d4529d28f07",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
+    },
+    {
+      "path": "lighting-workbench.template.html",
+      "bytes": 17753,
+      "sha256": "95b47a0634326ef7fb20b4f60aca34d8e332e87611d1a40788f8255ba20d97c9",
+      "sourceSha256": "95b47a0634326ef7fb20b4f60aca34d8e332e87611d1a40788f8255ba20d97c9",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "selected-source-file-hashes.json",
+      "bytes": 314,
+      "sha256": "a4c20c991c9378fdeba88145c9a904f9dddf0b3c9dd3a1407542f8728fc9e7f8",
+      "sourceSha256": "a4c20c991c9378fdeba88145c9a904f9dddf0b3c9dd3a1407542f8728fc9e7f8",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    }
+  ]
+}

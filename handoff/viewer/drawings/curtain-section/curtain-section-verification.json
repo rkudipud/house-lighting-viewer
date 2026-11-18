@@ -1,0 +1,68 @@
+{
+  "verified_utc": "2026-11-18T11:20:43.774281+00:00",
+  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "status": "REVIEW_DRAFT_NOT_CONSTRUCTION_RELEASED",
+  "selected_strips": {
+    "CURT-LIV": {
+      "group": "K-LIV-LOW",
+      "cct_k": 2700,
+      "photometry_credit": false
+    },
+    "CURT-DIN": {
+      "group": "K-DIN-LOW",
+      "cct_k": 2700,
+      "photometry_credit": false
+    },
+    "CURT-MBR-S": {
+      "group": "K-MBR-LOW",
+      "cct_k": 2700,
+      "photometry_credit": false
+    },
+    "CURT-CBR": {
+      "group": "K-CBR-LOW",
+      "cct_k": 2700,
+      "photometry_credit": false
+    }
+  },
+  "held": [
+    "CURT-MBR-W03"
+  ],
+  "cbr_window": "placeholder; unmeasured",
+  "model_clash": "Assumed MBR-S and CBR returns each exceed a modeled room corner by about 0.30 m; actual ends unmeasured.",
+  "checks": {
+    "tracks": [
+      "sheer",
+      "blackout"
+    ],
+    "schematic_strip_symbols": 1,
+    "pdf_pages": 1,
+    "searchable_status_labels": true,
+    "out_of_page_text": [],
+    "text_overlap": [],
+    "browser_errors": [],
+    "http_requests": []
+  },
+  "artifacts": [
+    {
+      "file": "curtain-pocket-section-review.svg",
+      "bytes": 9345,
+      "sha256": "5c979c4563d234739d689b6f03d9b5710d2958b7078b2b3fb6c1f6bbbfa6d0ea"
+    },
+    {
+      "file": "curtain-pocket-section-review.png",
+      "bytes": 426095,
+      "sha256": "8e4229530ab93885b2b8bfaac83b62fe83c384f802597fafa89fd053036d94c2"
+    },
+    {
+      "file": "curtain-pocket-section-review.pdf",
+      "bytes": 71474,
+      "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d"
+    },
+    {
+      "file": "README.md",
+      "bytes": 471,
+      "sha256": "1754e4dc0e3aa475de93239b1530ed6075611062f3230c6e74da08539de2d340"
+    }
+  ],
+  "generator_sha256": "9e6e3ec2f67a2ec1bc0e9a70b715e0808e2b7da583a33f3fe8e08c040c8fcd6f"
+}

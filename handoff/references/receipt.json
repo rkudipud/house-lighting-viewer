@@ -1,0 +1,29 @@
+{
+  "status": "approved-site-views-only",
+  "constructionRelease": false,
+  "measurementEvidence": false,
+  "note": "User-supplied site views selected by the coordinator. Filenames do not establish curtain-pocket dimensions. These images do not verify measured geometry, lighting performance or construction approval.",
+  "files": [
+    {
+      "path": "handoff/references/site-photo-hall-curtain-pocket.jpeg",
+      "title": "Hall site view",
+      "bytes": 25671,
+      "sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+      "coverage": ["approved-references"]
+    },
+    {
+      "path": "handoff/references/site-photo-children-curtain-pocket.jpeg",
+      "title": "Children's room site view",
+      "bytes": 30783,
+      "sha256": "b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2",
+      "coverage": ["approved-references"]
+    },
+    {
+      "path": "handoff/references/site-photo-hall-from-kitchen.jpeg",
+      "title": "Hall viewed from the kitchen",
+      "bytes": 30333,
+      "sha256": "09f11696466e6a74659a8beab839fbb821963f5aa470c2368fcb7d8443c64358",
+      "coverage": ["approved-references"]
+    }
+  ]
+}

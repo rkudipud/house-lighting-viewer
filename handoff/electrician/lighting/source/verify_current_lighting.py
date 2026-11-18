@@ -1,0 +1,273 @@
+"""Independently verify the bound lighting review package and its offline workbench."""
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import json
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+
+import pymupdf as fitz
+from PIL import Image
+from playwright.sync_api import sync_playwright
+
+BASE = Path(r"not-distributed/lighting-session-inputs")
+OUT = BASE / "lighting-current-review"
+EVIDENCE = BASE / "lighting-integrated-current" / "verification"
+MASTER = Path(r"handoff/source-basis/house-design.json")
+PACK = BASE / "final-lighting-fixed-white"
+EXPECTED_MASTER = "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+EXPECTED_DI = "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e"
+EXPECTED_HEATMAP = "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a"
+checks = []
+
+
+def digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def canonical(value) -> str:
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()).hexdigest()
+
+
+def read(name: str):
+    return json.loads((OUT / name).read_bytes())
+
+
+def rows(name: str):
+    with (OUT / name).open(encoding="utf-8-sig", newline="") as stream:
+        return list(csv.DictReader(stream))
+
+
+def check(condition, name: str):
+    if not condition:
+        raise AssertionError(name)
+    checks.append(name)
+
+
+def pdf_text(name: str, pages: int):
+    doc = fitz.open(OUT / name)
+    try:
+        check(len(doc) == pages, f"{name}: page count {pages}")
+        text = "\n".join(page.get_text() for page in doc)
+        check("REVIEW" in text and "NOT FOR CONSTRUCTION" in text, f"{name}: review-only marking")
+        return text
+    finally:
+        doc.close()
+
+
+def browser_checks(calculations):
+    EVIDENCE.mkdir(parents=True, exist_ok=True)
+    errors, requests = [], []
+    with sync_playwright() as playwright:
+        edge = Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+        chrome = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+        executable = next((str(path) for path in (edge, chrome) if path.is_file()), None)
+        browser = playwright.chromium.launch(headless=True, **({"executable_path": executable} if executable else {}))
+        try:
+            page = browser.new_page(viewport={"width": 1440, "height": 1000}, device_scale_factor=1)
+            page.on("pageerror", lambda error: errors.append(str(error)))
+            page.on("console", lambda message: errors.append(message.text) if message.type == "error" else None)
+            page.on("request", lambda request: requests.append(request.url) if request.url.startswith(("http://", "https://")) else None)
+            page.goto((OUT / "lighting-workbench.html").as_uri(), wait_until="load")
+            page.wait_for_load_state("networkidle")
+            check(page.title() == "Lighting workbench | House design review", "Workbench opens offline")
+            check(page.locator("#fixture option").count() == 109, "Workbench exposes 104 base fittings and 4 curtain strips")
+            check(page.locator("#master-hash").inner_text() == EXPECTED_MASTER, "Workbench master binding")
+            check(page.locator("#photometry-hash").inner_text() == EXPECTED_DI, "Workbench photometry provenance")
+
+            page.select_option("#room", "CBR")
+            page.select_option("#scene", "HIGH_100")
+            check(page.locator("#fixture option").count() == 16, "CBR shows 14 base fittings and one curtain strip")
+            expected = calculations["rooms"]["CBR"]["combinations"]["HIGH_100"]
+            check(page.locator("#avg").inner_text() == str(expected["avg"])
+                  and page.locator("#min").inner_text() == str(expected["min"])
+                  and page.locator("#u0").inner_text() == str(expected["U0"]),
+                  "CBR stored HIGH statistics match the source calculation")
+            for fixture in ("CBR-H1", "CBR-H6"):
+                page.select_option("#fixture", fixture)
+                text = page.locator("#fixture-info").inner_text()
+                check(fixture in text and "Active for review" in text and "HOLD:" not in text,
+                      f"{fixture} is active for review without a blanket hold")
+            page.select_option("#fixture", "CURT-CBR")
+            text = page.locator("#fixture-info").inner_text()
+            check("H-CURTAIN-POCKET" in text and "K-CBR-LOW" in text and "P16" in text,
+                  "CBR curtain shows its existing LOW group and retained pocket hold")
+            page.select_option("#room", "LIV")
+            page.select_option("#scene", "Mood")
+            page.select_option("#fixture", "CURT-LIV")
+            check("P01" in page.locator("#fixture-info").inner_text()
+                  and "H-CURTAIN-POCKET" in page.locator("#fixture-info").inner_text(),
+                  "Living curtain shows selected P01 and site hold")
+            check("pooja" in page.locator("#calc-warning").inner_text().lower(),
+                  "Living mood displays the inherited pooja caveat")
+            page.screenshot(path=str(EVIDENCE / "workbench-desktop.png"), full_page=True)
+            page.select_option("#room", "UTL")
+            page.select_option("#scene", "LOW_100")
+            check("No saved statistics" in page.locator("#calc-context").inner_text(),
+                  "A grid without reported statistics is not given invented numbers")
+            page.select_option("#scene", "Night")
+            check("no stored night" in page.locator("#calc-context").inner_text().lower()
+                  and page.locator("#avg").inner_text() == "--", "Night has no fabricated lux map")
+            page.select_option("#room", "all")
+            page.select_option("#layer", "main")
+            check(page.locator("#fixture option").count() == 52, "Main-light filter exposes the 51 HIGH fittings")
+            page.set_viewport_size({"width": 390, "height": 844})
+            page.select_option("#room", "CBR")
+            page.select_option("#layer", "all")
+            page.select_option("#scene", "HIGH_100")
+            page.select_option("#fixture", "CBR-H1")
+            check(page.evaluate("document.documentElement.scrollWidth <= document.documentElement.clientWidth"),
+                  "Mobile layout does not overflow horizontally")
+            check(page.locator("#plan").evaluate("element => element.width > 0 && element.height > 0"),
+                  "Mobile plan is rendered")
+            page.screenshot(path=str(EVIDENCE / "workbench-mobile.png"), full_page=True)
+            check(not errors, f"Workbench has no browser errors: {errors}")
+            check(not requests, f"Workbench has no external network requests: {requests}")
+        finally:
+            browser.close()
+    return {"desktop_screenshot": str(EVIDENCE / "workbench-desktop.png"),
+            "mobile_screenshot": str(EVIDENCE / "workbench-mobile.png"),
+            "browser_errors": errors, "external_requests": requests}
+
+
+def main():
+    global EVIDENCE
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--receipt", type=Path, default=OUT / "verification.json",
+                        help="New receipt path within this session's files")
+    parser.add_argument("--evidence-dir", type=Path, default=EVIDENCE,
+                        help="New screenshot directory within this session's files")
+    args = parser.parse_args()
+    receipt, EVIDENCE = args.receipt.resolve(), args.evidence_dir.resolve()
+    if not receipt.is_relative_to(BASE.resolve()) or not EVIDENCE.is_relative_to(BASE.resolve()):
+        raise ValueError("Receipt and screenshot directory must remain inside this session's files")
+    if (receipt.is_relative_to(OUT.resolve()) and receipt != (OUT / "verification.json").resolve()
+            or EVIDENCE.is_relative_to(OUT.resolve())):
+        raise ValueError("Additional verification artifacts must be outside the delivered package")
+    if receipt.exists():
+        raise FileExistsError(f"Verification receipt already exists; preserve it and select a new receipt path: {receipt}")
+    if any((EVIDENCE / name).exists() for name in ("workbench-desktop.png", "workbench-mobile.png")):
+        raise FileExistsError(f"Verification screenshots already exist; select a new evidence directory: {EVIDENCE}")
+    check(digest(MASTER) == EXPECTED_MASTER, "Current master hash is guarded")
+    master = json.loads(MASTER.read_bytes())
+    manifest = read("manifest.json")
+    check(manifest["master_sha256"] == EXPECTED_MASTER, "Package manifest is bound to the current master")
+    expected_names = set(manifest["files"])
+    present_names = {str(p.relative_to(OUT)).replace("\\", "/") for p in OUT.rglob("*")
+                     if p.is_file() and p.name not in {"manifest.json", "verification.json"}}
+    check(expected_names == present_names, "Manifest enumerates every package file")
+    check(all(digest(OUT / name) == info["sha256"] and (OUT / name).stat().st_size == info["bytes"]
+              for name, info in manifest["files"].items()), "All package file hashes and sizes match")
+    check(manifest["original_photometry_design_inputs_canonical_sha256"] == EXPECTED_DI
+          and manifest["original_heatmaps_sha256"] == EXPECTED_HEATMAP, "Original photometry and heatmap basis retained")
+    check(manifest["source_comparison"]["grid_statistics_compared"] == 71
+          and len(manifest["source_comparison"]["grids_without_reported_statistics"]) == 6,
+          "Comparable heatmap statistics were checked; missing source statistics recorded")
+    check(all(value is False for value in (manifest["retained"]["construction_release"],
+              manifest["retained"]["product_approval"], manifest["retained"]["exact_chain_proven"])),
+          "Construction, product and exact-chain approval remain false")
+
+    fixture_json = read("fixture-ledger.json")
+    fixture_csv, curtain_csv = rows("fixture-ledger.csv"), rows("curtain-strips.csv")
+    circuit_csv, group_csv = rows("circuit-ledger.csv"), rows("switchboard-schedule.csv")
+    supply_csv, vd_csv = rows("supply-ledger-selected-s1.csv"), rows("voltage-drop-selected-s1.csv")
+    products = rows("generic-product-search.csv")
+    cmap, curtain = read("fixed-cct-map.json"), read("curtain-pocket-s1.json")
+    check(len(fixture_json) == len(fixture_csv) == len({x["id"] for x in fixture_csv}) == 104,
+          "Base fixture CSV/JSON have 104 unique fittings")
+    original = json.loads((PACK / "fixture-ledger.json").read_bytes())
+    normalized = [{k: v for k, v in f.items() if k != "tunable"} for f in fixture_json]
+    check(normalized == original and all(f["tunable"] is False for f in fixture_json),
+          "All original optical fixture locations/values remain unchanged and fixed-white")
+    check(Counter(x["cct_K"] for x in fixture_csv) == {"2700": 30, "3000": 40, "4000": 34},
+          "Fixed-CCT fixture distribution is 30/40/34")
+    check(cmap["binding"]["master_sha256"] == EXPECTED_MASTER
+          and cmap["binding"]["design_inputs_sha256"] == canonical(master["lighting"]["design_inputs"])
+          and cmap["binding"]["photometry_source_design_inputs_sha256"] == EXPECTED_DI,
+          "Exported CCT map distinguishes current record from original optical input")
+    check(cmap["binding"]["fragment_file_sha256"] == digest(OUT / "lighting-design-inputs.json")
+          and cmap["binding"]["curtain_pocket_candidate_json_sha256"] == digest(OUT / "curtain-pocket-s1.json"),
+          "CCT map references the exact exported input and curtain files")
+    fmap = {f["id"]: f for f in cmap["fittings"]}
+    check(all(fmap[f"CBR-H{i}"]["circuit"] == "C37"
+              and not fmap[f"CBR-H{i}"]["placement_hold_ids"]
+              and fmap[f"CBR-H{i}"]["viewer_operability"].startswith("ACTIVE") for i in range(1, 7)),
+          "CBR H1-H6 remain active on C37 without a blanket placement hold")
+    active_curtains = [x for x in curtain_csv if x["selected"] == "yes"]
+    check(len(active_curtains) == 4 and len(curtain_csv) == 5
+          and {x["id"] for x in active_curtains} == {"CURT-LIV", "CURT-DIN", "CURT-MBR-S", "CURT-CBR"},
+          "Four selected curtain strips and excluded W03 are distinct")
+    check(abs(sum(float(x["indicative_length_m"]) for x in active_curtains)-8.88) < .001
+          and abs(sum(float(x["generic_W"]) for x in active_curtains)-71.04) < .001
+          and all(x["cct_K"] == "2700" and x["photometry_credit"] == "no" for x in active_curtains),
+          "Curtain length, load, fixed CCT and no-lux-credit totals")
+    check(all(s["fabrication_release"] is False and s["photometry_credit"] is False for s in curtain["strips"]),
+          "Curtain strips retain fabrication and photometry holds")
+    check(len(circuit_csv) == 51 and len(group_csv) == 37 and len(supply_csv) == 12,
+          "Effective circuit, brightness-group and supply schedules have expected row counts")
+    liv = next(x for x in group_csv if x["group"] == "K-LIV-LOW")
+    check(liv["supply"] == "P01" and liv["modeled_outputs"] == "6" and liv["modeled_repeaters"] == "2"
+          and float(liv["nominal_load_W"]) == 181.52, "Living LOW uses one P01, six outputs and two modeled repeaters")
+    check(sum(int(x["nameplate_W"]) for x in supply_csv) == 1980 and all(x["psu"] != "P03" for x in supply_csv),
+          "Selected S1 has twelve supplies totaling 1,980 W and no P03")
+    p01 = next(x for x in supply_csv if x["psu"] == "P01")
+    p16 = next(x for x in supply_csv if x["psu"] == "P16")
+    check(p01["nameplate_W"] == "480" and p01["strip_load_W"] == "181.52"
+          and p01["circuits"] == "C03; C04; C05; X-CURT-LIV" and p01["status"].startswith("HOLD"),
+          "Selected P01 arrangement and open protection")
+    check(p16["nameplate_W"] == "240" and float(p16["strip_load_W"]) == 121,
+          "P16 selected S1 loading remains 121 W on 240 W")
+    check(len(vd_csv) == 37 and Counter(x["status"] for x in vd_csv) == {"OK": 30, "MARGINAL": 2, "HOLD": 5},
+          "Selected voltage-drop rows retain five holds and two marginal cases")
+    check(all(x["status"] == "HOLD" and not x["dV_pct"] for x in vd_csv
+              if x["circuit"] in {"C03", "C04", "C05", "X-CURT-LIV"}),
+          "Old P01/P03 living voltage-drop results are not carried forward")
+    check(next(x for x in vd_csv if x["circuit"] == "C39")["dV_pct"] == "3.3"
+          and next(x for x in vd_csv if x["circuit"] == "C40")["dV_pct"] == "3.6",
+          "C39/C40 marginal S1 voltage-drop values are preserved")
+    check(sum(int(x["quantity_per_flat"]) for x in products) == 108,
+          "Generic search list covers 104 base fittings and four selected strips")
+    calculations = read("calc-results-current.json")
+    k2 = calculations["kitchen_worktop"]["final_HIGH+TASK_100"]
+    check((k2["avg"], k2["min"], k2["U0"]) == (518, 323, .623), "K-2 nominal worktop values preserved")
+    check(digest(OUT / "heatmaps.json") == EXPECTED_HEATMAP, "Inherited heatmap byte fingerprint preserved")
+
+    main_text = pdf_text("lighting-plan-main.pdf", 1)
+    mood_text = pdf_text("lighting-plan-mood.pdf", 1)
+    pdf_text("lighting-plan-task.pdf", 1)
+    pdf_text("heatmaps-summary.pdf", 11)
+    schedule_text = pdf_text("lighting-review-schedules.pdf", 11)
+    check(all(f"CBR-H{i}" in main_text for i in range(1, 7)), "Main plan labels all six CBR HIGH fittings")
+    check(all(x in mood_text for x in ("CURT-LIV", "CURT-DIN", "CURT-MBR-S", "CURT-CBR")),
+          "Mood plan labels all four selected curtain strips")
+    check("P01" in schedule_text and "CURT-CBR" in schedule_text, "Schedule PDF includes selected supply and curtain records")
+    for kind in ("main", "mood", "task"):
+        svg = (OUT / f"lighting-plan-{kind}.svg").read_text(encoding="utf-8")
+        check("<svg" in svg and "NOT FOR CONSTRUCTION" in svg, f"{kind} SVG is present and review-marked")
+        with Image.open(OUT / f"lighting-plan-{kind}.png") as image:
+            check(image.width >= 1000 and image.height >= 1000, f"{kind} PNG has usable resolution")
+    browser = browser_checks(calculations)
+    check(digest(MASTER) == EXPECTED_MASTER, "Master remained unchanged during package verification")
+    result = {
+        "status": "PASS", "master_sha256": EXPECTED_MASTER,
+        "manifest_sha256": digest(OUT / "manifest.json"),
+        "checks_passed": len(checks), "checks": checks, "browser": browser,
+        "limits": [
+            "Heatmaps are inherited analytic estimates, not measured or physically validated simulation.",
+            "Four selected curtain strips have no heatmap/lux credit and remain subject to site mock-up.",
+            "Living feeder, branch protection and LT-4/LT-5 inrush are open; P16/C39/C40 remain marginal.",
+            "All construction, product and exact-chain approvals remain false.",
+        ],
+        "verified_utc": datetime.now(timezone.utc).isoformat(),
+    }
+    receipt.parent.mkdir(parents=True, exist_ok=True)
+    receipt.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(json.dumps({"status": result["status"], "checks_passed": len(checks), "receipt": str(receipt),
+                      "receipt_sha256": digest(receipt), "manifest_sha256": result["manifest_sha256"]}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

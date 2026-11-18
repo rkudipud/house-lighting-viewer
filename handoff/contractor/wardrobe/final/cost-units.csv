@@ -1,0 +1,22 @@
+option,reference_unit,room_id,scope,inr_low,inr_high,front_sqft,empty_weight_kg,tax_basis,source_master_sha256
+OPT-E,ST-R04-WR01+LF01,R04,base,89200,153940,89.2,454.4,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-E,ST-R05-WR01+LF01,R05,base,75130,128890,84.2,366.2,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-E,ST-R04a-WR01+LF01,R04a,homeowner_selected_fit_hold,45910,79320,52.1,199.5,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-E-H,ST-R04-WR01+LF01,R04,base,85310,149550,89.2,485.4,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-E-H,ST-R05-WR01+LF01,R05,base,71330,124600,84.2,395.2,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-E-H,ST-R04a-WR01+LF01,R04a,homeowner_selected_fit_hold,43600,76720,52.1,217.6,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-F,ST-R04-WR01+LF01,R04,base,86110,171420,89.2,258.0,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-F,ST-R05-WR01+LF01,R05,base,73220,144210,84.2,217.6,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-F,ST-R04a-WR01+LF01,R04a,homeowner_selected_fit_hold,49410,97450,52.1,140.3,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-A,ST-R04-WR01+LF01,R04,base,89020,152010,89.2,364.2,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-A,ST-R05-WR01+LF01,R05,base,75000,127460,84.2,299.2,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-A,ST-R04a-WR01+LF01,R04a,homeowner_selected_fit_hold,46070,78900,52.1,172.9,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-B1,ST-R04-WR01+LF01,R04,base,81750,172880,89.2,211.2,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-B1,ST-R05-WR01+LF01,R05,base,68690,144290,84.2,177.1,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-B1,ST-R04a-WR01+LF01,R04a,homeowner_selected_fit_hold,47580,99300,52.1,118.0,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-C,ST-R04-WR01+LF01,R04,base,79110,185050,89.2,647.4,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-C,ST-R05-WR01+LF01,R05,base,66860,153780,84.2,524.8,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-C,ST-R04a-WR01+LF01,R04a,homeowner_selected_fit_hold,43050,96600,52.1,280.1,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-D,ST-R04-WR01+LF01,R04,base,94820,181750,89.2,597.8,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-D,ST-R05-WR01+LF01,R05,base,79820,150790,84.2,472.4,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac
+OPT-D,ST-R04a-WR01+LF01,R04a,homeowner_selected_fit_hold,49740,96350,52.1,281.8,Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.,b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac

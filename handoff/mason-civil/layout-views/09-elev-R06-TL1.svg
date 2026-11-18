@@ -1,0 +1,386 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2015.556" viewBox="0 0 1700 2015.556" role="img" aria-labelledby="t d">
+<title id="t">Elevations — R06 TL1 attached toilet</title>
+<desc id="d">Read-only interior elevations from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; wall names by compass.</desc>
+<metadata>{&quot;sheet&quot;:&quot;09-elev-R06-TL1&quot;,&quot;room&quot;:&quot;bath1&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
+<defs>
+<pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
+<pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
+<pattern id="loft" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#f2f0f8"/><path d="M0 0V.08" stroke="#b9b1d3" stroke-width=".010"/></pattern>
+<pattern id="beam" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#ecd9bd"/><path d="M0 0V.08" stroke="#c49a5c" stroke-width=".012"/></pattern>
+<pattern id="feature" width=".06" height=".06" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width=".06" height=".06" fill="#bfe0dc"/><path d="M0 0V.06" stroke="#5aa39b" stroke-width=".012"/></pattern>
+<pattern id="plain" width=".15" height=".15" patternUnits="userSpaceOnUse"><rect width=".15" height=".15" fill="#f3f6f6"/><path d="M0 0H.15V.15" fill="none" stroke="#d6dfdf" stroke-width=".006"/></pattern>
+<pattern id="nowall" width=".12" height=".12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".12" height=".12" fill="#fafafa"/><path d="M0 0V.12" stroke="#d9d9d9" stroke-width=".008"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#466c92"/></marker>
+</defs>
+<style>text{font-family:"Segoe UI",Arial,sans-serif;fill:#203b43}
+.mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
+.title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
+.halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
+<rect width="1700" height="2015.556" fill="#fcfdfc"/>
+<text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Interior elevations — R06 TL1 attached toilet</text>
+<text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >8 ft 9 in x 5 ft 6 in · every wall seen from inside · named by compass · HD-11 levels unmeasured</text>
+<text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 9 / 13</text>
+<text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
+<path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
+<text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
+<text y="-26" font-size="12" class="muted" text-anchor="middle">S</text></g>
+<path d="M60 116H1640" stroke="#c8d2d3"/>
+<rect x="60" y="130" width="22" height="14" fill="#f4f1ea" stroke="#8a9a9c"/>
+<text x="88.00" y="142.00" font-size="12" class="muted" text-anchor="start" >Wall surface</text>
+<rect x="182.8" y="130" width="22" height="14" fill="url(#nowall)" stroke="#a9b4b4"/>
+<text x="210.80" y="142.00" font-size="12" class="muted" text-anchor="start" >Open edge (no wall)</text>
+<rect x="350.40000000000003" y="130" width="22" height="14" fill="#d7ebf2" stroke="#4b6a78"/>
+<text x="378.40" y="142.00" font-size="12" class="muted" text-anchor="start" >Window / glass</text>
+<rect x="486.00000000000006" y="130" width="22" height="14" fill="#e3d3bd" stroke="#4b6a78"/>
+<text x="514.00" y="142.00" font-size="12" class="muted" text-anchor="start" >Door</text>
+<rect x="557.6" y="130" width="22" height="14" fill="#dfe7f2" stroke="#5b7795"/>
+<text x="585.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Built storage record</text>
+<rect x="731.6" y="130" width="22" height="14" fill="url(#loft)" stroke="#7a6fa8" stroke-dasharray="4 3"/>
+<text x="759.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Loft / held zone (dashed)</text>
+<rect x="937.6" y="130" width="22" height="14" fill="#e9edf1" stroke="#c8d2d3"/>
+<text x="965.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Ceiling void to slab</text>
+<rect x="1111.6" y="130" width="22" height="14" fill="#e9dff0" stroke="#7c658c" stroke-dasharray="3 2"/>
+<text x="1139.60" y="142.00" font-size="12" class="muted" text-anchor="start" >Curtain pocket (concealed; 2 tracks in LIV/MBR/CBR)</text>
+<rect x="60" y="150" width="22" height="14" fill="#f6dede" stroke="#b02f2f" stroke-dasharray="3 2"/>
+<text x="88.00" y="162.00" font-size="12" class="muted" text-anchor="start" >Held pocket / curtain (red dashed)</text>
+<rect x="323.6" y="150" width="22" height="14" fill="#cfc4dc" stroke="#786385"/>
+<text x="351.60" y="162.00" font-size="12" class="muted" text-anchor="start" >Pooja niche PN1 (recessed, built)</text>
+<rect x="580.8000000000001" y="150" width="22" height="14" fill="url(#feature)" stroke="#4f9a98"/>
+<text x="608.80" y="162.00" font-size="12" class="muted" text-anchor="start" >Kit-kat tile (wet area)</text>
+<rect x="774.0000000000001" y="150" width="22" height="14" fill="#f1ece2" stroke="#8a7a66" stroke-dasharray="4 3"/>
+<text x="802.00" y="162.00" font-size="12" class="muted" text-anchor="start" >Footprint only (below floor)</text>
+<g data-panel-id="bath1-s" data-room-id="bath1" data-wall-dir="S">
+<rect x="60" y="178" width="453.38" height="795.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="76.00" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – south wall</text>
+<text x="76.00" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking SOUTH · left to right</text>
+<text x="76.00" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >2.67 m long · tag bath1-s</text>
+<text x="76.00" y="262.00" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="bath1-s" transform="translate(429.38 218.00) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M7.5819 6.5268L7.5819 5.4768" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="469.38" y="215.00" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(100 823.278) scale(140)">
+<rect x="0.0000" y="-3.1877" width="2.6670" height="0.7877" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.4000" width="2.6670" height="2.4000" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<g data-tile="feature" data-room-id="bath1">
+<rect x="1.6154" y="-2.4000" width="1.0516" height="2.4000" fill="url(#feature)" stroke="#4f9a98" stroke-width="0.01" />
+<text x="2.1412" y="-1.6500" font-size="0.075" fill="#2f6f6c" text-anchor="middle" class="halo" stroke-width="0.0165" >kit-kat feature tile</text>
+</g>
+<g data-tile="plain" data-room-id="bath1">
+<rect x="0.0000" y="-2.4000" width="1.6154" height="2.4000" fill="url(#plain)" stroke="#c4d0d0" stroke-width="0.01" />
+<text x="0.8077" y="-2.2000" font-size="0.075" fill="#5d7174" text-anchor="middle" class="halo" stroke-width="0.0165" >plain tile</text>
+</g>
+<g data-bath-id="BATH-TL1" data-bath-detail="services-wall">
+<rect x="0.0755" y="-1.9500" width="0.5500" height="0.8000" fill="#e4f0f5" stroke="#5a7f8f" stroke-width="0.012" />
+<text x="0.3505" y="-1.5200" font-size="0.07" fill="#3d6a7a" text-anchor="middle" class="halo" stroke-width="0.0154" >mirror</text>
+<path d="M0.0255 -0.9200L0.6755 -0.9200" fill="none" stroke="#5d6a6c" stroke-width="0.02" />
+<rect x="0.3355" y="-1.0600" width="0.0300" height="0.1400" fill="#7a8a8d" stroke="none" stroke-width="0" />
+<path d="M2.0336 -2.1500L2.2336 -2.1500" fill="none" stroke="#5d6a6c" stroke-width="0.025" />
+<text x="2.1336" y="-2.0300" font-size="0.07" fill="#3d6a7a" text-anchor="middle" class="halo" stroke-width="0.0154" >shower head 2.15</text>
+<circle cx="2.134" cy="-1.050" r=".035" fill="#fff" stroke="#5d6a6c" stroke-width=".01"/>
+<text x="2.1336" y="-1.1200" font-size="0.07" fill="#3d6a7a" text-anchor="middle" class="halo" stroke-width="0.0154" >mixer 1.05</text>
+<path d="M1.6154 0.0000L1.6154 -2.0000" fill="none" stroke="#4f9a98" stroke-width="0.02" stroke-dasharray=".05 .03"/>
+<text x="1.5754" y="-1.5000" font-size="0.07" fill="#2f6f6c" text-anchor="end" class="halo" stroke-width="0.0154" >glass screen 2.00</text>
+<text x="1.5754" y="-1.4000" font-size="0.07" fill="#2f6f6c" text-anchor="end" class="halo" stroke-width="0.0154" >(seen edge-on)</text>
+<path d="M0.9378 -0.4300L1.3178 -0.4300" fill="none" stroke="#7b8a8c" stroke-width="0.012" stroke-dasharray=".04 .03"/>
+</g>
+<g data-item-id="BATH-TL1-WC" data-item-kind="bath-wc" data-panel-id="bath1-s">
+<rect x="0.7678" y="-1.0000" width="0.7200" height="1.0000" fill="#f6f7f7" stroke="#7b8a8c" stroke-width="0.014" />
+<text x="1.1278" y="-0.4711" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" >TL1 WC</text>
+</g>
+<g data-item-id="BATH-TL1-SHOWER" data-item-kind="bath-shower" data-panel-id="bath1-s">
+</g>
+<g data-item-id="BATH-TL1-VANITY" data-item-kind="bath-vanity" data-panel-id="bath1-s">
+<rect x="0.0255" y="-0.8500" width="0.6500" height="0.6500" fill="#eceae1" stroke="#7d7a6a" stroke-width="0.014" />
+<text x="0.3505" y="-0.4961" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" >TL1 vanity</text>
+</g>
+<path d="M-0.1200 0.0000L2.7870 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L2.7870 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.4000L2.7870 -2.4000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="2.6370" y="-2.4500" font-size="0.075" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0165" >bath ceiling 2.40 (not provided; placeholder)</text>
+<path d="M0.0000 0.0000L0.0000 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M2.6670 0.0000L2.6670 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+</g>
+<path d="M72 843.278H501.38" stroke="#e1e8e8"/>
+<text x="74.00" y="855.28" font-size="11" class="muted" text-anchor="start" >• Vanity 0.20–0.85 m, basin top 0.92 m, faucet 1.06 m; mirror 0.55 × 0.8 m</text>
+<text x="84.00" y="870.28" font-size="11" class="muted" text-anchor="start" >centred at 1.55 m. WC cistern to 1.00 m, seat 0.43 m (dashed). All</text>
+<text x="84.00" y="885.28" font-size="11" class="muted" text-anchor="start" >fixture dimensions are proposed, not site measured.</text>
+<text x="74.00" y="900.28" font-size="11" class="muted" text-anchor="start" >• Shower: head 2.15 m, mixer 1.05 m, glass screen 2.00 m. These are</text>
+<text x="84.00" y="915.28" font-size="11" class="muted" text-anchor="start" >proposed dimensions, not site measured. Kit-kat tile only on this faucet</text>
+<text x="84.00" y="930.28" font-size="11" class="muted" text-anchor="start" >wall inside the shower; plain porcelain elsewhere.</text>
+</g>
+<g data-panel-id="bath1-w" data-room-id="bath1" data-wall-dir="W">
+<rect x="543.38" y="178" width="440" height="825.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="559.38" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – west wall</text>
+<text x="559.38" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking WEST · left to right</text>
+<text x="559.38" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >1.68 m long · tag bath1-w</text>
+<text x="559.38" y="262.00" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="bath1-w" transform="translate(899.38 218.00) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M8.9154 5.0268L8.9154 6.7032" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M7.4154 5.8650L8.4654 5.8650" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="939.38" y="215.00" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(583.38 823.278) scale(140)">
+<rect x="0.0000" y="-3.1877" width="1.6764" height="0.7877" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.4000" width="1.6764" height="2.4000" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<g data-tile="feature" data-room-id="bath1">
+<rect x="0.0000" y="-2.4000" width="1.6764" height="2.4000" fill="url(#feature)" stroke="#4f9a98" stroke-width="0.01" />
+<text x="0.8382" y="-1.6500" font-size="0.075" fill="#2f6f6c" text-anchor="middle" class="halo" stroke-width="0.0165" >kit-kat feature tile</text>
+</g>
+<g data-bath-id="BATH-TL1" data-bath-detail="shower-screen">
+<rect x="0.0000" y="-2.0000" width="0.9764" height="2.0000" fill="none" stroke="#4f9a98" stroke-width="0.014" stroke-dasharray=".06 .04"/>
+<text x="0.0500" y="-0.1200" font-size="0.07" fill="#2f6f6c" text-anchor="start" class="halo" stroke-width="0.0154" >screen 2.00 m proposed</text>
+</g>
+<g data-opening-id="bath1-vent" data-opening-code="V01" data-panel-id="bath1-w">
+<rect x="0.3865" y="-2.3000" width="0.9997" height="0.4000" fill="#d7ebf2" stroke="#4b6a78" stroke-width="0.018" />
+<path d="M0.8864 -2.3000L0.8864 -1.9000" fill="none" stroke="#7fa0ad" stroke-width="0.008" />
+<text x="0.8864" y="-2.1860" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >V01</text>
+<text x="0.8864" y="-2.0660" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >sill 1.90</text>
+<text x="0.8864" y="-1.9460" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >head 2.30</text>
+</g>
+<g data-opening-id="bath1-niche" data-opening-code="SN1" data-panel-id="bath1-w">
+<rect x="0.5750" y="-1.3000" width="0.7500" height="0.3500" fill="#e7e0ef" stroke="#786385" stroke-width="0.018" />
+<text x="0.9500" y="-1.1981" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" font-weight="600" >SN1</text>
+<text x="0.9500" y="-1.0961" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" font-weight="600" >sill 0.95</text>
+<text x="0.9500" y="-0.9941" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" font-weight="600" >head 1.30</text>
+</g>
+<g data-item-id="BATH-TL1-SHOWER" data-item-kind="bath-shower" data-panel-id="bath1-w">
+</g>
+<path d="M-0.1200 0.0000L1.7964 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L1.7964 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.4000L1.7964 -2.4000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="1.6464" y="-2.4500" font-size="0.075" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0165" >bath 2.40 (placeholder)</text>
+<path d="M0.0000 0.0000L0.0000 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M1.6764 0.0000L1.6764 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+</g>
+<path d="M555.38 843.278H971.38" stroke="#e1e8e8"/>
+<text x="557.38" y="855.28" font-size="11" class="muted" text-anchor="start" >• V01 TL1 vent / window: 1000 mm wide, sill 1.90 m, head 2.30 m</text>
+<text x="567.38" y="870.28" font-size="11" class="muted" text-anchor="start" >(sill/head assumed).</text>
+<text x="557.38" y="885.28" font-size="11" class="muted" text-anchor="start" >• SN1 TL1 shower niche: 750 mm wide, sill 0.95 m, head 1.30 m (sill/head</text>
+<text x="567.38" y="900.28" font-size="11" class="muted" text-anchor="start" >assumed).</text>
+<text x="557.38" y="915.28" font-size="11" class="muted" text-anchor="start" >• Shower niche 0.75 × 0.35 m, 120 mm deep, centred 1.13 m: proposed</text>
+<text x="567.38" y="930.28" font-size="11" class="muted" text-anchor="start" >model dimensions, not site measured. No new cutting without</text>
+<text x="567.38" y="945.28" font-size="11" class="muted" text-anchor="start" >professional approval. Kit-kat covers this wet-area wall except the</text>
+<text x="567.38" y="960.28" font-size="11" class="muted" text-anchor="start" >niche and vent.</text>
+</g>
+<g data-panel-id="bath1-n" data-room-id="bath1" data-wall-dir="N">
+<rect x="1013.38" y="178" width="453.38" height="705.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="1029.38" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – north wall</text>
+<text x="1029.38" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking NORTH · left to right</text>
+<text x="1029.38" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >2.67 m long · tag bath1-n</text>
+<text x="1029.38" y="262.00" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="bath1-n" transform="translate(1382.76 218.00) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.7032L8.9154 6.7032" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M7.5819 5.2032L7.5819 6.2532" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="1422.76" y="215.00" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(1053.38 823.278) scale(140)">
+<rect x="0.0000" y="-3.1877" width="2.6670" height="0.7877" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.4000" width="2.6670" height="2.4000" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<g data-tile="plain" data-room-id="bath1">
+<rect x="0.0000" y="-2.4000" width="2.6670" height="2.4000" fill="url(#plain)" stroke="#c4d0d0" stroke-width="0.01" />
+<text x="1.3335" y="-2.2000" font-size="0.075" fill="#5d7174" text-anchor="middle" class="halo" stroke-width="0.0165" >plain tile</text>
+</g>
+<path d="M-0.1200 0.0000L2.7870 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L2.7870 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.4000L2.7870 -2.4000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="2.6370" y="-2.4500" font-size="0.075" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0165" >bath ceiling 2.40 (not provided; placeholder)</text>
+<path d="M0.0000 0.0000L0.0000 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M2.6670 0.0000L2.6670 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+</g>
+<path d="M1025.38 843.278H1454.76" stroke="#e1e8e8"/>
+</g>
+<g data-panel-id="bath1-e" data-room-id="bath1" data-wall-dir="E">
+<rect x="60" y="1033.278" width="440" height="720.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="76.00" y="1061.28" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – east wall</text>
+<text x="76.00" y="1083.28" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
+<text x="76.00" y="1100.28" font-size="11.5" class="muted mono" text-anchor="start" >1.68 m long · tag bath1-e</text>
+<text x="76.00" y="1117.28" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="bath1-e" transform="translate(416.00 1073.28) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
+<path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 1.5758L4.9548 1.5758L4.9548 4.6235L0.6855 4.6235Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 4.6235L4.9548 4.6235L4.9548 7.7060L0.6855 7.7060Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.6855 7.7060L4.9548 7.7060L4.9548 11.4452L4.0014 11.4452L4.0014 13.1850L0.6855 13.1850Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 0.2246L8.9154 0.2246L8.9154 4.9115L5.0643 4.9115Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.0643 4.9115L6.1359 4.9115L6.1359 6.7035L5.0643 6.7035Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M4.9548 7.2451L6.1359 7.2451L6.1359 8.4954L4.9548 8.4954Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M5.1054 8.6123L8.9154 8.6123L8.9154 13.1843L6.0054 13.1843L6.0054 11.4343L5.1054 11.4343Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M0.2277 13.4127L3.4281 13.4127L3.4281 15.8526L0.2277 15.8526Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L8.9154 5.0268L8.9154 6.7032L6.2484 6.7032Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
+<path d="M6.2484 6.8159L8.9154 6.8159L8.9154 8.4923L6.2484 8.4923Z" fill="#e9eeee" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="0.1122" height="4.5110" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="4.6235" width="0.2274" height="8.7892" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="0.1125" width="4.4967" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.0000" width="4.1916" height="0.2246" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="8.9154" y="0.0000" width="0.2310" height="13.4127" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.5703" y="1.4606" width="4.3845" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="0.1125" width="0.1094" height="4.9143" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9490" y="5.0268" width="0.1152" height="2.2183" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.0643" y="6.7035" width="1.0717" height="0.1125" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="4.9115" width="2.7795" height="0.1152" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="5.0268" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.7032" width="2.7795" height="0.1128" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.1359" y="6.8159" width="0.1125" height="1.6764" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="3.9606" height="0.1200" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.9548" y="8.4923" width="0.1506" height="2.9420" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.4343" width="2.0040" height="0.2383" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.0014" y="11.6726" width="0.2274" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="5.7528" y="11.6726" width="0.2526" height="1.7401" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="0.4581" y="13.1850" width="3.5433" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="4.2288" y="13.1850" width="1.5240" height="0.2277" fill="#5c6b70" stroke="none" stroke-width="0" />
+<rect x="6.0054" y="13.1843" width="3.1410" height="0.2284" fill="#5c6b70" stroke="none" stroke-width="0" />
+<path d="M6.2484 5.0268L6.2484 6.7032" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
+<path d="M7.7484 5.8650L6.6984 5.8650" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
+</g>
+<text x="456.00" y="1070.28" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(100 1678.556) scale(140)">
+<rect x="0.0000" y="-3.1877" width="1.6764" height="0.7877" fill="#e9edf1" stroke="none" stroke-width="0" />
+<rect x="0.0000" y="-2.4000" width="1.6764" height="2.4000" fill="#f4f1ea" stroke="none" stroke-width="0" />
+<g data-tile="plain" data-room-id="bath1">
+<rect x="0.0000" y="-2.4000" width="1.6764" height="2.4000" fill="url(#plain)" stroke="#c4d0d0" stroke-width="0.01" />
+<text x="0.8382" y="-2.2000" font-size="0.075" fill="#5d7174" text-anchor="middle" class="halo" stroke-width="0.0165" >plain tile</text>
+</g>
+<g data-opening-id="bath1-door" data-opening-code="D04" data-panel-id="bath1-e">
+<rect x="0.0585" y="-2.1300" width="0.7995" height="2.1300" fill="#e3d3bd" stroke="#4b6a78" stroke-width="0.018" />
+<text x="0.4583" y="-1.0910" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >D04</text>
+<text x="0.4583" y="-0.9710" font-size="0.1" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0220" font-weight="600" >head 2.13</text>
+</g>
+<path d="M-0.1200 0.0000L1.7964 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="-0.1000" y="0.1300" font-size="0.07" fill="#5d7174" text-anchor="start" class="halo" stroke-width="0.0154" >FFL 0.00</text>
+<path d="M-0.1200 -3.1877L1.7964 -3.1877" fill="none" stroke="#5d6e77" stroke-width="0.018" stroke-dasharray=".08 .05"/>
+<text x="0.0200" y="-3.2377" font-size="0.075" fill="#5d6e77" text-anchor="start" class="halo" stroke-width="0.0165" >slab underside 3.19 (derived – unmeasured)</text>
+<path d="M-0.1200 -2.4000L1.7964 -2.4000" fill="none" stroke="#203b43" stroke-width="0.035" />
+<text x="1.6464" y="-2.4500" font-size="0.075" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0165" >bath 2.40 (placeholder)</text>
+<path d="M0.0000 0.0000L0.0000 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+<path d="M1.6764 0.0000L1.6764 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
+</g>
+<path d="M72 1698.556H488" stroke="#e1e8e8"/>
+<text x="74.00" y="1710.56" font-size="11" class="muted" text-anchor="start" >• D04 TL1 door: 799 mm wide, head 2.13 m (sill/head assumed).</text>
+</g>
+<text x="60.00" y="1787.56" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
+<text x="60.00" y="1811.56" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
+<text x="60.00" y="1829.56" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
+<text x="60.00" y="1847.56" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
+<text x="60.00" y="1869.56" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
+<text x="60.00" y="1891.56" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
+<text x="60.00" y="1913.56" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
+<text x="60.00" y="1931.56" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
+<text x="60.00" y="1949.56" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
+<text x="60.00" y="1971.56" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
+<path d="M60 1981.556H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="2003.56" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="1640.00" y="2003.56" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+</svg>

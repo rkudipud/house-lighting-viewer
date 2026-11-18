@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electrician and lighting review pack</title>
+  <style>
+    body { font: 1rem/1.6 system-ui, sans-serif; max-width: 64rem; margin: auto; padding: 2rem 1.25rem; color: #172a35; background: #f5f4ef; }
+    a { color: #075975; } table { border-collapse: collapse; width: 100%; background: white; }
+    th, td { padding: .65rem; border: 1px solid #c9d1d3; text-align: left; }
+    .hold { border-left: .35rem solid #98610d; padding: 1rem; background: white; }
+    code { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <a href="../index.html">All trade handoffs</a>
+  <h1>Electrician / lighting review pack</h1>
+  <p class="hold"><strong>DESIGN REVIEW ONLY - NOT FOR CONSTRUCTION OR PROCUREMENT.</strong>
+    Product selection, driver/dimmer compatibility, wiring, branch protection, bathroom zones, earthing
+    and installation require qualified local approval. Manufacturer catalogue links are references,
+    not approved products or redistributed catalogues.</p>
+  <p>Source master SHA-256:
+    <code>b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</code>.</p>
+  <h2>Lighting workbench and plans</h2>
+  <p><a href="lighting/lighting-workbench.html"><strong>Open the offline lighting workbench</strong></a>
+    to inspect fixture locations, fixed CCT, controls and saved room heatmaps.
+    Its controls select stored results, not a live lighting recalculation.</p>
+  <table>
+    <thead><tr><th scope="col">Plan</th><th scope="col">PDF</th><th scope="col">SVG</th><th scope="col">PNG</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Main / HIGH lighting</th><td><a href="lighting/lighting-plan-main.pdf">PDF</a></td><td><a href="lighting/lighting-plan-main.svg">SVG</a></td><td><a href="lighting/lighting-plan-main.png">PNG</a></td></tr>
+      <tr><th scope="row">Mood / LOW and selected curtain strips</th><td><a href="lighting/lighting-plan-mood.pdf">PDF</a></td><td><a href="lighting/lighting-plan-mood.svg">SVG</a></td><td><a href="lighting/lighting-plan-mood.png">PNG</a></td></tr>
+      <tr><th scope="row">Task lighting</th><td><a href="lighting/lighting-plan-task.pdf">PDF</a></td><td><a href="lighting/lighting-plan-task.svg">SVG</a></td><td><a href="lighting/lighting-plan-task.png">PNG</a></td></tr>
+    </tbody>
+  </table>
+  <h2>Schedules and generic product search</h2>
+  <p><a href="lighting/lighting-review-schedules.pdf">Printable lighting review schedules</a>
+    / <a href="lighting/lighting-specification.md">Lighting specification and holds</a>.</p>
+  <ul>
+    <li><a href="lighting/fixture-ledger.csv">104 base fittings and locations</a>
+      / <a href="lighting/curtain-strips.csv">Four additional selected curtain strips</a></li>
+    <li><a href="lighting/switchboard-schedule.csv">Switchboard / brightness control schedule</a>
+      / <a href="lighting/circuit-ledger.csv">51 selected circuits</a></li>
+    <li><a href="lighting/supply-ledger-selected-s1.csv">Selected S1 supply schedule</a>
+      / <a href="lighting/voltage-drop-selected-s1.csv">Voltage-drop holds and marginal cases</a></li>
+    <li><a href="lighting/generic-product-search.csv">Location-linked generic fitting specification search</a></li>
+  </ul>
+  <p>The selected review arrangement has 108 fittings/strips, 51 circuits, 21 brightness knobs,
+    38 modeled outputs, three modeled repeaters and twelve 24 V supplies totaling 1,980 W nameplate.
+    These are planning quantities, not installed or engineered capacity.</p>
+  <p class="hold">P01 is a single 480 W-class reference supply; P03 is removed. Living feeder,
+    controller/repeater ratings, distribution, branch protection and LT-4/LT-5 inrush remain open.
+    P16/C39/C40 are marginal. CBR H1-H6 are active for review; the C37 dimmer chain remains held.
+    Exact-chain proof, product approval and construction release remain false.</p>
+  <h2>Heatmaps - inherited analytic estimates</h2>
+  <p class="hold"><a href="simulation/index.html"><strong>New: separate exploratory Radiance
+    report, sensitivity evidence and static heatmaps</strong></a>. Generic, provisional,
+    not measured or product-specific; it does not replace these analytic maps or respond
+    to viewer/workbench controls. P1 is excluded; kitchen cove and pooja records remain held.
+    The <a href="simulation/revision-all-rooms/index.html">six-room sensitivity revision</a>
+    supersedes only the earlier not-run statement. UTL/BAL remain enclosed approximations;
+    pocket narrow/wide are identical-scene controls, not physical pocket sensitivity.
+    Bathrooms use floor-plane results; DRS/LOB task U0 uses 12/8 points.
+    Glare/daylight are not computed.
+    No fixture locations, canonical data or approval holds were changed.</p>
+  <p><a href="lighting/heatmaps-summary.pdf">Printable analytic heatmap summary</a>
+    / <a href="lighting/heatmaps.json">Editable numerical grids</a>
+    / <a href="lighting/calculation-validity.json">Calculation validity and limitations</a>.</p>
+  <p>These are saved generic-optics estimates, <strong>not measured or physically validated
+    simulation</strong>. They were not rerun for this handoff. The four selected curtain strips receive
+    no lux credit. Pocket dimensions, source photometry, obstructions, installation and product
+    performance require confirmation; missing source statistics are not invented.</p>
+  <p>The <a href="../viewer/index.html">current 3D viewer</a> withholds the older children's grid.
+    CBR results retained in this source workbench are historical analytic estimates, not validation
+    of corrected room geometry or a current installation-performance approval.</p>
+  <p>PNG room maps:
+    <a href="lighting/heatmaps/LIV-analytic.png">living</a>,
+    <a href="lighting/heatmaps/DIN-analytic.png">dining</a>,
+    <a href="lighting/heatmaps/KIT-analytic.png">kitchen</a>,
+    <a href="lighting/heatmaps/MBR-analytic.png">master</a>,
+    <a href="lighting/heatmaps/CBR-analytic.png">children</a>,
+    <a href="lighting/heatmaps/DRS-analytic.png">dressing</a>,
+    <a href="lighting/heatmaps/UTL-analytic.png">utility</a>,
+    <a href="lighting/heatmaps/TL1-analytic.png">toilet 1</a>,
+    <a href="lighting/heatmaps/TL2-analytic.png">toilet 2</a>,
+    <a href="lighting/heatmaps/BAL-analytic.png">balcony</a>,
+    <a href="lighting/heatmaps/LOB-analytic.png">lobby</a>.
+    <a href="lighting/heatmaps/kitchen-worktop-K2-source.png">K2 worktop source map</a> is retained separately.</p>
+  <h2>Electrical and control options</h2>
+  <ul>
+    <li><a href="electrical/electrical-review.pdf">Wiring / electrical review PDF</a>
+      / <a href="electrical/electrical-review.html">HTML</a></li>
+    <li><a href="electrical/control-options.pdf">Control options PDF</a>
+      / <a href="electrical/control-options.html">HTML</a></li>
+    <li><a href="electrical/bill-of-materials.pdf">Location-linked BOM PDF</a>
+      / <a href="electrical/schedules/location-linked-bom.csv">Full location/specification CSV</a></li>
+    <li><a href="electrical/wholesale-rfq.pdf">Generic / branded procurement RFQ PDF</a>
+      / <a href="electrical/wholesale-rfq.html">HTML</a></li>
+    <li><a href="electrical/source-index.pdf">Manufacturer sourcing index PDF - public link edition</a>
+      / <a href="electrical/source-index.html">Official source links</a></li>
+  </ul>
+  <p>Electrical CSVs:
+    <a href="electrical/schedules/switchboard-schedule.csv">switchboards</a>,
+    <a href="electrical/schedules/wall-control-schedule.csv">wall controls</a>,
+    <a href="electrical/schedules/circuit-schedule.csv">circuits</a>,
+    <a href="electrical/schedules/supply-schedule.csv">supplies</a>,
+    <a href="electrical/schedules/fixture-class-specifications.csv">generic fixture specifications</a>,
+    <a href="electrical/schedules/mains-dimmer-check.csv">mains-dimmer holds</a>.</p>
+  <p>Concept diagrams:
+    <a href="electrical/figures/concept-flat.svg">flat wiring SVG</a> /
+    <a href="electrical/figures/concept-flat.png">PNG</a>,
+    <a href="electrical/figures/concept-living-low.svg">living LOW SVG</a> /
+    <a href="electrical/figures/concept-living-low.png">PNG</a>,
+    <a href="electrical/figures/controls-plan.svg">control plan SVG</a> /
+    <a href="electrical/figures/controls-plan.png">PNG</a>,
+    <a href="electrical/figures/curtain-pocket.svg">curtain pocket SVG</a> /
+    <a href="electrical/figures/curtain-pocket.png">PNG</a>.</p>
+  <p class="hold">These are conceptual review and quotation documents, not an approved wiring design.
+    Historical S1 budget allowances exclude the selected 480 W living supply price; its cost delta
+    and a current installed quotation are unverified. Twelve third-party literature PDFs are omitted;
+    official links replace local catalogue links, including in the adapted source-index PDF.
+    <a href="electrical/repository-copy-receipt.json">Electrical source/public hashes and omissions</a>
+    record the changes. Generator snapshots retain external-input requirements; portable repository
+    regeneration is not claimed without a separate clean-copy check.</p>
+  <p><a href="electrical/PUBLIC-COPY.md">Electrical public-copy omissions and build limits</a>
+    / <a href="lighting/source/README.md">Lighting exporter source snapshots and dependency limits</a>.</p>
+  <h2>Provenance</h2>
+  <p><a href="lighting/README.md">Source pack reading guide</a>
+    / <a href="lighting/verification.json">Upstream verification report</a>
+    / <a href="lighting/repository-copy-receipt.json">Source-versus-public-copy hashes</a>
+    / <a href="lighting/public-file-hashes.json">Delivered file hashes</a>.</p>
+  <p>The current pack's supplied hashes are verified. A historical prior 2ce3fcb4 lighting manifest
+    referenced by the wardrobe integration receipt was overwritten. The
+    <a href="../source-basis/generated/wardrobe-interiors-provenance-correction.json">provenance correction</a>
+    explicitly records that its bytes are unavailable, not recovered or verified. An independent
+    rollback/current-master comparison supports compatibility only; it does not close the missing-byte gap.</p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "README.md": "3331facc56b41c2fbf87071a8223e25e27d30ef8a8916022e64cbddb2dc4a1bd",
+  "signoff_pack.py": "fdac69008d7f701a9f73a53fb5500af93ff69a73d3800a173c0f87dbe70b51f0",
+  "interiors_model.py": "dd7e8c624c54e242d0f53fbf58fe71e665b6b2ec7fc19508c80c8309cad5cb2f",
+  "cost_model.py": "e5f2c57d762c8285e3f4bedcc80d0cc708298b4d9003193a7ab9f8f391cc3471",
+  "verify_public.py": "5ad41f73424df69234cba7beb6a42c253f638b972f35055b60d4e23dc50dd0c3",
+  "requirements-wardrobe.txt": "692abce62f52226ec0b43cb464db29e9a214791877f2443ec357af63d0729631",
+  "storage-current.json": "4c6c17b50fa634bbe545e5b840d6092de4ef8c8b847e1eb99599632415757adb",
+  "cost-evidence.json": "70b2e5469c71bff99b01cf41ce25e88e184e590ab2aa4d945a39989967b3517e",
+  "cost-evidence.md": "0765ee5c38613ea51d4178c3d2418ae3d8da2932a9bcea9099811d605191c5a4",
+  "final/CLEANUP-MANIFEST.md": "5b3bc6e6d053dad3f7817f1ae3bff138d16ab3cf97af34ebf46e47d77691b161",
+  "reproduction-inputs/wardrobe-interiors-original.json": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+  "public-reproduction-expected.json": "b658e45f512eefae616c4833d5e800b153494de84e00d3337c3ec77b8db79821",
+  "public-reproduction-receipt.json": "a813758652392bdfe13374000578dc7836ec64cf8c5674426fa3c8ea9b89bd5a",
+  "SHA256SUMS.json": "90001ce78593faf8e3d8c49591cd1c29598f50891a830e4de5806942d1e3f5f9",
+  "repository-copy-receipt.json": "a16383c95ed39e9f04ce5125f11a810566d40c0b8b83f398167ebe5f38341b92"
+}

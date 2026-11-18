@@ -1,0 +1,16 @@
+{
+  "status": "PASS_exact_public_viewer_rebuild",
+  "constructionRelease": false,
+  "publicationAuthorized": false,
+  "masterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceManifestSha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1",
+  "htmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+  "htmlBytes": 2590423,
+  "nodeVersion": "v26.6.0",
+  "pinnedPackages": {
+    "three": "0.181.1",
+    "esbuild": "0.27.0"
+  },
+  "privateMasterUsed": false,
+  "method": "Clean temporary copy; npm ci from pinned package lock; public-data rebuild; byte comparison against integrated root viewer; temporary dependencies removed."
+}

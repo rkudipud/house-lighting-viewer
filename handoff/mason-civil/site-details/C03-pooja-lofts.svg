@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1375" viewBox="0 0 1700 1375" role="img" aria-labelledby="t d">
+<title id="t">Pooja and lofts — no structural assumptions</title>
+<desc id="d">Existing niche, proposed display and held loft details</desc>
+<metadata>{&quot;sheet&quot;:&quot;C03-pooja-lofts&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;construction_release&quot;:false}</metadata>
+<defs>
+<pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
+<pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
+<pattern id="loft" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#f2f0f8"/><path d="M0 0V.08" stroke="#b9b1d3" stroke-width=".010"/></pattern>
+<pattern id="beam" width=".08" height=".08" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".08" height=".08" fill="#ecd9bd"/><path d="M0 0V.08" stroke="#c49a5c" stroke-width=".012"/></pattern>
+<pattern id="feature" width=".06" height=".06" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width=".06" height=".06" fill="#bfe0dc"/><path d="M0 0V.06" stroke="#5aa39b" stroke-width=".012"/></pattern>
+<pattern id="plain" width=".15" height=".15" patternUnits="userSpaceOnUse"><rect width=".15" height=".15" fill="#f3f6f6"/><path d="M0 0H.15V.15" fill="none" stroke="#d6dfdf" stroke-width=".006"/></pattern>
+<pattern id="nowall" width=".12" height=".12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".12" height=".12" fill="#fafafa"/><path d="M0 0V.12" stroke="#d9d9d9" stroke-width=".008"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#466c92"/></marker>
+</defs>
+<style>text{font-family:"Segoe UI",Arial,sans-serif;fill:#203b43}
+.mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
+.title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
+.halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
+<rect width="1700" height="1375" fill="#fcfdfc"/>
+<text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Pooja and lofts — no structural assumptions</text>
+<text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >Civil coordination · review only · all site dimensions require verification</text>
+<text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 3 / 4</text>
+<text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<path d="M60 116H1640" stroke="#c8d2d3"/>
+<text x="75.00" y="165.00" font-size="18" class="sect" text-anchor="start" >PN1 / EXISTING NICHE — FRONT ONLY</text>
+<rect x="75" y="195" width="730" height="650" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<rect x="110" y="235" width="320" height="530" fill="#f4f1ea" stroke="#8a9a9c"/>
+<rect x="200" y="295" width="140" height="390" fill="#f1eaf6" stroke="#786385" stroke-width="3" stroke-dasharray="10 7"/>
+<path d="M215 490H325" stroke="#786385" stroke-width="3" stroke-dasharray="8 6"/>
+<path d="M100 765H445" stroke="#203b43" stroke-width="4"/>
+<text x="125.00" y="805.00" font-size="15" class="muted" text-anchor="start" >ROOM FACE / FFL</text>
+<text x="465.00" y="265.00" font-size="16" class="red" text-anchor="start" >HOMEOWNER ESTIMATES</text>
+<text x="465.00" y="296.00" font-size="15" class="" text-anchor="start" >Width 609.6 mm; sill 0.4318 m; top</text>
+<text x="465.00" y="318.00" font-size="15" class="" text-anchor="start" >2.1336 m.</text>
+<text x="465.00" y="350.00" font-size="15" class="" text-anchor="start" >Opening height 1701.8 mm derived; depth</text>
+<text x="465.00" y="372.00" font-size="15" class="" text-anchor="start" >381 mm estimated.</text>
+<text x="465.00" y="404.00" font-size="15" class="" text-anchor="start" >North-corner gap 406.4 mm estimated.</text>
+<text x="465.00" y="426.00" font-size="15" class="" text-anchor="start" >All require a site survey.</text>
+<text x="465.00" y="458.00" font-size="15" class="" text-anchor="start" >One fixed platform intended roughly</text>
+<text x="465.00" y="480.00" font-size="15" class="" text-anchor="start" >halfway up; its actual height and size</text>
+<text x="465.00" y="502.00" font-size="15" class="" text-anchor="start" >are unknown.</text>
+<text x="110.00" y="835.00" font-size="15" class="red" text-anchor="start" >Front outline only. Physical back and extension are not drawn.</text>
+<text x="865.00" y="165.00" font-size="18" class="sect" text-anchor="start" >LOFTS / WARDROBES</text>
+<rect x="865" y="195" width="760" height="650" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<path d="M925 480H1545M925 275V480M1545 275V480" fill="none" stroke="#819594" stroke-width="3"/>
+<rect x="955" y="300" width="560" height="88" fill="#f2f0f8" stroke="#7a6fa8" stroke-width="2" stroke-dasharray="8 5"/>
+<rect x="985" y="398" width="170" height="260" fill="#e3d3bd" stroke="#4b6a78" stroke-width="2"/>
+<rect x="1195" y="398" width="280" height="260" fill="#dce4ef" stroke="#5b7795" stroke-width="2"/>
+<text x="1010.00" y="350.00" font-size="16" class="" text-anchor="start" >continuous loft: extent / support to verify</text>
+<text x="1015.00" y="540.00" font-size="16" class="" text-anchor="start" >DOOR</text>
+<text x="1280.00" y="540.00" font-size="16" class="" text-anchor="start" >WARDROBE</text>
+<text x="925.00" y="700.00" font-size="16" class="" text-anchor="start" >R05: one continuous loft over entrance and wardrobe.</text>
+<text x="925.00" y="727.00" font-size="15" class="red" text-anchor="start" >Soffit / top / depth / support / load are unmeasured.</text>
+<text x="925.00" y="754.00" font-size="15" class="muted" text-anchor="start" >2.20 m is a project target, NOT a verified code minimum.</text>
+<text x="75.00" y="895.00" font-size="18" class="sect" text-anchor="start" >CONSTRAINTS AND RELEASE GATES</text>
+<text x="75.00" y="928.00" font-size="16" class="" text-anchor="start" >The niche is already built. The homeowner reports an external reinforced extension beyond the wall, but its geometry and capacity are not independently verified. An estimated depth</text>
+<text x="75.00" y="951.00" font-size="16" class="" text-anchor="start" >greater than the model wall is not proof of unsafe or impossible construction.</text>
+<text x="75.00" y="985.00" font-size="16" class="" text-anchor="start" >Selected display: small idols with a framed picture behind. Exact positions, display sizes, platform fixing and thermal/fire clearances remain unmeasured or unapproved. LIV-P1/P2</text>
+<text x="75.00" y="1008.00" font-size="16" class="" text-anchor="start" >are held allowances, not final light positions.</text>
+<text x="75.00" y="1042.00" font-size="16" class="" text-anchor="start" >No niche deepening, concrete cutting, slab chasing or new structural support is authorised. Have the responsible professional verify the existing extension, fixings and permissible</text>
+<text x="75.00" y="1065.00" font-size="16" class="" text-anchor="start" >loads.</text>
+<text x="75.00" y="1099.00" font-size="16" class="" text-anchor="start" >Master split wardrobe is approved in principle; OPT-E BWP plywood carcass and laminate shutters are selected. Its dimensions and loft remain site holds. The utility shelf is</text>
+<text x="75.00" y="1122.00" font-size="16" class="" text-anchor="start" >recorded as existing RCC; check its actual condition and capacity.</text>
+<text x="75.00" y="1156.00" font-size="16" class="" text-anchor="start" >Dressing cabinet ST-R04a-WR01 and utility cabinet ST-R08-UC01 are selected subject to measured fit, circulation and service access; their drawn dimensions are unmeasured</text>
+<text x="75.00" y="1179.00" font-size="16" class="" text-anchor="start" >placeholders.</text>
+<path d="M60 1336H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="1358.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="1640.00" y="1358.00" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+</svg>

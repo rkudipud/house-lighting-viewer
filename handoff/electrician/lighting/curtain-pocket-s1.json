@@ -1,0 +1,1288 @@
+{
+  "status": "HOMEOWNER_SELECTED_S1_REVIEW_EXTENSION",
+  "source_master_sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
+  "decision_source": {
+    "id": "332dabaf-b0af-4e81-972f-9d942c49e87b",
+    "revision": 2
+  },
+  "strips": [
+    {
+      "id": "CURT-LIV",
+      "room": "LIV",
+      "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+      "cct_k": 2700,
+      "lane": "LOW",
+      "target_knob_group": "K-LIV-LOW",
+      "new_knob": false,
+      "strip_class": "COVE_FW generic (8 W/m, 720 lm/m, UNVERIFIED)",
+      "window_record": {
+        "source": "lighting.design_inputs.calc_geometry.curtains.windows.LIV",
+        "window_span_ft": [
+          30.02,
+          36.09
+        ],
+        "window_span_m": 1.8501,
+        "wall_ft": 2.25,
+        "axis": "x",
+        "into_room_sign": 1,
+        "geometry": "wall plane x = 2.25 ft (solver feet); the window runs along the other axis, room side +1",
+        "return_m": 0.3,
+        "pocket_widths_m": [
+          0.25,
+          0.2
+        ],
+        "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+      },
+      "indicative_strip_length_m": 2.45,
+      "length_basis": "window span 1.8501 m + 2 x 0.3 m return (ASSUMED solver parameter); DERIVED from the master record, not measured and not scaled from a photo",
+      "W_nominal": 19.6,
+      "W_envelope": 19.6,
+      "strip_flux_generic_lm": 1764,
+      "strip_flux_note": "generic strip flux emitted, NOT delivered light; no lux or luminance claim",
+      "polyline_ft": [
+        [
+          2.66,
+          29.036
+        ],
+        [
+          2.66,
+          37.074
+        ]
+      ],
+      "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+      "fed_from_knob_board": "SB-01",
+      "proposed_supply": "P01",
+      "proposed_supply_status": "HOMEOWNER_SELECTED_S1_REVIEW; measured pocket, product, supply distribution and exact chain remain held",
+      "voltage_drop": {
+        "branch_m": 6.45,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct": null,
+        "cable_mm2_assumed": null,
+        "status": "HOLD",
+        "min_mm2_for_target": null,
+        "hold_reason": "Previous P01/P03 split-feed result invalid for selected one-supply arrangement."
+      },
+      "exact_record_vs_to_measure": {
+        "exact_record": [
+          "source",
+          "window_span_ft",
+          "window_span_m",
+          "wall_ft",
+          "axis",
+          "into_room_sign",
+          "geometry",
+          "return_m",
+          "pocket_widths_m",
+          "mounting"
+        ],
+        "derived_not_measured": [
+          "strip length",
+          "strip centre line",
+          "feed end"
+        ],
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile"
+        ]
+      },
+      "site_photo": {
+        "file": "library/02-references/site-photo-hall-curtain-pocket.jpeg",
+        "sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+        "bytes": 25671,
+        "shows": "a recessed ceiling pocket / stepped gypsum edge at the window wall, cable tails in the ceiling; no scale, no dimension taken"
+      },
+      "older_iterations": "none: no accepted iteration had a lit curtain pocket (curtain-cove-audit.md), so there is no earlier exact layout to restore",
+      "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+      "fabrication_release": false,
+      "photometry_credit": false,
+      "historical_split_supply_voltage_drop": {
+        "branch_m": 6.45,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 4.66,
+        "dV_pct": 2.0,
+        "cable_mm2_assumed": 1.5,
+        "status": "INVALID_FOR_SELECTED_ONE_SUPPLY",
+        "min_mm2_for_target": 1.0
+      }
+    },
+    {
+      "id": "CURT-DIN",
+      "room": "DIN",
+      "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+      "cct_k": 2700,
+      "lane": "LOW",
+      "target_knob_group": "K-DIN-LOW",
+      "new_knob": false,
+      "strip_class": "COVE_FW generic (8 W/m, 720 lm/m, UNVERIFIED)",
+      "window_record": {
+        "source": "lighting.design_inputs.calc_geometry.curtains.windows.DIN",
+        "window_span_ft": [
+          19.03,
+          25.1
+        ],
+        "window_span_m": 1.8501,
+        "wall_ft": 2.25,
+        "axis": "x",
+        "into_room_sign": 1,
+        "geometry": "wall plane x = 2.25 ft (solver feet); the window runs along the other axis, room side +1",
+        "return_m": 0.3,
+        "pocket_widths_m": [
+          0.25,
+          0.2
+        ],
+        "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+      },
+      "indicative_strip_length_m": 2.45,
+      "length_basis": "window span 1.8501 m + 2 x 0.3 m return (ASSUMED solver parameter); DERIVED from the master record, not measured and not scaled from a photo",
+      "W_nominal": 19.6,
+      "W_envelope": 19.6,
+      "strip_flux_generic_lm": 1764,
+      "strip_flux_note": "generic strip flux emitted, NOT delivered light; no lux or luminance claim",
+      "polyline_ft": [
+        [
+          2.66,
+          18.046
+        ],
+        [
+          2.66,
+          26.084
+        ]
+      ],
+      "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+      "fed_from_knob_board": "SB-02",
+      "proposed_supply": "P07",
+      "proposed_supply_status": "HOMEOWNER_SELECTED_S1_REVIEW; measured pocket, product, supply distribution and exact chain remain held",
+      "voltage_drop": {
+        "branch_m": 7.14,
+        "feed_psu_to_board_m": 3.52,
+        "feed_shared_I_A": 2.89,
+        "dV_pct": 1.7,
+        "cable_mm2_assumed": 1.5,
+        "status": "OK",
+        "min_mm2_for_target": 1.0
+      },
+      "exact_record_vs_to_measure": {
+        "exact_record": [
+          "source",
+          "window_span_ft",
+          "window_span_m",
+          "wall_ft",
+          "axis",
+          "into_room_sign",
+          "geometry",
+          "return_m",
+          "pocket_widths_m",
+          "mounting"
+        ],
+        "derived_not_measured": [
+          "strip length",
+          "strip centre line",
+          "feed end"
+        ],
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile"
+        ]
+      },
+      "site_photo": {
+        "file": "library/02-references/site-photo-hall-curtain-pocket.jpeg",
+        "sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+        "bytes": 25671,
+        "shows": "a recessed ceiling pocket / stepped gypsum edge at the window wall, cable tails in the ceiling; no scale, no dimension taken"
+      },
+      "older_iterations": "none: no accepted iteration had a lit curtain pocket (curtain-cove-audit.md), so there is no earlier exact layout to restore",
+      "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+      "fabrication_release": false,
+      "photometry_credit": false
+    },
+    {
+      "id": "CURT-MBR-S",
+      "room": "MBR",
+      "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+      "cct_k": 2700,
+      "lane": "LOW",
+      "target_knob_group": "K-MBR-LOW",
+      "new_knob": false,
+      "strip_class": "COVE_FW generic (8 W/m, 720 lm/m, UNVERIFIED)",
+      "window_record": {
+        "source": "lighting.design_inputs.calc_geometry.curtains.windows.MBR-side",
+        "window_span_ft": [
+          10.113,
+          16.105
+        ],
+        "window_span_m": 1.8264,
+        "wall_ft": 29.25,
+        "axis": "x",
+        "into_room_sign": -1,
+        "geometry": "wall plane x = 29.25 ft (solver feet); the window runs along the other axis, room side -1",
+        "return_m": 0.3,
+        "pocket_widths_m": [
+          0.25,
+          0.2
+        ],
+        "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+      },
+      "indicative_strip_length_m": 2.43,
+      "length_basis": "window span 1.8264 m + 2 x 0.3 m return (ASSUMED solver parameter); DERIVED from the master record, not measured and not scaled from a photo",
+      "W_nominal": 19.4,
+      "W_envelope": 19.4,
+      "strip_flux_generic_lm": 1750,
+      "strip_flux_note": "generic strip flux emitted, NOT delivered light; no lux or luminance claim",
+      "polyline_ft": [
+        [
+          28.84,
+          9.129
+        ],
+        [
+          28.84,
+          17.089
+        ]
+      ],
+      "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+      "fed_from_knob_board": "SB-05",
+      "proposed_supply": "P12",
+      "proposed_supply_status": "HOMEOWNER_SELECTED_S1_REVIEW; measured pocket, product, supply distribution and exact chain remain held",
+      "voltage_drop": {
+        "branch_m": 6.28,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct": 1.8,
+        "cable_mm2_assumed": 1.5,
+        "status": "OK",
+        "min_mm2_for_target": 1.0
+      },
+      "exact_record_vs_to_measure": {
+        "exact_record": [
+          "source",
+          "window_span_ft",
+          "window_span_m",
+          "wall_ft",
+          "axis",
+          "into_room_sign",
+          "geometry",
+          "return_m",
+          "pocket_widths_m",
+          "mounting"
+        ],
+        "derived_not_measured": [
+          "strip length",
+          "strip centre line",
+          "feed end"
+        ],
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile"
+        ]
+      },
+      "site_photo": null,
+      "older_iterations": "none: no accepted iteration had a lit curtain pocket (curtain-cove-audit.md), so there is no earlier exact layout to restore",
+      "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+      "fabrication_release": false,
+      "photometry_credit": false
+    },
+    {
+      "id": "CURT-CBR",
+      "room": "CBR",
+      "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+      "cct_k": 2700,
+      "lane": "LOW",
+      "target_knob_group": "K-CBR-LOW",
+      "new_knob": false,
+      "strip_class": "COVE_FW generic (8 W/m, 720 lm/m, UNVERIFIED)",
+      "window_record": {
+        "source": "lighting.design_inputs.calc_geometry.curtains.windows.CBR",
+        "window_span_ft": [
+          40.1323,
+          43.2557
+        ],
+        "window_span_m": 0.952,
+        "wall_ft": 29.25,
+        "axis": "x",
+        "into_room_sign": -1,
+        "geometry": "wall plane x = 29.25 ft (solver feet); the window runs along the other axis, room side -1",
+        "return_m": 0.3,
+        "pocket_widths_m": [
+          0.25,
+          0.2
+        ],
+        "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+      },
+      "indicative_strip_length_m": 1.55,
+      "length_basis": "window span 0.952 m + 2 x 0.3 m return (ASSUMED solver parameter); DERIVED from the master record, not measured and not scaled from a photo",
+      "W_nominal": 12.4,
+      "W_envelope": 12.4,
+      "strip_flux_generic_lm": 1116,
+      "strip_flux_note": "generic strip flux emitted, NOT delivered light; no lux or luminance claim",
+      "polyline_ft": [
+        [
+          28.84,
+          39.148
+        ],
+        [
+          28.84,
+          44.24
+        ]
+      ],
+      "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+      "fed_from_knob_board": "SB-08",
+      "proposed_supply": "P16",
+      "proposed_supply_status": "HOMEOWNER_SELECTED_S1_REVIEW; measured pocket, product, supply distribution and exact chain remain held",
+      "voltage_drop": {
+        "branch_m": 7.45,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct": 2.9,
+        "cable_mm2_assumed": 1.5,
+        "status": "OK",
+        "min_mm2_for_target": 1.5
+      },
+      "exact_record_vs_to_measure": {
+        "exact_record": [
+          "source",
+          "window_span_ft",
+          "window_span_m",
+          "wall_ft",
+          "axis",
+          "into_room_sign",
+          "geometry",
+          "return_m",
+          "pocket_widths_m",
+          "mounting"
+        ],
+        "derived_not_measured": [
+          "strip length",
+          "strip centre line",
+          "feed end"
+        ],
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile",
+          "window width is the CBR placeholder (u 3.62-4.572 m, unmeasured)"
+        ]
+      },
+      "site_photo": {
+        "file": "library/02-references/site-photo-children-curtain-pocket.jpeg",
+        "sha256": "b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2",
+        "bytes": 30783,
+        "shows": "a recessed ceiling pocket / stepped gypsum edge at the window wall, cable tails in the ceiling; no scale, no dimension taken"
+      },
+      "older_iterations": "none: no accepted iteration had a lit curtain pocket (curtain-cove-audit.md), so there is no earlier exact layout to restore",
+      "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+      "fabrication_release": false,
+      "photometry_credit": false
+    }
+  ],
+  "held_pocket_excluded": "CURT-MBR-W03 remains held under OI-MBR-04 / OI-MBR-02 and is not included in S1.",
+  "hold": "H-CURTAIN-POCKET; pocket width/depth, returns, track/profile clearance and feed access require site mock-up/measurement.",
+  "base_photometry": {
+    "fittings": 104,
+    "circuits": 47,
+    "curtain_lux_credit": false
+  },
+  "base_electrical": {
+    "knobs": 21,
+    "knob_outputs": 34,
+    "amplifiers": 1,
+    "psus": 12,
+    "psu_nameplate_total_W": 1890,
+    "psu_over_usable": [],
+    "vd_worst_pct": null,
+    "vd_status": {
+      "HOLD": 4,
+      "OK": 27,
+      "MARGINAL": 2
+    },
+    "worst_known_dV_pct": 3.3,
+    "scope": "104-fitting base with selected living supply; excludes the four curtain strips"
+  },
+  "selected_S1_electrical": {
+    "meaning": "each pocket strip becomes one more output of the room's existing LOW knob group and joins that room's existing cove supply (no new knob, no CCT control, no new supply); living P01 is now the selected single 480 W class supply, with protection and routing held",
+    "totals": {
+      "knobs": 21,
+      "knob_outputs": 38,
+      "amplifiers": 3,
+      "psus": 12,
+      "psu_nameplate_total_W": 1980,
+      "psu_over_usable": [],
+      "vd_worst_pct": null,
+      "vd_status": {
+        "OK": 30,
+        "MARGINAL": 2,
+        "HOLD": 5
+      },
+      "fittings_including_selected_strips": 108,
+      "circuits_including_selected_strips": 51,
+      "base_photometric_fittings": 104,
+      "additional_selected_strips": 4,
+      "additional_circuits": 4,
+      "selected_strip_length_m": 8.88,
+      "selected_strip_load_W": 71.04,
+      "photometry_credit_for_selected_strips": false,
+      "worst_known_dV_pct": 3.6,
+      "inrush_status": "HOLD; LT-4 and LT-5 previous screens invalid",
+      "capacity_status": "project allowance only; product, thermal and branch protection held"
+    },
+    "knob_groups_changed": [
+      {
+        "knob": "K-LIV-LOW",
+        "outputs_before": 5,
+        "outputs_after": 6,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 1,
+        "amplifiers_after": 2,
+        "W_envelope_after": 181.52,
+        "I_total_A_after": 7.563333,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 1.92,
+        "output_design_A": 2.4,
+        "status": "HOLD",
+        "reason": "Two modeled repeaters and six outputs remain; controller/repeater compatibility and branch protection are open.",
+        "psus_after": [
+          "P01"
+        ]
+      },
+      {
+        "knob": "K-DIN-LOW",
+        "outputs_before": 1,
+        "outputs_after": 2,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 0,
+        "W_envelope_after": 69.3,
+        "I_total_A_after": 2.89,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.07,
+        "output_design_A": 2.4,
+        "status": "OK"
+      },
+      {
+        "knob": "K-MBR-LOW",
+        "outputs_before": 3,
+        "outputs_after": 4,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 1,
+        "W_envelope_after": 110.2,
+        "I_total_A_after": 4.59,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.18,
+        "output_design_A": 2.4,
+        "status": "OK"
+      },
+      {
+        "knob": "K-CBR-LOW",
+        "outputs_before": 2,
+        "outputs_after": 3,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 0,
+        "W_envelope_after": 105.0,
+        "I_total_A_after": 4.38,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.07,
+        "output_design_A": 2.4,
+        "status": "OK"
+      }
+    ],
+    "supplies_changed": [
+      {
+        "psu": "P01",
+        "circuits": [
+          "C03",
+          "C04",
+          "C05",
+          "X-CURT-LIV"
+        ],
+        "W_envelope_before": 161.92,
+        "W_envelope_after": 181.52,
+        "nameplate_before_W": 480,
+        "nameplate_after_W": 480,
+        "pct_of_usable_after": 63.0,
+        "margin_to_usable_W": 106.48,
+        "nameplate_min_W_for_10pct_margin": null,
+        "changed": true,
+        "status": "HOLD_PRODUCT_THERMAL_INRUSH_BRANCH_PROTECTION",
+        "reference_only": "Mean Well HLG-480H-24"
+      },
+      {
+        "psu": "P07",
+        "circuits": [
+          "C12",
+          "X-CURT-DIN"
+        ],
+        "W_envelope_before": 49.7,
+        "W_envelope_after": 69.3,
+        "nameplate_before_W": 100,
+        "nameplate_after_W": 150,
+        "pct_of_usable_after": 77.0,
+        "margin_to_usable_W": 20.7,
+        "nameplate_min_W_for_10pct_margin": 128.3,
+        "changed": true
+      },
+      {
+        "psu": "P12",
+        "circuits": [
+          "C21",
+          "C22",
+          "C23",
+          "X-CURT-MBR-S"
+        ],
+        "W_envelope_before": 90.8,
+        "W_envelope_after": 110.2,
+        "nameplate_before_W": 200,
+        "nameplate_after_W": 240,
+        "pct_of_usable_after": 76.5,
+        "margin_to_usable_W": 33.8,
+        "nameplate_min_W_for_10pct_margin": 204.1,
+        "changed": true
+      },
+      {
+        "psu": "P16",
+        "circuits": [
+          "C38",
+          "C39",
+          "C40",
+          "X-CURT-CBR"
+        ],
+        "W_envelope_before": 108.6,
+        "W_envelope_after": 121.0,
+        "nameplate_before_W": 240,
+        "nameplate_after_W": 240,
+        "pct_of_usable_after": 84.0,
+        "margin_to_usable_W": 23.0,
+        "nameplate_min_W_for_10pct_margin": 224.1,
+        "changed": true
+      }
+    ],
+    "voltage_drop_changed": [
+      {
+        "circuit": "C03",
+        "section": "A",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "C03",
+        "section": "B",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "C12",
+        "section": "all",
+        "psu": "P07",
+        "board": "SB-02",
+        "new_section": false,
+        "branch_m": 3.67,
+        "feed_psu_to_board_m": 3.52,
+        "feed_shared_I_A": 2.89,
+        "dV_pct_before": 1.6,
+        "dV_pct_after": 1.9,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C21",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 4.12,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 2.0,
+        "dV_pct_after": 2.2,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C22",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 5.23,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 1.8,
+        "dV_pct_after": 2.0,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C23",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 6.46,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 1.3,
+        "dV_pct_after": 1.5,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 0.75,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C38",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 5.55,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 2.7,
+        "dV_pct_after": 2.9,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C39",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 3.65,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 3.1,
+        "dV_pct_after": 3.3,
+        "status_before": "MARGINAL",
+        "status_after": "MARGINAL",
+        "min_mm2_for_target_after": 2.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C40",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 5.43,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 3.3,
+        "dV_pct_after": 3.6,
+        "status_before": "MARGINAL",
+        "status_after": "MARGINAL",
+        "min_mm2_for_target_after": 2.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-LIV",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": true,
+        "branch_m": 6.45,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": null,
+        "dV_pct_after": null,
+        "status_before": null,
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "X-CURT-DIN",
+        "section": "all",
+        "psu": "P07",
+        "board": "SB-02",
+        "new_section": true,
+        "branch_m": 7.14,
+        "feed_psu_to_board_m": 3.52,
+        "feed_shared_I_A": 2.89,
+        "dV_pct_before": null,
+        "dV_pct_after": 1.7,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-MBR-S",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": true,
+        "branch_m": 6.28,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": null,
+        "dV_pct_after": 1.8,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-CBR",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": true,
+        "branch_m": 7.45,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": null,
+        "dV_pct_after": 2.9,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C04",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 4.89,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 0.8,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous P03 feed no longer applies; selected single-supply route is unverified."
+      },
+      {
+        "circuit": "C05",
+        "section": "2 parallel outputs",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 7.16,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.5,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous P03 feed no longer applies; selected single-supply route is unverified."
+      }
+    ],
+    "cost": {
+      "per_flat_subtotal_inr": [
+        8631,
+        21801
+      ],
+      "per_flat_with_contingency_inr": [
+        9667,
+        24417
+      ],
+      "four_flats_with_contingency_inr": [
+        38668,
+        97668
+      ],
+      "contingency_pct": 12,
+      "lines": [
+        {
+          "item": "CURT-LIV: strip (m, with cut allowance)",
+          "qty": 2.6,
+          "unit_lo": 300,
+          "unit_hi": 750,
+          "delta_lo": 780,
+          "delta_hi": 1950,
+          "basis": "strip_1c"
+        },
+        {
+          "item": "CURT-LIV: profile + diffuser (m)",
+          "qty": 2.45,
+          "unit_lo": 200,
+          "unit_hi": 550,
+          "delta_lo": 490,
+          "delta_hi": 1348,
+          "basis": "profile"
+        },
+        {
+          "item": "CURT-LIV: labour strip/profile (m)",
+          "qty": 2.45,
+          "unit_lo": 60,
+          "unit_hi": 150,
+          "delta_lo": 147,
+          "delta_hi": 368,
+          "basis": "labour_m"
+        },
+        {
+          "item": "CURT-LIV: labour per point",
+          "qty": 1,
+          "unit_lo": 150,
+          "unit_hi": 350,
+          "delta_lo": 150,
+          "delta_hi": 350,
+          "basis": "labour_pt"
+        },
+        {
+          "item": "CURT-LIV: SELV cable share (wire_extra / 34 knob outputs)",
+          "qty": 1,
+          "unit_lo": 117.6470588235294,
+          "unit_hi": 264.70588235294116,
+          "delta_lo": 118,
+          "delta_hi": 265,
+          "basis": "wire_extra pro rata, ASSUMED"
+        },
+        {
+          "item": "CURT-DIN: strip (m, with cut allowance)",
+          "qty": 2.6,
+          "unit_lo": 300,
+          "unit_hi": 750,
+          "delta_lo": 780,
+          "delta_hi": 1950,
+          "basis": "strip_1c"
+        },
+        {
+          "item": "CURT-DIN: profile + diffuser (m)",
+          "qty": 2.45,
+          "unit_lo": 200,
+          "unit_hi": 550,
+          "delta_lo": 490,
+          "delta_hi": 1348,
+          "basis": "profile"
+        },
+        {
+          "item": "CURT-DIN: labour strip/profile (m)",
+          "qty": 2.45,
+          "unit_lo": 60,
+          "unit_hi": 150,
+          "delta_lo": 147,
+          "delta_hi": 368,
+          "basis": "labour_m"
+        },
+        {
+          "item": "CURT-DIN: labour per point",
+          "qty": 1,
+          "unit_lo": 150,
+          "unit_hi": 350,
+          "delta_lo": 150,
+          "delta_hi": 350,
+          "basis": "labour_pt"
+        },
+        {
+          "item": "CURT-DIN: SELV cable share (wire_extra / 34 knob outputs)",
+          "qty": 1,
+          "unit_lo": 117.6470588235294,
+          "unit_hi": 264.70588235294116,
+          "delta_lo": 118,
+          "delta_hi": 265,
+          "basis": "wire_extra pro rata, ASSUMED"
+        },
+        {
+          "item": "CURT-MBR-S: strip (m, with cut allowance)",
+          "qty": 2.6,
+          "unit_lo": 300,
+          "unit_hi": 750,
+          "delta_lo": 780,
+          "delta_hi": 1950,
+          "basis": "strip_1c"
+        },
+        {
+          "item": "CURT-MBR-S: profile + diffuser (m)",
+          "qty": 2.43,
+          "unit_lo": 200,
+          "unit_hi": 550,
+          "delta_lo": 486,
+          "delta_hi": 1336,
+          "basis": "profile"
+        },
+        {
+          "item": "CURT-MBR-S: labour strip/profile (m)",
+          "qty": 2.43,
+          "unit_lo": 60,
+          "unit_hi": 150,
+          "delta_lo": 146,
+          "delta_hi": 364,
+          "basis": "labour_m"
+        },
+        {
+          "item": "CURT-MBR-S: labour per point",
+          "qty": 1,
+          "unit_lo": 150,
+          "unit_hi": 350,
+          "delta_lo": 150,
+          "delta_hi": 350,
+          "basis": "labour_pt"
+        },
+        {
+          "item": "CURT-MBR-S: SELV cable share (wire_extra / 34 knob outputs)",
+          "qty": 1,
+          "unit_lo": 117.6470588235294,
+          "unit_hi": 264.70588235294116,
+          "delta_lo": 118,
+          "delta_hi": 265,
+          "basis": "wire_extra pro rata, ASSUMED"
+        },
+        {
+          "item": "CURT-CBR: strip (m, with cut allowance)",
+          "qty": 1.7,
+          "unit_lo": 300,
+          "unit_hi": 750,
+          "delta_lo": 510,
+          "delta_hi": 1275,
+          "basis": "strip_1c"
+        },
+        {
+          "item": "CURT-CBR: profile + diffuser (m)",
+          "qty": 1.55,
+          "unit_lo": 200,
+          "unit_hi": 550,
+          "delta_lo": 310,
+          "delta_hi": 852,
+          "basis": "profile"
+        },
+        {
+          "item": "CURT-CBR: labour strip/profile (m)",
+          "qty": 1.55,
+          "unit_lo": 60,
+          "unit_hi": 150,
+          "delta_lo": 93,
+          "delta_hi": 232,
+          "basis": "labour_m"
+        },
+        {
+          "item": "CURT-CBR: labour per point",
+          "qty": 1,
+          "unit_lo": 150,
+          "unit_hi": 350,
+          "delta_lo": 150,
+          "delta_hi": 350,
+          "basis": "labour_pt"
+        },
+        {
+          "item": "CURT-CBR: SELV cable share (wire_extra / 34 knob outputs)",
+          "qty": 1,
+          "unit_lo": 117.6470588235294,
+          "unit_hi": 264.70588235294116,
+          "delta_lo": 118,
+          "delta_hi": 265,
+          "basis": "wire_extra pro rata, ASSUMED"
+        },
+        {
+          "item": "PWM amplifier/repeater (2 outputs)",
+          "qty": 2,
+          "unit_lo": 1200,
+          "unit_hi": 3000,
+          "delta_lo": 2400,
+          "delta_hi": 6000,
+          "basis": "amp"
+        }
+      ],
+      "bom_total_flat_before": [
+        302846,
+        744666
+      ],
+      "bom_total_flat_after": [
+        312513,
+        769083
+      ],
+      "not_priced": [
+        "supply size steps inside one BoM class (P01 200->240 W, P12 200->240 W, P07 100->150 W) carry zero allowance delta; the real maker price step is probably positive and is UNVERIFIED (get quotes)",
+        "false-ceiling / pocket carpentry, curtain tracks and the ceiling-void access hatch work are excluded (as in the base BoM)",
+        "a shared-output option (output_sharing_options) would save the amplifier allowance but is not priced"
+      ],
+      "status": "HISTORICAL_BEFORE_LIVING_SINGLE_SUPPLY_SELECTION_NOT_CURRENT_TOTAL",
+      "required_update": "Reprice the 480 W reference, removed P03 and revised distribution; no verified quote is available."
+    }
+  },
+  "selected_S1_totals": {
+    "knobs": 21,
+    "knob_outputs": 38,
+    "amplifiers": 3,
+    "psus": 12,
+    "psu_nameplate_total_W": 1980,
+    "psu_over_usable": [],
+    "vd_worst_pct": null,
+    "vd_status": {
+      "OK": 30,
+      "MARGINAL": 2,
+      "HOLD": 5
+    },
+    "fittings_including_selected_strips": 108,
+    "circuits_including_selected_strips": 51,
+    "base_photometric_fittings": 104,
+    "additional_selected_strips": 4,
+    "additional_circuits": 4,
+    "selected_strip_length_m": 8.88,
+    "selected_strip_load_W": 71.04,
+    "photometry_credit_for_selected_strips": false,
+    "worst_known_dV_pct": 3.6,
+    "inrush_status": "HOLD; LT-4 and LT-5 previous screens invalid",
+    "capacity_status": "project allowance only; product, thermal and branch protection held"
+  },
+  "selected_S1_cost_allowance": {
+    "per_flat_subtotal_inr": [
+      8631,
+      21801
+    ],
+    "per_flat_with_contingency_inr": [
+      9667,
+      24417
+    ],
+    "four_flats_with_contingency_inr": [
+      38668,
+      97668
+    ],
+    "contingency_pct": 12,
+    "lines": [
+      {
+        "item": "CURT-LIV: strip (m, with cut allowance)",
+        "qty": 2.6,
+        "unit_lo": 300,
+        "unit_hi": 750,
+        "delta_lo": 780,
+        "delta_hi": 1950,
+        "basis": "strip_1c"
+      },
+      {
+        "item": "CURT-LIV: profile + diffuser (m)",
+        "qty": 2.45,
+        "unit_lo": 200,
+        "unit_hi": 550,
+        "delta_lo": 490,
+        "delta_hi": 1348,
+        "basis": "profile"
+      },
+      {
+        "item": "CURT-LIV: labour strip/profile (m)",
+        "qty": 2.45,
+        "unit_lo": 60,
+        "unit_hi": 150,
+        "delta_lo": 147,
+        "delta_hi": 368,
+        "basis": "labour_m"
+      },
+      {
+        "item": "CURT-LIV: labour per point",
+        "qty": 1,
+        "unit_lo": 150,
+        "unit_hi": 350,
+        "delta_lo": 150,
+        "delta_hi": 350,
+        "basis": "labour_pt"
+      },
+      {
+        "item": "CURT-LIV: SELV cable share (wire_extra / 34 knob outputs)",
+        "qty": 1,
+        "unit_lo": 117.6470588235294,
+        "unit_hi": 264.70588235294116,
+        "delta_lo": 118,
+        "delta_hi": 265,
+        "basis": "wire_extra pro rata, ASSUMED"
+      },
+      {
+        "item": "CURT-DIN: strip (m, with cut allowance)",
+        "qty": 2.6,
+        "unit_lo": 300,
+        "unit_hi": 750,
+        "delta_lo": 780,
+        "delta_hi": 1950,
+        "basis": "strip_1c"
+      },
+      {
+        "item": "CURT-DIN: profile + diffuser (m)",
+        "qty": 2.45,
+        "unit_lo": 200,
+        "unit_hi": 550,
+        "delta_lo": 490,
+        "delta_hi": 1348,
+        "basis": "profile"
+      },
+      {
+        "item": "CURT-DIN: labour strip/profile (m)",
+        "qty": 2.45,
+        "unit_lo": 60,
+        "unit_hi": 150,
+        "delta_lo": 147,
+        "delta_hi": 368,
+        "basis": "labour_m"
+      },
+      {
+        "item": "CURT-DIN: labour per point",
+        "qty": 1,
+        "unit_lo": 150,
+        "unit_hi": 350,
+        "delta_lo": 150,
+        "delta_hi": 350,
+        "basis": "labour_pt"
+      },
+      {
+        "item": "CURT-DIN: SELV cable share (wire_extra / 34 knob outputs)",
+        "qty": 1,
+        "unit_lo": 117.6470588235294,
+        "unit_hi": 264.70588235294116,
+        "delta_lo": 118,
+        "delta_hi": 265,
+        "basis": "wire_extra pro rata, ASSUMED"
+      },
+      {
+        "item": "CURT-MBR-S: strip (m, with cut allowance)",
+        "qty": 2.6,
+        "unit_lo": 300,
+        "unit_hi": 750,
+        "delta_lo": 780,
+        "delta_hi": 1950,
+        "basis": "strip_1c"
+      },
+      {
+        "item": "CURT-MBR-S: profile + diffuser (m)",
+        "qty": 2.43,
+        "unit_lo": 200,
+        "unit_hi": 550,
+        "delta_lo": 486,
+        "delta_hi": 1336,
+        "basis": "profile"
+      },
+      {
+        "item": "CURT-MBR-S: labour strip/profile (m)",
+        "qty": 2.43,
+        "unit_lo": 60,
+        "unit_hi": 150,
+        "delta_lo": 146,
+        "delta_hi": 364,
+        "basis": "labour_m"
+      },
+      {
+        "item": "CURT-MBR-S: labour per point",
+        "qty": 1,
+        "unit_lo": 150,
+        "unit_hi": 350,
+        "delta_lo": 150,
+        "delta_hi": 350,
+        "basis": "labour_pt"
+      },
+      {
+        "item": "CURT-MBR-S: SELV cable share (wire_extra / 34 knob outputs)",
+        "qty": 1,
+        "unit_lo": 117.6470588235294,
+        "unit_hi": 264.70588235294116,
+        "delta_lo": 118,
+        "delta_hi": 265,
+        "basis": "wire_extra pro rata, ASSUMED"
+      },
+      {
+        "item": "CURT-CBR: strip (m, with cut allowance)",
+        "qty": 1.7,
+        "unit_lo": 300,
+        "unit_hi": 750,
+        "delta_lo": 510,
+        "delta_hi": 1275,
+        "basis": "strip_1c"
+      },
+      {
+        "item": "CURT-CBR: profile + diffuser (m)",
+        "qty": 1.55,
+        "unit_lo": 200,
+        "unit_hi": 550,
+        "delta_lo": 310,
+        "delta_hi": 852,
+        "basis": "profile"
+      },
+      {
+        "item": "CURT-CBR: labour strip/profile (m)",
+        "qty": 1.55,
+        "unit_lo": 60,
+        "unit_hi": 150,
+        "delta_lo": 93,
+        "delta_hi": 232,
+        "basis": "labour_m"
+      },
+      {
+        "item": "CURT-CBR: labour per point",
+        "qty": 1,
+        "unit_lo": 150,
+        "unit_hi": 350,
+        "delta_lo": 150,
+        "delta_hi": 350,
+        "basis": "labour_pt"
+      },
+      {
+        "item": "CURT-CBR: SELV cable share (wire_extra / 34 knob outputs)",
+        "qty": 1,
+        "unit_lo": 117.6470588235294,
+        "unit_hi": 264.70588235294116,
+        "delta_lo": 118,
+        "delta_hi": 265,
+        "basis": "wire_extra pro rata, ASSUMED"
+      },
+      {
+        "item": "PWM amplifier/repeater (2 outputs)",
+        "qty": 2,
+        "unit_lo": 1200,
+        "unit_hi": 3000,
+        "delta_lo": 2400,
+        "delta_hi": 6000,
+        "basis": "amp"
+      }
+    ],
+    "bom_total_flat_before": [
+      302846,
+      744666
+    ],
+    "bom_total_flat_after": [
+      312513,
+      769083
+    ],
+    "not_priced": [
+      "supply size steps inside one BoM class (P01 200->240 W, P12 200->240 W, P07 100->150 W) carry zero allowance delta; the real maker price step is probably positive and is UNVERIFIED (get quotes)",
+      "false-ceiling / pocket carpentry, curtain tracks and the ceiling-void access hatch work are excluded (as in the base BoM)",
+      "a shared-output option (output_sharing_options) would save the amplifier allowance but is not priced"
+    ],
+    "status": "HISTORICAL_BEFORE_LIVING_SINGLE_SUPPLY_SELECTION_NOT_CURRENT_TOTAL",
+    "required_update": "Reprice the 480 W reference, removed P03 and revised distribution; no verified quote is available."
+  },
+  "construction_release": false,
+  "product_approval": false,
+  "exact_chain_proven": false
+}

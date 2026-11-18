@@ -1,0 +1,55 @@
+room,variant,interpretation,plane_m,task_points,HIGH_avg_lx,HIGH_min_lx,HIGH_U0,LOW_avg_lx,LOW_min_lx,LOW_U0,HIGH_change_pct,LOW_change_pct
+UTL,base,baseline,0.9,132,211.1417,172.201,0.81557,,,,0.0,
+UTL,rho_low,"hypothetical generic-optics sensitivity, not a design change",0.9,132,167.2657,133.739,0.79956,,,,-20.78,
+UTL,rho_high,"hypothetical generic-optics sensitivity, not a design change",0.9,132,270.1797,228.794,0.84682,,,,27.961,
+UTL,beam_minus10,"hypothetical generic-optics sensitivity, not a design change",0.9,132,224.4675,184.185,0.82054,,,,6.311,
+UTL,beam_plus10,"hypothetical generic-optics sensitivity, not a design change",0.9,132,200.2631,165.931,0.82857,,,,-5.152,
+UTL,ceil_minus0.1,"hypothetical generic-optics sensitivity, not a design change",0.9,132,223.2197,183.24,0.8209,,,,5.72,
+UTL,ceil_plus0.1,"hypothetical generic-optics sensitivity, not a design change",0.9,132,200.0696,164.777,0.8236,,,,-5.244,
+UTL,pocket_narrow,"identical-scene repeat control, not physical pocket sensitivity",0.9,132,211.2812,174.563,0.82621,,,,0.066,
+UTL,pocket_wide,"identical-scene repeat control, not physical pocket sensitivity",0.9,132,211.2873,174.555,0.82615,,,,0.069,
+DRS,base,baseline,0.75,12,197.8725,190.153,0.96099,,,,0.0,
+DRS,rho_low,"hypothetical generic-optics sensitivity, not a design change",0.75,12,168.4022,160.767,0.95466,,,,-14.894,
+DRS,rho_high,"hypothetical generic-optics sensitivity, not a design change",0.75,12,239.1267,230.21,0.96271,,,,20.849,
+DRS,beam_minus10,"hypothetical generic-optics sensitivity, not a design change",0.75,12,239.2193,228.124,0.95362,,,,20.896,
+DRS,beam_plus10,"hypothetical generic-optics sensitivity, not a design change",0.75,12,169.855,163.744,0.96402,,,,-14.159,
+DRS,ceil_minus0.1,"hypothetical generic-optics sensitivity, not a design change",0.75,12,210.5503,201.608,0.95753,,,,6.407,
+DRS,ceil_plus0.1,"hypothetical generic-optics sensitivity, not a design change",0.75,12,185.9508,179.729,0.96654,,,,-6.025,
+DRS,pocket_narrow,"identical-scene repeat control, not physical pocket sensitivity",0.75,12,197.6887,190.175,0.96199,,,,-0.093,
+DRS,pocket_wide,"identical-scene repeat control, not physical pocket sensitivity",0.75,12,197.7812,190.068,0.961,,,,-0.046,
+LOB,base,baseline,0.75,8,264.1681,255.71,0.96798,,,,0.0,
+LOB,rho_low,"hypothetical generic-optics sensitivity, not a design change",0.75,8,228.1119,219.867,0.96386,,,,-13.649,
+LOB,rho_high,"hypothetical generic-optics sensitivity, not a design change",0.75,8,313.0874,303.845,0.97048,,,,18.518,
+LOB,beam_minus10,"hypothetical generic-optics sensitivity, not a design change",0.75,8,323.4345,311.283,0.96243,,,,22.435,
+LOB,beam_plus10,"hypothetical generic-optics sensitivity, not a design change",0.75,8,224.3096,217.735,0.97069,,,,-15.088,
+LOB,ceil_minus0.1,"hypothetical generic-optics sensitivity, not a design change",0.75,8,284.3634,274.467,0.9652,,,,7.645,
+LOB,ceil_plus0.1,"hypothetical generic-optics sensitivity, not a design change",0.75,8,246.0298,238.938,0.97118,,,,-6.866,
+LOB,pocket_narrow,"identical-scene repeat control, not physical pocket sensitivity",0.75,8,264.0876,254.714,0.96451,,,,-0.03,
+LOB,pocket_wide,"identical-scene repeat control, not physical pocket sensitivity",0.75,8,264.0929,255.327,0.96681,,,,-0.028,
+TL1,base,baseline,0.0,168,257.3172,166.974,0.6489,186.8685,150.362,0.80464,0.0,0.0
+TL1,rho_low,"hypothetical generic-optics sensitivity, not a design change",0.0,168,225.1064,139.156,0.61818,140.5221,108.492,0.77206,-12.518,-24.802
+TL1,rho_high,"hypothetical generic-optics sensitivity, not a design change",0.0,168,304.9939,209.596,0.68721,253.8711,204.191,0.80431,18.528,35.855
+TL1,beam_minus10,"hypothetical generic-optics sensitivity, not a design change",0.0,168,305.6027,177.493,0.5808,186.2962,152.576,0.819,18.765,-0.306
+TL1,beam_plus10,"hypothetical generic-optics sensitivity, not a design change",0.0,168,223.3192,155.589,0.69671,186.3448,153.186,0.82206,-13.212,-0.28
+TL1,ceil_minus0.1,"hypothetical generic-optics sensitivity, not a design change",0.0,168,270.1941,170.051,0.62937,193.0927,150.908,0.78153,5.004,3.331
+TL1,ceil_plus0.1,"hypothetical generic-optics sensitivity, not a design change",0.0,168,245.3274,163.54,0.66662,179.7115,144.049,0.80156,-4.66,-3.83
+TL1,pocket_narrow,"identical-scene repeat control, not physical pocket sensitivity",0.0,168,257.3692,167.726,0.65169,186.6043,150.775,0.80799,0.02,-0.141
+TL1,pocket_wide,"identical-scene repeat control, not physical pocket sensitivity",0.0,168,257.359,166.83,0.64824,186.2136,144.43,0.77561,0.016,-0.35
+TL2,base,baseline,0.0,168,257.4129,167.346,0.65011,185.7606,147.023,0.79147,0.0,0.0
+TL2,rho_low,"hypothetical generic-optics sensitivity, not a design change",0.0,168,225.0996,139.28,0.61875,140.5828,108.623,0.77266,-12.553,-24.32
+TL2,rho_high,"hypothetical generic-optics sensitivity, not a design change",0.0,168,305.0261,211.303,0.69274,253.6571,213.093,0.84008,18.497,36.551
+TL2,beam_minus10,"hypothetical generic-optics sensitivity, not a design change",0.0,168,305.6067,177.175,0.57975,185.5794,151.017,0.81376,18.722,-0.098
+TL2,beam_plus10,"hypothetical generic-optics sensitivity, not a design change",0.0,168,223.3149,156.052,0.6988,186.2735,151.084,0.81109,-13.246,0.276
+TL2,ceil_minus0.1,"hypothetical generic-optics sensitivity, not a design change",0.0,168,270.2056,170.146,0.62969,192.5051,150.725,0.78297,4.97,3.631
+TL2,ceil_plus0.1,"hypothetical generic-optics sensitivity, not a design change",0.0,168,245.2473,163.459,0.66651,179.4614,145.645,0.81157,-4.726,-3.391
+TL2,pocket_narrow,"identical-scene repeat control, not physical pocket sensitivity",0.0,168,257.3275,167.213,0.64981,186.5553,145.782,0.78144,-0.033,0.428
+TL2,pocket_wide,"identical-scene repeat control, not physical pocket sensitivity",0.0,168,257.3494,167.26,0.64993,186.909,148.751,0.79585,-0.025,0.618
+BAL,base,baseline,0.0,522,75.3049,49.027,0.65105,54.7407,33.879,0.6189,0.0,0.0
+BAL,rho_low,"hypothetical generic-optics sensitivity, not a design change",0.0,522,66.601,40.413,0.60679,32.5976,18.133,0.55627,-11.558,-40.451
+BAL,rho_high,"hypothetical generic-optics sensitivity, not a design change",0.0,522,88.5066,61.585,0.69582,84.0188,59.986,0.71396,17.531,53.485
+BAL,beam_minus10,"hypothetical generic-optics sensitivity, not a design change",0.0,522,87.1607,49.823,0.57162,49.8815,34.818,0.69801,15.744,-8.877
+BAL,beam_plus10,"hypothetical generic-optics sensitivity, not a design change",0.0,522,66.4681,46.767,0.7036,57.6906,38.114,0.66066,-11.735,5.389
+BAL,ceil_minus0.1,"hypothetical generic-optics sensitivity, not a design change",0.0,522,78.0835,49.53,0.63432,56.245,36.746,0.65332,3.69,2.748
+BAL,ceil_plus0.1,"hypothetical generic-optics sensitivity, not a design change",0.0,522,72.6414,47.69,0.65651,53.812,34.354,0.63841,-3.537,-1.697
+BAL,pocket_narrow,"identical-scene repeat control, not physical pocket sensitivity",0.0,522,75.3027,48.616,0.64561,55.1455,30.263,0.54878,-0.003,0.739
+BAL,pocket_wide,"identical-scene repeat control, not physical pocket sensitivity",0.0,522,75.3198,48.514,0.64411,54.9013,34.676,0.63161,0.02,0.293

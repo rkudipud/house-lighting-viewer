@@ -1,0 +1,5814 @@
+{
+  "schema": "electrical-handoff-ledger/1",
+  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "decision_receipt_sha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
+  "latest_master_receipt_sha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
+  "one_supply_option_sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+  "historical_photometry": {
+    "source_fragment_sha256": "31b65875cb603a43d107c91a4a54bb8afffa3134cc1134dd1cf74dc66f42be1b",
+    "verification_sha256": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9",
+    "historical_passes": 82,
+    "rerun_on_current_master": false
+  },
+  "totals_per_flat": {
+    "base_fixtures": 104,
+    "curtain_fixtures": 4,
+    "fixtures_including_curtains": 108,
+    "base_circuits": 47,
+    "curtain_circuits": 4,
+    "circuits_including_curtains": 51,
+    "knobs": 21,
+    "mains_dimmer_groups": 10,
+    "modeled_outputs": 38,
+    "modeled_repeaters": 3,
+    "supplies_24V": 12,
+    "supplies_24V_nameplate_W": 1980,
+    "track_driver_48V": 1,
+    "curtain_length_m": 8.88,
+    "curtain_W": 71.04,
+    "curtain_photometry_credit": false,
+    "summed_fixture_allowance_W_including_curtains": 1245.01
+  },
+  "release_flags": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false
+  },
+  "circuits": [
+    {
+      "circuit": "C01",
+      "room": "LIV",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "LIV-H1",
+        "LIV-H2",
+        "LIV-H3",
+        "LIV-H4",
+        "LIV-H5"
+      ],
+      "n_fixtures": 5,
+      "wall_control": "D-C01",
+      "board": "SB-01",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 40,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "OPT-1 regroup: window half of the living room (window line LIV-H1..H4 + LIV-H5); 40 W / 5 lamps"
+    },
+    {
+      "circuit": "C02",
+      "room": "LIV",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "LIV-H6",
+        "LIV-H7",
+        "LIV-H8",
+        "LIV-H9",
+        "LIV-H10"
+      ],
+      "n_fixtures": 5,
+      "wall_control": "D-C02",
+      "board": "SB-01",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 40,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "OPT-1 regroup: TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10); 40 W / 5 lamps; DL8 and DL8A heads on one dimmer need the same driver family"
+    },
+    {
+      "circuit": "C03",
+      "room": "LIV",
+      "lane": "COVE",
+      "fixture_ids": [
+        "LIV-L1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-LIV-LOW",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P01"
+      ],
+      "model_W": 92.24,
+      "model_outputs": 2,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "2 sections on 2 knob outputs (1.92 A each, 3.84 A total) from ONE PSU P01"
+    },
+    {
+      "circuit": "C04",
+      "room": "LIV",
+      "lane": "MOOD",
+      "fixture_ids": [
+        "LIV-L2"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-LIV-LOW",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P01"
+      ],
+      "model_W": 10.08,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "TV bias light"
+    },
+    {
+      "circuit": "C05",
+      "room": "DIN; LIV",
+      "lane": "LINE",
+      "fixture_ids": [
+        "LIV-X1",
+        "LIV-X2",
+        "DIN-X1"
+      ],
+      "n_fixtures": 3,
+      "wall_control": "K-LIV-LOW",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P01"
+      ],
+      "model_W": 59.6,
+      "model_outputs": 2,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "hall linear; load split over 2 knob outputs"
+    },
+    {
+      "circuit": "C06A",
+      "room": "LIV",
+      "lane": "ACCENT",
+      "fixture_ids": [
+        "LIV-P1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-LIV-POOJA-STRIP",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P04"
+      ],
+      "model_W": 21.72,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "pooja niche strip - own knob (user decision)"
+    },
+    {
+      "circuit": "C06B",
+      "room": "LIV",
+      "lane": "ACCENT",
+      "fixture_ids": [
+        "LIV-P2"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-LIV-POOJA-SPOT",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P04"
+      ],
+      "model_W": 6,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "pooja pin-spot - own knob"
+    },
+    {
+      "circuit": "C07",
+      "room": "BAL",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "BAL-H1",
+        "BAL-H2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-BAL-HIGH",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P05"
+      ],
+      "model_W": 12,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "balcony cylinders"
+    },
+    {
+      "circuit": "C08",
+      "room": "BAL",
+      "lane": "MOOD",
+      "fixture_ids": [
+        "BAL-L1",
+        "BAL-L2",
+        "BAL-L3"
+      ],
+      "n_fixtures": 3,
+      "wall_control": "K-BAL-LOW",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P05"
+      ],
+      "model_W": 26.65,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "balcony plinth + up-down"
+    },
+    {
+      "circuit": "C09",
+      "room": "DIN",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "DIN-H1",
+        "DIN-H2",
+        "DIN-H3"
+      ],
+      "n_fixtures": 3,
+      "wall_control": "D-C09",
+      "board": "SB-02",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 30,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C10",
+      "room": "DIN",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "DIN-H6"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-DIN-PASSAGE",
+      "board": "SB-02",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P06"
+      ],
+      "model_W": 8,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "passage; PSU mains 2-way SB-02/SB-07 (concept), knob level at SB-02"
+    },
+    {
+      "circuit": "C11",
+      "room": "DIN",
+      "lane": "MOOD",
+      "fixture_ids": [
+        "DIN-L1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "D-C11",
+      "board": "SB-02",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 12,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "pendant; 12 W is below many dimmers' minimum load - pick a dimmer listed for it"
+    },
+    {
+      "circuit": "C12",
+      "room": "DIN",
+      "lane": "COVE",
+      "fixture_ids": [
+        "DIN-L2"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-DIN-LOW",
+      "board": "SB-02",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P07"
+      ],
+      "model_W": 49.68,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C13",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "fixture_ids": [
+        "FW-T1",
+        "FW-T2",
+        "FW-T3",
+        "FW-T4"
+      ],
+      "n_fixtures": 4,
+      "wall_control": "D-C13",
+      "board": "SB-02",
+      "control_class": "TRK",
+      "supply_id": [],
+      "model_W": 26,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "48 V track driver + dimmer listed by the track maker"
+    },
+    {
+      "circuit": "C14",
+      "room": "KIT",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "KIT-H1",
+        "KIT-H2",
+        "KIT-H3",
+        "KIT-H4"
+      ],
+      "n_fixtures": 4,
+      "wall_control": "D-C14",
+      "board": "SB-03",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 40,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "counter ring"
+    },
+    {
+      "circuit": "C15",
+      "room": "KIT",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "KIT-H5",
+        "KIT-H6",
+        "KIT-H7",
+        "KIT-H8"
+      ],
+      "n_fixtures": 4,
+      "wall_control": "D-C15",
+      "board": "SB-03",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 31,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "general"
+    },
+    {
+      "circuit": "C16",
+      "room": "KIT",
+      "lane": "TASK",
+      "fixture_ids": [
+        "KIT-T1",
+        "KIT-T2",
+        "KIT-T3",
+        "KIT-T4"
+      ],
+      "n_fixtures": 4,
+      "wall_control": "K-KIT-TASK",
+      "board": "SB-03",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P10"
+      ],
+      "model_W": 31.8,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "downward under-cabinet task + sink-end ceiling task linear (KIT-T4), one knob"
+    },
+    {
+      "circuit": "C17",
+      "room": "KIT",
+      "lane": "COVE",
+      "fixture_ids": [
+        "KIT-L1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-KIT-LOW",
+      "board": "SB-03",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P08"
+      ],
+      "model_W": 70.56,
+      "model_outputs": 2,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "2 sections on 2 knob outputs (1.47 A each, 2.94 A total) from ONE PSU P08"
+    },
+    {
+      "circuit": "C18",
+      "room": "UTL",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "UTL-H1",
+        "UTL-H2",
+        "UTL-H3"
+      ],
+      "n_fixtures": 3,
+      "wall_control": "D-C18",
+      "board": "SB-04",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 36,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "dimmable IP65 bulkheads (availability to confirm)"
+    },
+    {
+      "circuit": "C19",
+      "room": "UTL",
+      "lane": "TASK",
+      "fixture_ids": [
+        "UTL-T1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-UTL-TASK",
+      "board": "SB-04",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P11"
+      ],
+      "model_W": 11.0,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "IP67 PSU, knob indoors at SB-04"
+    },
+    {
+      "circuit": "C20",
+      "room": "MBR",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "MBR-H1",
+        "MBR-H2",
+        "MBR-H3",
+        "MBR-H4",
+        "MBR-H5",
+        "MBR-H6",
+        "MBR-H7",
+        "MBR-H8"
+      ],
+      "n_fixtures": 8,
+      "wall_control": "D-C20",
+      "board": "SB-05",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 48,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "dimmer at door; on/off 2-way door + intermediate SB-05L + 2-way SB-05R (concept)"
+    },
+    {
+      "circuit": "C21",
+      "room": "MBR",
+      "lane": "COVE",
+      "fixture_ids": [
+        "MBR-L1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-MBR-LOW",
+      "board": "SB-05",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P12"
+      ],
+      "model_W": 52.24,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C22",
+      "room": "MBR",
+      "lane": "LINE",
+      "fixture_ids": [
+        "MBR-X1",
+        "MBR-X2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-MBR-LOW",
+      "board": "SB-05",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P12"
+      ],
+      "model_W": 30.88,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C23",
+      "room": "MBR",
+      "lane": "MOOD",
+      "fixture_ids": [
+        "MBR-L2"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-MBR-LOW",
+      "board": "SB-05",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P12"
+      ],
+      "model_W": 7.68,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "headboard"
+    },
+    {
+      "circuit": "C24",
+      "room": "MBR",
+      "lane": "NIGHT",
+      "fixture_ids": [
+        "MBR-N1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "INTEGRAL",
+      "board": "SB-05",
+      "control_class": "PIR",
+      "supply_id": [],
+      "model_W": 1,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "unswitched-live PIR, user brightness adjust on fitting, ON/AUTO/OFF"
+    },
+    {
+      "circuit": "C25",
+      "room": "MBR",
+      "lane": "READ",
+      "fixture_ids": [
+        "MBR-R1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "INTEGRAL",
+      "board": "SB-05L",
+      "control_class": "INT",
+      "supply_id": [],
+      "model_W": 3,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "integral dimmer on fitting"
+    },
+    {
+      "circuit": "C26",
+      "room": "MBR",
+      "lane": "READ",
+      "fixture_ids": [
+        "MBR-R2"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "INTEGRAL",
+      "board": "SB-05R",
+      "control_class": "INT",
+      "supply_id": [],
+      "model_W": 3,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "integral dimmer on fitting"
+    },
+    {
+      "circuit": "C27",
+      "room": "DRS",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "DRS-H1",
+        "DRS-H2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-DRS-HIGH",
+      "board": "SB-06",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P14"
+      ],
+      "model_W": 14,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C28",
+      "room": "TL1",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "TL1-G1",
+        "TL1-G2",
+        "TL1-G3"
+      ],
+      "n_fixtures": 3,
+      "wall_control": "K-TL1-HIGH",
+      "board": "SB-06B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P14"
+      ],
+      "model_W": 27,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "bath main: shower pair + WC (sealed diffused); knob outside bath on the latch (max-z) side of the door - site check (hinge side is a design interpretation)"
+    },
+    {
+      "circuit": "C29A",
+      "room": "TL1",
+      "lane": "MIRROR",
+      "fixture_ids": [
+        "TL1-M1",
+        "TL1-M2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-TL1-HIGH",
+      "board": "SB-06B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P14"
+      ],
+      "model_W": 16,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "vanity spot pair, on the HIGH knob with the ceiling spots (grooming: HIGH knob level per calculations.baths.<TL>.grooming_setting with the face light at 100 %)"
+    },
+    {
+      "circuit": "C29B",
+      "room": "TL1",
+      "lane": "FACE",
+      "fixture_ids": [
+        "TL1-F1",
+        "TL1-F2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-TL1-FACE",
+      "board": "SB-06B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P14"
+      ],
+      "model_W": 10,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "diffused face light pair (HD-14 base; HD-17 independent mirror-light wall control); own knob so it can run at 100 % while the ceiling vanity pair is dimmed"
+    },
+    {
+      "circuit": "C30A",
+      "room": "TL1",
+      "lane": "PERIM",
+      "fixture_ids": [
+        "TL1-L1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-TL1-LOW",
+      "board": "SB-06B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P14"
+      ],
+      "model_W": 31.87,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "bath perimeter slot (3 walls)"
+    },
+    {
+      "circuit": "C30B",
+      "room": "TL1",
+      "lane": "MOOD",
+      "fixture_ids": [
+        "TL1-L2",
+        "TL1-L3"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-TL1-LOW",
+      "board": "SB-06B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P14"
+      ],
+      "model_W": 7.25,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "shower-niche + under-vanity strips"
+    },
+    {
+      "circuit": "C31",
+      "room": "LOB",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "LOB-H1",
+        "LOB-H2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-LOB",
+      "board": "SB-07",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P15"
+      ],
+      "model_W": 14,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C32",
+      "room": "LOB",
+      "lane": "MIRROR",
+      "fixture_ids": [
+        "LOB-F1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-LOB",
+      "board": "SB-07",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P15"
+      ],
+      "model_W": 10,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "common-basin face bar"
+    },
+    {
+      "circuit": "C33",
+      "room": "LOB",
+      "lane": "NIGHT",
+      "fixture_ids": [
+        "LOB-N1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "INTEGRAL",
+      "board": "SB-07",
+      "control_class": "PIR",
+      "supply_id": [],
+      "model_W": 1,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "unswitched-live PIR, user brightness adjust on fitting, ON/AUTO/OFF"
+    },
+    {
+      "circuit": "C34",
+      "room": "TL2",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "TL2-G1",
+        "TL2-G2",
+        "TL2-G3"
+      ],
+      "n_fixtures": 3,
+      "wall_control": "K-TL2-HIGH",
+      "board": "SB-07B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P15"
+      ],
+      "model_W": 27,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "bath main: shower pair + WC (sealed diffused); knob outside bath on the latch (max-z) side of the door - site check (hinge side is a design interpretation)"
+    },
+    {
+      "circuit": "C35A",
+      "room": "TL2",
+      "lane": "MIRROR",
+      "fixture_ids": [
+        "TL2-M1",
+        "TL2-M2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-TL2-HIGH",
+      "board": "SB-07B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P15"
+      ],
+      "model_W": 16,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "vanity spot pair, on the HIGH knob with the ceiling spots (grooming: HIGH knob level per calculations.baths.<TL>.grooming_setting with the face light at 100 %)"
+    },
+    {
+      "circuit": "C35B",
+      "room": "TL2",
+      "lane": "FACE",
+      "fixture_ids": [
+        "TL2-F1",
+        "TL2-F2"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-TL2-FACE",
+      "board": "SB-07B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P15"
+      ],
+      "model_W": 10,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "diffused face light pair (HD-14 base; HD-17 independent mirror-light wall control); own knob so it can run at 100 % while the ceiling vanity pair is dimmed"
+    },
+    {
+      "circuit": "C36A",
+      "room": "TL2",
+      "lane": "PERIM",
+      "fixture_ids": [
+        "TL2-L1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-TL2-LOW",
+      "board": "SB-07B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P15"
+      ],
+      "model_W": 31.87,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "bath perimeter slot (3 walls)"
+    },
+    {
+      "circuit": "C36B",
+      "room": "TL2",
+      "lane": "MOOD",
+      "fixture_ids": [
+        "TL2-L2",
+        "TL2-L3"
+      ],
+      "n_fixtures": 2,
+      "wall_control": "K-TL2-LOW",
+      "board": "SB-07B",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P15"
+      ],
+      "model_W": 7.25,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "shower-niche + under-vanity strips"
+    },
+    {
+      "circuit": "C37",
+      "room": "CBR",
+      "lane": "HIGH",
+      "fixture_ids": [
+        "CBR-H1",
+        "CBR-H2",
+        "CBR-H3",
+        "CBR-H4",
+        "CBR-H5",
+        "CBR-H6"
+      ],
+      "n_fixtures": 6,
+      "wall_control": "D-C37",
+      "board": "SB-08",
+      "control_class": "TE",
+      "supply_id": [],
+      "model_W": 36,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "dimmer at door; on/off 2-way door + intermediate at the two bed-head plates (concept)"
+    },
+    {
+      "circuit": "C38",
+      "room": "CBR",
+      "lane": "STUDY",
+      "fixture_ids": [
+        "CBR-S1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-CBR-STUDY",
+      "board": "SB-08",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P16"
+      ],
+      "model_W": 15.96,
+      "model_outputs": 1,
+      "CCT": [
+        "4000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "desk task strip"
+    },
+    {
+      "circuit": "C39",
+      "room": "CBR",
+      "lane": "COVE",
+      "fixture_ids": [
+        "CBR-L1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-CBR-LOW",
+      "board": "SB-08",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P16"
+      ],
+      "model_W": 49.76,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C40",
+      "room": "CBR",
+      "lane": "LINE",
+      "fixture_ids": [
+        "CBR-X1",
+        "CBR-X2",
+        "CBR-X3",
+        "CBR-X4"
+      ],
+      "n_fixtures": 4,
+      "wall_control": "K-CBR-LOW",
+      "board": "SB-08",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P16"
+      ],
+      "model_W": 42.88,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": ""
+    },
+    {
+      "circuit": "C41",
+      "room": "CBR",
+      "lane": "READ",
+      "fixture_ids": [
+        "CBR-R1"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "INTEGRAL",
+      "board": "SB-08RL",
+      "control_class": "INT",
+      "supply_id": [],
+      "model_W": 3,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "integral dimmer on fitting"
+    },
+    {
+      "circuit": "C41b",
+      "room": "CBR",
+      "lane": "READ",
+      "fixture_ids": [
+        "CBR-R2"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "INTEGRAL",
+      "board": "SB-08RR",
+      "control_class": "INT",
+      "supply_id": [],
+      "model_W": 3,
+      "model_outputs": 1,
+      "CCT": [
+        "3000K"
+      ],
+      "release_status": "PRODUCT / CHAIN HOLD",
+      "note": "integral dimmer on fitting"
+    },
+    {
+      "circuit": "X-CURT-LIV",
+      "room": "LIV",
+      "lane": "LOW / CURTAIN",
+      "fixture_ids": [
+        "CURT-LIV"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-LIV-LOW",
+      "board": "SB-01",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P01"
+      ],
+      "model_W": 19.6,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "UNMEASURED / PRODUCT / CHAIN HOLD",
+      "note": "Derived length; no added knob or photometry credit."
+    },
+    {
+      "circuit": "X-CURT-DIN",
+      "room": "DIN",
+      "lane": "LOW / CURTAIN",
+      "fixture_ids": [
+        "CURT-DIN"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-DIN-LOW",
+      "board": "SB-02",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P07"
+      ],
+      "model_W": 19.6,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "UNMEASURED / PRODUCT / CHAIN HOLD",
+      "note": "Derived length; no added knob or photometry credit."
+    },
+    {
+      "circuit": "X-CURT-MBR-S",
+      "room": "MBR",
+      "lane": "LOW / CURTAIN",
+      "fixture_ids": [
+        "CURT-MBR-S"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-MBR-LOW",
+      "board": "SB-05",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P12"
+      ],
+      "model_W": 19.44,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "UNMEASURED / PRODUCT / CHAIN HOLD",
+      "note": "Derived length; no added knob or photometry credit."
+    },
+    {
+      "circuit": "X-CURT-CBR",
+      "room": "CBR",
+      "lane": "LOW / CURTAIN",
+      "fixture_ids": [
+        "CURT-CBR"
+      ],
+      "n_fixtures": 1,
+      "wall_control": "K-CBR-LOW",
+      "board": "SB-08",
+      "control_class": "KNOB1",
+      "supply_id": [
+        "P16"
+      ],
+      "model_W": 12.4,
+      "model_outputs": 1,
+      "CCT": [
+        "2700K"
+      ],
+      "release_status": "UNMEASURED / PRODUCT / CHAIN HOLD",
+      "note": "Derived length; no added knob or photometry credit."
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "LIV-H1",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C01",
+      "fixture_class": "DL8",
+      "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 3.85,
+      "z_ft": 27.3,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H2",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C01",
+      "fixture_class": "DL8",
+      "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 3.85,
+      "z_ft": 32.1,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H3",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C01",
+      "fixture_class": "DL8",
+      "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 3.85,
+      "z_ft": 37.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H4",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C01",
+      "fixture_class": "DL8",
+      "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 3.85,
+      "z_ft": 41.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H5",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C01",
+      "fixture_class": "DL8",
+      "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 7.7,
+      "z_ft": 41.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H6",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C02",
+      "fixture_class": "DL8",
+      "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 11.6,
+      "z_ft": 41.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H7",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C02",
+      "fixture_class": "DL8",
+      "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 11.6,
+      "z_ft": 36.3,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H8",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C02",
+      "fixture_class": "DL8A",
+      "description": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 50,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 14.6,
+      "z_ft": 27.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H9",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C02",
+      "fixture_class": "DL8A",
+      "description": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 50,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 14.6,
+      "z_ft": 30.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-H10",
+      "room": "LIV",
+      "lane": "HIGH",
+      "circuit": "C02",
+      "fixture_class": "DL8A",
+      "description": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 50,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 14.6,
+      "z_ft": 34.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-L1",
+      "room": "LIV",
+      "lane": "COVE",
+      "circuit": "C03",
+      "fixture_class": "COVE_FW",
+      "description": "24 V fixed-white single-channel COB strip, 2700 K warm white in every cove, 8 W/m ~720 lm/m (generic class assumption, not a catalogue datasheet; a 2700 K bin of a strip often gives somewhat lower lm/W than 3000-4000 K, UNVERIFIED without maker data), in cove profile",
+      "CCT": "2700K",
+      "model_W": 92.24,
+      "model_lm": 8301,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 11.53,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          13.3,
+          25.3
+        ],
+        [
+          13.3,
+          34.1
+        ],
+        [
+          13.266,
+          34.359
+        ],
+        [
+          13.166,
+          34.6
+        ],
+        [
+          13.007,
+          34.807
+        ],
+        [
+          12.8,
+          34.966
+        ],
+        [
+          12.559,
+          35.066
+        ],
+        [
+          12.3,
+          35.1
+        ],
+        [
+          11.05,
+          35.1
+        ],
+        [
+          10.856,
+          35.126
+        ],
+        [
+          10.675,
+          35.2
+        ],
+        [
+          10.52,
+          35.32
+        ],
+        [
+          10.4,
+          35.475
+        ],
+        [
+          10.326,
+          35.656
+        ],
+        [
+          10.3,
+          35.85
+        ],
+        [
+          10.3,
+          39.7
+        ],
+        [
+          10.266,
+          39.959
+        ],
+        [
+          10.166,
+          40.2
+        ],
+        [
+          10.007,
+          40.407
+        ],
+        [
+          9.8,
+          40.566
+        ],
+        [
+          9.559,
+          40.666
+        ],
+        [
+          9.3,
+          40.7
+        ],
+        [
+          5.65,
+          40.7
+        ],
+        [
+          5.391,
+          40.666
+        ],
+        [
+          5.15,
+          40.566
+        ],
+        [
+          4.943,
+          40.407
+        ],
+        [
+          4.784,
+          40.2
+        ],
+        [
+          4.684,
+          39.959
+        ],
+        [
+          4.65,
+          39.7
+        ],
+        [
+          4.65,
+          25.3
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-L2",
+      "room": "LIV",
+      "lane": "MOOD",
+      "circuit": "C04",
+      "fixture_class": "BACK",
+      "description": "24 V COB strip 6 W/m ~550 lm/m in diffused profile (TV / headboard / pooja niche)",
+      "CCT": "2700K",
+      "model_W": 10.08,
+      "model_lm": 922,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.68,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          16.15,
+          30.0
+        ],
+        [
+          16.15,
+          35.5
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-X1",
+      "room": "LIV",
+      "lane": "LINE",
+      "circuit": "C05",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 27.04,
+      "model_lm": 2030,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 3.38,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          9.5,
+          39.7
+        ],
+        [
+          5.6,
+          39.7
+        ],
+        [
+          5.6,
+          32.5
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-X2",
+      "room": "LIV",
+      "lane": "LINE",
+      "circuit": "C05",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 5.6,
+      "model_lm": 421,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 0.7,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          12.5,
+          27.6
+        ],
+        [
+          12.5,
+          25.3
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-P1",
+      "room": "LIV",
+      "lane": "ACCENT",
+      "circuit": "C06A",
+      "fixture_class": "BACK",
+      "description": "24 V COB strip 6 W/m ~550 lm/m in diffused profile (TV / headboard / pooja niche)",
+      "CCT": "2700K",
+      "model_W": 21.72,
+      "model_lm": 1991,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 95,
+      "R9_min_target": 80,
+      "supply_class": "24V",
+      "length_m": 3.62,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          2.15,
+          37.45
+        ],
+        [
+          2.15,
+          40.15
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LIV-P2",
+      "room": "LIV",
+      "lane": "ACCENT",
+      "circuit": "C06B",
+      "fixture_class": "PIN6V",
+      "description": "24 V deep-recessed micro-gimbal COB pin-spot 6 W ~480 lm 24 deg",
+      "CCT": "2700K",
+      "model_W": 6,
+      "model_lm": 480,
+      "model_beam_deg": 24,
+      "IP_target": "IP20",
+      "CRI_min_target": 95,
+      "R9_min_target": 80,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 4.0,
+      "z_ft": 38.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DIN-H1",
+      "room": "DIN",
+      "lane": "HIGH",
+      "circuit": "C09",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "3000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 3.85,
+      "z_ft": 22.5,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DIN-H2",
+      "room": "DIN",
+      "lane": "HIGH",
+      "circuit": "C09",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "3000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 6.9,
+      "z_ft": 17.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DIN-H3",
+      "room": "DIN",
+      "lane": "HIGH",
+      "circuit": "C09",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "3000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 10.7,
+      "z_ft": 17.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DIN-H6",
+      "room": "DIN",
+      "lane": "HIGH",
+      "circuit": "C10",
+      "fixture_class": "DL8V",
+      "description": "24 V recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 14.6,
+      "z_ft": 23.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DIN-L1",
+      "room": "DIN",
+      "lane": "MOOD",
+      "circuit": "C11",
+      "fixture_class": "PEND",
+      "description": "Dining pendant with dimmable warm LED ~12 W ~1000 lm",
+      "CCT": "2700K",
+      "model_W": 12,
+      "model_lm": 1000,
+      "model_beam_deg": 120,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 7.7,
+      "z_ft": 21.7,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DIN-L2",
+      "room": "DIN",
+      "lane": "COVE",
+      "circuit": "C12",
+      "fixture_class": "COVE_FW",
+      "description": "24 V fixed-white single-channel COB strip, 2700 K warm white in every cove, 8 W/m ~720 lm/m (generic class assumption, not a catalogue datasheet; a 2700 K bin of a strip often gives somewhat lower lm/W than 3000-4000 K, UNVERIFIED without maker data), in cove profile",
+      "CCT": "2700K",
+      "model_W": 49.68,
+      "model_lm": 4473,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 6.21,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          4.65,
+          25.3
+        ],
+        [
+          4.65,
+          20.0
+        ],
+        [
+          4.684,
+          19.741
+        ],
+        [
+          4.784,
+          19.5
+        ],
+        [
+          4.943,
+          19.293
+        ],
+        [
+          5.15,
+          19.134
+        ],
+        [
+          5.391,
+          19.034
+        ],
+        [
+          5.65,
+          19.0
+        ],
+        [
+          12.3,
+          19.0
+        ],
+        [
+          12.559,
+          19.034
+        ],
+        [
+          12.8,
+          19.134
+        ],
+        [
+          13.007,
+          19.293
+        ],
+        [
+          13.166,
+          19.5
+        ],
+        [
+          13.266,
+          19.741
+        ],
+        [
+          13.3,
+          20.0
+        ],
+        [
+          13.3,
+          25.3
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DIN-X1",
+      "room": "DIN",
+      "lane": "LINE",
+      "circuit": "C05",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 26.96,
+      "model_lm": 2021,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 3.37,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          12.5,
+          25.3
+        ],
+        [
+          12.5,
+          19.65
+        ],
+        [
+          7.1,
+          19.65
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "FW-T1",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "circuit": "C13",
+      "fixture_class": "TRK6",
+      "description": "48 V magnetic-track spot head 6 W ~480 lm 24 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 480,
+      "model_beam_deg": 24,
+      "IP_target": "IP20",
+      "CRI_min_target": 95,
+      "R9_min_target": 80,
+      "supply_class": "48VTRK",
+      "length_m": null,
+      "x_ft": 14.13,
+      "z_ft": 17.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "FW-T2",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "circuit": "C13",
+      "fixture_class": "TRK6",
+      "description": "48 V magnetic-track spot head 6 W ~480 lm 24 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 480,
+      "model_beam_deg": 24,
+      "IP_target": "IP20",
+      "CRI_min_target": 95,
+      "R9_min_target": 80,
+      "supply_class": "48VTRK",
+      "length_m": null,
+      "x_ft": 14.13,
+      "z_ft": 19.1,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "FW-T3",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "circuit": "C13",
+      "fixture_class": "TRK6",
+      "description": "48 V magnetic-track spot head 6 W ~480 lm 24 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 480,
+      "model_beam_deg": 24,
+      "IP_target": "IP20",
+      "CRI_min_target": 95,
+      "R9_min_target": 80,
+      "supply_class": "48VTRK",
+      "length_m": null,
+      "x_ft": 14.13,
+      "z_ft": 20.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "FW-T4",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "circuit": "C13",
+      "fixture_class": "TRKLIN",
+      "description": "48 V magnetic-track linear diffused module 8 W ~600 lm 110 deg",
+      "CCT": "3000K",
+      "model_W": 8,
+      "model_lm": 600,
+      "model_beam_deg": 110,
+      "IP_target": "IP20",
+      "CRI_min_target": 95,
+      "R9_min_target": 80,
+      "supply_class": "48VTRK",
+      "length_m": null,
+      "x_ft": 14.13,
+      "z_ft": 21.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H1",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C14",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "4000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 4.0,
+      "z_ft": 10.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H2",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C14",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "4000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 2.9,
+      "z_ft": 13.2,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H3",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C14",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "4000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 6.2,
+      "z_ft": 7.2,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H4",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C14",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "4000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 9.6,
+      "z_ft": 7.2,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H5",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C15",
+      "fixture_class": "DL7",
+      "description": "Recessed deep anti-glare COB downlight 7 W ~600 lm 60 deg",
+      "CCT": "4000K",
+      "model_W": 7,
+      "model_lm": 600,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 6.0,
+      "z_ft": 8.7,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H6",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C15",
+      "fixture_class": "DL7",
+      "description": "Recessed deep anti-glare COB downlight 7 W ~600 lm 60 deg",
+      "CCT": "4000K",
+      "model_W": 7,
+      "model_lm": 600,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 11.1,
+      "z_ft": 8.7,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H7",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C15",
+      "fixture_class": "DL10",
+      "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
+      "CCT": "4000K",
+      "model_W": 10,
+      "model_lm": 900,
+      "model_beam_deg": 70,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 3.1,
+      "z_ft": 14.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-H8",
+      "room": "KIT",
+      "lane": "HIGH",
+      "circuit": "C15",
+      "fixture_class": "DL7",
+      "description": "Recessed deep anti-glare COB downlight 7 W ~600 lm 60 deg",
+      "CCT": "4000K",
+      "model_W": 7,
+      "model_lm": 600,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 11.1,
+      "z_ft": 14.9,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-T1",
+      "room": "KIT",
+      "lane": "TASK",
+      "circuit": "C16",
+      "fixture_class": "TASK_LO",
+      "description": "24 V COB strip 6.5 W/m ~650 lm/m (same family, colour bin and 4000 K as TASK), diffused profile, mounted face-DOWN under wall cabinet (mid-depth); the model meets the worktop target for any 600-700 lm/m delivered",
+      "CCT": "4000K",
+      "model_W": 10.92,
+      "model_lm": 1090,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.68,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          2.85,
+          5.6
+        ],
+        [
+          2.85,
+          11.1
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-T2",
+      "room": "KIT",
+      "lane": "TASK",
+      "circuit": "C16",
+      "fixture_class": "TASK",
+      "description": "24 V COB strip 10 W/m ~1000 lm/m, diffused profile, mounted face-DOWN under wall cabinet (mid-depth)",
+      "CCT": "4000K",
+      "model_W": 6.4,
+      "model_lm": 640,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 0.64,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          2.6,
+          5.78
+        ],
+        [
+          4.7,
+          5.78
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-T3",
+      "room": "KIT",
+      "lane": "TASK",
+      "circuit": "C16",
+      "fixture_class": "TASK",
+      "description": "24 V COB strip 10 W/m ~1000 lm/m, diffused profile, mounted face-DOWN under wall cabinet (mid-depth)",
+      "CCT": "4000K",
+      "model_W": 5.2,
+      "model_lm": 518,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 0.52,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          8.9,
+          5.78
+        ],
+        [
+          10.6,
+          5.78
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-L1",
+      "room": "KIT",
+      "lane": "COVE",
+      "circuit": "C17",
+      "fixture_class": "COVE_FW",
+      "description": "24 V fixed-white single-channel COB strip, 2700 K warm white in every cove, 8 W/m ~720 lm/m (generic class assumption, not a catalogue datasheet; a 2700 K bin of a strip often gives somewhat lower lm/W than 3000-4000 K, UNVERIFIED without maker data), in cove profile",
+      "CCT": "2700K",
+      "model_W": 70.56,
+      "model_lm": 6348,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 8.82,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          5.0,
+          8.55
+        ],
+        [
+          5.029,
+          8.33
+        ],
+        [
+          5.114,
+          8.125
+        ],
+        [
+          5.249,
+          7.949
+        ],
+        [
+          5.425,
+          7.814
+        ],
+        [
+          5.63,
+          7.729
+        ],
+        [
+          5.85,
+          7.7
+        ],
+        [
+          11.35,
+          7.7
+        ],
+        [
+          11.57,
+          7.729
+        ],
+        [
+          11.775,
+          7.814
+        ],
+        [
+          11.951,
+          7.949
+        ],
+        [
+          12.086,
+          8.125
+        ],
+        [
+          12.171,
+          8.33
+        ],
+        [
+          12.2,
+          8.55
+        ],
+        [
+          12.2,
+          14.85
+        ],
+        [
+          12.171,
+          15.07
+        ],
+        [
+          12.086,
+          15.275
+        ],
+        [
+          11.951,
+          15.451
+        ],
+        [
+          11.775,
+          15.586
+        ],
+        [
+          11.57,
+          15.671
+        ],
+        [
+          11.35,
+          15.7
+        ],
+        [
+          5.85,
+          15.7
+        ],
+        [
+          5.63,
+          15.671
+        ],
+        [
+          5.425,
+          15.586
+        ],
+        [
+          5.249,
+          15.451
+        ],
+        [
+          5.114,
+          15.275
+        ],
+        [
+          5.029,
+          15.07
+        ],
+        [
+          5.0,
+          14.85
+        ],
+        [
+          5.0,
+          8.55
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "KIT-T4",
+      "room": "KIT",
+      "lane": "TASK",
+      "circuit": "C16",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "4000K",
+      "model_W": 9.28,
+      "model_lm": 695,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.16,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          3.9,
+          11.2
+        ],
+        [
+          3.9,
+          15.0
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "UTL-H1",
+      "room": "UTL",
+      "lane": "HIGH",
+      "circuit": "C18",
+      "fixture_class": "BULKD",
+      "description": "Dimmable IP65/IK08 polycarbonate bulkhead 12 W ~1100 lm",
+      "CCT": "4000K",
+      "model_W": 12,
+      "model_lm": 1100,
+      "model_beam_deg": 110,
+      "IP_target": "IP65",
+      "CRI_min_target": 80,
+      "R9_min_target": 0,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 4.6,
+      "z_ft": 2.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "UTL-H2",
+      "room": "UTL",
+      "lane": "HIGH",
+      "circuit": "C18",
+      "fixture_class": "BULKD",
+      "description": "Dimmable IP65/IK08 polycarbonate bulkhead 12 W ~1100 lm",
+      "CCT": "4000K",
+      "model_W": 12,
+      "model_lm": 1100,
+      "model_beam_deg": 110,
+      "IP_target": "IP65",
+      "CRI_min_target": 80,
+      "R9_min_target": 0,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 9.8,
+      "z_ft": 3.4,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "UTL-H3",
+      "room": "UTL",
+      "lane": "HIGH",
+      "circuit": "C18",
+      "fixture_class": "BULKD",
+      "description": "Dimmable IP65/IK08 polycarbonate bulkhead 12 W ~1100 lm",
+      "CCT": "4000K",
+      "model_W": 12,
+      "model_lm": 1100,
+      "model_beam_deg": 110,
+      "IP_target": "IP65",
+      "CRI_min_target": 80,
+      "R9_min_target": 0,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 13.6,
+      "z_ft": 3.4,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "UTL-T1",
+      "room": "UTL",
+      "lane": "TASK",
+      "circuit": "C19",
+      "fixture_class": "TASKW",
+      "description": "24 V IP65 opal strip in sealed profile under utility shelf lip 10 W/m ~900 lm/m",
+      "CCT": "4000K",
+      "model_W": 11.0,
+      "model_lm": 988,
+      "model_beam_deg": null,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.1,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          14.45,
+          1.0
+        ],
+        [
+          14.45,
+          4.6
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H1",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 18.15,
+      "z_ft": 5.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H2",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 22.05,
+      "z_ft": 5.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H3",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 25.95,
+      "z_ft": 5.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H4",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 18.15,
+      "z_ft": 8.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H5",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 25.95,
+      "z_ft": 8.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H6",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 18.15,
+      "z_ft": 12.2,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H7",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 22.05,
+      "z_ft": 12.2,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-H8",
+      "room": "MBR",
+      "lane": "HIGH",
+      "circuit": "C20",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 25.95,
+      "z_ft": 12.2,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-L1",
+      "room": "MBR",
+      "lane": "COVE",
+      "circuit": "C21",
+      "fixture_class": "COVE_FW",
+      "description": "24 V fixed-white single-channel COB strip, 2700 K warm white in every cove, 8 W/m ~720 lm/m (generic class assumption, not a catalogue datasheet; a 2700 K bin of a strip often gives somewhat lower lm/W than 3000-4000 K, UNVERIFIED without maker data), in cove profile",
+      "CCT": "2700K",
+      "model_W": 52.24,
+      "model_lm": 4705,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 6.53,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          19.13,
+          6.5
+        ],
+        [
+          19.15,
+          6.345
+        ],
+        [
+          19.21,
+          6.2
+        ],
+        [
+          19.306,
+          6.076
+        ],
+        [
+          19.43,
+          5.98
+        ],
+        [
+          19.575,
+          5.92
+        ],
+        [
+          19.73,
+          5.9
+        ],
+        [
+          24.37,
+          5.9
+        ],
+        [
+          24.525,
+          5.92
+        ],
+        [
+          24.67,
+          5.98
+        ],
+        [
+          24.794,
+          6.076
+        ],
+        [
+          24.89,
+          6.2
+        ],
+        [
+          24.95,
+          6.345
+        ],
+        [
+          24.97,
+          6.5
+        ],
+        [
+          24.97,
+          10.7
+        ],
+        [
+          24.95,
+          10.855
+        ],
+        [
+          24.89,
+          11.0
+        ],
+        [
+          24.794,
+          11.124
+        ],
+        [
+          24.67,
+          11.22
+        ],
+        [
+          24.525,
+          11.28
+        ],
+        [
+          24.37,
+          11.3
+        ],
+        [
+          19.73,
+          11.3
+        ],
+        [
+          19.575,
+          11.28
+        ],
+        [
+          19.43,
+          11.22
+        ],
+        [
+          19.306,
+          11.124
+        ],
+        [
+          19.21,
+          11.0
+        ],
+        [
+          19.15,
+          10.855
+        ],
+        [
+          19.13,
+          10.7
+        ],
+        [
+          19.13,
+          6.5
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-L2",
+      "room": "MBR",
+      "lane": "MOOD",
+      "circuit": "C23",
+      "fixture_class": "BACK",
+      "description": "24 V COB strip 6 W/m ~550 lm/m in diffused profile (TV / headboard / pooja niche)",
+      "CCT": "2700K",
+      "model_W": 7.68,
+      "model_lm": 704,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.28,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          29.1,
+          4.5932
+        ],
+        [
+          29.1,
+          8.7927
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-X1",
+      "room": "MBR",
+      "lane": "LINE",
+      "circuit": "C22",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 15.44,
+      "model_lm": 1156,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.93,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          22.05,
+          5.55
+        ],
+        [
+          25.32,
+          5.55
+        ],
+        [
+          25.32,
+          8.6
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-X2",
+      "room": "MBR",
+      "lane": "LINE",
+      "circuit": "C22",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 15.44,
+      "model_lm": 1156,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.93,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          18.78,
+          8.6
+        ],
+        [
+          18.78,
+          11.65
+        ],
+        [
+          22.05,
+          11.65
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-R1",
+      "room": "MBR",
+      "lane": "READ",
+      "circuit": "C25",
+      "fixture_class": "READ",
+      "description": "Wall reading spot 3 W ~200 lm 30 deg with integral dimmer",
+      "CCT": "3000K",
+      "model_W": 3,
+      "model_lm": 200,
+      "model_beam_deg": 30,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230INT",
+      "length_m": null,
+      "x_ft": 28.9219,
+      "z_ft": 3.997,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-R2",
+      "room": "MBR",
+      "lane": "READ",
+      "circuit": "C26",
+      "fixture_class": "READ",
+      "description": "Wall reading spot 3 W ~200 lm 30 deg with integral dimmer",
+      "CCT": "3000K",
+      "model_W": 3,
+      "model_lm": 200,
+      "model_beam_deg": 30,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230INT",
+      "length_m": null,
+      "x_ft": 28.9219,
+      "z_ft": 7.9341,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "MBR-N1",
+      "room": "MBR",
+      "lane": "NIGHT",
+      "circuit": "C24",
+      "fixture_class": "STEP",
+      "description": "dimmable PIR step / night light 1 W ~40 lm, user-accessible brightness adjustment + ON/AUTO/OFF override",
+      "CCT": "2700K",
+      "model_W": 1,
+      "model_lm": 40,
+      "model_beam_deg": 120,
+      "IP_target": "IP20",
+      "CRI_min_target": 80,
+      "R9_min_target": 0,
+      "supply_class": "230PIR",
+      "length_m": null,
+      "x_ft": 19.0,
+      "z_ft": 16.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DRS-H1",
+      "room": "DRS",
+      "lane": "HIGH",
+      "circuit": "C27",
+      "fixture_class": "DL7V",
+      "description": "24 V recessed deep anti-glare COB downlight 7 W ~600 lm 60 deg",
+      "CCT": "4000K",
+      "model_W": 7,
+      "model_lm": 600,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 19.2,
+      "z_ft": 17.8,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "DRS-H2",
+      "room": "DRS",
+      "lane": "HIGH",
+      "circuit": "C27",
+      "fixture_class": "DL7V",
+      "description": "24 V recessed deep anti-glare COB downlight 7 W ~600 lm 60 deg",
+      "CCT": "4000K",
+      "model_W": 7,
+      "model_lm": 600,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 19.2,
+      "z_ft": 20.9,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-M1",
+      "room": "TL1",
+      "lane": "MIRROR",
+      "circuit": "C29A",
+      "fixture_class": "BSPOT8V",
+      "description": "24 V deep-recessed anti-glare COB spot 8 W ~700 lm 40 deg, clear reflector, source hidden beyond 35 deg from nadir (shielding >= 55 deg, deep recess or honeycomb louvre), IP44 minimum (IP65 front preferred for steam); vanity pair pointing straight down",
+      "CCT": "4000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 40,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 21.0759,
+      "z_ft": 17.9684,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-M2",
+      "room": "TL1",
+      "lane": "MIRROR",
+      "circuit": "C29A",
+      "fixture_class": "BSPOT8V",
+      "description": "24 V deep-recessed anti-glare COB spot 8 W ~700 lm 40 deg, clear reflector, source hidden beyond 35 deg from nadir (shielding >= 55 deg, deep recess or honeycomb louvre), IP44 minimum (IP65 front preferred for steam); vanity pair pointing straight down",
+      "CCT": "4000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 40,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 22.2241,
+      "z_ft": 17.9684,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-G1",
+      "room": "TL1",
+      "lane": "HIGH",
+      "circuit": "C28",
+      "fixture_class": "BDIF9V",
+      "description": "24 V sealed wet-location downlight 9 W ~750 lm 60 deg, large frosted/opal diffuser lens, IP65 whole assembly, remote driver; same family/trim as the vanity spot (shower pair + WC)",
+      "CCT": "4000K",
+      "model_W": 9,
+      "model_lm": 750,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 27.5,
+      "z_ft": 18.1324,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-G2",
+      "room": "TL1",
+      "lane": "HIGH",
+      "circuit": "C28",
+      "fixture_class": "BDIF9V",
+      "description": "24 V sealed wet-location downlight 9 W ~750 lm 60 deg, large frosted/opal diffuser lens, IP65 whole assembly, remote driver; same family/trim as the vanity spot (shower pair + WC)",
+      "CCT": "4000K",
+      "model_W": 9,
+      "model_lm": 750,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 27.5,
+      "z_ft": 20.265,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-G3",
+      "room": "TL1",
+      "lane": "HIGH",
+      "circuit": "C28",
+      "fixture_class": "BDIF9V",
+      "description": "24 V sealed wet-location downlight 9 W ~750 lm 60 deg, large frosted/opal diffuser lens, IP65 whole assembly, remote driver; same family/trim as the vanity spot (shower pair + WC)",
+      "CCT": "4000K",
+      "model_W": 9,
+      "model_lm": 750,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 24.2,
+      "z_ft": 18.8542,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-L1",
+      "room": "TL1",
+      "lane": "PERIM",
+      "circuit": "C30A",
+      "fixture_class": "BCOVE",
+      "description": "24 V IP65 opal silicone strip face-down in bath perimeter slot 4.8 W/m ~400 lm/m (IP67 for the run inside the shower enclosure)",
+      "CCT": "2700K",
+      "model_W": 31.87,
+      "model_lm": 2658,
+      "model_beam_deg": null,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 6.64,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          20.7,
+          16.692
+        ],
+        [
+          29.05,
+          16.692
+        ],
+        [
+          29.05,
+          21.792
+        ],
+        [
+          20.7,
+          21.792
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-L2",
+      "room": "TL1",
+      "lane": "MOOD",
+      "circuit": "C30B",
+      "fixture_class": "NICHE",
+      "description": "24 V IP67 strip under shower-niche lip 6 W/m ~500 lm/m",
+      "CCT": "2700K",
+      "model_W": 4.5,
+      "model_lm": 375,
+      "model_beam_deg": null,
+      "IP_target": "IP67",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 0.75,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          29.1516,
+          18.3785
+        ],
+        [
+          29.1516,
+          20.8391
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-L3",
+      "room": "TL1",
+      "lane": "MOOD",
+      "circuit": "C30B",
+      "fixture_class": "VANITY",
+      "description": "24 V IP65 strip under floating vanity 5 W/m ~450 lm/m",
+      "CCT": "2700K",
+      "model_W": 2.75,
+      "model_lm": 247,
+      "model_beam_deg": null,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 0.55,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          20.7478,
+          17.8043
+        ],
+        [
+          22.5522,
+          17.8043
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-F1",
+      "room": "TL1",
+      "lane": "FACE",
+      "circuit": "C29B",
+      "fixture_class": "FACEV",
+      "description": "24 V diffused vertical face-light bar 5 W ~350 lm, 0.6 m (or a side-lit mirror with two integral vertical diffused bands of equal output), one each side of the vanity mirror, 4000 K, CRI>=90 R9>=50; IP44 minimum - wet-zone suitability is approved by the electrician and manufacturer, not by IP alone",
+      "CCT": "4000K",
+      "model_W": 5,
+      "model_lm": 350,
+      "model_beam_deg": 120,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 20.6165,
+      "z_ft": 16.6396,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL1-F2",
+      "room": "TL1",
+      "lane": "FACE",
+      "circuit": "C29B",
+      "fixture_class": "FACEV",
+      "description": "24 V diffused vertical face-light bar 5 W ~350 lm, 0.6 m (or a side-lit mirror with two integral vertical diffused bands of equal output), one each side of the vanity mirror, 4000 K, CRI>=90 R9>=50; IP44 minimum - wet-zone suitability is approved by the electrician and manufacturer, not by IP alone",
+      "CCT": "4000K",
+      "model_W": 5,
+      "model_lm": 350,
+      "model_beam_deg": 120,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 22.6835,
+      "z_ft": 16.6396,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LOB-H1",
+      "room": "LOB",
+      "lane": "HIGH",
+      "circuit": "C31",
+      "fixture_class": "DL7V",
+      "description": "24 V recessed deep anti-glare COB downlight 7 W ~600 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 7,
+      "model_lm": 600,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 18.4,
+      "z_ft": 24.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LOB-H2",
+      "room": "LOB",
+      "lane": "HIGH",
+      "circuit": "C31",
+      "fixture_class": "DL7V",
+      "description": "24 V recessed deep anti-glare COB downlight 7 W ~600 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 7,
+      "model_lm": 600,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 18.4,
+      "z_ft": 26.6,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LOB-F1",
+      "room": "LOB",
+      "lane": "MIRROR",
+      "circuit": "C32",
+      "fixture_class": "FACE10V",
+      "description": "24 V IP44 diffused face-light bar 10 W ~700 lm above common-basin mirror (side bars preferred if mirror <= 0.6 m wide)",
+      "CCT": "4000K",
+      "model_W": 10,
+      "model_lm": 700,
+      "model_beam_deg": 120,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 18.4,
+      "z_ft": 22.5,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "LOB-N1",
+      "room": "LOB",
+      "lane": "NIGHT",
+      "circuit": "C33",
+      "fixture_class": "STEP",
+      "description": "dimmable PIR step / night light 1 W ~40 lm, user-accessible brightness adjustment + ON/AUTO/OFF override",
+      "CCT": "2700K",
+      "model_W": 1,
+      "model_lm": 40,
+      "model_beam_deg": 120,
+      "IP_target": "IP20",
+      "CRI_min_target": 80,
+      "R9_min_target": 0,
+      "supply_class": "230PIR",
+      "length_m": null,
+      "x_ft": 20.15,
+      "z_ft": 25.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-M1",
+      "room": "TL2",
+      "lane": "MIRROR",
+      "circuit": "C35A",
+      "fixture_class": "BSPOT8V",
+      "description": "24 V deep-recessed anti-glare COB spot 8 W ~700 lm 40 deg, clear reflector, source hidden beyond 35 deg from nadir (shielding >= 55 deg, deep recess or honeycomb louvre), IP44 minimum (IP65 front preferred for steam); vanity pair pointing straight down",
+      "CCT": "4000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 40,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 21.0759,
+      "z_ft": 23.8384,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-M2",
+      "room": "TL2",
+      "lane": "MIRROR",
+      "circuit": "C35A",
+      "fixture_class": "BSPOT8V",
+      "description": "24 V deep-recessed anti-glare COB spot 8 W ~700 lm 40 deg, clear reflector, source hidden beyond 35 deg from nadir (shielding >= 55 deg, deep recess or honeycomb louvre), IP44 minimum (IP65 front preferred for steam); vanity pair pointing straight down",
+      "CCT": "4000K",
+      "model_W": 8,
+      "model_lm": 700,
+      "model_beam_deg": 40,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 22.2241,
+      "z_ft": 23.8384,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-G1",
+      "room": "TL2",
+      "lane": "HIGH",
+      "circuit": "C34",
+      "fixture_class": "BDIF9V",
+      "description": "24 V sealed wet-location downlight 9 W ~750 lm 60 deg, large frosted/opal diffuser lens, IP65 whole assembly, remote driver; same family/trim as the vanity spot (shower pair + WC)",
+      "CCT": "4000K",
+      "model_W": 9,
+      "model_lm": 750,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 27.5,
+      "z_ft": 24.0024,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-G2",
+      "room": "TL2",
+      "lane": "HIGH",
+      "circuit": "C34",
+      "fixture_class": "BDIF9V",
+      "description": "24 V sealed wet-location downlight 9 W ~750 lm 60 deg, large frosted/opal diffuser lens, IP65 whole assembly, remote driver; same family/trim as the vanity spot (shower pair + WC)",
+      "CCT": "4000K",
+      "model_W": 9,
+      "model_lm": 750,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 27.5,
+      "z_ft": 26.135,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-G3",
+      "room": "TL2",
+      "lane": "HIGH",
+      "circuit": "C34",
+      "fixture_class": "BDIF9V",
+      "description": "24 V sealed wet-location downlight 9 W ~750 lm 60 deg, large frosted/opal diffuser lens, IP65 whole assembly, remote driver; same family/trim as the vanity spot (shower pair + WC)",
+      "CCT": "4000K",
+      "model_W": 9,
+      "model_lm": 750,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 24.2,
+      "z_ft": 24.7242,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-L1",
+      "room": "TL2",
+      "lane": "PERIM",
+      "circuit": "C36A",
+      "fixture_class": "BCOVE",
+      "description": "24 V IP65 opal silicone strip face-down in bath perimeter slot 4.8 W/m ~400 lm/m (IP67 for the run inside the shower enclosure)",
+      "CCT": "2700K",
+      "model_W": 31.87,
+      "model_lm": 2658,
+      "model_beam_deg": null,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 6.64,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          20.7,
+          22.562
+        ],
+        [
+          29.05,
+          22.562
+        ],
+        [
+          29.05,
+          27.662
+        ],
+        [
+          20.7,
+          27.662
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-L2",
+      "room": "TL2",
+      "lane": "MOOD",
+      "circuit": "C36B",
+      "fixture_class": "NICHE",
+      "description": "24 V IP67 strip under shower-niche lip 6 W/m ~500 lm/m",
+      "CCT": "2700K",
+      "model_W": 4.5,
+      "model_lm": 375,
+      "model_beam_deg": null,
+      "IP_target": "IP67",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 0.75,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          29.1516,
+          24.2485
+        ],
+        [
+          29.1516,
+          26.7091
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-L3",
+      "room": "TL2",
+      "lane": "MOOD",
+      "circuit": "C36B",
+      "fixture_class": "VANITY",
+      "description": "24 V IP65 strip under floating vanity 5 W/m ~450 lm/m",
+      "CCT": "2700K",
+      "model_W": 2.75,
+      "model_lm": 247,
+      "model_beam_deg": null,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 0.55,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          20.7478,
+          23.6743
+        ],
+        [
+          22.5522,
+          23.6743
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-F1",
+      "room": "TL2",
+      "lane": "FACE",
+      "circuit": "C35B",
+      "fixture_class": "FACEV",
+      "description": "24 V diffused vertical face-light bar 5 W ~350 lm, 0.6 m (or a side-lit mirror with two integral vertical diffused bands of equal output), one each side of the vanity mirror, 4000 K, CRI>=90 R9>=50; IP44 minimum - wet-zone suitability is approved by the electrician and manufacturer, not by IP alone",
+      "CCT": "4000K",
+      "model_W": 5,
+      "model_lm": 350,
+      "model_beam_deg": 120,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 20.6165,
+      "z_ft": 22.5096,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "TL2-F2",
+      "room": "TL2",
+      "lane": "FACE",
+      "circuit": "C35B",
+      "fixture_class": "FACEV",
+      "description": "24 V diffused vertical face-light bar 5 W ~350 lm, 0.6 m (or a side-lit mirror with two integral vertical diffused bands of equal output), one each side of the vanity mirror, 4000 K, CRI>=90 R9>=50; IP44 minimum - wet-zone suitability is approved by the electrician and manufacturer, not by IP alone",
+      "CCT": "4000K",
+      "model_W": 5,
+      "model_lm": 350,
+      "model_beam_deg": 120,
+      "IP_target": "IP44",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 22.6835,
+      "z_ft": 22.5096,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-H1",
+      "room": "CBR",
+      "lane": "HIGH",
+      "circuit": "C37",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 18.5545,
+      "z_ft": 32.5208,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-H2",
+      "room": "CBR",
+      "lane": "HIGH",
+      "circuit": "C37",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 22.4915,
+      "z_ft": 32.5208,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-H3",
+      "room": "CBR",
+      "lane": "HIGH",
+      "circuit": "C37",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 18.5545,
+      "z_ft": 36.1297,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-H4",
+      "room": "CBR",
+      "lane": "HIGH",
+      "circuit": "C37",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 22.3274,
+      "z_ft": 39.9027,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-H5",
+      "room": "CBR",
+      "lane": "HIGH",
+      "circuit": "C37",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 25.25,
+      "z_ft": 41.0,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-H6",
+      "room": "CBR",
+      "lane": "HIGH",
+      "circuit": "C37",
+      "fixture_class": "DL6",
+      "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230TE",
+      "length_m": null,
+      "x_ft": 26.5925,
+      "z_ft": 32.5208,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-L1",
+      "room": "CBR",
+      "lane": "COVE",
+      "circuit": "C39",
+      "fixture_class": "COVE_FW",
+      "description": "24 V fixed-white single-channel COB strip, 2700 K warm white in every cove, 8 W/m ~720 lm/m (generic class assumption, not a catalogue datasheet; a 2700 K bin of a strip often gives somewhat lower lm/W than 3000-4000 K, UNVERIFIED without maker data), in cove profile",
+      "CCT": "2700K",
+      "model_W": 49.76,
+      "model_lm": 4478,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 6.22,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          21.166,
+          33.8298
+        ],
+        [
+          26.7697,
+          33.8298
+        ],
+        [
+          26.7697,
+          38.4296
+        ],
+        [
+          21.166,
+          38.4296
+        ],
+        [
+          21.166,
+          33.8298
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-X1",
+      "room": "CBR",
+      "lane": "LINE",
+      "circuit": "C40",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 10.72,
+      "model_lm": 805,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.34,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          23.1698,
+          33.3804
+        ],
+        [
+          20.7198,
+          33.3804
+        ],
+        [
+          20.7198,
+          35.3304
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-X2",
+      "room": "CBR",
+      "lane": "LINE",
+      "circuit": "C40",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 10.72,
+      "model_lm": 805,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.34,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          24.7659,
+          33.3804
+        ],
+        [
+          27.2159,
+          33.3804
+        ],
+        [
+          27.2159,
+          35.3304
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-X3",
+      "room": "CBR",
+      "lane": "LINE",
+      "circuit": "C40",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 10.72,
+      "model_lm": 805,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.34,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          27.2159,
+          36.9291
+        ],
+        [
+          27.2159,
+          38.8791
+        ],
+        [
+          24.7659,
+          38.8791
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-X4",
+      "room": "CBR",
+      "lane": "LINE",
+      "circuit": "C40",
+      "fixture_class": "LIN",
+      "description": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "CCT": "2700K",
+      "model_W": 10.72,
+      "model_lm": 805,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.34,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          23.1698,
+          38.8791
+        ],
+        [
+          20.7198,
+          38.8791
+        ],
+        [
+          20.7198,
+          36.9291
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-S1",
+      "room": "CBR",
+      "lane": "STUDY",
+      "circuit": "C38",
+      "fixture_class": "TASK_HO",
+      "description": "24 V COB strip 14 W/m ~1400 lm/m (ASSUMED nominal, datasheet pending), deep diffused profile face-DOWN behind a shelf lip",
+      "CCT": "4000K",
+      "model_W": 15.96,
+      "model_lm": 1596,
+      "model_beam_deg": null,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.14,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          20.523,
+          39.4106
+        ],
+        [
+          20.523,
+          43.1507
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-R1",
+      "room": "CBR",
+      "lane": "READ",
+      "circuit": "C41",
+      "fixture_class": "READ",
+      "description": "Wall reading spot 3 W ~200 lm 30 deg with integral dimmer",
+      "CCT": "3000K",
+      "model_W": 3,
+      "model_lm": 200,
+      "model_beam_deg": 30,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230INT",
+      "length_m": null,
+      "x_ft": 28.9219,
+      "z_ft": 33.505,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CBR-R2",
+      "room": "CBR",
+      "lane": "READ",
+      "circuit": "C41b",
+      "fixture_class": "READ",
+      "description": "Wall reading spot 3 W ~200 lm 30 deg with integral dimmer",
+      "CCT": "3000K",
+      "model_W": 3,
+      "model_lm": 200,
+      "model_beam_deg": 30,
+      "IP_target": "IP20",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "230INT",
+      "length_m": null,
+      "x_ft": 28.9219,
+      "z_ft": 37.6061,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "BAL-H1",
+      "room": "BAL",
+      "lane": "HIGH",
+      "circuit": "C07",
+      "fixture_class": "CYLSV",
+      "description": "24 V IP65 surface cylinder downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 3.5,
+      "z_ft": 46.5,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "BAL-H2",
+      "room": "BAL",
+      "lane": "HIGH",
+      "circuit": "C07",
+      "fixture_class": "CYLSV",
+      "description": "24 V IP65 surface cylinder downlight 6 W ~500 lm 60 deg",
+      "CCT": "3000K",
+      "model_W": 6,
+      "model_lm": 500,
+      "model_beam_deg": 60,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 8.7,
+      "z_ft": 46.5,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "BAL-L1",
+      "room": "BAL",
+      "lane": "MOOD",
+      "circuit": "C08",
+      "fixture_class": "PLINTH",
+      "description": "24 V IP67 strip in channel 5 W/m ~450 lm/m (balcony parapet graze)",
+      "CCT": "2700K",
+      "model_W": 14.65,
+      "model_lm": 1317,
+      "model_beam_deg": null,
+      "IP_target": "IP67",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 2.93,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          1.2,
+          51.5
+        ],
+        [
+          10.8,
+          51.5
+        ]
+      ],
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "BAL-L2",
+      "room": "BAL",
+      "lane": "MOOD",
+      "circuit": "C08",
+      "fixture_class": "UPDNV",
+      "description": "24 V IP65 up-down wall light 6 W ~2 x 220 lm 30 deg",
+      "CCT": "2700K",
+      "model_W": 6,
+      "model_lm": 440,
+      "model_beam_deg": 30,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 7.0,
+      "z_ft": 44.05,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "BAL-L3",
+      "room": "BAL",
+      "lane": "MOOD",
+      "circuit": "C08",
+      "fixture_class": "UPDNV",
+      "description": "24 V IP65 up-down wall light 6 W ~2 x 220 lm 30 deg",
+      "CCT": "2700K",
+      "model_W": 6,
+      "model_lm": 440,
+      "model_beam_deg": 30,
+      "IP_target": "IP65",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": null,
+      "x_ft": 10.4,
+      "z_ft": 44.05,
+      "path_ft": null,
+      "photometry_credit": true,
+      "release_status": "REVIEW ONLY"
+    },
+    {
+      "id": "CURT-LIV",
+      "room": "LIV",
+      "lane": "LOW / CURTAIN",
+      "circuit": "X-CURT-LIV",
+      "fixture_class": "COVE_FW",
+      "description": "Unmeasured 24 V fixed warm curtain-pocket strip",
+      "CCT": "2700K",
+      "model_W": 19.6,
+      "model_lm": null,
+      "model_beam_deg": null,
+      "IP_target": "site and product check",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 2.45,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          2.66,
+          29.036
+        ],
+        [
+          2.66,
+          37.074
+        ]
+      ],
+      "photometry_credit": false,
+      "release_status": "UNMEASURED / REVIEW ONLY"
+    },
+    {
+      "id": "CURT-DIN",
+      "room": "DIN",
+      "lane": "LOW / CURTAIN",
+      "circuit": "X-CURT-DIN",
+      "fixture_class": "COVE_FW",
+      "description": "Unmeasured 24 V fixed warm curtain-pocket strip",
+      "CCT": "2700K",
+      "model_W": 19.6,
+      "model_lm": null,
+      "model_beam_deg": null,
+      "IP_target": "site and product check",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 2.45,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          2.66,
+          18.046
+        ],
+        [
+          2.66,
+          26.084
+        ]
+      ],
+      "photometry_credit": false,
+      "release_status": "UNMEASURED / REVIEW ONLY"
+    },
+    {
+      "id": "CURT-MBR-S",
+      "room": "MBR",
+      "lane": "LOW / CURTAIN",
+      "circuit": "X-CURT-MBR-S",
+      "fixture_class": "COVE_FW",
+      "description": "Unmeasured 24 V fixed warm curtain-pocket strip",
+      "CCT": "2700K",
+      "model_W": 19.44,
+      "model_lm": null,
+      "model_beam_deg": null,
+      "IP_target": "site and product check",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 2.43,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          28.84,
+          9.129
+        ],
+        [
+          28.84,
+          17.089
+        ]
+      ],
+      "photometry_credit": false,
+      "release_status": "UNMEASURED / REVIEW ONLY"
+    },
+    {
+      "id": "CURT-CBR",
+      "room": "CBR",
+      "lane": "LOW / CURTAIN",
+      "circuit": "X-CURT-CBR",
+      "fixture_class": "COVE_FW",
+      "description": "Unmeasured 24 V fixed warm curtain-pocket strip",
+      "CCT": "2700K",
+      "model_W": 12.4,
+      "model_lm": null,
+      "model_beam_deg": null,
+      "IP_target": "site and product check",
+      "CRI_min_target": 90,
+      "R9_min_target": 50,
+      "supply_class": "24V",
+      "length_m": 1.55,
+      "x_ft": null,
+      "z_ft": null,
+      "path_ft": [
+        [
+          28.84,
+          39.148
+        ],
+        [
+          28.84,
+          44.24
+        ]
+      ],
+      "photometry_credit": false,
+      "release_status": "UNMEASURED / REVIEW ONLY"
+    }
+  ],
+  "knob_groups": [
+    {
+      "knob": "K-LIV-LOW",
+      "room": "LIV",
+      "board": "SB-01",
+      "label": "Living LOW: tray cove + TV bias + hall line",
+      "circuits": [
+        "C03",
+        "C04",
+        "C05",
+        "X-CURT-LIV"
+      ],
+      "supplies": [
+        "P01"
+      ],
+      "model_W": 181.52,
+      "modeled_outputs": 6,
+      "modeled_repeaters": 2,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-LIV-POOJA-STRIP",
+      "room": "LIV",
+      "board": "SB-01",
+      "label": "Pooja niche strip (own knob, homeowner decision)",
+      "circuits": [
+        "C06A"
+      ],
+      "supplies": [
+        "P04"
+      ],
+      "model_W": 21.72,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-LIV-POOJA-SPOT",
+      "room": "LIV",
+      "board": "SB-01",
+      "label": "Pooja pin spot (own knob: the shadow-casting source must be dimmable/off alone)",
+      "circuits": [
+        "C06B"
+      ],
+      "supplies": [
+        "P04"
+      ],
+      "model_W": 6,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-BAL-HIGH",
+      "room": "BAL",
+      "board": "SB-01",
+      "label": "Balcony HIGH",
+      "circuits": [
+        "C07"
+      ],
+      "supplies": [
+        "P05"
+      ],
+      "model_W": 12,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-BAL-LOW",
+      "room": "BAL",
+      "board": "SB-01",
+      "label": "Balcony LOW mood",
+      "circuits": [
+        "C08"
+      ],
+      "supplies": [
+        "P05"
+      ],
+      "model_W": 26.65,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-DIN-PASSAGE",
+      "room": "DIN",
+      "board": "SB-02",
+      "label": "Dining passage downlight (stays dimmable: homeowner rule)",
+      "circuits": [
+        "C10"
+      ],
+      "supplies": [
+        "P06"
+      ],
+      "model_W": 8,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-DIN-LOW",
+      "room": "DIN",
+      "board": "SB-02",
+      "label": "Dining LOW cove",
+      "circuits": [
+        "C12",
+        "X-CURT-DIN"
+      ],
+      "supplies": [
+        "P07"
+      ],
+      "model_W": 69.28,
+      "modeled_outputs": 2,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-KIT-TASK",
+      "room": "KIT",
+      "board": "SB-03",
+      "label": "Kitchen under-cabinet + sink-end task",
+      "circuits": [
+        "C16"
+      ],
+      "supplies": [
+        "P10"
+      ],
+      "model_W": 31.8,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-KIT-LOW",
+      "room": "KIT",
+      "board": "SB-03",
+      "label": "Kitchen LOW cove",
+      "circuits": [
+        "C17"
+      ],
+      "supplies": [
+        "P08"
+      ],
+      "model_W": 70.56,
+      "modeled_outputs": 2,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-UTL-TASK",
+      "room": "UTL",
+      "board": "SB-04",
+      "label": "Utility wash-counter task",
+      "circuits": [
+        "C19"
+      ],
+      "supplies": [
+        "P11"
+      ],
+      "model_W": 11.0,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-MBR-LOW",
+      "room": "MBR",
+      "board": "SB-05",
+      "label": "Master LOW: tray cove + headboard line + mood",
+      "circuits": [
+        "C21",
+        "C22",
+        "C23",
+        "X-CURT-MBR-S"
+      ],
+      "supplies": [
+        "P12"
+      ],
+      "model_W": 110.24,
+      "modeled_outputs": 4,
+      "modeled_repeaters": 1,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-DRS-HIGH",
+      "room": "DRS",
+      "board": "SB-06",
+      "label": "Dressing HIGH",
+      "circuits": [
+        "C27"
+      ],
+      "supplies": [
+        "P14"
+      ],
+      "model_W": 14,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-TL1-HIGH",
+      "room": "TL1",
+      "board": "SB-06B",
+      "label": "Bath 1 HIGH: ceiling spots + vanity pair",
+      "circuits": [
+        "C28",
+        "C29A"
+      ],
+      "supplies": [
+        "P14"
+      ],
+      "model_W": 43,
+      "modeled_outputs": 2,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-TL1-FACE",
+      "room": "TL1",
+      "board": "SB-06B",
+      "label": "Bath 1 face pair (HD-17 independent knob)",
+      "circuits": [
+        "C29B"
+      ],
+      "supplies": [
+        "P14"
+      ],
+      "model_W": 10,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-TL1-LOW",
+      "room": "TL1",
+      "board": "SB-06B",
+      "label": "Bath 1 LOW: perimeter + mood",
+      "circuits": [
+        "C30A",
+        "C30B"
+      ],
+      "supplies": [
+        "P14"
+      ],
+      "model_W": 39.12,
+      "modeled_outputs": 2,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-LOB",
+      "room": "LOB",
+      "board": "SB-07",
+      "label": "Lobby HIGH + face bar",
+      "circuits": [
+        "C31",
+        "C32"
+      ],
+      "supplies": [
+        "P15"
+      ],
+      "model_W": 24,
+      "modeled_outputs": 2,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-TL2-HIGH",
+      "room": "TL2",
+      "board": "SB-07B",
+      "label": "Bath 2 HIGH: ceiling spots + vanity pair",
+      "circuits": [
+        "C34",
+        "C35A"
+      ],
+      "supplies": [
+        "P15"
+      ],
+      "model_W": 43,
+      "modeled_outputs": 2,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-TL2-FACE",
+      "room": "TL2",
+      "board": "SB-07B",
+      "label": "Bath 2 face pair (HD-17 independent knob)",
+      "circuits": [
+        "C35B"
+      ],
+      "supplies": [
+        "P15"
+      ],
+      "model_W": 10,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-TL2-LOW",
+      "room": "TL2",
+      "board": "SB-07B",
+      "label": "Bath 2 LOW: perimeter + mood",
+      "circuits": [
+        "C36A",
+        "C36B"
+      ],
+      "supplies": [
+        "P15"
+      ],
+      "model_W": 39.12,
+      "modeled_outputs": 2,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-CBR-STUDY",
+      "room": "CBR",
+      "board": "SB-08",
+      "label": "Children's study task",
+      "circuits": [
+        "C38"
+      ],
+      "supplies": [
+        "P16"
+      ],
+      "model_W": 15.96,
+      "modeled_outputs": 1,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    },
+    {
+      "knob": "K-CBR-LOW",
+      "room": "CBR",
+      "board": "SB-08",
+      "label": "Children's LOW: tray cove + line",
+      "circuits": [
+        "C39",
+        "C40",
+        "X-CURT-CBR"
+      ],
+      "supplies": [
+        "P16"
+      ],
+      "model_W": 105.04,
+      "modeled_outputs": 3,
+      "modeled_repeaters": 0,
+      "status": "HOLD - exact chain / product / site"
+    }
+  ],
+  "wall_controls": [
+    {
+      "control": "D-C01",
+      "board": "SB-01",
+      "room": "LIV",
+      "description": "Living HIGH, window half (window-line downlights LIV-H1..H4 + LIV-H5)",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C01"
+      ],
+      "modeled_W": 40,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C02",
+      "board": "SB-01",
+      "room": "LIV",
+      "description": "Living HIGH, TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10)",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C02"
+      ],
+      "modeled_W": 40,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-LIV-LOW",
+      "board": "SB-01",
+      "room": "LIV",
+      "description": "Living LOW: tray cove + TV bias + hall line",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C03",
+        "C04",
+        "C05",
+        "X-CURT-LIV"
+      ],
+      "modeled_W": 181.52,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-LIV-POOJA-SPOT",
+      "board": "SB-01",
+      "room": "LIV",
+      "description": "Pooja pin spot (own knob: the shadow-casting source must be dimmable/off alone)",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C06B"
+      ],
+      "modeled_W": 6,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-LIV-POOJA-STRIP",
+      "board": "SB-01",
+      "room": "LIV",
+      "description": "Pooja niche strip (own knob, homeowner decision)",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C06A"
+      ],
+      "modeled_W": 21.72,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-BAL-HIGH",
+      "board": "SB-01",
+      "room": "BAL",
+      "description": "Balcony HIGH",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C07"
+      ],
+      "modeled_W": 12,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-BAL-LOW",
+      "board": "SB-01",
+      "room": "BAL",
+      "description": "Balcony LOW mood",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C08"
+      ],
+      "modeled_W": 26.65,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C09",
+      "board": "SB-02",
+      "room": "DIN",
+      "description": "Dining HIGH downlights",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C09"
+      ],
+      "modeled_W": 30,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C11",
+      "board": "SB-02",
+      "room": "DIN",
+      "description": "Dining pendant",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C11"
+      ],
+      "modeled_W": 12,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C13",
+      "board": "SB-02",
+      "room": "DIN",
+      "description": "Dining 48 V track accent (driver + dimmer listed by the track maker)",
+      "device_class": "230 V dimmer listed by the 48 V track maker",
+      "circuits": [
+        "C13"
+      ],
+      "modeled_W": 26,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-DIN-LOW",
+      "board": "SB-02",
+      "room": "DIN",
+      "description": "Dining LOW cove",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C12",
+        "X-CURT-DIN"
+      ],
+      "modeled_W": 69.28,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-DIN-PASSAGE",
+      "board": "SB-02",
+      "room": "DIN",
+      "description": "Dining passage downlight (stays dimmable: homeowner rule)",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C10"
+      ],
+      "modeled_W": 8,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C14",
+      "board": "SB-03",
+      "room": "KIT",
+      "description": "Kitchen HIGH, counter ring",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C14"
+      ],
+      "modeled_W": 40,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C15",
+      "board": "SB-03",
+      "room": "KIT",
+      "description": "Kitchen HIGH, general",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C15"
+      ],
+      "modeled_W": 31,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-KIT-LOW",
+      "board": "SB-03",
+      "room": "KIT",
+      "description": "Kitchen LOW cove",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C17"
+      ],
+      "modeled_W": 70.56,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-KIT-TASK",
+      "board": "SB-03",
+      "room": "KIT",
+      "description": "Kitchen under-cabinet + sink-end task",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C16"
+      ],
+      "modeled_W": 31.8,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C18",
+      "board": "SB-04",
+      "room": "UTL",
+      "description": "Utility HIGH, dimmable IP65 bulkheads (availability to confirm)",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C18"
+      ],
+      "modeled_W": 36,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-UTL-TASK",
+      "board": "SB-04",
+      "room": "UTL",
+      "description": "Utility wash-counter task",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C19"
+      ],
+      "modeled_W": 11.0,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C20",
+      "board": "SB-05",
+      "room": "MBR",
+      "description": "Master HIGH downlights (dimmer at the door)",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C20"
+      ],
+      "modeled_W": 48,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-MBR-LOW",
+      "board": "SB-05",
+      "room": "MBR",
+      "description": "Master LOW: tray cove + headboard line + mood",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C21",
+        "C22",
+        "C23",
+        "X-CURT-MBR-S"
+      ],
+      "modeled_W": 110.24,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-DRS-HIGH",
+      "board": "SB-06",
+      "room": "DRS",
+      "description": "Dressing HIGH",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C27"
+      ],
+      "modeled_W": 14,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-TL1-FACE",
+      "board": "SB-06B",
+      "room": "TL1",
+      "description": "Bath 1 face pair (HD-17 independent knob)",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C29B"
+      ],
+      "modeled_W": 10,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-TL1-HIGH",
+      "board": "SB-06B",
+      "room": "TL1",
+      "description": "Bath 1 HIGH: ceiling spots + vanity pair",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C28",
+        "C29A"
+      ],
+      "modeled_W": 43,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-TL1-LOW",
+      "board": "SB-06B",
+      "room": "TL1",
+      "description": "Bath 1 LOW: perimeter + mood",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C30A",
+        "C30B"
+      ],
+      "modeled_W": 39.12,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-LOB",
+      "board": "SB-07",
+      "room": "LOB",
+      "description": "Lobby HIGH + face bar",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C31",
+        "C32"
+      ],
+      "modeled_W": 24,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-TL2-FACE",
+      "board": "SB-07B",
+      "room": "TL2",
+      "description": "Bath 2 face pair (HD-17 independent knob)",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C35B"
+      ],
+      "modeled_W": 10,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-TL2-HIGH",
+      "board": "SB-07B",
+      "room": "TL2",
+      "description": "Bath 2 HIGH: ceiling spots + vanity pair",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C34",
+        "C35A"
+      ],
+      "modeled_W": 43,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-TL2-LOW",
+      "board": "SB-07B",
+      "room": "TL2",
+      "description": "Bath 2 LOW: perimeter + mood",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C36A",
+        "C36B"
+      ],
+      "modeled_W": 39.12,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "D-C37",
+      "board": "SB-08",
+      "room": "CBR",
+      "description": "Children's HIGH downlights (dimmer at the door)",
+      "device_class": "230 V trailing-edge LED rotary dimmer (module)",
+      "circuits": [
+        "C37"
+      ],
+      "modeled_W": 36,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-CBR-LOW",
+      "board": "SB-08",
+      "room": "CBR",
+      "description": "Children's LOW: tray cove + line",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C39",
+        "C40",
+        "X-CURT-CBR"
+      ],
+      "modeled_W": 105.04,
+      "status": "PRODUCT / CHAIN HOLD"
+    },
+    {
+      "control": "K-CBR-STUDY",
+      "board": "SB-08",
+      "room": "CBR",
+      "description": "Children's study task",
+      "device_class": "T1-K-class 24 V PWM rotary knob, own 86 mm box",
+      "circuits": [
+        "C38"
+      ],
+      "modeled_W": 15.96,
+      "status": "PRODUCT / CHAIN HOLD"
+    }
+  ],
+  "supplies": [
+    {
+      "supply_id": "P01",
+      "circuits": [
+        "C03",
+        "C04",
+        "C05",
+        "X-CURT-LIV"
+      ],
+      "modeled_load_W": 181.52,
+      "planning_nameplate_W": 480,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 288.0,
+      "load_pct_of_planning_allowance": 63.0,
+      "site_location_status": "OPEN; previous placeholder not sized for 480 W",
+      "reference_only": "HLG-480H-24",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P04",
+      "circuits": [
+        "C06A",
+        "C06B"
+      ],
+      "modeled_load_W": 27.72,
+      "planning_nameplate_W": 60,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 36.0,
+      "load_pct_of_planning_allowance": 77.0,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P05",
+      "circuits": [
+        "C07",
+        "C08"
+      ],
+      "modeled_load_W": 38.65,
+      "planning_nameplate_W": 100,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 60.0,
+      "load_pct_of_planning_allowance": 64.4,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P06",
+      "circuits": [
+        "C10"
+      ],
+      "modeled_load_W": 8,
+      "planning_nameplate_W": 30,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 18.0,
+      "load_pct_of_planning_allowance": 44.4,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P07",
+      "circuits": [
+        "C12",
+        "X-CURT-DIN"
+      ],
+      "modeled_load_W": 69.28,
+      "planning_nameplate_W": 150,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 90.0,
+      "load_pct_of_planning_allowance": 77.0,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P08",
+      "circuits": [
+        "C17"
+      ],
+      "modeled_load_W": 70.56,
+      "planning_nameplate_W": 150,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 90.0,
+      "load_pct_of_planning_allowance": 78.4,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P10",
+      "circuits": [
+        "C16"
+      ],
+      "modeled_load_W": 31.8,
+      "planning_nameplate_W": 60,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 36.0,
+      "load_pct_of_planning_allowance": 88.3,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P11",
+      "circuits": [
+        "C19"
+      ],
+      "modeled_load_W": 11.0,
+      "planning_nameplate_W": 30,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 18.0,
+      "load_pct_of_planning_allowance": 61.1,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P12",
+      "circuits": [
+        "C21",
+        "C22",
+        "C23",
+        "X-CURT-MBR-S"
+      ],
+      "modeled_load_W": 110.24,
+      "planning_nameplate_W": 240,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 144.0,
+      "load_pct_of_planning_allowance": 76.6,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P14",
+      "circuits": [
+        "C27",
+        "C28",
+        "C29A",
+        "C29B",
+        "C30A",
+        "C30B"
+      ],
+      "modeled_load_W": 106.12,
+      "planning_nameplate_W": 200,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 120.0,
+      "load_pct_of_planning_allowance": 88.4,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P15",
+      "circuits": [
+        "C31",
+        "C32",
+        "C34",
+        "C35A",
+        "C35B",
+        "C36A",
+        "C36B"
+      ],
+      "modeled_load_W": 116.12,
+      "planning_nameplate_W": 240,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 144.0,
+      "load_pct_of_planning_allowance": 80.6,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    },
+    {
+      "supply_id": "P16",
+      "circuits": [
+        "C38",
+        "C39",
+        "C40",
+        "X-CURT-CBR"
+      ],
+      "modeled_load_W": 121.0,
+      "planning_nameplate_W": 240,
+      "planning_allowance_factor": 0.6,
+      "planning_allowance_W": 144.0,
+      "load_pct_of_planning_allowance": 84.0,
+      "site_location_status": "OPEN; indicative hatch only",
+      "reference_only": "generic class / refer to source index",
+      "release_status": "PRODUCT / THERMAL / PROTECTION HOLD"
+    }
+  ],
+  "distribution": [
+    {
+      "group": "LT-1",
+      "description": "230 V fittings, living side",
+      "kind": "230 V",
+      "members": [
+        "C01",
+        "C02",
+        "C09",
+        "C11",
+        "C13",
+        "C14",
+        "C15",
+        "C18"
+      ],
+      "modeled_lighting_W": 255,
+      "inrush_status": "OPEN - historical reference screen is not approval",
+      "inverter_concept": true
+    },
+    {
+      "group": "LT-2",
+      "description": "230 V fittings, bedroom side",
+      "kind": "230 V",
+      "members": [
+        "C20",
+        "C24",
+        "C25",
+        "C26",
+        "C33",
+        "C37",
+        "C41",
+        "C41b"
+      ],
+      "modeled_lighting_W": 98,
+      "inrush_status": "OPEN - historical reference screen is not approval",
+      "inverter_concept": true
+    },
+    {
+      "group": "LT-3",
+      "description": "24 V essentials: passage, dressing, both baths, lobby, children's room",
+      "kind": "24 V",
+      "members": [
+        "P06",
+        "P14",
+        "P15",
+        "P16"
+      ],
+      "modeled_lighting_W": 351.24,
+      "inrush_status": "OPEN - historical reference screen is not approval",
+      "inverter_concept": true
+    },
+    {
+      "group": "LT-4",
+      "description": "24 V coves: living and dining",
+      "kind": "24 V",
+      "members": [
+        "P01",
+        "P07"
+      ],
+      "modeled_lighting_W": 250.8,
+      "inrush_status": "HOLD - previous screen invalid",
+      "inverter_concept": false
+    },
+    {
+      "group": "LT-5",
+      "description": "24 V living mood, hall line, pooja, balcony",
+      "kind": "24 V",
+      "members": [
+        "P04",
+        "P05"
+      ],
+      "modeled_lighting_W": 66.37,
+      "inrush_status": "HOLD - previous screen invalid",
+      "inverter_concept": false
+    },
+    {
+      "group": "LT-6",
+      "description": "24 V kitchen and utility",
+      "kind": "24 V",
+      "members": [
+        "P08",
+        "P10",
+        "P11"
+      ],
+      "modeled_lighting_W": 113.36,
+      "inrush_status": "OPEN - historical reference screen is not approval",
+      "inverter_concept": false
+    },
+    {
+      "group": "LT-7",
+      "description": "24 V master bedroom cove, line and mood",
+      "kind": "24 V",
+      "members": [
+        "P12"
+      ],
+      "modeled_lighting_W": 110.24,
+      "inrush_status": "OPEN - historical reference screen is not approval",
+      "inverter_concept": false
+    }
+  ],
+  "voltage_drop": [
+    {
+      "circuit": "C03",
+      "section": "A",
+      "supply_id": "P01",
+      "modeled_dV_pct": null,
+      "status": "HOLD",
+      "basis": "S1 planning model; actual design open",
+      "note": "One-supply reroute / protection not calculated"
+    },
+    {
+      "circuit": "C03",
+      "section": "B",
+      "supply_id": "P01",
+      "modeled_dV_pct": null,
+      "status": "HOLD",
+      "basis": "S1 planning model; actual design open",
+      "note": "One-supply reroute / protection not calculated"
+    },
+    {
+      "circuit": "C04",
+      "section": "all",
+      "supply_id": "P01",
+      "modeled_dV_pct": null,
+      "status": "HOLD",
+      "basis": "S1 planning model; actual design open",
+      "note": "One-supply reroute / protection not calculated"
+    },
+    {
+      "circuit": "C05",
+      "section": "2 parallel outputs",
+      "supply_id": "P01",
+      "modeled_dV_pct": null,
+      "status": "HOLD",
+      "basis": "S1 planning model; actual design open",
+      "note": "One-supply reroute / protection not calculated"
+    },
+    {
+      "circuit": "C06A",
+      "section": "all",
+      "supply_id": "P04",
+      "modeled_dV_pct": 1.1,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C06B",
+      "section": "all",
+      "supply_id": "P04",
+      "modeled_dV_pct": 0.7,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C07",
+      "section": "all",
+      "supply_id": "P05",
+      "modeled_dV_pct": 0.7,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C08",
+      "section": "all",
+      "supply_id": "P05",
+      "modeled_dV_pct": 1.3,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C10",
+      "section": "all",
+      "supply_id": "P06",
+      "modeled_dV_pct": 0.2,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C12",
+      "section": "all",
+      "supply_id": "P07",
+      "modeled_dV_pct": 1.9,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": "run 6.21 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C16",
+      "section": "all",
+      "supply_id": "P10",
+      "modeled_dV_pct": 1.4,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C17",
+      "section": "A",
+      "supply_id": "P08",
+      "modeled_dV_pct": 1.7,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C17",
+      "section": "B",
+      "supply_id": "P08",
+      "modeled_dV_pct": 1.7,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C19",
+      "section": "all",
+      "supply_id": "P11",
+      "modeled_dV_pct": 0.2,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C21",
+      "section": "all",
+      "supply_id": "P12",
+      "modeled_dV_pct": 2.2,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": "run 6.53 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C22",
+      "section": "all",
+      "supply_id": "P12",
+      "modeled_dV_pct": 2.0,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C23",
+      "section": "all",
+      "supply_id": "P12",
+      "modeled_dV_pct": 1.5,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C27",
+      "section": "all",
+      "supply_id": "P14",
+      "modeled_dV_pct": 0.3,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C28",
+      "section": "all",
+      "supply_id": "P14",
+      "modeled_dV_pct": 1.8,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C29A",
+      "section": "all",
+      "supply_id": "P14",
+      "modeled_dV_pct": 1.4,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C29B",
+      "section": "all",
+      "supply_id": "P14",
+      "modeled_dV_pct": 1.3,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C30A",
+      "section": "all",
+      "supply_id": "P14",
+      "modeled_dV_pct": 1.4,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": "run 6.64 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C30B",
+      "section": "all",
+      "supply_id": "P14",
+      "modeled_dV_pct": 1.3,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C31",
+      "section": "all",
+      "supply_id": "P15",
+      "modeled_dV_pct": 0.5,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C32",
+      "section": "all",
+      "supply_id": "P15",
+      "modeled_dV_pct": 0.4,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C34",
+      "section": "all",
+      "supply_id": "P15",
+      "modeled_dV_pct": 1.9,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C35A",
+      "section": "all",
+      "supply_id": "P15",
+      "modeled_dV_pct": 1.5,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C35B",
+      "section": "all",
+      "supply_id": "P15",
+      "modeled_dV_pct": 1.4,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C36A",
+      "section": "all",
+      "supply_id": "P15",
+      "modeled_dV_pct": 1.5,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": "run 6.64 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C36B",
+      "section": "all",
+      "supply_id": "P15",
+      "modeled_dV_pct": 1.4,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C38",
+      "section": "all",
+      "supply_id": "P16",
+      "modeled_dV_pct": 2.9,
+      "status": "OK",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "C39",
+      "section": "all",
+      "supply_id": "P16",
+      "modeled_dV_pct": 3.3,
+      "status": "MARGINAL",
+      "basis": "S1 planning model; actual design open",
+      "note": "run 6.22 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C40",
+      "section": "all",
+      "supply_id": "P16",
+      "modeled_dV_pct": 3.6,
+      "status": "MARGINAL",
+      "basis": "S1 planning model; actual design open",
+      "note": ""
+    },
+    {
+      "circuit": "X-CURT-LIV",
+      "section": "all",
+      "supply_id": "P01",
+      "modeled_dV_pct": null,
+      "status": "HOLD",
+      "basis": "S1 planning model; pocket unmeasured",
+      "note": "No fabrication release"
+    },
+    {
+      "circuit": "X-CURT-DIN",
+      "section": "all",
+      "supply_id": "P07",
+      "modeled_dV_pct": 1.7,
+      "status": "OK",
+      "basis": "S1 planning model; pocket unmeasured",
+      "note": "No fabrication release"
+    },
+    {
+      "circuit": "X-CURT-MBR-S",
+      "section": "all",
+      "supply_id": "P12",
+      "modeled_dV_pct": 1.8,
+      "status": "OK",
+      "basis": "S1 planning model; pocket unmeasured",
+      "note": "No fabrication release"
+    },
+    {
+      "circuit": "X-CURT-CBR",
+      "section": "all",
+      "supply_id": "P16",
+      "modeled_dV_pct": 2.9,
+      "status": "OK",
+      "basis": "S1 planning model; pocket unmeasured",
+      "note": "No fabrication release"
+    }
+  ],
+  "curtain_pockets": [
+    {
+      "fixture_id": "CURT-LIV",
+      "circuit": "X-CURT-LIV",
+      "room": "LIV",
+      "length_m_derived": 2.45,
+      "power_W_per_m_assumed": 8,
+      "power_W_unrounded_model": 19.6,
+      "cct_K": 2700,
+      "wall_control": "K-LIV-LOW",
+      "supply_id": "P01",
+      "site_photo_in_master": "library/02-references/site-photo-hall-curtain-pocket.jpeg",
+      "site_photo_sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+      "site_photo_in_pack": "figures/photos/site-photo-hall-curtain-pocket.jpeg",
+      "measurement_status": "OPEN - derived, not measured",
+      "photometry_credit": false,
+      "fabrication_release": false
+    },
+    {
+      "fixture_id": "CURT-DIN",
+      "circuit": "X-CURT-DIN",
+      "room": "DIN",
+      "length_m_derived": 2.45,
+      "power_W_per_m_assumed": 8,
+      "power_W_unrounded_model": 19.6,
+      "cct_K": 2700,
+      "wall_control": "K-DIN-LOW",
+      "supply_id": "P07",
+      "site_photo_in_master": "library/02-references/site-photo-hall-curtain-pocket.jpeg",
+      "site_photo_sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+      "site_photo_in_pack": "figures/photos/site-photo-hall-curtain-pocket.jpeg",
+      "measurement_status": "OPEN - derived, not measured",
+      "photometry_credit": false,
+      "fabrication_release": false
+    },
+    {
+      "fixture_id": "CURT-MBR-S",
+      "circuit": "X-CURT-MBR-S",
+      "room": "MBR",
+      "length_m_derived": 2.43,
+      "power_W_per_m_assumed": 8,
+      "power_W_unrounded_model": 19.44,
+      "cct_K": 2700,
+      "wall_control": "K-MBR-LOW",
+      "supply_id": "P12",
+      "site_photo_in_master": "",
+      "site_photo_sha256": "",
+      "site_photo_in_pack": "",
+      "measurement_status": "OPEN - derived, not measured",
+      "photometry_credit": false,
+      "fabrication_release": false
+    },
+    {
+      "fixture_id": "CURT-CBR",
+      "circuit": "X-CURT-CBR",
+      "room": "CBR",
+      "length_m_derived": 1.55,
+      "power_W_per_m_assumed": 8,
+      "power_W_unrounded_model": 12.4,
+      "cct_K": 2700,
+      "wall_control": "K-CBR-LOW",
+      "supply_id": "P16",
+      "site_photo_in_master": "library/02-references/site-photo-children-curtain-pocket.jpeg",
+      "site_photo_sha256": "b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2",
+      "site_photo_in_pack": "figures/photos/site-photo-children-curtain-pocket.jpeg",
+      "measurement_status": "OPEN - derived, not measured",
+      "photometry_credit": false,
+      "fabrication_release": false
+    }
+  ],
+  "sources": [
+    {
+      "path": "sources/HLG-480H-SPEC.PDF",
+      "title": "Mean Well HLG-480H manufacturer datasheet",
+      "sha256": "790048cbd6b35066dc5c7a7c29ad87a52f302e0e08e92034691087dfc552171e"
+    },
+    {
+      "path": "sources/ELG-240-SPEC.PDF",
+      "title": "Mean Well ELG-240 manufacturer datasheet",
+      "sha256": "57af9cbbd13f025e49d25b29633f965be177b20f7e5e541ea80e2249e9c51a18"
+    },
+    {
+      "path": "sources/ELG-150-SPEC.PDF",
+      "title": "Mean Well ELG-150 manufacturer datasheet",
+      "sha256": "cb0a1c37dec9bd8983f5c6b20cac2280ff41af76f0c8cb281b3b941b61a68f55"
+    },
+    {
+      "path": "sources/meanwell-led-driver-installation-manual-en.pdf",
+      "title": "Mean Well LED-driver installation manual",
+      "sha256": "f07b8467541263d62eb6a515a05643ac5c56d0d21753169574cbc5505175ca10"
+    },
+    {
+      "path": "sources/skydance-t1k-t2k-manual.pdf",
+      "title": "Skydance T1-K/T2-K/T3-K manufacturer manual",
+      "sha256": "c2ff76fa1be2faa499cec4aade28c78a93cec6ce3713b383266f7ae1e78d616b"
+    },
+    {
+      "path": "sources/wipro-mollis-pro.pdf",
+      "title": "Wipro Mollis Pro product leaflet",
+      "sha256": "849fbd9d49e1c54a65300f6fc442d41677e5658d4e9f169f1d4a933dd78e38e0"
+    },
+    {
+      "path": "sources/wipro-mollis-range.pdf",
+      "title": "Wipro Mollis product catalogue",
+      "sha256": "2ce645919022876034ca9d6bf95afaf4aab6117c906a77ecb4101e42d8f7af75"
+    },
+    {
+      "path": "sources/wipro-fokus-plus.pdf",
+      "title": "Wipro Fokus Plus product catalogue, image-only",
+      "sha256": "9d03fcf0c94822378834c8f1886736b4f8a9222add0f1a76899d4918ab97d595"
+    },
+    {
+      "path": "sources/signify-greenspace-flex.pdf",
+      "title": "Signify GreenSpace Flex family leaflet",
+      "sha256": "322ea5416802e972f50220f874b67d0f6c3f61edc1eaeddb199e8f196bc9a0c2"
+    },
+    {
+      "path": "sources/orient-consumer-catalogue.pdf",
+      "title": "Orient Electric consumer lighting catalogue",
+      "sha256": "0514e344060d078ce9dbc01b27b4e54e8afc65b02ffa306a47260bce228032e0"
+    },
+    {
+      "path": "sources/legrand-arteor-advance-F04600EN-00.pdf",
+      "title": "legrand-arteor-advance-F04600EN-00.pdf",
+      "sha256": "854f280b94e1eb7b5b1a8b4e31a59e95f590142c9555633f29bd09c77ae3b6e4"
+    },
+    {
+      "path": "sources/schneider-avataron-PHA1631900.pdf",
+      "title": "schneider-avataron-PHA1631900.pdf",
+      "sha256": "ddc2234be659732353ffd219815b0eba5486930632f0bff7bc6ee69e5a5c5d8a"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "status": "REVIEW DRAFT - not a construction release",
+  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "viewer_html_sha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+  "current_fixed_cct_map_sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+  "frozen_heatmaps_sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+  "renders": [
+    {
+      "file": "01-whole-flat-dollhouse.png",
+      "caption": "WHOLE FLAT / ROOF-OFF  |  REVIEW DRAFT - SITE MEASUREMENTS AND PROFESSIONAL APPROVALS REQUIRED",
+      "mode": "doll",
+      "room": "living",
+      "proposed_interiors": false,
+      "pose": "walkthrough.setMode('doll');walkthrough.setOrbit(.22,1.12,19)",
+      "visual_brightness": {
+        "high": 100,
+        "low": 100
+      },
+      "width": 2400,
+      "height": 1626,
+      "bytes": 682022,
+      "sha256": "8e480f6c11e6e1e413cf3afbfdf791073fb45eb9cff34739ffda6e1a557cf95e"
+    },
+    {
+      "file": "02-living-light-and-curtains.png",
+      "caption": "LIVING / HIGH 70% + LOW 55%  |  VISUAL LIGHTING ONLY - NO MEASURED LUX OR CONSTRUCTION RELEASE",
+      "mode": "first",
+      "room": "living",
+      "proposed_interiors": false,
+      "pose": "walkthrough.setMode('first');walkthrough.setPose(12,36,1.5708,.38,76)",
+      "visual_brightness": {
+        "high": 70,
+        "low": 55
+      },
+      "width": 2400,
+      "height": 1626,
+      "bytes": 904805,
+      "sha256": "175db15d81d43bbd978e8f9cb1229efb8f7a08189c76f8f39dca44972748e14b"
+    },
+    {
+      "file": "03-master-proposed-interiors.png",
+      "caption": "MASTER / PROPOSED INTERIORS  |  UNMEASURED, UNAPPROVED APPROXIMATIONS - NOT FOR FABRICATION",
+      "mode": "first",
+      "room": "master",
+      "proposed_interiors": true,
+      "pose": "walkthrough.setMode('first');walkthrough.setPose(22.9,12.5,0,.05,75)",
+      "visual_brightness": {
+        "high": 70,
+        "low": 55
+      },
+      "width": 2400,
+      "height": 1626,
+      "bytes": 1129912,
+      "sha256": "e55d22cbcbe01a3b78b87656a5385873160ac38754c2ca14a18d3c91d593c33b"
+    }
+  ],
+  "browser_errors": [],
+  "external_requests": []
+}

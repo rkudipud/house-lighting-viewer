@@ -1,0 +1,3695 @@
+{
+  "schema": "wardrobe-signoff-review/1",
+  "source_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "status": "review_deliverable_not_construction_release",
+  "construction_release": false,
+  "export_policy": "Current review projection with integrated homeowner decisions. Not a replacement master fragment.",
+  "integration_receipt": {
+    "filename": "original-signoff-receipt.json",
+    "sha256": "c726455091ccad5fe5886f750f9a98b644decc243c1dbb6908c11f444b2d4a11",
+    "integrated_master_sha256": "235fb7ec347b788bb9b42578b2fdd40527e1a00cca3ae2bd5a14985e29bb1736",
+    "current_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "compatibility": "original_approvals_unchanged_then_exact_recorded_cabinet_selection_only_then_guarded_reference_only_integration",
+    "decisions": [
+      "HS-WARDROBE-OPT-E",
+      "HS-MBR-SPLIT-WARDROBE"
+    ],
+    "cabinet_selection_receipt": {
+      "filename": "cabinet-selection-receipt.json",
+      "sha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
+      "before_master_sha256": "f7a5e3e827ebd7f9e2cccf479fc8bb05b4f786d1f99f86176547af509ff59d9a",
+      "after_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+      "decisions": [
+        "HS-R04A-CABINET",
+        "HS-R08-UNDERCOUNTER"
+      ]
+    },
+    "interior_reference_receipt": {
+      "filename": "interior-reference-receipt.json",
+      "sha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
+      "before_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+      "after_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+      "original_interior_source_sha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+      "original_interior_source_filename": "wardrobe-interiors-original.json",
+      "compatibility": "reference_only_all_existing_storage_geometry_decisions_and_holds_unchanged"
+    }
+  },
+  "confirmed_brief": {
+    "flats": 4,
+    "household": "3-4 tenants: couple plus one or two children",
+    "beds": "tenant-supplied HD-05",
+    "fixed_bedsides": "omitted HD-14",
+    "budget_target_pre_gst_inr": [
+      250000,
+      350000
+    ],
+    "materials_selected": "OPT-E",
+    "material_decision": "HS-WARDROBE-OPT-E",
+    "R04_split": "approved in principle, dimensions unmeasured; OI-MBR-03",
+    "selected_cabinets": [
+      "ST-R04a-WR01",
+      "ST-R08-UC01"
+    ],
+    "selected_cabinet_fit": "Selected in scope; geometry, access and site fit remain unverified.",
+    "R05_layout": "retained HD-15",
+    "curtains": "ceiling-recessed two-track sheer + blackout; dimensions unmeasured",
+    "orientation": "north at sheet-bottom; west at sheet-right"
+  },
+  "effective_heights": {
+    "status": "homeowner_stated_figures_unmeasured_on_site",
+    "datum": "finished floor level (FFL) of each flat = 0.000; heights in metres above FFL",
+    "stated_by_homeowner": {
+      "floor_to_floor_m": 3.3528,
+      "floor_to_floor_text": "11 ft slab to slab (top of slab to top of next slab)",
+      "band_drop_m": 0.2286,
+      "band_drop_text": "false-ceiling drop about 9 in, measured down from the slab underside to the perimeter band; the raised centre panel is at or very near the slab"
+    },
+    "homeowner_accepted_assumptions": {
+      "slab_thickness_m": 0.127,
+      "slab_thickness_text": "5 in (125 mm) assumed",
+      "floor_finish_m": 0.0381,
+      "floor_finish_text": "about 1.5 in (40 mm) assumed"
+    },
+    "derived_levels_m": {
+      "slab_underside_soffit": 3.1877,
+      "slab_underside_text": "about 10 ft 5.5 in above FFL",
+      "perimeter_band_underside": 2.9591,
+      "perimeter_band_text": "about 9 ft 8.5 in above FFL",
+      "raised_centre_panel": 3.1877,
+      "raised_centre_panel_text": "at or very near the slab underside; exact level and any shallow step unmeasured",
+      "kitchen_flat_ceiling": 2.9591,
+      "kitchen_flat_text": "one flat ceiling at the band level (homeowner-selected assumption)"
+    },
+    "not_provided": {
+      "bathrooms": "bathroom false-ceiling level; previous placeholder 2.40 m retained and flagged",
+      "utility_lobby_balcony": "levels not provided; previous placeholders retained and flagged",
+      "beams": "cross-beam seen in the hall photo: depth and soffit level not measured"
+    },
+    "consequences": [
+      "Wall height in every elevation runs from FFL to the slab underside, with the band bottom marked separately.",
+      "Lighting mounting heights, cove and band geometry, and the photometry results were computed on the superseded 2.70 m band and 2.88 m tray: they must be recomputed before use.",
+      "Window and door heads (assumed 2.13 m and 2.28 m) leave about 0.83 m and 0.68 m of wall above them to the band.",
+      "Ceiling-recessed curtain pockets and loft clearances take their heights from the new band level."
+    ],
+    "construction_release": false,
+    "raised_panel_clarification": {
+      "decision": "HD-14",
+      "construction": "Separate gypsum/POP panel below the concrete slab",
+      "profile_and_wiring_space": "Homeowner confirms sufficient space will be provided for aluminium profile/track and wiring",
+      "clear_cavity_depth_m": null,
+      "actual_panel_level_m": null,
+      "status": "construction_type_and_provision_confirmed_dimensions_unmeasured",
+      "remaining": "Selected profile recess/fixing dimensions, wiring access, accessible driver location and actual panel level",
+      "calculation_note": "Existing near-slab reference plane is not a measured panel surface; quantify any necessary drop with the selected profile and test height sensitivity",
+      "structural_cutting_authorized": false
+    }
+  },
+  "rooms": [
+    {
+      "id": "R04",
+      "name": "M bed room",
+      "dimensions": [
+        {
+          "value_m": 3.81,
+          "value_ft": 12.5,
+          "original": "12'-6\"",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        },
+        {
+          "value_m": 4.6863,
+          "value_ft": 15.375,
+          "original": "15'-4.5\"",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        }
+      ],
+      "basis": "Homeowner-confirmed nominal measurements where flagged; not independently verified",
+      "note": "M likely means master; designation inferred. Wardrobe footprint not subtracted from trace. Retired joinery is not a storage design constraint."
+    },
+    {
+      "id": "R04a",
+      "name": "M bedroom dressing / ensuite approach",
+      "dimensions": [],
+      "basis": "Homeowner-confirmed nominal measurements where flagged; not independently verified",
+      "note": "Private dressing/ensuite route; unlabelled dimensions remain inferred. Retired wardrobe footprint is excluded."
+    },
+    {
+      "id": "R05",
+      "name": "C bed room",
+      "dimensions": [
+        {
+          "value_m": 3.81,
+          "value_ft": 12.5,
+          "original": "12'-6\"",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        },
+        {
+          "value_m": 4.572,
+          "value_ft": 15,
+          "original": "15'",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        }
+      ],
+      "basis": "Homeowner-confirmed nominal measurements where flagged; not independently verified",
+      "note": "Confirmed nominal dimensions retained; placement must be reconstructed from current pages 16-18."
+    },
+    {
+      "id": "R08",
+      "name": "Utility, labelled area",
+      "dimensions": [
+        {
+          "value_m": 4.7244,
+          "value_ft": 15.5,
+          "original": "15'-6\"",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        },
+        {
+          "value_m": 1.3716,
+          "value_ft": 4.5,
+          "original": "4'-6\"",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        }
+      ],
+      "basis": "Homeowner-confirmed nominal measurements where flagged; not independently verified",
+      "note": "Trace covers washing bay plus utility/sink strip. Its total scaled width is only about 4.4 m versus 4.7244 m label; scope/width conflict unresolved."
+    },
+    {
+      "id": "R09",
+      "name": "Balcony / front arrival",
+      "dimensions": [
+        {
+          "value_m": 3.3528,
+          "value_ft": 11,
+          "original": "11'",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        },
+        {
+          "value_m": 2.4384,
+          "value_ft": 8,
+          "original": "8'",
+          "source": {
+            "document": "P",
+            "page": 1
+          },
+          "source_confidence": "confirmed_annotation",
+          "confidence": "homeowner_confirmed_measured",
+          "homeowner_confirmed_measured": true,
+          "independently_verified": false
+        }
+      ],
+      "basis": "Homeowner-confirmed nominal measurements where flagged; not independently verified",
+      "note": "Nominal balcony label does not describe full L-shaped arrival circulation; trace includes approach beside stairs."
+    }
+  ],
+  "opening_facts": [
+    {
+      "id": "D02",
+      "name": "M bedroom door",
+      "kind": "door",
+      "connects": [
+        "C01",
+        "R04"
+      ],
+      "source": {
+        "document": "P",
+        "page": 1
+      },
+      "existence_confidence": "confirmed_graphic",
+      "storey": null,
+      "annotated_width": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No opening dimension schedule or dimension annotation supplied."
+      },
+      "height": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No elevation/section/opening height supplied."
+      },
+      "approximate_plan_width": {
+        "value_m": 0.9,
+        "confidence": "scaled_inference",
+        "source": {
+          "document": "P",
+          "page": 1
+        },
+        "not_for_fabrication": true
+      },
+      "segment_confidence": "scaled_inference",
+      "note": "Swings into M bedroom from the common lane near kitchen/dining; C01 is a functional circulation node, not a measured room.",
+      "authority": "Opening existence/source facts only; current placement uses R04/R05 relationship data."
+    },
+    {
+      "id": "D03",
+      "name": "C bedroom door",
+      "kind": "door",
+      "connects": [
+        "C01",
+        "R05"
+      ],
+      "source": {
+        "document": "P",
+        "page": 1
+      },
+      "existence_confidence": "confirmed_graphic",
+      "storey": null,
+      "annotated_width": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No opening dimension schedule or dimension annotation supplied."
+      },
+      "height": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No elevation/section/opening height supplied."
+      },
+      "approximate_plan_width": {
+        "value_m": 0.85,
+        "confidence": "scaled_inference",
+        "source": {
+          "document": "P",
+          "page": 1
+        },
+        "not_for_fabrication": true
+      },
+      "segment_confidence": "scaled_inference",
+      "note": "Swings into C bedroom from common circulation.",
+      "active_for_layout": false,
+      "layout_status": "superseded_by_proposed_reconstruction",
+      "current_proposal_ref": "visualization_geometry.openings/children-door",
+      "authority": "Opening existence/source facts only; current placement uses R04/R05 relationship data."
+    },
+    {
+      "id": "D06",
+      "name": "Kitchen-utility double-leaf door",
+      "kind": "door",
+      "connects": [
+        "R03",
+        "R08"
+      ],
+      "source": {
+        "document": "P",
+        "page": 1
+      },
+      "existence_confidence": "confirmed_graphic",
+      "storey": null,
+      "annotated_width": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No opening dimension schedule or dimension annotation supplied."
+      },
+      "height": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No elevation/section/opening height supplied."
+      },
+      "approximate_plan_width": {
+        "value_m": 0.9,
+        "confidence": "scaled_inference",
+        "source": {
+          "document": "P",
+          "page": 1
+        },
+        "not_for_fabrication": true
+      },
+      "segment_confidence": "scaled_inference",
+      "note": "Paired leaves drawn swinging toward kitchen; render shows a single leaf.",
+      "authority": "Opening existence/source facts only; current placement uses R04/R05 relationship data."
+    },
+    {
+      "id": "W03",
+      "name": "M bedroom rear window",
+      "kind": "window",
+      "connects": [
+        "R04",
+        "exterior-sheet-top"
+      ],
+      "source": {
+        "document": "P",
+        "page": 1
+      },
+      "existence_confidence": "confirmed_graphic",
+      "storey": null,
+      "annotated_width": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No opening dimension schedule or dimension annotation supplied."
+      },
+      "height": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No elevation/section/opening height supplied."
+      },
+      "approximate_plan_width": {
+        "value_m": 0.9131808000000001,
+        "confidence": "inherited_trace_placeholder",
+        "source": {
+          "record": "visualization_geometry.master_layout.openings.W03"
+        },
+        "not_for_fabrication": true
+      },
+      "segment_confidence": "relationship_placeholder",
+      "note": "Mid-wall in the wardrobe-wall bay per permitted layout pages; width inherited; position unmeasured placeholder pending site check (OI-MBR-02).",
+      "current_proposal_ref": "visualization_geometry.openings/master-top-window",
+      "layout_status": "homeowner_confirmed_centred_relationship_unmeasured",
+      "authority": "Opening existence/source facts only; current placement uses R04/R05 relationship data."
+    },
+    {
+      "id": "W04",
+      "name": "M bedroom side window",
+      "kind": "window",
+      "connects": [
+        "R04",
+        "exterior-sheet-right"
+      ],
+      "source": {
+        "document": "P",
+        "page": 1
+      },
+      "existence_confidence": "confirmed_graphic",
+      "storey": null,
+      "annotated_width": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No opening dimension schedule or dimension annotation supplied."
+      },
+      "height": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No elevation/section/opening height supplied."
+      },
+      "approximate_plan_width": {
+        "value_m": 1.8,
+        "confidence": "scaled_inference",
+        "source": {
+          "document": "P",
+          "page": 1
+        },
+        "not_for_fabrication": true
+      },
+      "segment_confidence": "scaled_inference",
+      "note": "Long right-wall opening.",
+      "authority": "Opening existence/source facts only; current placement uses R04/R05 relationship data."
+    },
+    {
+      "id": "W05",
+      "name": "C bedroom side window",
+      "kind": "window",
+      "connects": [
+        "R05",
+        "exterior-sheet-right"
+      ],
+      "source": {
+        "document": "P",
+        "page": 1
+      },
+      "existence_confidence": "confirmed_graphic",
+      "storey": null,
+      "annotated_width": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No opening dimension schedule or dimension annotation supplied."
+      },
+      "height": {
+        "value_m": null,
+        "confidence": "unresolved",
+        "reason": "No elevation/section/opening height supplied."
+      },
+      "approximate_plan_width": {
+        "value_m": 1.8,
+        "confidence": "scaled_inference",
+        "source": {
+          "document": "P",
+          "page": 1
+        },
+        "not_for_fabrication": true
+      },
+      "segment_confidence": "scaled_inference",
+      "note": "Right-wall opening at front end.",
+      "active_for_layout": false,
+      "layout_status": "superseded_by_proposed_reconstruction",
+      "current_proposal_ref": "visualization_geometry.openings/children-window",
+      "authority": "Opening existence/source facts only; current placement uses R04/R05 relationship data."
+    }
+  ],
+  "items": [
+    {
+      "id": "ST-R04a-WR01",
+      "room_id": "R04a",
+      "kind": "shallow_cabinet_conditional",
+      "bounds_m": [
+        5.064,
+        5.05,
+        5.364,
+        6.6
+      ],
+      "height_range_m": [
+        0.1,
+        2.1
+      ],
+      "dimension_confidence": "proposed_on_unprinted_room_field_hold",
+      "leaves": 4,
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "scope_status": "homeowner_selected_subject_to_site_holds",
+      "scope_decision_ref": "HS-R04A-CABINET",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R04a-LF01",
+      "room_id": "R04a",
+      "kind": "loft",
+      "bounds_m": [
+        5.064,
+        5.03,
+        5.404,
+        6.7
+      ],
+      "height_range_m": [
+        2.13,
+        3.08
+      ],
+      "dimension_confidence": "assumed_existing_loft_geometry_field_hold",
+      "gross_volume_m3": 0.497,
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R05-WR01",
+      "room_id": "R05",
+      "kind": "wardrobe_hinged",
+      "bounds_m": [
+        6.89,
+        8.612,
+        8.915,
+        9.242
+      ],
+      "bounds_uv_m": [
+        0.0,
+        1.785,
+        0.63,
+        3.81
+      ],
+      "height_range_m": [
+        0.0,
+        2.1
+      ],
+      "dimension_confidence": "proposed_in_local_frame_from_confirmed_room_size",
+      "length_m": 2.025,
+      "leaves": 4,
+      "leaf_width_m": 0.5,
+      "hinges_per_leaf": 4,
+      "plinth_m": [
+        0.0,
+        0.1
+      ],
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "placement_status": "retained_by_homeowner_HD-15; dimensions_not_site_verified",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R05-LF01",
+      "room_id": "R05",
+      "kind": "loft_continuous",
+      "bounds_m": [
+        5.105,
+        8.612,
+        8.915,
+        9.212
+      ],
+      "bounds_uv_m": [
+        0.0,
+        0.0,
+        0.6,
+        3.81
+      ],
+      "height_range_m": [
+        2.13,
+        3.08
+      ],
+      "dimension_confidence": "presence_and_continuity_homeowner_confirmed; dimensions_assumed_field_hold",
+      "gross_volume_m3": 2.0,
+      "segments": [
+        {
+          "id": "ST-R05-LF01-A",
+          "over": "entry door D03 + switch strip",
+          "bounds_uv_m": [
+            0.0,
+            0.0,
+            0.6,
+            1.785
+          ],
+          "bounds_m": [
+            5.105,
+            8.612,
+            6.89,
+            9.212
+          ],
+          "bounds_m_status": "global_via_renderer_R05_transform_inferred_anchor",
+          "gross_volume_m3": 0.937,
+          "shutters": "2 leaves"
+        },
+        {
+          "id": "ST-R05-LF01-B",
+          "over": "ST-R05-WR01",
+          "bounds_uv_m": [
+            0.0,
+            1.785,
+            0.6,
+            3.81
+          ],
+          "bounds_m": [
+            6.89,
+            8.612,
+            8.915,
+            9.212
+          ],
+          "bounds_m_status": "global_via_renderer_R05_transform_inferred_anchor",
+          "gross_volume_m3": 1.063,
+          "shutters": "4 leaves aligned to wardrobe"
+        }
+      ],
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "placement_status": "retained_by_homeowner_HD-15; dimensions_not_site_verified",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R05-TV01",
+      "room_id": "R05",
+      "kind": "tv_console_floating",
+      "bounds_m": [
+        5.105,
+        10.162,
+        5.485,
+        11.362
+      ],
+      "bounds_uv_m": [
+        1.55,
+        0.0,
+        2.75,
+        0.38
+      ],
+      "height_range_m": [
+        0.4,
+        0.65
+      ],
+      "dimension_confidence": "proposed",
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "placement_status": "retained_by_homeowner_HD-15; dimensions_not_site_verified",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R05-DK01",
+      "room_id": "R05",
+      "kind": "study_desk_floating",
+      "bounds_m": [
+        6.005,
+        11.984,
+        6.555,
+        13.184
+      ],
+      "bounds_uv_m": [
+        3.372,
+        0.9,
+        4.572,
+        1.45
+      ],
+      "height_range_m": [
+        0.6,
+        0.75
+      ],
+      "dimension_confidence": "proposed_on_proposed_return",
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "placement_status": "retained_by_homeowner_HD-15; dimensions_not_site_verified",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R05-OH01",
+      "room_id": "R05",
+      "kind": "study_overhead_unit",
+      "bounds_m": [
+        6.005,
+        11.984,
+        6.355,
+        13.184
+      ],
+      "bounds_uv_m": [
+        3.372,
+        0.9,
+        4.572,
+        1.25
+      ],
+      "height_range_m": [
+        1.35,
+        2.1
+      ],
+      "dimension_confidence": "proposed_on_proposed_return",
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "placement_status": "retained_by_homeowner_HD-15; dimensions_not_site_verified",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R09-SH01",
+      "room_id": "R09",
+      "kind": "shoe_cabinet_exterior",
+      "bounds_m": [
+        0.552,
+        13.413,
+        1.752,
+        13.763
+      ],
+      "height_range_m": [
+        0.0,
+        0.9
+      ],
+      "dimension_confidence": "proposed_on_inferred_vector_wall",
+      "capacity": "~18-20 pairs",
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R08-LF01",
+      "room_id": "R08",
+      "kind": "loft_existing_rcc_shelf_with_shutters",
+      "bounds_m": [
+        4.404,
+        0.305,
+        4.955,
+        1.417
+      ],
+      "height_range_m": [
+        1.9,
+        2.95
+      ],
+      "dimension_confidence": "assumed_existing_loft_geometry_field_hold",
+      "gross_volume_m3": 0.597,
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R08-UC01",
+      "room_id": "R08",
+      "kind": "under_counter_shutters_optional",
+      "bounds_m": [
+        4.404,
+        0.305,
+        4.955,
+        1.417
+      ],
+      "height_range_m": [
+        0.0,
+        0.8
+      ],
+      "dimension_confidence": "inferred_vector_counter",
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "scope_status": "homeowner_selected_subject_to_site_holds",
+      "scope_decision_ref": "HS-R08-UNDERCOUNTER",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    },
+    {
+      "id": "ST-R08-LD01",
+      "room_id": "R08",
+      "kind": "wall_hooks_ladder_mop",
+      "bounds_m": [
+        2.72,
+        1.311,
+        3.28,
+        1.461
+      ],
+      "height_range_m": [
+        0.1,
+        1.55
+      ],
+      "dimension_confidence": "proposed",
+      "approval_status": "joinery_details_proposed_not_fabrication_approved",
+      "height_status": "unmeasured_reference_envelope; loft_geometry_not_ceiling_reconciled"
+    }
+  ],
+  "R04": {
+    "room_rect_m": [
+      5.1054,
+      0.2246376,
+      8.9154,
+      4.9109376
+    ],
+    "south_wardrobe_zones_m": [
+      [
+        5.1054,
+        0.2246376,
+        6.5538096,
+        0.8546376000000008
+      ],
+      [
+        7.4669904,
+        0.2246376,
+        8.9154,
+        0.8546376000000008
+      ]
+    ],
+    "window_bay_m": [
+      6.5538096,
+      0.2246376,
+      7.4669904,
+      0.8546376000000008
+    ],
+    "W03_span_m": [
+      6.5538096,
+      7.4669904
+    ],
+    "W04_span_m": [
+      3.0824424,
+      4.908804
+    ],
+    "D02_span_m": [
+      4.0501824,
+      4.9115472
+    ],
+    "status": "homeowner_approved_in_principle_relationship_placeholders_not_fabrication_design",
+    "decision_ref": "HS-MBR-SPLIT-WARDROBE",
+    "relationships": "SOUTH wardrobes/W03; WEST headboard/W04 north end; EAST TV/door",
+    "compartments": "Provisional adult bays and heights are in wardrobe-interiors.json; they remain unapproved and unmeasured.",
+    "reference_cost_capacity": {
+      "run_m": 2.75,
+      "leaves": 6,
+      "shelves": 12,
+      "drawers": 4,
+      "long_hang_m": 1.72,
+      "short_hang_m": 0.86,
+      "loft_gross_m3": 1.444
+    },
+    "site_holds": [
+      "OI-MBR-03",
+      "OI-BED-01",
+      "W03/W04 jambs and heads",
+      "loft/pocket support section"
+    ]
+  },
+  "R05": {
+    "frame": {
+      "units": "metres",
+      "origin_xz_m": [
+        5.1054,
+        8.6123376
+      ],
+      "u_axis_xz": [
+        0,
+        1
+      ],
+      "v_axis_xz": [
+        1,
+        0
+      ],
+      "u_span_m": 4.572,
+      "v_span_m": 3.81,
+      "compass_bearing": {
+        "ref": "visualization_geometry.orientation",
+        "sheet_down_+z": "north",
+        "sheet_right_+x": "west"
+      },
+      "placement_basis": "Proposed global assembly: carry-forward east inner face minus confirmed room width; coordinated common-bath south face plus proposed 120 mm partition. This is not a surveyed anchor.",
+      "dimension_basis": "Homeowner-confirmed 12 ft 6 in x 15 ft nominal room sizes. Their interpretation as outer bounding clear extents, rather than net extents around the return, still needs site confirmation."
+    },
+    "door_opening_v_m": [
+      0.16,
+      1.01
+    ],
+    "return_bounds_uv_m": [
+      2.822,
+      0.0,
+      4.572,
+      0.9
+    ],
+    "curtain_track_u_m": [
+      3.62,
+      4.572
+    ],
+    "curtain_plane_v_m": 3.7046,
+    "window_placeholder_u_m": [
+      3.7,
+      4.45
+    ],
+    "bed_envelope_uv_m": [
+      1.38,
+      1.68,
+      3.06,
+      3.81
+    ],
+    "bed_scope": "Tenant-supplied planning envelope, not joinery and not a universal size limit",
+    "route_gap_m": 0.3876,
+    "route_target_m": 0.6,
+    "route_status": "HD-15 retains layout; held site check, not comfortable route or statutory target",
+    "loft_presence_continuity": "Homeowner-confirmed; support, dimensions and material unverified",
+    "loft_leaf_discrepancy": {
+      "proposed_drawing": 6,
+      "cost_allowance": 8,
+      "resolution": "unselected; no reprice"
+    }
+  },
+  "quantity_model_inputs": {
+    "R04": [
+      2.7,
+      6,
+      12,
+      4,
+      6,
+      0.45,
+      2,
+      2.574,
+      2.75,
+      6,
+      1
+    ],
+    "R05": [
+      2.0,
+      4,
+      12,
+      2,
+      4,
+      0.5,
+      1,
+      1.4325,
+      3.81,
+      8,
+      1
+    ],
+    "R04a": [
+      1.55,
+      4,
+      22,
+      1,
+      4,
+      0.3875,
+      1,
+      0,
+      1.67,
+      4,
+      1
+    ]
+  },
+  "quantity_hold": "R04 quantities use a single 2.75 m reference run (2.70 m of wardrobe leaves), not the split south-wall zones. Re-quantify after W03, curtain pockets, lofts and shutters are measured/designed. R05 loft drawing has six proposed leaves but the equal-scope cost model allows eight; reconcile before ordering.",
+  "field_holds": [
+    {
+      "id": "H-LOFT",
+      "status": "open",
+      "check": "Measure loft soffit/top/depth/support in every room and flat; reconcile ceiling pockets and confirm load."
+    },
+    {
+      "id": "OI-MBR-03",
+      "status": "open",
+      "check": "Measure and design R04 split joinery around W03; no old furniture coordinates are active."
+    },
+    {
+      "id": "OI-BED-01",
+      "status": "open",
+      "check": "Check actual tenant queen/king frames, access, curtain stacks and switch/socket reach."
+    },
+    {
+      "id": "CC-R05-12",
+      "status": "layout_retained_HD-15_site_check",
+      "check": "387.6 mm calculated corner gap; do not call it a comfortable route."
+    },
+    {
+      "id": "FH-ST-03",
+      "status": "open",
+      "check": "Dressing clear width >=1.05 m plus actual door and cabinet operation."
+    },
+    {
+      "id": "FH-ST-12",
+      "status": "open",
+      "check": "Utility cabinet: measure actual dimensions, plumbing, services and maintenance access."
+    },
+    {
+      "id": "FH-ST-04/05/06/07/08/10",
+      "status": "open",
+      "check": "Door/window sizes and swings; plumb/levels; moisture; utility conflict; electrical and AC interfaces."
+    }
+  ],
+  "cost_comparison": {
+    "status": "indicative_comparison_R04_requantity_Phase_C_not_quotes",
+    "evidence_file": "storage-design/cost-evidence.json",
+    "basis": {
+      "scope": "Equal reference quantities across materials; R04 and R05 loft quantities require reconciliation.",
+      "R04_quantity_status": "old_single_run_reference_only_Phase_C_requantity",
+      "R04_quantity_hold": "R04 quantities use a single 2.75 m reference run (2.70 m of wardrobe leaves), not the split south-wall zones. Re-quantify after W03, curtain pockets, lofts and shutters are measured/designed. R05 loft drawing has six proposed leaves but the equal-scope cost model allows eight; reconcile before ordering.",
+      "superseded_by": [
+        "visualization_geometry.master_layout",
+        "OI-MBR-03"
+      ],
+      "common_scope": "Ancillary items repeated in each flat, not building common areas; selected UC01 is included subject to site fit.",
+      "allowance_tax_basis": "Tax-unnormalised allowances; not verified pre-GST totals or supplier quotes.",
+      "common_fit_hold": "Tenant beds excluded (HD-05); fixed bedside joinery omitted (HD-14).",
+      "finish": "1 mm decorative laminate outside, 0.8 mm liner inside for board options; powder coat/ACP for OPT-B1",
+      "excludes": "beds (tenant-supplied, HD-05), wall leak repair/waterproofing (prerequisite for every option), loft slab structural work, electrical, designer/turnkey margin, transport to upper floors",
+      "gst_note": "GST is not normalised: only F1 (ply MRP) is stated as including GST; other source treatment is incomplete. These allowances are not verified pre-GST totals and cannot establish compliance with HD-06's before-GST target. No reliable tax bound can be inferred by dividing a mixed total by one rate; obtain itemised, tax-normalised quotes.",
+      "hinge_rule": "F31 Hettich Sensys guide: 4 hinges per 2.0 m leaf, 2 per 0.85 m loft leaf (guide only, no kg rating)",
+      "price_status": "no dealer quotes; every rate tagged sourced_article/listing/forum, UNVERIFIED or ASSUMED"
+    },
+    "rates": {
+      "ply18": {
+        "low": 125,
+        "high": 171,
+        "unit": "INR/sqft",
+        "evidence": "F3 low (Greenply 710 dealer), F1 high (Century Club Prime IS 710 MRP)",
+        "status": "sourced_article"
+      },
+      "ply9": {
+        "low": 75,
+        "high": 103,
+        "unit": "INR/sqft",
+        "evidence": "0.6 x ply18 (thin IS 710 back)",
+        "status": "UNVERIFIED_derived"
+      },
+      "hdhmr18": {
+        "low": 87,
+        "high": 130,
+        "unit": "INR/sqft",
+        "evidence": "F9 typical dealer low, F8 high",
+        "status": "sourced_article"
+      },
+      "lam1": {
+        "low": 34,
+        "high": 63,
+        "unit": "INR/sqft",
+        "evidence": "F13 1,100/sheet .. F12 mid 2,000/sheet over 32 sqft",
+        "status": "sourced_listing_article"
+      },
+      "liner": {
+        "low": 22,
+        "high": 30,
+        "unit": "INR/sqft",
+        "evidence": "F13 0.8 mm 700-975/sheet",
+        "status": "sourced_listing"
+      },
+      "edge": {
+        "low": 15,
+        "high": 30,
+        "unit": "INR/rm",
+        "evidence": "2 mm PVC edge band, applied",
+        "status": "UNVERIFIED"
+      },
+      "granite": {
+        "low": 45,
+        "high": 140,
+        "unit": "INR/sqft",
+        "evidence": "F19/F20 low, F21 high (thickness unstated; 12 mm stock NOT FOUND)",
+        "status": "sourced_article_conflicting"
+      },
+      "thin_premium": {
+        "low": 0.0,
+        "high": 0.3,
+        "unit": "fraction on granite",
+        "evidence": "12 mm calibrated thin panels: stock NOT FOUND; slab rates above are for standard 16-20 mm slabs",
+        "status": "ASSUMED"
+      },
+      "stone_install": {
+        "low": 40,
+        "high": 100,
+        "unit": "INR/sqft stone",
+        "evidence": "vertical carcass/lining assembly, propping, 2-person handling, epoxy cure; by analogy with F21 labour 50-120 (F19/F20 20-50 is horizontal flooring)",
+        "status": "UNVERIFIED"
+      },
+      "granite_fab": {
+        "low": 50,
+        "high": 120,
+        "unit": "INR/sqft stone",
+        "evidence": "F21 labour band; flooring labour F19/F20 20-50 is too low for cut carcass work",
+        "status": "UNVERIFIED_adjusted"
+      },
+      "stone_edge": {
+        "low": 25,
+        "high": 60,
+        "unit": "INR/rft",
+        "evidence": "edge polish/chamfer (NOT FOUND)",
+        "status": "UNVERIFIED"
+      },
+      "plinth_stone": {
+        "low": 32,
+        "high": 85,
+        "unit": "INR/sqft",
+        "evidence": "F22 cuddapah 32-45 .. F19 granite 85",
+        "status": "sourced_article_listing"
+      },
+      "plinth_lay": {
+        "low": 20,
+        "high": 50,
+        "unit": "INR/sqft",
+        "evidence": "F19/F20 stone laying labour",
+        "status": "sourced_article"
+      },
+      "kerb": {
+        "low": 300,
+        "high": 600,
+        "unit": "INR/rm",
+        "evidence": "100 mm solid block kerb + plaster under plinth",
+        "status": "UNVERIFIED"
+      },
+      "stone_fix": {
+        "low": 4000,
+        "high": 10000,
+        "unit": "INR/wardrobe",
+        "evidence": "SS angles, epoxy, sleeve anchors for granite carcass",
+        "status": "UNVERIFIED"
+      },
+      "hinge": {
+        "low": 250,
+        "high": 441,
+        "unit": "INR/each",
+        "evidence": "F24 Hettich Sensys 8645i soft-close (500/pair .. MRP 882/pair)",
+        "status": "sourced_article"
+      },
+      "runner": {
+        "low": 1254,
+        "high": 3400,
+        "unit": "INR/drawer",
+        "evidence": "F26 500 mm ball-bearing pair (not soft-close) .. F27 Hettich InnoTech soft-close",
+        "status": "sourced_article"
+      },
+      "rail": {
+        "low": 250,
+        "high": 600,
+        "unit": "INR/m",
+        "evidence": "oval SS/Al hanging rail with brackets (NOT FOUND)",
+        "status": "UNVERIFIED"
+      },
+      "handle": {
+        "low": 150,
+        "high": 600,
+        "unit": "INR/leaf",
+        "evidence": "knob/pull",
+        "status": "UNVERIFIED"
+      },
+      "lock": {
+        "low": 150,
+        "high": 400,
+        "unit": "INR/each",
+        "evidence": "drawer cam lock",
+        "status": "UNVERIFIED"
+      },
+      "pins": {
+        "low": 40,
+        "high": 80,
+        "unit": "INR/shelf",
+        "evidence": "4 shelf supports",
+        "status": "UNVERIFIED"
+      },
+      "carpenter": {
+        "low": 150,
+        "high": 250,
+        "unit": "INR/sqft front",
+        "evidence": "F35 Hyderabad labour-only",
+        "status": "sourced_forum"
+      },
+      "lam_labour": {
+        "low": 25,
+        "high": 90,
+        "unit": "INR/sqft front",
+        "evidence": "F35 on-site lamination add",
+        "status": "sourced_forum"
+      },
+      "alu_kg": {
+        "low": 470,
+        "high": 555,
+        "unit": "INR/kg",
+        "evidence": "F18 mill 430-475 + powder coat 40-80 (UNVERIFIED)",
+        "status": "partly_sourced"
+      },
+      "alu_kgm": {
+        "low": 0.45,
+        "high": 0.75,
+        "unit": "kg/m",
+        "evidence": "1.2-1.5 mm wall frame/shutter sections (section weight NOT FOUND)",
+        "status": "ASSUMED"
+      },
+      "acp": {
+        "low": 80,
+        "high": 160,
+        "unit": "INR/sqft",
+        "evidence": "4 mm ACP infill (NOT FOUND)",
+        "status": "UNVERIFIED"
+      },
+      "alu_fab": {
+        "low": 150,
+        "high": 300,
+        "unit": "INR/sqft front",
+        "evidence": "fabricator labour, by analogy with F35",
+        "status": "UNVERIFIED"
+      },
+      "wastage_board": {
+        "low": 0.1,
+        "high": 0.15,
+        "unit": "fraction",
+        "evidence": "sheet offcuts",
+        "status": "ASSUMED"
+      },
+      "wastage_stone": {
+        "low": 0.15,
+        "high": 0.25,
+        "unit": "fraction",
+        "evidence": "thin-stone breakage/offcuts",
+        "status": "ASSUMED"
+      }
+    },
+    "market_crosschecks": {
+      "ply_turnkey_front": {
+        "low": 1000,
+        "high": 3800,
+        "unit": "INR/sqft front",
+        "evidence": "F34 Livspace plywood 1,000-1,500 .. F33 Hyderabad BWP+lam 2,800-3,800 (bases undefined)"
+      },
+      "alu_turnkey_front": {
+        "low": 750,
+        "high": 1800,
+        "unit": "INR/sqft front",
+        "evidence": "F17 Bengaluru 750-1,150 excl tax; F15 hinged 800-1,400; F16 Hyderabad 850-1,800 (snippet)"
+      }
+    },
+    "units": [
+      {
+        "id": "ST-R04-WR01+LF01",
+        "room_id": "R04",
+        "conditional": false,
+        "front_elevation_sqft": 89.2,
+        "quantities": {
+          "carcass_m2": 11.252,
+          "shelves_m2": 2.831,
+          "drawer_box_m2": 0.84,
+          "drawer_bottom_m2": 0.8,
+          "back_m2": 5.4,
+          "shutter_m2": 5.4,
+          "loft_shutter_m2": 2.337,
+          "loft_frame_m2": 0.911,
+          "ply_plinth_m2": 1.08,
+          "stone_plinth_m2": 1.905,
+          "exposed_end_m2": 1.16,
+          "edge_rm": 69.648,
+          "stone_edge_rft": 80.538,
+          "hinges": 36,
+          "front_sqft": 89.152,
+          "alu_carcass_m": 54.552,
+          "alu_shutter_m": 47.8
+        },
+        "quantity_status": "old_single_run_Phase_C_requantity_OI-MBR-03"
+      },
+      {
+        "id": "ST-R05-WR01+LF01",
+        "room_id": "R05",
+        "conditional": false,
+        "front_elevation_sqft": 84.2,
+        "quantities": {
+          "carcass_m2": 8.12,
+          "shelves_m2": 3.151,
+          "drawer_box_m2": 0.42,
+          "drawer_bottom_m2": 0.4,
+          "back_m2": 4.0,
+          "shutter_m2": 4.0,
+          "loft_shutter_m2": 3.239,
+          "loft_frame_m2": 1.213,
+          "ply_plinth_m2": 0.8,
+          "stone_plinth_m2": 1.415,
+          "exposed_end_m2": 1.16,
+          "edge_rm": 60.95,
+          "stone_edge_rft": 64.731,
+          "hinges": 32,
+          "front_sqft": 84.168,
+          "alu_carcass_m": 45.585,
+          "alu_shutter_m": 43.22
+        },
+        "quantity_status": "retained_proposal_not_replaced"
+      },
+      {
+        "id": "ST-R04a-WR01+LF01",
+        "room_id": "R04a",
+        "conditional": false,
+        "front_elevation_sqft": 52.1,
+        "quantities": {
+          "carcass_m2": 3.668,
+          "shelves_m2": 2.088,
+          "drawer_box_m2": 0.21,
+          "drawer_bottom_m2": 0.2,
+          "back_m2": 3.1,
+          "shutter_m2": 3.1,
+          "loft_shutter_m2": 1.419,
+          "loft_frame_m2": 0.607,
+          "ply_plinth_m2": 0.62,
+          "stone_plinth_m2": 0.628,
+          "exposed_end_m2": 0.56,
+          "edge_rm": 50.37,
+          "stone_edge_rft": 69.324,
+          "hinges": 24,
+          "front_sqft": 52.113,
+          "alu_carcass_m": 43.215,
+          "alu_shutter_m": 30.79
+        },
+        "quantity_status": "retained_proposal_not_replaced",
+        "scope_status": "homeowner_selected_site_fit_unverified"
+      }
+    ],
+    "options": {
+      "OPT-A": {
+        "name": "All BWP plywood (IS 710) carcass + shutters, laminate, ply plinth",
+        "aluminium_type": null,
+        "per_unit": {
+          "ST-R04-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              89020,
+              152010
+            ],
+            "inr_per_sqft_front": [
+              999,
+              1705
+            ],
+            "breakdown": {
+              "carcass_board": [
+                23690,
+                33870
+              ],
+              "back_board": [
+                5510,
+                7900
+              ],
+              "shutters_board": [
+                12800,
+                18310
+              ],
+              "laminate_liner_edge": [
+                14180,
+                21640
+              ],
+              "labour": [
+                15600,
+                30310
+              ],
+              "hardware": [
+                17240,
+                39980
+              ]
+            },
+            "weights_kg": {
+              "board": 314.0,
+              "laminate": 50.2
+            },
+            "installed_weight_kg_excl_contents": 364.2,
+            "footprint_m2": 1.72,
+            "dead_load_kN_per_m2_footprint_excl_contents": 2.08
+          },
+          "ST-R05-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              75000,
+              127460
+            ],
+            "inr_per_sqft_front": [
+              891,
+              1514
+            ],
+            "breakdown": {
+              "carcass_board": [
+                18490,
+                26440
+              ],
+              "back_board": [
+                3910,
+                5610
+              ],
+              "shutters_board": [
+                12510,
+                17890
+              ],
+              "laminate_liner_edge": [
+                12060,
+                18570
+              ],
+              "labour": [
+                14730,
+                28620
+              ],
+              "hardware": [
+                13300,
+                30330
+              ]
+            },
+            "weights_kg": {
+              "board": 256.6,
+              "laminate": 42.6
+            },
+            "installed_weight_kg_excl_contents": 299.2,
+            "footprint_m2": 1.28,
+            "dead_load_kN_per_m2_footprint_excl_contents": 2.3
+          },
+          "ST-R04a-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              46070,
+              78900
+            ],
+            "inr_per_sqft_front": [
+              884,
+              1514
+            ],
+            "breakdown": {
+              "carcass_board": [
+                9750,
+                13940
+              ],
+              "back_board": [
+                2930,
+                4210
+              ],
+              "shutters_board": [
+                7590,
+                10850
+              ],
+              "laminate_liner_edge": [
+                7200,
+                11240
+              ],
+              "labour": [
+                9120,
+                17720
+              ],
+              "hardware": [
+                9480,
+                20940
+              ]
+            },
+            "weights_kg": {
+              "board": 149.2,
+              "laminate": 23.6
+            },
+            "installed_weight_kg_excl_contents": 172.9,
+            "footprint_m2": 0.52,
+            "dead_load_kN_per_m2_footprint_excl_contents": 3.26,
+            "scope_status": "homeowner_selected_site_fit_unverified"
+          }
+        },
+        "qualitative": {
+          "moisture": "fair: ply plinth on floor wicks mopping water; back panel against wall",
+          "termite": "fair: IS 710 calls for preservative treatment (ask for the declaration); floor/wall contact is the weak point",
+          "rental_damage": "good: shutters and shelves replaceable by any carpenter",
+          "repairability": "good",
+          "site_risk": "low",
+          "lead_time": "board stock; 2-4 weeks carpentry per flat (ASSUMED)"
+        },
+        "base_wardrobes_lofts_per_flat_inr": [
+          210090,
+          358370
+        ],
+        "per_flat_incl_required_common_inr": [
+          262870,
+          459410
+        ],
+        "four_flats_incl_required_common_inr": [
+          1051480,
+          1837640
+        ],
+        "totals_note": "Both selections are included using the R04a cabinet and R08 shutter allowances; R08 carcass/partition/shelf and shoe carcass/shelf supports are unpriced. Site fit remains unverified, pull-outs are separate and beds/bedsides excluded.",
+        "base_weight_per_flat_kg": 663,
+        "reference_R04_R05_wardrobes_lofts_per_flat_inr": [
+          164020,
+          279470
+        ],
+        "reference_before_selected_cabinets_per_flat_inr": [
+          209600,
+          369470
+        ],
+        "selected_R04a_component_per_flat_inr": [
+          46070,
+          78900
+        ],
+        "selected_UC01_component_per_flat_inr": [
+          7200,
+          11040
+        ],
+        "provisional_pullout_delta_per_flat_inr": [
+          3000,
+          7500
+        ],
+        "per_flat_incl_provisional_pullouts_inr": [
+          265870,
+          466910
+        ],
+        "four_flats_incl_provisional_pullouts_inr": [
+          1063480,
+          1867640
+        ]
+      },
+      "OPT-E": {
+        "name": "HOMEOWNER-SELECTED: BWP plywood carcass and laminate shutters; stone base and vent gap remain proposed details",
+        "aluminium_type": null,
+        "per_unit": {
+          "ST-R04-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              89200,
+              153940
+            ],
+            "inr_per_sqft_front": [
+              1001,
+              1727
+            ],
+            "breakdown": {
+              "carcass_board": [
+                22090,
+                31590
+              ],
+              "back_board": [
+                5510,
+                7900
+              ],
+              "shutters_board": [
+                12800,
+                18310
+              ],
+              "laminate_liner_edge": [
+                14080,
+                21460
+              ],
+              "labour": [
+                15600,
+                30310
+              ],
+              "stone_plinth_kerb": [
+                1880,
+                4390
+              ],
+              "hardware": [
+                17240,
+                39980
+              ]
+            },
+            "weights_kg": {
+              "stone": 102.9,
+              "board": 301.4,
+              "laminate": 50.2
+            },
+            "installed_weight_kg_excl_contents": 454.4,
+            "footprint_m2": 1.72,
+            "dead_load_kN_per_m2_footprint_excl_contents": 2.6
+          },
+          "ST-R05-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              75130,
+              128890
+            ],
+            "inr_per_sqft_front": [
+              893,
+              1531
+            ],
+            "breakdown": {
+              "carcass_board": [
+                17300,
+                24750
+              ],
+              "back_board": [
+                3910,
+                5610
+              ],
+              "shutters_board": [
+                12510,
+                17890
+              ],
+              "laminate_liner_edge": [
+                11990,
+                18430
+              ],
+              "labour": [
+                14730,
+                28620
+              ],
+              "stone_plinth_kerb": [
+                1390,
+                3260
+              ],
+              "hardware": [
+                13300,
+                30330
+              ]
+            },
+            "weights_kg": {
+              "stone": 76.4,
+              "board": 247.2,
+              "laminate": 42.6
+            },
+            "installed_weight_kg_excl_contents": 366.2,
+            "footprint_m2": 1.28,
+            "dead_load_kN_per_m2_footprint_excl_contents": 2.82
+          },
+          "ST-R04a-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              45910,
+              79320
+            ],
+            "inr_per_sqft_front": [
+              881,
+              1522
+            ],
+            "breakdown": {
+              "carcass_board": [
+                8830,
+                12630
+              ],
+              "back_board": [
+                2930,
+                4210
+              ],
+              "shutters_board": [
+                7590,
+                10850
+              ],
+              "laminate_liner_edge": [
+                7140,
+                11130
+              ],
+              "labour": [
+                9120,
+                17720
+              ],
+              "stone_plinth_kerb": [
+                820,
+                1840
+              ],
+              "hardware": [
+                9480,
+                20940
+              ]
+            },
+            "weights_kg": {
+              "stone": 33.9,
+              "board": 142.0,
+              "laminate": 23.6
+            },
+            "installed_weight_kg_excl_contents": 199.5,
+            "footprint_m2": 0.52,
+            "dead_load_kN_per_m2_footprint_excl_contents": 3.77,
+            "scope_status": "homeowner_selected_site_fit_unverified"
+          }
+        },
+        "qualitative": {
+          "moisture": "good: no wood touches floor (stone plinth) or wall (25 mm vented gap)",
+          "termite": "good-fair: wood isolated from masonry/floor; inspectable gap",
+          "rental_damage": "good: shutters, shelves, drawers swap without touching stone/walls",
+          "repairability": "good",
+          "site_risk": "low",
+          "lead_time": "as OPT-A + 1-2 days mason for kerb/plinth"
+        },
+        "base_wardrobes_lofts_per_flat_inr": [
+          210240,
+          362150
+        ],
+        "per_flat_incl_required_common_inr": [
+          263020,
+          463190
+        ],
+        "four_flats_incl_required_common_inr": [
+          1052080,
+          1852760
+        ],
+        "totals_note": "Both selections are included using the R04a cabinet and R08 shutter allowances; R08 carcass/partition/shelf and shoe carcass/shelf supports are unpriced. Site fit remains unverified, pull-outs are separate and beds/bedsides excluded.",
+        "base_weight_per_flat_kg": 821,
+        "reference_R04_R05_wardrobes_lofts_per_flat_inr": [
+          164330,
+          282830
+        ],
+        "reference_before_selected_cabinets_per_flat_inr": [
+          209910,
+          372830
+        ],
+        "selected_R04a_component_per_flat_inr": [
+          45910,
+          79320
+        ],
+        "selected_UC01_component_per_flat_inr": [
+          7200,
+          11040
+        ],
+        "provisional_pullout_delta_per_flat_inr": [
+          3000,
+          7500
+        ],
+        "per_flat_incl_provisional_pullouts_inr": [
+          266020,
+          470690
+        ],
+        "four_flats_incl_provisional_pullouts_inr": [
+          1064080,
+          1882760
+        ]
+      },
+      "OPT-E-H": {
+        "name": "Unselected variant: OPT-E with HDHMR 18 mm laminate shutters",
+        "aluminium_type": null,
+        "per_unit": {
+          "ST-R04-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              85310,
+              149550
+            ],
+            "inr_per_sqft_front": [
+              957,
+              1677
+            ],
+            "breakdown": {
+              "carcass_board": [
+                22090,
+                31590
+              ],
+              "back_board": [
+                5510,
+                7900
+              ],
+              "shutters_board": [
+                8910,
+                13920
+              ],
+              "laminate_liner_edge": [
+                14080,
+                21460
+              ],
+              "labour": [
+                15600,
+                30310
+              ],
+              "stone_plinth_kerb": [
+                1880,
+                4390
+              ],
+              "hardware": [
+                17240,
+                39980
+              ]
+            },
+            "weights_kg": {
+              "stone": 102.9,
+              "board": 332.3,
+              "laminate": 50.2
+            },
+            "installed_weight_kg_excl_contents": 485.4,
+            "footprint_m2": 1.72,
+            "dead_load_kN_per_m2_footprint_excl_contents": 2.77
+          },
+          "ST-R05-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              71330,
+              124600
+            ],
+            "inr_per_sqft_front": [
+              847,
+              1480
+            ],
+            "breakdown": {
+              "carcass_board": [
+                17300,
+                24750
+              ],
+              "back_board": [
+                3910,
+                5610
+              ],
+              "shutters_board": [
+                8710,
+                13600
+              ],
+              "laminate_liner_edge": [
+                11990,
+                18430
+              ],
+              "labour": [
+                14730,
+                28620
+              ],
+              "stone_plinth_kerb": [
+                1390,
+                3260
+              ],
+              "hardware": [
+                13300,
+                30330
+              ]
+            },
+            "weights_kg": {
+              "stone": 76.4,
+              "board": 276.2,
+              "laminate": 42.6
+            },
+            "installed_weight_kg_excl_contents": 395.2,
+            "footprint_m2": 1.28,
+            "dead_load_kN_per_m2_footprint_excl_contents": 3.04
+          },
+          "ST-R04a-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              43600,
+              76720
+            ],
+            "inr_per_sqft_front": [
+              837,
+              1472
+            ],
+            "breakdown": {
+              "carcass_board": [
+                8830,
+                12630
+              ],
+              "back_board": [
+                2930,
+                4210
+              ],
+              "shutters_board": [
+                5280,
+                8250
+              ],
+              "laminate_liner_edge": [
+                7140,
+                11130
+              ],
+              "labour": [
+                9120,
+                17720
+              ],
+              "stone_plinth_kerb": [
+                820,
+                1840
+              ],
+              "hardware": [
+                9480,
+                20940
+              ]
+            },
+            "weights_kg": {
+              "stone": 33.9,
+              "board": 160.1,
+              "laminate": 23.6
+            },
+            "installed_weight_kg_excl_contents": 217.6,
+            "footprint_m2": 0.52,
+            "dead_load_kN_per_m2_footprint_excl_contents": 4.11,
+            "scope_status": "homeowner_selected_site_fit_unverified"
+          }
+        },
+        "qualitative": {
+          "moisture": "as OPT-E; HDHMR edges must be fully sealed",
+          "termite": "As OPT-E; HDHMR resistance is a product-specific claim (F9); verify certification.",
+          "rental_damage": "fair-good: HDHMR holds screws less well on re-fixing than ply",
+          "repairability": "good",
+          "site_risk": "low",
+          "lead_time": "as OPT-E"
+        },
+        "base_wardrobes_lofts_per_flat_inr": [
+          200240,
+          350870
+        ],
+        "per_flat_incl_required_common_inr": [
+          253020,
+          451910
+        ],
+        "four_flats_incl_required_common_inr": [
+          1012080,
+          1807640
+        ],
+        "totals_note": "Both selections are included using the R04a cabinet and R08 shutter allowances; R08 carcass/partition/shelf and shoe carcass/shelf supports are unpriced. Site fit remains unverified, pull-outs are separate and beds/bedsides excluded.",
+        "base_weight_per_flat_kg": 881,
+        "reference_R04_R05_wardrobes_lofts_per_flat_inr": [
+          156640,
+          274150
+        ],
+        "reference_before_selected_cabinets_per_flat_inr": [
+          202220,
+          364150
+        ],
+        "selected_R04a_component_per_flat_inr": [
+          43600,
+          76720
+        ],
+        "selected_UC01_component_per_flat_inr": [
+          7200,
+          11040
+        ],
+        "provisional_pullout_delta_per_flat_inr": [
+          3000,
+          7500
+        ],
+        "per_flat_incl_provisional_pullouts_inr": [
+          256020,
+          459410
+        ],
+        "four_flats_incl_provisional_pullouts_inr": [
+          1024080,
+          1837640
+        ]
+      },
+      "OPT-B1": {
+        "name": "Aluminium extrusion frame (powder-coated) + 4 mm ACP infill carcass and shutters (modular aluminium wardrobe)",
+        "aluminium_type": "extrusion frame + panel infill",
+        "per_unit": {
+          "ST-R04-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              81750,
+              172880
+            ],
+            "inr_per_sqft_front": [
+              917,
+              1939
+            ],
+            "breakdown": {
+              "aluminium_profiles": [
+                23810,
+                48990
+              ],
+              "acp_infill": [
+                25780,
+                53910
+              ],
+              "drawer_boxes": [
+                1550,
+                3250
+              ],
+              "labour": [
+                13370,
+                26750
+              ],
+              "hardware": [
+                17240,
+                39980
+              ]
+            },
+            "weights_kg": {
+              "aluminium_profiles_lo_hi": [
+                46.1,
+                76.8
+              ],
+              "acp": 149.7
+            },
+            "installed_weight_kg_excl_contents": 211.2,
+            "footprint_m2": 1.72,
+            "dead_load_kN_per_m2_footprint_excl_contents": 1.21
+          },
+          "ST-R05-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              68690,
+              144290
+            ],
+            "inr_per_sqft_front": [
+              816,
+              1714
+            ],
+            "breakdown": {
+              "aluminium_profiles": [
+                20660,
+                42510
+              ],
+              "acp_infill": [
+                21320,
+                44580
+              ],
+              "drawer_boxes": [
+                780,
+                1620
+              ],
+              "labour": [
+                12630,
+                25250
+              ],
+              "hardware": [
+                13300,
+                30330
+              ]
+            },
+            "weights_kg": {
+              "aluminium_profiles_lo_hi": [
+                40.0,
+                66.6
+              ],
+              "acp": 123.8
+            },
+            "installed_weight_kg_excl_contents": 177.1,
+            "footprint_m2": 1.28,
+            "dead_load_kN_per_m2_footprint_excl_contents": 1.36
+          },
+          "ST-R04a-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              47580,
+              99300
+            ],
+            "inr_per_sqft_front": [
+              913,
+              1905
+            ],
+            "breakdown": {
+              "aluminium_profiles": [
+                17220,
+                35430
+              ],
+              "acp_infill": [
+                12670,
+                26490
+              ],
+              "drawer_boxes": [
+                390,
+                810
+              ],
+              "labour": [
+                7820,
+                15630
+              ],
+              "hardware": [
+                9480,
+                20940
+              ]
+            },
+            "weights_kg": {
+              "aluminium_profiles_lo_hi": [
+                33.3,
+                55.5
+              ],
+              "acp": 73.6
+            },
+            "installed_weight_kg_excl_contents": 118.0,
+            "footprint_m2": 0.52,
+            "dead_load_kN_per_m2_footprint_excl_contents": 2.23,
+            "scope_status": "homeowner_selected_site_fit_unverified"
+          }
+        },
+        "qualitative": {
+          "moisture": "good: metal + ACP do not rot",
+          "termite": "good: no wood in carcass or shutters",
+          "rental_damage": "fair: ACP dents and creases, profile corners bend; panels replaceable by fabricator",
+          "repairability": "fair: needs same profile system/fabricator",
+          "site_risk": "low-medium: fabricator quality varies widely",
+          "lead_time": "fabricator 3-5 weeks (ASSUMED)"
+        },
+        "base_wardrobes_lofts_per_flat_inr": [
+          198020,
+          416470
+        ],
+        "per_flat_incl_required_common_inr": [
+          250800,
+          517510
+        ],
+        "four_flats_incl_required_common_inr": [
+          1003200,
+          2070040
+        ],
+        "totals_note": "Both selections are included using the R04a cabinet and R08 shutter allowances; R08 carcass/partition/shelf and shoe carcass/shelf supports are unpriced. Site fit remains unverified, pull-outs are separate and beds/bedsides excluded.",
+        "base_weight_per_flat_kg": 388,
+        "reference_R04_R05_wardrobes_lofts_per_flat_inr": [
+          150440,
+          317170
+        ],
+        "reference_before_selected_cabinets_per_flat_inr": [
+          196020,
+          407170
+        ],
+        "selected_R04a_component_per_flat_inr": [
+          47580,
+          99300
+        ],
+        "selected_UC01_component_per_flat_inr": [
+          7200,
+          11040
+        ],
+        "provisional_pullout_delta_per_flat_inr": [
+          3000,
+          7500
+        ],
+        "per_flat_incl_provisional_pullouts_inr": [
+          253800,
+          525010
+        ],
+        "four_flats_incl_provisional_pullouts_inr": [
+          1015200,
+          2100040
+        ]
+      },
+      "OPT-F": {
+        "name": "Aluminium extrusion carcass + ACP infill, BWP IS 710 laminate shutters (metal box, wood fronts)",
+        "aluminium_type": "extrusion frame + panel infill",
+        "per_unit": {
+          "ST-R04-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              86110,
+              171420
+            ],
+            "inr_per_sqft_front": [
+              966,
+              1923
+            ],
+            "breakdown": {
+              "aluminium_profiles": [
+                12690,
+                26110
+              ],
+              "acp_infill": [
+                18450,
+                38590
+              ],
+              "drawer_boxes": [
+                2430,
+                3470
+              ],
+              "shutters_board": [
+                12800,
+                18310
+              ],
+              "laminate_liner_edge": [
+                5710,
+                9830
+              ],
+              "labour": [
+                16790,
+                35130
+              ],
+              "hardware": [
+                17240,
+                39980
+              ]
+            },
+            "weights_kg": {
+              "board": 100.4,
+              "laminate": 17.8,
+              "aluminium_profiles_lo_hi": [
+                24.5,
+                40.9
+              ],
+              "acp": 107.2
+            },
+            "installed_weight_kg_excl_contents": 258.0,
+            "footprint_m2": 1.72,
+            "dead_load_kN_per_m2_footprint_excl_contents": 1.47
+          },
+          "ST-R05-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              73220,
+              144210
+            ],
+            "inr_per_sqft_front": [
+              870,
+              1713
+            ],
+            "breakdown": {
+              "aluminium_profiles": [
+                10610,
+                21820
+              ],
+              "acp_infill": [
+                14470,
+                30250
+              ],
+              "drawer_boxes": [
+                1210,
+                1740
+              ],
+              "shutters_board": [
+                12510,
+                17890
+              ],
+              "laminate_liner_edge": [
+                5280,
+                9080
+              ],
+              "labour": [
+                15840,
+                33100
+              ],
+              "hardware": [
+                13300,
+                30330
+              ]
+            },
+            "weights_kg": {
+              "board": 89.6,
+              "laminate": 16.6,
+              "aluminium_profiles_lo_hi": [
+                20.5,
+                34.2
+              ],
+              "acp": 84.0
+            },
+            "installed_weight_kg_excl_contents": 217.6,
+            "footprint_m2": 1.28,
+            "dead_load_kN_per_m2_footprint_excl_contents": 1.67
+          },
+          "ST-R04a-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              49410,
+              97450
+            ],
+            "inr_per_sqft_front": [
+              948,
+              1870
+            ],
+            "breakdown": {
+              "aluminium_profiles": [
+                10050,
+                20690
+              ],
+              "acp_infill": [
+                8390,
+                17540
+              ],
+              "drawer_boxes": [
+                610,
+                870
+              ],
+              "shutters_board": [
+                7590,
+                10850
+              ],
+              "laminate_liner_edge": [
+                3480,
+                6030
+              ],
+              "labour": [
+                9810,
+                20530
+              ],
+              "hardware": [
+                9480,
+                20940
+              ]
+            },
+            "weights_kg": {
+              "board": 55.3,
+              "laminate": 10.4,
+              "aluminium_profiles_lo_hi": [
+                19.4,
+                32.4
+              ],
+              "acp": 48.7
+            },
+            "installed_weight_kg_excl_contents": 140.3,
+            "footprint_m2": 0.52,
+            "dead_load_kN_per_m2_footprint_excl_contents": 2.65,
+            "scope_status": "homeowner_selected_site_fit_unverified"
+          }
+        },
+        "qualitative": {
+          "moisture": "good carcass; ply shutters as OPT-E",
+          "termite": "good carcass",
+          "rental_damage": "good: wood fronts replaceable, metal box durable",
+          "repairability": "fair-good: two trades",
+          "site_risk": "medium: two trades interface (hinges into aluminium)",
+          "lead_time": "fabricator + carpenter"
+        },
+        "base_wardrobes_lofts_per_flat_inr": [
+          208740,
+          413080
+        ],
+        "per_flat_incl_required_common_inr": [
+          261520,
+          514120
+        ],
+        "four_flats_incl_required_common_inr": [
+          1046080,
+          2056480
+        ],
+        "totals_note": "Both selections are included using the R04a cabinet and R08 shutter allowances; R08 carcass/partition/shelf and shoe carcass/shelf supports are unpriced. Site fit remains unverified, pull-outs are separate and beds/bedsides excluded.",
+        "base_weight_per_flat_kg": 476,
+        "reference_R04_R05_wardrobes_lofts_per_flat_inr": [
+          159330,
+          315630
+        ],
+        "reference_before_selected_cabinets_per_flat_inr": [
+          204910,
+          405630
+        ],
+        "selected_R04a_component_per_flat_inr": [
+          49410,
+          97450
+        ],
+        "selected_UC01_component_per_flat_inr": [
+          7200,
+          11040
+        ],
+        "provisional_pullout_delta_per_flat_inr": [
+          3000,
+          7500
+        ],
+        "per_flat_incl_provisional_pullouts_inr": [
+          264520,
+          521620
+        ],
+        "four_flats_incl_provisional_pullouts_inr": [
+          1058080,
+          2086480
+        ]
+      },
+      "OPT-C": {
+        "name": "User proposal: 12 mm granite carcass (sides, partitions, top, base, shelves) + ply shutters on bonded hinge strips",
+        "aluminium_type": null,
+        "per_unit": {
+          "ST-R04-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              79110,
+              185050
+            ],
+            "inr_per_sqft_front": [
+              887,
+              2076
+            ],
+            "breakdown": {
+              "granite_12mm": [
+                8910,
+                39150
+              ],
+              "granite_fab_edges_fixings": [
+                14620,
+                35480
+              ],
+              "stone_install_labour": [
+                6880,
+                17210
+              ],
+              "wood_in_granite_option": [
+                2660,
+                3810
+              ],
+              "back_board": [
+                710,
+                1020
+              ],
+              "shutters_board": [
+                12800,
+                18310
+              ],
+              "laminate_liner_edge": [
+                5710,
+                9830
+              ],
+              "labour": [
+                8770,
+                18640
+              ],
+              "stone_plinth_kerb": [
+                810,
+                1620
+              ],
+              "hardware": [
+                17240,
+                39980
+              ]
+            },
+            "weights_kg": {
+              "stone": 518.0,
+              "stone_if_16mm": 690.7,
+              "board": 111.6,
+              "laminate": 17.8
+            },
+            "installed_weight_kg_excl_contents": 647.4,
+            "footprint_m2": 1.72,
+            "dead_load_kN_per_m2_footprint_excl_contents": 3.7
+          },
+          "ST-R05-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              66860,
+              153780
+            ],
+            "inr_per_sqft_front": [
+              794,
+              1827
+            ],
+            "breakdown": {
+              "granite_12mm": [
+                7070,
+                31070
+              ],
+              "granite_fab_edges_fixings": [
+                12450,
+                30270
+              ],
+              "stone_install_labour": [
+                5460,
+                13660
+              ],
+              "wood_in_granite_option": [
+                1570,
+                2240
+              ],
+              "back_board": [
+                360,
+                510
+              ],
+              "shutters_board": [
+                12510,
+                17890
+              ],
+              "laminate_liner_edge": [
+                5280,
+                9080
+              ],
+              "labour": [
+                8260,
+                17530
+              ],
+              "stone_plinth_kerb": [
+                600,
+                1200
+              ],
+              "hardware": [
+                13300,
+                30330
+              ]
+            },
+            "weights_kg": {
+              "stone": 411.0,
+              "stone_if_16mm": 548.0,
+              "board": 97.1,
+              "laminate": 16.6
+            },
+            "installed_weight_kg_excl_contents": 524.8,
+            "footprint_m2": 1.28,
+            "dead_load_kN_per_m2_footprint_excl_contents": 4.04
+          },
+          "ST-R04a-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              43050,
+              96600
+            ],
+            "inr_per_sqft_front": [
+              826,
+              1854
+            ],
+            "breakdown": {
+              "granite_12mm": [
+                3560,
+                15630
+              ],
+              "granite_fab_edges_fixings": [
+                9170,
+                22410
+              ],
+              "stone_install_labour": [
+                2750,
+                6870
+              ],
+              "wood_in_granite_option": [
+                1260,
+                1800
+              ],
+              "back_board": [
+                180,
+                250
+              ],
+              "shutters_board": [
+                7590,
+                10850
+              ],
+              "laminate_liner_edge": [
+                3480,
+                6030
+              ],
+              "labour": [
+                5120,
+                10890
+              ],
+              "stone_plinth_kerb": [
+                460,
+                930
+              ],
+              "hardware": [
+                9480,
+                20940
+              ]
+            },
+            "weights_kg": {
+              "stone": 206.8,
+              "stone_if_16mm": 275.8,
+              "board": 62.8,
+              "laminate": 10.4
+            },
+            "installed_weight_kg_excl_contents": 280.1,
+            "footprint_m2": 0.52,
+            "dead_load_kN_per_m2_footprint_excl_contents": 5.29,
+            "scope_status": "homeowner_selected_site_fit_unverified"
+          }
+        },
+        "qualitative": {
+          "moisture": "fair: stone does not rot but condenses on cold external walls and offers no ventilated gap",
+          "termite": "good carcass; wood shutters/drawers remain",
+          "rental_damage": "poor: chipped/cracked stone panels cannot be patched invisibly; tenants drilling causes cracks",
+          "repairability": "poor: needs stone cutter, matching slab, epoxy",
+          "site_risk": "high: thin panels break in handling; 12 mm full-height stock not confirmed; hinges need bonded strips",
+          "lead_time": "slab sourcing + stone fabricator; slowest"
+        },
+        "base_wardrobes_lofts_per_flat_inr": [
+          189020,
+          435430
+        ],
+        "per_flat_incl_required_common_inr": [
+          241800,
+          536470
+        ],
+        "four_flats_incl_required_common_inr": [
+          967200,
+          2145880
+        ],
+        "totals_note": "Both selections are included using the R04a cabinet and R08 shutter allowances; R08 carcass/partition/shelf and shoe carcass/shelf supports are unpriced. Site fit remains unverified, pull-outs are separate and beds/bedsides excluded.",
+        "base_weight_per_flat_kg": 1172,
+        "reference_R04_R05_wardrobes_lofts_per_flat_inr": [
+          145970,
+          338830
+        ],
+        "reference_before_selected_cabinets_per_flat_inr": [
+          191550,
+          428830
+        ],
+        "selected_R04a_component_per_flat_inr": [
+          43050,
+          96600
+        ],
+        "selected_UC01_component_per_flat_inr": [
+          7200,
+          11040
+        ],
+        "provisional_pullout_delta_per_flat_inr": [
+          3000,
+          7500
+        ],
+        "per_flat_incl_provisional_pullouts_inr": [
+          244800,
+          543970
+        ],
+        "four_flats_incl_provisional_pullouts_inr": [
+          979200,
+          2175880
+        ]
+      },
+      "OPT-D": {
+        "name": "User scenario (re-planned, no wall trimming): 12 mm granite back lining + granite plinth + carpenter ply carcass without ply back",
+        "aluminium_type": null,
+        "per_unit": {
+          "ST-R04-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              94820,
+              181750
+            ],
+            "inr_per_sqft_front": [
+              1064,
+              2039
+            ],
+            "breakdown": {
+              "granite_12mm": [
+                4070,
+                17890
+              ],
+              "granite_fab_edges_fixings": [
+                6370,
+                15500
+              ],
+              "stone_install_labour": [
+                2330,
+                5810
+              ],
+              "carcass_board": [
+                22090,
+                31590
+              ],
+              "back_board": [
+                710,
+                1020
+              ],
+              "shutters_board": [
+                12800,
+                18310
+              ],
+              "laminate_liner_edge": [
+                12800,
+                19720
+              ],
+              "labour": [
+                15600,
+                30310
+              ],
+              "stone_plinth_kerb": [
+                810,
+                1620
+              ],
+              "hardware": [
+                17240,
+                39980
+              ]
+            },
+            "weights_kg": {
+              "stone": 277.8,
+              "board": 269.8,
+              "laminate": 50.2
+            },
+            "installed_weight_kg_excl_contents": 597.8,
+            "footprint_m2": 1.72,
+            "dead_load_kN_per_m2_footprint_excl_contents": 3.42
+          },
+          "ST-R05-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              79820,
+              150790
+            ],
+            "inr_per_sqft_front": [
+              948,
+              1792
+            ],
+            "breakdown": {
+              "granite_12mm": [
+                3020,
+                13260
+              ],
+              "granite_fab_edges_fixings": [
+                5240,
+                12780
+              ],
+              "stone_install_labour": [
+                1720,
+                4310
+              ],
+              "carcass_board": [
+                17300,
+                24750
+              ],
+              "back_board": [
+                360,
+                510
+              ],
+              "shutters_board": [
+                12510,
+                17890
+              ],
+              "laminate_liner_edge": [
+                11040,
+                17140
+              ],
+              "labour": [
+                14730,
+                28620
+              ],
+              "stone_plinth_kerb": [
+                600,
+                1200
+              ],
+              "hardware": [
+                13300,
+                30330
+              ]
+            },
+            "weights_kg": {
+              "stone": 206.0,
+              "board": 223.8,
+              "laminate": 42.6
+            },
+            "installed_weight_kg_excl_contents": 472.4,
+            "footprint_m2": 1.28,
+            "dead_load_kN_per_m2_footprint_excl_contents": 3.63
+          },
+          "ST-R04a-WR01+LF01": {
+            "conditional": false,
+            "inr": [
+              49740,
+              96350
+            ],
+            "inr_per_sqft_front": [
+              954,
+              1849
+            ],
+            "breakdown": {
+              "granite_12mm": [
+                2080,
+                9130
+              ],
+              "granite_fab_edges_fixings": [
+                4260,
+                10430
+              ],
+              "stone_install_labour": [
+                1330,
+                3340
+              ],
+              "carcass_board": [
+                8830,
+                12630
+              ],
+              "back_board": [
+                180,
+                250
+              ],
+              "shutters_board": [
+                7590,
+                10850
+              ],
+              "laminate_liner_edge": [
+                6410,
+                10130
+              ],
+              "labour": [
+                9120,
+                17720
+              ],
+              "stone_plinth_kerb": [
+                460,
+                930
+              ],
+              "hardware": [
+                9480,
+                20940
+              ]
+            },
+            "weights_kg": {
+              "stone": 134.4,
+              "board": 123.8,
+              "laminate": 23.6
+            },
+            "installed_weight_kg_excl_contents": 281.8,
+            "footprint_m2": 0.52,
+            "dead_load_kN_per_m2_footprint_excl_contents": 5.32,
+            "scope_status": "homeowner_selected_site_fit_unverified"
+          }
+        },
+        "qualitative": {
+          "moisture": "poor-fair: hides leaks rather than fixing them; no ventilated gap; adhesive needs a dry, sound wall",
+          "termite": "fair: ply carcass sides still touch side walls",
+          "rental_damage": "good for ply parts; stone back rarely damaged",
+          "repairability": "fair: back lining hard to inspect or remove",
+          "site_risk": "medium: wall-trim (cutting) NOT approved; lining only on repaired, dried walls",
+          "lead_time": "+ mason/stone fixer and drying time"
+        },
+        "base_wardrobes_lofts_per_flat_inr": [
+          224380,
+          428890
+        ],
+        "per_flat_incl_required_common_inr": [
+          277160,
+          529930
+        ],
+        "four_flats_incl_required_common_inr": [
+          1108640,
+          2119720
+        ],
+        "totals_note": "Both selections are included using the R04a cabinet and R08 shutter allowances; R08 carcass/partition/shelf and shoe carcass/shelf supports are unpriced. Site fit remains unverified, pull-outs are separate and beds/bedsides excluded.",
+        "base_weight_per_flat_kg": 1070,
+        "reference_R04_R05_wardrobes_lofts_per_flat_inr": [
+          174640,
+          332540
+        ],
+        "reference_before_selected_cabinets_per_flat_inr": [
+          220220,
+          422540
+        ],
+        "selected_R04a_component_per_flat_inr": [
+          49740,
+          96350
+        ],
+        "selected_UC01_component_per_flat_inr": [
+          7200,
+          11040
+        ],
+        "provisional_pullout_delta_per_flat_inr": [
+          3000,
+          7500
+        ],
+        "per_flat_incl_provisional_pullouts_inr": [
+          280160,
+          537430
+        ],
+        "four_flats_incl_provisional_pullouts_inr": [
+          1120640,
+          2149720
+        ]
+      }
+    },
+    "not_costed": [
+      {
+        "id": "OPT-B2",
+        "name": "Solid aluminium / aluminium honeycomb panel wardrobe",
+        "reason": "no India price found (NOT FOUND); premium imported-system category"
+      },
+      {
+        "id": "OPT-B3",
+        "name": "ACP sheet cladding over a board or frame (sold as 'aluminium wardrobe')",
+        "reason": "ACP is 3-4 mm composite skin, not structural; dents, exposed PE core at edges; treat listings at ~850/sqft (F17 snippet) with caution"
+      },
+      {
+        "id": "OPT-G",
+        "name": "Porcelain/sintered slab carcass",
+        "reason": "same fixing problems as granite with higher brittleness; not pursued (phase-1 verdict)"
+      }
+    ],
+    "common_per_flat": [
+      {
+        "item": "ST-R09-SH01 aluminium shoe fronts + stone top (carcass and shelves unpriced)",
+        "category": "required",
+        "optional": false,
+        "inr": [
+          9130,
+          14510
+        ],
+        "basis": "F17 alu front rate x 11.6 sqft + granite top 4.5 sqft (F19/F21 + fab)",
+        "decision_ref": null,
+        "fit_status": "retained_allowance"
+      },
+      {
+        "item": "ST-R08-LF01 aluminium loft shutters",
+        "category": "required",
+        "optional": false,
+        "inr": [
+          9450,
+          14490
+        ],
+        "basis": "F17 x 12.6 sqft front",
+        "decision_ref": null,
+        "fit_status": "retained_allowance"
+      },
+      {
+        "item": "ST-R08-UC01 selected under-counter shutters (carcass and shelves unpriced)",
+        "category": "required",
+        "optional": false,
+        "inr": [
+          7200,
+          11040
+        ],
+        "basis": "F17 x 9.6 sqft front",
+        "decision_ref": null,
+        "fit_status": "homeowner_selected_site_fit_unverified"
+      },
+      {
+        "item": "ST-R08-LD01 hooks/ladder/mop rail",
+        "category": "required",
+        "optional": false,
+        "inr": [
+          1000,
+          3000
+        ],
+        "basis": "UNVERIFIED allowance",
+        "decision_ref": null,
+        "fit_status": "retained_allowance"
+      },
+      {
+        "item": "ST-R05-TV01 floating console",
+        "category": "required",
+        "optional": false,
+        "inr": [
+          8000,
+          18000
+        ],
+        "basis": "UNVERIFIED allowance",
+        "decision_ref": null,
+        "fit_status": "retained_allowance"
+      },
+      {
+        "item": "ST-R05-DK01 + OH01 study desk and overhead",
+        "category": "required",
+        "optional": false,
+        "inr": [
+          18000,
+          40000
+        ],
+        "basis": "UNVERIFIED allowance",
+        "decision_ref": null,
+        "fit_status": "retained_allowance"
+      }
+    ],
+    "qualitative": {
+      "OPT-A": {
+        "moisture": "fair: ply plinth on floor wicks mopping water; back panel against wall",
+        "termite": "fair: IS 710 calls for preservative treatment (ask for the declaration); floor/wall contact is the weak point",
+        "rental_damage": "good: shutters and shelves replaceable by any carpenter",
+        "repairability": "good",
+        "site_risk": "low",
+        "lead_time": "board stock; 2-4 weeks carpentry per flat (ASSUMED)"
+      },
+      "OPT-E": {
+        "moisture": "good: no wood touches floor (stone plinth) or wall (25 mm vented gap)",
+        "termite": "good-fair: wood isolated from masonry/floor; inspectable gap",
+        "rental_damage": "good: shutters, shelves, drawers swap without touching stone/walls",
+        "repairability": "good",
+        "site_risk": "low",
+        "lead_time": "as OPT-A + 1-2 days mason for kerb/plinth"
+      },
+      "OPT-E-H": {
+        "moisture": "as OPT-E; HDHMR edges must be fully sealed",
+        "termite": "As OPT-E; HDHMR resistance is a product-specific claim (F9); verify certification.",
+        "rental_damage": "fair-good: HDHMR holds screws less well on re-fixing than ply",
+        "repairability": "good",
+        "site_risk": "low",
+        "lead_time": "as OPT-E"
+      },
+      "OPT-B1": {
+        "moisture": "good: metal + ACP do not rot",
+        "termite": "good: no wood in carcass or shutters",
+        "rental_damage": "fair: ACP dents and creases, profile corners bend; panels replaceable by fabricator",
+        "repairability": "fair: needs same profile system/fabricator",
+        "site_risk": "low-medium: fabricator quality varies widely",
+        "lead_time": "fabricator 3-5 weeks (ASSUMED)"
+      },
+      "OPT-F": {
+        "moisture": "good carcass; ply shutters as OPT-E",
+        "termite": "good carcass",
+        "rental_damage": "good: wood fronts replaceable, metal box durable",
+        "repairability": "fair-good: two trades",
+        "site_risk": "medium: two trades interface (hinges into aluminium)",
+        "lead_time": "fabricator + carpenter"
+      },
+      "OPT-C": {
+        "moisture": "fair: stone does not rot but condenses on cold external walls and offers no ventilated gap",
+        "termite": "good carcass; wood shutters/drawers remain",
+        "rental_damage": "poor: chipped/cracked stone panels cannot be patched invisibly; tenants drilling causes cracks",
+        "repairability": "poor: needs stone cutter, matching slab, epoxy",
+        "site_risk": "high: thin panels break in handling; 12 mm full-height stock not confirmed; hinges need bonded strips",
+        "lead_time": "slab sourcing + stone fabricator; slowest"
+      },
+      "OPT-D": {
+        "moisture": "poor-fair: hides leaks rather than fixing them; no ventilated gap; adhesive needs a dry, sound wall",
+        "termite": "fair: ply carcass sides still touch side walls",
+        "rental_damage": "good for ply parts; stone back rarely damaged",
+        "repairability": "fair: back lining hard to inspect or remove",
+        "site_risk": "medium: wall-trim (cutting) NOT approved; lining only on repaired, dried walls",
+        "lead_time": "+ mason/stone fixer and drying time"
+      }
+    },
+    "common_totals_per_flat": {
+      "required_inr": [
+        52780,
+        101040
+      ],
+      "selected_UC01_component_inr": [
+        7200,
+        11040
+      ]
+    },
+    "rounding_rule": "Round each cost line to INR 10, sum displayed lines into units and required per-flat totals. Four flats = exactly 4 x the per-flat endpoint. The unverified pull-out delta is separate.",
+    "budget_comparison": {
+      "decision_ref": "HD-06",
+      "target_per_flat_inr": [
+        250000,
+        350000
+      ],
+      "target_basis": "mid band, per flat, before GST, excluding beds",
+      "compared_figure": "R04, R05 and selected R04a wardrobes/lofts + required ancillary items, including selected R08 UC01, repeated in each flat.",
+      "comparison_basis": "Numeric screen of tax-unnormalised allowances against a pre-GST target, not a like-for-like tax comparison or confirmation of budget compliance.",
+      "caveat": "R04 quantities use a single 2.75 m reference run (2.70 m of wardrobe leaves), not the split south-wall zones. Re-quantify after W03, curtain pockets, lofts and shutters are measured/designed. R05 loft drawing has six proposed leaves but the equal-scope cost model allows eight; reconcile before ordering.",
+      "gst_note": "GST is not normalised: only F1 (ply MRP) is stated as including GST; other source treatment is incomplete. These allowances are not verified pre-GST totals and cannot establish compliance with HD-06's before-GST target. No reliable tax bound can be inferred by dividing a mixed total by one rate; obtain itemised, tax-normalised quotes.",
+      "options": {
+        "OPT-A": {
+          "per_flat_inr": [
+            262870,
+            459410
+          ],
+          "midpoint_inr": 361140.0,
+          "low_vs_floor_inr": 12870,
+          "high_vs_ceiling_inr": 109410,
+          "verdict": "Numeric screen only; source taxes are not normalised and the R04 split is not re-quantified.",
+          "R04_sensitivity_per_10pct_quantity_change_inr": [
+            8902,
+            15201
+          ],
+          "with_provisional_pullouts_inr": [
+            265870,
+            466910
+          ]
+        },
+        "OPT-E": {
+          "per_flat_inr": [
+            263020,
+            463190
+          ],
+          "midpoint_inr": 363105.0,
+          "low_vs_floor_inr": 13020,
+          "high_vs_ceiling_inr": 113190,
+          "verdict": "Numeric screen only; source taxes are not normalised and the R04 split is not re-quantified.",
+          "R04_sensitivity_per_10pct_quantity_change_inr": [
+            8920,
+            15394
+          ],
+          "with_provisional_pullouts_inr": [
+            266020,
+            470690
+          ]
+        },
+        "OPT-E-H": {
+          "per_flat_inr": [
+            253020,
+            451910
+          ],
+          "midpoint_inr": 352465.0,
+          "low_vs_floor_inr": 3020,
+          "high_vs_ceiling_inr": 101910,
+          "verdict": "Numeric screen only; source taxes are not normalised and the R04 split is not re-quantified.",
+          "R04_sensitivity_per_10pct_quantity_change_inr": [
+            8531,
+            14955
+          ],
+          "with_provisional_pullouts_inr": [
+            256020,
+            459410
+          ]
+        },
+        "OPT-B1": {
+          "per_flat_inr": [
+            250800,
+            517510
+          ],
+          "midpoint_inr": 384155.0,
+          "low_vs_floor_inr": 800,
+          "high_vs_ceiling_inr": 167510,
+          "verdict": "Numeric screen only; source taxes are not normalised and the R04 split is not re-quantified.",
+          "R04_sensitivity_per_10pct_quantity_change_inr": [
+            8175,
+            17288
+          ],
+          "with_provisional_pullouts_inr": [
+            253800,
+            525010
+          ]
+        },
+        "OPT-F": {
+          "per_flat_inr": [
+            261520,
+            514120
+          ],
+          "midpoint_inr": 387820.0,
+          "low_vs_floor_inr": 11520,
+          "high_vs_ceiling_inr": 164120,
+          "verdict": "Numeric screen only; source taxes are not normalised and the R04 split is not re-quantified.",
+          "R04_sensitivity_per_10pct_quantity_change_inr": [
+            8611,
+            17142
+          ],
+          "with_provisional_pullouts_inr": [
+            264520,
+            521620
+          ]
+        },
+        "OPT-C": {
+          "per_flat_inr": [
+            241800,
+            536470
+          ],
+          "midpoint_inr": 389135.0,
+          "low_vs_floor_inr": -8200,
+          "high_vs_ceiling_inr": 186470,
+          "verdict": "Numeric screen only; source taxes are not normalised and the R04 split is not re-quantified.",
+          "R04_sensitivity_per_10pct_quantity_change_inr": [
+            7911,
+            18505
+          ],
+          "with_provisional_pullouts_inr": [
+            244800,
+            543970
+          ]
+        },
+        "OPT-D": {
+          "per_flat_inr": [
+            277160,
+            529930
+          ],
+          "midpoint_inr": 403545.0,
+          "low_vs_floor_inr": 27160,
+          "high_vs_ceiling_inr": 179930,
+          "verdict": "Numeric screen only; source taxes are not normalised and the R04 split is not re-quantified.",
+          "R04_sensitivity_per_10pct_quantity_change_inr": [
+            9482,
+            18175
+          ],
+          "with_provisional_pullouts_inr": [
+            280160,
+            537430
+          ]
+        }
+      }
+    },
+    "replacement_sensitivity": {
+      "one_shutter_leaf_ply_laminate_inr": [
+        4020,
+        7740
+      ],
+      "one_shutter_leaf_aluminium_acp_inr": [
+        4640,
+        9310
+      ],
+      "one_granite_partition_or_end_inr": [
+        4190,
+        11250
+      ],
+      "note": "includes call-out labour allowance (UNVERIFIED 1,000-3,000); granite panel replacement also risks damaging neighbours and needs a colour-matched slab",
+      "ten_year_view": "not modelled as a service life; rental turnover typically drives shutter/handle/hinge replacement first, so cheap replaceable fronts + inert carcass base is the economic pattern"
+    },
+    "checks": {
+      "hinge_count_basis": "F31",
+      "granite_12mm_stock": "NOT FOUND - if only 15-18 mm is available, weight rises 25-50% and cost bands shift up",
+      "market_crosscheck": {
+        "OPT-A": [
+          999,
+          1705
+        ],
+        "OPT-E": [
+          1001,
+          1727
+        ],
+        "OPT-E-H": [
+          957,
+          1677
+        ],
+        "OPT-B1": [
+          917,
+          1939
+        ],
+        "OPT-F": [
+          966,
+          1923
+        ],
+        "OPT-C": [
+          887,
+          2076
+        ],
+        "OPT-D": [
+          1064,
+          2039
+        ]
+      }
+    },
+    "selection_cost_status": "Both selected cabinets are included using previous allowances; these are not measured quantities or current installed quotes.",
+    "source_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "selection": {
+      "option": "OPT-E",
+      "decision_ref": "HS-WARDROBE-OPT-E",
+      "scope": "BWP plywood carcass and laminate shutters selected; detail and construction release pending."
+    },
+    "excluded_scope": {
+      "beds": "Tenant-supplied, HD-05",
+      "fixed_bedsides": "Omitted, HD-14"
+    }
+  },
+  "interior_generation_basis_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+  "provisional_interiors": {
+    "schema": "wardrobe-interiors/1",
+    "source_master_sha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
+    "status": "provisional_design_not_homeowner_approved_or_fabrication_released",
+    "parameter_basis": {
+      "widths_and_depths": "Recomputed from current storage section/item bounds on each generation; all are placeholders until surveyed.",
+      "panel_mm": 18,
+      "back_mm": 9,
+      "top_shelf_ffl_mm": 1900,
+      "long_rail_ffl_mm": 1750,
+      "long_rail_to_base_mm": 1650,
+      "double_rail_ffl_mm": [
+        1800,
+        950
+      ],
+      "double_upper_rail_to_lower_mm": 850,
+      "double_lower_rail_to_base_mm": 850,
+      "drawer_fronts_ffl_mm": [
+        [
+          300,
+          480
+        ],
+        [
+          480,
+          660
+        ]
+      ],
+      "accessory_pullout_ffl_mm": [
+        700,
+        820
+      ],
+      "short_hang_caveat": "Two 1000 mm drops do not fit below a 1900 mm shelf over a 100 mm plinth; the 850/850 mm rail-to-obstruction distances are for short items only, before hanger and clearance deductions. The upper rail has 82 mm to the assumed 18 mm shelf underside; verify the hanger hook and hardware. Adjust after measurement.",
+      "reach_and_load_caveat": "Rail and shelf heights are working ergonomic targets, not a code requirement. Confirm user reach, hanger/garment sizes, shutter swing, support and load on site."
+    },
+    "rooms": {
+      "R04": {
+        "name": "Master split wardrobe",
+        "sections": [
+          {
+            "id": "A",
+            "item_id": "R04 split placeholder",
+            "width_mm": 1448.4,
+            "depth_envelope_mm": 630.0,
+            "estimated_clear_depth_mm": 571.0,
+            "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+            "width_status": "proposed_placeholder_not_site_measured",
+            "bays": [
+              {
+                "id": "A1",
+                "kind": "long_hang",
+                "clear_width_mm": 458.8,
+                "shelf_heights_ffl_mm": [
+                  1900
+                ],
+                "rail_heights_ffl_mm": [
+                  1750
+                ],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Long dresses/kurtas, suits or folded sarees on smooth hangers; verify garment length."
+              },
+              {
+                "id": "A2",
+                "kind": "double_short",
+                "clear_width_mm": 458.8,
+                "shelf_heights_ffl_mm": [
+                  1900
+                ],
+                "rail_heights_ffl_mm": [
+                  1800,
+                  950
+                ],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Two rows for short shirts, blouses or kurtas; verify actual lengths."
+              },
+              {
+                "id": "A3",
+                "kind": "fold_drawers",
+                "clear_width_mm": 458.8,
+                "shelf_heights_ffl_mm": [
+                  1050,
+                  1400,
+                  1650,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [
+                  [
+                    300,
+                    480
+                  ],
+                  [
+                    480,
+                    660
+                  ]
+                ],
+                "pullouts_ffl_mm": [
+                  [
+                    700,
+                    820
+                  ]
+                ],
+                "lockable_drawer": true,
+                "contents": "Folded clothes, two drawers and one removable pull-out tray."
+              }
+            ],
+            "checks": [
+              "Bay under the 480 mm working hanger-width target; test actual adult hangers and revise if tight."
+            ]
+          },
+          {
+            "id": "B",
+            "item_id": "R04 split placeholder",
+            "width_mm": 1448.4,
+            "depth_envelope_mm": 630.0,
+            "estimated_clear_depth_mm": 571.0,
+            "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+            "width_status": "proposed_placeholder_not_site_measured",
+            "bays": [
+              {
+                "id": "B1",
+                "kind": "long_hang",
+                "clear_width_mm": 458.8,
+                "shelf_heights_ffl_mm": [
+                  1900
+                ],
+                "rail_heights_ffl_mm": [
+                  1750
+                ],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Long dresses/kurtas, suits or folded sarees on smooth hangers; verify garment length."
+              },
+              {
+                "id": "B2",
+                "kind": "double_short",
+                "clear_width_mm": 458.8,
+                "shelf_heights_ffl_mm": [
+                  1900
+                ],
+                "rail_heights_ffl_mm": [
+                  1800,
+                  950
+                ],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Two rows for short shirts, blouses or kurtas; verify actual lengths."
+              },
+              {
+                "id": "B3",
+                "kind": "fold_drawers",
+                "clear_width_mm": 458.8,
+                "shelf_heights_ffl_mm": [
+                  1050,
+                  1400,
+                  1650,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [
+                  [
+                    300,
+                    480
+                  ],
+                  [
+                    480,
+                    660
+                  ]
+                ],
+                "pullouts_ffl_mm": [
+                  [
+                    700,
+                    820
+                  ]
+                ],
+                "lockable_drawer": true,
+                "contents": "Folded clothes, two drawers and one removable pull-out tray."
+              }
+            ],
+            "checks": [
+              "Bay under the 480 mm working hanger-width target; test actual adult hangers and revise if tight."
+            ]
+          }
+        ],
+        "height_mm": 2100,
+        "plinth_top_mm": 100,
+        "window_gap_mm": 913.2,
+        "loft_height_range_mm": [
+          2130,
+          3080
+        ],
+        "loft": "Concept above the split and W03; actual section, support and curtain pocket unmeasured.",
+        "holds": [
+          "Split widths are placeholders; W03 and curtain pocket require site measurement.",
+          "Adult hangers must fit the computed clear bay/depth; long-hang clearance is before hanger allowance."
+        ]
+      },
+      "R05": {
+        "name": "Children's wardrobe",
+        "sections": [
+          {
+            "id": "C",
+            "item_id": "ST-R05-WR01",
+            "width_mm": 2025.0,
+            "depth_envelope_mm": 630.0,
+            "estimated_clear_depth_mm": 571.0,
+            "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+            "width_status": "proposed_placeholder_not_site_measured",
+            "bays": [
+              {
+                "id": "C1",
+                "kind": "long_hang",
+                "clear_width_mm": 483.8,
+                "shelf_heights_ffl_mm": [
+                  1900
+                ],
+                "rail_heights_ffl_mm": [
+                  1750
+                ],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Long uniforms, dresses or coats; adjust the rail as the child grows."
+              },
+              {
+                "id": "C2",
+                "kind": "double_short",
+                "clear_width_mm": 483.8,
+                "shelf_heights_ffl_mm": [
+                  1900
+                ],
+                "rail_heights_ffl_mm": [
+                  1800,
+                  950
+                ],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Two rows for child clothes or short shirts; actual lengths must be checked."
+              },
+              {
+                "id": "C3",
+                "kind": "child_fold_drawers",
+                "clear_width_mm": 483.8,
+                "shelf_heights_ffl_mm": [
+                  1050,
+                  1250,
+                  1450,
+                  1650,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [
+                  [
+                    300,
+                    480
+                  ],
+                  [
+                    480,
+                    660
+                  ]
+                ],
+                "pullouts_ffl_mm": [
+                  [
+                    700,
+                    820
+                  ]
+                ],
+                "lockable_drawer": true,
+                "contents": "Folded clothes, two drawers and one accessory pull-out tray."
+              },
+              {
+                "id": "C4",
+                "kind": "child_linen",
+                "clear_width_mm": 483.8,
+                "shelf_heights_ffl_mm": [
+                  500,
+                  800,
+                  1100,
+                  1500,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Adjustable folded clothes and light linen; bulky bedding goes to a verified loft."
+              }
+            ],
+            "checks": []
+          }
+        ],
+        "height_mm": 2100.0,
+        "plinth_top_mm": 100.0,
+        "door_segment_mm": 1785.0,
+        "door_opening_mm": [
+          160.0,
+          1010.0
+        ],
+        "loft_height_range_mm": [
+          2130.0,
+          3080.0
+        ],
+        "loft": "One continuous door-to-wardrobe loft; dimensions/support unmeasured and six vs eight leaves unresolved.",
+        "holds": [
+          "Keep existing room layout; the bed/study 387.6 mm corner gap is a site hold.",
+          "Use the short double-hang for short items only; adjust for a growing child."
+        ]
+      },
+      "R04a": {
+        "name": "Dressing cabinet",
+        "sections": [
+          {
+            "id": "D",
+            "item_id": "ST-R04a-WR01",
+            "width_mm": 1550.0,
+            "depth_envelope_mm": 300.0,
+            "estimated_clear_depth_mm": 271.0,
+            "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+            "width_status": "proposed_placeholder_not_site_measured",
+            "bays": [
+              {
+                "id": "D1",
+                "kind": "shallow_locked",
+                "clear_width_mm": 365.0,
+                "shelf_heights_ffl_mm": [
+                  400,
+                  650,
+                  1100,
+                  1450,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [
+                  [
+                    700,
+                    880
+                  ]
+                ],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": true,
+                "contents": "Small folded items and one lockable drawer; not a security safe."
+              },
+              {
+                "id": "D2",
+                "kind": "shallow_shelves",
+                "clear_width_mm": 365.0,
+                "shelf_heights_ffl_mm": [
+                  400,
+                  700,
+                  1000,
+                  1300,
+                  1600,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Folded clothes, toiletries or accessories; no normal-depth hanging."
+              },
+              {
+                "id": "D3",
+                "kind": "shallow_shelves",
+                "clear_width_mm": 365.0,
+                "shelf_heights_ffl_mm": [
+                  400,
+                  700,
+                  1000,
+                  1300,
+                  1600,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Folded clothes, toiletries or accessories; no normal-depth hanging."
+              },
+              {
+                "id": "D4",
+                "kind": "shallow_shelves_five",
+                "clear_width_mm": 365.0,
+                "shelf_heights_ffl_mm": [
+                  450,
+                  800,
+                  1150,
+                  1500,
+                  1900
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Adjustable shallow shelves for folded garments and accessories."
+              }
+            ],
+            "checks": []
+          }
+        ],
+        "height_mm": 2100.0,
+        "plinth_top_mm": 100.0,
+        "loft_height_range_mm": [
+          2130.0,
+          3080.0
+        ],
+        "loft": "Existing/proposed loft envelope unmeasured; support and clearance require checking.",
+        "holds": [
+          "Selected in scope, but clear dressing width and opening/door operation remain unmeasured.",
+          "Shallow cabinet: shelves and a drawer only; normal full-depth hanging is not provided."
+        ]
+      },
+      "R08": {
+        "name": "Utility under-counter",
+        "sections": [
+          {
+            "id": "U",
+            "item_id": "ST-R08-UC01",
+            "width_mm": 1112.0,
+            "depth_envelope_mm": 551.0,
+            "estimated_clear_depth_mm": 524.0,
+            "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+            "width_status": "proposed_placeholder_not_site_measured",
+            "bays": [
+              {
+                "id": "U1",
+                "kind": "utility_shelf",
+                "clear_width_mm": 529.0,
+                "shelf_heights_ffl_mm": [
+                  400
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "One adjustable shelf; leave any plumbing, leaks and service access clear."
+              },
+              {
+                "id": "U2",
+                "kind": "utility_tall",
+                "clear_width_mm": 529.0,
+                "shelf_heights_ffl_mm": [],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Small cleaning bin or supplies below the counter; keep plumbing accessible."
+              }
+            ],
+            "checks": []
+          }
+        ],
+        "height_mm": 800.0,
+        "plinth_top_mm": 0.0,
+        "loft_height_range_mm": [
+          1900.0,
+          2950.0
+        ],
+        "loft": "Utility loft shutters are separately allowed; shelf support and dimensions unmeasured.",
+        "holds": [
+          "Selected in scope; plumbing and service access may alter the shelf layout.",
+          "Keep the kitchen-to-south wall straight; no enclosing return is proposed."
+        ]
+      },
+      "R09": {
+        "name": "Entry shoe cabinet",
+        "sections": [
+          {
+            "id": "S",
+            "item_id": "ST-R09-SH01",
+            "width_mm": 1200.0,
+            "depth_envelope_mm": 350.0,
+            "estimated_clear_depth_mm": 323.0,
+            "clear_width_formula": "(external width - (bay count + 1) x 18 mm) / bay count",
+            "width_status": "proposed_placeholder_not_site_measured",
+            "bays": [
+              {
+                "id": "S1",
+                "kind": "shoe_shelves",
+                "clear_width_mm": 573.0,
+                "shelf_heights_ffl_mm": [
+                  250,
+                  450,
+                  650
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Four levels including the base; adjust a shelf for taller footwear."
+              },
+              {
+                "id": "S2",
+                "kind": "shoe_shelves",
+                "clear_width_mm": 573.0,
+                "shelf_heights_ffl_mm": [
+                  250,
+                  450,
+                  650
+                ],
+                "rail_heights_ffl_mm": [],
+                "drawers_ffl_mm": [],
+                "pullouts_ffl_mm": [],
+                "lockable_drawer": false,
+                "contents": "Four levels including the base; adjust a shelf for taller footwear."
+              }
+            ],
+            "checks": []
+          }
+        ],
+        "height_mm": 900.0,
+        "plinth_top_mm": 0.0,
+        "loft": "No entry loft is assumed or costed.",
+        "holds": [
+          "Confirm shoe length, egress, rain exposure and anti-tip restraint.",
+          "Four levels in each of two bays: up to about 16 pairs only if pairs fit; not guaranteed."
+        ]
+      }
+    },
+    "hardware_delta": {
+      "reference_allowances": {
+        "wardrobe_and_loft_hinges_each_per_flat": 92,
+        "drawer_channel_pairs_per_flat": 7,
+        "locks_each_per_flat": 4,
+        "note": "Reference counts from the previous single-run R04 and eight-leaf R05-loft cost model; not final quantities. Runner low-end evidence is not soft-close."
+      },
+      "additional_pullout_trays_per_flat": 3,
+      "tray_allocation": {
+        "R04": 2,
+        "R05": 1
+      },
+      "tray_unit_inr": [
+        1000,
+        2500
+      ],
+      "per_flat_inr": [
+        3000,
+        7500
+      ],
+      "four_flats_inr": [
+        12000,
+        30000
+      ],
+      "status": "UNVERIFIED allowance; provisional interior choice, not a quote or approved purchase",
+      "includes": "One tray/basket and compatible slide pair per proposed pull-out, in addition to the reference drawers.",
+      "unpriced": "R04 split panel/shutter/rail changes; utility carcass, partition, base and shelf; shoe carcass, shelf supports and fitments not demonstrably included in the front/top allowances; upgrading baseline runners to soft-close, locks/anchors/lighting and final installation. Re-quantity and quote; do not add items already included by a supplier.",
+      "wardrobe_lighting": "None newly selected or costed; coordinate any later switched light with the electrical plan."
+    }
+  }
+}

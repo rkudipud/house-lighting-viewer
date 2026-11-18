@@ -1,0 +1,614 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Six-room sensitivity revision</title><style>
+body{font:1rem/1.6 system-ui,sans-serif;max-width:74rem;margin:auto;padding:2rem 1.25rem;color:#172a35;background:#f5f4ef}
+a{color:#075975;overflow-wrap:anywhere} .hold{border-left:.35rem solid #98610d;padding:1rem;background:white}
+.maps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+figure{margin:0 0 1rem}img{width:100%;height:auto}table{border-collapse:collapse;display:block;overflow-x:auto;background:white}
+th,td{border:1px solid #c9d1d3;padding:.5rem}code{overflow-wrap:anywhere}
+</style></head><body><a href="index.html">Revision evidence and limitations</a> / <a href="../index.html">Earlier report and base grids</a><h1>Remaining-room simulation: sensitivity revision</h1>
+<p><strong>Exploratory only:</strong> generic provisional photometry, assumed surfaces and geometry; not measured, product-specific or a construction release. This supplements the previous <code>simulation-report.md</code> and supersedes only its statement that small-room sensitivity was not run.</p>
+<p>Master SHA-256 <code>b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</code> and the prior review package are unchanged. All fittings, approvals, and existing holds remain unchanged; nothing was published or pushed.</p>
+<h2>Scope and method</h2>
+<p>Each of six enclosures was run with the baseline and eight named sensitivity variants: 54 enclosure/case calculations. All use Radiance rcontrib, ab 8 / ad 512, MF 0.8, maintained lux, with the original 0.25 ft grids and recorded task masks. The prior report covers living, dining, kitchen and bedrooms.</p>
+<ul>
+<li><code>rho_low</code> and <code>rho_high</code>: assumed reflectances; <code>beam_minus10</code> / <code>beam_plus10</code>: generic point-source beam angles changed by 10 degrees; <code>ceil_minus0.1</code> / <code>ceil_plus0.1</code>: hypothetical ceiling and associated ceiling-mounted source heights changed by 0.1 m. These are calculation variants, not design changes.</li>
+<li><code>pocket_narrow</code> / <code>pocket_wide</code>: <strong>identical-scene controls</strong>, not a physical pocket study. These enclosures contain no modelled tray/cove pocket, including the bathroom perimeter strip. Actual pocket sensitivity remains unknown.</li>
+<li>Kitchen-slot variants are specific to the kitchen and were already covered by the previous report; they are not applicable here. Lumen +/-20% and MF 0.7/0.9 scale linearly relative to the MF 0.8 output.</li>
+</ul>
+<h2>Baseline and sampling</h2>
+<p>Values are HIGH at 100%, averaged over the task mask: mean / minimum in lux / U0. Floor planes are evaluated 0.0005 m above the nominal floor. Small task masks in dressing and lobby warrant special caution.</p>
+<table>
+<thead>
+<tr>
+<th>Room</th>
+<th style="text-align: right;">Plane (m)</th>
+<th>Grid shape</th>
+<th style="text-align: right;">Room / task points</th>
+<th>HIGH mean / min / U0</th>
+<th>LOW mean / min / U0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Utility (UTL)</td>
+<td style="text-align: right;">0.90</td>
+<td>16 x 58</td>
+<td style="text-align: right;">928 / 132</td>
+<td>211.1 / 172.2 / 0.82</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Dressing (DRS)</td>
+<td style="text-align: right;">0.75</td>
+<td>25 x 14</td>
+<td style="text-align: right;">350 / 12</td>
+<td>197.9 / 190.2 / 0.96</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Lobby (LOB)</td>
+<td style="text-align: right;">0.75</td>
+<td>22 x 14</td>
+<td style="text-align: right;">308 / 8</td>
+<td>264.2 / 255.7 / 0.97</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Attached bath (TL1)</td>
+<td style="text-align: right;">0.00</td>
+<td>22 x 35</td>
+<td style="text-align: right;">770 / 168</td>
+<td>257.3 / 167.0 / 0.65</td>
+<td>186.9 / 150.4 / 0.80</td>
+</tr>
+<tr>
+<td>Common bath (TL2)</td>
+<td style="text-align: right;">0.00</td>
+<td>22 x 35</td>
+<td style="text-align: right;">770 / 168</td>
+<td>257.4 / 167.3 / 0.65</td>
+<td>185.8 / 147.0 / 0.79</td>
+</tr>
+<tr>
+<td>Balcony (BAL)</td>
+<td style="text-align: right;">0.00</td>
+<td>32 x 42</td>
+<td style="text-align: right;">1344 / 522</td>
+<td>75.3 / 49.0 / 0.65</td>
+<td>54.7 / 33.9 / 0.62</td>
+</tr>
+</tbody>
+</table>
+<h2>Sensitivity results</h2>
+<p>Paired changes use the same ad-512 baseline; percentages are change in task-mask mean. <code>-</code> means no modelled LOW lane. The U0 columns show HIGH uniformity, baseline to variant. Differences comparable to the identical-scene spread below should not be interpreted as a reliable effect.</p>
+<table>
+<thead>
+<tr>
+<th>Room</th>
+<th>Variant</th>
+<th style="text-align: right;">HIGH mean change</th>
+<th>HIGH U0 base -&gt; variant</th>
+<th style="text-align: right;">LOW mean change</th>
+<th>LOW U0 base -&gt; variant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UTL</td>
+<td>rho_low</td>
+<td style="text-align: right;">-20.78%</td>
+<td>0.82 -&gt; 0.80</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>rho_high</td>
+<td style="text-align: right;">27.96%</td>
+<td>0.82 -&gt; 0.85</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>beam_minus10</td>
+<td style="text-align: right;">6.31%</td>
+<td>0.82 -&gt; 0.82</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>beam_plus10</td>
+<td style="text-align: right;">-5.15%</td>
+<td>0.82 -&gt; 0.83</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>ceil_minus0.1</td>
+<td style="text-align: right;">5.72%</td>
+<td>0.82 -&gt; 0.82</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>ceil_plus0.1</td>
+<td style="text-align: right;">-5.24%</td>
+<td>0.82 -&gt; 0.82</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>rho_low</td>
+<td style="text-align: right;">-14.89%</td>
+<td>0.96 -&gt; 0.95</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>rho_high</td>
+<td style="text-align: right;">20.85%</td>
+<td>0.96 -&gt; 0.96</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>beam_minus10</td>
+<td style="text-align: right;">20.90%</td>
+<td>0.96 -&gt; 0.95</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>beam_plus10</td>
+<td style="text-align: right;">-14.16%</td>
+<td>0.96 -&gt; 0.96</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>ceil_minus0.1</td>
+<td style="text-align: right;">6.41%</td>
+<td>0.96 -&gt; 0.96</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>ceil_plus0.1</td>
+<td style="text-align: right;">-6.03%</td>
+<td>0.96 -&gt; 0.97</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>rho_low</td>
+<td style="text-align: right;">-13.65%</td>
+<td>0.97 -&gt; 0.96</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>rho_high</td>
+<td style="text-align: right;">18.52%</td>
+<td>0.97 -&gt; 0.97</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>beam_minus10</td>
+<td style="text-align: right;">22.43%</td>
+<td>0.97 -&gt; 0.96</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>beam_plus10</td>
+<td style="text-align: right;">-15.09%</td>
+<td>0.97 -&gt; 0.97</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>ceil_minus0.1</td>
+<td style="text-align: right;">7.64%</td>
+<td>0.97 -&gt; 0.97</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>ceil_plus0.1</td>
+<td style="text-align: right;">-6.87%</td>
+<td>0.97 -&gt; 0.97</td>
+<td style="text-align: right;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>rho_low</td>
+<td style="text-align: right;">-12.52%</td>
+<td>0.65 -&gt; 0.62</td>
+<td style="text-align: right;">-24.80%</td>
+<td>0.80 -&gt; 0.77</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>rho_high</td>
+<td style="text-align: right;">18.53%</td>
+<td>0.65 -&gt; 0.69</td>
+<td style="text-align: right;">35.85%</td>
+<td>0.80 -&gt; 0.80</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>beam_minus10</td>
+<td style="text-align: right;">18.77%</td>
+<td>0.65 -&gt; 0.58</td>
+<td style="text-align: right;">-0.31%</td>
+<td>0.80 -&gt; 0.82</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>beam_plus10</td>
+<td style="text-align: right;">-13.21%</td>
+<td>0.65 -&gt; 0.70</td>
+<td style="text-align: right;">-0.28%</td>
+<td>0.80 -&gt; 0.82</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>ceil_minus0.1</td>
+<td style="text-align: right;">5.00%</td>
+<td>0.65 -&gt; 0.63</td>
+<td style="text-align: right;">3.33%</td>
+<td>0.80 -&gt; 0.78</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>ceil_plus0.1</td>
+<td style="text-align: right;">-4.66%</td>
+<td>0.65 -&gt; 0.67</td>
+<td style="text-align: right;">-3.83%</td>
+<td>0.80 -&gt; 0.80</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>rho_low</td>
+<td style="text-align: right;">-12.55%</td>
+<td>0.65 -&gt; 0.62</td>
+<td style="text-align: right;">-24.32%</td>
+<td>0.79 -&gt; 0.77</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>rho_high</td>
+<td style="text-align: right;">18.50%</td>
+<td>0.65 -&gt; 0.69</td>
+<td style="text-align: right;">36.55%</td>
+<td>0.79 -&gt; 0.84</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>beam_minus10</td>
+<td style="text-align: right;">18.72%</td>
+<td>0.65 -&gt; 0.58</td>
+<td style="text-align: right;">-0.10%</td>
+<td>0.79 -&gt; 0.81</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>beam_plus10</td>
+<td style="text-align: right;">-13.25%</td>
+<td>0.65 -&gt; 0.70</td>
+<td style="text-align: right;">0.28%</td>
+<td>0.79 -&gt; 0.81</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>ceil_minus0.1</td>
+<td style="text-align: right;">4.97%</td>
+<td>0.65 -&gt; 0.63</td>
+<td style="text-align: right;">3.63%</td>
+<td>0.79 -&gt; 0.78</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>ceil_plus0.1</td>
+<td style="text-align: right;">-4.73%</td>
+<td>0.65 -&gt; 0.67</td>
+<td style="text-align: right;">-3.39%</td>
+<td>0.79 -&gt; 0.81</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>rho_low</td>
+<td style="text-align: right;">-11.56%</td>
+<td>0.65 -&gt; 0.61</td>
+<td style="text-align: right;">-40.45%</td>
+<td>0.62 -&gt; 0.56</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>rho_high</td>
+<td style="text-align: right;">17.53%</td>
+<td>0.65 -&gt; 0.70</td>
+<td style="text-align: right;">53.48%</td>
+<td>0.62 -&gt; 0.71</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>beam_minus10</td>
+<td style="text-align: right;">15.74%</td>
+<td>0.65 -&gt; 0.57</td>
+<td style="text-align: right;">-8.88%</td>
+<td>0.62 -&gt; 0.70</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>beam_plus10</td>
+<td style="text-align: right;">-11.73%</td>
+<td>0.65 -&gt; 0.70</td>
+<td style="text-align: right;">5.39%</td>
+<td>0.62 -&gt; 0.66</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>ceil_minus0.1</td>
+<td style="text-align: right;">3.69%</td>
+<td>0.65 -&gt; 0.63</td>
+<td style="text-align: right;">2.75%</td>
+<td>0.62 -&gt; 0.65</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>ceil_plus0.1</td>
+<td style="text-align: right;">-3.54%</td>
+<td>0.65 -&gt; 0.66</td>
+<td style="text-align: right;">-1.70%</td>
+<td>0.62 -&gt; 0.64</td>
+</tr>
+</tbody>
+</table>
+<h2>Identical-scene repeat diagnostic</h2>
+<p>The baseline and the two no-op pocket cases compile to byte-identical scenes. The table gives the range across their three simulated means, as a percentage of the baseline mean. This is a small run-to-run diagnostic, <strong>not</strong> a confidence interval or a measurement of real pocket geometry.</p>
+<table>
+<thead>
+<tr>
+<th>Room</th>
+<th style="text-align: right;">HIGH range</th>
+<th style="text-align: right;">LOW range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UTL</td>
+<td style="text-align: right;">0.07%</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td style="text-align: right;">0.09%</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td style="text-align: right;">0.03%</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td style="text-align: right;">0.02%</td>
+<td style="text-align: right;">0.35%</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td style="text-align: right;">0.03%</td>
+<td style="text-align: right;">0.62%</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td style="text-align: right;">0.02%</td>
+<td style="text-align: right;">0.74%</td>
+</tr>
+</tbody>
+</table>
+<h2>Utility and lobby task-plane diagnostics</h2>
+<p>Utility values are HIGH+TASK at 100% on the 0.9 m room grid, not a separately surveyed counter patch. Lobby values are vertical HIGH+MIRROR at the original three face points; they are not a full face-uniformity assessment.</p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th style="text-align: right;">Utility mean (lx)</th>
+<th>Lobby vertical mean / min (lx)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base</td>
+<td style="text-align: right;">289.2</td>
+<td>399.5 / 397.0</td>
+</tr>
+<tr>
+<td>rho_low</td>
+<td style="text-align: right;">234.1</td>
+<td>341.4 / 339.6</td>
+</tr>
+<tr>
+<td>rho_high</td>
+<td style="text-align: right;">364.2</td>
+<td>479.7 / 474.0</td>
+</tr>
+<tr>
+<td>beam_minus10</td>
+<td style="text-align: right;">302.6</td>
+<td>402.3 / 398.7</td>
+</tr>
+<tr>
+<td>beam_plus10</td>
+<td style="text-align: right;">278.5</td>
+<td>396.2 / 392.2</td>
+</tr>
+<tr>
+<td>ceil_minus0.1</td>
+<td style="text-align: right;">301.8</td>
+<td>409.8 / 406.7</td>
+</tr>
+<tr>
+<td>ceil_plus0.1</td>
+<td style="text-align: right;">277.9</td>
+<td>390.3 / 388.2</td>
+</tr>
+</tbody>
+</table>
+<h2>Existing scene levels on the baseline grid</h2>
+<p>Task-mask mean lux from the six canonical scene level combinations. Zero means no included lane in that room; adjacent-room spill is not modelled in these closed enclosures. These are relative dimming combinations, not spectral or CCT calculations.</p>
+<table>
+<thead>
+<tr>
+<th>Room</th>
+<th style="text-align: right;">Off</th>
+<th style="text-align: right;">Mood</th>
+<th style="text-align: right;">Relax</th>
+<th style="text-align: right;">Work</th>
+<th style="text-align: right;">Full</th>
+<th style="text-align: right;">Night</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UTL</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">63.3</td>
+<td style="text-align: right;">277.5</td>
+<td style="text-align: right;">289.2</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">59.4</td>
+<td style="text-align: right;">197.9</td>
+<td style="text-align: right;">197.9</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">79.3</td>
+<td style="text-align: right;">349.3</td>
+<td style="text-align: right;">349.3</td>
+<td style="text-align: right;">0.6</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">61.0</td>
+<td style="text-align: right;">148.7</td>
+<td style="text-align: right;">599.6</td>
+<td style="text-align: right;">640.4</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">60.5</td>
+<td style="text-align: right;">148.3</td>
+<td style="text-align: right;">599.3</td>
+<td style="text-align: right;">639.4</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">32.8</td>
+<td style="text-align: right;">50.0</td>
+<td style="text-align: right;">75.3</td>
+<td style="text-align: right;">130.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+</tbody>
+</table>
+<h2>Verification and limitations</h2>
+<p>The previous A1-A4 engine benchmark results are inherited, not rerun. The new independent audit compares same-settings local versus remote baseline means for every fixture and plane and the room HIGH/LOW lanes; acceptance is within the greater of 6% of the local mean or 0.30 lx. The remote engine and generic optics hashes match the earlier parity run.</p>
+<table>
+<thead>
+<tr>
+<th>Room</th>
+<th style="text-align: right;">HIGH baseline difference</th>
+<th style="text-align: right;">LOW baseline difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UTL</td>
+<td style="text-align: right;">-0.01%</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td style="text-align: right;">0.20%</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td style="text-align: right;">-0.04%</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td style="text-align: right;">-0.01%</td>
+<td style="text-align: right;">0.43%</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td style="text-align: right;">0.02%</td>
+<td style="text-align: right;">-0.13%</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td style="text-align: right;">0.00%</td>
+<td style="text-align: right;">0.47%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>PASS</strong>: Previous receipt, source files, outputs, master and delivered review unchanged.</li>
+<li><strong>PASS</strong>: All nine variants, units, optical parameters and remote engine hashes.</li>
+<li><strong>PASS</strong>: All result vectors finite, non-negative and aligned with original grids and workplanes.</li>
+<li><strong>PASS</strong>: Unchanged fixture identities and plan polygons.</li>
+<li><strong>PASS</strong>: Ceiling perturbations and flat/no-tray scene construction.</li>
+<li><strong>PASS</strong>: Baseline scene matches previous local scene; pocket cases are identical-scene controls.</li>
+<li><strong>PASS</strong>: Identical-settings local/remote parity on room lanes and every fixture/plane.</li>
+</ul>
+<p><strong>Holds and limitations:</strong>
+- Utility and balcony are open-air in the brief but enclosed in this provisional model. Absolute lux and reflectance responses may be overstated; no exterior validation.
+- Bathroom HIGH/LOW results are floor-plane values. No bathroom face-plane, mirror glare, IP zoning, or electrical safety approval is established by these runs.
+- No IES/LDT files, selected products, measured finish reflectances, surveyed surfaces, real luminaire cut-off, glossy reflections, daylight, flicker, thermal or UGR calculations are supplied.
+- Pooja, KIT-L1, curtain-strip, balcony and all other prior holds remain in force. Construction release, product approval and exact-chain proof remain false.
+- The same flat is assumed on each floor; floor-specific survey variations were not modelled.</p>
+<h2>Evidence</h2>
+<ul>
+<li><code>analysis-remaining.json</code>: complete scene, lane, task, parity and audit results.</li>
+<li><code>runs\sens512small-*\sim-results.json</code>: per-fitting lux vectors and workplane coordinates.</li>
+<li><code>runs\sens512small-*\radiance\*.rad</code>: generated room scenes used for the runs.</li>
+<li><code>simulation-receipt-remaining.json</code>: file hashes and inherited master/review hashes.</li>
+<li><code>independent-verification.json</code>: independent raw-statistic recomputation and report hashes.</li>
+<li>Previous full report and receipt remain one directory above this revision.</li>
+</ul>
+<p>Public-copy note: operational job/log/cleanup artifacts and compiled scenes are omitted. Analysis and verification scripts are archived source snapshots, not a portable verification of the private master/receipt chain. Source/public hashes and omissions are recorded in <code>repository-copy-receipt.json</code>.</p></body></html>

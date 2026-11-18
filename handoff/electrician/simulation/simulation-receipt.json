@@ -1,0 +1,82 @@
+{
+  "schema": "lighting.simulation.receipt/1",
+  "generated": "2026-11-18T09:24:51",
+  "status": "EXPLORATORY - generic provisional photometry; not product-specific, not measured, not a release",
+  "report_revision": "FINAL",
+  "excluded": {
+    "path": "excluded-remote/remote-parity-base-KIT",
+    "reason": "remote parity run; excluded from all reported numbers",
+    "parity_vs_local_sens128_base_KIT_max_mean_diff_pct": 2.94
+  },
+  "master": {
+    "path": "handoff/source-basis/house-design.json",
+    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "expected": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+  },
+  "delivered_review_manifest": {
+    "path": "handoff/electrician/lighting/manifest.json",
+    "sha256": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b"
+  },
+  "engine": {
+    "name": "Radiance rcontrib 6.0a (pyradiance wheel bundle)",
+    "rcontrib_sha256": "0b4eb0e99603fae39ea06932709139a5a91dd35f3bad0600fa9971c81fe3881b",
+    "oconv_sha256": "be6d77e96ca9733b30a3daa5f75e7352d92dbb899736fbd83ca524d137b15f17",
+    "cosm_cal_sha256": "20096de3e942178b4b8518c6718c868473c21552ff55517ae4901432a473ae72"
+  },
+  "checks_passed": "20/20",
+  "files": {
+    "sim_radiance.py": "77efc712e58c9596f77be67f3a9068bff72644e0eed08aaad83f26cd6b743fd3",
+    "cosm.cal": "20096de3e942178b4b8518c6718c868473c21552ff55517ae4901432a473ae72",
+    "check_sim.py": "1de92017777b80f0b8cef4923354838d9fc4829a70f170bc8c7ec5179425d8cd",
+    "run_sens.py": "792d9ff76744649daf10afb0eed4e3c60ea8cbe9415a3ec1e808de4edba1a4f0",
+    "run_remote_sens.py": "e587d41b6e5d9477102e8afb002ed80fb95ac427258af7096f7c377807d0431e",
+    "make_report.py": "c1b1000ec855c999409ff9452a769a593d9854545b3ad5f2f050aed1a2935ceb",
+    "simulation-report.md": "bcf194bdf33ea3a78bd10aafa7bdb211a346925fd1374ca050308305d280b2dd",
+    "analysis/checks.json": "9738c2137747be814452299db785d49c870559f270ae24b5d04d6313d4a12fbf",
+    "analysis/sim-heatmaps.json": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98",
+    "analysis/sim-summary.json": "cd99054fcf2592828b255c2f815785b82f9c9a8e203a5e642babc84d2c63575c",
+    "runs/base/sim-results.json": "9729b22945ba944e204e3e1537a414f58b9ea634dc46487a4b9b271cf7028e40",
+    "runs/sens128-base/sim-results.json": "71f13afa8d27978a93790dc9b0b399d488647e30a2506f906ec9569380ebaecc",
+    "runs/sens128-beam_minus10/sim-results.json": "0a6982f65d1a08f2d4755a970a08f25ad1126bb701560f959ab4acaef88bb2d4",
+    "runs/sens128-beam_plus10/sim-results.json": "afbadb3cb86d62c5b74cb173eca395deaab8dbffaa7fcda2a0669e1646dfd414",
+    "runs/sens128-ceil_minus0.1/sim-results.json": "fb936255dbfd5642cb0ffabd667806a38066682fd9672e62693e7a774b16f3dd",
+    "runs/sens128-ceil_plus0.1/sim-results.json": "d034bbf1881e71759686078309c4c7afad7be8cbd6b75df0da31814d88f5b10a",
+    "runs/sens128-pocket_narrow/sim-results.json": "c1f7fa568b8588344e9c55e1ae318ea292992c300d87f24014fa59c0605b213f",
+    "runs/sens128-pocket_wide/sim-results.json": "16614b6a9cc2d60ef1f968cc5e9665727d24402edcd9b0814139b698583eb90c",
+    "runs/sens128-rho_high/sim-results.json": "1883a65d800dd925fb3b3c53a87c017796cb606ae13c6778d8c686f270e0bd9a",
+    "runs/sens128-rho_low/sim-results.json": "49039d6ac360a78d3224c310fbba4b328a310e4faa777505daf9004008f5670d",
+    "runs/sens128hall-base/sim-results.json": "75e62ce0b044ed2c19b150ca33db8d4e20198a804f5eb780a473fce23d3e4012",
+    "runs/sens128hall-beam_minus10/sim-results.json": "29bf37e5d067866ff81af3a678a0566ed08a4543c01885b57a6ccc027826d8d4",
+    "runs/sens128hall-beam_plus10/sim-results.json": "afeed678074b6c106d02a7d1b791667daf9df49a2c5f8e07de0b12e03d98e444",
+    "runs/sens128hall-ceil_minus0.1/sim-results.json": "873a28d7984b2ba7c8ca0fd147e02fdc2dd15c79342b4441279837dd05004539",
+    "runs/sens128hall-ceil_plus0.1/sim-results.json": "ebcace653d4de4afdd64ac223d790c84fefa1dde3b6eb9c15e02293ce3437000",
+    "runs/sens128hall-pocket_narrow/sim-results.json": "cddf18d438e679d78da7cdedacf951334508ed09caae4ba12052f34d118c847e",
+    "runs/sens128hall-pocket_wide/sim-results.json": "0023a9bed4036d19a8873b7eba4a9983219afdf6501db96d2f064a9de70acf1f",
+    "runs/sens128hall-rho_high/sim-results.json": "63d995bd9708c4f89805c639c182b54c2def80b9f194ec52b0bffedf0e6a1728",
+    "runs/sens128hall-rho_low/sim-results.json": "51f62442f9b8946edf13e35bfc711a805218e8da367ba77d9f2850c108099c0e",
+    "runs/sens512kit-base/sim-results.json": "265e1ba7a2f6e62c27e15dcf411739603402f0da3d881899e7bf881c77f6956a",
+    "runs/sens512kit-beam_minus10/sim-results.json": "ca84aafb3b56d0b74e791c7e09cdf01467e8a9dab659156bcca973d888546310",
+    "runs/sens512kit-beam_plus10/sim-results.json": "c3e555208198f37b69c6fbda4175bf6d38a35013c532607a8c01691b7df78142",
+    "runs/sens512kit-ceil_minus0.1/sim-results.json": "336477e16805d4547e06900f3cdd9bffdd573ae8c37309c8a315f20cb72376e9",
+    "runs/sens512kit-ceil_plus0.1/sim-results.json": "15297873739f316e2867aaa3b20826e5a875cb20020e52d4313d5ccd9c347a26",
+    "runs/sens512kit-kit_extend/sim-results.json": "da40c3aff31f4a070810cb484ada9425e60bdc45a451d793a857ca441cd2b47f",
+    "runs/sens512kit-kit_slot_down/sim-results.json": "1b86d978ec6830455d3a77adf00d8d39343f0996db8850e4aed3bc0dd51b0937",
+    "runs/sens512kit-rho_high/sim-results.json": "b41cd733ba9af8957ec3a432814dbf6f8f9390490066eaac9a7ba58872a6ed70",
+    "runs/sens512kit-rho_low/sim-results.json": "f7c6b1e5ac1aa5c87e7dfc10d043440b1f84eec06a2c9892f5f050002d253455",
+    "runs/smoke3/sim-results.json": "e00d67f50d3d2536ab1f4d8b753202ad0ac8260de9ddbf62a5652d70002055a9",
+    "runs/smoke4/sim-results.json": "c962636ef2818faebe59e5089f63fe26a886fdb057818908028f74e170087205"
+  },
+  "approvals": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false
+  },
+  "not_done": {
+    "small_room_sensitivity": "not run (UTL, DRS, LOB, TL1, TL2, BAL)",
+    "unfinished_room_variants": []
+  },
+  "fixtures_moved": false,
+  "master_modified": false,
+  "published": false,
+  "pushed": false
+}

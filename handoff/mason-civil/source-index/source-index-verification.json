@@ -1,0 +1,77 @@
+{
+  "schema": "civil_source_index_receipt/1",
+  "source_master": {
+    "path": "handoff/source-basis/house-design.json",
+    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+  },
+  "source_register_sha256": "d8be1578c523854175f22dcf9131dfe38fbb6755dfe95a27a0865f7c908f25cf",
+  "construction_release": false,
+  "checks": {
+    "rooms": 14,
+    "homeowner_reported_dimensions": 21,
+    "model_openings": 21,
+    "connections": 10,
+    "pdf_pages": 3,
+    "all_opening_geometry_pointers_resolved": true,
+    "all_actual_opening_dimensions_unmeasured": true,
+    "master_hash_and_construction_hold_on_every_page": true
+  },
+  "sheets": [
+    {
+      "title": "Rooms and areas - source index"
+    },
+    {
+      "title": "Openings - source index"
+    },
+    {
+      "title": "Connections, stair and levels"
+    }
+  ],
+  "files": [
+    {
+      "file": "room-opening-index-01.png",
+      "sha256": "733fdc4ebc6c9d7ac0a4188529675f5c9f989a593427cc73499d97104f99e425",
+      "bytes": 176354
+    },
+    {
+      "file": "room-opening-index-01.svg",
+      "sha256": "5b97e936d27062d7653197f4edf32ee4be1af6013708a3429d053b376515ce0f",
+      "bytes": 31474
+    },
+    {
+      "file": "room-opening-index-02.png",
+      "sha256": "69cfa9cef8f03c4f44ce4ecc2b7b2f763163d12d33cc80bb208e5df82ef8c005",
+      "bytes": 207305
+    },
+    {
+      "file": "room-opening-index-02.svg",
+      "sha256": "887b53f0c0a587a1b50c5a8bc355ce39debc7d326a95d934e1c1f9643adaa202",
+      "bytes": 39936
+    },
+    {
+      "file": "room-opening-index-03.png",
+      "sha256": "7db17decd39341902654ac302d810d1c4a8e71377f2e6deed89c028a19af3331",
+      "bytes": 166840
+    },
+    {
+      "file": "room-opening-index-03.svg",
+      "sha256": "3915c538354efc03c8ed1055d4cf1d9534a26594e52d075574e5a182fcf56584",
+      "bytes": 24488
+    },
+    {
+      "file": "room-opening-index.json",
+      "sha256": "b945b2f4406231a5b0a00896eeca8354f46402bada9f678916cc9d89f30d4c60",
+      "bytes": 36711
+    },
+    {
+      "file": "room-opening-index.md",
+      "sha256": "e5d1ca22dbb53b48a0b9240ec130387baedfc37fe3ee4b65ad56bba476bf50d8",
+      "bytes": 6459
+    },
+    {
+      "file": "room-opening-index.pdf",
+      "sha256": "34dee5307d8dc5e8fe6ac9aee81d52343c90da5c20921f3ab4614872a88fd2a9",
+      "bytes": 54709
+    }
+  ]
+}

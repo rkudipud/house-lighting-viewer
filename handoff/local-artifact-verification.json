@@ -1,0 +1,31 @@
+{
+  "status": "PASS_local_render_decode_privacy_and_Markdown_link_checks",
+  "scope": "Repository content excluding git internals, dependency/cache directories and this report. Markdown navigation checks exclude generator templates whose links resolve in generated output. Final manifest integrity is checked separately.",
+  "formatCounts": {
+    "(no extension)": 3,
+    ".cal": 1,
+    ".csv": 27,
+    ".html": 19,
+    ".jpeg": 5,
+    ".js": 17,
+    ".json": 162,
+    ".md": 33,
+    ".mjs": 22,
+    ".pdf": 22,
+    ".png": 100,
+    ".py": 38,
+    ".rad": 54,
+    ".svg": 85,
+    ".txt": 5
+  },
+  "pdfPagesRenderedAt72Dpi": 163,
+  "distinctApprovedUserSitePhotos": 3,
+  "largestFile": {
+    "path": "handoff/mason-civil/contractor-civil-review.pdf",
+    "bytes": 7052004
+  },
+  "privacyScope": "Text source files; every PDF page text, standard/XML metadata, links and decoded object dictionaries; approved photographs checked for EXIF and exact allowlisted hashes.",
+  "htmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+  "errors": [],
+  "constructionRelease": false
+}

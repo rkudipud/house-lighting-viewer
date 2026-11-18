@@ -1,0 +1,61 @@
+{
+  "status": "LOCAL REVIEW DRAFT - not a construction release; not published",
+  "authoritative_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "derived_embedded_plan_sha256": "33dd7317e805a9c9bc790c160dcfd6187c38fed9fffd97c13ba74b64267ed600",
+  "derived_embedded_heat_sha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",
+  "fixed_cct_map_sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+  "frozen_heatmaps_sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+  "wardrobe_interiors_sha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
+  "site": {
+    "directory": "site-final",
+    "index": "site-final\\index.html",
+    "index_sha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+    "build_receipt": "site-final\\build-info.json",
+    "build_receipt_sha256": "8e1bd2df2e7308dad979ac826ddfe88f5c4b4ac0b5b8a28ece31cfcc74567312",
+    "privacy_receipt": "site-final\\privacy-transform.json",
+    "privacy_receipt_sha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77"
+  },
+  "source": {
+    "directory": "source-release",
+    "manifest": "source-release\\public-source-manifest.json",
+    "manifest_sha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1",
+    "note": "The original master is not included. The derived public data rebuild the identical viewer; original drawing-generator snapshots are retained separately."
+  },
+  "drawings": {
+    "directory": "public-drawings-verified",
+    "privacy_receipt": "public-drawings-verified\\drawing-public-privacy-receipt.json",
+    "privacy_receipt_sha256": "e06c734c60197573a5504ebefcb0c125de7cc9e1ceb49fadc00a68b1329e3c1b",
+    "floorplan_svg": "public-drawings-verified\\working-plan\\house-working-floorplan.svg",
+    "floorplan_svg_sha256": "fdeb6af2d75b32ff001c0560bd8b4174571653d9f447bea1a8c6b7158f2c4e23",
+    "floorplan_pdf_sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
+    "layout_pdf_sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+    "curtain_pdf_sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
+    "layout_checks": "158/158"
+  },
+  "renders": {
+    "directory": "renders-final",
+    "receipt": "renders-final\\render-receipt.json",
+    "receipt_sha256": "b98497b2d5a6b3e85241fa6f95f0db79dca515cc8af852d4edbf7d11d3759924",
+    "files": {
+      "01-whole-flat-dollhouse.png": "8e480f6c11e6e1e413cf3afbfdf791073fb45eb9cff34739ffda6e1a557cf95e",
+      "02-living-light-and-curtains.png": "175db15d81d43bbd978e8f9cb1229efb8f7a08189c76f8f39dca44972748e14b",
+      "03-master-proposed-interiors.png": "e55d22cbcbe01a3b78b87656a5385873160ac38754c2ca14a18d3c91d593c33b"
+    }
+  },
+  "verification": {
+    "directory": "public-verification",
+    "browser_receipt": "public-verification\\browser-verification-review.json",
+    "browser_receipt_sha256": "e61fd4072f3ca93a6f7ea7ff79377c7ddf68c0c5867b7af887f7c2102c8edfbf",
+    "privacy_receipt": "public-verification\\verification-privacy-receipt.json",
+    "privacy_receipt_sha256": "bfc665c3bad5311f1a72bfea0b70444cf7fc613ffa5535157d7cd99a79f9f7dc",
+    "desktop_and_mobile_checks": "222/222",
+    "public_source_rebuild_matches_html": true,
+    "base_fixture_ledger_fields_match": "104/104"
+  },
+  "review_limits": [
+    "Lighting renders are illustrative; frozen generic-optics heatmaps are not measured lux or dynamically recomputed. Selected curtain strips have no lux credit; the older children's grid is withheld.",
+    "Wardrobe interiors and selected cabinets are unmeasured, unapproved approximations, not fabrication instructions.",
+    "D01 leaf count, W03, the MBR-S and CBR curtain returns, H-LOFT, site measurements, electrical and professional approvals remain held.",
+    "The raw drawings and raw browser verification folders contain private local paths and are not for publication; use the public derivatives above."
+  ]
+}

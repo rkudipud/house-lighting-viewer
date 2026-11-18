@@ -1,0 +1,6664 @@
+{
+  "label": "release",
+  "url": "offline:index.html",
+  "profiles": {
+    "desktop": {
+      "loadSeconds": 4.0,
+      "data": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      },
+      "cctMap": {
+        "cct": {
+          "LIV-H1": 3000,
+          "LIV-H2": 3000,
+          "LIV-H3": 3000,
+          "LIV-H4": 3000,
+          "LIV-H5": 3000,
+          "LIV-H6": 3000,
+          "LIV-H7": 3000,
+          "LIV-H8": 3000,
+          "LIV-H9": 3000,
+          "LIV-H10": 3000,
+          "LIV-L1": 2700,
+          "LIV-L2": 2700,
+          "LIV-X1": 2700,
+          "LIV-X2": 2700,
+          "LIV-P1": 2700,
+          "LIV-P2": 2700,
+          "DIN-H1": 3000,
+          "DIN-H2": 3000,
+          "DIN-H3": 3000,
+          "DIN-H6": 3000,
+          "DIN-L1": 2700,
+          "DIN-L2": 2700,
+          "DIN-X1": 2700,
+          "FW-T1": 3000,
+          "FW-T2": 3000,
+          "FW-T3": 3000,
+          "FW-T4": 3000,
+          "KIT-H1": 4000,
+          "KIT-H2": 4000,
+          "KIT-H3": 4000,
+          "KIT-H4": 4000,
+          "KIT-H5": 4000,
+          "KIT-H6": 4000,
+          "KIT-H7": 4000,
+          "KIT-H8": 4000,
+          "KIT-T1": 4000,
+          "KIT-T2": 4000,
+          "KIT-T3": 4000,
+          "KIT-L1": 2700,
+          "KIT-T4": 4000,
+          "UTL-H1": 4000,
+          "UTL-H2": 4000,
+          "UTL-H3": 4000,
+          "UTL-T1": 4000,
+          "MBR-H1": 3000,
+          "MBR-H2": 3000,
+          "MBR-H3": 3000,
+          "MBR-H4": 3000,
+          "MBR-H5": 3000,
+          "MBR-H6": 3000,
+          "MBR-H7": 3000,
+          "MBR-H8": 3000,
+          "MBR-L1": 2700,
+          "MBR-L2": 2700,
+          "MBR-X1": 2700,
+          "MBR-X2": 2700,
+          "MBR-R1": 3000,
+          "MBR-R2": 3000,
+          "MBR-N1": 2700,
+          "DRS-H1": 4000,
+          "DRS-H2": 4000,
+          "TL1-M1": 4000,
+          "TL1-M2": 4000,
+          "TL1-G1": 4000,
+          "TL1-G2": 4000,
+          "TL1-G3": 4000,
+          "TL1-L1": 2700,
+          "TL1-L2": 2700,
+          "TL1-L3": 2700,
+          "TL1-F1": 4000,
+          "TL1-F2": 4000,
+          "LOB-H1": 3000,
+          "LOB-H2": 3000,
+          "LOB-F1": 4000,
+          "LOB-N1": 2700,
+          "TL2-M1": 4000,
+          "TL2-M2": 4000,
+          "TL2-G1": 4000,
+          "TL2-G2": 4000,
+          "TL2-G3": 4000,
+          "TL2-L1": 2700,
+          "TL2-L2": 2700,
+          "TL2-L3": 2700,
+          "TL2-F1": 4000,
+          "TL2-F2": 4000,
+          "CBR-H1": 3000,
+          "CBR-H2": 3000,
+          "CBR-H3": 3000,
+          "CBR-H4": 3000,
+          "CBR-H5": 3000,
+          "CBR-H6": 3000,
+          "CBR-L1": 2700,
+          "CBR-X1": 2700,
+          "CBR-X2": 2700,
+          "CBR-X3": 2700,
+          "CBR-X4": 2700,
+          "CBR-S1": 4000,
+          "CBR-R1": 3000,
+          "CBR-R2": 3000,
+          "BAL-H1": 3000,
+          "BAL-H2": 3000,
+          "BAL-L1": 2700,
+          "BAL-L2": 2700,
+          "BAL-L3": 2700
+        },
+        "rules": {
+          "LIV-H1": "R30-MAIN",
+          "LIV-H2": "R30-MAIN",
+          "LIV-H3": "R30-MAIN",
+          "LIV-H4": "R30-MAIN",
+          "LIV-H5": "R30-MAIN",
+          "LIV-H6": "R30-MAIN",
+          "LIV-H7": "R30-MAIN",
+          "LIV-H8": "R30-MAIN",
+          "LIV-H9": "R30-MAIN",
+          "LIV-H10": "R30-MAIN",
+          "LIV-L1": "R27-STRIP",
+          "LIV-L2": "R27-STRIP",
+          "LIV-X1": "R27-STRIP",
+          "LIV-X2": "R27-STRIP",
+          "LIV-P1": "R27-STRIP",
+          "LIV-P2": "R27-DECOR",
+          "DIN-H1": "R30-MAIN",
+          "DIN-H2": "R30-MAIN",
+          "DIN-H3": "R30-MAIN",
+          "DIN-H6": "R30-MAIN",
+          "DIN-L1": "R27-DECOR",
+          "DIN-L2": "R27-STRIP",
+          "DIN-X1": "R27-STRIP",
+          "FW-T1": "R30-MAIN",
+          "FW-T2": "R30-MAIN",
+          "FW-T3": "R30-MAIN",
+          "FW-T4": "R30-MAIN",
+          "KIT-H1": "R40-TASK",
+          "KIT-H2": "R40-TASK",
+          "KIT-H3": "R40-TASK",
+          "KIT-H4": "R40-TASK",
+          "KIT-H5": "R40-TASK",
+          "KIT-H6": "R40-TASK",
+          "KIT-H7": "R40-TASK",
+          "KIT-H8": "R40-TASK",
+          "KIT-T1": "R40-TASK",
+          "KIT-T2": "R40-TASK",
+          "KIT-T3": "R40-TASK",
+          "KIT-L1": "R27-STRIP",
+          "KIT-T4": "R40-TASK",
+          "UTL-H1": "R40-TASK",
+          "UTL-H2": "R40-TASK",
+          "UTL-H3": "R40-TASK",
+          "UTL-T1": "R40-TASK",
+          "MBR-H1": "R30-MAIN",
+          "MBR-H2": "R30-MAIN",
+          "MBR-H3": "R30-MAIN",
+          "MBR-H4": "R30-MAIN",
+          "MBR-H5": "R30-MAIN",
+          "MBR-H6": "R30-MAIN",
+          "MBR-H7": "R30-MAIN",
+          "MBR-H8": "R30-MAIN",
+          "MBR-L1": "R27-STRIP",
+          "MBR-L2": "R27-STRIP",
+          "MBR-X1": "R27-STRIP",
+          "MBR-X2": "R27-STRIP",
+          "MBR-R1": "R30-MAIN",
+          "MBR-R2": "R30-MAIN",
+          "MBR-N1": "R27-DECOR",
+          "DRS-H1": "R40-TASK",
+          "DRS-H2": "R40-TASK",
+          "TL1-M1": "R40-TASK",
+          "TL1-M2": "R40-TASK",
+          "TL1-G1": "R40-TASK",
+          "TL1-G2": "R40-TASK",
+          "TL1-G3": "R40-TASK",
+          "TL1-L1": "R27-STRIP",
+          "TL1-L2": "R27-STRIP",
+          "TL1-L3": "R27-STRIP",
+          "TL1-F1": "R40-TASK",
+          "TL1-F2": "R40-TASK",
+          "LOB-H1": "R30-MAIN",
+          "LOB-H2": "R30-MAIN",
+          "LOB-F1": "R40-TASK",
+          "LOB-N1": "R27-DECOR",
+          "TL2-M1": "R40-TASK",
+          "TL2-M2": "R40-TASK",
+          "TL2-G1": "R40-TASK",
+          "TL2-G2": "R40-TASK",
+          "TL2-G3": "R40-TASK",
+          "TL2-L1": "R27-STRIP",
+          "TL2-L2": "R27-STRIP",
+          "TL2-L3": "R27-STRIP",
+          "TL2-F1": "R40-TASK",
+          "TL2-F2": "R40-TASK",
+          "CBR-H1": "R30-MAIN",
+          "CBR-H2": "R30-MAIN",
+          "CBR-H3": "R30-MAIN",
+          "CBR-H4": "R30-MAIN",
+          "CBR-H5": "R30-MAIN",
+          "CBR-H6": "R30-MAIN",
+          "CBR-L1": "R27-STRIP",
+          "CBR-X1": "R27-STRIP",
+          "CBR-X2": "R27-STRIP",
+          "CBR-X3": "R27-STRIP",
+          "CBR-X4": "R27-STRIP",
+          "CBR-S1": "R40-TASK",
+          "CBR-R1": "R30-MAIN",
+          "CBR-R2": "R30-MAIN",
+          "BAL-H1": "R30-MAIN",
+          "BAL-H2": "R30-MAIN",
+          "BAL-L1": "R27-STRIP",
+          "BAL-L2": "R27-DECOR",
+          "BAL-L3": "R27-DECOR"
+        },
+        "holds": {
+          "LIV-H1": [],
+          "LIV-H2": [
+            "H-CURTAIN-POCKET"
+          ],
+          "LIV-H3": [
+            "H-CURTAIN-POCKET"
+          ],
+          "LIV-H4": [],
+          "LIV-H5": [],
+          "LIV-H6": [],
+          "LIV-H7": [],
+          "LIV-H8": [],
+          "LIV-H9": [],
+          "LIV-H10": [],
+          "LIV-L1": [],
+          "LIV-L2": [],
+          "LIV-X1": [
+            "H-CENTRE-RECESS"
+          ],
+          "LIV-X2": [
+            "H-CENTRE-RECESS"
+          ],
+          "LIV-P1": [
+            "H-POOJA-GEOMETRY"
+          ],
+          "LIV-P2": [
+            "H-POOJA-GEOMETRY"
+          ],
+          "DIN-H1": [
+            "H-CURTAIN-POCKET"
+          ],
+          "DIN-H2": [
+            "H-HALL-BEAM"
+          ],
+          "DIN-H3": [
+            "H-HALL-BEAM"
+          ],
+          "DIN-H6": [],
+          "DIN-L1": [
+            "H-CENTRE-RECESS"
+          ],
+          "DIN-L2": [],
+          "DIN-X1": [
+            "H-CENTRE-RECESS"
+          ],
+          "FW-T1": [
+            "H-HALL-BEAM"
+          ],
+          "FW-T2": [],
+          "FW-T3": [],
+          "FW-T4": [],
+          "KIT-H1": [],
+          "KIT-H2": [],
+          "KIT-H3": [],
+          "KIT-H4": [],
+          "KIT-H5": [],
+          "KIT-H6": [],
+          "KIT-H7": [],
+          "KIT-H8": [],
+          "KIT-T1": [],
+          "KIT-T2": [],
+          "KIT-T3": [],
+          "KIT-L1": [],
+          "KIT-T4": [],
+          "UTL-H1": [],
+          "UTL-H2": [],
+          "UTL-H3": [],
+          "UTL-T1": [],
+          "MBR-H1": [],
+          "MBR-H2": [],
+          "MBR-H3": [],
+          "MBR-H4": [],
+          "MBR-H5": [],
+          "MBR-H6": [],
+          "MBR-H7": [],
+          "MBR-H8": [],
+          "MBR-L1": [],
+          "MBR-L2": [
+            "H-MBR-BED"
+          ],
+          "MBR-X1": [],
+          "MBR-X2": [],
+          "MBR-R1": [
+            "H-MBR-BED"
+          ],
+          "MBR-R2": [
+            "H-MBR-BED"
+          ],
+          "MBR-N1": [],
+          "DRS-H1": [
+            "H-DRS-SWEEP"
+          ],
+          "DRS-H2": [
+            "H-DRS-SWEEP"
+          ],
+          "TL1-M1": [],
+          "TL1-M2": [],
+          "TL1-G1": [],
+          "TL1-G2": [],
+          "TL1-G3": [],
+          "TL1-L1": [],
+          "TL1-L2": [],
+          "TL1-L3": [],
+          "TL1-F1": [],
+          "TL1-F2": [],
+          "LOB-H1": [],
+          "LOB-H2": [],
+          "LOB-F1": [],
+          "LOB-N1": [],
+          "TL2-M1": [],
+          "TL2-M2": [],
+          "TL2-G1": [],
+          "TL2-G2": [],
+          "TL2-G3": [],
+          "TL2-L1": [],
+          "TL2-L2": [],
+          "TL2-L3": [],
+          "TL2-F1": [],
+          "TL2-F2": [],
+          "CBR-H1": [],
+          "CBR-H2": [],
+          "CBR-H3": [],
+          "CBR-H4": [],
+          "CBR-H5": [],
+          "CBR-H6": [],
+          "CBR-L1": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X1": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X2": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X3": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X4": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-S1": [
+            "H-CBR-DESK"
+          ],
+          "CBR-R1": [
+            "H-CBR-BED"
+          ],
+          "CBR-R2": [
+            "H-CBR-BED"
+          ],
+          "BAL-H1": [],
+          "BAL-H2": [],
+          "BAL-L1": [],
+          "BAL-L2": [],
+          "BAL-L3": []
+        },
+        "src": {
+          "file": "fixed-cct-map.json",
+          "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+          "baseMapSha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+          "schema": "lighting-fixed-cct-map/1",
+          "bins": {
+            "2700": 30,
+            "3000": 40,
+            "4000": 34
+          },
+          "groups": 37,
+          "knobGroups": 21
+        },
+        "mixed": [],
+        "pockets": [
+          {
+            "id": "CURT-LIV",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-LIV",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-DIN",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-DIN",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-MBR-S",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-MBR-S",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-CBR",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-CBR",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-MBR-W03",
+            "held": true,
+            "selected": false,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": null,
+            "holds": [
+              "H-MBR-W03"
+            ]
+          }
+        ],
+        "live": [
+          {
+            "id": "CURT-LIV",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-DIN",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-MBR-S",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-CBR",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-MBR-W03",
+            "held": true,
+            "selected": false,
+            "emissive": false,
+            "inEmission": false
+          }
+        ],
+        "counted": 0
+      },
+      "views": {
+        "first": {
+          "mode": "first",
+          "mean": 166.18,
+          "std": 58.96,
+          "draws": 113,
+          "triangles": 47848,
+          "fps": 60
+        },
+        "third": {
+          "mode": "third",
+          "mean": 173.07,
+          "std": 64.27,
+          "draws": 165,
+          "triangles": 50842,
+          "fps": 60.0
+        },
+        "doll": {
+          "mode": "doll",
+          "mean": 173.46,
+          "std": 31.02,
+          "draws": 562,
+          "triangles": 48156,
+          "fps": 60.0
+        },
+        "heat": {
+          "mode": "heat",
+          "mean": 170.59,
+          "std": 26.29,
+          "draws": 222,
+          "triangles": 43790,
+          "fps": 60.0
+        },
+        "rcp": {
+          "mode": "rcp",
+          "mean": 147.07,
+          "std": 92.83,
+          "draws": 261,
+          "triangles": 15624,
+          "fps": 60.0
+        }
+      },
+      "jumps": {
+        "balcony": {
+          "label": "Balcony / entrance",
+          "pos": [
+            2.88,
+            0,
+            14.17
+          ],
+          "mean": 152.97,
+          "std": 91.67
+        },
+        "living": {
+          "label": "Living",
+          "pos": [
+            3.52,
+            0,
+            10.65
+          ],
+          "mean": 166.14,
+          "std": 58.97
+        },
+        "dining": {
+          "label": "Dining",
+          "pos": [
+            3.84,
+            0,
+            6.57
+          ],
+          "mean": 181.42,
+          "std": 59.74
+        },
+        "kitchen": {
+          "label": "Kitchen",
+          "pos": [
+            3.04,
+            0,
+            3.21
+          ],
+          "mean": 188.3,
+          "std": 49.32
+        },
+        "utility": {
+          "label": "Utility",
+          "pos": [
+            3.6,
+            0,
+            0.89
+          ],
+          "mean": 136.29,
+          "std": 72.4
+        },
+        "washing": {
+          "label": "Washing",
+          "pos": [
+            1.6,
+            0,
+            0.89
+          ],
+          "mean": 157.29,
+          "std": 77.0
+        },
+        "master": {
+          "label": "Master bedroom",
+          "pos": [
+            6.64,
+            0,
+            3.85
+          ],
+          "mean": 178.07,
+          "std": 46.39
+        },
+        "dressing": {
+          "label": "Dressing",
+          "pos": [
+            5.76,
+            0,
+            5.53
+          ],
+          "mean": 132.74,
+          "std": 76.65
+        },
+        "bath1": {
+          "label": "Attached bathroom",
+          "pos": [
+            7.44,
+            0,
+            6.33
+          ],
+          "mean": 210.31,
+          "std": 40.65
+        },
+        "lobby": {
+          "label": "Common lobby",
+          "pos": [
+            5.52,
+            0,
+            7.69
+          ],
+          "mean": 143.88,
+          "std": 89.59
+        },
+        "bath2": {
+          "label": "Common bathroom",
+          "pos": [
+            7.44,
+            0,
+            8.09
+          ],
+          "mean": 211.06,
+          "std": 37.66
+        },
+        "children": {
+          "label": "Children bedroom",
+          "pos": [
+            5.76,
+            0,
+            9.69
+          ],
+          "mean": 165.78,
+          "std": 42.07
+        }
+      },
+      "exports": {
+        "png": {
+          "file": "light-planner-doll-living.png",
+          "bytes": 820842,
+          "sha256": "c1c199ea4dbb35d807b368fdedb25b5da54f734926b5f09a2b031d0e84bb00a0"
+        },
+        "schedule": {
+          "file": "fixture-schedule-OPT1-b6f6bf1a.csv",
+          "bytes": 71853,
+          "sha256": "c34484022e2168c22cb5d301f22f21c69fb98e0748a11b013285ceaf7f4d8e4b"
+        },
+        "scheduleColumns": [
+          "fixture_id",
+          "zone",
+          "room",
+          "lane",
+          "rail",
+          "circuit",
+          "type",
+          "description",
+          "fixed_cct_K",
+          "cct_source",
+          "master_cct_or_control",
+          "watts",
+          "lumens",
+          "beam_deg",
+          "ip",
+          "mount_height_m",
+          "x_ft_sheet",
+          "z_ft_sheet",
+          "length_m",
+          "finish",
+          "status",
+          "hold_reason",
+          "placement_hold_ids",
+          "note",
+          "review_status",
+          "cct_rule",
+          "map_layer",
+          "brightness_group"
+        ],
+        "groups": {
+          "file": "circuit-groups-OPT1-b6f6bf1a.csv",
+          "bytes": 14438,
+          "sha256": "3dc8813911f0651971db6974b1a40affd5a5aa13e7b9dac3f1d79bd389f55a85"
+        },
+        "pdf1": {
+          "file": "layout-views-review-draft-b6f6bf1a.pdf",
+          "bytes": 6815041,
+          "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+          "offline_action": "opened in new PDF tab",
+          "pages": 13
+        },
+        "pdf2": {
+          "file": "working-floor-plan-review-draft-b6f6bf1a.pdf",
+          "bytes": 864756,
+          "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
+          "offline_action": "opened in new PDF tab",
+          "pages": 1
+        },
+        "pdf3": {
+          "file": "curtain-pocket-section-review-b6f6bf1a.pdf",
+          "bytes": 71474,
+          "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
+          "offline_action": "opened in new PDF tab",
+          "pages": 1
+        },
+        "pdf4": {
+          "file": "wardrobe-interiors-review-b6f6bf1a.pdf",
+          "bytes": 245180,
+          "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3",
+          "offline_action": "opened in new PDF tab",
+          "pages": 17
+        }
+      },
+      "warningsKnownAngle": 1,
+      "warningFirst": "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 ",
+      "requests": 1,
+      "errors": [],
+      "finalState": {
+        "mode": "doll",
+        "selectedRoom": "living",
+        "position": [
+          3.52,
+          0,
+          10.65
+        ],
+        "yaw": 1.1943744712392623,
+        "pitch": 0,
+        "fov": 65,
+        "fps": 35.408675125405836,
+        "draws": 562,
+        "triangles": 48156,
+        "guided": false,
+        "interiors": false,
+        "orbit": {
+          "yaw": 0.22,
+          "pitch": 1.12,
+          "distance": 20,
+          "target": [
+            4.7,
+            0,
+            7.9
+          ]
+        },
+        "rcp": {
+          "x": 2.8190951999999996,
+          "z": 10.372953599999999,
+          "half": 3.307079999999999
+        },
+        "mapScene": "HIGH+LOW_100",
+        "ambient": {
+          "hemi": 1.1499999999999806,
+          "env": 0.3399999999999949,
+          "exposure": 1.0199999999999967
+        },
+        "sheetPx": 0
+      }
+    },
+    "mobile": {
+      "loadSeconds": 5.3,
+      "data": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      },
+      "cctMap": {
+        "cct": {
+          "LIV-H1": 3000,
+          "LIV-H2": 3000,
+          "LIV-H3": 3000,
+          "LIV-H4": 3000,
+          "LIV-H5": 3000,
+          "LIV-H6": 3000,
+          "LIV-H7": 3000,
+          "LIV-H8": 3000,
+          "LIV-H9": 3000,
+          "LIV-H10": 3000,
+          "LIV-L1": 2700,
+          "LIV-L2": 2700,
+          "LIV-X1": 2700,
+          "LIV-X2": 2700,
+          "LIV-P1": 2700,
+          "LIV-P2": 2700,
+          "DIN-H1": 3000,
+          "DIN-H2": 3000,
+          "DIN-H3": 3000,
+          "DIN-H6": 3000,
+          "DIN-L1": 2700,
+          "DIN-L2": 2700,
+          "DIN-X1": 2700,
+          "FW-T1": 3000,
+          "FW-T2": 3000,
+          "FW-T3": 3000,
+          "FW-T4": 3000,
+          "KIT-H1": 4000,
+          "KIT-H2": 4000,
+          "KIT-H3": 4000,
+          "KIT-H4": 4000,
+          "KIT-H5": 4000,
+          "KIT-H6": 4000,
+          "KIT-H7": 4000,
+          "KIT-H8": 4000,
+          "KIT-T1": 4000,
+          "KIT-T2": 4000,
+          "KIT-T3": 4000,
+          "KIT-L1": 2700,
+          "KIT-T4": 4000,
+          "UTL-H1": 4000,
+          "UTL-H2": 4000,
+          "UTL-H3": 4000,
+          "UTL-T1": 4000,
+          "MBR-H1": 3000,
+          "MBR-H2": 3000,
+          "MBR-H3": 3000,
+          "MBR-H4": 3000,
+          "MBR-H5": 3000,
+          "MBR-H6": 3000,
+          "MBR-H7": 3000,
+          "MBR-H8": 3000,
+          "MBR-L1": 2700,
+          "MBR-L2": 2700,
+          "MBR-X1": 2700,
+          "MBR-X2": 2700,
+          "MBR-R1": 3000,
+          "MBR-R2": 3000,
+          "MBR-N1": 2700,
+          "DRS-H1": 4000,
+          "DRS-H2": 4000,
+          "TL1-M1": 4000,
+          "TL1-M2": 4000,
+          "TL1-G1": 4000,
+          "TL1-G2": 4000,
+          "TL1-G3": 4000,
+          "TL1-L1": 2700,
+          "TL1-L2": 2700,
+          "TL1-L3": 2700,
+          "TL1-F1": 4000,
+          "TL1-F2": 4000,
+          "LOB-H1": 3000,
+          "LOB-H2": 3000,
+          "LOB-F1": 4000,
+          "LOB-N1": 2700,
+          "TL2-M1": 4000,
+          "TL2-M2": 4000,
+          "TL2-G1": 4000,
+          "TL2-G2": 4000,
+          "TL2-G3": 4000,
+          "TL2-L1": 2700,
+          "TL2-L2": 2700,
+          "TL2-L3": 2700,
+          "TL2-F1": 4000,
+          "TL2-F2": 4000,
+          "CBR-H1": 3000,
+          "CBR-H2": 3000,
+          "CBR-H3": 3000,
+          "CBR-H4": 3000,
+          "CBR-H5": 3000,
+          "CBR-H6": 3000,
+          "CBR-L1": 2700,
+          "CBR-X1": 2700,
+          "CBR-X2": 2700,
+          "CBR-X3": 2700,
+          "CBR-X4": 2700,
+          "CBR-S1": 4000,
+          "CBR-R1": 3000,
+          "CBR-R2": 3000,
+          "BAL-H1": 3000,
+          "BAL-H2": 3000,
+          "BAL-L1": 2700,
+          "BAL-L2": 2700,
+          "BAL-L3": 2700
+        },
+        "rules": {
+          "LIV-H1": "R30-MAIN",
+          "LIV-H2": "R30-MAIN",
+          "LIV-H3": "R30-MAIN",
+          "LIV-H4": "R30-MAIN",
+          "LIV-H5": "R30-MAIN",
+          "LIV-H6": "R30-MAIN",
+          "LIV-H7": "R30-MAIN",
+          "LIV-H8": "R30-MAIN",
+          "LIV-H9": "R30-MAIN",
+          "LIV-H10": "R30-MAIN",
+          "LIV-L1": "R27-STRIP",
+          "LIV-L2": "R27-STRIP",
+          "LIV-X1": "R27-STRIP",
+          "LIV-X2": "R27-STRIP",
+          "LIV-P1": "R27-STRIP",
+          "LIV-P2": "R27-DECOR",
+          "DIN-H1": "R30-MAIN",
+          "DIN-H2": "R30-MAIN",
+          "DIN-H3": "R30-MAIN",
+          "DIN-H6": "R30-MAIN",
+          "DIN-L1": "R27-DECOR",
+          "DIN-L2": "R27-STRIP",
+          "DIN-X1": "R27-STRIP",
+          "FW-T1": "R30-MAIN",
+          "FW-T2": "R30-MAIN",
+          "FW-T3": "R30-MAIN",
+          "FW-T4": "R30-MAIN",
+          "KIT-H1": "R40-TASK",
+          "KIT-H2": "R40-TASK",
+          "KIT-H3": "R40-TASK",
+          "KIT-H4": "R40-TASK",
+          "KIT-H5": "R40-TASK",
+          "KIT-H6": "R40-TASK",
+          "KIT-H7": "R40-TASK",
+          "KIT-H8": "R40-TASK",
+          "KIT-T1": "R40-TASK",
+          "KIT-T2": "R40-TASK",
+          "KIT-T3": "R40-TASK",
+          "KIT-L1": "R27-STRIP",
+          "KIT-T4": "R40-TASK",
+          "UTL-H1": "R40-TASK",
+          "UTL-H2": "R40-TASK",
+          "UTL-H3": "R40-TASK",
+          "UTL-T1": "R40-TASK",
+          "MBR-H1": "R30-MAIN",
+          "MBR-H2": "R30-MAIN",
+          "MBR-H3": "R30-MAIN",
+          "MBR-H4": "R30-MAIN",
+          "MBR-H5": "R30-MAIN",
+          "MBR-H6": "R30-MAIN",
+          "MBR-H7": "R30-MAIN",
+          "MBR-H8": "R30-MAIN",
+          "MBR-L1": "R27-STRIP",
+          "MBR-L2": "R27-STRIP",
+          "MBR-X1": "R27-STRIP",
+          "MBR-X2": "R27-STRIP",
+          "MBR-R1": "R30-MAIN",
+          "MBR-R2": "R30-MAIN",
+          "MBR-N1": "R27-DECOR",
+          "DRS-H1": "R40-TASK",
+          "DRS-H2": "R40-TASK",
+          "TL1-M1": "R40-TASK",
+          "TL1-M2": "R40-TASK",
+          "TL1-G1": "R40-TASK",
+          "TL1-G2": "R40-TASK",
+          "TL1-G3": "R40-TASK",
+          "TL1-L1": "R27-STRIP",
+          "TL1-L2": "R27-STRIP",
+          "TL1-L3": "R27-STRIP",
+          "TL1-F1": "R40-TASK",
+          "TL1-F2": "R40-TASK",
+          "LOB-H1": "R30-MAIN",
+          "LOB-H2": "R30-MAIN",
+          "LOB-F1": "R40-TASK",
+          "LOB-N1": "R27-DECOR",
+          "TL2-M1": "R40-TASK",
+          "TL2-M2": "R40-TASK",
+          "TL2-G1": "R40-TASK",
+          "TL2-G2": "R40-TASK",
+          "TL2-G3": "R40-TASK",
+          "TL2-L1": "R27-STRIP",
+          "TL2-L2": "R27-STRIP",
+          "TL2-L3": "R27-STRIP",
+          "TL2-F1": "R40-TASK",
+          "TL2-F2": "R40-TASK",
+          "CBR-H1": "R30-MAIN",
+          "CBR-H2": "R30-MAIN",
+          "CBR-H3": "R30-MAIN",
+          "CBR-H4": "R30-MAIN",
+          "CBR-H5": "R30-MAIN",
+          "CBR-H6": "R30-MAIN",
+          "CBR-L1": "R27-STRIP",
+          "CBR-X1": "R27-STRIP",
+          "CBR-X2": "R27-STRIP",
+          "CBR-X3": "R27-STRIP",
+          "CBR-X4": "R27-STRIP",
+          "CBR-S1": "R40-TASK",
+          "CBR-R1": "R30-MAIN",
+          "CBR-R2": "R30-MAIN",
+          "BAL-H1": "R30-MAIN",
+          "BAL-H2": "R30-MAIN",
+          "BAL-L1": "R27-STRIP",
+          "BAL-L2": "R27-DECOR",
+          "BAL-L3": "R27-DECOR"
+        },
+        "holds": {
+          "LIV-H1": [],
+          "LIV-H2": [
+            "H-CURTAIN-POCKET"
+          ],
+          "LIV-H3": [
+            "H-CURTAIN-POCKET"
+          ],
+          "LIV-H4": [],
+          "LIV-H5": [],
+          "LIV-H6": [],
+          "LIV-H7": [],
+          "LIV-H8": [],
+          "LIV-H9": [],
+          "LIV-H10": [],
+          "LIV-L1": [],
+          "LIV-L2": [],
+          "LIV-X1": [
+            "H-CENTRE-RECESS"
+          ],
+          "LIV-X2": [
+            "H-CENTRE-RECESS"
+          ],
+          "LIV-P1": [
+            "H-POOJA-GEOMETRY"
+          ],
+          "LIV-P2": [
+            "H-POOJA-GEOMETRY"
+          ],
+          "DIN-H1": [
+            "H-CURTAIN-POCKET"
+          ],
+          "DIN-H2": [
+            "H-HALL-BEAM"
+          ],
+          "DIN-H3": [
+            "H-HALL-BEAM"
+          ],
+          "DIN-H6": [],
+          "DIN-L1": [
+            "H-CENTRE-RECESS"
+          ],
+          "DIN-L2": [],
+          "DIN-X1": [
+            "H-CENTRE-RECESS"
+          ],
+          "FW-T1": [
+            "H-HALL-BEAM"
+          ],
+          "FW-T2": [],
+          "FW-T3": [],
+          "FW-T4": [],
+          "KIT-H1": [],
+          "KIT-H2": [],
+          "KIT-H3": [],
+          "KIT-H4": [],
+          "KIT-H5": [],
+          "KIT-H6": [],
+          "KIT-H7": [],
+          "KIT-H8": [],
+          "KIT-T1": [],
+          "KIT-T2": [],
+          "KIT-T3": [],
+          "KIT-L1": [],
+          "KIT-T4": [],
+          "UTL-H1": [],
+          "UTL-H2": [],
+          "UTL-H3": [],
+          "UTL-T1": [],
+          "MBR-H1": [],
+          "MBR-H2": [],
+          "MBR-H3": [],
+          "MBR-H4": [],
+          "MBR-H5": [],
+          "MBR-H6": [],
+          "MBR-H7": [],
+          "MBR-H8": [],
+          "MBR-L1": [],
+          "MBR-L2": [
+            "H-MBR-BED"
+          ],
+          "MBR-X1": [],
+          "MBR-X2": [],
+          "MBR-R1": [
+            "H-MBR-BED"
+          ],
+          "MBR-R2": [
+            "H-MBR-BED"
+          ],
+          "MBR-N1": [],
+          "DRS-H1": [
+            "H-DRS-SWEEP"
+          ],
+          "DRS-H2": [
+            "H-DRS-SWEEP"
+          ],
+          "TL1-M1": [],
+          "TL1-M2": [],
+          "TL1-G1": [],
+          "TL1-G2": [],
+          "TL1-G3": [],
+          "TL1-L1": [],
+          "TL1-L2": [],
+          "TL1-L3": [],
+          "TL1-F1": [],
+          "TL1-F2": [],
+          "LOB-H1": [],
+          "LOB-H2": [],
+          "LOB-F1": [],
+          "LOB-N1": [],
+          "TL2-M1": [],
+          "TL2-M2": [],
+          "TL2-G1": [],
+          "TL2-G2": [],
+          "TL2-G3": [],
+          "TL2-L1": [],
+          "TL2-L2": [],
+          "TL2-L3": [],
+          "TL2-F1": [],
+          "TL2-F2": [],
+          "CBR-H1": [],
+          "CBR-H2": [],
+          "CBR-H3": [],
+          "CBR-H4": [],
+          "CBR-H5": [],
+          "CBR-H6": [],
+          "CBR-L1": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X1": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X2": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X3": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-X4": [
+            "H-CBR-CEIL"
+          ],
+          "CBR-S1": [
+            "H-CBR-DESK"
+          ],
+          "CBR-R1": [
+            "H-CBR-BED"
+          ],
+          "CBR-R2": [
+            "H-CBR-BED"
+          ],
+          "BAL-H1": [],
+          "BAL-H2": [],
+          "BAL-L1": [],
+          "BAL-L2": [],
+          "BAL-L3": []
+        },
+        "src": {
+          "file": "fixed-cct-map.json",
+          "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+          "baseMapSha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+          "schema": "lighting-fixed-cct-map/1",
+          "bins": {
+            "2700": 30,
+            "3000": 40,
+            "4000": 34
+          },
+          "groups": 37,
+          "knobGroups": 21
+        },
+        "mixed": [],
+        "pockets": [
+          {
+            "id": "CURT-LIV",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-LIV",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-DIN",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-DIN",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-MBR-S",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-MBR-S",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-CBR",
+            "held": false,
+            "selected": true,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": "X-CURT-CBR",
+            "holds": [
+              "H-CURTAIN-POCKET"
+            ]
+          },
+          {
+            "id": "CURT-MBR-W03",
+            "held": true,
+            "selected": false,
+            "cct": "2700K",
+            "lane": "LOW",
+            "circuit": null,
+            "holds": [
+              "H-MBR-W03"
+            ]
+          }
+        ],
+        "live": [
+          {
+            "id": "CURT-LIV",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-DIN",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-MBR-S",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-CBR",
+            "held": false,
+            "selected": true,
+            "emissive": true,
+            "inEmission": true
+          },
+          {
+            "id": "CURT-MBR-W03",
+            "held": true,
+            "selected": false,
+            "emissive": false,
+            "inEmission": false
+          }
+        ],
+        "counted": 0
+      },
+      "views": {
+        "first": {
+          "mode": "first",
+          "mean": 127.69,
+          "std": 71.17,
+          "draws": 72,
+          "triangles": 42970,
+          "fps": 53.0
+        },
+        "third": {
+          "mode": "third",
+          "mean": 161.02,
+          "std": 73.67,
+          "draws": 92,
+          "triangles": 45330,
+          "fps": 57.1
+        },
+        "doll": {
+          "mode": "doll",
+          "mean": 182.72,
+          "std": 54.34,
+          "draws": 562,
+          "triangles": 48156,
+          "fps": 60.0
+        },
+        "heat": {
+          "mode": "heat",
+          "mean": 167.07,
+          "std": 56.61,
+          "draws": 222,
+          "triangles": 43790,
+          "fps": 60.0
+        },
+        "rcp": {
+          "mode": "rcp",
+          "mean": 193.9,
+          "std": 68.09,
+          "draws": 162,
+          "triangles": 13596,
+          "fps": 57.0
+        }
+      },
+      "jumps": {
+        "balcony": {
+          "label": "Balcony / entrance",
+          "pos": [
+            2.88,
+            0,
+            14.17
+          ],
+          "mean": 204.76,
+          "std": 56.84
+        },
+        "living": {
+          "label": "Living",
+          "pos": [
+            3.52,
+            0,
+            10.65
+          ],
+          "mean": 127.67,
+          "std": 71.17
+        },
+        "dining": {
+          "label": "Dining",
+          "pos": [
+            3.84,
+            0,
+            6.57
+          ],
+          "mean": 190.52,
+          "std": 39.81
+        },
+        "kitchen": {
+          "label": "Kitchen",
+          "pos": [
+            3.04,
+            0,
+            3.21
+          ],
+          "mean": 200.1,
+          "std": 63.63
+        },
+        "utility": {
+          "label": "Utility",
+          "pos": [
+            3.6,
+            0,
+            0.89
+          ],
+          "mean": 190.7,
+          "std": 49.61
+        },
+        "washing": {
+          "label": "Washing",
+          "pos": [
+            1.6,
+            0,
+            0.89
+          ],
+          "mean": 182.3,
+          "std": 72.08
+        },
+        "master": {
+          "label": "Master bedroom",
+          "pos": [
+            6.64,
+            0,
+            3.85
+          ],
+          "mean": 141.6,
+          "std": 76.94
+        },
+        "dressing": {
+          "label": "Dressing",
+          "pos": [
+            5.76,
+            0,
+            5.53
+          ],
+          "mean": 57.0,
+          "std": 50.48
+        },
+        "bath1": {
+          "label": "Attached bathroom",
+          "pos": [
+            7.44,
+            0,
+            6.33
+          ],
+          "mean": 220.83,
+          "std": 51.29
+        },
+        "lobby": {
+          "label": "Common lobby",
+          "pos": [
+            5.52,
+            0,
+            7.69
+          ],
+          "mean": 78.38,
+          "std": 90.8
+        },
+        "bath2": {
+          "label": "Common bathroom",
+          "pos": [
+            7.44,
+            0,
+            8.09
+          ],
+          "mean": 221.03,
+          "std": 51.11
+        },
+        "children": {
+          "label": "Children bedroom",
+          "pos": [
+            5.76,
+            0,
+            9.69
+          ],
+          "mean": 169.96,
+          "std": 53.2
+        }
+      },
+      "exports": {
+        "png": {
+          "file": "light-planner-doll-living.png",
+          "bytes": 761191,
+          "sha256": "4f0cad21e4ffe7f1a3faaa4901b2e16dccf342932217d854e61296503cb9841a"
+        },
+        "schedule": {
+          "file": "fixture-schedule-OPT1-b6f6bf1a.csv",
+          "bytes": 71853,
+          "sha256": "c34484022e2168c22cb5d301f22f21c69fb98e0748a11b013285ceaf7f4d8e4b"
+        },
+        "scheduleColumns": [
+          "fixture_id",
+          "zone",
+          "room",
+          "lane",
+          "rail",
+          "circuit",
+          "type",
+          "description",
+          "fixed_cct_K",
+          "cct_source",
+          "master_cct_or_control",
+          "watts",
+          "lumens",
+          "beam_deg",
+          "ip",
+          "mount_height_m",
+          "x_ft_sheet",
+          "z_ft_sheet",
+          "length_m",
+          "finish",
+          "status",
+          "hold_reason",
+          "placement_hold_ids",
+          "note",
+          "review_status",
+          "cct_rule",
+          "map_layer",
+          "brightness_group"
+        ],
+        "groups": {
+          "file": "circuit-groups-OPT1-b6f6bf1a.csv",
+          "bytes": 14438,
+          "sha256": "3dc8813911f0651971db6974b1a40affd5a5aa13e7b9dac3f1d79bd389f55a85"
+        },
+        "pdf1": {
+          "file": "layout-views-review-draft-b6f6bf1a.pdf",
+          "bytes": 6815041,
+          "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+          "offline_action": "opened in new PDF tab",
+          "pages": 13
+        },
+        "pdf2": {
+          "file": "working-floor-plan-review-draft-b6f6bf1a.pdf",
+          "bytes": 864756,
+          "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
+          "offline_action": "opened in new PDF tab",
+          "pages": 1
+        },
+        "pdf3": {
+          "file": "curtain-pocket-section-review-b6f6bf1a.pdf",
+          "bytes": 71474,
+          "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
+          "offline_action": "opened in new PDF tab",
+          "pages": 1
+        },
+        "pdf4": {
+          "file": "wardrobe-interiors-review-b6f6bf1a.pdf",
+          "bytes": 245180,
+          "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3",
+          "offline_action": "opened in new PDF tab",
+          "pages": 17
+        }
+      },
+      "warningsKnownAngle": 1,
+      "warningFirst": "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 ",
+      "requests": 1,
+      "errors": [],
+      "finalState": {
+        "mode": "doll",
+        "selectedRoom": "living",
+        "position": [
+          3.52,
+          0,
+          10.65
+        ],
+        "yaw": 1.1943744712392623,
+        "pitch": 0,
+        "fov": 65,
+        "fps": 49.965024482862155,
+        "draws": 562,
+        "triangles": 48156,
+        "guided": false,
+        "interiors": false,
+        "orbit": {
+          "yaw": 0.22,
+          "pitch": 1.12,
+          "distance": 24,
+          "target": [
+            4.7,
+            0,
+            7.9
+          ]
+        },
+        "rcp": {
+          "x": 2.8190951999999996,
+          "z": 10.372953599999999,
+          "half": 5.725488246153846
+        },
+        "mapScene": "HIGH+LOW_100",
+        "ambient": {
+          "hemi": 1.149999999997272,
+          "env": 0.339999999999294,
+          "exposure": 1.0199999999995508
+        },
+        "sheetPx": 422
+      }
+    }
+  },
+  "checks": [
+    {
+      "profile": "desktop",
+      "name": "page loads and the 3D scene is ready",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "profile": "desktop",
+      "name": "bound to the requested integrated master",
+      "pass": true,
+      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+    },
+    {
+      "profile": "desktop",
+      "name": "104 fixtures / 47 circuits embedded",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "every fixture has a fixed CCT, none tunable",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "K-2 kitchen task lighting present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "upper stair flight omitted",
+      "pass": true,
+      "detail": [
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "landing"
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "16 real-time lights (performance budget)",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "profile": "desktop",
+      "name": "only two sliders (HIGH, LOW) and no colour/temperature input",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "room list covers every room + balcony/entry",
+      "pass": true,
+      "detail": [
+        [
+          "balcony",
+          "Balcony / entrance"
+        ],
+        [
+          "living",
+          "Living"
+        ],
+        [
+          "dining",
+          "Dining"
+        ],
+        [
+          "kitchen",
+          "Kitchen"
+        ],
+        [
+          "utility",
+          "Utility"
+        ],
+        [
+          "washing",
+          "Washing"
+        ],
+        [
+          "master",
+          "Master bedroom"
+        ],
+        [
+          "dressing",
+          "Dressing"
+        ],
+        [
+          "bath1",
+          "Attached bathroom"
+        ],
+        [
+          "lobby",
+          "Common lobby"
+        ],
+        [
+          "bath2",
+          "Common bathroom"
+        ],
+        [
+          "children",
+          "Children bedroom"
+        ]
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "16 holds carried",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "profile": "desktop",
+      "name": "frozen heatmap is bound and live lux recomputation is disabled",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "bundled Three.js copyright and MIT permission notice are present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "caveats visible (review draft, not construction, not recomputed)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "all 104 fixture CCTs equal the fixed-CCT map",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "profile": "desktop",
+      "name": "all base CCT rules and placement holds match the current map",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "desktop",
+      "name": "CCT bins 30 x 2700 / 40 x 3000 / 34 x 4000",
+      "pass": true,
+      "detail": {
+        "3000": 40,
+        "2700": 30,
+        "4000": 34
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "fixed-CCT source bound to map SHA-256",
+      "pass": true,
+      "detail": {
+        "file": "fixed-cct-map.json",
+        "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+        "baseMapSha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+        "schema": "lighting-fixed-cct-map/1",
+        "bins": {
+          "2700": 30,
+          "3000": 40,
+          "4000": 34
+        },
+        "groups": 37,
+        "knobGroups": 21
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "signed original fixed-CCT map provenance retained",
+      "pass": true,
+      "detail": {
+        "file": "fixed-cct-map.json",
+        "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+        "baseMapSha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+        "schema": "lighting-fixed-cct-map/1",
+        "bins": {
+          "2700": 30,
+          "3000": 40,
+          "4000": 34
+        },
+        "groups": 37,
+        "knobGroups": 21
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "no circuit mixes colour temperatures",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "desktop",
+      "name": "5 curtain-pocket candidates, 2700 K on LOW, not counted in 104",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-LIV",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-DIN",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-MBR-S",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-CBR",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": null,
+          "holds": [
+            "H-MBR-W03"
+          ]
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "four selected strips retain separate site and no-lux-credit holds",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-LIV",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-DIN",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-MBR-S",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-CBR",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": null,
+          "holds": [
+            "H-MBR-W03"
+          ]
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "held pocket CURT-MBR-W03 shown grey and unlit",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "emissive": false,
+          "inEmission": false
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "unheld pockets follow their LOW circuit (emissive)",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "emissive": false,
+          "inEmission": false
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "CURT-CBR selected and unheld for review, placeholder remains unmeasured",
+      "pass": true,
+      "detail": {
+        "held": false,
+        "selected": true,
+        "label": "placeholder window, unmeasured"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "four reader and two PIR fitting previews start off",
+      "pass": true,
+      "detail": [
+        {
+          "id": "MBR-R1",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "MBR-R2",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "MBR-N1",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "LOB-N1",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "CBR-R1",
+          "held": true,
+          "on": false
+        },
+        {
+          "id": "CBR-R2",
+          "held": true,
+          "on": false
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "six unmeasured wardrobe sections match the referenced proposal",
+      "pass": true,
+      "detail": {
+        "visible": false,
+        "closed": true,
+        "records": [
+          {
+            "target": "MBR-wardrobe-left",
+            "room": "R04",
+            "section": "A",
+            "rect": [
+              5.1054,
+              0.2246376,
+              6.5538096,
+              0.8546376000000008
+            ],
+            "features": [
+              {
+                "id": "A1",
+                "kind": "long_hang",
+                "shelves": 1,
+                "rails": 1,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "A2",
+                "kind": "double_short",
+                "shelves": 1,
+                "rails": 2,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "A3",
+                "kind": "fold_drawers",
+                "shelves": 4,
+                "rails": 0,
+                "drawers": 2,
+                "pullouts": 1
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "MBR-wardrobe-right",
+            "room": "R04",
+            "section": "B",
+            "rect": [
+              7.4669904,
+              0.2246376,
+              8.9154,
+              0.8546376000000008
+            ],
+            "features": [
+              {
+                "id": "B1",
+                "kind": "long_hang",
+                "shelves": 1,
+                "rails": 1,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "B2",
+                "kind": "double_short",
+                "shelves": 1,
+                "rails": 2,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "B3",
+                "kind": "fold_drawers",
+                "shelves": 4,
+                "rails": 0,
+                "drawers": 2,
+                "pullouts": 1
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R04a-WR01",
+            "room": "R04a",
+            "section": "D",
+            "rect": [
+              5.064,
+              5.05,
+              5.364,
+              6.6
+            ],
+            "features": [
+              {
+                "id": "D1",
+                "kind": "shallow_locked",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 1,
+                "pullouts": 0
+              },
+              {
+                "id": "D2",
+                "kind": "shallow_shelves",
+                "shelves": 6,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "D3",
+                "kind": "shallow_shelves",
+                "shelves": 6,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "D4",
+                "kind": "shallow_shelves_five",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R05-WR01",
+            "room": "R05",
+            "section": "C",
+            "rect": [
+              6.8904000000000005,
+              8.6123376,
+              8.9154,
+              9.2423376
+            ],
+            "features": [
+              {
+                "id": "C1",
+                "kind": "long_hang",
+                "shelves": 1,
+                "rails": 1,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "C2",
+                "kind": "double_short",
+                "shelves": 1,
+                "rails": 2,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "C3",
+                "kind": "child_fold_drawers",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 2,
+                "pullouts": 1
+              },
+              {
+                "id": "C4",
+                "kind": "child_linen",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R09-SH01",
+            "room": "R09",
+            "section": "S",
+            "rect": [
+              0.552,
+              13.413,
+              1.752,
+              13.763
+            ],
+            "features": [
+              {
+                "id": "S1",
+                "kind": "shoe_shelves",
+                "shelves": 3,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "S2",
+                "kind": "shoe_shelves",
+                "shelves": 3,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R08-UC01",
+            "room": "R08",
+            "section": "U",
+            "rect": [
+              4.404,
+              0.305,
+              4.955,
+              1.417
+            ],
+            "features": [
+              {
+                "id": "U1",
+                "kind": "utility_shelf",
+                "shelves": 1,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "U2",
+                "kind": "utility_tall",
+                "shelves": 0,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          }
+        ],
+        "source": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d"
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "proposed wardrobe interiors open through the control",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "proposed wardrobe interiors can be hidden again",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "downlight pools, ceiling halos and wall scallops are present",
+      "pass": true,
+      "detail": [
+        13,
+        48,
+        16
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "cove trays use continuous rings",
+      "pass": true,
+      "detail": [
+        {
+          "key": "HALL",
+          "points": 30,
+          "source": "site photo 13-Nov-2026 + designer render p19/33",
+          "radii": [
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0
+          ],
+          "ring": [
+            [
+              4.65,
+              19.393700787401574
+            ],
+            [
+              4.65615157480315,
+              19.30142716535433
+            ],
+            [
+              4.6746062992125985,
+              19.221456692913385
+            ],
+            [
+              4.705364173228347,
+              19.15378937007874
+            ],
+            [
+              4.748425196850394,
+              19.098425196850393
+            ],
+            [
+              4.80378937007874,
+              19.055364173228348
+            ],
+            [
+              4.8714566929133865,
+              19.0246062992126
+            ],
+            [
+              4.951427165354331,
+              19.006151574803148
+            ],
+            [
+              5.043700787401575,
+              19
+            ],
+            [
+              13.3,
+              19
+            ],
+            [
+              13.3,
+              34.706299212598424
+            ],
+            [
+              13.29384842519685,
+              34.79857283464567
+            ],
+            [
+              13.275393700787403,
+              34.878543307086616
+            ],
+            [
+              13.244635826771654,
+              34.94621062992126
+            ],
+            [
+              13.201574803149606,
+              35.00157480314961
+            ],
+            [
+              13.14621062992126,
+              35.04463582677165
+            ],
+            [
+              13.078543307086615,
+              35.0753937007874
+            ],
+            [
+              12.99857283464567,
+              35.09384842519685
+            ],
+            [
+              12.906299212598427,
+              35.1
+            ],
+            [
+              10.3,
+              35.1
+            ],
+            [
+              10.3,
+              40.306299212598425
+            ],
+            [
+              10.29384842519685,
+              40.39857283464567
+            ],
+            [
+              10.275393700787403,
+              40.47854330708662
+            ],
+            [
+              10.244635826771654,
+              40.54621062992126
+            ],
+            [
+              10.201574803149606,
+              40.60157480314961
+            ],
+            [
+              10.14621062992126,
+              40.644635826771655
+            ],
+            [
+              10.078543307086615,
+              40.6753937007874
+            ],
+            [
+              9.99857283464567,
+              40.693848425196855
+            ],
+            [
+              9.906299212598427,
+              40.7
+            ],
+            [
+              4.65,
+              40.7
+            ]
+          ],
+          "continuous": true
+        },
+        {
+          "key": "MBR",
+          "points": 20,
+          "source": "designer render (master)",
+          "radii": [
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0
+          ],
+          "ring": [
+            [
+              19.13,
+              6.293700787401575
+            ],
+            [
+              19.136151574803147,
+              6.201427165354331
+            ],
+            [
+              19.1546062992126,
+              6.1214566929133865
+            ],
+            [
+              19.185364173228347,
+              6.05378937007874
+            ],
+            [
+              19.22842519685039,
+              5.998425196850394
+            ],
+            [
+              19.28378937007874,
+              5.955364173228347
+            ],
+            [
+              19.351456692913384,
+              5.9246062992125985
+            ],
+            [
+              19.43142716535433,
+              5.90615157480315
+            ],
+            [
+              19.523700787401573,
+              5.9
+            ],
+            [
+              24.97,
+              5.9
+            ],
+            [
+              24.97,
+              10.906299212598427
+            ],
+            [
+              24.96384842519685,
+              10.99857283464567
+            ],
+            [
+              24.9453937007874,
+              11.078543307086615
+            ],
+            [
+              24.91463582677165,
+              11.14621062992126
+            ],
+            [
+              24.871574803149606,
+              11.201574803149606
+            ],
+            [
+              24.816210629921258,
+              11.244635826771654
+            ],
+            [
+              24.748543307086614,
+              11.275393700787403
+            ],
+            [
+              24.66857283464567,
+              11.29384842519685
+            ],
+            [
+              24.576299212598425,
+              11.3
+            ],
+            [
+              19.13,
+              11.3
+            ]
+          ],
+          "continuous": true
+        },
+        {
+          "key": "CBR",
+          "points": 20,
+          "source": "CPL-1 (R05-local-uv)",
+          "radii": [
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0
+          ],
+          "ring": [
+            [
+              21.166,
+              34.223500787401576
+            ],
+            [
+              21.17215157480315,
+              34.13122716535433
+            ],
+            [
+              21.1906062992126,
+              34.051256692913384
+            ],
+            [
+              21.22136417322835,
+              33.98358937007874
+            ],
+            [
+              21.264425196850393,
+              33.92822519685039
+            ],
+            [
+              21.31978937007874,
+              33.88516417322835
+            ],
+            [
+              21.387456692913386,
+              33.8544062992126
+            ],
+            [
+              21.46742716535433,
+              33.83595157480315
+            ],
+            [
+              21.559700787401574,
+              33.8298
+            ],
+            [
+              26.7697,
+              33.8298
+            ],
+            [
+              26.7697,
+              38.03589921259842
+            ],
+            [
+              26.763548425196852,
+              38.12817283464567
+            ],
+            [
+              26.7450937007874,
+              38.208143307086615
+            ],
+            [
+              26.714335826771652,
+              38.27581062992126
+            ],
+            [
+              26.671274803149608,
+              38.33117480314961
+            ],
+            [
+              26.61591062992126,
+              38.37423582677165
+            ],
+            [
+              26.548243307086615,
+              38.4049937007874
+            ],
+            [
+              26.46827283464567,
+              38.42344842519685
+            ],
+            [
+              26.375999212598426,
+              38.4296
+            ],
+            [
+              21.166,
+              38.4296
+            ]
+          ],
+          "continuous": true
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "four recessed curtain pockets are unmeasured and model-clipped",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "room": "living",
+          "rect": [
+            2.2689999999999997,
+            29.036,
+            3.0701049868766406,
+            37.074
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        },
+        {
+          "id": "CURT-DIN",
+          "room": "dining",
+          "rect": [
+            2.2689999999999997,
+            18.046,
+            3.0701049868766406,
+            26.084
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        },
+        {
+          "id": "CURT-MBR-S",
+          "room": "master",
+          "rect": [
+            28.42989501312336,
+            9.129,
+            29.23,
+            16.094
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        },
+        {
+          "id": "CURT-CBR",
+          "room": "children",
+          "rect": [
+            28.42989501312336,
+            39.148,
+            29.23,
+            43.23570078740157
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "utility UC01 has one cabinet footprint and one collision",
+      "pass": true,
+      "detail": [
+        {
+          "id": "ST-R08-UC01",
+          "rect": [
+            4.404,
+            0.305,
+            4.955,
+            1.417
+          ],
+          "height": [
+            0,
+            0.8
+          ],
+          "sourceHeight": [
+            0,
+            0.8
+          ],
+          "displayOnlyClip": false,
+          "hold": null,
+          "homeownerSelection": {
+            "status": "selected_subject_to_site_holds",
+            "condition": "conditional on FH-ST-12 measured utility geometry and services/access",
+            "constructionRelease": false
+          }
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "loft display clipping retains H-LOFT site hold",
+      "pass": true,
+      "detail": [
+        {
+          "id": "ST-R04a-LF01",
+          "rect": [
+            5.064,
+            5.03,
+            5.404,
+            6.7
+          ],
+          "height": [
+            2.13,
+            2.9541
+          ],
+          "sourceHeight": [
+            2.13,
+            3.08
+          ],
+          "displayOnlyClip": true,
+          "hold": "H-LOFT",
+          "homeownerSelection": null
+        },
+        {
+          "id": "ST-R05-LF01",
+          "rect": [
+            5.1054,
+            8.6123376,
+            8.9154,
+            9.2123376
+          ],
+          "height": [
+            2.13,
+            2.9541
+          ],
+          "sourceHeight": [
+            2.13,
+            3.08
+          ],
+          "displayOnlyClip": true,
+          "hold": "H-LOFT",
+          "homeownerSelection": null
+        },
+        {
+          "id": "ST-R08-LF01",
+          "rect": [
+            4.404,
+            0.305,
+            4.955,
+            1.417
+          ],
+          "height": [
+            1.9,
+            2.9450000000000003
+          ],
+          "sourceHeight": [
+            1.9,
+            2.95
+          ],
+          "displayOnlyClip": true,
+          "hold": "H-LOFT",
+          "homeownerSelection": null
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "master reader can be previewed individually",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "master PIR light can be previewed individually",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "individual readers and PIR previews are independent of room switch",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "all rooms off also clears individual previews",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "all rooms on leaves individual previews off",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "held children's readers are visible but disabled",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "view 'first' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "first",
+        "mean": 166.18,
+        "std": 58.96,
+        "draws": 113,
+        "triangles": 47848,
+        "fps": 60
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "view 'third' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "third",
+        "mean": 173.07,
+        "std": 64.27,
+        "draws": 165,
+        "triangles": 50842,
+        "fps": 60.0
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "view 'doll' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "doll",
+        "mean": 173.46,
+        "std": 31.02,
+        "draws": 562,
+        "triangles": 48156,
+        "fps": 60.0
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "view 'heat' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "heat",
+        "mean": 170.59,
+        "std": 26.29,
+        "draws": 222,
+        "triangles": 43790,
+        "fps": 60.0
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "light-map overlay and table appear only in the Light map view",
+      "pass": true,
+      "detail": [
+        true,
+        true,
+        10
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "light map labelled frozen / generic optics / not recomputed",
+      "pass": true,
+      "detail": "frozen generic-optics estimate at high + low 100 %. provisional geometry, not measured, not recomputed by the sliders. ugr not calculated."
+    },
+    {
+      "profile": "desktop",
+      "name": "light-map scene HIGH_100 selectable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "light-map scene LOW_100 selectable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "light-map scene HIGH+LOW_100 selectable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "view 'rcp' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "rcp",
+        "mean": 147.07,
+        "std": 92.83,
+        "draws": 261,
+        "triangles": 15624,
+        "fps": 60.0
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "light-map overlay hidden outside Light map view",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Balcony / entrance' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "balcony",
+        "pos": [
+          2.88,
+          0,
+          14.17
+        ],
+        "spawn": {
+          "spawn": [
+            9.448818897637794,
+            46.48950131233595
+          ],
+          "name": "Balcony / entrance"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Living' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "living",
+        "pos": [
+          3.52,
+          0,
+          10.65
+        ],
+        "spawn": {
+          "spawn": [
+            11.548556430446194,
+            34.94094488188976
+          ],
+          "name": "Living"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Dining' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "dining",
+        "pos": [
+          3.84,
+          0,
+          6.569999999999999
+        ],
+        "spawn": {
+          "spawn": [
+            12.598425196850393,
+            21.55511811023622
+          ],
+          "name": "Dining"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Kitchen' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "kitchen",
+        "pos": [
+          3.0399999999999996,
+          0,
+          3.21
+        ],
+        "spawn": {
+          "spawn": [
+            9.973753280839894,
+            10.531496062992126
+          ],
+          "name": "Kitchen"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Utility' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "utility",
+        "pos": [
+          3.6,
+          0,
+          0.89
+        ],
+        "spawn": {
+          "spawn": [
+            11.811023622047244,
+            2.91994750656168
+          ],
+          "name": "Utility"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Washing' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "washing",
+        "pos": [
+          1.6,
+          0,
+          0.89
+        ],
+        "spawn": {
+          "spawn": [
+            5.2493438320209975,
+            2.91994750656168
+          ],
+          "name": "Washing"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Master bedroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "master",
+        "pos": [
+          6.64,
+          0,
+          3.85
+        ],
+        "spawn": {
+          "spawn": [
+            21.78477690288714,
+            12.631233595800525
+          ],
+          "name": "Master bedroom"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Dressing' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "dressing",
+        "pos": [
+          5.760000000000001,
+          0,
+          5.53
+        ],
+        "spawn": {
+          "spawn": [
+            18.897637795275593,
+            18.14304461942257
+          ],
+          "name": "Dressing"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Attached bathroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "bath1",
+        "pos": [
+          7.44,
+          0,
+          6.33
+        ],
+        "spawn": {
+          "spawn": [
+            24.409448818897637,
+            20.76771653543307
+          ],
+          "name": "Attached bathroom"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Common lobby' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "lobby",
+        "pos": [
+          5.5200000000000005,
+          0,
+          7.69
+        ],
+        "spawn": {
+          "spawn": [
+            18.11023622047244,
+            25.22965879265092
+          ],
+          "name": "Common lobby"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Common bathroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "bath2",
+        "pos": [
+          7.44,
+          0,
+          8.09
+        ],
+        "spawn": {
+          "spawn": [
+            24.409448818897637,
+            26.541994750656166
+          ],
+          "name": "Common bathroom"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "jump to 'Children bedroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "children",
+        "pos": [
+          5.760000000000001,
+          0,
+          9.69
+        ],
+        "spawn": {
+          "spawn": [
+            18.897637795275593,
+            31.791338582677163
+          ],
+          "name": "Children bedroom"
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "first-person W key walks forward",
+      "pass": true,
+      "detail": 0.73
+    },
+    {
+      "profile": "desktop",
+      "name": "mouse drag turns the view (first person)",
+      "pass": true,
+      "detail": [
+        1.1943744712392623,
+        0.6343744712392618
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "third-person walk (D key) moves the avatar",
+      "pass": true,
+      "detail": 1.37
+    },
+    {
+      "profile": "desktop",
+      "name": "walking is stopped by walls (avatar stays in the flat)",
+      "pass": true,
+      "detail": [
+        0.91,
+        0,
+        6.22
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "living room starts on at 100/100",
+      "pass": true,
+      "detail": {
+        "room": "living",
+        "zone": "LIV",
+        "on": true,
+        "high": 100,
+        "low": 100,
+        "hasHigh": true,
+        "hasLow": true,
+        "held": false,
+        "cct": {
+          "high": [
+            "3000K"
+          ],
+          "low": [
+            "2700K"
+          ],
+          "independent": [
+            "2700K"
+          ]
+        },
+        "sharedLow": [
+          "C05"
+        ]
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "HIGH/LOW show a fixed CCT, not a control",
+      "pass": true,
+      "detail": [
+        "3000 K fixed",
+        "2700 K fixed"
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "dragging the HIGH slider sets HIGH brightness",
+      "pass": true,
+      "detail": {
+        "room": "living",
+        "zone": "LIV",
+        "on": true,
+        "high": 18,
+        "low": 100,
+        "hasHigh": true,
+        "hasLow": true,
+        "held": false,
+        "cct": {
+          "high": [
+            "3000K"
+          ],
+          "low": [
+            "2700K"
+          ],
+          "independent": [
+            "2700K"
+          ]
+        },
+        "sharedLow": [
+          "C05"
+        ]
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "lower HIGH visibly dims the room",
+      "pass": true,
+      "detail": [
+        [
+          166.14,
+          58.97
+        ],
+        [
+          140.8,
+          58.93
+        ]
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "LOW slider sets LOW brightness independently",
+      "pass": true,
+      "detail": {
+        "room": "living",
+        "zone": "LIV",
+        "on": true,
+        "high": 100,
+        "low": 0,
+        "hasHigh": true,
+        "hasLow": true,
+        "held": false,
+        "cct": {
+          "high": [
+            "3000K"
+          ],
+          "low": [
+            "2700K"
+          ],
+          "independent": [
+            "2700K"
+          ]
+        },
+        "sharedLow": [
+          "C05"
+        ]
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "living curtain pocket dims with the LOW slider",
+      "pass": true,
+      "detail": [
+        4.2063691512620495e-05,
+        0.5960280405125128
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "LOW at 0 visibly changes the room",
+      "pass": true,
+      "detail": [
+        [
+          166.14,
+          58.97
+        ],
+        [
+          159.98,
+          56.8
+        ]
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "room on/off switch turns the room off",
+      "pass": true,
+      "detail": [
+        false,
+        [
+          166.14,
+          58.97
+        ],
+        [
+          107.13,
+          60.39
+        ]
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "room on/off switch turns it back on",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "All rooms off turns every room off",
+      "pass": true,
+      "detail": {
+        "washing": false,
+        "utility": false,
+        "kitchen": false,
+        "dining": false,
+        "living": false,
+        "master": false,
+        "dressing": false,
+        "lobby": false,
+        "children": false,
+        "balcony": false,
+        "bath1": false,
+        "bath2": false
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "All rooms off darkens the scene",
+      "pass": true,
+      "detail": [
+        [
+          166.14,
+          58.97
+        ],
+        [
+          71.15,
+          41.62
+        ]
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "All rooms on turns all active rooms on including the children's room",
+      "pass": true,
+      "detail": {
+        "washing": true,
+        "utility": true,
+        "kitchen": true,
+        "dining": true,
+        "living": true,
+        "master": true,
+        "dressing": true,
+        "lobby": true,
+        "children": true,
+        "balcony": true,
+        "bath1": true,
+        "bath2": true
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "moving a slider on an off room turns it on",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "kitchen per map: HIGH/task 4000 K, cove (LOW) 2700 K",
+      "pass": true,
+      "detail": {
+        "high": [
+          "4000K"
+        ],
+        "low": [
+          "2700K"
+        ],
+        "independent": [
+          "4000K"
+        ]
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "children's six HIGH fittings are switchable; other CBR fixtures remain held",
+      "pass": true,
+      "detail": {
+        "high": [
+          {
+            "id": "CBR-H1",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H2",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H3",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H4",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H5",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H6",
+            "held": false,
+            "on": true
+          }
+        ],
+        "other": [
+          {
+            "id": "CBR-L1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X2",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X3",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X4",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-S1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-R1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-R2",
+            "held": true,
+            "on": false
+          }
+        ]
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "selected children's curtain strip follows LOW brightness",
+      "pass": true,
+      "detail": [
+        0.0008733050591199,
+        0.5991291860356305
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "fixture markers visible in dollhouse",
+      "pass": true,
+      "detail": {
+        "id": "DRS-H1",
+        "x": 784.7001192970334,
+        "y": 322.1532782651224,
+        "z": 0.9963959610132983
+      }
+    },
+    {
+      "profile": "desktop",
+      "name": "tapping a fitting opens the inspector with its fixed CCT",
+      "pass": true,
+      "detail": "OPT-1 review baseline; not a construction release.\n\nDRS-H1\nCOB deep-recessed anti-glare downlight\nRoom\nDressing\nColour temp.\n4000 K fixed\nFixed-CCT map R40-TASK: neutral white for visual tasks where c"
+    },
+    {
+      "profile": "desktop",
+      "name": "PNG screenshot downloads (image, caption bar)",
+      "pass": true,
+      "detail": [
+        [
+          2160,
+          1401
+        ],
+        820842
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "fixture schedule CSV: 108 rows with fixed CCT, circuit, rail and placement holds",
+      "pass": true,
+      "detail": [
+        108,
+        [
+          "fixture_id",
+          "zone",
+          "room",
+          "lane",
+          "rail",
+          "circuit",
+          "type",
+          "description",
+          "fixed_cct_k",
+          "cct_source",
+          "master_cct_or_control",
+          "watts",
+          "lumens",
+          "beam_deg",
+          "ip",
+          "mount_height_m",
+          "x_ft_sheet",
+          "z_ft_sheet",
+          "length_m",
+          "finish",
+          "status",
+          "hold_reason",
+          "placement_hold_ids",
+          "note",
+          "review_status",
+          "cct_rule",
+          "map_layer",
+          "brightness_group"
+        ]
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "all 104 schedule CCTs, rules and placement holds match the current map",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "desktop",
+      "name": "four selected schedule strips are warm, held for site and carry no lux credit",
+      "pass": true,
+      "detail": "{'CURT-LIV', 'CURT-MBR-S', 'CURT-DIN', 'CURT-CBR'}"
+    },
+    {
+      "profile": "desktop",
+      "name": "circuit-group CSV: 51 rows",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "profile": "desktop",
+      "name": "four current review PDF links present",
+      "pass": true,
+      "detail": [
+        "downloads/layout-views-review-draft-b6f6bf1a.pdf",
+        "downloads/working-floor-plan-review-draft-b6f6bf1a.pdf",
+        "downloads/curtain-pocket-section-review-b6f6bf1a.pdf",
+        "downloads/wardrobe-interiors-review-b6f6bf1a.pdf"
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/layout-views-review-draft-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        6815041,
+        13
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Furnished floor plan — top-down\nHyderabad 2BHK · one floor · sheet drawn south-up (north arrow at right)\nSHEET 1 / 13\nhouse-design.json\nb6f6bf1a127c7e39086deb9f…\nN\nS\nTENANT'S BED\nTENANT'S BED\nqueen to"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/working-floor-plan-review-draft-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        864756,
+        1
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Current working floor plan\nREVIEW DRAFT / Hyderabad 2BHK / decision drawing / not an as-built or construction release\nSINGLE SOURCE\nhouse-design.json\nb6f6bf1a127c7e39086deb9f...\nHOUSE / CURRENT COORDI"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/curtain-pocket-section-review-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        71474,
+        1
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Curtain pocket - indicative section\nREVIEW DRAFT / schematic only / not a construction or fabrication detail\nhouse-design.json\nSECTION THROUGH WINDOW AND CEILING\nIllustrative arrangement only; track o"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/wardrobe-interiors-review-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        245180,
+        17
+      ]
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Wardrobe and storage - homeowner sign-oﬀ pack\nReady for review, NOT for fabrication. This pack records conﬁrmed choices, material recommendations and remaining decisions; it does not approve joinery s"
+    },
+    {
+      "profile": "desktop",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "no external (CDN / third-party) requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "desktop",
+      "name": "zero console errors / page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "desktop",
+      "name": "no unexpected console warnings (only the known ANGLE/D3D X4122-X4008 compile notes)",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "desktop",
+      "name": "HTML has no personal paths or local attachment names",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "desktop",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": [
+        1440,
+        1440,
+        900,
+        900
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "page loads and the 3D scene is ready",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "profile": "mobile",
+      "name": "bound to the requested integrated master",
+      "pass": true,
+      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+    },
+    {
+      "profile": "mobile",
+      "name": "104 fixtures / 47 circuits embedded",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "every fixture has a fixed CCT, none tunable",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "K-2 kitchen task lighting present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "upper stair flight omitted",
+      "pass": true,
+      "detail": [
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "flight-to-landing",
+        "landing"
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "16 real-time lights (performance budget)",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "profile": "mobile",
+      "name": "only two sliders (HIGH, LOW) and no colour/temperature input",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "room list covers every room + balcony/entry",
+      "pass": true,
+      "detail": [
+        [
+          "balcony",
+          "Balcony / entrance"
+        ],
+        [
+          "living",
+          "Living"
+        ],
+        [
+          "dining",
+          "Dining"
+        ],
+        [
+          "kitchen",
+          "Kitchen"
+        ],
+        [
+          "utility",
+          "Utility"
+        ],
+        [
+          "washing",
+          "Washing"
+        ],
+        [
+          "master",
+          "Master bedroom"
+        ],
+        [
+          "dressing",
+          "Dressing"
+        ],
+        [
+          "bath1",
+          "Attached bathroom"
+        ],
+        [
+          "lobby",
+          "Common lobby"
+        ],
+        [
+          "bath2",
+          "Common bathroom"
+        ],
+        [
+          "children",
+          "Children bedroom"
+        ]
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "16 holds carried",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "profile": "mobile",
+      "name": "frozen heatmap is bound and live lux recomputation is disabled",
+      "pass": true,
+      "detail": {
+        "master": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "fixtures": 104,
+        "circuits": 47,
+        "lights": 16,
+        "withCct": 104,
+        "tunable": 0,
+        "risingFlight": false,
+        "k2": true,
+        "rangeInputs": 2,
+        "colorInputs": 0,
+        "rooms": [
+          [
+            "balcony",
+            "Balcony / entrance"
+          ],
+          [
+            "living",
+            "Living"
+          ],
+          [
+            "dining",
+            "Dining"
+          ],
+          [
+            "kitchen",
+            "Kitchen"
+          ],
+          [
+            "utility",
+            "Utility"
+          ],
+          [
+            "washing",
+            "Washing"
+          ],
+          [
+            "master",
+            "Master bedroom"
+          ],
+          [
+            "dressing",
+            "Dressing"
+          ],
+          [
+            "bath1",
+            "Attached bathroom"
+          ],
+          [
+            "lobby",
+            "Common lobby"
+          ],
+          [
+            "bath2",
+            "Common bathroom"
+          ],
+          [
+            "children",
+            "Children bedroom"
+          ]
+        ],
+        "stairParts": [
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "flight-to-landing",
+          "landing"
+        ],
+        "title": "Light & living | 2BHK lighting planner",
+        "heat": true,
+        "heatSha": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "noRecompute": true,
+        "holds": 16
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "bundled Three.js copyright and MIT permission notice are present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "caveats visible (review draft, not construction, not recomputed)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "all 104 fixture CCTs equal the fixed-CCT map",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "profile": "mobile",
+      "name": "all base CCT rules and placement holds match the current map",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "mobile",
+      "name": "CCT bins 30 x 2700 / 40 x 3000 / 34 x 4000",
+      "pass": true,
+      "detail": {
+        "3000": 40,
+        "2700": 30,
+        "4000": 34
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "fixed-CCT source bound to map SHA-256",
+      "pass": true,
+      "detail": {
+        "file": "fixed-cct-map.json",
+        "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+        "baseMapSha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+        "schema": "lighting-fixed-cct-map/1",
+        "bins": {
+          "2700": 30,
+          "3000": 40,
+          "4000": 34
+        },
+        "groups": 37,
+        "knobGroups": 21
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "signed original fixed-CCT map provenance retained",
+      "pass": true,
+      "detail": {
+        "file": "fixed-cct-map.json",
+        "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+        "baseMapSha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+        "schema": "lighting-fixed-cct-map/1",
+        "bins": {
+          "2700": 30,
+          "3000": 40,
+          "4000": 34
+        },
+        "groups": 37,
+        "knobGroups": 21
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "no circuit mixes colour temperatures",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "mobile",
+      "name": "5 curtain-pocket candidates, 2700 K on LOW, not counted in 104",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-LIV",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-DIN",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-MBR-S",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-CBR",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": null,
+          "holds": [
+            "H-MBR-W03"
+          ]
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "four selected strips retain separate site and no-lux-credit holds",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-LIV",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-DIN",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-MBR-S",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": "X-CURT-CBR",
+          "holds": [
+            "H-CURTAIN-POCKET"
+          ]
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "cct": "2700K",
+          "lane": "LOW",
+          "circuit": null,
+          "holds": [
+            "H-MBR-W03"
+          ]
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "held pocket CURT-MBR-W03 shown grey and unlit",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "emissive": false,
+          "inEmission": false
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "unheld pockets follow their LOW circuit (emissive)",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-DIN",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-S",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-CBR",
+          "held": false,
+          "selected": true,
+          "emissive": true,
+          "inEmission": true
+        },
+        {
+          "id": "CURT-MBR-W03",
+          "held": true,
+          "selected": false,
+          "emissive": false,
+          "inEmission": false
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "CURT-CBR selected and unheld for review, placeholder remains unmeasured",
+      "pass": true,
+      "detail": {
+        "held": false,
+        "selected": true,
+        "label": "placeholder window, unmeasured"
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "four reader and two PIR fitting previews start off",
+      "pass": true,
+      "detail": [
+        {
+          "id": "MBR-R1",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "MBR-R2",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "MBR-N1",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "LOB-N1",
+          "held": false,
+          "on": false
+        },
+        {
+          "id": "CBR-R1",
+          "held": true,
+          "on": false
+        },
+        {
+          "id": "CBR-R2",
+          "held": true,
+          "on": false
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "six unmeasured wardrobe sections match the referenced proposal",
+      "pass": true,
+      "detail": {
+        "visible": false,
+        "closed": true,
+        "records": [
+          {
+            "target": "MBR-wardrobe-left",
+            "room": "R04",
+            "section": "A",
+            "rect": [
+              5.1054,
+              0.2246376,
+              6.5538096,
+              0.8546376000000008
+            ],
+            "features": [
+              {
+                "id": "A1",
+                "kind": "long_hang",
+                "shelves": 1,
+                "rails": 1,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "A2",
+                "kind": "double_short",
+                "shelves": 1,
+                "rails": 2,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "A3",
+                "kind": "fold_drawers",
+                "shelves": 4,
+                "rails": 0,
+                "drawers": 2,
+                "pullouts": 1
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "MBR-wardrobe-right",
+            "room": "R04",
+            "section": "B",
+            "rect": [
+              7.4669904,
+              0.2246376,
+              8.9154,
+              0.8546376000000008
+            ],
+            "features": [
+              {
+                "id": "B1",
+                "kind": "long_hang",
+                "shelves": 1,
+                "rails": 1,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "B2",
+                "kind": "double_short",
+                "shelves": 1,
+                "rails": 2,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "B3",
+                "kind": "fold_drawers",
+                "shelves": 4,
+                "rails": 0,
+                "drawers": 2,
+                "pullouts": 1
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R04a-WR01",
+            "room": "R04a",
+            "section": "D",
+            "rect": [
+              5.064,
+              5.05,
+              5.364,
+              6.6
+            ],
+            "features": [
+              {
+                "id": "D1",
+                "kind": "shallow_locked",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 1,
+                "pullouts": 0
+              },
+              {
+                "id": "D2",
+                "kind": "shallow_shelves",
+                "shelves": 6,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "D3",
+                "kind": "shallow_shelves",
+                "shelves": 6,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "D4",
+                "kind": "shallow_shelves_five",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R05-WR01",
+            "room": "R05",
+            "section": "C",
+            "rect": [
+              6.8904000000000005,
+              8.6123376,
+              8.9154,
+              9.2423376
+            ],
+            "features": [
+              {
+                "id": "C1",
+                "kind": "long_hang",
+                "shelves": 1,
+                "rails": 1,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "C2",
+                "kind": "double_short",
+                "shelves": 1,
+                "rails": 2,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "C3",
+                "kind": "child_fold_drawers",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 2,
+                "pullouts": 1
+              },
+              {
+                "id": "C4",
+                "kind": "child_linen",
+                "shelves": 5,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R09-SH01",
+            "room": "R09",
+            "section": "S",
+            "rect": [
+              0.552,
+              13.413,
+              1.752,
+              13.763
+            ],
+            "features": [
+              {
+                "id": "S1",
+                "kind": "shoe_shelves",
+                "shelves": 3,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "S2",
+                "kind": "shoe_shelves",
+                "shelves": 3,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          },
+          {
+            "target": "ST-R08-UC01",
+            "room": "R08",
+            "section": "U",
+            "rect": [
+              4.404,
+              0.305,
+              4.955,
+              1.417
+            ],
+            "features": [
+              {
+                "id": "U1",
+                "kind": "utility_shelf",
+                "shelves": 1,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              },
+              {
+                "id": "U2",
+                "kind": "utility_tall",
+                "shelves": 0,
+                "rails": 0,
+                "drawers": 0,
+                "pullouts": 0
+              }
+            ],
+            "unmeasured": true
+          }
+        ],
+        "source": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d"
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "proposed wardrobe interiors open through the control",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "proposed wardrobe interiors can be hidden again",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "downlight pools, ceiling halos and wall scallops are present",
+      "pass": true,
+      "detail": [
+        13,
+        48,
+        16
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "cove trays use continuous rings",
+      "pass": true,
+      "detail": [
+        {
+          "key": "HALL",
+          "points": 30,
+          "source": "site photo 13-Nov-2026 + designer render p19/33",
+          "radii": [
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0
+          ],
+          "ring": [
+            [
+              4.65,
+              19.393700787401574
+            ],
+            [
+              4.65615157480315,
+              19.30142716535433
+            ],
+            [
+              4.6746062992125985,
+              19.221456692913385
+            ],
+            [
+              4.705364173228347,
+              19.15378937007874
+            ],
+            [
+              4.748425196850394,
+              19.098425196850393
+            ],
+            [
+              4.80378937007874,
+              19.055364173228348
+            ],
+            [
+              4.8714566929133865,
+              19.0246062992126
+            ],
+            [
+              4.951427165354331,
+              19.006151574803148
+            ],
+            [
+              5.043700787401575,
+              19
+            ],
+            [
+              13.3,
+              19
+            ],
+            [
+              13.3,
+              34.706299212598424
+            ],
+            [
+              13.29384842519685,
+              34.79857283464567
+            ],
+            [
+              13.275393700787403,
+              34.878543307086616
+            ],
+            [
+              13.244635826771654,
+              34.94621062992126
+            ],
+            [
+              13.201574803149606,
+              35.00157480314961
+            ],
+            [
+              13.14621062992126,
+              35.04463582677165
+            ],
+            [
+              13.078543307086615,
+              35.0753937007874
+            ],
+            [
+              12.99857283464567,
+              35.09384842519685
+            ],
+            [
+              12.906299212598427,
+              35.1
+            ],
+            [
+              10.3,
+              35.1
+            ],
+            [
+              10.3,
+              40.306299212598425
+            ],
+            [
+              10.29384842519685,
+              40.39857283464567
+            ],
+            [
+              10.275393700787403,
+              40.47854330708662
+            ],
+            [
+              10.244635826771654,
+              40.54621062992126
+            ],
+            [
+              10.201574803149606,
+              40.60157480314961
+            ],
+            [
+              10.14621062992126,
+              40.644635826771655
+            ],
+            [
+              10.078543307086615,
+              40.6753937007874
+            ],
+            [
+              9.99857283464567,
+              40.693848425196855
+            ],
+            [
+              9.906299212598427,
+              40.7
+            ],
+            [
+              4.65,
+              40.7
+            ]
+          ],
+          "continuous": true
+        },
+        {
+          "key": "MBR",
+          "points": 20,
+          "source": "designer render (master)",
+          "radii": [
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0
+          ],
+          "ring": [
+            [
+              19.13,
+              6.293700787401575
+            ],
+            [
+              19.136151574803147,
+              6.201427165354331
+            ],
+            [
+              19.1546062992126,
+              6.1214566929133865
+            ],
+            [
+              19.185364173228347,
+              6.05378937007874
+            ],
+            [
+              19.22842519685039,
+              5.998425196850394
+            ],
+            [
+              19.28378937007874,
+              5.955364173228347
+            ],
+            [
+              19.351456692913384,
+              5.9246062992125985
+            ],
+            [
+              19.43142716535433,
+              5.90615157480315
+            ],
+            [
+              19.523700787401573,
+              5.9
+            ],
+            [
+              24.97,
+              5.9
+            ],
+            [
+              24.97,
+              10.906299212598427
+            ],
+            [
+              24.96384842519685,
+              10.99857283464567
+            ],
+            [
+              24.9453937007874,
+              11.078543307086615
+            ],
+            [
+              24.91463582677165,
+              11.14621062992126
+            ],
+            [
+              24.871574803149606,
+              11.201574803149606
+            ],
+            [
+              24.816210629921258,
+              11.244635826771654
+            ],
+            [
+              24.748543307086614,
+              11.275393700787403
+            ],
+            [
+              24.66857283464567,
+              11.29384842519685
+            ],
+            [
+              24.576299212598425,
+              11.3
+            ],
+            [
+              19.13,
+              11.3
+            ]
+          ],
+          "continuous": true
+        },
+        {
+          "key": "CBR",
+          "points": 20,
+          "source": "CPL-1 (R05-local-uv)",
+          "radii": [
+            0.39370078740157477,
+            0,
+            0.39370078740157477,
+            0
+          ],
+          "ring": [
+            [
+              21.166,
+              34.223500787401576
+            ],
+            [
+              21.17215157480315,
+              34.13122716535433
+            ],
+            [
+              21.1906062992126,
+              34.051256692913384
+            ],
+            [
+              21.22136417322835,
+              33.98358937007874
+            ],
+            [
+              21.264425196850393,
+              33.92822519685039
+            ],
+            [
+              21.31978937007874,
+              33.88516417322835
+            ],
+            [
+              21.387456692913386,
+              33.8544062992126
+            ],
+            [
+              21.46742716535433,
+              33.83595157480315
+            ],
+            [
+              21.559700787401574,
+              33.8298
+            ],
+            [
+              26.7697,
+              33.8298
+            ],
+            [
+              26.7697,
+              38.03589921259842
+            ],
+            [
+              26.763548425196852,
+              38.12817283464567
+            ],
+            [
+              26.7450937007874,
+              38.208143307086615
+            ],
+            [
+              26.714335826771652,
+              38.27581062992126
+            ],
+            [
+              26.671274803149608,
+              38.33117480314961
+            ],
+            [
+              26.61591062992126,
+              38.37423582677165
+            ],
+            [
+              26.548243307086615,
+              38.4049937007874
+            ],
+            [
+              26.46827283464567,
+              38.42344842519685
+            ],
+            [
+              26.375999212598426,
+              38.4296
+            ],
+            [
+              21.166,
+              38.4296
+            ]
+          ],
+          "continuous": true
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "four recessed curtain pockets are unmeasured and model-clipped",
+      "pass": true,
+      "detail": [
+        {
+          "id": "CURT-LIV",
+          "room": "living",
+          "rect": [
+            2.2689999999999997,
+            29.036,
+            3.0701049868766406,
+            37.074
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        },
+        {
+          "id": "CURT-DIN",
+          "room": "dining",
+          "rect": [
+            2.2689999999999997,
+            18.046,
+            3.0701049868766406,
+            26.084
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        },
+        {
+          "id": "CURT-MBR-S",
+          "room": "master",
+          "rect": [
+            28.42989501312336,
+            9.129,
+            29.23,
+            16.094
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        },
+        {
+          "id": "CURT-CBR",
+          "room": "children",
+          "rect": [
+            28.42989501312336,
+            39.148,
+            29.23,
+            43.23570078740157
+          ],
+          "ceiling": 2.9591,
+          "displayClipped": true,
+          "unmeasured": true
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "utility UC01 has one cabinet footprint and one collision",
+      "pass": true,
+      "detail": [
+        {
+          "id": "ST-R08-UC01",
+          "rect": [
+            4.404,
+            0.305,
+            4.955,
+            1.417
+          ],
+          "height": [
+            0,
+            0.8
+          ],
+          "sourceHeight": [
+            0,
+            0.8
+          ],
+          "displayOnlyClip": false,
+          "hold": null,
+          "homeownerSelection": {
+            "status": "selected_subject_to_site_holds",
+            "condition": "conditional on FH-ST-12 measured utility geometry and services/access",
+            "constructionRelease": false
+          }
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "loft display clipping retains H-LOFT site hold",
+      "pass": true,
+      "detail": [
+        {
+          "id": "ST-R04a-LF01",
+          "rect": [
+            5.064,
+            5.03,
+            5.404,
+            6.7
+          ],
+          "height": [
+            2.13,
+            2.9541
+          ],
+          "sourceHeight": [
+            2.13,
+            3.08
+          ],
+          "displayOnlyClip": true,
+          "hold": "H-LOFT",
+          "homeownerSelection": null
+        },
+        {
+          "id": "ST-R05-LF01",
+          "rect": [
+            5.1054,
+            8.6123376,
+            8.9154,
+            9.2123376
+          ],
+          "height": [
+            2.13,
+            2.9541
+          ],
+          "sourceHeight": [
+            2.13,
+            3.08
+          ],
+          "displayOnlyClip": true,
+          "hold": "H-LOFT",
+          "homeownerSelection": null
+        },
+        {
+          "id": "ST-R08-LF01",
+          "rect": [
+            4.404,
+            0.305,
+            4.955,
+            1.417
+          ],
+          "height": [
+            1.9,
+            2.9450000000000003
+          ],
+          "sourceHeight": [
+            1.9,
+            2.95
+          ],
+          "displayOnlyClip": true,
+          "hold": "H-LOFT",
+          "homeownerSelection": null
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "master reader can be previewed individually",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "master PIR light can be previewed individually",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "individual readers and PIR previews are independent of room switch",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "all rooms off also clears individual previews",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "all rooms on leaves individual previews off",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "held children's readers are visible but disabled",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "view 'first' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "first",
+        "mean": 127.69,
+        "std": 71.17,
+        "draws": 72,
+        "triangles": 42970,
+        "fps": 53.0
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "view 'third' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "third",
+        "mean": 161.02,
+        "std": 73.67,
+        "draws": 92,
+        "triangles": 45330,
+        "fps": 57.1
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "view 'doll' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "doll",
+        "mean": 182.72,
+        "std": 54.34,
+        "draws": 562,
+        "triangles": 48156,
+        "fps": 60.0
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "view 'heat' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "heat",
+        "mean": 167.07,
+        "std": 56.61,
+        "draws": 222,
+        "triangles": 43790,
+        "fps": 60.0
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "light-map overlay and table appear only in the Light map view",
+      "pass": true,
+      "detail": [
+        true,
+        true,
+        10
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "light map labelled frozen / generic optics / not recomputed",
+      "pass": true,
+      "detail": "frozen generic-optics estimate at high + low 100 %. provisional geometry, not measured, not recomputed by the sliders. ugr not calculated."
+    },
+    {
+      "profile": "mobile",
+      "name": "light-map scene HIGH_100 selectable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "light-map scene LOW_100 selectable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "light-map scene HIGH+LOW_100 selectable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "view 'rcp' switches and renders content",
+      "pass": true,
+      "detail": {
+        "mode": "rcp",
+        "mean": 193.9,
+        "std": 68.09,
+        "draws": 162,
+        "triangles": 13596,
+        "fps": 57.0
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "light-map overlay hidden outside Light map view",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Balcony / entrance' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "balcony",
+        "pos": [
+          2.88,
+          0,
+          14.17
+        ],
+        "spawn": {
+          "spawn": [
+            9.448818897637794,
+            46.48950131233595
+          ],
+          "name": "Balcony / entrance"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Living' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "living",
+        "pos": [
+          3.52,
+          0,
+          10.65
+        ],
+        "spawn": {
+          "spawn": [
+            11.548556430446194,
+            34.94094488188976
+          ],
+          "name": "Living"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Dining' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "dining",
+        "pos": [
+          3.84,
+          0,
+          6.569999999999999
+        ],
+        "spawn": {
+          "spawn": [
+            12.598425196850393,
+            21.55511811023622
+          ],
+          "name": "Dining"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Kitchen' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "kitchen",
+        "pos": [
+          3.0399999999999996,
+          0,
+          3.21
+        ],
+        "spawn": {
+          "spawn": [
+            9.973753280839894,
+            10.531496062992126
+          ],
+          "name": "Kitchen"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Utility' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "utility",
+        "pos": [
+          3.6,
+          0,
+          0.89
+        ],
+        "spawn": {
+          "spawn": [
+            11.811023622047244,
+            2.91994750656168
+          ],
+          "name": "Utility"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Washing' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "washing",
+        "pos": [
+          1.6,
+          0,
+          0.89
+        ],
+        "spawn": {
+          "spawn": [
+            5.2493438320209975,
+            2.91994750656168
+          ],
+          "name": "Washing"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Master bedroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "master",
+        "pos": [
+          6.64,
+          0,
+          3.85
+        ],
+        "spawn": {
+          "spawn": [
+            21.78477690288714,
+            12.631233595800525
+          ],
+          "name": "Master bedroom"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Dressing' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "dressing",
+        "pos": [
+          5.760000000000001,
+          0,
+          5.53
+        ],
+        "spawn": {
+          "spawn": [
+            18.897637795275593,
+            18.14304461942257
+          ],
+          "name": "Dressing"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Attached bathroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "bath1",
+        "pos": [
+          7.44,
+          0,
+          6.33
+        ],
+        "spawn": {
+          "spawn": [
+            24.409448818897637,
+            20.76771653543307
+          ],
+          "name": "Attached bathroom"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Common lobby' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "lobby",
+        "pos": [
+          5.5200000000000005,
+          0,
+          7.69
+        ],
+        "spawn": {
+          "spawn": [
+            18.11023622047244,
+            25.22965879265092
+          ],
+          "name": "Common lobby"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Common bathroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "bath2",
+        "pos": [
+          7.44,
+          0,
+          8.09
+        ],
+        "spawn": {
+          "spawn": [
+            24.409448818897637,
+            26.541994750656166
+          ],
+          "name": "Common bathroom"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "jump to 'Children bedroom' places the avatar in the room",
+      "pass": true,
+      "detail": {
+        "state": "children",
+        "pos": [
+          5.760000000000001,
+          0,
+          9.69
+        ],
+        "spawn": {
+          "spawn": [
+            18.897637795275593,
+            31.791338582677163
+          ],
+          "name": "Children bedroom"
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "walk pad is visible on touch screens",
+      "pass": true,
+      "detail": {
+        "x": 289,
+        "y": 276,
+        "width": 42,
+        "height": 42
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "touch-holding the walk pad moves forward",
+      "pass": true,
+      "detail": 0.71
+    },
+    {
+      "profile": "mobile",
+      "name": "touch drag turns the view (first person)",
+      "pass": true,
+      "detail": [
+        1.1943744712392623,
+        0.7463744712392619
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "walking is stopped by walls (avatar stays in the flat)",
+      "pass": true,
+      "detail": [
+        0.92,
+        0,
+        5.29
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "living room starts on at 100/100",
+      "pass": true,
+      "detail": {
+        "room": "living",
+        "zone": "LIV",
+        "on": true,
+        "high": 100,
+        "low": 100,
+        "hasHigh": true,
+        "hasLow": true,
+        "held": false,
+        "cct": {
+          "high": [
+            "3000K"
+          ],
+          "low": [
+            "2700K"
+          ],
+          "independent": [
+            "2700K"
+          ]
+        },
+        "sharedLow": [
+          "C05"
+        ]
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "HIGH/LOW show a fixed CCT, not a control",
+      "pass": true,
+      "detail": [
+        "3000 K fixed",
+        "2700 K fixed"
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "dragging the HIGH slider sets HIGH brightness",
+      "pass": true,
+      "detail": {
+        "room": "living",
+        "zone": "LIV",
+        "on": true,
+        "high": 19,
+        "low": 100,
+        "hasHigh": true,
+        "hasLow": true,
+        "held": false,
+        "cct": {
+          "high": [
+            "3000K"
+          ],
+          "low": [
+            "2700K"
+          ],
+          "independent": [
+            "2700K"
+          ]
+        },
+        "sharedLow": [
+          "C05"
+        ]
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "lower HIGH visibly dims the room",
+      "pass": true,
+      "detail": [
+        [
+          127.67,
+          71.17
+        ],
+        [
+          98.47,
+          71.21
+        ]
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "LOW slider sets LOW brightness independently",
+      "pass": true,
+      "detail": {
+        "room": "living",
+        "zone": "LIV",
+        "on": true,
+        "high": 100,
+        "low": 0,
+        "hasHigh": true,
+        "hasLow": true,
+        "held": false,
+        "cct": {
+          "high": [
+            "3000K"
+          ],
+          "low": [
+            "2700K"
+          ],
+          "independent": [
+            "2700K"
+          ]
+        },
+        "sharedLow": [
+          "C05"
+        ]
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "living curtain pocket dims with the LOW slider",
+      "pass": true,
+      "detail": [
+        0.00023080770874819008,
+        0.596023727185754
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "LOW at 0 visibly changes the room",
+      "pass": true,
+      "detail": [
+        [
+          127.67,
+          71.17
+        ],
+        [
+          123.32,
+          71.04
+        ]
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "room on/off switch turns the room off",
+      "pass": true,
+      "detail": [
+        false,
+        [
+          127.67,
+          71.17
+        ],
+        [
+          58.82,
+          58.21
+        ]
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "room on/off switch turns it back on",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "All rooms off turns every room off",
+      "pass": true,
+      "detail": {
+        "washing": false,
+        "utility": false,
+        "kitchen": false,
+        "dining": false,
+        "living": false,
+        "master": false,
+        "dressing": false,
+        "lobby": false,
+        "children": false,
+        "balcony": false,
+        "bath1": false,
+        "bath2": false
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "All rooms off darkens the scene",
+      "pass": true,
+      "detail": [
+        [
+          127.67,
+          71.17
+        ],
+        [
+          48.73,
+          54.91
+        ]
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "All rooms on turns all active rooms on including the children's room",
+      "pass": true,
+      "detail": {
+        "washing": true,
+        "utility": true,
+        "kitchen": true,
+        "dining": true,
+        "living": true,
+        "master": true,
+        "dressing": true,
+        "lobby": true,
+        "children": true,
+        "balcony": true,
+        "bath1": true,
+        "bath2": true
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "moving a slider on an off room turns it on",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "kitchen per map: HIGH/task 4000 K, cove (LOW) 2700 K",
+      "pass": true,
+      "detail": {
+        "high": [
+          "4000K"
+        ],
+        "low": [
+          "2700K"
+        ],
+        "independent": [
+          "4000K"
+        ]
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "children's six HIGH fittings are switchable; other CBR fixtures remain held",
+      "pass": true,
+      "detail": {
+        "high": [
+          {
+            "id": "CBR-H1",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H2",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H3",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H4",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H5",
+            "held": false,
+            "on": true
+          },
+          {
+            "id": "CBR-H6",
+            "held": false,
+            "on": true
+          }
+        ],
+        "other": [
+          {
+            "id": "CBR-L1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X2",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X3",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-X4",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-S1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-R1",
+            "held": true,
+            "on": false
+          },
+          {
+            "id": "CBR-R2",
+            "held": true,
+            "on": false
+          }
+        ]
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "selected children's curtain strip follows LOW brightness",
+      "pass": true,
+      "detail": [
+        0.0008733050587341458,
+        0.5990205135874306
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "fixture markers visible in dollhouse",
+      "pass": true,
+      "detail": {
+        "id": "LOB-H2",
+        "x": 221.17338633232225,
+        "y": 183.9966400565454,
+        "z": 0.9970406633799599
+      }
+    },
+    {
+      "profile": "mobile",
+      "name": "tapping a fitting opens the inspector with its fixed CCT",
+      "pass": true,
+      "detail": "OPT-1 review baseline; not a construction release.\n\nLOB-H2\nCOB deep-recessed anti-glare downlight\nRoom\nLobby + common basin\nColour temp.\n3000 K fixed\nFixed-CCT map R30-MAIN: warm-neutral white for fac"
+    },
+    {
+      "profile": "mobile",
+      "name": "PNG screenshot downloads (image, caption bar)",
+      "pass": true,
+      "detail": [
+        [
+          780,
+          1756
+        ],
+        761191
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "fixture schedule CSV: 108 rows with fixed CCT, circuit, rail and placement holds",
+      "pass": true,
+      "detail": [
+        108,
+        [
+          "fixture_id",
+          "zone",
+          "room",
+          "lane",
+          "rail",
+          "circuit",
+          "type",
+          "description",
+          "fixed_cct_k",
+          "cct_source",
+          "master_cct_or_control",
+          "watts",
+          "lumens",
+          "beam_deg",
+          "ip",
+          "mount_height_m",
+          "x_ft_sheet",
+          "z_ft_sheet",
+          "length_m",
+          "finish",
+          "status",
+          "hold_reason",
+          "placement_hold_ids",
+          "note",
+          "review_status",
+          "cct_rule",
+          "map_layer",
+          "brightness_group"
+        ]
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "all 104 schedule CCTs, rules and placement holds match the current map",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "mobile",
+      "name": "four selected schedule strips are warm, held for site and carry no lux credit",
+      "pass": true,
+      "detail": "{'CURT-LIV', 'CURT-MBR-S', 'CURT-DIN', 'CURT-CBR'}"
+    },
+    {
+      "profile": "mobile",
+      "name": "circuit-group CSV: 51 rows",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "profile": "mobile",
+      "name": "four current review PDF links present",
+      "pass": true,
+      "detail": [
+        "downloads/layout-views-review-draft-b6f6bf1a.pdf",
+        "downloads/working-floor-plan-review-draft-b6f6bf1a.pdf",
+        "downloads/curtain-pocket-section-review-b6f6bf1a.pdf",
+        "downloads/wardrobe-interiors-review-b6f6bf1a.pdf"
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/layout-views-review-draft-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        6815041,
+        13
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Furnished floor plan — top-down\nHyderabad 2BHK · one floor · sheet drawn south-up (north arrow at right)\nSHEET 1 / 13\nhouse-design.json\nb6f6bf1a127c7e39086deb9f…\nN\nS\nTENANT'S BED\nTENANT'S BED\nqueen to"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF layout-views-review-draft-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/working-floor-plan-review-draft-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        864756,
+        1
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Current working floor plan\nREVIEW DRAFT / Hyderabad 2BHK / decision drawing / not an as-built or construction release\nSINGLE SOURCE\nhouse-design.json\nb6f6bf1a127c7e39086deb9f...\nHOUSE / CURRENT COORDI"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF working-floor-plan-review-draft-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/curtain-pocket-section-review-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        71474,
+        1
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Curtain pocket - indicative section\nREVIEW DRAFT / schematic only / not a construction or fabrication detail\nhouse-design.json\nSECTION THROUGH WINDOW AND CEILING\nIllustrative arrangement only; track o"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF curtain-pocket-section-review-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf opens beside the offline viewer",
+      "pass": true,
+      "detail": "offline:downloads/wardrobe-interiors-review-b6f6bf1a.pdf"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf matches receipt and page count",
+      "pass": true,
+      "detail": [
+        245180,
+        17
+      ]
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf is searchable, current-bound and review-marked",
+      "pass": true,
+      "detail": "Wardrobe and storage - homeowner sign-oﬀ pack\nReady for review, NOT for fabrication. This pack records conﬁrmed choices, material recommendations and remaining decisions; it does not approve joinery s"
+    },
+    {
+      "profile": "mobile",
+      "name": "PDF wardrobe-interiors-review-b6f6bf1a.pdf has no private paths or personal metadata",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "no external (CDN / third-party) requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "mobile",
+      "name": "zero console errors / page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "mobile",
+      "name": "no unexpected console warnings (only the known ANGLE/D3D X4122-X4008 compile notes)",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "profile": "mobile",
+      "name": "HTML has no personal paths or local attachment names",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "profile": "mobile",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": [
+        390,
+        390,
+        844,
+        844
+      ]
+    }
+  ],
+  "summary": {
+    "total": 222,
+    "passed": 222,
+    "failed": []
+  }
+}

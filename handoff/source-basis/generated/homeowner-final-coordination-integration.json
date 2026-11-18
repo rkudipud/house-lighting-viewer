@@ -1,0 +1,76 @@
+{
+  "before_master_sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
+  "source_request": {
+    "id": "332dabaf-b0af-4e81-972f-9d942c49e87b",
+    "revision": 2
+  },
+  "integrated_utc": "2026-11-18T10:33:00.194169+00:00",
+  "source_artifacts": {
+    "verified_fixed_white_fragment_sha256": "31b65875cb603a43d107c91a4a54bb8afffa3134cc1134dd1cf74dc66f42be1b",
+    "fixed_white_verification_sha256": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9",
+    "fixed_white_verification": {
+      "PASS": 82
+    },
+    "fixed_cct_map_sha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+    "curtain_candidate_sha256": "1135224d612b4f6cb8fb8bac6bbb87ea3e53a1b29d6a973aa8ca63e670a269d7",
+    "electrical_control_plan_sha256": "fe0e6e536772f341960cf26a69c8859543e30610f070ec518e15600e03747cb1",
+    "electrical_control_plan_receipt_sha256": "b492db9852dced8af16a2e1274fe7bb0960824ead3680f5d1480a1da43f2f46c",
+    "electrical_control_plan_checks": {
+      "pass": 70,
+      "total": 70
+    },
+    "storage_model_sha256": "9c10b1262d40f9db73abc18ea62d42a2ea2f99b0a2a2aa27bc03172e5f20c037"
+  },
+  "integrated_decisions": [
+    "Fixed CCT by fitting, with 2700 K coves/mood strips and the fixed-white task schedule.",
+    "Four curtain-pocket strips plus electrical S1 selected; the fifth W03 pocket remains held.",
+    "CBR-H1..H6 active/switchable in review at the accepted positions; C37 dimmer procurement hold remains.",
+    "OPT-E BWP plywood carcass and laminate shutters selected.",
+    "R04 split wardrobe approved in principle; dimensions remain placeholders pending site measurement."
+  ],
+  "base_photometry": {
+    "fixtures": 104,
+    "circuits": 47,
+    "curtain_lux_credit": false
+  },
+  "curtain_S1_effective_extension": {
+    "knobs": 21,
+    "knob_outputs": 38,
+    "amplifiers": 3,
+    "psus": 13,
+    "psu_nameplate_total_W": 1890,
+    "psu_over_usable": [],
+    "vd_worst_pct": 3.6,
+    "vd_status": {
+      "OK": 35,
+      "MARGINAL": 2
+    },
+    "fittings_including_selected_strips": 108,
+    "circuits_including_selected_strips": 51,
+    "base_photometric_fittings": 104,
+    "additional_selected_strips": 4,
+    "additional_circuits": 4,
+    "selected_strip_length_m": 8.88,
+    "selected_strip_load_W": 71.04,
+    "photometry_credit_for_selected_strips": false
+  },
+  "holds_preserved": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "H-CURTAIN-POCKET": true,
+    "C37_dimmer_procurement_hold": true,
+    "C40_voltage_drop_marginal": true,
+    "P16": "Existing supply retained; no hold cleared; S1 load 121.0 W / 240 W nameplate (84.0% usable).",
+    "CURT-MBR-W03": "held and excluded from S1",
+    "OI-MBR-03": "approved in principle; measurement remains open"
+  },
+  "verification": {
+    "house_store_validate": "PASS",
+    "base_fixture_circuit_assignment": "104 fixtures / 47 circuits; unchanged accepted positions",
+    "all_homeowner_approval_flags": "recorded without construction/product/exact-chain release",
+    "numeric_photometry": "retained from the 82/82 verified fixed-white pack; selected curtain strips receive no photometry credit"
+  },
+  "fragment_sha256": "a2769eae289ae2a29fd76db0355c52c5e7e835100dc0b4d8c84b527e40193bcc",
+  "after_master_sha256": "235fb7ec347b788bb9b42578b2fdd40527e1a00cca3ae2bd5a14985e29bb1736"
+}

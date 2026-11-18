@@ -1,0 +1,3275 @@
+{
+  "assumptions": {
+    "status": "ASSUMED concept parameters for reconciliation only; the licensed electrician sizes cables, protection, SELV segregation and bathroom zones",
+    "cable_mm2": 1.5,
+    "cable_sizes_mm2": [
+      0.75,
+      1.0,
+      1.5,
+      2.5,
+      4.0
+    ],
+    "rho_cu_20C_ohm_mm2_per_m": 0.0175,
+    "alpha_cu_per_K": 0.00393,
+    "cable_temp_C": 50,
+    "vd_target_pct": 3.0,
+    "vd_limit_pct": 5.0,
+    "void_route_h_m": 3.073,
+    "board_h_m": 1.2,
+    "void_route_basis": "ASSUMED mid-depth of the HD-11 perimeter-band void (2.9591-3.1877 m); over the raised centre only the HD-14 provided profile/wiring space (depth unmeasured) - drivers stay at band hatches",
+    "routing": "orthogonal |dx|+|dz| plan route in the ceiling void plus vertical drops; one shared 24 V feed per (PSU, board); circuit current over the whole chain",
+    "strip_single_feed_max_m": 5.0,
+    "reel_m": 5.0,
+    "cut_pitch_mm": {
+      "LIN": 50,
+      "BACK": 50,
+      "TASK": 50,
+      "TASK_HO": 50,
+      "BCOVE": 100,
+      "NICHE": 100,
+      "VANITY": 100,
+      "PLINTH": 100,
+      "TASKW": 100,
+      "TASK_LO": 50,
+      "COVE_FW": 50
+    },
+    "te_min_load_documented_W": 60,
+    "te_min_load_source": "Havells Apogee ATADEXB102 states a 60 W minimum (ff3336cd product screen, 17 Nov 2026) and is excluded for these sub-60 W groups. Later ff3336cd research (binding\\low-load-dimmer-options.md, 18 Nov 2026, SHA-256 cfb01ab85ba6774de09f99fd3b17774dbdfefc7253457cf9737a181c7d84f8b4) found India-listed low-load LED-dimmer candidates: Legrand Lyncus 677304 (LED 3-50 W; India e-shop), Legrand Arteor AA24107MB (LED 7-200 VA; India e-shop; +5 to +35 C usage) and Schneider AvatarOn E8331RD250_WE (LED 3-100 VA; India catalogue; local supply unverified). These are candidate controls only: no exact fitting + driver + dimmer chain is documented or sample-tested, so compatibility is unproven and all 10 mains-dimmer procurement holds remain.",
+    "knob1_design_A": 2.4
+  },
+  "rho_cu_at_temp_ohm_mm2_per_m": 0.01956,
+  "vertical_drop_m": 1.873,
+  "scope": "one flat and four identical flats; common areas/staircase excluded; concept arithmetic, not a cable schedule",
+  "summary": {
+    "voltage_drop": {
+      "HOLD": 4,
+      "OK": 27,
+      "MARGINAL": 2
+    },
+    "worst_dV_pct": null,
+    "long_runs_needing_double_feed": [
+      "C03/A",
+      "C03/B",
+      "C12/all",
+      "C21/all",
+      "C30A/all",
+      "C36A/all",
+      "C39/all"
+    ],
+    "psu_over_usable": [],
+    "mains_dimmer_holds": [
+      "C01",
+      "C02",
+      "C09",
+      "C11",
+      "C13",
+      "C14",
+      "C15",
+      "C18",
+      "C20",
+      "C37"
+    ],
+    "reels_flat": 26,
+    "reels_four_flats_pooled": 78,
+    "reel_joints_flat": 7,
+    "worst_known_dV_pct": 3.3,
+    "living_low_status": "HOLD: selected feeder and branches not yet calculated"
+  },
+  "fixed_cove": {
+    "meaning": "fixed-white single-channel cove: nominal = envelope = 8 W/m (generic class assumption, ~720 lm/m); no CCT mixing, no second channel. PSUs, knob outputs and cables are sized on this load; one supply per cove.",
+    "rows": [
+      {
+        "circuit": "C03",
+        "rooms": [
+          "LIV"
+        ],
+        "cct": [
+          "2700K"
+        ],
+        "length_m": 11.53,
+        "sections": 2,
+        "knob_group": "K-LIV-LOW",
+        "W_nominal_8Wpm": 92.24,
+        "W_envelope": 92.24,
+        "A_per_output": 1.92,
+        "output_design_A": 2.4,
+        "output_util_pct": 80.0,
+        "psu": "P01",
+        "psu_nameplate_W": 200,
+        "psu_loading_pct_of_usable": 76.8,
+        "psu_circuits": [
+          "C03"
+        ]
+      },
+      {
+        "circuit": "C12",
+        "rooms": [
+          "DIN"
+        ],
+        "cct": [
+          "2700K"
+        ],
+        "length_m": 6.21,
+        "sections": 1,
+        "knob_group": "K-DIN-LOW",
+        "W_nominal_8Wpm": 49.68,
+        "W_envelope": 49.68,
+        "A_per_output": 2.07,
+        "output_design_A": 2.4,
+        "output_util_pct": 86.2,
+        "psu": "P07",
+        "psu_nameplate_W": 100,
+        "psu_loading_pct_of_usable": 82.8,
+        "psu_circuits": [
+          "C12"
+        ]
+      },
+      {
+        "circuit": "C17",
+        "rooms": [
+          "KIT"
+        ],
+        "cct": [
+          "2700K"
+        ],
+        "length_m": 8.82,
+        "sections": 2,
+        "knob_group": "K-KIT-LOW",
+        "W_nominal_8Wpm": 70.56,
+        "W_envelope": 70.56,
+        "A_per_output": 1.47,
+        "output_design_A": 2.4,
+        "output_util_pct": 61.2,
+        "psu": "P08",
+        "psu_nameplate_W": 150,
+        "psu_loading_pct_of_usable": 78.4,
+        "psu_circuits": [
+          "C17"
+        ]
+      },
+      {
+        "circuit": "C21",
+        "rooms": [
+          "MBR"
+        ],
+        "cct": [
+          "2700K"
+        ],
+        "length_m": 6.53,
+        "sections": 1,
+        "knob_group": "K-MBR-LOW",
+        "W_nominal_8Wpm": 52.24,
+        "W_envelope": 52.24,
+        "A_per_output": 2.18,
+        "output_design_A": 2.4,
+        "output_util_pct": 90.8,
+        "psu": "P12",
+        "psu_nameplate_W": 200,
+        "psu_loading_pct_of_usable": 75.7,
+        "psu_circuits": [
+          "C21",
+          "C22",
+          "C23"
+        ]
+      },
+      {
+        "circuit": "C39",
+        "rooms": [
+          "CBR"
+        ],
+        "cct": [
+          "2700K"
+        ],
+        "length_m": 6.22,
+        "sections": 1,
+        "knob_group": "K-CBR-LOW",
+        "W_nominal_8Wpm": 49.76,
+        "W_envelope": 49.76,
+        "A_per_output": 2.07,
+        "output_design_A": 2.4,
+        "output_util_pct": 86.2,
+        "psu": "P16",
+        "psu_nameplate_W": 240,
+        "psu_loading_pct_of_usable": 75.4,
+        "psu_circuits": [
+          "C38",
+          "C39",
+          "C40"
+        ]
+      }
+    ],
+    "total_W_nominal": 314.5,
+    "total_W_envelope": 314.5
+  },
+  "knob_groups": [
+    {
+      "knob": "K-LIV-LOW",
+      "room": "LIV",
+      "layer": "LOW",
+      "label": "Living LOW: tray cove + TV bias + hall line",
+      "circuits": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "board": [
+        "SB-01"
+      ],
+      "outputs": 5,
+      "knob_outputs_available": 3,
+      "amplifiers": 1,
+      "W_nominal": 161.9,
+      "W_envelope": 161.9,
+      "I_total_A": 6.75,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.92,
+      "output_design_A": 2.4,
+      "psus": [
+        "P01"
+      ],
+      "status": "HOLD",
+      "reason": "20 A reference supply versus 12.5 A controller input; distribution, branch protection and exact chain remain open."
+    },
+    {
+      "knob": "K-LIV-POOJA-STRIP",
+      "room": "LIV",
+      "layer": "ACCENT",
+      "label": "Pooja niche strip (own knob, homeowner decision)",
+      "circuits": [
+        "C06A"
+      ],
+      "board": [
+        "SB-01"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 21.7,
+      "W_envelope": 21.7,
+      "I_total_A": 0.9,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.9,
+      "output_design_A": 2.4,
+      "psus": [
+        "P04"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-LIV-POOJA-SPOT",
+      "room": "LIV",
+      "layer": "ACCENT",
+      "label": "Pooja pin spot (own knob: the shadow-casting source must be dimmable/off alone)",
+      "circuits": [
+        "C06B"
+      ],
+      "board": [
+        "SB-01"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "I_total_A": 0.25,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.25,
+      "output_design_A": 2.4,
+      "psus": [
+        "P04"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-BAL-HIGH",
+      "room": "BAL",
+      "layer": "HIGH",
+      "label": "Balcony HIGH",
+      "circuits": [
+        "C07"
+      ],
+      "board": [
+        "SB-01"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "I_total_A": 0.5,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.5,
+      "output_design_A": 2.4,
+      "psus": [
+        "P05"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-BAL-LOW",
+      "room": "BAL",
+      "layer": "LOW",
+      "label": "Balcony LOW mood",
+      "circuits": [
+        "C08"
+      ],
+      "board": [
+        "SB-01"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 26.6,
+      "W_envelope": 26.6,
+      "I_total_A": 1.11,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.11,
+      "output_design_A": 2.4,
+      "psus": [
+        "P05"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-DIN-PASSAGE",
+      "room": "DIN",
+      "layer": "HIGH",
+      "label": "Dining passage downlight (stays dimmable: homeowner rule)",
+      "circuits": [
+        "C10"
+      ],
+      "board": [
+        "SB-02"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "I_total_A": 0.33,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.33,
+      "output_design_A": 2.4,
+      "psus": [
+        "P06"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-DIN-LOW",
+      "room": "DIN",
+      "layer": "LOW",
+      "label": "Dining LOW cove",
+      "circuits": [
+        "C12"
+      ],
+      "board": [
+        "SB-02"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 49.7,
+      "W_envelope": 49.7,
+      "I_total_A": 2.07,
+      "max_in_A": 12.5,
+      "I_max_output_A": 2.07,
+      "output_design_A": 2.4,
+      "psus": [
+        "P07"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-KIT-TASK",
+      "room": "KIT",
+      "layer": "TASK",
+      "label": "Kitchen under-cabinet + sink-end task",
+      "circuits": [
+        "C16"
+      ],
+      "board": [
+        "SB-03"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 31.8,
+      "W_envelope": 31.8,
+      "I_total_A": 1.32,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.32,
+      "output_design_A": 2.4,
+      "psus": [
+        "P10"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-KIT-LOW",
+      "room": "KIT",
+      "layer": "LOW",
+      "label": "Kitchen LOW cove",
+      "circuits": [
+        "C17"
+      ],
+      "board": [
+        "SB-03"
+      ],
+      "outputs": 2,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 70.6,
+      "W_envelope": 70.6,
+      "I_total_A": 2.94,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.47,
+      "output_design_A": 2.4,
+      "psus": [
+        "P08"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-UTL-TASK",
+      "room": "UTL",
+      "layer": "TASK",
+      "label": "Utility wash-counter task",
+      "circuits": [
+        "C19"
+      ],
+      "board": [
+        "SB-04"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 11.0,
+      "W_envelope": 11.0,
+      "I_total_A": 0.46,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.46,
+      "output_design_A": 2.4,
+      "psus": [
+        "P11"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-MBR-LOW",
+      "room": "MBR",
+      "layer": "LOW",
+      "label": "Master LOW: tray cove + headboard line + mood",
+      "circuits": [
+        "C21",
+        "C22",
+        "C23"
+      ],
+      "board": [
+        "SB-05"
+      ],
+      "outputs": 3,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 90.8,
+      "W_envelope": 90.8,
+      "I_total_A": 3.78,
+      "max_in_A": 12.5,
+      "I_max_output_A": 2.18,
+      "output_design_A": 2.4,
+      "psus": [
+        "P12"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-DRS-HIGH",
+      "room": "DRS",
+      "layer": "HIGH",
+      "label": "Dressing HIGH",
+      "circuits": [
+        "C27"
+      ],
+      "board": [
+        "SB-06"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 14,
+      "W_envelope": 14,
+      "I_total_A": 0.58,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.58,
+      "output_design_A": 2.4,
+      "psus": [
+        "P14"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-TL1-HIGH",
+      "room": "TL1",
+      "layer": "HIGH",
+      "label": "Bath 1 HIGH: ceiling spots + vanity pair",
+      "circuits": [
+        "C28",
+        "C29A"
+      ],
+      "board": [
+        "SB-06B"
+      ],
+      "outputs": 2,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 43,
+      "W_envelope": 43,
+      "I_total_A": 1.79,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.12,
+      "output_design_A": 2.4,
+      "psus": [
+        "P14"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-TL1-FACE",
+      "room": "TL1",
+      "layer": "FACE",
+      "label": "Bath 1 face pair (HD-17 independent knob)",
+      "circuits": [
+        "C29B"
+      ],
+      "board": [
+        "SB-06B"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "I_total_A": 0.42,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.42,
+      "output_design_A": 2.4,
+      "psus": [
+        "P14"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-TL1-LOW",
+      "room": "TL1",
+      "layer": "LOW",
+      "label": "Bath 1 LOW: perimeter + mood",
+      "circuits": [
+        "C30A",
+        "C30B"
+      ],
+      "board": [
+        "SB-06B"
+      ],
+      "outputs": 2,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 39.1,
+      "W_envelope": 39.1,
+      "I_total_A": 1.63,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.33,
+      "output_design_A": 2.4,
+      "psus": [
+        "P14"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-LOB",
+      "room": "LOB",
+      "layer": "HIGH+MIRROR",
+      "label": "Lobby HIGH + face bar",
+      "circuits": [
+        "C31",
+        "C32"
+      ],
+      "board": [
+        "SB-07"
+      ],
+      "outputs": 2,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 24,
+      "W_envelope": 24,
+      "I_total_A": 1.0,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.58,
+      "output_design_A": 2.4,
+      "psus": [
+        "P15"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-TL2-HIGH",
+      "room": "TL2",
+      "layer": "HIGH",
+      "label": "Bath 2 HIGH: ceiling spots + vanity pair",
+      "circuits": [
+        "C34",
+        "C35A"
+      ],
+      "board": [
+        "SB-07B"
+      ],
+      "outputs": 2,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 43,
+      "W_envelope": 43,
+      "I_total_A": 1.79,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.12,
+      "output_design_A": 2.4,
+      "psus": [
+        "P15"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-TL2-FACE",
+      "room": "TL2",
+      "layer": "FACE",
+      "label": "Bath 2 face pair (HD-17 independent knob)",
+      "circuits": [
+        "C35B"
+      ],
+      "board": [
+        "SB-07B"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "I_total_A": 0.42,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.42,
+      "output_design_A": 2.4,
+      "psus": [
+        "P15"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-TL2-LOW",
+      "room": "TL2",
+      "layer": "LOW",
+      "label": "Bath 2 LOW: perimeter + mood",
+      "circuits": [
+        "C36A",
+        "C36B"
+      ],
+      "board": [
+        "SB-07B"
+      ],
+      "outputs": 2,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 39.1,
+      "W_envelope": 39.1,
+      "I_total_A": 1.63,
+      "max_in_A": 12.5,
+      "I_max_output_A": 1.33,
+      "output_design_A": 2.4,
+      "psus": [
+        "P15"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-CBR-STUDY",
+      "room": "CBR",
+      "layer": "TASK",
+      "label": "Children's study task",
+      "circuits": [
+        "C38"
+      ],
+      "board": [
+        "SB-08"
+      ],
+      "outputs": 1,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 16.0,
+      "W_envelope": 16.0,
+      "I_total_A": 0.67,
+      "max_in_A": 12.5,
+      "I_max_output_A": 0.67,
+      "output_design_A": 2.4,
+      "psus": [
+        "P16"
+      ],
+      "status": "OK"
+    },
+    {
+      "knob": "K-CBR-LOW",
+      "room": "CBR",
+      "layer": "LOW",
+      "label": "Children's LOW: tray cove + line",
+      "circuits": [
+        "C39",
+        "C40"
+      ],
+      "board": [
+        "SB-08"
+      ],
+      "outputs": 2,
+      "knob_outputs_available": 3,
+      "amplifiers": 0,
+      "W_nominal": 92.6,
+      "W_envelope": 92.6,
+      "I_total_A": 3.86,
+      "max_in_A": 12.5,
+      "I_max_output_A": 2.07,
+      "output_design_A": 2.4,
+      "psus": [
+        "P16"
+      ],
+      "status": "OK"
+    }
+  ],
+  "psu_loading": [
+    {
+      "psu": "P01",
+      "circuits": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "nameplate_W": 480,
+      "W_nominal": 161.9,
+      "W_envelope": 161.9,
+      "usable_W_at_50C": 288.0,
+      "loading_nominal_pct_of_derated": 42.2,
+      "loading_envelope_pct_of_derated": 42.2,
+      "loading_envelope_pct_of_usable": 56.2,
+      "headroom_to_usable_W": 126.1,
+      "status": "HOLD",
+      "ip": "IP20 in ventilated hatch",
+      "reason": "Assumed capacity only; supply location, inrush, distribution, branch protection and exact chain remain open."
+    },
+    {
+      "psu": "P04",
+      "circuits": [
+        "C06A",
+        "C06B"
+      ],
+      "nameplate_W": 60,
+      "W_nominal": 27.7,
+      "W_envelope": 27.7,
+      "usable_W_at_50C": 36.0,
+      "loading_nominal_pct_of_derated": 57.8,
+      "loading_envelope_pct_of_derated": 57.7,
+      "loading_envelope_pct_of_usable": 76.9,
+      "headroom_to_usable_W": 8.3,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P05",
+      "circuits": [
+        "C07",
+        "C08"
+      ],
+      "nameplate_W": 100,
+      "W_nominal": 38.6,
+      "W_envelope": 38.6,
+      "usable_W_at_50C": 60.0,
+      "loading_nominal_pct_of_derated": 48.3,
+      "loading_envelope_pct_of_derated": 48.2,
+      "loading_envelope_pct_of_usable": 64.3,
+      "headroom_to_usable_W": 21.4,
+      "status": "OK",
+      "ip": "IP67"
+    },
+    {
+      "psu": "P06",
+      "circuits": [
+        "C10"
+      ],
+      "nameplate_W": 30,
+      "W_nominal": 8.0,
+      "W_envelope": 8.0,
+      "usable_W_at_50C": 18.0,
+      "loading_nominal_pct_of_derated": 33.3,
+      "loading_envelope_pct_of_derated": 33.3,
+      "loading_envelope_pct_of_usable": 44.4,
+      "headroom_to_usable_W": 10.0,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P07",
+      "circuits": [
+        "C12"
+      ],
+      "nameplate_W": 100,
+      "W_nominal": 49.7,
+      "W_envelope": 49.7,
+      "usable_W_at_50C": 60.0,
+      "loading_nominal_pct_of_derated": 62.1,
+      "loading_envelope_pct_of_derated": 62.1,
+      "loading_envelope_pct_of_usable": 82.8,
+      "headroom_to_usable_W": 10.3,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P08",
+      "circuits": [
+        "C17"
+      ],
+      "nameplate_W": 150,
+      "W_nominal": 70.6,
+      "W_envelope": 70.6,
+      "usable_W_at_50C": 90.0,
+      "loading_nominal_pct_of_derated": 58.8,
+      "loading_envelope_pct_of_derated": 58.8,
+      "loading_envelope_pct_of_usable": 78.4,
+      "headroom_to_usable_W": 19.4,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P10",
+      "circuits": [
+        "C16"
+      ],
+      "nameplate_W": 60,
+      "W_nominal": 31.8,
+      "W_envelope": 31.8,
+      "usable_W_at_50C": 36.0,
+      "loading_nominal_pct_of_derated": 66.2,
+      "loading_envelope_pct_of_derated": 66.2,
+      "loading_envelope_pct_of_usable": 88.3,
+      "headroom_to_usable_W": 4.2,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P11",
+      "circuits": [
+        "C19"
+      ],
+      "nameplate_W": 30,
+      "W_nominal": 11.0,
+      "W_envelope": 11.0,
+      "usable_W_at_50C": 18.0,
+      "loading_nominal_pct_of_derated": 45.8,
+      "loading_envelope_pct_of_derated": 45.8,
+      "loading_envelope_pct_of_usable": 61.1,
+      "headroom_to_usable_W": 7.0,
+      "status": "OK",
+      "ip": "IP67"
+    },
+    {
+      "psu": "P12",
+      "circuits": [
+        "C21",
+        "C22",
+        "C23"
+      ],
+      "nameplate_W": 200,
+      "W_nominal": 90.8,
+      "W_envelope": 90.8,
+      "usable_W_at_50C": 120.0,
+      "loading_nominal_pct_of_derated": 56.8,
+      "loading_envelope_pct_of_derated": 56.8,
+      "loading_envelope_pct_of_usable": 75.7,
+      "headroom_to_usable_W": 29.2,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P14",
+      "circuits": [
+        "C27",
+        "C28",
+        "C29A",
+        "C29B",
+        "C30A",
+        "C30B"
+      ],
+      "nameplate_W": 200,
+      "W_nominal": 106.1,
+      "W_envelope": 106.1,
+      "usable_W_at_50C": 120.0,
+      "loading_nominal_pct_of_derated": 66.3,
+      "loading_envelope_pct_of_derated": 66.3,
+      "loading_envelope_pct_of_usable": 88.4,
+      "headroom_to_usable_W": 13.9,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P15",
+      "circuits": [
+        "C31",
+        "C32",
+        "C34",
+        "C35A",
+        "C35B",
+        "C36A",
+        "C36B"
+      ],
+      "nameplate_W": 240,
+      "W_nominal": 116.1,
+      "W_envelope": 116.1,
+      "usable_W_at_50C": 144.0,
+      "loading_nominal_pct_of_derated": 60.5,
+      "loading_envelope_pct_of_derated": 60.5,
+      "loading_envelope_pct_of_usable": 80.6,
+      "headroom_to_usable_W": 27.9,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    },
+    {
+      "psu": "P16",
+      "circuits": [
+        "C38",
+        "C39",
+        "C40"
+      ],
+      "nameplate_W": 240,
+      "W_nominal": 108.6,
+      "W_envelope": 108.6,
+      "usable_W_at_50C": 144.0,
+      "loading_nominal_pct_of_derated": 56.6,
+      "loading_envelope_pct_of_derated": 56.6,
+      "loading_envelope_pct_of_usable": 75.4,
+      "headroom_to_usable_W": 35.4,
+      "status": "OK",
+      "ip": "IP20 in ventilated hatch"
+    }
+  ],
+  "voltage_drop": [
+    {
+      "circuit": "C03",
+      "board": "SB-01",
+      "lane": "COVE",
+      "knob_group": "K-LIV-LOW",
+      "section": "A",
+      "psu": "P01",
+      "fed_via": "knob",
+      "W_nominal": 46.1,
+      "W_envelope": 46.1,
+      "branch_m": 3.54,
+      "longest_strip_run_m": 5.76,
+      "I_envelope_A": 1.92,
+      "feed_psu_to_board_m": null,
+      "feed_shared_I_A": null,
+      "cable_mm2_assumed": null,
+      "dV_feed_V": null,
+      "dV_branch_V": null,
+      "dV_pct": null,
+      "status": "HOLD",
+      "min_mm2_for_target": null,
+      "strip_feed_note": "run 5.76 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed",
+      "hold_reason": "Old P01/P03 split-feed result is invalid; route, voltage drop and protection require redesign."
+    },
+    {
+      "circuit": "C03",
+      "board": "SB-01",
+      "lane": "COVE",
+      "knob_group": "K-LIV-LOW",
+      "section": "B",
+      "psu": "P01",
+      "fed_via": "knob",
+      "W_nominal": 46.1,
+      "W_envelope": 46.1,
+      "branch_m": 3.54,
+      "longest_strip_run_m": 5.76,
+      "I_envelope_A": 1.92,
+      "feed_psu_to_board_m": null,
+      "feed_shared_I_A": null,
+      "cable_mm2_assumed": null,
+      "dV_feed_V": null,
+      "dV_branch_V": null,
+      "dV_pct": null,
+      "status": "HOLD",
+      "min_mm2_for_target": null,
+      "strip_feed_note": "run 5.76 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed",
+      "hold_reason": "Old P01/P03 split-feed result is invalid; route, voltage drop and protection require redesign."
+    },
+    {
+      "circuit": "C04",
+      "board": "SB-01",
+      "lane": "MOOD",
+      "knob_group": "K-LIV-LOW",
+      "section": "all",
+      "psu": "P01",
+      "fed_via": "knob",
+      "W_nominal": 10.1,
+      "W_envelope": 10.1,
+      "branch_m": 4.89,
+      "longest_strip_run_m": 1.68,
+      "I_envelope_A": 0.42,
+      "feed_psu_to_board_m": null,
+      "feed_shared_I_A": null,
+      "cable_mm2_assumed": null,
+      "dV_feed_V": null,
+      "dV_branch_V": null,
+      "dV_pct": null,
+      "status": "HOLD",
+      "min_mm2_for_target": null,
+      "strip_feed_note": "",
+      "hold_reason": "Old P01/P03 split-feed result is invalid; route, voltage drop and protection require redesign."
+    },
+    {
+      "circuit": "C05",
+      "board": "SB-01",
+      "lane": "LINE",
+      "knob_group": "K-LIV-LOW",
+      "section": "2 parallel outputs",
+      "psu": "P01",
+      "fed_via": "knob",
+      "W_nominal": 29.8,
+      "W_envelope": 29.8,
+      "branch_m": 7.16,
+      "longest_strip_run_m": 3.38,
+      "I_envelope_A": 1.24,
+      "feed_psu_to_board_m": null,
+      "feed_shared_I_A": null,
+      "cable_mm2_assumed": null,
+      "dV_feed_V": null,
+      "dV_branch_V": null,
+      "dV_pct": null,
+      "status": "HOLD",
+      "min_mm2_for_target": null,
+      "strip_feed_note": "",
+      "hold_reason": "Old P01/P03 split-feed result is invalid; route, voltage drop and protection require redesign."
+    },
+    {
+      "circuit": "C06A",
+      "board": "SB-01",
+      "lane": "ACCENT",
+      "knob_group": "K-LIV-POOJA-STRIP",
+      "section": "all",
+      "psu": "P04",
+      "fed_via": "knob",
+      "W_nominal": 21.7,
+      "W_envelope": 21.7,
+      "branch_m": 5.67,
+      "longest_strip_run_m": 3.62,
+      "I_envelope_A": 0.9,
+      "feed_psu_to_board_m": 4.54,
+      "feed_shared_I_A": 1.15,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.14,
+      "dV_branch_V": 0.13,
+      "dV_pct": 1.1,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C06B",
+      "board": "SB-01",
+      "lane": "ACCENT",
+      "knob_group": "K-LIV-POOJA-SPOT",
+      "section": "all",
+      "psu": "P04",
+      "fed_via": "knob",
+      "W_nominal": 6.0,
+      "W_envelope": 6.0,
+      "branch_m": 5.52,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.25,
+      "feed_psu_to_board_m": 4.54,
+      "feed_shared_I_A": 1.15,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.14,
+      "dV_branch_V": 0.04,
+      "dV_pct": 0.7,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C07",
+      "board": "SB-01",
+      "lane": "HIGH",
+      "knob_group": "K-BAL-HIGH",
+      "section": "all",
+      "psu": "P05",
+      "fed_via": "knob",
+      "W_nominal": 12.0,
+      "W_envelope": 12.0,
+      "branch_m": 6.06,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.5,
+      "feed_psu_to_board_m": 2.31,
+      "feed_shared_I_A": 1.61,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.1,
+      "dV_branch_V": 0.08,
+      "dV_pct": 0.7,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C08",
+      "board": "SB-01",
+      "lane": "MOOD",
+      "knob_group": "K-BAL-LOW",
+      "section": "all",
+      "psu": "P05",
+      "fed_via": "knob",
+      "W_nominal": 26.6,
+      "W_envelope": 26.6,
+      "branch_m": 7.68,
+      "longest_strip_run_m": 2.93,
+      "I_envelope_A": 1.11,
+      "feed_psu_to_board_m": 2.31,
+      "feed_shared_I_A": 1.61,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.1,
+      "dV_branch_V": 0.22,
+      "dV_pct": 1.3,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C10",
+      "board": "SB-02",
+      "lane": "HIGH",
+      "knob_group": "K-DIN-PASSAGE",
+      "section": "all",
+      "psu": "P06",
+      "fed_via": "knob",
+      "W_nominal": 8.0,
+      "W_envelope": 8.0,
+      "branch_m": 2.76,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.33,
+      "feed_psu_to_board_m": 2.42,
+      "feed_shared_I_A": 0.33,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.02,
+      "dV_branch_V": 0.02,
+      "dV_pct": 0.2,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C12",
+      "board": "SB-02",
+      "lane": "COVE",
+      "knob_group": "K-DIN-LOW",
+      "section": "all",
+      "psu": "P07",
+      "fed_via": "knob",
+      "W_nominal": 49.7,
+      "W_envelope": 49.7,
+      "branch_m": 3.67,
+      "longest_strip_run_m": 6.21,
+      "I_envelope_A": 2.07,
+      "feed_psu_to_board_m": 3.52,
+      "feed_shared_I_A": 2.07,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.19,
+      "dV_branch_V": 0.2,
+      "dV_pct": 1.6,
+      "status": "OK",
+      "min_mm2_for_target": 1.0,
+      "strip_feed_note": "run 6.21 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C16",
+      "board": "SB-03",
+      "lane": "TASK",
+      "knob_group": "K-KIT-TASK",
+      "section": "all",
+      "psu": "P10",
+      "fed_via": "knob",
+      "W_nominal": 31.8,
+      "W_envelope": 31.8,
+      "branch_m": 6.67,
+      "longest_strip_run_m": 1.68,
+      "I_envelope_A": 1.32,
+      "feed_psu_to_board_m": 2.8,
+      "feed_shared_I_A": 1.32,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.1,
+      "dV_branch_V": 0.23,
+      "dV_pct": 1.4,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C17",
+      "board": "SB-03",
+      "lane": "COVE",
+      "knob_group": "K-KIT-LOW",
+      "section": "A",
+      "psu": "P08",
+      "fed_via": "knob",
+      "W_nominal": 35.3,
+      "W_envelope": 35.3,
+      "branch_m": 4.37,
+      "longest_strip_run_m": 4.41,
+      "I_envelope_A": 1.47,
+      "feed_psu_to_board_m": 3.11,
+      "feed_shared_I_A": 2.94,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.24,
+      "dV_branch_V": 0.17,
+      "dV_pct": 1.7,
+      "status": "OK",
+      "min_mm2_for_target": 1.0,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C17",
+      "board": "SB-03",
+      "lane": "COVE",
+      "knob_group": "K-KIT-LOW",
+      "section": "B",
+      "psu": "P08",
+      "fed_via": "knob",
+      "W_nominal": 35.3,
+      "W_envelope": 35.3,
+      "branch_m": 4.37,
+      "longest_strip_run_m": 4.41,
+      "I_envelope_A": 1.47,
+      "feed_psu_to_board_m": 3.11,
+      "feed_shared_I_A": 2.94,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.24,
+      "dV_branch_V": 0.17,
+      "dV_pct": 1.7,
+      "status": "OK",
+      "min_mm2_for_target": 1.0,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C19",
+      "board": "SB-04",
+      "lane": "TASK",
+      "knob_group": "K-UTL-TASK",
+      "section": "all",
+      "psu": "P11",
+      "fed_via": "knob",
+      "W_nominal": 11.0,
+      "W_envelope": 11.0,
+      "branch_m": 2.41,
+      "longest_strip_run_m": 1.1,
+      "I_envelope_A": 0.46,
+      "feed_psu_to_board_m": 2.24,
+      "feed_shared_I_A": 0.46,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.03,
+      "dV_branch_V": 0.03,
+      "dV_pct": 0.2,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C21",
+      "board": "SB-05",
+      "lane": "COVE",
+      "knob_group": "K-MBR-LOW",
+      "section": "all",
+      "psu": "P12",
+      "fed_via": "knob",
+      "W_nominal": 52.2,
+      "W_envelope": 52.2,
+      "branch_m": 4.12,
+      "longest_strip_run_m": 6.53,
+      "I_envelope_A": 2.18,
+      "feed_psu_to_board_m": 2.53,
+      "feed_shared_I_A": 3.78,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.25,
+      "dV_branch_V": 0.23,
+      "dV_pct": 2.0,
+      "status": "OK",
+      "min_mm2_for_target": 1.5,
+      "strip_feed_note": "run 6.53 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C22",
+      "board": "SB-05",
+      "lane": "LINE",
+      "knob_group": "K-MBR-LOW",
+      "section": "all",
+      "psu": "P12",
+      "fed_via": "knob",
+      "W_nominal": 30.9,
+      "W_envelope": 30.9,
+      "branch_m": 5.23,
+      "longest_strip_run_m": 1.93,
+      "I_envelope_A": 1.29,
+      "feed_psu_to_board_m": 2.53,
+      "feed_shared_I_A": 3.78,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.25,
+      "dV_branch_V": 0.18,
+      "dV_pct": 1.8,
+      "status": "OK",
+      "min_mm2_for_target": 1.0,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C23",
+      "board": "SB-05",
+      "lane": "MOOD",
+      "knob_group": "K-MBR-LOW",
+      "section": "all",
+      "psu": "P12",
+      "fed_via": "knob",
+      "W_nominal": 7.7,
+      "W_envelope": 7.7,
+      "branch_m": 6.46,
+      "longest_strip_run_m": 1.28,
+      "I_envelope_A": 0.32,
+      "feed_psu_to_board_m": 2.53,
+      "feed_shared_I_A": 3.78,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.25,
+      "dV_branch_V": 0.05,
+      "dV_pct": 1.3,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C27",
+      "board": "SB-06",
+      "lane": "HIGH",
+      "knob_group": "K-DRS-HIGH",
+      "section": "all",
+      "psu": "P14",
+      "fed_via": "knob",
+      "W_nominal": 14.0,
+      "W_envelope": 14.0,
+      "branch_m": 3.2,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.58,
+      "feed_psu_to_board_m": 2.33,
+      "feed_shared_I_A": 0.58,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.04,
+      "dV_branch_V": 0.05,
+      "dV_pct": 0.3,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C28",
+      "board": "SB-06B",
+      "lane": "HIGH",
+      "knob_group": "K-TL1-HIGH",
+      "section": "all",
+      "psu": "P14",
+      "fed_via": "knob",
+      "W_nominal": 27.0,
+      "W_envelope": 27.0,
+      "branch_m": 6.08,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 1.12,
+      "feed_psu_to_board_m": 2.59,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.26,
+      "dV_branch_V": 0.18,
+      "dV_pct": 1.8,
+      "status": "OK",
+      "min_mm2_for_target": 1.0,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C29A",
+      "board": "SB-06B",
+      "lane": "MIRROR",
+      "knob_group": "K-TL1-HIGH",
+      "section": "all",
+      "psu": "P14",
+      "fed_via": "knob",
+      "W_nominal": 16.0,
+      "W_envelope": 16.0,
+      "branch_m": 3.87,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.67,
+      "feed_psu_to_board_m": 2.59,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.26,
+      "dV_branch_V": 0.07,
+      "dV_pct": 1.4,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C29B",
+      "board": "SB-06B",
+      "lane": "FACE",
+      "knob_group": "K-TL1-FACE",
+      "section": "all",
+      "psu": "P14",
+      "fed_via": "knob",
+      "W_nominal": 10.0,
+      "W_envelope": 10.0,
+      "branch_m": 4.42,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.42,
+      "feed_psu_to_board_m": 2.59,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.26,
+      "dV_branch_V": 0.05,
+      "dV_pct": 1.3,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C30A",
+      "board": "SB-06B",
+      "lane": "PERIM",
+      "knob_group": "K-TL1-LOW",
+      "section": "all",
+      "psu": "P14",
+      "fed_via": "knob",
+      "W_nominal": 31.9,
+      "W_envelope": 31.9,
+      "branch_m": 2.24,
+      "longest_strip_run_m": 6.64,
+      "I_envelope_A": 1.33,
+      "feed_psu_to_board_m": 2.59,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.26,
+      "dV_branch_V": 0.08,
+      "dV_pct": 1.4,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": "run 6.64 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C30B",
+      "board": "SB-06B",
+      "lane": "MOOD",
+      "knob_group": "K-TL1-LOW",
+      "section": "all",
+      "psu": "P14",
+      "fed_via": "knob",
+      "W_nominal": 7.2,
+      "W_envelope": 7.2,
+      "branch_m": 5.66,
+      "longest_strip_run_m": 0.75,
+      "I_envelope_A": 0.3,
+      "feed_psu_to_board_m": 2.59,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.26,
+      "dV_branch_V": 0.04,
+      "dV_pct": 1.3,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C31",
+      "board": "SB-07",
+      "lane": "HIGH",
+      "knob_group": "K-LOB",
+      "section": "all",
+      "psu": "P15",
+      "fed_via": "knob",
+      "W_nominal": 14.0,
+      "W_envelope": 14.0,
+      "branch_m": 3.17,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.58,
+      "feed_psu_to_board_m": 2.59,
+      "feed_shared_I_A": 1.0,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.07,
+      "dV_branch_V": 0.05,
+      "dV_pct": 0.5,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C32",
+      "board": "SB-07",
+      "lane": "MIRROR",
+      "knob_group": "K-LOB",
+      "section": "all",
+      "psu": "P15",
+      "fed_via": "knob",
+      "W_nominal": 10.0,
+      "W_envelope": 10.0,
+      "branch_m": 2.83,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.42,
+      "feed_psu_to_board_m": 2.59,
+      "feed_shared_I_A": 1.0,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.07,
+      "dV_branch_V": 0.03,
+      "dV_pct": 0.4,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C34",
+      "board": "SB-07B",
+      "lane": "HIGH",
+      "knob_group": "K-TL2-HIGH",
+      "section": "all",
+      "psu": "P15",
+      "fed_via": "knob",
+      "W_nominal": 27.0,
+      "W_envelope": 27.0,
+      "branch_m": 6.06,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 1.12,
+      "feed_psu_to_board_m": 2.88,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.29,
+      "dV_branch_V": 0.18,
+      "dV_pct": 1.9,
+      "status": "OK",
+      "min_mm2_for_target": 1.0,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C35A",
+      "board": "SB-07B",
+      "lane": "MIRROR",
+      "knob_group": "K-TL2-HIGH",
+      "section": "all",
+      "psu": "P15",
+      "fed_via": "knob",
+      "W_nominal": 16.0,
+      "W_envelope": 16.0,
+      "branch_m": 3.85,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.67,
+      "feed_psu_to_board_m": 2.88,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.29,
+      "dV_branch_V": 0.07,
+      "dV_pct": 1.5,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C35B",
+      "board": "SB-07B",
+      "lane": "FACE",
+      "knob_group": "K-TL2-FACE",
+      "section": "all",
+      "psu": "P15",
+      "fed_via": "knob",
+      "W_nominal": 10.0,
+      "W_envelope": 10.0,
+      "branch_m": 4.39,
+      "longest_strip_run_m": null,
+      "I_envelope_A": 0.42,
+      "feed_psu_to_board_m": 2.88,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.29,
+      "dV_branch_V": 0.05,
+      "dV_pct": 1.4,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C36A",
+      "board": "SB-07B",
+      "lane": "PERIM",
+      "knob_group": "K-TL2-LOW",
+      "section": "all",
+      "psu": "P15",
+      "fed_via": "knob",
+      "W_nominal": 31.9,
+      "W_envelope": 31.9,
+      "branch_m": 2.22,
+      "longest_strip_run_m": 6.64,
+      "I_envelope_A": 1.33,
+      "feed_psu_to_board_m": 2.88,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.29,
+      "dV_branch_V": 0.08,
+      "dV_pct": 1.5,
+      "status": "OK",
+      "min_mm2_for_target": 1.0,
+      "strip_feed_note": "run 6.64 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C36B",
+      "board": "SB-07B",
+      "lane": "MOOD",
+      "knob_group": "K-TL2-LOW",
+      "section": "all",
+      "psu": "P15",
+      "fed_via": "knob",
+      "W_nominal": 7.2,
+      "W_envelope": 7.2,
+      "branch_m": 5.64,
+      "longest_strip_run_m": 0.75,
+      "I_envelope_A": 0.3,
+      "feed_psu_to_board_m": 2.88,
+      "feed_shared_I_A": 3.84,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.29,
+      "dV_branch_V": 0.04,
+      "dV_pct": 1.4,
+      "status": "OK",
+      "min_mm2_for_target": 0.75,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C38",
+      "board": "SB-08",
+      "lane": "STUDY",
+      "knob_group": "K-CBR-STUDY",
+      "section": "all",
+      "psu": "P16",
+      "fed_via": "knob",
+      "W_nominal": 16.0,
+      "W_envelope": 16.0,
+      "branch_m": 5.55,
+      "longest_strip_run_m": 1.14,
+      "I_envelope_A": 0.67,
+      "feed_psu_to_board_m": 4.6,
+      "feed_shared_I_A": 4.53,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.54,
+      "dV_branch_V": 0.1,
+      "dV_pct": 2.7,
+      "status": "OK",
+      "min_mm2_for_target": 1.5,
+      "strip_feed_note": ""
+    },
+    {
+      "circuit": "C39",
+      "board": "SB-08",
+      "lane": "COVE",
+      "knob_group": "K-CBR-LOW",
+      "section": "all",
+      "psu": "P16",
+      "fed_via": "knob",
+      "W_nominal": 49.8,
+      "W_envelope": 49.8,
+      "branch_m": 3.65,
+      "longest_strip_run_m": 6.22,
+      "I_envelope_A": 2.07,
+      "feed_psu_to_board_m": 4.6,
+      "feed_shared_I_A": 4.53,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.54,
+      "dV_branch_V": 0.2,
+      "dV_pct": 3.1,
+      "status": "MARGINAL",
+      "min_mm2_for_target": 2.5,
+      "strip_feed_note": "run 6.22 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+    },
+    {
+      "circuit": "C40",
+      "board": "SB-08",
+      "lane": "LINE",
+      "knob_group": "K-CBR-LOW",
+      "section": "all",
+      "psu": "P16",
+      "fed_via": "knob",
+      "W_nominal": 42.9,
+      "W_envelope": 42.9,
+      "branch_m": 5.43,
+      "longest_strip_run_m": 1.34,
+      "I_envelope_A": 1.79,
+      "feed_psu_to_board_m": 4.6,
+      "feed_shared_I_A": 4.53,
+      "cable_mm2_assumed": 1.5,
+      "dV_feed_V": 0.54,
+      "dV_branch_V": 0.25,
+      "dV_pct": 3.3,
+      "status": "MARGINAL",
+      "min_mm2_for_target": 2.5,
+      "strip_feed_note": ""
+    }
+  ],
+  "mains_dimmers": [
+    {
+      "circuit": "C01",
+      "board": "SB-01",
+      "lane": "HIGH",
+      "rooms": [
+        "LIV"
+      ],
+      "control": "TE",
+      "n_fixtures": 5,
+      "W_connected": 40,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 40 W (prefer <= 20.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 100,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 80.0,
+      "lamps_vs_listed_max": "5/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    },
+    {
+      "circuit": "C02",
+      "board": "SB-01",
+      "lane": "HIGH",
+      "rooms": [
+        "LIV"
+      ],
+      "control": "TE",
+      "n_fixtures": 5,
+      "W_connected": 40,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 40 W (prefer <= 20.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 100,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 80.0,
+      "lamps_vs_listed_max": "5/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    },
+    {
+      "circuit": "C09",
+      "board": "SB-02",
+      "lane": "HIGH",
+      "rooms": [
+        "DIN"
+      ],
+      "control": "TE",
+      "n_fixtures": 3,
+      "W_connected": 30,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 30 W (prefer <= 15.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 60,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 60.0,
+      "lamps_vs_listed_max": "3/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    },
+    {
+      "circuit": "C11",
+      "board": "SB-02",
+      "lane": "MOOD",
+      "rooms": [
+        "DIN"
+      ],
+      "control": "TE",
+      "n_fixtures": 1,
+      "W_connected": 12,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 12 W (prefer <= 6.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 30,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 24.0,
+      "lamps_vs_listed_max": "1/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    },
+    {
+      "circuit": "C13",
+      "board": "SB-02",
+      "lane": "ACCENT",
+      "rooms": [
+        "DIN"
+      ],
+      "control": "TRK",
+      "n_fixtures": 4,
+      "W_connected": 26,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 26 W (prefer <= 13.0 W for margin) and be listed by the track maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": null,
+      "listing_screen": "track maker listing (not screened here)",
+      "pct_of_listed_max": null,
+      "lamps_vs_listed_max": null,
+      "within_listing": null,
+      "within_planning_margin": null
+    },
+    {
+      "circuit": "C14",
+      "board": "SB-03",
+      "lane": "HIGH",
+      "rooms": [
+        "KIT"
+      ],
+      "control": "TE",
+      "n_fixtures": 4,
+      "W_connected": 40,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 40 W (prefer <= 20.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 100,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 80.0,
+      "lamps_vs_listed_max": "4/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    },
+    {
+      "circuit": "C15",
+      "board": "SB-03",
+      "lane": "HIGH",
+      "rooms": [
+        "KIT"
+      ],
+      "control": "TE",
+      "n_fixtures": 4,
+      "W_connected": 31,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 31 W (prefer <= 15.5 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 60,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 62.0,
+      "lamps_vs_listed_max": "4/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    },
+    {
+      "circuit": "C18",
+      "board": "SB-04",
+      "lane": "HIGH",
+      "rooms": [
+        "UTL"
+      ],
+      "control": "TE",
+      "n_fixtures": 3,
+      "W_connected": 36,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 36 W (prefer <= 18.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 60,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 72.0,
+      "lamps_vs_listed_max": "3/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    },
+    {
+      "circuit": "C20",
+      "board": "SB-05",
+      "lane": "HIGH",
+      "rooms": [
+        "MBR"
+      ],
+      "control": "TE",
+      "n_fixtures": 8,
+      "W_connected": 48,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 48 W (prefer <= 24.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 100,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 96.0,
+      "lamps_vs_listed_max": "8/8",
+      "within_listing": true,
+      "within_planning_margin": false
+    },
+    {
+      "circuit": "C37",
+      "board": "SB-08",
+      "lane": "HIGH",
+      "rooms": [
+        "CBR"
+      ],
+      "control": "TE",
+      "n_fixtures": 6,
+      "W_connected": 36,
+      "documented_min_W": 60,
+      "below_documented_min": true,
+      "status": "PROCUREMENT HOLD",
+      "requirement": "dimmer must state an LED minimum <= 36 W (prefer <= 18.0 W for margin) and be listed by the downlight maker; Havells ATADEXB102 (60 W minimum) is excluded; India-listed low-load candidates are leads only until the exact fitting + driver + dimmer chain is documented and sample-tested",
+      "alt_24V_knob_chain": {
+        "psu_nameplate_W": 60,
+        "knob_outputs": 1,
+        "note": "same lumen 24 V CV fittings on a T1-K knob; also 'allowance pending documented chain'"
+      },
+      "listing_screen": "Legrand Lyncus 677304",
+      "pct_of_listed_max": 72.0,
+      "lamps_vs_listed_max": "6/8",
+      "within_listing": true,
+      "within_planning_margin": true
+    }
+  ],
+  "board_devices": [
+    {
+      "board": "SB-01",
+      "xz_ft": [
+        12.75,
+        42.0
+      ],
+      "knob_T1K_86mm_box": 5,
+      "dimmer_230V_module": 2,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 0
+    },
+    {
+      "board": "SB-02",
+      "xz_ft": [
+        15.95,
+        22.05
+      ],
+      "knob_T1K_86mm_box": 2,
+      "dimmer_230V_module": 2,
+      "track_dimmer_230V": 1,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 1
+    },
+    {
+      "board": "SB-03",
+      "xz_ft": [
+        15.95,
+        10.4
+      ],
+      "knob_T1K_86mm_box": 2,
+      "dimmer_230V_module": 2,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 0
+    },
+    {
+      "board": "SB-04",
+      "xz_ft": [
+        15.2,
+        5.6
+      ],
+      "knob_T1K_86mm_box": 1,
+      "dimmer_230V_module": 1,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 0
+    },
+    {
+      "board": "SB-05",
+      "xz_ft": [
+        17.55,
+        12.3
+      ],
+      "knob_T1K_86mm_box": 1,
+      "dimmer_230V_module": 1,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 1,
+      "switch_module": 1
+    },
+    {
+      "board": "SB-05L",
+      "xz_ft": [
+        29.25,
+        3.3409
+      ],
+      "knob_T1K_86mm_box": 0,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 1,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 1
+    },
+    {
+      "board": "SB-05R",
+      "xz_ft": [
+        29.25,
+        8.5902
+      ],
+      "knob_T1K_86mm_box": 0,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 1,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 1
+    },
+    {
+      "board": "SB-06",
+      "xz_ft": [
+        19.85,
+        18.4
+      ],
+      "knob_T1K_86mm_box": 1,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 0
+    },
+    {
+      "board": "SB-06B",
+      "xz_ft": [
+        19.6,
+        21.9
+      ],
+      "knob_T1K_86mm_box": 3,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 0
+    },
+    {
+      "board": "SB-07",
+      "xz_ft": [
+        19.85,
+        24.2
+      ],
+      "knob_T1K_86mm_box": 1,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 1,
+      "switch_module": 1
+    },
+    {
+      "board": "SB-07B",
+      "xz_ft": [
+        19.85,
+        27.95
+      ],
+      "knob_T1K_86mm_box": 3,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 0
+    },
+    {
+      "board": "SB-08",
+      "xz_ft": [
+        21.42,
+        28.2557
+      ],
+      "knob_T1K_86mm_box": 2,
+      "dimmer_230V_module": 1,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 0,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 1
+    },
+    {
+      "board": "SB-08RL",
+      "xz_ft": [
+        29.25,
+        31.8646
+      ],
+      "knob_T1K_86mm_box": 0,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 1,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 1
+    },
+    {
+      "board": "SB-08RR",
+      "xz_ft": [
+        29.25,
+        39.6402
+      ],
+      "knob_T1K_86mm_box": 0,
+      "dimmer_230V_module": 0,
+      "track_dimmer_230V": 0,
+      "reader_with_integral_dimmer (on fitting)": 1,
+      "pir_step_light (on fitting)": 0,
+      "switch_module": 1
+    }
+  ],
+  "strip_reels": [
+    {
+      "sku": "BACK",
+      "cct": "2700K",
+      "desc": "24 V COB strip 6 W/m ~550 lm/m in diffused profile (TV / headboard / pooja niche)",
+      "budget_key": "strip_1c",
+      "cut_pitch_mm": 50,
+      "pieces": [
+        {
+          "fixture": "LIV-L2",
+          "design_m": 1.68,
+          "cut_m": 1.65,
+          "dark_end_mm": 30
+        },
+        {
+          "fixture": "LIV-P1",
+          "design_m": 3.62,
+          "cut_m": 3.6,
+          "dark_end_mm": 20
+        },
+        {
+          "fixture": "MBR-L2",
+          "design_m": 1.28,
+          "cut_m": 1.25,
+          "dark_end_mm": 30
+        }
+      ],
+      "design_m_flat": 6.58,
+      "bom_allowance_m_flat": 7.0,
+      "reels_flat": 2,
+      "reel_m_flat": 10.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.0,
+      "reels_four_flats_pooled": 6,
+      "reel_m_four_flats": 30.0,
+      "bom_allowance_m_four_flats": 28.0,
+      "extra_vs_allowance_m_four_flats": 2.0,
+      "note": ""
+    },
+    {
+      "sku": "BCOVE",
+      "cct": "2700K",
+      "desc": "24 V IP65 opal silicone strip face-down in bath perimeter slot 4.8 W/m ~400 lm/m (IP67 for the run inside the shower enclosure)",
+      "budget_key": "strip_ip65",
+      "cut_pitch_mm": 100,
+      "pieces": [
+        {
+          "fixture": "TL1-L1",
+          "design_m": 6.64,
+          "cut_m": 6.6,
+          "dark_end_mm": 40
+        },
+        {
+          "fixture": "TL2-L1",
+          "design_m": 6.64,
+          "cut_m": 6.6,
+          "dark_end_mm": 40
+        }
+      ],
+      "design_m_flat": 13.28,
+      "bom_allowance_m_flat": 14.0,
+      "reels_flat": 3,
+      "reel_m_flat": 15.0,
+      "joints_flat": 2,
+      "extra_vs_allowance_m_flat": 1.0,
+      "reels_four_flats_pooled": 11,
+      "reel_m_four_flats": 55.0,
+      "bom_allowance_m_four_flats": 56.0,
+      "extra_vs_allowance_m_four_flats": -1.0,
+      "note": "pieces longer than one reel need a joint (feed at the joint) or a longer reel"
+    },
+    {
+      "sku": "COVE_FW",
+      "cct": "2700K",
+      "desc": "24 V fixed-white single-channel COB strip, 2700 K warm white in every cove, 8 W/m ~720 lm/m (generic class assumption, not a catalogue datasheet; a 2700 K bin of a strip often gives somewhat lower lm/W than 3000-4000 K, UNVERIFIED without maker data), in cove profile",
+      "budget_key": "strip_1c",
+      "cut_pitch_mm": 50,
+      "pieces": [
+        {
+          "fixture": "LIV-L1/A",
+          "design_m": 5.76,
+          "cut_m": 5.75,
+          "dark_end_mm": 15
+        },
+        {
+          "fixture": "LIV-L1/B",
+          "design_m": 5.76,
+          "cut_m": 5.75,
+          "dark_end_mm": 15
+        },
+        {
+          "fixture": "DIN-L2",
+          "design_m": 6.21,
+          "cut_m": 6.2,
+          "dark_end_mm": 10
+        },
+        {
+          "fixture": "KIT-L1/A",
+          "design_m": 4.41,
+          "cut_m": 4.4,
+          "dark_end_mm": 10
+        },
+        {
+          "fixture": "KIT-L1/B",
+          "design_m": 4.41,
+          "cut_m": 4.4,
+          "dark_end_mm": 10
+        },
+        {
+          "fixture": "MBR-L1",
+          "design_m": 6.53,
+          "cut_m": 6.5,
+          "dark_end_mm": 30
+        },
+        {
+          "fixture": "CBR-L1",
+          "design_m": 6.22,
+          "cut_m": 6.2,
+          "dark_end_mm": 20
+        }
+      ],
+      "design_m_flat": 39.3,
+      "bom_allowance_m_flat": 41.3,
+      "reels_flat": 9,
+      "reel_m_flat": 45.0,
+      "joints_flat": 5,
+      "extra_vs_allowance_m_flat": 3.7,
+      "reels_four_flats_pooled": 33,
+      "reel_m_four_flats": 165.0,
+      "bom_allowance_m_four_flats": 165.2,
+      "extra_vs_allowance_m_four_flats": -0.2,
+      "note": "pieces longer than one reel need a joint (feed at the joint) or a longer reel"
+    },
+    {
+      "sku": "LIN",
+      "cct": "2700K",
+      "desc": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "budget_key": "strip_1c",
+      "cut_pitch_mm": 50,
+      "pieces": [
+        {
+          "fixture": "LIV-X1",
+          "design_m": 3.38,
+          "cut_m": 3.35,
+          "dark_end_mm": 30
+        },
+        {
+          "fixture": "LIV-X2",
+          "design_m": 0.7,
+          "cut_m": 0.7,
+          "dark_end_mm": 0
+        },
+        {
+          "fixture": "DIN-X1",
+          "design_m": 3.37,
+          "cut_m": 3.35,
+          "dark_end_mm": 20
+        },
+        {
+          "fixture": "MBR-X1",
+          "design_m": 1.93,
+          "cut_m": 1.9,
+          "dark_end_mm": 30
+        },
+        {
+          "fixture": "MBR-X2",
+          "design_m": 1.93,
+          "cut_m": 1.9,
+          "dark_end_mm": 30
+        },
+        {
+          "fixture": "CBR-X1",
+          "design_m": 1.34,
+          "cut_m": 1.3,
+          "dark_end_mm": 40
+        },
+        {
+          "fixture": "CBR-X2",
+          "design_m": 1.34,
+          "cut_m": 1.3,
+          "dark_end_mm": 40
+        },
+        {
+          "fixture": "CBR-X3",
+          "design_m": 1.34,
+          "cut_m": 1.3,
+          "dark_end_mm": 40
+        },
+        {
+          "fixture": "CBR-X4",
+          "design_m": 1.34,
+          "cut_m": 1.3,
+          "dark_end_mm": 40
+        }
+      ],
+      "design_m_flat": 16.67,
+      "bom_allowance_m_flat": 17.6,
+      "reels_flat": 4,
+      "reel_m_flat": 20.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 2.4,
+      "reels_four_flats_pooled": 15,
+      "reel_m_four_flats": 75.0,
+      "bom_allowance_m_four_flats": 70.4,
+      "extra_vs_allowance_m_four_flats": 4.6,
+      "note": ""
+    },
+    {
+      "sku": "LIN",
+      "cct": "4000K",
+      "desc": "24 V COB strip 8 W/m in plaster-in opal profile, ~600 lm/m delivered",
+      "budget_key": "strip_1c",
+      "cut_pitch_mm": 50,
+      "pieces": [
+        {
+          "fixture": "KIT-T4",
+          "design_m": 1.16,
+          "cut_m": 1.15,
+          "dark_end_mm": 10
+        }
+      ],
+      "design_m_flat": 1.16,
+      "bom_allowance_m_flat": 1.3,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.7,
+      "reels_four_flats_pooled": 1,
+      "reel_m_four_flats": 5.0,
+      "bom_allowance_m_four_flats": 5.2,
+      "extra_vs_allowance_m_four_flats": -0.2,
+      "note": ""
+    },
+    {
+      "sku": "NICHE",
+      "cct": "2700K",
+      "desc": "24 V IP67 strip under shower-niche lip 6 W/m ~500 lm/m",
+      "budget_key": "strip_ip65",
+      "cut_pitch_mm": 100,
+      "pieces": [
+        {
+          "fixture": "TL1-L2",
+          "design_m": 0.75,
+          "cut_m": 0.7,
+          "dark_end_mm": 50
+        },
+        {
+          "fixture": "TL2-L2",
+          "design_m": 0.75,
+          "cut_m": 0.7,
+          "dark_end_mm": 50
+        }
+      ],
+      "design_m_flat": 1.5,
+      "bom_allowance_m_flat": 1.6,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.4,
+      "reels_four_flats_pooled": 2,
+      "reel_m_four_flats": 10.0,
+      "bom_allowance_m_four_flats": 6.4,
+      "extra_vs_allowance_m_four_flats": 3.6,
+      "note": ""
+    },
+    {
+      "sku": "PLINTH",
+      "cct": "2700K",
+      "desc": "24 V IP67 strip in channel 5 W/m ~450 lm/m (balcony parapet graze)",
+      "budget_key": "plinth",
+      "cut_pitch_mm": 100,
+      "pieces": [
+        {
+          "fixture": "BAL-L1",
+          "design_m": 2.93,
+          "cut_m": 2.9,
+          "dark_end_mm": 30
+        }
+      ],
+      "design_m_flat": 2.93,
+      "bom_allowance_m_flat": 3.1,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 1.9,
+      "reels_four_flats_pooled": 4,
+      "reel_m_four_flats": 20.0,
+      "bom_allowance_m_four_flats": 12.4,
+      "extra_vs_allowance_m_four_flats": 7.6,
+      "note": ""
+    },
+    {
+      "sku": "TASK",
+      "cct": "4000K",
+      "desc": "24 V COB strip 10 W/m ~1000 lm/m, diffused profile, mounted face-DOWN under wall cabinet (mid-depth)",
+      "budget_key": "task",
+      "cut_pitch_mm": 50,
+      "pieces": [
+        {
+          "fixture": "KIT-T2",
+          "design_m": 0.64,
+          "cut_m": 0.6,
+          "dark_end_mm": 40
+        },
+        {
+          "fixture": "KIT-T3",
+          "design_m": 0.52,
+          "cut_m": 0.5,
+          "dark_end_mm": 20
+        }
+      ],
+      "design_m_flat": 1.16,
+      "bom_allowance_m_flat": 1.3,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.7,
+      "reels_four_flats_pooled": 1,
+      "reel_m_four_flats": 5.0,
+      "bom_allowance_m_four_flats": 5.2,
+      "extra_vs_allowance_m_four_flats": -0.2,
+      "note": ""
+    },
+    {
+      "sku": "TASKW",
+      "cct": "4000K",
+      "desc": "24 V IP65 opal strip in sealed profile under utility shelf lip 10 W/m ~900 lm/m",
+      "budget_key": "task_ip65",
+      "cut_pitch_mm": 100,
+      "pieces": [
+        {
+          "fixture": "UTL-T1",
+          "design_m": 1.1,
+          "cut_m": 1.1,
+          "dark_end_mm": 0
+        }
+      ],
+      "design_m_flat": 1.1,
+      "bom_allowance_m_flat": 1.2,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.8,
+      "reels_four_flats_pooled": 1,
+      "reel_m_four_flats": 5.0,
+      "bom_allowance_m_four_flats": 4.8,
+      "extra_vs_allowance_m_four_flats": 0.2,
+      "note": ""
+    },
+    {
+      "sku": "TASK_HO",
+      "cct": "4000K",
+      "desc": "24 V COB strip 14 W/m ~1400 lm/m (ASSUMED nominal, datasheet pending), deep diffused profile face-DOWN behind a shelf lip",
+      "budget_key": "task",
+      "cut_pitch_mm": 50,
+      "pieces": [
+        {
+          "fixture": "CBR-S1",
+          "design_m": 1.14,
+          "cut_m": 1.1,
+          "dark_end_mm": 40
+        }
+      ],
+      "design_m_flat": 1.14,
+      "bom_allowance_m_flat": 1.2,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.8,
+      "reels_four_flats_pooled": 1,
+      "reel_m_four_flats": 5.0,
+      "bom_allowance_m_four_flats": 4.8,
+      "extra_vs_allowance_m_four_flats": 0.2,
+      "note": ""
+    },
+    {
+      "sku": "TASK_LO",
+      "cct": "4000K",
+      "desc": "24 V COB strip 6.5 W/m ~650 lm/m (same family, colour bin and 4000 K as TASK), diffused profile, mounted face-DOWN under wall cabinet (mid-depth); the model meets the worktop target for any 600-700 lm/m delivered",
+      "budget_key": "task",
+      "cut_pitch_mm": 50,
+      "pieces": [
+        {
+          "fixture": "KIT-T1",
+          "design_m": 1.68,
+          "cut_m": 1.65,
+          "dark_end_mm": 30
+        }
+      ],
+      "design_m_flat": 1.68,
+      "bom_allowance_m_flat": 1.8,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.2,
+      "reels_four_flats_pooled": 2,
+      "reel_m_four_flats": 10.0,
+      "bom_allowance_m_four_flats": 7.2,
+      "extra_vs_allowance_m_four_flats": 2.8,
+      "note": ""
+    },
+    {
+      "sku": "VANITY",
+      "cct": "2700K",
+      "desc": "24 V IP65 strip under floating vanity 5 W/m ~450 lm/m",
+      "budget_key": "strip_ip65",
+      "cut_pitch_mm": 100,
+      "pieces": [
+        {
+          "fixture": "TL1-L3",
+          "design_m": 0.55,
+          "cut_m": 0.5,
+          "dark_end_mm": 50
+        },
+        {
+          "fixture": "TL2-L3",
+          "design_m": 0.55,
+          "cut_m": 0.5,
+          "dark_end_mm": 50
+        }
+      ],
+      "design_m_flat": 1.1,
+      "bom_allowance_m_flat": 1.2,
+      "reels_flat": 1,
+      "reel_m_flat": 5.0,
+      "joints_flat": 0,
+      "extra_vs_allowance_m_flat": 3.8,
+      "reels_four_flats_pooled": 1,
+      "reel_m_four_flats": 5.0,
+      "bom_allowance_m_four_flats": 4.8,
+      "extra_vs_allowance_m_four_flats": 0.2,
+      "note": ""
+    }
+  ],
+  "one_flat": {
+    "fixtures": 104,
+    "circuits": 47,
+    "knobs": 21,
+    "knob_outputs": 34,
+    "amplifiers": 1,
+    "dimmers_230V": 10,
+    "track_drivers_48V": 1,
+    "readers_integral_dimmer": 4,
+    "pir_step_lights": 2,
+    "switch_modules": 8,
+    "psus_24V": 12,
+    "psu_sizes": {
+      "480 W": 1,
+      "60 W": 2,
+      "100 W": 2,
+      "30 W": 2,
+      "150 W": 1,
+      "200 W": 2,
+      "240 W": 2
+    },
+    "psu_nameplate_total_W": 1890,
+    "psu_isolators": 13,
+    "W_nominal": 1174.0,
+    "W_envelope": 1174.0,
+    "standby_W_est": 12.6,
+    "strip_reels": 26,
+    "scope": "104-fitting base; selected curtain/S1 extension is separate"
+  },
+  "four_flats": {
+    "fixtures": 416,
+    "circuits": 188,
+    "knobs": 84,
+    "knob_outputs": 136,
+    "amplifiers": 4,
+    "dimmers_230V": 40,
+    "track_drivers_48V": 4,
+    "readers_integral_dimmer": 16,
+    "pir_step_lights": 8,
+    "switch_modules": 32,
+    "psus_24V": 48,
+    "psu_sizes": {
+      "480 W": 4,
+      "60 W": 8,
+      "100 W": 8,
+      "30 W": 8,
+      "150 W": 4,
+      "200 W": 8,
+      "240 W": 8
+    },
+    "psu_nameplate_total_W": 7560,
+    "psu_isolators": 52,
+    "W_nominal": 4696.0,
+    "W_envelope": 4696.0,
+    "standby_W_est": 50.4,
+    "strip_reels": 78,
+    "scope": "four 104-fitting bases; selected curtain/S1 extension is separate"
+  },
+  "selected_curtain_S1_extension": {
+    "status": "HOMEOWNER_SELECTED_S1_REVIEW_EXTENSION",
+    "base_ledger_unchanged_until_site_measurement": false,
+    "base": {
+      "knobs": 21,
+      "knob_outputs": 34,
+      "amplifiers": 1,
+      "psus": 12,
+      "psu_nameplate_total_W": 1890,
+      "psu_over_usable": [],
+      "vd_worst_pct": null,
+      "vd_status": {
+        "HOLD": 4,
+        "OK": 27,
+        "MARGINAL": 2
+      },
+      "worst_known_dV_pct": 3.3,
+      "scope": "104-fitting base with selected living supply; excludes the four curtain strips"
+    },
+    "with_S1": {
+      "knobs": 21,
+      "knob_outputs": 38,
+      "amplifiers": 3,
+      "psus": 12,
+      "psu_nameplate_total_W": 1980,
+      "psu_over_usable": [],
+      "vd_worst_pct": null,
+      "vd_status": {
+        "OK": 30,
+        "MARGINAL": 2,
+        "HOLD": 5
+      },
+      "fittings_including_selected_strips": 108,
+      "circuits_including_selected_strips": 51,
+      "base_photometric_fittings": 104,
+      "additional_selected_strips": 4,
+      "additional_circuits": 4,
+      "selected_strip_length_m": 8.88,
+      "selected_strip_load_W": 71.04,
+      "photometry_credit_for_selected_strips": false,
+      "worst_known_dV_pct": 3.6,
+      "inrush_status": "HOLD; LT-4 and LT-5 previous screens invalid",
+      "capacity_status": "project allowance only; product, thermal and branch protection held"
+    },
+    "group_changes": [
+      {
+        "knob": "K-LIV-LOW",
+        "outputs_before": 5,
+        "outputs_after": 6,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 1,
+        "amplifiers_after": 2,
+        "W_envelope_after": 181.52,
+        "I_total_A_after": 7.563333,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 1.92,
+        "output_design_A": 2.4,
+        "status": "HOLD",
+        "reason": "Two modeled repeaters and six outputs remain; controller/repeater compatibility and branch protection are open.",
+        "psus_after": [
+          "P01"
+        ]
+      },
+      {
+        "knob": "K-DIN-LOW",
+        "outputs_before": 1,
+        "outputs_after": 2,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 0,
+        "W_envelope_after": 69.3,
+        "I_total_A_after": 2.89,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.07,
+        "output_design_A": 2.4,
+        "status": "OK"
+      },
+      {
+        "knob": "K-MBR-LOW",
+        "outputs_before": 3,
+        "outputs_after": 4,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 1,
+        "W_envelope_after": 110.2,
+        "I_total_A_after": 4.59,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.18,
+        "output_design_A": 2.4,
+        "status": "OK"
+      },
+      {
+        "knob": "K-CBR-LOW",
+        "outputs_before": 2,
+        "outputs_after": 3,
+        "knob_outputs_available": 3,
+        "amplifiers_before": 0,
+        "amplifiers_after": 0,
+        "W_envelope_after": 105.0,
+        "I_total_A_after": 4.38,
+        "max_in_A": 12.5,
+        "I_max_output_A_after": 2.07,
+        "output_design_A": 2.4,
+        "status": "OK"
+      }
+    ],
+    "supply_changes": [
+      {
+        "psu": "P01",
+        "circuits": [
+          "C03",
+          "C04",
+          "C05",
+          "X-CURT-LIV"
+        ],
+        "W_envelope_before": 161.92,
+        "W_envelope_after": 181.52,
+        "nameplate_before_W": 480,
+        "nameplate_after_W": 480,
+        "pct_of_usable_after": 63.0,
+        "margin_to_usable_W": 106.48,
+        "nameplate_min_W_for_10pct_margin": null,
+        "changed": true,
+        "status": "HOLD_PRODUCT_THERMAL_INRUSH_BRANCH_PROTECTION",
+        "reference_only": "Mean Well HLG-480H-24"
+      },
+      {
+        "psu": "P07",
+        "circuits": [
+          "C12",
+          "X-CURT-DIN"
+        ],
+        "W_envelope_before": 49.7,
+        "W_envelope_after": 69.3,
+        "nameplate_before_W": 100,
+        "nameplate_after_W": 150,
+        "pct_of_usable_after": 77.0,
+        "margin_to_usable_W": 20.7,
+        "nameplate_min_W_for_10pct_margin": 128.3,
+        "changed": true
+      },
+      {
+        "psu": "P12",
+        "circuits": [
+          "C21",
+          "C22",
+          "C23",
+          "X-CURT-MBR-S"
+        ],
+        "W_envelope_before": 90.8,
+        "W_envelope_after": 110.2,
+        "nameplate_before_W": 200,
+        "nameplate_after_W": 240,
+        "pct_of_usable_after": 76.5,
+        "margin_to_usable_W": 33.8,
+        "nameplate_min_W_for_10pct_margin": 204.1,
+        "changed": true
+      },
+      {
+        "psu": "P16",
+        "circuits": [
+          "C38",
+          "C39",
+          "C40",
+          "X-CURT-CBR"
+        ],
+        "W_envelope_before": 108.6,
+        "W_envelope_after": 121.0,
+        "nameplate_before_W": 240,
+        "nameplate_after_W": 240,
+        "pct_of_usable_after": 84.0,
+        "margin_to_usable_W": 23.0,
+        "nameplate_min_W_for_10pct_margin": 224.1,
+        "changed": true
+      }
+    ],
+    "voltage_drop_changes": [
+      {
+        "circuit": "C03",
+        "section": "A",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "C03",
+        "section": "B",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "C12",
+        "section": "all",
+        "psu": "P07",
+        "board": "SB-02",
+        "new_section": false,
+        "branch_m": 3.67,
+        "feed_psu_to_board_m": 3.52,
+        "feed_shared_I_A": 2.89,
+        "dV_pct_before": 1.6,
+        "dV_pct_after": 1.9,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C21",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 4.12,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 2.0,
+        "dV_pct_after": 2.2,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C22",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 5.23,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 1.8,
+        "dV_pct_after": 2.0,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C23",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": false,
+        "branch_m": 6.46,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": 1.3,
+        "dV_pct_after": 1.5,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 0.75,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C38",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 5.55,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 2.7,
+        "dV_pct_after": 2.9,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C39",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 3.65,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 3.1,
+        "dV_pct_after": 3.3,
+        "status_before": "MARGINAL",
+        "status_after": "MARGINAL",
+        "min_mm2_for_target_after": 2.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C40",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": false,
+        "branch_m": 5.43,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": 3.3,
+        "dV_pct_after": 3.6,
+        "status_before": "MARGINAL",
+        "status_after": "MARGINAL",
+        "min_mm2_for_target_after": 2.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-LIV",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": true,
+        "branch_m": 6.45,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": null,
+        "dV_pct_after": null,
+        "status_before": null,
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous split-feed result invalid for selected single supply."
+      },
+      {
+        "circuit": "X-CURT-DIN",
+        "section": "all",
+        "psu": "P07",
+        "board": "SB-02",
+        "new_section": true,
+        "branch_m": 7.14,
+        "feed_psu_to_board_m": 3.52,
+        "feed_shared_I_A": 2.89,
+        "dV_pct_before": null,
+        "dV_pct_after": 1.7,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-MBR-S",
+        "section": "all",
+        "psu": "P12",
+        "board": "SB-05",
+        "new_section": true,
+        "branch_m": 6.28,
+        "feed_psu_to_board_m": 2.53,
+        "feed_shared_I_A": 4.59,
+        "dV_pct_before": null,
+        "dV_pct_after": 1.8,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-CBR",
+        "section": "all",
+        "psu": "P16",
+        "board": "SB-08",
+        "new_section": true,
+        "branch_m": 7.45,
+        "feed_psu_to_board_m": 4.6,
+        "feed_shared_I_A": 5.05,
+        "dV_pct_before": null,
+        "dV_pct_after": 2.9,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C04",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 4.89,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 0.8,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous P03 feed no longer applies; selected single-supply route is unverified."
+      },
+      {
+        "circuit": "C05",
+        "section": "2 parallel outputs",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 7.16,
+        "feed_psu_to_board_m": null,
+        "feed_shared_I_A": null,
+        "dV_pct_before": 1.5,
+        "dV_pct_after": null,
+        "status_before": "OK",
+        "status_after": "HOLD",
+        "min_mm2_for_target_after": null,
+        "cable_mm2_assumed": null,
+        "hold_reason": "Previous P03 feed no longer applies; selected single-supply route is unverified."
+      }
+    ],
+    "controls_source_sha256": "fe0e6e536772f341960cf26a69c8859543e30610f070ec518e15600e03747cb1",
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "previous_base_totals_before_one_supply_selection": {
+      "knobs": 21,
+      "knob_outputs": 34,
+      "amplifiers": 1,
+      "psus": 13,
+      "psu_nameplate_total_W": 1760,
+      "psu_over_usable": [],
+      "vd_worst_pct": 3.3,
+      "vd_status": {
+        "OK": 31,
+        "MARGINAL": 2
+      }
+    },
+    "base_ledger_revision": "The homeowner-selected P01 topology changes the base electrical ledger; all 104 photometric fittings and positions remain unchanged. Actual pocket dimensions and circuit implementation remain held.",
+    "previous_S1_totals_before_one_supply_selection": {
+      "knobs": 21,
+      "knob_outputs": 38,
+      "amplifiers": 3,
+      "psus": 13,
+      "psu_nameplate_total_W": 1890,
+      "psu_over_usable": [],
+      "vd_worst_pct": 3.6,
+      "vd_status": {
+        "OK": 35,
+        "MARGINAL": 2
+      },
+      "fittings_including_selected_strips": 108,
+      "circuits_including_selected_strips": 51,
+      "base_photometric_fittings": 104,
+      "additional_selected_strips": 4,
+      "additional_circuits": 4,
+      "selected_strip_length_m": 8.88,
+      "selected_strip_load_W": 71.04,
+      "photometry_credit_for_selected_strips": false
+    },
+    "selected_one_supply_source_sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+    "retired_supply_ids": [
+      "P03"
+    ],
+    "historical_split_living_voltage_drop": [
+      {
+        "circuit": "C03",
+        "section": "A",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 4.66,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": 2.2,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "C03",
+        "section": "B",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": false,
+        "branch_m": 3.54,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 4.66,
+        "dV_pct_before": 1.9,
+        "dV_pct_after": 2.2,
+        "status_before": "OK",
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.5,
+        "cable_mm2_assumed": 1.5
+      },
+      {
+        "circuit": "X-CURT-LIV",
+        "section": "all",
+        "psu": "P01",
+        "board": "SB-01",
+        "new_section": true,
+        "branch_m": 6.45,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 4.66,
+        "dV_pct_before": null,
+        "dV_pct_after": 2.0,
+        "status_before": null,
+        "status_after": "OK",
+        "min_mm2_for_target_after": 1.0,
+        "cable_mm2_assumed": 1.5
+      }
+    ],
+    "inrush_and_branch_protection": {
+      "status": "HOLD",
+      "LT-4": "Previous inrush and breaker screen INVALID after P01 selection; grouping tentative.",
+      "LT-5": "Previous inrush and breaker screen INVALID after P03 removal.",
+      "reference_inrush_conflict": "HLG-480H datasheet lists maximum 2 B16 or 3 C16 units at 230 V; the previously retained Mean Well installation-table lookup has 1 B16 or 2 C16. These are inconsistent; obtain manufacturer guidance for the exact breaker, supply and mixture rather than treating either screen as an approval.",
+      "branch_protection": "OPEN; 20 A supply reference exceeds the T1-K candidate 12.5 A input nameplate and all branch ratings must be checked",
+      "exact_chain_proven": false
+    }
+  },
+  "historic_split_living_voltage_drop": {
+    "status": "INVALID_FOR_SELECTED_ONE_SUPPLY",
+    "rows": [
+      {
+        "circuit": "C03",
+        "board": "SB-01",
+        "lane": "COVE",
+        "knob_group": "K-LIV-LOW",
+        "section": "A",
+        "psu": "P01",
+        "fed_via": "knob",
+        "W_nominal": 46.1,
+        "W_envelope": 46.1,
+        "branch_m": 3.54,
+        "longest_strip_run_m": 5.76,
+        "I_envelope_A": 1.92,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 3.84,
+        "cable_mm2_assumed": 1.5,
+        "dV_feed_V": 0.28,
+        "dV_branch_V": 0.18,
+        "dV_pct": 1.9,
+        "status": "OK",
+        "min_mm2_for_target": 1.0,
+        "strip_feed_note": "run 5.76 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+      },
+      {
+        "circuit": "C03",
+        "board": "SB-01",
+        "lane": "COVE",
+        "knob_group": "K-LIV-LOW",
+        "section": "B",
+        "psu": "P01",
+        "fed_via": "knob",
+        "W_nominal": 46.1,
+        "W_envelope": 46.1,
+        "branch_m": 3.54,
+        "longest_strip_run_m": 5.76,
+        "I_envelope_A": 1.92,
+        "feed_psu_to_board_m": 2.8,
+        "feed_shared_I_A": 3.84,
+        "cable_mm2_assumed": 1.5,
+        "dV_feed_V": 0.28,
+        "dV_branch_V": 0.18,
+        "dV_pct": 1.9,
+        "status": "OK",
+        "min_mm2_for_target": 1.0,
+        "strip_feed_note": "run 5.76 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed"
+      },
+      {
+        "circuit": "C04",
+        "board": "SB-01",
+        "lane": "MOOD",
+        "knob_group": "K-LIV-LOW",
+        "section": "all",
+        "psu": "P03",
+        "fed_via": "knob",
+        "W_nominal": 10.1,
+        "W_envelope": 10.1,
+        "branch_m": 4.89,
+        "longest_strip_run_m": 1.68,
+        "I_envelope_A": 0.42,
+        "feed_psu_to_board_m": 3.05,
+        "feed_shared_I_A": 1.66,
+        "cable_mm2_assumed": 1.5,
+        "dV_feed_V": 0.13,
+        "dV_branch_V": 0.05,
+        "dV_pct": 0.8,
+        "status": "OK",
+        "min_mm2_for_target": 0.75,
+        "strip_feed_note": ""
+      },
+      {
+        "circuit": "C05",
+        "board": "SB-01",
+        "lane": "LINE",
+        "knob_group": "K-LIV-LOW",
+        "section": "2 parallel outputs",
+        "psu": "P03",
+        "fed_via": "knob",
+        "W_nominal": 29.8,
+        "W_envelope": 29.8,
+        "branch_m": 7.16,
+        "longest_strip_run_m": 3.38,
+        "I_envelope_A": 1.24,
+        "feed_psu_to_board_m": 3.05,
+        "feed_shared_I_A": 1.66,
+        "cable_mm2_assumed": 1.5,
+        "dV_feed_V": 0.13,
+        "dV_branch_V": 0.23,
+        "dV_pct": 1.5,
+        "status": "OK",
+        "min_mm2_for_target": 1.0,
+        "strip_feed_note": ""
+      }
+    ]
+  },
+  "inrush_and_branch_protection": {
+    "status": "HOLD",
+    "LT-4": "Previous inrush and breaker screen INVALID after P01 selection; grouping tentative.",
+    "LT-5": "Previous inrush and breaker screen INVALID after P03 removal.",
+    "reference_inrush_conflict": "HLG-480H datasheet lists maximum 2 B16 or 3 C16 units at 230 V; the previously retained Mean Well installation-table lookup has 1 B16 or 2 C16. These are inconsistent; obtain manufacturer guidance for the exact breaker, supply and mixture rather than treating either screen as an approval.",
+    "branch_protection": "OPEN; 20 A supply reference exceeds the T1-K candidate 12.5 A input nameplate and all branch ratings must be checked",
+    "exact_chain_proven": false
+  }
+}

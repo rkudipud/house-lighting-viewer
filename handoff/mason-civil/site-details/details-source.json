@@ -1,0 +1,48 @@
+{
+  "source_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "construction_release": false,
+  "sheets": [
+    {
+      "id": "C01-ceiling-section",
+      "title": "Ceiling, cove and curtain section",
+      "file": "C01-ceiling-section.svg",
+      "sha256": "8dfbd5064b621efa66229603e1cdc1815f9cbb2cdbfaa6a78ccf3e3e0015bac7"
+    },
+    {
+      "id": "C02-openings-stair",
+      "title": "Opening register and stair site survey",
+      "file": "C02-openings-stair.svg",
+      "sha256": "baae1a72e0417b4d79e24631af1c063532429d7b52260bf1d17735be0661d3ed"
+    },
+    {
+      "id": "C03-pooja-lofts",
+      "title": "Pooja front, loft and wardrobe coordination",
+      "file": "C03-pooja-lofts.svg",
+      "sha256": "e015f51966aeaff6ba069bda202428a5b2175313d4841a54135ebd534e19718e"
+    },
+    {
+      "id": "C04-site-checklist",
+      "title": "Per-floor site and professional checklist",
+      "file": "C04-site-checklist.svg",
+      "sha256": "7b9cd73b64b08384232d6bfa7049016cad651542a006a0fa5d89ec8fe4861136"
+    }
+  ],
+  "selected_strips": [
+    "CURT-LIV",
+    "CURT-DIN",
+    "CURT-MBR-S",
+    "CURT-CBR"
+  ],
+  "strip_return_model_holds": [
+    {
+      "id": "CURT-MBR-S",
+      "excess_beyond_model_room_m": 0.3,
+      "status": "assumed_model_clash_not_site_measurement"
+    },
+    {
+      "id": "CURT-CBR",
+      "excess_beyond_model_room_m": 0.3,
+      "status": "assumed_model_clash_not_site_measurement"
+    }
+  ]
+}

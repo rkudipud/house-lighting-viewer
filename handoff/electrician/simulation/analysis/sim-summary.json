@@ -1,0 +1,3244 @@
+{
+ "schema": "lighting.simulation.summary/1",
+ "status": "EXPLORATORY - generic provisional photometry; not product-specific, not measured, not a release",
+ "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+ "params": {
+  "ab": 8,
+  "ad": 512,
+  "lw": 1e-05,
+  "other": "-dj 0.7 -ds 0.02 -dt 0 -dc 1 -st 0 -ss 0 -I+ -V+"
+ },
+ "engine": {
+  "name": "Radiance rcontrib 6.0a (pyradiance wheel bundle)",
+  "rcontrib_sha256": "0b4eb0e99603fae39ea06932709139a5a91dd35f3bad0600fa9971c81fe3881b",
+  "oconv_sha256": "be6d77e96ca9733b30a3daa5f75e7352d92dbb899736fbd83ca524d137b15f17",
+  "cosm_cal_sha256": "20096de3e942178b4b8518c6718c868473c21552ff55517ae4901432a473ae72"
+ },
+ "variant": "base",
+ "V": {
+  "rho": {
+   "ceiling": 0.8,
+   "wall": 0.55,
+   "floor": 0.25,
+   "furniture": 0.4,
+   "pocket": 0.8
+  },
+  "pocket_w": 0.15,
+  "lip": 0.05,
+  "slot_w": 0.1,
+  "slot_d": 0.1,
+  "kit_slot": "side",
+  "beam_delta": 0.0,
+  "ceil_delta": 0.0,
+  "kit_extend": false
+ },
+ "assumptions": {
+  "photometry": "GENERIC: point fittings = cos^m intensity, m = ln0.5/ln(cos(beam/2)) (min 0.6), catalogue lumens taken as luminaire output; strips = Lambertian 10 mm emitters at catalogue lm/m. No IES/LDT, no product LOR, no cut-off/baffle optics.",
+  "maintenance_factor": 0.8,
+  "analytic_CAL_0.85_not_applied": "the analytic model multiplies direct light by an empirical 0.85; the simulation does not",
+  "surfaces": "diffuse (Radiance plastic, no specularity); reflectances per variant (paint/tile LRV unselected); floor gloss not modelled",
+  "geometry": "lighting calculation polygons extruded (not surveyed masonry); LIV+DIN one open-plan enclosure; doors/windows/curtains not modelled (walls everywhere); unfurnished except kitchen counters/wall cabinets and the CBR desk shelf",
+  "tray_cove": "tray recess at tray_h inside the tray path; cove pocket = band slab (12 mm) + lip + outer upstand; strip on the pocket floor facing up at pocket_w/2 outside the tray edge (pocket width and lip unmeasured)",
+  "kitchen_slot": "flat ceiling with a shadow slot slot_w x slot_d outside the cove path; strip on the slot inner face aimed outward (variant: down-facing); slot size unmeasured",
+  "wall_cabinets": "kitchen wall cabinets 1.45-2.20 m over cabinets_occlusion_ft boxes; base counters 0-0.90 m on the counter rule",
+  "back_strips": "TV backlight (BACK without mount height) = 0.8 m tall Lambertian panel at 0.8-1.6 m facing the nearer wall",
+  "pooja": "canonical niche (0.6096 x 1.7018 m, sill 0.4318 m, depth 0.381 m HOLD) cut into the LIV x = 2.25 ft wall; the inherited LIV-P1 strip record lies outside that cavity and is reported, not simulated",
+  "curtain_strips": "excluded (no lux credit, unmeasured pockets)"
+ },
+ "engine_benchmarks": {
+  "A1_point_source_max_rel_err": 0.003719327830234209,
+  "A2_cosm_disc_max_rel_err": 0.0003433184513367271,
+  "A2b_jitter_single_pass_max_rel_err": 0.03449356875792464,
+  "A2b_jitter_mean8_max_rel_err": 0.005596270859909769,
+  "A3_lambertian_strip_rel_err": 0.0005044271238607845,
+  "A4_cube_ab2": {
+   "sim": 1.3807401992535189,
+   "expected_truncated": 1.3707783890401888,
+   "expected_infinite": 1.8277045187202516
+  },
+  "A4_cube_ab5": {
+   "sim": 1.7716331192535184,
+   "expected_truncated": 1.7705887525102437,
+   "expected_infinite": 1.8277045187202516
+  },
+  "A4_cube_ab8": {
+   "sim": 1.8248336292535186,
+   "expected_truncated": 1.8205650479440008,
+   "expected_infinite": 1.8277045187202516
+  },
+  "reused_from": "analysis/sim-summary.json of the previous full check run (Radiance not re-run)"
+ },
+ "sampling_convergence": {
+  "reference": "runs/smoke3 (ab 8 ad 1024 lw 1e-6)",
+  "test": "runs/smoke4 (ab 8 ad 128 lw 1e-5)",
+  "per_fixture": {
+   "KIT-H1": {
+    "mean_ad1024": 36.39,
+    "mean_ad128": 36.4,
+    "mean_diff_pct": 0.04,
+    "point_rms_pct": 2.7
+   },
+   "KIT-H2": {
+    "mean_ad1024": 30.69,
+    "mean_ad128": 30.71,
+    "mean_diff_pct": 0.05,
+    "point_rms_pct": 6.4
+   },
+   "KIT-H3": {
+    "mean_ad1024": 40.18,
+    "mean_ad128": 40.19,
+    "mean_diff_pct": 0.02,
+    "point_rms_pct": 1.8
+   },
+   "KIT-H4": {
+    "mean_ad1024": 41.85,
+    "mean_ad128": 41.87,
+    "mean_diff_pct": 0.06,
+    "point_rms_pct": 1.9
+   },
+   "KIT-H5": {
+    "mean_ad1024": 32.0,
+    "mean_ad128": 32.01,
+    "mean_diff_pct": 0.03,
+    "point_rms_pct": 1.0
+   },
+   "KIT-H6": {
+    "mean_ad1024": 33.58,
+    "mean_ad128": 33.58,
+    "mean_diff_pct": -0.0,
+    "point_rms_pct": 0.8
+   },
+   "KIT-H7": {
+    "mean_ad1024": 27.3,
+    "mean_ad128": 27.4,
+    "mean_diff_pct": 0.36,
+    "point_rms_pct": 9.9
+   },
+   "KIT-H8": {
+    "mean_ad1024": 24.85,
+    "mean_ad128": 24.74,
+    "mean_diff_pct": -0.44,
+    "point_rms_pct": 8.7
+   },
+   "KIT-T1": {
+    "mean_ad1024": 53.28,
+    "mean_ad128": 53.45,
+    "mean_diff_pct": 0.31,
+    "point_rms_pct": 6.6
+   },
+   "KIT-T2": {
+    "mean_ad1024": 29.25,
+    "mean_ad128": 29.28,
+    "mean_diff_pct": 0.09,
+    "point_rms_pct": 6.0
+   },
+   "KIT-T3": {
+    "mean_ad1024": 26.72,
+    "mean_ad128": 26.69,
+    "mean_diff_pct": -0.09,
+    "point_rms_pct": 5.9
+   },
+   "KIT-L1": {
+    "mean_ad1024": 87.93,
+    "mean_ad128": 84.17,
+    "mean_diff_pct": -4.28,
+    "point_rms_pct": 50.6
+   },
+   "KIT-T4": {
+    "mean_ad1024": 21.35,
+    "mean_ad128": 21.34,
+    "mean_diff_pct": -0.04,
+    "point_rms_pct": 3.4
+   }
+  },
+  "note": "direct-dominated fittings converge within 1 %; the fully indirect kitchen slot cove is the noisiest term (~5 % mean, ~50 % per point at ad 128); base run uses ad 512"
+ },
+ "structural": {
+  "fixtures_outside_enclosure": [
+   {
+    "fixture": "LIV-P1",
+    "enclosure": "HALL",
+    "n_outside": 2,
+    "example_ft": [
+     2.15,
+     37.45
+    ]
+   },
+   {
+    "fixture": "KIT-L1",
+    "enclosure": "KIT",
+    "n_outside": 8,
+    "example_ft": [
+     11.951,
+     15.451
+    ]
+   }
+  ]
+ },
+ "rooms": {
+  "LIV": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 159,
+     "min": 51,
+     "U0": 0.32,
+     "avg_room": 162
+    },
+    "LOW_100": {
+     "avg": 146,
+     "min": 65,
+     "U0": 0.45,
+     "avg_room": 128
+    },
+    "HIGH+LOW_100": {
+     "avg": 305,
+     "min": 142,
+     "U0": 0.47,
+     "avg_room": 291
+    },
+    "HIGH_100_incl_open_plan_neighbour": {
+     "avg": 176,
+     "min": 90,
+     "U0": 0.51,
+     "avg_room": 183
+    },
+    "LOW_100_incl_open_plan_neighbour": {
+     "avg": 187,
+     "min": 93,
+     "U0": 0.5,
+     "avg_room": 172
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 152,
+     "min": 66,
+     "U0": 0.43,
+     "avg_room": 158
+    },
+    "LOW_100": {
+     "avg": 120,
+     "min": 99,
+     "U0": 0.83,
+     "avg_room": 116
+    },
+    "HIGH+LOW_100": {
+     "avg": 272,
+     "min": 172,
+     "U0": 0.63,
+     "avg_room": 274
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 44,
+     "min": 38,
+     "U0": 0.86,
+     "avg_room": 43
+    },
+    "Relax": {
+     "avg": 112,
+     "min": 79,
+     "U0": 0.71,
+     "avg_room": 111
+    },
+    "Work": {
+     "avg": 183,
+     "min": 96,
+     "U0": 0.53,
+     "avg_room": 189
+    },
+    "Full": {
+     "avg": 289,
+     "min": 188,
+     "U0": 0.65,
+     "avg_room": 295
+    }
+   },
+   "sim_lanes_100": {
+    "ACCENT": {
+     "avg": 4,
+     "min": 1,
+     "U0": 0.15,
+     "avg_room": 8
+    },
+    "COVE": {
+     "avg": 86,
+     "min": 36,
+     "U0": 0.42,
+     "avg_room": 74
+    },
+    "HIGH": {
+     "avg": 159,
+     "min": 51,
+     "U0": 0.32,
+     "avg_room": 162
+    },
+    "LINE": {
+     "avg": 59,
+     "min": 29,
+     "U0": 0.49,
+     "avg_room": 54
+    },
+    "MOOD": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.12,
+     "avg_room": 0
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 52,
+     "min": 23,
+     "U0": 0.44,
+     "avg_room": 46
+    },
+    "Relax": {
+     "avg": 129,
+     "min": 64,
+     "U0": 0.5,
+     "avg_room": 120
+    },
+    "Work": {
+     "avg": 202,
+     "min": 82,
+     "U0": 0.4,
+     "avg_room": 199
+    },
+    "Full": {
+     "avg": 309,
+     "min": 144,
+     "U0": 0.46,
+     "avg_room": 298
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "MARGINAL",
+    "band": [
+     100,
+     200,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.05,
+    "LOW_100": 1.22,
+    "HIGH+LOW_100": 1.12
+   }
+  },
+  "DIN": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 159,
+     "min": 90,
+     "U0": 0.57,
+     "avg_room": 142
+    },
+    "LOW_100": {
+     "avg": 216,
+     "min": 81,
+     "U0": 0.38,
+     "avg_room": 167
+    },
+    "HIGH+LOW_100": {
+     "avg": 375,
+     "min": 186,
+     "U0": 0.5,
+     "avg_room": 309
+    },
+    "HIGH_100_incl_open_plan_neighbour": {
+     "avg": 182,
+     "min": 102,
+     "U0": 0.56,
+     "avg_room": 170
+    },
+    "LOW_100_incl_open_plan_neighbour": {
+     "avg": 261,
+     "min": 106,
+     "U0": 0.41,
+     "avg_room": 213
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 145,
+     "min": 89,
+     "U0": 0.61,
+     "avg_room": 131
+    },
+    "LOW_100": {
+     "avg": 199,
+     "min": 114,
+     "U0": 0.57,
+     "avg_room": 165
+    },
+    "HIGH+LOW_100": {
+     "avg": 344,
+     "min": 209,
+     "U0": 0.61,
+     "avg_room": 295
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 89,
+     "min": 45,
+     "U0": 0.51,
+     "avg_room": 71
+    },
+    "Relax": {
+     "avg": 148,
+     "min": 92,
+     "U0": 0.62,
+     "avg_room": 127
+    },
+    "Work": {
+     "avg": 173,
+     "min": 116,
+     "U0": 0.67,
+     "avg_room": 158
+    },
+    "Full": {
+     "avg": 381,
+     "min": 260,
+     "U0": 0.68,
+     "avg_room": 344
+    }
+   },
+   "sim_lanes_100": {
+    "ACCENT": {
+     "avg": 40,
+     "min": 10,
+     "U0": 0.26,
+     "avg_room": 48
+    },
+    "COVE": {
+     "avg": 59,
+     "min": 20,
+     "U0": 0.34,
+     "avg_room": 51
+    },
+    "HIGH": {
+     "avg": 159,
+     "min": 90,
+     "U0": 0.57,
+     "avg_room": 142
+    },
+    "LINE": {
+     "avg": 70,
+     "min": 38,
+     "U0": 0.55,
+     "avg_room": 61
+    },
+    "MOOD": {
+     "avg": 87,
+     "min": 7,
+     "U0": 0.08,
+     "avg_room": 56
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 97,
+     "min": 32,
+     "U0": 0.33,
+     "avg_room": 72
+    },
+    "Relax": {
+     "avg": 161,
+     "min": 77,
+     "U0": 0.48,
+     "avg_room": 131
+    },
+    "Work": {
+     "avg": 189,
+     "min": 106,
+     "U0": 0.56,
+     "avg_room": 167
+    },
+    "Full": {
+     "avg": 415,
+     "min": 233,
+     "U0": 0.56,
+     "avg_room": 357
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS",
+    "band": [
+     100,
+     200,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.1,
+    "LOW_100": 1.09,
+    "HIGH+LOW_100": 1.09
+   }
+  },
+  "KIT": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 309,
+     "min": 105,
+     "U0": 0.34,
+     "avg_room": 267
+    },
+    "LOW_100": {
+     "avg": 86,
+     "min": 25,
+     "U0": 0.29,
+     "avg_room": 79
+    },
+    "HIGH+LOW_100": {
+     "avg": 395,
+     "min": 173,
+     "U0": 0.44,
+     "avg_room": 346
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 267,
+     "min": 111,
+     "U0": 0.42,
+     "avg_room": 241
+    },
+    "LOW_100": {
+     "avg": 77,
+     "min": 77,
+     "U0": 1.0,
+     "avg_room": 77
+    },
+    "HIGH+LOW_100": {
+     "avg": 344,
+     "min": 188,
+     "U0": 0.55,
+     "avg_room": 318
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 31,
+     "min": 31,
+     "U0": 1.0,
+     "avg_room": 31
+    },
+    "Relax": {
+     "avg": 126,
+     "min": 80,
+     "U0": 0.63,
+     "avg_room": 119
+    },
+    "Work": {
+     "avg": 367,
+     "min": 177,
+     "U0": 0.48,
+     "avg_room": 371
+    },
+    "Full": {
+     "avg": 416,
+     "min": 220,
+     "U0": 0.53,
+     "avg_room": 425
+    }
+   },
+   "sim_lanes_100": {
+    "COVE": {
+     "avg": 86,
+     "min": 25,
+     "U0": 0.29,
+     "avg_room": 79
+    },
+    "HIGH": {
+     "avg": 309,
+     "min": 105,
+     "U0": 0.34,
+     "avg_room": 267
+    },
+    "TASK": {
+     "avg": 80,
+     "min": 19,
+     "U0": 0.24,
+     "avg_room": 130
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 34,
+     "min": 10,
+     "U0": 0.29,
+     "avg_room": 32
+    },
+    "Relax": {
+     "avg": 144,
+     "min": 67,
+     "U0": 0.46,
+     "avg_room": 128
+    },
+    "Work": {
+     "avg": 420,
+     "min": 161,
+     "U0": 0.38,
+     "avg_room": 417
+    },
+    "Full": {
+     "avg": 475,
+     "min": 197,
+     "U0": 0.42,
+     "avg_room": 476
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "MARGINAL",
+    "band": [
+     200,
+     300,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.16,
+    "LOW_100": 1.12,
+    "HIGH+LOW_100": 1.15
+   }
+  },
+  "MBR": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 186,
+     "min": 94,
+     "U0": 0.51,
+     "avg_room": 157
+    },
+    "LOW_100": {
+     "avg": 166,
+     "min": 84,
+     "U0": 0.5,
+     "avg_room": 145
+    },
+    "HIGH+LOW_100": {
+     "avg": 352,
+     "min": 189,
+     "U0": 0.54,
+     "avg_room": 303
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 164,
+     "min": 89,
+     "U0": 0.54,
+     "avg_room": 140
+    },
+    "LOW_100": {
+     "avg": 115,
+     "min": 84,
+     "U0": 0.73,
+     "avg_room": 106
+    },
+    "HIGH+LOW_100": {
+     "avg": 279,
+     "min": 177,
+     "U0": 0.64,
+     "avg_room": 246
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 40,
+     "min": 31,
+     "U0": 0.77,
+     "avg_room": 38
+    },
+    "Relax": {
+     "avg": 122,
+     "min": 76,
+     "U0": 0.62,
+     "avg_room": 110
+    },
+    "Work": {
+     "avg": 204,
+     "min": 113,
+     "U0": 0.55,
+     "avg_room": 179
+    },
+    "Full": {
+     "avg": 298,
+     "min": 180,
+     "U0": 0.61,
+     "avg_room": 265
+    }
+   },
+   "sim_lanes_100": {
+    "COVE": {
+     "avg": 68,
+     "min": 23,
+     "U0": 0.34,
+     "avg_room": 57
+    },
+    "HIGH": {
+     "avg": 186,
+     "min": 94,
+     "U0": 0.51,
+     "avg_room": 157
+    },
+    "LINE": {
+     "avg": 81,
+     "min": 42,
+     "U0": 0.52,
+     "avg_room": 71
+    },
+    "MOOD": {
+     "avg": 18,
+     "min": 6,
+     "U0": 0.31,
+     "avg_room": 17
+    },
+    "NIGHT": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.67,
+     "avg_room": 0
+    },
+    "READ": {
+     "avg": 20,
+     "min": 1,
+     "U0": 0.05,
+     "avg_room": 20
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 62,
+     "min": 31,
+     "U0": 0.51,
+     "avg_room": 54
+    },
+    "Relax": {
+     "avg": 158,
+     "min": 77,
+     "U0": 0.49,
+     "avg_room": 137
+    },
+    "Work": {
+     "avg": 240,
+     "min": 110,
+     "U0": 0.46,
+     "avg_room": 206
+    },
+    "Full": {
+     "avg": 372,
+     "min": 190,
+     "U0": 0.51,
+     "avg_room": 322
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS",
+    "band": [
+     100,
+     200,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.13,
+    "LOW_100": 1.44,
+    "HIGH+LOW_100": 1.26
+   }
+  },
+  "CBR": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 144,
+     "min": 83,
+     "U0": 0.58,
+     "avg_room": 123
+    },
+    "LOW_100": {
+     "avg": 186,
+     "min": 91,
+     "U0": 0.49,
+     "avg_room": 159
+    },
+    "HIGH+LOW_100": {
+     "avg": 330,
+     "min": 202,
+     "U0": 0.61,
+     "avg_room": 282
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 127,
+     "min": 78,
+     "U0": 0.61,
+     "avg_room": 111
+    },
+    "LOW_100": {
+     "avg": 142,
+     "min": 104,
+     "U0": 0.73,
+     "avg_room": 131
+    },
+    "HIGH+LOW_100": {
+     "avg": 270,
+     "min": 193,
+     "U0": 0.72,
+     "avg_room": 241
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 47,
+     "min": 36,
+     "U0": 0.76,
+     "avg_room": 44
+    },
+    "Relax": {
+     "avg": 128,
+     "min": 87,
+     "U0": 0.68,
+     "avg_room": 115
+    },
+    "Work": {
+     "avg": 208,
+     "min": 119,
+     "U0": 0.57,
+     "avg_room": 206
+    },
+    "Full": {
+     "avg": 328,
+     "min": 210,
+     "U0": 0.64,
+     "avg_room": 314
+    }
+   },
+   "sim_lanes_100": {
+    "COVE": {
+     "avg": 68,
+     "min": 21,
+     "U0": 0.31,
+     "avg_room": 57
+    },
+    "HIGH": {
+     "avg": 144,
+     "min": 83,
+     "U0": 0.58,
+     "avg_room": 123
+    },
+    "LINE": {
+     "avg": 118,
+     "min": 68,
+     "U0": 0.58,
+     "avg_room": 102
+    },
+    "READ": {
+     "avg": 25,
+     "min": 1,
+     "U0": 0.05,
+     "avg_room": 22
+    },
+    "STUDY": {
+     "avg": 37,
+     "min": 4,
+     "U0": 0.12,
+     "avg_room": 60
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 63,
+     "min": 30,
+     "U0": 0.47,
+     "avg_room": 53
+    },
+    "Relax": {
+     "avg": 158,
+     "min": 82,
+     "U0": 0.52,
+     "avg_room": 135
+    },
+    "Work": {
+     "avg": 240,
+     "min": 118,
+     "U0": 0.49,
+     "avg_room": 233
+    },
+    "Full": {
+     "avg": 391,
+     "min": 208,
+     "U0": 0.53,
+     "avg_room": 363
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS",
+    "band": [
+     120,
+     200,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.13,
+    "LOW_100": 1.31,
+    "HIGH+LOW_100": 1.22
+   }
+  },
+  "UTL": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 211,
+     "min": 175,
+     "U0": 0.83,
+     "avg_room": 189
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 132,
+     "min": 107,
+     "U0": 0.81,
+     "avg_room": 118
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.0,
+     "avg_room": 0
+    },
+    "Relax": {
+     "avg": 39,
+     "min": 32,
+     "U0": 0.81,
+     "avg_room": 35
+    },
+    "Work": {
+     "avg": 178,
+     "min": 114,
+     "U0": 0.64,
+     "avg_room": 166
+    },
+    "Full": {
+     "avg": 187,
+     "min": 115,
+     "U0": 0.62,
+     "avg_room": 175
+    }
+   },
+   "sim_lanes_100": {
+    "HIGH": {
+     "avg": 211,
+     "min": 175,
+     "U0": 0.83,
+     "avg_room": 189
+    },
+    "TASK": {
+     "avg": 78,
+     "min": 8,
+     "U0": 0.1,
+     "avg_room": 84
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.0,
+     "avg_room": 0
+    },
+    "Relax": {
+     "avg": 63,
+     "min": 52,
+     "U0": 0.83,
+     "avg_room": 57
+    },
+    "Work": {
+     "avg": 278,
+     "min": 181,
+     "U0": 0.65,
+     "avg_room": 260
+    },
+    "Full": {
+     "avg": 289,
+     "min": 182,
+     "U0": 0.63,
+     "avg_room": 272
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS (above band at 100 %; dim)",
+    "band": [
+     100,
+     200,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.6
+   }
+  },
+  "DRS": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 197,
+     "min": 190,
+     "U0": 0.96,
+     "avg_room": 171
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 157,
+     "min": 151,
+     "U0": 0.96,
+     "avg_room": 138
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.0,
+     "avg_room": 0
+    },
+    "Relax": {
+     "avg": 47,
+     "min": 45,
+     "U0": 0.96,
+     "avg_room": 41
+    },
+    "Work": {
+     "avg": 157,
+     "min": 151,
+     "U0": 0.96,
+     "avg_room": 138
+    },
+    "Full": {
+     "avg": 157,
+     "min": 151,
+     "U0": 0.96,
+     "avg_room": 138
+    }
+   },
+   "sim_lanes_100": {
+    "HIGH": {
+     "avg": 197,
+     "min": 190,
+     "U0": 0.96,
+     "avg_room": 171
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.0,
+     "avg_room": 0
+    },
+    "Relax": {
+     "avg": 59,
+     "min": 57,
+     "U0": 0.96,
+     "avg_room": 51
+    },
+    "Work": {
+     "avg": 197,
+     "min": 190,
+     "U0": 0.96,
+     "avg_room": 171
+    },
+    "Full": {
+     "avg": 197,
+     "min": 190,
+     "U0": 0.96,
+     "avg_room": 171
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS",
+    "band": [
+     150,
+     300,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.25
+   }
+  },
+  "LOB": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 264,
+     "min": 255,
+     "U0": 0.97,
+     "avg_room": 223
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 208,
+     "min": 202,
+     "U0": 0.97,
+     "avg_room": 177
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.0,
+     "avg_room": 0
+    },
+    "Relax": {
+     "avg": 63,
+     "min": 61,
+     "U0": 0.97,
+     "avg_room": 53
+    },
+    "Work": {
+     "avg": 265,
+     "min": 259,
+     "U0": 0.98,
+     "avg_room": 225
+    },
+    "Full": {
+     "avg": 265,
+     "min": 259,
+     "U0": 0.98,
+     "avg_room": 225
+    }
+   },
+   "sim_lanes_100": {
+    "HIGH": {
+     "avg": 264,
+     "min": 255,
+     "U0": 0.97,
+     "avg_room": 223
+    },
+    "MIRROR": {
+     "avg": 85,
+     "min": 80,
+     "U0": 0.94,
+     "avg_room": 68
+    },
+    "NIGHT": {
+     "avg": 1,
+     "min": 1,
+     "U0": 0.87,
+     "avg_room": 1
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 0,
+     "min": 0,
+     "U0": 0.0,
+     "avg_room": 0
+    },
+    "Relax": {
+     "avg": 79,
+     "min": 77,
+     "U0": 0.97,
+     "avg_room": 67
+    },
+    "Work": {
+     "avg": 349,
+     "min": 341,
+     "U0": 0.98,
+     "avg_room": 291
+    },
+    "Full": {
+     "avg": 349,
+     "min": 341,
+     "U0": 0.98,
+     "avg_room": 291
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS (above band at 100 %; dim)",
+    "band": [
+     100,
+     150,
+     0.4
+    ],
+    "analytic": "PASS (above band at 100 %; dim)"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.27
+   }
+  },
+  "TL1": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 257,
+     "min": 167,
+     "U0": 0.65,
+     "avg_room": 217
+    },
+    "LOW_100": {
+     "avg": 186,
+     "min": 144,
+     "U0": 0.77,
+     "avg_room": 204
+    },
+    "HIGH+LOW_100": {
+     "avg": 443,
+     "min": 311,
+     "U0": 0.7,
+     "avg_room": 421
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 228,
+     "min": 159,
+     "U0": 0.7,
+     "avg_room": 195
+    },
+    "LOW_100": {
+     "avg": 159,
+     "min": 159,
+     "U0": 1.0,
+     "avg_room": 159
+    },
+    "HIGH+LOW_100": {
+     "avg": 387,
+     "min": 319,
+     "U0": 0.82,
+     "avg_room": 355
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 46,
+     "min": 46,
+     "U0": 1.0,
+     "avg_room": 46
+    },
+    "Relax": {
+     "avg": 127,
+     "min": 106,
+     "U0": 0.84,
+     "avg_room": 117
+    },
+    "Work": {
+     "avg": 546,
+     "min": 466,
+     "U0": 0.85,
+     "avg_room": 504
+    },
+    "Full": {
+     "avg": 563,
+     "min": 483,
+     "U0": 0.86,
+     "avg_room": 521
+    }
+   },
+   "sim_lanes_100": {
+    "FACE": {
+     "avg": 37,
+     "min": 23,
+     "U0": 0.63,
+     "avg_room": 32
+    },
+    "HIGH": {
+     "avg": 257,
+     "min": 167,
+     "U0": 0.65,
+     "avg_room": 217
+    },
+    "MIRROR": {
+     "avg": 159,
+     "min": 37,
+     "U0": 0.23,
+     "avg_room": 150
+    },
+    "MOOD": {
+     "avg": 41,
+     "min": 18,
+     "U0": 0.45,
+     "avg_room": 70
+    },
+    "PERIM": {
+     "avg": 145,
+     "min": 123,
+     "U0": 0.85,
+     "avg_room": 134
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 61,
+     "min": 43,
+     "U0": 0.71,
+     "avg_room": 75
+    },
+    "Relax": {
+     "avg": 148,
+     "min": 104,
+     "U0": 0.7,
+     "avg_room": 147
+    },
+    "Work": {
+     "avg": 599,
+     "min": 502,
+     "U0": 0.84,
+     "avg_room": 532
+    },
+    "Full": {
+     "avg": 639,
+     "min": 553,
+     "U0": 0.86,
+     "avg_room": 602
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS (above band at 100 %; dim)",
+    "band": [
+     150,
+     250,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.13,
+    "LOW_100": 1.17,
+    "HIGH+LOW_100": 1.14
+   }
+  },
+  "TL2": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 257,
+     "min": 168,
+     "U0": 0.65,
+     "avg_room": 217
+    },
+    "LOW_100": {
+     "avg": 186,
+     "min": 152,
+     "U0": 0.82,
+     "avg_room": 204
+    },
+    "HIGH+LOW_100": {
+     "avg": 443,
+     "min": 320,
+     "U0": 0.72,
+     "avg_room": 421
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 228,
+     "min": 159,
+     "U0": 0.7,
+     "avg_room": 195
+    },
+    "LOW_100": {
+     "avg": 159,
+     "min": 159,
+     "U0": 1.0,
+     "avg_room": 159
+    },
+    "HIGH+LOW_100": {
+     "avg": 387,
+     "min": 319,
+     "U0": 0.82,
+     "avg_room": 355
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 46,
+     "min": 46,
+     "U0": 1.0,
+     "avg_room": 46
+    },
+    "Relax": {
+     "avg": 127,
+     "min": 106,
+     "U0": 0.84,
+     "avg_room": 117
+    },
+    "Work": {
+     "avg": 546,
+     "min": 466,
+     "U0": 0.85,
+     "avg_room": 504
+    },
+    "Full": {
+     "avg": 563,
+     "min": 483,
+     "U0": 0.86,
+     "avg_room": 521
+    }
+   },
+   "sim_lanes_100": {
+    "FACE": {
+     "avg": 37,
+     "min": 22,
+     "U0": 0.6,
+     "avg_room": 31
+    },
+    "HIGH": {
+     "avg": 257,
+     "min": 168,
+     "U0": 0.65,
+     "avg_room": 217
+    },
+    "MIRROR": {
+     "avg": 159,
+     "min": 37,
+     "U0": 0.23,
+     "avg_room": 150
+    },
+    "MOOD": {
+     "avg": 40,
+     "min": 20,
+     "U0": 0.49,
+     "avg_room": 70
+    },
+    "PERIM": {
+     "avg": 146,
+     "min": 122,
+     "U0": 0.84,
+     "avg_room": 134
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 61,
+     "min": 45,
+     "U0": 0.75,
+     "avg_room": 75
+    },
+    "Relax": {
+     "avg": 148,
+     "min": 107,
+     "U0": 0.72,
+     "avg_room": 147
+    },
+    "Work": {
+     "avg": 599,
+     "min": 501,
+     "U0": 0.84,
+     "avg_room": 532
+    },
+    "Full": {
+     "avg": 639,
+     "min": 556,
+     "U0": 0.87,
+     "avg_room": 602
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS (above band at 100 %; dim)",
+    "band": [
+     150,
+     250,
+     0.4
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.13,
+    "LOW_100": 1.17,
+    "HIGH+LOW_100": 1.14
+   }
+  },
+  "BAL": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 75,
+     "min": 49,
+     "U0": 0.65,
+     "avg_room": 64
+    },
+    "LOW_100": {
+     "avg": 54,
+     "min": 36,
+     "U0": 0.66,
+     "avg_room": 61
+    },
+    "HIGH+LOW_100": {
+     "avg": 130,
+     "min": 95,
+     "U0": 0.73,
+     "avg_room": 126
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 64,
+     "min": 43,
+     "U0": 0.67,
+     "avg_room": 55
+    },
+    "LOW_100": {
+     "avg": 40,
+     "min": 31,
+     "U0": 0.78,
+     "avg_room": 48
+    },
+    "HIGH+LOW_100": {
+     "avg": 104,
+     "min": 74,
+     "U0": 0.71,
+     "avg_room": 103
+    }
+   },
+   "analytic_scenes": {
+    "Mood": {
+     "avg": 24,
+     "min": 19,
+     "U0": 0.78,
+     "avg_room": 29
+    },
+    "Relax": {
+     "avg": 39,
+     "min": 29,
+     "U0": 0.73,
+     "avg_room": 41
+    },
+    "Work": {
+     "avg": 64,
+     "min": 43,
+     "U0": 0.67,
+     "avg_room": 55
+    },
+    "Full": {
+     "avg": 104,
+     "min": 74,
+     "U0": 0.71,
+     "avg_room": 103
+    }
+   },
+   "sim_lanes_100": {
+    "HIGH": {
+     "avg": 75,
+     "min": 49,
+     "U0": 0.65,
+     "avg_room": 64
+    },
+    "MOOD": {
+     "avg": 54,
+     "min": 36,
+     "U0": 0.66,
+     "avg_room": 61
+    }
+   },
+   "sim_scenes": {
+    "Mood": {
+     "avg": 33,
+     "min": 22,
+     "U0": 0.66,
+     "avg_room": 37
+    },
+    "Relax": {
+     "avg": 50,
+     "min": 37,
+     "U0": 0.74,
+     "avg_room": 50
+    },
+    "Work": {
+     "avg": 75,
+     "min": 49,
+     "U0": 0.65,
+     "avg_room": 64
+    },
+    "Full": {
+     "avg": 130,
+     "min": 95,
+     "U0": 0.73,
+     "avg_room": 126
+    }
+   },
+   "grade_HIGH_100": {
+    "sim": "PASS",
+    "band": [
+     30,
+     75,
+     0.25
+    ],
+    "analytic": "PASS"
+   },
+   "ratio_sim_over_analytic_avg": {
+    "HIGH_100": 1.17,
+    "LOW_100": 1.35,
+    "HIGH+LOW_100": 1.25
+   }
+  }
+ },
+ "tasks": {
+  "kitchen_worktop_HIGH+TASK_100": {
+   "sim": {
+    "avg": 647,
+    "min": 407,
+    "U0": 0.63,
+    "avg_room": 647,
+    "weakest_point_ft": [
+     2.41,
+     15.21
+    ],
+    "zones": {
+     "left run under wall cabinet (x<=4.3, z<=11.1)": {
+      "avg": 793,
+      "min": 537
+     },
+     "sink/window end, no wall cabinet (x<=4.3, z>11.1)": {
+      "avg": 529,
+      "min": 407
+     },
+     "top run incl. window section (z<=7.4, x>4.3)": {
+      "avg": 600,
+      "min": 438
+     }
+    }
+   },
+   "analytic": {
+    "avg": 513,
+    "min": 333,
+    "U0": 0.649,
+    "weakest_point_ft": [
+     2.41,
+     15.21
+    ],
+    "zones": {
+     "left run under wall cabinet (x<=4.3, z<=11.1)": {
+      "avg": 613,
+      "min": 419
+     },
+     "sink/window end, no wall cabinet (x<=4.3, z>11.1)": {
+      "avg": 424,
+      "min": 333
+     },
+     "top run incl. window section (z<=7.4, x>4.3)": {
+      "avg": 486,
+      "min": 365
+     }
+    }
+   },
+   "target": "500-750 lx avg, U0 >= 0.60 (EN 12464-1 / criteria pack)"
+  },
+  "kitchen_worktop_Work_scene": {
+   "sim": {
+    "avg": 631,
+    "min": 420,
+    "U0": 0.66,
+    "avg_room": 631
+   },
+   "analytic": {
+    "avg": 518,
+    "min": 338,
+    "U0": 0.651,
+    "weakest_point_ft": [
+     8.1,
+     5.25
+    ],
+    "zones": {
+     "left run under wall cabinet (x<=4.3, z<=11.1)": {
+      "avg": 594,
+      "min": 391
+     },
+     "sink/window end, no wall cabinet (x<=4.3, z>11.1)": {
+      "avg": 450,
+      "min": 357
+     },
+     "top run incl. window section (z<=7.4, x>4.3)": {
+      "avg": 496,
+      "min": 338
+     }
+    }
+   },
+   "levels": {
+    "HIGH": 1.0,
+    "COVE": 0.5,
+    "TASK": 0.85,
+    "MIRROR": 1.0,
+    "STUDY": 1.0,
+    "READ": 1.0,
+    "PERIM": 1.0,
+    "FACE": 1.0
+   }
+  },
+  "children_desk": {
+   "sim": {
+    "HIGH_100": {
+     "avg": 76,
+     "min": 24,
+     "U0": 0.31,
+     "avg_room": 76,
+     "max": 151
+    },
+    "STUDY_100": {
+     "avg": 691,
+     "min": 376,
+     "U0": 0.54,
+     "avg_room": 691,
+     "max": 899
+    },
+    "HIGH_STUDY_100": {
+     "avg": 767,
+     "min": 458,
+     "U0": 0.6,
+     "avg_room": 767,
+     "max": 986
+    }
+   },
+   "analytic": {
+    "HIGH_100": {
+     "avg": 82,
+     "min": 36,
+     "max": 135,
+     "U0": 0.45
+    },
+    "STUDY_100": {
+     "avg": 501,
+     "min": 290,
+     "max": 652,
+     "U0": 0.58
+    },
+    "HIGH_STUDY_100": {
+     "avg": 583,
+     "min": 355,
+     "max": 743,
+     "U0": 0.61
+    }
+   },
+   "target": "500-750 lx, U0>=0.6"
+  },
+  "pooja": {
+   "pooja:canonical_back:ACCENT_100": {
+    "avg": 12.1,
+    "min": 2.4,
+    "max": 55.3
+   },
+   "pooja:canonical_back:HIGH_100": {
+    "avg": 66.7,
+    "min": 24.6,
+    "max": 91.3
+   },
+   "pooja:canonical_back:COVE_100": {
+    "avg": 34.2,
+    "min": 10.0,
+    "max": 61.9
+   },
+   "pooja:canonical_opening:ACCENT_100": {
+    "avg": 24.4,
+    "min": 5.6,
+    "max": 106.9
+   },
+   "pooja:canonical_opening:HIGH_100": {
+    "avg": 115.5,
+    "min": 85.2,
+    "max": 199.2
+   },
+   "pooja:canonical_opening:COVE_100": {
+    "avg": 54.0,
+    "min": 28.0,
+    "max": 100.0
+   },
+   "points_lx_100": {
+    "canonical idol test point (0.10 m in front of niche back, h 1.1 m, centre)": {
+     "ACCENT": 29.3,
+     "HIGH": 89.9,
+     "COVE": 48.9,
+     "LINE": 40.7
+    },
+    "inherited idol point x 2.05 ft z 38.8 ft h 1.1 m (behind the wall face in canonical geometry)": {
+     "ACCENT": 0.0,
+     "HIGH": 0.0,
+     "COVE": 0.0,
+     "LINE": 0.0
+    },
+    "wall face at the inherited aim (z 38.8 ft, h 1.1 m)": {
+     "ACCENT": 118.8,
+     "HIGH": 99.1,
+     "COVE": 71.2,
+     "LINE": 54.8
+    },
+    "wall surround 0.30 m south of the canonical niche (h 1.1 m)": {
+     "ACCENT": 82.0,
+     "HIGH": 99.5,
+     "COVE": 61.9,
+     "LINE": 54.9
+    },
+    "wall surround 0.30 m north of the canonical niche (h 1.1 m)": {
+     "ACCENT": 5.9,
+     "HIGH": 94.4,
+     "COVE": 39.3,
+     "LINE": 43.1
+    }
+   },
+   "accent_ratio_canonical_idol_vs_surround": 0.2,
+   "finding": "LIV-P2 (as recorded) is aimed at the inherited idol point behind the wall face; its beam lands on the wall south of the canonical niche, so the canonical niche receives little accent light. Pooja accent remains HOLD until the niche is measured and the spot aim/strip are re-set.",
+   "analytic_status": "HOLD_PROVISIONAL_GEOMETRY"
+  },
+  "lobby_face_Ev": {
+   "sim": {
+    "HIGH+bar": {
+     "avg": 398,
+     "min": 396,
+     "max": 402
+    },
+    "HIGH_only": {
+     "avg": 89
+    }
+   },
+   "analytic": {
+    "face_Ev_HIGH+bar": {
+     "avg": 342,
+     "min": 338,
+     "max": 350
+    },
+    "face_Ev_HIGH_only": {
+     "avg": 59,
+     "min": 59,
+     "max": 60
+    },
+    "U0": 0.99,
+    "target": "300-500 lx, U0 0.6"
+   }
+  }
+ },
+ "sensitivity": {
+  "groups": {
+   "sens128-": {
+    "sampling": "ab 8 / ad 128",
+    "rooms": [
+     "MBR",
+     "CBR"
+    ],
+    "baseline_vs_base_run_pct": {
+     "KIT:HIGH_100": 0.05,
+     "KIT:LOW_100": 8.88,
+     "MBR:HIGH_100": -0.02,
+     "MBR:LOW_100": -0.64,
+     "CBR:HIGH_100": 0.01,
+     "CBR:LOW_100": -1.35
+    },
+    "superseded": {
+     "KIT:HIGH_100": 0.05,
+     "KIT:LOW_100": 8.88
+    }
+   },
+   "sens512kit-": {
+    "sampling": "ab 8 / ad 512",
+    "rooms": [
+     "KIT"
+    ],
+    "baseline_vs_base_run_pct": {
+     "KIT:HIGH_100": -0.03,
+     "KIT:LOW_100": 1.04
+    },
+    "superseded": {}
+   },
+   "sens128hall-": {
+    "sampling": "ab 8 / ad 128",
+    "rooms": [
+     "LIV",
+     "DIN"
+    ],
+    "baseline_vs_base_run_pct": {
+     "LIV:HIGH_100": -0.47,
+     "LIV:LOW_100": 0.96,
+     "DIN:HIGH_100": -0.0,
+     "DIN:LOW_100": -0.67
+    },
+    "superseded": {}
+   }
+  },
+  "beam_minus10": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-beam_minus10",
+    "HIGH_100": {
+     "avg_change_pct": 7.9,
+     "U0": [
+      0.51,
+      0.46
+     ],
+     "avg": [
+      186,
+      200
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -0.1,
+     "U0": [
+      0.46,
+      0.48
+     ],
+     "avg": [
+      165,
+      165
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-beam_minus10",
+    "HIGH_100": {
+     "avg_change_pct": 8.5,
+     "U0": [
+      0.58,
+      0.47
+     ],
+     "avg": [
+      144,
+      156
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -0.2,
+     "U0": [
+      0.51,
+      0.44
+     ],
+     "avg": [
+      183,
+      183
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      771
+     ],
+     "min": [
+      465,
+      461
+     ]
+    }
+   },
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-beam_minus10",
+    "HIGH_100": {
+     "avg_change_pct": 6.9,
+     "U0": [
+      0.34,
+      0.28
+     ],
+     "avg": [
+      309,
+      330
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -0.3,
+     "U0": [
+      0.4,
+      0.41
+     ],
+     "avg": [
+      87,
+      86
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      680
+     ],
+     "min": [
+      407,
+      436
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      86
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-beam_minus10",
+    "HIGH_100": {
+     "avg_change_pct": 0.6,
+     "U0": [
+      0.31,
+      0.22
+     ],
+     "avg": [
+      158,
+      159
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 0.0,
+     "U0": [
+      0.38,
+      0.34
+     ],
+     "avg": [
+      147,
+      147
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-beam_minus10",
+    "HIGH_100": {
+     "avg_change_pct": 8.3,
+     "U0": [
+      0.56,
+      0.5
+     ],
+     "avg": [
+      159,
+      172
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 2.5,
+     "U0": [
+      0.38,
+      0.34
+     ],
+     "avg": [
+      214,
+      219
+     ]
+    }
+   }
+  },
+  "beam_plus10": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-beam_plus10",
+    "HIGH_100": {
+     "avg_change_pct": -7.0,
+     "U0": [
+      0.51,
+      0.55
+     ],
+     "avg": [
+      186,
+      173
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 0.1,
+     "U0": [
+      0.46,
+      0.46
+     ],
+     "avg": [
+      165,
+      165
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-beam_plus10",
+    "HIGH_100": {
+     "avg_change_pct": -7.4,
+     "U0": [
+      0.58,
+      0.64
+     ],
+     "avg": [
+      144,
+      133
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -0.0,
+     "U0": [
+      0.51,
+      0.48
+     ],
+     "avg": [
+      183,
+      183
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      762
+     ],
+     "min": [
+      465,
+      472
+     ]
+    }
+   },
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-beam_plus10",
+    "HIGH_100": {
+     "avg_change_pct": -6.3,
+     "U0": [
+      0.34,
+      0.39
+     ],
+     "avg": [
+      309,
+      290
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 0.2,
+     "U0": [
+      0.4,
+      0.41
+     ],
+     "avg": [
+      87,
+      87
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      621
+     ],
+     "min": [
+      407,
+      373
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      87
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-beam_plus10",
+    "HIGH_100": {
+     "avg_change_pct": -1.6,
+     "U0": [
+      0.31,
+      0.38
+     ],
+     "avg": [
+      158,
+      156
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 0.6,
+     "U0": [
+      0.38,
+      0.34
+     ],
+     "avg": [
+      147,
+      148
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-beam_plus10",
+    "HIGH_100": {
+     "avg_change_pct": -7.5,
+     "U0": [
+      0.56,
+      0.62
+     ],
+     "avg": [
+      159,
+      147
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -1.3,
+     "U0": [
+      0.38,
+      0.36
+     ],
+     "avg": [
+      214,
+      211
+     ]
+    }
+   }
+  },
+  "ceil_minus0.1": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-ceil_minus0.1",
+    "HIGH_100": {
+     "avg_change_pct": 2.3,
+     "U0": [
+      0.51,
+      0.5
+     ],
+     "avg": [
+      186,
+      190
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 3.5,
+     "U0": [
+      0.46,
+      0.4
+     ],
+     "avg": [
+      165,
+      171
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-ceil_minus0.1",
+    "HIGH_100": {
+     "avg_change_pct": 2.4,
+     "U0": [
+      0.58,
+      0.55
+     ],
+     "avg": [
+      144,
+      148
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 3.2,
+     "U0": [
+      0.51,
+      0.47
+     ],
+     "avg": [
+      183,
+      189
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      771
+     ],
+     "min": [
+      465,
+      467
+     ]
+    }
+   },
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-ceil_minus0.1",
+    "HIGH_100": {
+     "avg_change_pct": 2.5,
+     "U0": [
+      0.34,
+      0.32
+     ],
+     "avg": [
+      309,
+      317
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 3.7,
+     "U0": [
+      0.4,
+      0.35
+     ],
+     "avg": [
+      87,
+      90
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      665
+     ],
+     "min": [
+      407,
+      433
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      90
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-ceil_minus0.1",
+    "HIGH_100": {
+     "avg_change_pct": 1.1,
+     "U0": [
+      0.31,
+      0.3
+     ],
+     "avg": [
+      158,
+      160
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 3.5,
+     "U0": [
+      0.38,
+      0.33
+     ],
+     "avg": [
+      147,
+      152
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-ceil_minus0.1",
+    "HIGH_100": {
+     "avg_change_pct": 2.8,
+     "U0": [
+      0.56,
+      0.56
+     ],
+     "avg": [
+      159,
+      163
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 3.3,
+     "U0": [
+      0.38,
+      0.32
+     ],
+     "avg": [
+      214,
+      221
+     ]
+    }
+   }
+  },
+  "ceil_plus0.1": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-ceil_plus0.1",
+    "HIGH_100": {
+     "avg_change_pct": -2.2,
+     "U0": [
+      0.51,
+      0.52
+     ],
+     "avg": [
+      186,
+      182
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -3.2,
+     "U0": [
+      0.46,
+      0.43
+     ],
+     "avg": [
+      165,
+      160
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-ceil_plus0.1",
+    "HIGH_100": {
+     "avg_change_pct": -2.4,
+     "U0": [
+      0.58,
+      0.6
+     ],
+     "avg": [
+      144,
+      141
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -3.6,
+     "U0": [
+      0.51,
+      0.47
+     ],
+     "avg": [
+      183,
+      177
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      763
+     ],
+     "min": [
+      465,
+      464
+     ]
+    }
+   },
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-ceil_plus0.1",
+    "HIGH_100": {
+     "avg_change_pct": -2.4,
+     "U0": [
+      0.34,
+      0.36
+     ],
+     "avg": [
+      309,
+      302
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -4.7,
+     "U0": [
+      0.4,
+      0.37
+     ],
+     "avg": [
+      87,
+      83
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      632
+     ],
+     "min": [
+      407,
+      388
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      83
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-ceil_plus0.1",
+    "HIGH_100": {
+     "avg_change_pct": -0.8,
+     "U0": [
+      0.31,
+      0.32
+     ],
+     "avg": [
+      158,
+      157
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -3.1,
+     "U0": [
+      0.38,
+      0.34
+     ],
+     "avg": [
+      147,
+      143
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-ceil_plus0.1",
+    "HIGH_100": {
+     "avg_change_pct": -2.8,
+     "U0": [
+      0.56,
+      0.59
+     ],
+     "avg": [
+      159,
+      155
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -2.2,
+     "U0": [
+      0.38,
+      0.36
+     ],
+     "avg": [
+      214,
+      209
+     ]
+    }
+   }
+  },
+  "pocket_narrow": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-pocket_narrow",
+    "HIGH_100": {
+     "avg_change_pct": 0.1,
+     "U0": [
+      0.51,
+      0.5
+     ],
+     "avg": [
+      186,
+      186
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -8.5,
+     "U0": [
+      0.46,
+      0.39
+     ],
+     "avg": [
+      165,
+      151
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-pocket_narrow",
+    "HIGH_100": {
+     "avg_change_pct": 0.0,
+     "U0": [
+      0.58,
+      0.58
+     ],
+     "avg": [
+      144,
+      144
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -7.9,
+     "U0": [
+      0.51,
+      0.46
+     ],
+     "avg": [
+      183,
+      169
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      767
+     ],
+     "min": [
+      465,
+      472
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-pocket_narrow",
+    "HIGH_100": {
+     "avg_change_pct": 0.1,
+     "U0": [
+      0.31,
+      0.32
+     ],
+     "avg": [
+      158,
+      159
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -11.1,
+     "U0": [
+      0.38,
+      0.32
+     ],
+     "avg": [
+      147,
+      131
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-pocket_narrow",
+    "HIGH_100": {
+     "avg_change_pct": 0.0,
+     "U0": [
+      0.56,
+      0.57
+     ],
+     "avg": [
+      159,
+      159
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -3.8,
+     "U0": [
+      0.38,
+      0.35
+     ],
+     "avg": [
+      214,
+      206
+     ]
+    }
+   }
+  },
+  "pocket_wide": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-pocket_wide",
+    "HIGH_100": {
+     "avg_change_pct": -0.0,
+     "U0": [
+      0.51,
+      0.5
+     ],
+     "avg": [
+      186,
+      186
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -3.2,
+     "U0": [
+      0.46,
+      0.47
+     ],
+     "avg": [
+      165,
+      160
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-pocket_wide",
+    "HIGH_100": {
+     "avg_change_pct": -0.0,
+     "U0": [
+      0.58,
+      0.58
+     ],
+     "avg": [
+      144,
+      144
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -3.1,
+     "U0": [
+      0.51,
+      0.49
+     ],
+     "avg": [
+      183,
+      178
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      767
+     ],
+     "min": [
+      465,
+      467
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-pocket_wide",
+    "HIGH_100": {
+     "avg_change_pct": -0.1,
+     "U0": [
+      0.31,
+      0.31
+     ],
+     "avg": [
+      158,
+      158
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -5.3,
+     "U0": [
+      0.38,
+      0.36
+     ],
+     "avg": [
+      147,
+      139
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-pocket_wide",
+    "HIGH_100": {
+     "avg_change_pct": -0.0,
+     "U0": [
+      0.56,
+      0.56
+     ],
+     "avg": [
+      159,
+      159
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -2.9,
+     "U0": [
+      0.38,
+      0.38
+     ],
+     "avg": [
+      214,
+      208
+     ]
+    }
+   }
+  },
+  "rho_high": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-rho_high",
+    "HIGH_100": {
+     "avg_change_pct": 13.3,
+     "U0": [
+      0.51,
+      0.56
+     ],
+     "avg": [
+      186,
+      210
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 25.8,
+     "U0": [
+      0.46,
+      0.53
+     ],
+     "avg": [
+      165,
+      208
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-rho_high",
+    "HIGH_100": {
+     "avg_change_pct": 13.6,
+     "U0": [
+      0.58,
+      0.62
+     ],
+     "avg": [
+      144,
+      164
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 24.2,
+     "U0": [
+      0.51,
+      0.54
+     ],
+     "avg": [
+      183,
+      228
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      835
+     ],
+     "min": [
+      465,
+      518
+     ]
+    }
+   },
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-rho_high",
+    "HIGH_100": {
+     "avg_change_pct": 16.8,
+     "U0": [
+      0.34,
+      0.41
+     ],
+     "avg": [
+      309,
+      361
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 39.8,
+     "U0": [
+      0.4,
+      0.49
+     ],
+     "avg": [
+      87,
+      121
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      753
+     ],
+     "min": [
+      407,
+      500
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      121
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-rho_high",
+    "HIGH_100": {
+     "avg_change_pct": 17.2,
+     "U0": [
+      0.31,
+      0.38
+     ],
+     "avg": [
+      158,
+      186
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 23.0,
+     "U0": [
+      0.38,
+      0.43
+     ],
+     "avg": [
+      147,
+      181
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-rho_high",
+    "HIGH_100": {
+     "avg_change_pct": 11.3,
+     "U0": [
+      0.56,
+      0.61
+     ],
+     "avg": [
+      159,
+      177
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 13.8,
+     "U0": [
+      0.38,
+      0.41
+     ],
+     "avg": [
+      214,
+      244
+     ]
+    }
+   }
+  },
+  "rho_low": {
+   "MBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-rho_low",
+    "HIGH_100": {
+     "avg_change_pct": -8.3,
+     "U0": [
+      0.51,
+      0.47
+     ],
+     "avg": [
+      186,
+      170
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -22.1,
+     "U0": [
+      0.46,
+      0.38
+     ],
+     "avg": [
+      165,
+      129
+     ]
+    }
+   },
+   "CBR": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128-rho_low",
+    "HIGH_100": {
+     "avg_change_pct": -8.7,
+     "U0": [
+      0.58,
+      0.55
+     ],
+     "avg": [
+      144,
+      132
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -20.9,
+     "U0": [
+      0.51,
+      0.42
+     ],
+     "avg": [
+      183,
+      145
+     ]
+    },
+    "desk_HIGH+STUDY": {
+     "avg": [
+      767,
+      707
+     ],
+     "min": [
+      465,
+      430
+     ]
+    }
+   },
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-rho_low",
+    "HIGH_100": {
+     "avg_change_pct": -11.3,
+     "U0": [
+      0.34,
+      0.29
+     ],
+     "avg": [
+      309,
+      274
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -35.8,
+     "U0": [
+      0.4,
+      0.28
+     ],
+     "avg": [
+      87,
+      56
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      571
+     ],
+     "min": [
+      407,
+      343
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      56
+     ]
+    }
+   },
+   "LIV": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-rho_low",
+    "HIGH_100": {
+     "avg_change_pct": -12.3,
+     "U0": [
+      0.31,
+      0.24
+     ],
+     "avg": [
+      158,
+      139
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -22.1,
+     "U0": [
+      0.38,
+      0.35
+     ],
+     "avg": [
+      147,
+      115
+     ]
+    }
+   },
+   "DIN": {
+    "sampling": "ab 8 / ad 128",
+    "run": "sens128hall-rho_low",
+    "HIGH_100": {
+     "avg_change_pct": -8.2,
+     "U0": [
+      0.56,
+      0.53
+     ],
+     "avg": [
+      159,
+      146
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": -11.9,
+     "U0": [
+      0.38,
+      0.31
+     ],
+     "avg": [
+      214,
+      189
+     ]
+    }
+   }
+  },
+  "kit_extend": {
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-kit_extend",
+    "HIGH_100": {
+     "avg_change_pct": -1.1,
+     "U0": [
+      0.34,
+      0.34
+     ],
+     "avg": [
+      309,
+      306
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 11.6,
+     "U0": [
+      0.4,
+      0.43
+     ],
+     "avg": [
+      87,
+      97
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      641
+     ],
+     "min": [
+      407,
+      395
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      97
+     ]
+    }
+   }
+  },
+  "kit_slot_down": {
+   "KIT": {
+    "sampling": "ab 8 / ad 512",
+    "run": "sens512kit-kit_slot_down",
+    "HIGH_100": {
+     "avg_change_pct": 0.0,
+     "U0": [
+      0.34,
+      0.34
+     ],
+     "avg": [
+      309,
+      309
+     ]
+    },
+    "LOW_100": {
+     "avg_change_pct": 69.1,
+     "U0": [
+      0.4,
+      0.31
+     ],
+     "avg": [
+      87,
+      146
+     ]
+    },
+    "worktop_HIGH+TASK": {
+     "avg": [
+      647,
+      647
+     ],
+     "min": [
+      407,
+      410
+     ]
+    },
+    "COVE_100": {
+     "avg": [
+      87,
+      146
+     ]
+    }
+   }
+  },
+  "lumens_plus_minus_20pct": "linear: every value x0.8 / x1.2 (no rerun needed)",
+  "MF_0.7_0.9": "linear: every value x0.875 / x1.125 relative to MF 0.8"
+ },
+ "skipped": {
+  "LIV-P1": "inherited pooja U-strip record (x 2.15 ft, z 37.45-40.15 ft, behind the x 2.25 ft wall face) lies outside the canonical niche cavity (z 39.93-41.93 ft); not physically placeable in this geometry - pooja lighting HELD"
+ },
+ "enclosure_info": {
+  "HALL": {
+   "rooms": [
+    "LIV",
+    "DIN"
+   ],
+   "ceil_m": 2.9591,
+   "tray_h_m": 3.1877,
+   "flat_slot": false,
+   "primitives": 2095,
+   "seconds": 3444.2
+  },
+  "KIT": {
+   "rooms": [
+    "KIT"
+   ],
+   "ceil_m": 2.9591,
+   "tray_h_m": 2.9591,
+   "flat_slot": true,
+   "primitives": 616,
+   "seconds": 644.2
+  },
+  "MBR": {
+   "rooms": [
+    "MBR"
+   ],
+   "ceil_m": 2.9591,
+   "tray_h_m": 3.1877,
+   "flat_slot": false,
+   "primitives": 727,
+   "seconds": 816.8
+  },
+  "CBR": {
+   "rooms": [
+    "CBR"
+   ],
+   "ceil_m": 2.9591,
+   "tray_h_m": 3.1877,
+   "flat_slot": false,
+   "primitives": 645,
+   "seconds": 721.0
+  },
+  "UTL": {
+   "rooms": [
+    "UTL"
+   ],
+   "ceil_m": 2.95,
+   "tray_h_m": null,
+   "flat_slot": false,
+   "primitives": 10,
+   "seconds": 55.3
+  },
+  "DRS": {
+   "rooms": [
+    "DRS"
+   ],
+   "ceil_m": 2.9591,
+   "tray_h_m": null,
+   "flat_slot": false,
+   "primitives": 8,
+   "seconds": 14.7
+  },
+  "LOB": {
+   "rooms": [
+    "LOB"
+   ],
+   "ceil_m": 2.7,
+   "tray_h_m": null,
+   "flat_slot": false,
+   "primitives": 10,
+   "seconds": 17.4
+  },
+  "TL1": {
+   "rooms": [
+    "TL1"
+   ],
+   "ceil_m": 2.4,
+   "tray_h_m": null,
+   "flat_slot": false,
+   "primitives": 18,
+   "seconds": 94.7
+  },
+  "TL2": {
+   "rooms": [
+    "TL2"
+   ],
+   "ceil_m": 2.4,
+   "tray_h_m": null,
+   "flat_slot": false,
+   "primitives": 18,
+   "seconds": 98.5
+  },
+  "BAL": {
+   "rooms": [
+    "BAL"
+   ],
+   "ceil_m": 2.7,
+   "tray_h_m": null,
+   "flat_slot": false,
+   "primitives": 13,
+   "seconds": 109.1
+  }
+ }
+}

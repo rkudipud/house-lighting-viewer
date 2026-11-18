@@ -1,0 +1,11 @@
+﻿circuit,control,model_W,fitting_count,Legrand_677304_screen,driver_input_VA_count_edge_and_compatibility,procurement_status
+C01,D-C01,40,5,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD
+C02,D-C02,40,5,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD
+C09,D-C09,30,3,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD
+C11,D-C11,12,1,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD
+C13,D-C13,26,4,NOT SCREENED - track maker must specify complete chain,UNVERIFIED,HOLD
+C14,D-C14,40,4,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD
+C15,D-C15,31,4,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD
+C18,D-C18,36,3,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD
+C20,D-C20,48,8,AT/NEAR LIMIT - not an approved match,UNVERIFIED,HOLD
+C37,D-C37,36,6,NOMINAL W/count only - not an approved match,UNVERIFIED,HOLD

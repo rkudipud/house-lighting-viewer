@@ -1,0 +1,36 @@
+{
+  "status": "public-browser-verification-evidence",
+  "constructionRelease": false,
+  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceManifest": "selected-source-file-hashes.json",
+  "sourceManifestSha256": "f9df0e9821e3a9dbc8a206a9ac19cd3c98fa7ad19c4fd6b11a7446be2fd63a54",
+  "sourceFiles": 2,
+  "omittedFiles": [],
+  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
+  "files": [
+    {
+      "path": "browser-verification-review.json",
+      "bytes": 158403,
+      "sha256": "e61fd4072f3ca93a6f7ea7ff79377c7ddf68c0c5867b7af887f7c2102c8edfbf",
+      "sourceSha256": "e61fd4072f3ca93a6f7ea7ff79377c7ddf68c0c5867b7af887f7c2102c8edfbf",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "verification-privacy-receipt.json",
+      "bytes": 944,
+      "sha256": "bfc665c3bad5311f1a72bfea0b70444cf7fc613ffa5535157d7cd99a79f9f7dc",
+      "sourceSha256": "bfc665c3bad5311f1a72bfea0b70444cf7fc613ffa5535157d7cd99a79f9f7dc",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "selected-source-file-hashes.json",
+      "bytes": 220,
+      "sha256": "f9df0e9821e3a9dbc8a206a9ac19cd3c98fa7ad19c4fd6b11a7446be2fd63a54",
+      "sourceSha256": "f9df0e9821e3a9dbc8a206a9ac19cd3c98fa7ad19c4fd6b11a7446be2fd63a54",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    }
+  ]
+}

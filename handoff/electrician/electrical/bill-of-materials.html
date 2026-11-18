@@ -1,0 +1,571 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Location-linked lighting bill of materials</title><style>
+@page { size: A4; }
+* { box-sizing: border-box; }
+html { color: #233138; background: #e8eceb; font-family: Arial, sans-serif; }
+body { margin: 0 auto; max-width: 1000px; background: white; padding: 48px; }
+main { font-size: 15px; line-height: 1.48; }
+h1 { font-size: 30px; line-height: 1.18; margin: 0 0 14px; }
+h2 { color: #1c4d51; font-size: 23px; margin: 30px 0 12px; border-top: 2px solid #87a7a4; padding-top: 12px; }
+h3 { font-size: 18px; margin: 20px 0 9px; }
+p { margin: 0 0 11px; }
+strong { color: #102e37; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13px; line-height: 1.36; }
+th { background: #e9f1ef; text-align: left; color: #173c43; }
+td, th { border: 1px solid #c7d3d2; padding: 6px 8px; vertical-align: top; }
+tbody tr:nth-child(even) { background: #f7f9f8; }
+img { display: block; max-width: 100%; height: auto; margin: 14px auto; }
+img.photo { max-height: 430px; object-fit: contain; }
+a { color: #245f69; overflow-wrap: anywhere; }
+code, pre { font-size: 12.5px; }
+pre { background: #f3f6f4; border: 1px solid #d5dedc; padding: 10px 12px; white-space: pre-wrap; }
+blockquote { border-left: 4px solid #b5522f; margin: 14px 0; padding: 8px 14px; background: #fbf1ec; }
+.toc { padding: 12px 18px; background: #f1f5f3; font-size: 13px; columns: 2; column-gap: 22px; }
+.toc ul { padding-left: 16px; margin: 0; }
+@media print {
+  html, body { background: white; max-width: none; padding: 0; margin: 0; }
+  main { font-size: 10.2pt; line-height: 1.34; }
+  h1 { font-size: 22pt; }
+  h2 { font-size: 15.5pt; margin-top: 0; padding-top: 6pt; break-before: page; }
+  h2#contents { break-before: auto; margin-top: 14pt; }
+  h3 { font-size: 12pt; margin-top: 12pt; }
+  h1, h2, h3 { break-after: avoid; }
+  p, li { widows: 3; orphans: 3; }
+  table { font-size: 8.9pt; line-height: 1.3; margin: 7pt 0 10pt; }
+  td, th { padding: 4pt 5pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  pre { font-size: 8.3pt; break-inside: avoid; }
+  img { width: 100%; max-height: 215mm; object-fit: contain; break-inside: avoid; margin: 9pt auto; }
+  img.photo { width: auto; height: 76mm; }
+  p:has(> img) { break-inside: avoid; }
+  a { color: #233138; text-decoration: none; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style></head><body><aside style="padding:1rem;border:2px solid #98610d">Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see repository-copy-receipt.json.</aside><main><h1 id="location-linked-lighting-bill-of-materials">Location-linked lighting bill of materials</h1>
+<p><strong>Master SHA-256:</strong> <code>b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</code>. These are <strong>modeled quantities for one flat</strong>, not purchase quantities or approved construction dimensions. Four floors are intended to repeat the scheme, but site geometry, returns, cuts, product lead lengths and wastage must be measured independently. No verified current installed quote exists.</p>
+<p>The complete <code>schedules/location-linked-bom.csv</code> lists <strong>108 fixture records</strong>, the separate profile allowances, <strong>12 24 V supply classes</strong>, <strong>31 wall controls</strong>, <strong>three modeled PWM repeaters</strong>, <strong>eight conceptual switch modules</strong>, and one 48 V track driver. It includes circuit/board, model specification, CCT, CRI/R9/IP targets and available indicative solver coordinates or strip paths. A supply, dimmer, switch, profile or repeater appears separately from its fixture; omit a separate profile where an approved integrated product already includes the required diffuser and heat-sinking. Do not treat these entries as certified matched products.</p>
+<p><strong>Cautions:</strong> P01's 480 W-class hatch location is unknown. Other positions are design placeholders, not field measurements. Strip lengths are installed-run model lengths, <strong>not</strong> reel or cut-order quantities. The four curtain strips are 8.88 m / 71.04 W combined, unmeasured and excluded from lux calculations. Prices, GST, delivery, labour, mounting hardware, spare stock, electrical cabling, connectors, boxes, DB/protection, accessories and waste need itemised quotes and professional survey.</p>
+<h2 id="fixture-groups-by-location">Fixture groups by location</h2>
+<p>Descriptions, individual modeled watts/lumens/beams, minimum CRI/R9, IP targets, CCT and design notes are in <code>schedules/fixture-class-specifications.csv</code> and <code>schedules/fixtures.csv</code>; a class is a search target, not a manufacturer SKU. The fixture IDs below point to their individual coordinates or paths in the location bill.</p>
+<table>
+<thead>
+<tr>
+<th>Room</th>
+<th>Class</th>
+<th>Qty</th>
+<th>Fixed CCT</th>
+<th>Strip m</th>
+<th>Fixture IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BAL</td>
+<td>CYLSV</td>
+<td>2</td>
+<td>3000K</td>
+<td>-</td>
+<td>BAL-H1, BAL-H2</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>PLINTH</td>
+<td>1</td>
+<td>2700K</td>
+<td>2.93</td>
+<td>BAL-L1</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>UPDNV</td>
+<td>2</td>
+<td>2700K</td>
+<td>-</td>
+<td>BAL-L2, BAL-L3</td>
+</tr>
+<tr>
+<td>CBR</td>
+<td>COVE_FW</td>
+<td>2</td>
+<td>2700K</td>
+<td>7.77</td>
+<td>CBR-L1, CURT-CBR</td>
+</tr>
+<tr>
+<td>CBR</td>
+<td>DL6</td>
+<td>6</td>
+<td>3000K</td>
+<td>-</td>
+<td>CBR-H1, CBR-H2, CBR-H3, CBR-H4, CBR-H5, CBR-H6</td>
+</tr>
+<tr>
+<td>CBR</td>
+<td>LIN</td>
+<td>4</td>
+<td>2700K</td>
+<td>5.36</td>
+<td>CBR-X1, CBR-X2, CBR-X3, CBR-X4</td>
+</tr>
+<tr>
+<td>CBR</td>
+<td>READ</td>
+<td>2</td>
+<td>3000K</td>
+<td>-</td>
+<td>CBR-R1, CBR-R2</td>
+</tr>
+<tr>
+<td>CBR</td>
+<td>TASK_HO</td>
+<td>1</td>
+<td>4000K</td>
+<td>1.14</td>
+<td>CBR-S1</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>COVE_FW</td>
+<td>2</td>
+<td>2700K</td>
+<td>8.66</td>
+<td>DIN-L2, CURT-DIN</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>DL10</td>
+<td>3</td>
+<td>3000K</td>
+<td>-</td>
+<td>DIN-H1, DIN-H2, DIN-H3</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>DL8V</td>
+<td>1</td>
+<td>3000K</td>
+<td>-</td>
+<td>DIN-H6</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>LIN</td>
+<td>1</td>
+<td>2700K</td>
+<td>3.37</td>
+<td>DIN-X1</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>PEND</td>
+<td>1</td>
+<td>2700K</td>
+<td>-</td>
+<td>DIN-L1</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>TRK6</td>
+<td>3</td>
+<td>3000K</td>
+<td>-</td>
+<td>FW-T1, FW-T2, FW-T3</td>
+</tr>
+<tr>
+<td>DIN</td>
+<td>TRKLIN</td>
+<td>1</td>
+<td>3000K</td>
+<td>-</td>
+<td>FW-T4</td>
+</tr>
+<tr>
+<td>DRS</td>
+<td>DL7V</td>
+<td>2</td>
+<td>4000K</td>
+<td>-</td>
+<td>DRS-H1, DRS-H2</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>COVE_FW</td>
+<td>1</td>
+<td>2700K</td>
+<td>8.82</td>
+<td>KIT-L1</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>DL10</td>
+<td>5</td>
+<td>4000K</td>
+<td>-</td>
+<td>KIT-H1, KIT-H2, KIT-H3, KIT-H4, KIT-H7</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>DL7</td>
+<td>3</td>
+<td>4000K</td>
+<td>-</td>
+<td>KIT-H5, KIT-H6, KIT-H8</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>LIN</td>
+<td>1</td>
+<td>4000K</td>
+<td>1.16</td>
+<td>KIT-T4</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>TASK</td>
+<td>2</td>
+<td>4000K</td>
+<td>1.16</td>
+<td>KIT-T2, KIT-T3</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>TASK_LO</td>
+<td>1</td>
+<td>4000K</td>
+<td>1.68</td>
+<td>KIT-T1</td>
+</tr>
+<tr>
+<td>LIV</td>
+<td>BACK</td>
+<td>2</td>
+<td>2700K</td>
+<td>5.3</td>
+<td>LIV-L2, LIV-P1</td>
+</tr>
+<tr>
+<td>LIV</td>
+<td>COVE_FW</td>
+<td>2</td>
+<td>2700K</td>
+<td>13.98</td>
+<td>LIV-L1, CURT-LIV</td>
+</tr>
+<tr>
+<td>LIV</td>
+<td>DL8</td>
+<td>7</td>
+<td>3000K</td>
+<td>-</td>
+<td>LIV-H1, LIV-H2, LIV-H3, LIV-H4, LIV-H5, LIV-H6, LIV-H7</td>
+</tr>
+<tr>
+<td>LIV</td>
+<td>DL8A</td>
+<td>3</td>
+<td>3000K</td>
+<td>-</td>
+<td>LIV-H8, LIV-H9, LIV-H10</td>
+</tr>
+<tr>
+<td>LIV</td>
+<td>LIN</td>
+<td>2</td>
+<td>2700K</td>
+<td>4.08</td>
+<td>LIV-X1, LIV-X2</td>
+</tr>
+<tr>
+<td>LIV</td>
+<td>PIN6V</td>
+<td>1</td>
+<td>2700K</td>
+<td>-</td>
+<td>LIV-P2</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>DL7V</td>
+<td>2</td>
+<td>3000K</td>
+<td>-</td>
+<td>LOB-H1, LOB-H2</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>FACE10V</td>
+<td>1</td>
+<td>4000K</td>
+<td>-</td>
+<td>LOB-F1</td>
+</tr>
+<tr>
+<td>LOB</td>
+<td>STEP</td>
+<td>1</td>
+<td>2700K</td>
+<td>-</td>
+<td>LOB-N1</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>BACK</td>
+<td>1</td>
+<td>2700K</td>
+<td>1.28</td>
+<td>MBR-L2</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>COVE_FW</td>
+<td>2</td>
+<td>2700K</td>
+<td>8.96</td>
+<td>MBR-L1, CURT-MBR-S</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>DL6</td>
+<td>8</td>
+<td>3000K</td>
+<td>-</td>
+<td>MBR-H1, MBR-H2, MBR-H3, MBR-H4, MBR-H5, MBR-H6, MBR-H7, MBR-H8</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>LIN</td>
+<td>2</td>
+<td>2700K</td>
+<td>3.86</td>
+<td>MBR-X1, MBR-X2</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>READ</td>
+<td>2</td>
+<td>3000K</td>
+<td>-</td>
+<td>MBR-R1, MBR-R2</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>STEP</td>
+<td>1</td>
+<td>2700K</td>
+<td>-</td>
+<td>MBR-N1</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>BCOVE</td>
+<td>1</td>
+<td>2700K</td>
+<td>6.64</td>
+<td>TL1-L1</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>BDIF9V</td>
+<td>3</td>
+<td>4000K</td>
+<td>-</td>
+<td>TL1-G1, TL1-G2, TL1-G3</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>BSPOT8V</td>
+<td>2</td>
+<td>4000K</td>
+<td>-</td>
+<td>TL1-M1, TL1-M2</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>FACEV</td>
+<td>2</td>
+<td>4000K</td>
+<td>-</td>
+<td>TL1-F1, TL1-F2</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>NICHE</td>
+<td>1</td>
+<td>2700K</td>
+<td>0.75</td>
+<td>TL1-L2</td>
+</tr>
+<tr>
+<td>TL1</td>
+<td>VANITY</td>
+<td>1</td>
+<td>2700K</td>
+<td>0.55</td>
+<td>TL1-L3</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>BCOVE</td>
+<td>1</td>
+<td>2700K</td>
+<td>6.64</td>
+<td>TL2-L1</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>BDIF9V</td>
+<td>3</td>
+<td>4000K</td>
+<td>-</td>
+<td>TL2-G1, TL2-G2, TL2-G3</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>BSPOT8V</td>
+<td>2</td>
+<td>4000K</td>
+<td>-</td>
+<td>TL2-M1, TL2-M2</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>FACEV</td>
+<td>2</td>
+<td>4000K</td>
+<td>-</td>
+<td>TL2-F1, TL2-F2</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>NICHE</td>
+<td>1</td>
+<td>2700K</td>
+<td>0.75</td>
+<td>TL2-L2</td>
+</tr>
+<tr>
+<td>TL2</td>
+<td>VANITY</td>
+<td>1</td>
+<td>2700K</td>
+<td>0.55</td>
+<td>TL2-L3</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>BULKD</td>
+<td>3</td>
+<td>4000K</td>
+<td>-</td>
+<td>UTL-H1, UTL-H2, UTL-H3</td>
+</tr>
+<tr>
+<td>UTL</td>
+<td>TASKW</td>
+<td>1</td>
+<td>4000K</td>
+<td>1.1</td>
+<td>UTL-T1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="switchboards-and-other-equipment">Switchboards and other equipment</h2>
+<table>
+<thead>
+<tr>
+<th>Board</th>
+<th>Knobs / mains dimmers</th>
+<th>On/off modules</th>
+<th>Integral fitting IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SB-01</td>
+<td>5 / 2</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-02</td>
+<td>2 / 3</td>
+<td>1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-03</td>
+<td>2 / 2</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-04</td>
+<td>1 / 1</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-05</td>
+<td>1 / 1</td>
+<td>1</td>
+<td>C24</td>
+</tr>
+<tr>
+<td>SB-05L</td>
+<td>0 / 0</td>
+<td>1</td>
+<td>C25</td>
+</tr>
+<tr>
+<td>SB-05R</td>
+<td>0 / 0</td>
+<td>1</td>
+<td>C26</td>
+</tr>
+<tr>
+<td>SB-06</td>
+<td>1 / 0</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-06B</td>
+<td>3 / 0</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-07</td>
+<td>1 / 0</td>
+<td>1</td>
+<td>C33</td>
+</tr>
+<tr>
+<td>SB-07B</td>
+<td>3 / 0</td>
+<td>0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-08</td>
+<td>2 / 1</td>
+<td>1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SB-08RL</td>
+<td>0 / 0</td>
+<td>1</td>
+<td>C41</td>
+</tr>
+<tr>
+<td>SB-08RR</td>
+<td>0 / 0</td>
+<td>1</td>
+<td>C41b</td>
+</tr>
+</tbody>
+</table>
+<p>Wall controls in the table are <strong>21 single-colour knobs and ten mains-dimmer groups</strong>. The six integral reader/PIR controls are inside fittings, not six more wall modules. Supplementary modules are conceptual two-way/intermediate switch points; exact plate layouts and back-box sizes remain open. Board and fixture placement requires site measurement.</p>
+<p>The supply, circuit and control mappings are in <code>supply-schedule.csv</code>, <code>circuit-schedule.csv</code> and <code>wall-control-schedule.csv</code>; P01 is one 480 W-class reference supply, P03 is removed, and the 48 V track driver is separate. All source/driver/dimmer/repeater compatibility, distribution protection, thermal checks, wet-zone suitability, C39/C40 and curtain-pocket holds remain open.</p>
+<p>For generic/imported or branded procurement search use <code>wholesale-rfq.md</code>; for exact manufacturer evidence use <code>source-index.md</code>. <strong>No product or construction approval is implied.</strong></p></main></body></html>

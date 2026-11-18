@@ -1,0 +1,13 @@
+﻿psu,circuits,nameplate_W,strip_load_W,planning_pct_of_0_60,status,reference
+P01,C03; C04; C05; X-CURT-LIV,480,181.52,63.0,"HOLD: location, branch protection, inrush and exact chain","HLG-480H-24 is an example, not a selected SKU"
+P04,C06A; C06B,60,27.7,76.9,"planning allowance only; product, temperature and protection unverified",
+P05,C07; C08,100,38.6,64.3,"planning allowance only; product, temperature and protection unverified",
+P06,C10,30,8.0,44.4,"planning allowance only; product, temperature and protection unverified",
+P07,C12; X-CURT-DIN,150,69.3,77.0,"planning allowance only; product, temperature and protection unverified",
+P08,C17,150,70.6,78.4,"planning allowance only; product, temperature and protection unverified",
+P10,C16,60,31.8,88.3,"planning allowance only; product, temperature and protection unverified",
+P11,C19,30,11.0,61.1,"planning allowance only; product, temperature and protection unverified",
+P12,C21; C22; C23; X-CURT-MBR-S,240,110.2,76.5,"planning allowance only; product, temperature and protection unverified",
+P14,C27; C28; C29A; C29B; C30A; C30B,200,106.1,88.4,"planning allowance only; product, temperature and protection unverified",
+P15,C31; C32; C34; C35A; C35B; C36A; C36B,240,116.1,80.6,"planning allowance only; product, temperature and protection unverified",
+P16,C38; C39; C40; X-CURT-CBR,240,121.0,84.0,"planning allowance only; product, temperature and protection unverified",

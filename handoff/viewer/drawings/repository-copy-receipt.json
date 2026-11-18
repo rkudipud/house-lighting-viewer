@@ -1,0 +1,340 @@
+{
+  "status": "privacy-safe-final-review-drawings",
+  "constructionRelease": false,
+  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceManifest": "drawing-public-privacy-receipt.json",
+  "sourceManifestSha256": "e06c734c60197573a5504ebefcb0c125de7cc9e1ceb49fadc00a68b1329e3c1b",
+  "sourceFiles": 40,
+  "omittedFiles": [],
+  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
+  "files": [
+    {
+      "path": "curtain-section/curtain-pocket-section-review.pdf",
+      "bytes": 71474,
+      "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
+      "sourceSha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "curtain-section/curtain-pocket-section-review.png",
+      "bytes": 426095,
+      "sha256": "8e4229530ab93885b2b8bfaac83b62fe83c384f802597fafa89fd053036d94c2",
+      "sourceSha256": "8e4229530ab93885b2b8bfaac83b62fe83c384f802597fafa89fd053036d94c2",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "curtain-section/curtain-pocket-section-review.svg",
+      "bytes": 9345,
+      "sha256": "5c979c4563d234739d689b6f03d9b5710d2958b7078b2b3fb6c1f6bbbfa6d0ea",
+      "sourceSha256": "5c979c4563d234739d689b6f03d9b5710d2958b7078b2b3fb6c1f6bbbfa6d0ea",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "curtain-section/curtain-section-verification.json",
+      "bytes": 1954,
+      "sha256": "4a90ed1c6eb8b45188c512ef39fec9f24b8c1a0f45ebde5db8c7c9fef805323e",
+      "sourceSha256": "4a90ed1c6eb8b45188c512ef39fec9f24b8c1a0f45ebde5db8c7c9fef805323e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "curtain-section/README.md",
+      "bytes": 471,
+      "sha256": "1754e4dc0e3aa475de93239b1530ed6075611062f3230c6e74da08539de2d340",
+      "sourceSha256": "1754e4dc0e3aa475de93239b1530ed6075611062f3230c6e74da08539de2d340",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/01-plan-furnished.png",
+      "bytes": 1149566,
+      "sha256": "993833149fc7c8efe8e618b0f544fd90adc043e503996213cdcd0b8be1122a9f",
+      "sourceSha256": "993833149fc7c8efe8e618b0f544fd90adc043e503996213cdcd0b8be1122a9f",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/01-plan-furnished.svg",
+      "bytes": 56913,
+      "sha256": "3452ab485d7cf5a402b53fb394f69aa65d579e4d2f55bde849c04c5ae45b8616",
+      "sourceSha256": "3452ab485d7cf5a402b53fb394f69aa65d579e4d2f55bde849c04c5ae45b8616",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/02-rcp.png",
+      "bytes": 1888671,
+      "sha256": "799ed5b0338af4f74b27c0fb49ff517e12d505caf5b73b47f3add34dd803a36d",
+      "sourceSha256": "799ed5b0338af4f74b27c0fb49ff517e12d505caf5b73b47f3add34dd803a36d",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/02-rcp.svg",
+      "bytes": 91415,
+      "sha256": "65758485b986e7943af281bb524faf08cca19ad5e7265088f592b703bab33c1f",
+      "sourceSha256": "65758485b986e7943af281bb524faf08cca19ad5e7265088f592b703bab33c1f",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/03-elev-R01-living.png",
+      "bytes": 1068711,
+      "sha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
+      "sourceSha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/03-elev-R01-living.svg",
+      "bytes": 58459,
+      "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
+      "sourceSha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/04-elev-R02-dining.png",
+      "bytes": 719231,
+      "sha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
+      "sourceSha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/04-elev-R02-dining.svg",
+      "bytes": 36369,
+      "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
+      "sourceSha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/05-elev-R03-kitchen.png",
+      "bytes": 842465,
+      "sha256": "7459c5f3e9a526c8665dd6994c5a0bc457d1cec29f64e472d18eff9f0b83ef1e",
+      "sourceSha256": "7459c5f3e9a526c8665dd6994c5a0bc457d1cec29f64e472d18eff9f0b83ef1e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/05-elev-R03-kitchen.svg",
+      "bytes": 47449,
+      "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
+      "sourceSha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/06-elev-R04-master.png",
+      "bytes": 832838,
+      "sha256": "94b2230f591a365efe83da51f37d93033667dc314a57cc9a6136cfcca0acb9c0",
+      "sourceSha256": "94b2230f591a365efe83da51f37d93033667dc314a57cc9a6136cfcca0acb9c0",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/06-elev-R04-master.svg",
+      "bytes": 43507,
+      "sha256": "7bf79310c91f6a7133ee3a16321578e5aa0b3a94b0840fa1f965df625e832309",
+      "sourceSha256": "7bf79310c91f6a7133ee3a16321578e5aa0b3a94b0840fa1f965df625e832309",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/07-elev-R04a-dressing.png",
+      "bytes": 651781,
+      "sha256": "db1bc1b846e2b0add9007e0f2b14307b6f08ac324cf847123d0466c1692fd331",
+      "sourceSha256": "db1bc1b846e2b0add9007e0f2b14307b6f08ac324cf847123d0466c1692fd331",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/07-elev-R04a-dressing.svg",
+      "bytes": 42017,
+      "sha256": "a638178863df93d3812895b920596f83f5c5e258aad367468c260defc840c66b",
+      "sourceSha256": "a638178863df93d3812895b920596f83f5c5e258aad367468c260defc840c66b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/08-elev-R05-children.png",
+      "bytes": 1010804,
+      "sha256": "c2f561ab07ea6f8f92adb84ed2cf425ebc69302adc4a5609f50f1afbc428accd",
+      "sourceSha256": "c2f561ab07ea6f8f92adb84ed2cf425ebc69302adc4a5609f50f1afbc428accd",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/08-elev-R05-children.svg",
+      "bytes": 61496,
+      "sha256": "d8f02b551adc330fe59da4acea87221fc2cf9241b4eb3863598322f6799e03fa",
+      "sourceSha256": "d8f02b551adc330fe59da4acea87221fc2cf9241b4eb3863598322f6799e03fa",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/09-elev-R06-TL1.png",
+      "bytes": 593698,
+      "sha256": "fb45e4f7d14334aff83cea80dc605b12a197a5476341f941a780aede86d9bda7",
+      "sourceSha256": "fb45e4f7d14334aff83cea80dc605b12a197a5476341f941a780aede86d9bda7",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/09-elev-R06-TL1.svg",
+      "bytes": 42195,
+      "sha256": "84060a662b8752dbcee187d1f0adc7fdbe8324ccaea9a7f02499146be577df84",
+      "sourceSha256": "84060a662b8752dbcee187d1f0adc7fdbe8324ccaea9a7f02499146be577df84",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/10-elev-R07-TL2.png",
+      "bytes": 596725,
+      "sha256": "b1d78fc8cea97d975dbecf9676d566ef9f5943d25505017ce3922c14d4c54315",
+      "sourceSha256": "b1d78fc8cea97d975dbecf9676d566ef9f5943d25505017ce3922c14d4c54315",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/10-elev-R07-TL2.svg",
+      "bytes": 42184,
+      "sha256": "7d3650c204fa049a1522baaec6496eba838b4975454cebab195983e315659c43",
+      "sourceSha256": "7d3650c204fa049a1522baaec6496eba838b4975454cebab195983e315659c43",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/11-elev-R08-utility.png",
+      "bytes": 833447,
+      "sha256": "d61ef0c5caaf8aefac91c477499c27b59e06cce6a22f1e65920e14fa51d43cf0",
+      "sourceSha256": "d61ef0c5caaf8aefac91c477499c27b59e06cce6a22f1e65920e14fa51d43cf0",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/11-elev-R08-utility.svg",
+      "bytes": 48705,
+      "sha256": "627d109d239a41a498da1a2416f8b5761699d1ea5ec78fffb14d06b482a895f8",
+      "sourceSha256": "627d109d239a41a498da1a2416f8b5761699d1ea5ec78fffb14d06b482a895f8",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/12-elev-R09-entry.png",
+      "bytes": 413294,
+      "sha256": "a38d873ece403259659f32333e102244568be8623d7eb5d68114e0649262d1c4",
+      "sourceSha256": "a38d873ece403259659f32333e102244568be8623d7eb5d68114e0649262d1c4",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/12-elev-R09-entry.svg",
+      "bytes": 18177,
+      "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
+      "sourceSha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/13-elev-R12-lobby.png",
+      "bytes": 428106,
+      "sha256": "1b38b2a02425ffbb1157b9d50b300d5f5453e3262127ae4b72cbd406e0381f9b",
+      "sourceSha256": "1b38b2a02425ffbb1157b9d50b300d5f5453e3262127ae4b72cbd406e0381f9b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/13-elev-R12-lobby.svg",
+      "bytes": 30637,
+      "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
+      "sourceSha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/current-layout-views.pdf",
+      "bytes": 6815041,
+      "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+      "sourceSha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/layout-views-verification.json",
+      "bytes": 47300,
+      "sha256": "37021261a3e09148e5053c1dcbd063c5279ce20f533cc7ba770a8e0740d72919",
+      "sourceSha256": "37021261a3e09148e5053c1dcbd063c5279ce20f533cc7ba770a8e0740d72919",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/README.md",
+      "bytes": 11349,
+      "sha256": "5895543248a610b386e61f46eae54fbe9c59a351dc4900d9f46f6c66fc14d7d1",
+      "sourceSha256": "5895543248a610b386e61f46eae54fbe9c59a351dc4900d9f46f6c66fc14d7d1",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "layout-views/sheets.json",
+      "bytes": 25257,
+      "sha256": "28b915bc8c506df1e51c06c3b3dc84d1725932962d3e6e2d2ac398c3eadca4e6",
+      "sourceSha256": "28b915bc8c506df1e51c06c3b3dc84d1725932962d3e6e2d2ac398c3eadca4e6",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "working-plan/floorplan-verification.json",
+      "bytes": 29085,
+      "sha256": "2cf820fa25599534bf90b52c9c19089c4412800a522572425618668c780c402b",
+      "sourceSha256": "2cf820fa25599534bf90b52c9c19089c4412800a522572425618668c780c402b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "working-plan/house-working-floorplan.pdf",
+      "bytes": 864756,
+      "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
+      "sourceSha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "working-plan/house-working-floorplan.png",
+      "bytes": 567298,
+      "sha256": "c070a1163a8fe51b7a2e80e915f6c66a7b6bea4ed528109dd25af00329e24475",
+      "sourceSha256": "c070a1163a8fe51b7a2e80e915f6c66a7b6bea4ed528109dd25af00329e24475",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "working-plan/house-working-floorplan.svg",
+      "bytes": 77331,
+      "sha256": "fdeb6af2d75b32ff001c0560bd8b4174571653d9f447bea1a8c6b7158f2c4e23",
+      "sourceSha256": "fdeb6af2d75b32ff001c0560bd8b4174571653d9f447bea1a8c6b7158f2c4e23",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "working-plan/README.md",
+      "bytes": 1024,
+      "sha256": "980911488a9e82d2259dfd4d001c26340dd91722cc64579d3c56596a953836cb",
+      "sourceSha256": "980911488a9e82d2259dfd4d001c26340dd91722cc64579d3c56596a953836cb",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "drawing-public-privacy-receipt.json",
+      "bytes": 10482,
+      "sha256": "e06c734c60197573a5504ebefcb0c125de7cc9e1ceb49fadc00a68b1329e3c1b",
+      "sourceSha256": "e06c734c60197573a5504ebefcb0c125de7cc9e1ceb49fadc00a68b1329e3c1b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "name": "Fixed-white switch, dimmer and wiring plan: receipt",
+  "date_hyderabad": "18 Nov 2026",
+  "status": "review candidate; curtain strips and S1 await homeowner sign-off; not for ordering or construction",
+  "construction_release": false,
+  "product_approval": false,
+  "exact_chain_proven": false,
+  "checks": {
+    "pass": 70,
+    "total": 70
+  },
+  "render": {
+    "mode": "draft",
+    "pages": 21,
+    "dali_mentions": 1,
+    "pending_markers": 0,
+    "overflow": [],
+    "out_of_bounds_text": [],
+    "near_empty_pages": [],
+    "page_errors": []
+  },
+  "inputs": {
+    "master_house_design_json": {
+      "path": "handoff/source-basis/house-design.json",
+      "sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
+      "edited": false
+    },
+    "plan_geometry_json": {
+      "path": "not-distributed/plan-geometry.json",
+      "sha256": "d33e22aeb85275bcc50ed488122040d69967361c69e5edc65b058aadb02f04d4"
+    },
+    "d7_fixed_white_pack": {
+      "path": "not-distributed/final-lighting-fixed-white",
+      "files_sha256": {
+        "README.md": "dba4d6250c642745b89cda0147dce8d0ebea2fbfd33b7cbc69475f88e145d709",
+        "board-devices.csv": "197413628c554fd02850408f4f9eea8e4c7158942d2f86ae7073732824341de2",
+        "bom.csv": "5488efd38b1463248d426d979e5cca4869a9d7a80a69b9e835be53a845c3ad08",
+        "bom.json": "2a9e76f8b45f3d9379fbb94e365f93b31e5f636c3e8de801bdd71c8f92c80cad",
+        "calc-results.json": "bdb789736ac942d5c8c4b1f0abc9d6ee61272bc083b71ef1824243e0477cfcf7",
+        "calculation-results.md": "b31b8d4229a7a732b0d6235bcc79fcfe2a328a2c6bec3a1f0f70b81ebabb0997",
+        "circuit-control-psu-ledger.json": "5c37255c374acb8647a67403255224d77331a46135f5cc9d06fbbeff709ae17e",
+        "circuit-ledger.csv": "1ac83ff9de6f0e6b2b6aadcfc89478435b9cd7534ccd2de6e03bab5407c9eb80",
+        "compliance.csv": "e6b243f7a7e9357348ef4db946982f47fbe39b66e49f9d5112b6d0b69f83d3c6",
+        "curtain-cove-audit.md": "4d228927fb890d56b191eb88c480e3cb5dff1cba5ce01be2873192cdf46dbcc1",
+        "curtain-pocket-candidate.csv": "efe51120f7a1d8a46c4bd6e690ff15322de67a3ded107e97b29b006a13756530",
+        "curtain-pocket-candidate.json": "1135224d612b4f6cb8fb8bac6bbb87ea3e53a1b29d6a973aa8ca63e670a269d7",
+        "electrical-checks.json": "df6019388caa7adc3cfff093497427e7e2f430c26ef7ae77227284536156bf86",
+        "fixed-cct-map.csv": "6420505e370bf9302ab9f251f8bcface41e11e6af48b3b124dfa2919d7dfb9b3",
+        "fixed-cct-map.json": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
+        "fixed-cost.json": "9997cfa66058f5daf084cf277df89e217d59e99c040f6511ca3ebf2830d8e388",
+        "fixed-receipt.json": "effb92fe61bf202d3a75e2432d4efccf0596f18b416a628ff9de9cf357e3d5cc",
+        "fixture-ledger.csv": "953734aba07ebfc32749cd1d3afd200e389f2ab527b88cf85fd328aa047c17c9",
+        "fixture-ledger.json": "d03b53b29bed4a3c2b66102659ed9385d66f807caeab949e32051084544cd0ab",
+        "floor-plan-final.png": "4196c999040eae73b3f1db3096e9816e99beefcd070b3b4cdfc73b160365938a",
+        "group-table.csv": "22b8791e601807a57f74675f572e68493db2f6dcb0351fc7f4c8589c8681ded1",
+        "heatmaps.json": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+        "hold-list.md": "b92bb30c89f8b43f5a3fed75dea75691b1aae5589092be2450f0ad7663a4cb57",
+        "lighting-design-inputs-fixed-white.json": "a96a3467f3ca9e7cb0b6e9e7aaafe93f1c8993ec43bd527d90c5d702ada92926",
+        "lighting-fixed-white-spec.md": "21c7754d0c39fc58c2b6e3c650fcc27b8b70826f97c57bde10867716eae948e7",
+        "lighting-fragment-fixed-white.json": "31b65875cb603a43d107c91a4a54bb8afffa3134cc1134dd1cf74dc66f42be1b",
+        "mains-dimmer-check.csv": "40b451aca429b22d7e40b47dfc9e159ebdbf504123a65b3bbd9f302045c008cc",
+        "psu-ledger.csv": "f34bf7841de827dabef75f3ff98bdf38d74a66743a87bd85cfa55b14f285e2a0",
+        "psu-loading.csv": "9e4a6b82f25977d1821adb8e33dfa2399227cfb0dc11a619f9dd34b886da0615",
+        "schemas.json": "fa6504a73fd5dab90cbbde4a57e58dff5c17aae2dff0d6d66733f8033432b47c",
+        "strip-reels.csv": "2c2eb4d801692b91c4d063025b39acfef321a507ea66846db5f04285912247e9",
+        "verification.json": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9",
+        "voltage-drop.csv": "e4e93a3e080d838ea60c4b2cf83d985e60705d12d7b5e29ad2b5bc971d35499f"
+      },
+      "design_inputs_canonical_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
+      "verification_summary": {
+        "PASS": 82
+      }
+    }
+  },
+  "outputs_sha256": {
+    "fixed-white-control-plan.html": "3f1edbc6644202fab920cc9a4ab182b82b756eab27ae7c7bccc89aa9b2a1fabe",
+    "fixed-white-control-plan.md": "80d09c7632b7f81aef4edd478be83a08e1a11927daf4655f7c338842ba20e7ae",
+    "fixed-white-control-plan.pdf": "044f56c1e658a9a959ada541a6ff98b4dabc63660103e16dbb6ce29d8fc747ef",
+    "homeowner-decision-summary.md": "3c3e5db8f3b76f1f4f3b2e1086ac22b658eb435ac7fcbe34cbd9fa384d26135c",
+    "render-receipt.json": "4f259034143434f947e0d39db6e52bcaecc085d15706916d49f925152d0b1bfb",
+    "assets/fw-chains.svg": "4873af313108a29d13fd9b457959ee907973c1d6aa2ecfc44f4f1f6b1f3697e4",
+    "assets/fw-curtain-pocket.svg": "54b05496226ad146dd749e6419bf5edb588b6c8d8f56dee8321d90b2588c3be6",
+    "assets/fw-plan.svg": "bbece2e74b1c8714663037ae666e0d5fa35662b7398ce5f939e88573ca7504c6",
+    "data/curtain-strips.csv": "d368bef0808e4691374381fed99331c272a9e8a39b1a79a10f09d8221187960a",
+    "data/fixed-white-control-plan.json": "fe0e6e536772f341960cf26a69c8859543e30610f070ec518e15600e03747cb1",
+    "data/knob-groups.csv": "ba1e408ff76813253f9c7873020c16ea81f65a8c106f15b5b95d268e88370911",
+    "data/lighting-circuits.csv": "521007ac114178fe2e803142d532f47b5e6f7185ea0c9bb1c512e8168bca0c84",
+    "data/supplies.csv": "b055422c081fad047d1370b0980e7d993f258350a3b6f18953f964e537ce4428",
+    "data/viewer-grouping.json": "bb6767372739e65b15f92dd451569a20fef0a838eb1b82c928259ae3d3deae7f",
+    "data/wall-controls.csv": "2f54bb1462fc1502b75abeda9c0945323859d6d5adf9ee9c8d003aeaf0632a6e",
+    "tools/fw_build.py": "0428bd155bf621940c7c908ff509679a5fded2afbf0679b2e82ba1448ae6c45b",
+    "tools/fw_doc.py": "75c86f9acc64733c84b8770a15e2ae3c764584a37bb4a68cfd4c3db8bc9dee5a",
+    "tools/fw_render.py": "2f3820f1c6a38b529293869e61d7ccd04aa0e98b0929e3ed6a06fb7c94f445b7"
+  },
+  "note": "All fitting, load, supply, voltage-drop and cost figures are consumed from the d7 pack; this plan groups and screens them and does not recalculate light levels. Curtain strips and S1 are conditional options awaiting homeowner sign-off, not master adoption. Supply size price steps are unverified (no usable Indian web listing on 18 Nov 2026)."
+}
