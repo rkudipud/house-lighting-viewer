@@ -1,0 +1,22 @@
+{
+  "product": "Hyderabad 2BHK light planner (review draft, not construction released)",
+  "masterSha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
+  "heatmapsSha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+  "fixtures": 104,
+  "circuits": 47,
+  "htmlSha256": "90a1b20c32d878cb72da77aec51fa57a7abf4124365b53b72b8709a0adeece43",
+  "htmlBytes": 2365389,
+  "downloads": [
+    {
+      "href": "downloads/layout-views-review-draft-e0bf1af2.pdf",
+      "bytes": 6519059,
+      "sha256": "fd8727516eeb1e3adb9aa55372c65a1da72d91fafd0f2f423023fe435e2dbc62"
+    },
+    {
+      "href": "downloads/working-floor-plan-review-draft-e0bf1af2.pdf",
+      "bytes": 826297,
+      "sha256": "80e83dcea376511d83474e8428adf60df78e89caf0f75855bf5be45b0f70a63c"
+    }
+  ],
+  "threeJs": "0.181.1 (bundled; no runtime network access)"
+}
