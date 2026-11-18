@@ -18,7 +18,13 @@
   "productRelease": false,
   "procurementRelease": false,
   "fabricationRelease": false,
-  "publicationAuthorized": false,
+  "publicationAuthorized": true,
+  "publicationScope": "Dated owner-decision addendum and review overlays only; no design or construction release.",
+  "decisionAddendum": {
+    "path": "handoff/decisions/2026-11-18-owner-selections.md",
+    "scope": "Six loft doors, three retained trays, matte-black handle finish; retain prior OPT-E matte-laminate material and master split only. Shutter mechanism, shade and complete interiors remain provisional.",
+    "modelAndHistoricalOutputsRegenerated": false
+  },
   "note": "Original master, public-copy and delivered hashes are distinct. Viewer/workbench maps remain frozen analytic estimates; the separate exploratory Radiance addendum is generic, provisional and not measured or product-specific. Manifest excludes itself.",
   "files": [
     {
@@ -79,8 +85,8 @@
     },
     {
       "path": "handoff/contractor/index.html",
-      "bytes": 6257,
-      "sha256": "6645d9012e8be326c285079ecc117e2b02d2836ab4b54b3b8f88e2d4f25d5c74",
+      "bytes": 7260,
+      "sha256": "91494c72a3306dcebde31406671b4fb033fbc5faebd4a47313ed2ab4d63bc196",
       "coverage": []
     },
     {
@@ -517,6 +523,82 @@
         "editable-sources"
       ],
       "sourceSha256": "5ad41f73424df69234cba7beb6a42c253f638b972f35055b60d4e23dc50dd0c3"
+    },
+    {
+      "path": "handoff/decisions/2026-11-18-decision-receipt.json",
+      "bytes": 3928,
+      "sha256": "da0b93523afa685c67d6ac39a66a601ca1d365f459e837919fffa97db67619f0",
+      "coverage": [
+        "editable-sources",
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/2026-11-18-owner-selections.md",
+      "bytes": 6051,
+      "sha256": "4125a8d3897644388c628bfa52a0e045427864135d2def5bd6a935420384c55f",
+      "coverage": [
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/2026-11-18-wardrobe-review.html",
+      "bytes": 4591,
+      "sha256": "4e2af52c0596c75a29d731137dbe2ca9ffe48cc99b0ac9b6ad792b7cc9881d3b",
+      "coverage": [
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/wardrobe-review/children-interiors-decision-review.png",
+      "bytes": 164615,
+      "sha256": "60f029ec35e1ccab39ac82f3e99a5077696ccb9cc758f1b228ed542fc8d69899",
+      "coverage": [
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/wardrobe-review/children-interiors-decision-review.svg",
+      "bytes": 11662,
+      "sha256": "0200eb591c01886512423a986abda7ed86785d6fa5b1c4b31f393bc44fc4656c",
+      "coverage": [
+        "editable-sources",
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/wardrobe-review/master-interiors-decision-review.png",
+      "bytes": 161895,
+      "sha256": "e0bbad74f02451d31c1de36dfb7a89d23476814b59feaff39aa3b33992e59a2c",
+      "coverage": [
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/wardrobe-review/master-interiors-decision-review.svg",
+      "bytes": 11419,
+      "sha256": "077042d4c773c4cf95f5205be67d6eb914efe7927c329680f08d22a5e25023e3",
+      "coverage": [
+        "editable-sources",
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/wardrobe-review/review-source-receipt.json",
+      "bytes": 2665,
+      "sha256": "c752f264a97a72031b1370a9c56904b4e11e5fa716591501ab384671af37a4c9",
+      "coverage": [
+        "editable-sources",
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/wardrobe-review/wardrobe-owner-review.pdf",
+      "bytes": 96786,
+      "sha256": "1b056ce1f4fa8e956d9a797d01285cde8b01006cec264be55043e9b0d4420f22",
+      "coverage": [
+        "owner-decision-addendum"
+      ]
     },
     {
       "path": "handoff/electrician/electrical/bill-of-materials-render.json",
@@ -3234,8 +3316,8 @@
     },
     {
       "path": "handoff/index.html",
-      "bytes": 8118,
-      "sha256": "e0bb1002358c9c6a511b16cdf9c1bb67ea1c26d394506a4157ef897cd35cdd03",
+      "bytes": 9071,
+      "sha256": "4a85338e8fa3a6764aae2f9a3aa9dfd2c04982304474256f7c329c2e531208ce",
       "coverage": []
     },
     {
@@ -3249,7 +3331,7 @@
     {
       "path": "handoff/local-artifact-verification.json",
       "bytes": 1131,
-      "sha256": "16fcf1e89742d1b897fe132e15c6a4a4828641cf1b50d9e34e110a8936127c4d",
+      "sha256": "adaa5b86e757b5fb6e2bc5885835e485ea4cd7bb79972f662d6a2a0a57195efd",
       "coverage": [
         "editable-sources"
       ]
@@ -5023,14 +5105,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 6546,
-      "sha256": "2ee0db2d0fbf788fb074b7d1511d7972d01e77398b2d36ee47487ef1df319e96",
+      "bytes": 7284,
+      "sha256": "2df7d0e68e48f77ba64db69dcbec1d6cfca90a607f84c0f4e1891564bd73fc72",
       "coverage": []
     },
     {
       "path": "scripts/build-handoff-manifest.py",
-      "bytes": 6171,
-      "sha256": "0677326d7f72124280844cc9044b6aa663909bf5efddd6b5b610fd731649bf85",
+      "bytes": 7045,
+      "sha256": "c1b9cd0e14090afa793d822ef0d054d01fe0e9891bf2b0613da1e3a38f1a7c1a",
       "coverage": [
         "editable-sources"
       ]
@@ -5076,6 +5158,14 @@
       ]
     },
     {
+      "path": "scripts/render-owner-decision-review.py",
+      "bytes": 8285,
+      "sha256": "0cdc4495e9a769c1c821cfc7d4c83bd132c8e41f104ceaaed7bdba0a0042fb6b",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
       "path": "scripts/render-simulation-evidence.py",
       "bytes": 13916,
       "sha256": "5cc12b3c8358d96d61c1b652b34a8a31bfdb83c345235df0d2db2cc6930bf530",
@@ -5093,8 +5183,8 @@
     },
     {
       "path": "scripts/verify-handoff.py",
-      "bytes": 6944,
-      "sha256": "c2600b4aec213f342ee155ce6d583e936b93ab8545f6185f97ea4b94fb56def0",
+      "bytes": 6976,
+      "sha256": "371c0421d82ce87b72afc2e2bf6cb517cc4a473ebc3f7afe781e0bcb1d4df4b8",
       "coverage": [
         "editable-sources"
       ]

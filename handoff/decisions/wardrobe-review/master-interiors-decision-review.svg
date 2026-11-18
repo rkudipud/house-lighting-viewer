@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1240" viewBox="0 0 1400 1240" role="img" aria-labelledby="decision-title"><title id="decision-title">Master: retain trays A3 + B3 - dated owner-choice overlay; not for fabrication</title><rect width="1400" height="1240" fill="white" /><style>text{font-family:Arial,sans-serif;fill:#172b39}</style><text x="50" y="36" font-size="24" font-weight="bold">OWNER DECISION REVIEW | 18 NOVEMBER 2026</text><text x="50" y="68" font-size="23">Master: retain trays A3 + B3</text><rect x="50" y="88" width="30" height="20" fill="#202020" id="matte-black-finish-swatch" /><text x="95" y="105" font-size="19">MATTE BLACK HANDLES: finish only; shape, position and product not approved</text><g transform="translate(0 125)"><rect width="1400" height="950" fill="white" />
+<style>text{font-family:Arial,sans-serif;fill:#172b39}</style>
+<text x="50.00" y="42.00" font-size="26" text-anchor="start" style="fill:#172b39;font-weight:bold">R04 | MASTER SPLIT WARDROBE | INTERIOR ELEVATION</text>
+<text x="50.00" y="72.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:normal">Widths are placeholders. Heights are FFL working targets; shelves and supports remain adjustable.</text>
+<line x1="50.00" y1="90.00" x2="1350.00" y2="90.00" stroke="#264d60" stroke-width="2" />
+<text x="50.00" y="920.00" font-size="17" text-anchor="start" style="fill:#a13e2c;font-weight:normal">PROVISIONAL INTERIORS | APPROXIMATE SIZES | NOT FOR FABRICATION</text>
+<text x="50.00" y="942.00" font-size="12" text-anchor="start" style="fill:#172b39;font-weight:normal">Master b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="50.00" y="895.00" font-size="12" text-anchor="start" style="fill:#172b39;font-weight:normal">Original interior-generation basis 2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228</text>
+<text x="75.00" y="125.00" font-size="16" text-anchor="start" style="fill:#172b39;font-weight:bold">Reference frontage 3,810 mm (12 ft 6 in); section sizes below are not cut sizes.</text>
+<rect x="75.00" y="181.40" width="1250.00" height="161.50" fill="#fbf7fb" stroke="#a172a5" stroke-width="2" stroke-dasharray="7 5" />
+<text x="700.00" y="262.15" font-size="16" text-anchor="middle" style="fill:#6f5276;font-weight:normal">LOFT: HEIGHT / DEPTH / SUPPORT UNMEASURED</text>
+<rect x="75.00" y="348.00" width="475.20" height="357.00" fill="#f7fbfa" stroke="#264d60" stroke-width="2" />
+<line x1="78.00" y1="382.00" x2="230.40" y2="382.00" stroke="#537d7c" stroke-width="2" />
+<line x1="83.00" y1="407.50" x2="225.40" y2="407.50" stroke="#a46e35" stroke-width="2" />
+<text x="154.20" y="441.50" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:bold">LONG</text>
+<text x="154.20" y="458.50" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:normal">HANG</text>
+<text x="154.20" y="727.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:bold">A1</text>
+<text x="154.20" y="746.00" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">459 clear</text>
+<line x1="233.40" y1="348.00" x2="233.40" y2="705.00" stroke="#264d60" stroke-width="2" />
+<line x1="236.40" y1="382.00" x2="388.80" y2="382.00" stroke="#537d7c" stroke-width="2" />
+<line x1="241.40" y1="399.00" x2="383.80" y2="399.00" stroke="#a46e35" stroke-width="2" />
+<line x1="241.40" y1="543.50" x2="383.80" y2="543.50" stroke="#a46e35" stroke-width="2" />
+<text x="312.60" y="450.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:bold">SHORT</text>
+<text x="312.60" y="467.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:normal">HANG x2</text>
+<text x="312.60" y="727.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:bold">A2</text>
+<text x="312.60" y="746.00" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">459 clear</text>
+<line x1="391.80" y1="348.00" x2="391.80" y2="705.00" stroke="#264d60" stroke-width="2" />
+<line x1="394.80" y1="526.50" x2="547.20" y2="526.50" stroke="#537d7c" stroke-width="2" />
+<line x1="394.80" y1="467.00" x2="547.20" y2="467.00" stroke="#537d7c" stroke-width="2" />
+<line x1="394.80" y1="424.50" x2="547.20" y2="424.50" stroke="#537d7c" stroke-width="2" />
+<line x1="394.80" y1="382.00" x2="547.20" y2="382.00" stroke="#537d7c" stroke-width="2" />
+<rect x="395.80" y="623.40" width="150.40" height="30.60" fill="#e6eef1" stroke="#264d60" stroke-width="2" />
+<text x="471.00" y="642.70" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">LOCKED DRAWER</text>
+<rect x="395.80" y="592.80" width="150.40" height="30.60" fill="#e6eef1" stroke="#264d60" stroke-width="2" />
+<text x="471.00" y="612.10" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">DRAWER</text>
+<rect x="395.80" y="565.60" width="150.40" height="20.40" fill="#fff2d6" stroke="#264d60" stroke-width="2" />
+<text x="471.00" y="579.80" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal" font-weight="bold" id="retained-tray-A3">RETAIN TRAY</text>
+<text x="471.00" y="399.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:bold">FOLDED</text>
+<text x="471.00" y="416.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:normal">CLOTHES</text>
+<text x="471.00" y="727.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:bold">A3</text>
+<text x="471.00" y="746.00" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">459 clear</text>
+<rect x="75.00" y="688.00" width="475.20" height="17.00" fill="#dce3e3" stroke="#264d60" stroke-width="2" />
+<rect x="550.20" y="348.00" width="299.61" height="357.00" fill="#f2f8ff" stroke="#6f9aad" stroke-width="2" stroke-dasharray="7 5" />
+<text x="700.00" y="518.00" font-size="18" text-anchor="middle" style="fill:#172b39;font-weight:normal">W03 BAY</text>
+<text x="700.00" y="538.40" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:normal">HEAD / SILL UNKNOWN</text>
+<rect x="849.80" y="348.00" width="475.20" height="357.00" fill="#f7fbfa" stroke="#264d60" stroke-width="2" />
+<line x1="852.80" y1="382.00" x2="1005.20" y2="382.00" stroke="#537d7c" stroke-width="2" />
+<line x1="857.80" y1="407.50" x2="1000.20" y2="407.50" stroke="#a46e35" stroke-width="2" />
+<text x="929.00" y="441.50" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:bold">LONG</text>
+<text x="929.00" y="458.50" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:normal">HANG</text>
+<text x="929.00" y="727.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:bold">B1</text>
+<text x="929.00" y="746.00" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">459 clear</text>
+<line x1="1008.20" y1="348.00" x2="1008.20" y2="705.00" stroke="#264d60" stroke-width="2" />
+<line x1="1011.20" y1="382.00" x2="1163.60" y2="382.00" stroke="#537d7c" stroke-width="2" />
+<line x1="1016.20" y1="399.00" x2="1158.60" y2="399.00" stroke="#a46e35" stroke-width="2" />
+<line x1="1016.20" y1="543.50" x2="1158.60" y2="543.50" stroke="#a46e35" stroke-width="2" />
+<text x="1087.40" y="450.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:bold">SHORT</text>
+<text x="1087.40" y="467.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:normal">HANG x2</text>
+<text x="1087.40" y="727.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:bold">B2</text>
+<text x="1087.40" y="746.00" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">459 clear</text>
+<line x1="1166.60" y1="348.00" x2="1166.60" y2="705.00" stroke="#264d60" stroke-width="2" />
+<line x1="1169.60" y1="526.50" x2="1322.00" y2="526.50" stroke="#537d7c" stroke-width="2" />
+<line x1="1169.60" y1="467.00" x2="1322.00" y2="467.00" stroke="#537d7c" stroke-width="2" />
+<line x1="1169.60" y1="424.50" x2="1322.00" y2="424.50" stroke="#537d7c" stroke-width="2" />
+<line x1="1169.60" y1="382.00" x2="1322.00" y2="382.00" stroke="#537d7c" stroke-width="2" />
+<rect x="1170.60" y="623.40" width="150.40" height="30.60" fill="#e6eef1" stroke="#264d60" stroke-width="2" />
+<text x="1245.80" y="642.70" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">LOCKED DRAWER</text>
+<rect x="1170.60" y="592.80" width="150.40" height="30.60" fill="#e6eef1" stroke="#264d60" stroke-width="2" />
+<text x="1245.80" y="612.10" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">DRAWER</text>
+<rect x="1170.60" y="565.60" width="150.40" height="20.40" fill="#fff2d6" stroke="#264d60" stroke-width="2" />
+<text x="1245.80" y="579.80" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal" font-weight="bold" id="retained-tray-B3">RETAIN TRAY</text>
+<text x="1245.80" y="399.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:bold">FOLDED</text>
+<text x="1245.80" y="416.00" font-size="13" text-anchor="middle" style="fill:#172b39;font-weight:normal">CLOTHES</text>
+<text x="1245.80" y="727.00" font-size="15" text-anchor="middle" style="fill:#172b39;font-weight:bold">B3</text>
+<text x="1245.80" y="746.00" font-size="12" text-anchor="middle" style="fill:#172b39;font-weight:normal">459 clear</text>
+<rect x="849.80" y="688.00" width="475.20" height="17.00" fill="#dce3e3" stroke="#264d60" stroke-width="2" />
+<text x="50.00" y="154.00" font-size="15" text-anchor="start" style="fill:#172b39;font-weight:normal">Unit height 2,100 mm (6 ft 11 in) FFL; reference loft (if shown) is not a measured section.</text>
+<text x="50.00" y="790.00" font-size="15" text-anchor="start" style="fill:#172b39;font-weight:normal">Long rail 1,750 mm (5 ft 9 in) FFL; nominal rail-to-base 1,650 mm (5 ft 5 in) BEFORE hanger clearance.</text>
+<text x="50.00" y="814.00" font-size="15" text-anchor="start" style="fill:#172b39;font-weight:normal">Double rails 1,800 mm (5 ft 11 in) / 950 mm (3 ft 1 in) FFL; upper/lower drops only 850 / 850 mm.</text>
+<text x="50.00" y="838.00" font-size="15" text-anchor="start" style="fill:#172b39;font-weight:normal">Top shelf 1,900 mm (6 ft 3 in) FFL; drawers 300 mm (1 ft 0 in) to 660 mm (2 ft 2 in) FFL.</text>
+<text x="50.00" y="862.00" font-size="15" text-anchor="start" style="fill:#172b39;font-weight:normal">Use double hanging for short items only; two 1,000 mm drops do not fit. Confirm hangers, reach and support.</text>
+<rect x="395.8" y="565.6" width="150.4" height="20.4" fill="none" stroke="#976000" stroke-width="4" /><rect x="1170.6" y="565.6" width="150.4" height="20.4" fill="none" stroke="#976000" stroke-width="4" /></g><text x="50" y="1114" font-size="20">DECISION OVERLAY ONLY: all source dimensions, bays and other details remain provisional.</text><text x="50" y="1146" font-size="18">Grey is a drafting tone, not a shutter finish; soft-close and shutter mechanism remain unconfirmed.</text><text x="50" y="1176" font-size="18">Two master trays retained; heights, widths, runners, loads, access and the rest of the interior need review.</text><text x="50" y="1210" font-size="21" font-weight="bold">NO CONSTRUCTION / PRODUCT / PROCUREMENT / FABRICATION RELEASE</text></svg>

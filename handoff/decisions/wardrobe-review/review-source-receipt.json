@@ -1,0 +1,70 @@
+{
+  "schema": "wardrobe-owner-review-derivation/1",
+  "date": "2026-11-18",
+  "status": "separate-decision-overlays-not-full-regeneration",
+  "sourceMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "sourceInputs": [
+    {
+      "repositoryPath": "handoff/contractor/wardrobe/final/wardrobe-interiors.json",
+      "sha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d"
+    },
+    {
+      "repositoryPath": "handoff/contractor/wardrobe/final/R04-interior-elevation.svg",
+      "sha256": "3610f6baa63ab11f9276108f3ae09d8bc549d481eb20d32ca651840074f44dab"
+    },
+    {
+      "repositoryPath": "handoff/contractor/wardrobe/final/R05-interior-elevation.svg",
+      "sha256": "871b1fd498dff97e1b2681dd179b7fe5208a7a2322f00d29f19f4f296504576c"
+    }
+  ],
+  "sourceArtifactsModified": false,
+  "sourceDimensionsRevalidated": false,
+  "coordinateUnits": "SVG layout coordinates, not new site measurements",
+  "retainedTrayBays": {
+    "R04": [
+      "A3",
+      "B3"
+    ],
+    "R05": [
+      "C3"
+    ]
+  },
+  "childrenLoftDoorFronts": 6,
+  "doorJointsAreNotApprovedInternalPartitions": true,
+  "handleFinish": "matte black; swatch only, no product/profile/location approval",
+  "shutterFinishAndMechanism": "unconfirmed; grey drafting tone is not a finish selection",
+  "softClose": "unconfirmed proposal",
+  "suitecaseAccess": "site-measured unobstructed opening, internals, supports, open-door hardware and approach required",
+  "constructionRelease": false,
+  "productRelease": false,
+  "fabricationRelease": false,
+  "procurementRelease": false,
+  "rendering": "PyMuPDF; SVG/PNG geometry is repeatable, PDF serialization is not an archival byte-reproduction promise",
+  "files": [
+    {
+      "path": "master-interiors-decision-review.svg",
+      "bytes": 11419,
+      "sha256": "077042d4c773c4cf95f5205be67d6eb914efe7927c329680f08d22a5e25023e3"
+    },
+    {
+      "path": "master-interiors-decision-review.png",
+      "bytes": 161895,
+      "sha256": "e0bbad74f02451d31c1de36dfb7a89d23476814b59feaff39aa3b33992e59a2c"
+    },
+    {
+      "path": "children-interiors-decision-review.svg",
+      "bytes": 11662,
+      "sha256": "0200eb591c01886512423a986abda7ed86785d6fa5b1c4b31f393bc44fc4656c"
+    },
+    {
+      "path": "children-interiors-decision-review.png",
+      "bytes": 164615,
+      "sha256": "60f029ec35e1ccab39ac82f3e99a5077696ccb9cc758f1b228ed542fc8d69899"
+    },
+    {
+      "path": "wardrobe-owner-review.pdf",
+      "bytes": 96786,
+      "sha256": "1b056ce1f4fa8e956d9a797d01285cde8b01006cec264be55043e9b0d4420f22"
+    }
+  ]
+}

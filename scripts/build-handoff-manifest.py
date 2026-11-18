@@ -9,6 +9,8 @@ from pathlib import Path
 def coverage(path):
     tags = set()
     name = Path(path).name
+    if path.startswith("handoff/decisions/"):
+        tags.add("owner-decision-addendum")
     if "source-index/room-opening-index" in path:
         tags.add("room-opening-index")
     if name == "lighting-workbench.html":
@@ -53,6 +55,7 @@ def coverage(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--master-sha256", required=True)
+    parser.add_argument("--decision-addendum-publication-authorized", action="store_true")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     build = json.loads((root / "build-info.json").read_text())
@@ -112,7 +115,14 @@ def main():
         "productRelease": False,
         "procurementRelease": False,
         "fabricationRelease": False,
-        "publicationAuthorized": False,
+        "publicationAuthorized": args.decision_addendum_publication_authorized,
+        "publicationScope": ("Dated owner-decision addendum and review overlays only; no design or construction release."
+                             if args.decision_addendum_publication_authorized else "No publication authorization asserted."),
+        "decisionAddendum": {
+            "path": "handoff/decisions/2026-11-18-owner-selections.md",
+            "scope": "Six loft doors, three retained trays, matte-black handle finish; retain prior OPT-E matte-laminate material and master split only. Shutter mechanism, shade and complete interiors remain provisional.",
+            "modelAndHistoricalOutputsRegenerated": False,
+        },
         "note": "Original master, public-copy and delivered hashes are distinct. Viewer/workbench maps remain frozen analytic estimates; the separate exploratory Radiance addendum is generic, provisional and not measured or product-specific. Manifest excludes itself.",
         "files": records,
     }

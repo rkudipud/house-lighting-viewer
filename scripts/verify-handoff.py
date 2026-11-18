@@ -12,6 +12,7 @@ import xml.etree.ElementTree as ET
 
 
 REQUIRED_COVERAGE = {
+    "owner-decision-addendum",
     "room-opening-index",
     "lighting-workbench",
     "control-options",

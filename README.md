@@ -1,11 +1,12 @@
 # Hyderabad 2BHK coordinated review handoff
 
-**Local design review only. Not a construction, fabrication, product or procurement
-release. Nothing in this local update has been pushed or published.**
+**Design review only. Not a construction, fabrication, product or procurement
+release. The owner decision update is separately versioned from unchanged
+master-bound models and outputs.**
 
 Coordinator review is **accepted for local design review only**, not construction,
-product, procurement, fabrication or publication approval. All professional and
-site holds remain open.
+product, procurement or fabrication approval. This focused decision update is
+authorized for repository/Pages publication; all professional and site holds remain open.
 
 The simulation addendum now includes the separately verified
 [six-room sensitivity revision](handoff/electrician/simulation/revision-all-rooms/index.html).
@@ -14,6 +15,15 @@ technical approval of this addition or a final construction handoff.
 
 Start with the [trade handoff](handoff/index.html), the [offline Three.js viewer](index.html),
 or the [three final review renders and drawing issue](handoff/viewer/index.html).
+
+Read the [18 November owner decision addendum](handoff/decisions/2026-11-18-owner-selections.md)
+with all packs: matte-black handles, three retained trays and six children's loft
+doors. General interiors, pooja finish and soft-close hardware remain
+proposals. Model/drawing/cost outputs have not been regenerated for these choices.
+The [separate visual wardrobe review](handoff/decisions/2026-11-18-wardrobe-review.html)
+highlights these choices over the unchanged provisional source interiors. The earlier
+OPT-E matte-laminate material and master split are retained; shutter mechanism, exact shade,
+full interiors and measured fit remain unresolved.
 
 | Review material | Entry point |
 | --- | --- |
@@ -91,5 +101,5 @@ retain their documented original-input and portability limits.
 
 The complete inventory includes PDFs, SVGs, PNGs, approved JPEGs, editable JSON,
 CSV, source scripts, templates, requirements, package locks, licences and receipts.
-No staging, commit, push, remote update or account switching is authorized.
-Explicit later user publication go-ahead remains required despite local design-review acceptance.
+This decision update is authorized for the repository's `main` branch and Pages;
+public availability does not release any construction or professional/site holds.
