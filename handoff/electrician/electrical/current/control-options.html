@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Control options and switchboard choices</title><style>
+@page { size: A4; }
+* { box-sizing: border-box; }
+html { color: #233138; background: #e8eceb; font-family: Arial, sans-serif; }
+body { margin: 0 auto; max-width: 1000px; background: white; padding: 48px; }
+main { font-size: 15px; line-height: 1.48; }
+h1 { font-size: 30px; line-height: 1.18; margin: 0 0 14px; }
+h2 { color: #1c4d51; font-size: 23px; margin: 30px 0 12px; border-top: 2px solid #87a7a4; padding-top: 12px; }
+h3 { font-size: 18px; margin: 20px 0 9px; }
+p { margin: 0 0 11px; }
+strong { color: #102e37; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13px; line-height: 1.36; }
+th { background: #e9f1ef; text-align: left; color: #173c43; }
+td, th { border: 1px solid #c7d3d2; padding: 6px 8px; vertical-align: top; }
+tbody tr:nth-child(even) { background: #f7f9f8; }
+img { display: block; max-width: 100%; height: auto; margin: 14px auto; }
+img.photo { max-height: 430px; object-fit: contain; }
+a { color: #245f69; overflow-wrap: anywhere; }
+code, pre { font-size: 12.5px; }
+pre { background: #f3f6f4; border: 1px solid #d5dedc; padding: 10px 12px; white-space: pre-wrap; }
+blockquote { border-left: 4px solid #b5522f; margin: 14px 0; padding: 8px 14px; background: #fbf1ec; }
+.toc { padding: 12px 18px; background: #f1f5f3; font-size: 13px; columns: 2; column-gap: 22px; }
+.toc ul { padding-left: 16px; margin: 0; }
+@media print {
+  html, body { background: white; max-width: none; padding: 0; margin: 0; }
+  main { font-size: 10.2pt; line-height: 1.34; }
+  h1 { font-size: 22pt; }
+  h2 { font-size: 15.5pt; margin-top: 0; padding-top: 6pt; break-before: page; }
+  h2#contents { break-before: auto; margin-top: 14pt; }
+  h3 { font-size: 12pt; margin-top: 12pt; }
+  h1, h2, h3 { break-after: avoid; }
+  p, li { widows: 3; orphans: 3; }
+  table { font-size: 8.9pt; line-height: 1.3; margin: 7pt 0 10pt; }
+  td, th { padding: 4pt 5pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  pre { font-size: 8.3pt; break-inside: avoid; }
+  img { width: 100%; max-height: 215mm; object-fit: contain; break-inside: avoid; margin: 9pt auto; }
+  img.photo { width: auto; height: 76mm; }
+  p:has(> img) { break-inside: avoid; }
+  a { color: #233138; text-decoration: none; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style></head><body><main><h1 id="control-options-and-switchboard-choices">Control options and switchboard choices</h1>
+<p><strong>Master SHA-256:</strong> <code>1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4</code>. Review/quotation only; no construction or product approval. The homeowner's current choice is <strong>fixed-white lighting, local brightness control, no extra curtain knob and one larger living LOW supply</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Control route</th>
+<th>Current plan</th>
+<th>What the buyer / electrician must prove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single-colour 24 V CV PWM wall knob</td>
+<td><strong>Selected concept</strong> for the 21 LOW, task and other 24 V knob groups. Four warm curtain strips follow their room's existing LOW knob.</td>
+<td>Exact strip + CV supply + controller + repeater compatibility; complete branch ratings, fault protection, wiring, box fit, flicker, low-end start and memory.</td>
+</tr>
+<tr>
+<td>230 V LED phase-cut dimming</td>
+<td><strong>Selected concept</strong>, ten mains-dimmer groups including the separate 48 V track driver/control chain.</td>
+<td>Fitting maker must list the exact driver/dimmer and permitted edge. Confirm actual input VA, driver count, inrush, ambient, flicker and noise. Every group is on procurement hold.</td>
+</tr>
+<tr>
+<td>Integral reader / PIR controls</td>
+<td>Six fitting-mounted controls, plus eight conceptual on/off switch modules in selected locations.</td>
+<td>Fit, access, local ON/AUTO/OFF override where specified, low-level behaviour, power loss and any wet-area requirements. They are not six additional wall dimmers.</td>
+</tr>
+<tr>
+<td>Simple switching or split-group alternative</td>
+<td>Only a <strong>fallback</strong> if an acceptable dimming chain cannot be sourced; it does not meet the homeowner's current request for dimming every specified group.</td>
+<td>If considered, show the lost dimming/changed wall controls to the homeowner before any redesign. Do not merge LOW and HIGH to make a load large enough for a dimmer.</td>
+</tr>
+<tr>
+<td>Other wired controls or automation</td>
+<td>Not part of the selected package. A documented alternative may be evaluated later without sacrificing independent local operation.</td>
+<td>Any protocol, interface, supply, commissioning and service changes need a separately engineered and approved proposal; no internet or app may become mandatory.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="living-low-and-controller-limits">Living LOW and controller limits</h2>
+<p>The homeowner chose one <strong>P01 24 V, 480 W planning-class supply</strong> for C03, C04, C05 and X-CURT-LIV. P03 is removed. One K-LIV-LOW knob, <strong>six modeled outputs and two modeled repeaters</strong> serve 181.52 W of strip load. Added controller and cable losses are not included. Supply, repeater and protection topology remain <strong>HOLD</strong>; the previous living voltage-drop and LT-4/LT-5 inrush passes are invalid.</p>
+<p>The Skydance T1-K is a source-backed <strong>candidate</strong>, not a purchased or approved model: 12-48 V input, three output channels rated 4 A each, 12.5 A maximum input and 2 or 8 kHz selection according to its manual. The project used an <strong>assumed</strong> 2.4 A/output screening limit at 2 kHz; the manufacturer warns that the higher frequency reduces output capacity. The 480 W reference PSU has a 20 A nameplate output, so the complete fault-protected distribution and controller input must be engineered. A generic PWM repeater is not automatically suitable.</p>
+<p>The 0.60 sizing factor is <strong>0.80 assumed thermal x 0.75 assumed utilization</strong>, not a manufacturer rule. The 181.52 W strip load needs 303 W minimum when rounded up under that assumption; 480 W provides a 288 W planning allowance. Actual input, temperature, case measurement, protective coordination and losses remain for professional validation.</p>
+<h2 id="mains-dimmer-sourcing">Mains dimmer sourcing</h2>
+<p>The India-listed Legrand Lyncus <strong>677304</strong> is a manufacturer-page lead describing <strong>3-50 W and up to eight LED lamps</strong>; wording elsewhere on its page is inconsistent. It is not approved with any planned luminaire. For example, living C01 is <strong>40 W / five modeled fixtures</strong>, a nominal comparison only; bedroom C20 is <strong>48 W / eight fixtures</strong>, at/near the listed limits before real driver input and derating. The 48 V track group is not evaluated by a downlight rating.</p>
+<p>Legrand Arteor Advance <strong>AA24107MB</strong> and Schneider AvatarOn <strong>E8331RD250_WE</strong> have LED <strong>VA</strong>, not simply W, ranges in their manufacturer sheets. Obtain actual power factor and AC input; <code>VA = input W / power factor</code> is only a preliminary check. Their phase mode, lamp count, wall-box temperature/size and exact driver approval must be confirmed. See <code>source-index.md</code> and <code>schedules/mains-dimmer-check.csv</code>. A fan regulator is not an LED dimmer.</p>
+<h2 id="switchboards-and-room-intent">Switchboards and room intent</h2>
+<p><code>schedules/switchboard-schedule.csv</code> groups controls and conceptual switch points by board. <code>wall-control-schedule.csv</code> lists the 31 wall controls; <code>fitting-controls.csv</code> lists the four readers and two PIR lights. Board coordinates are planning references, not surveyed positions or final plate layouts.</p>
+<p>Keep the pooja base strip <strong>C06A</strong> and the shadow-sensitive spot <strong>C06B</strong> independently dimmable. Keep C10 passage dimmable. Bathroom face lights have an independent control. CBR H1-H6 are released for review, but C37 dimmer procurement remains held. Four flats have separate neutrals, supplies and control domains; common stairs use a distinct building circuit.</p>
+<p>Only the supplier and qualified electrician can approve actual electrical protection, earthing, isolation, cable sizes, wet-zone suitability, driver locations, switchboard fit and current standards. User choices establish preferred experience, not a permit to buy or wire equipment.</p></main></body></html>

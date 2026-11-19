@@ -23,14 +23,14 @@ function start(){
   const BASE_RATIO=Math.min(devicePixelRatio,1);
   renderer.setPixelRatio(BASE_RATIO);renderer.setSize(innerWidth,innerHeight);
   renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
-  renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1;
+  renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.10;
   $('view').appendChild(renderer.domElement);
   renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();fatal('WebGL context lost. Reload the page to restart the view.');});
   const scene=new T.Scene();scene.background=new T.Color('#1d2a36');
   const camera=new T.PerspectiveCamera(65,innerWidth/innerHeight,.04,100);
   const ortho=new T.OrthographicCamera(-1,1,1,-1,.1,4);
   const pmrem=new T.PMREMGenerator(renderer),environment=new RoomEnvironment();
-  const env=pmrem.fromScene(environment,.04);scene.environment=env.texture;scene.environmentIntensity=.3;
+  const env=pmrem.fromScene(environment,.04);scene.environment=env.texture;scene.environmentIntensity=.08;
   environment.dispose();pmrem.dispose();
   const materials=createMaterials(renderer),model=createModel(scene,materials),lighting=createLighting(scene,model);
   const navigation=prepareNavigation(PLAN,model.collision);
@@ -40,13 +40,11 @@ function start(){
 
   // Fixed evening scene: a faint cool fill so the fittings carry the picture. There is no time-of-day control.
   materials.setDaylight(.08,10);
-  const hemi=new T.HemisphereLight('#cfdcf2','#8e8573',1);scene.add(hemi);
-  const sun=new T.DirectionalLight('#9fb2da',.55);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);
+  const hemi=new T.HemisphereLight('#cfdcf2','#8e8573',.22);scene.add(hemi);
+  const sun=new T.DirectionalLight('#9fb2da',.08);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);
   sun.shadow.camera.left=-11;sun.shadow.camera.right=11;sun.shadow.camera.top=11;sun.shadow.camera.bottom=-11;sun.shadow.camera.near=.1;sun.shadow.camera.far=65;
   sun.shadow.normalBias=.025;sun.shadow.bias=-.00008;sun.shadow.radius=3;scene.add(sun,sun.target);
   sun.target.position.set(4.7,0,7.7);sun.position.set(-9,22,-8).add(sun.target.position);
-  const AMBIENT={overview:{hemi:1.15,env:.34,exposure:1.02},walk:{hemi:.3,env:.12,exposure:.88}};
-
   // Reflected-ceiling-plan context: wall poche (visible from below only) and tray / panel outlines.
   const rcpPoche=new T.Group(),rcpLines=new T.Group();model.rcp.add(rcpPoche,rcpLines);
   {
@@ -197,8 +195,18 @@ function start(){
 
   // ---------- room lights ----------
   const fmtK=a=>a&&a.length?a.map(k=>String(k).replace(/\s*K$/i,'')).join(' / ')+' K fixed':'';
-  const INDEPENDENT_NAME={TASK:'task',MIRROR:'mirror',FACE:'face',READ:'reading',STUDY:'study',ACCENT:'accent'};
+  const INDEPENDENT_NAME={MIRROR:'mirror',FACE:'face',READ:'reading',STUDY:'study',ACCENT:'accent'};
+  function syncMasterLights(){
+    for(const lane of ['high','low']){
+      const state=lighting.getMasterLight(lane),id='master-'+lane;
+      $(id+'-on').checked=state.on;
+      $(id+'-dim').value=state.dim;
+      $(id+'-out').value=state.dim+'%';
+      $('master-rail-'+lane).classList.toggle('off',!state.on);
+    }
+  }
   function syncLights(){
+    syncMasterLights();
     const lr=lightRoomOf(selectedRoom),g=lighting.getRoomLight(lr);
     $('light-title').textContent='Lights / '+(lr!==selectedRoom?`${roomName(lr)} (incl. ${roomName(selectedRoom).toLowerCase()})`:roomName(lr));
     $('room-on').checked=g.on;$('room-on').disabled=g.held;
@@ -220,7 +228,7 @@ function start(){
       if(g.zone==='CBR')notes.push('H1-H6 are active for review. The square CBR-X1 to CBR-X4 LINE frame is present but held for coordination, so it remains unlit and is not controlled by LOW; the four black slits are separate dark grooves, not light fittings. Bedside and desk fittings also remain held. C37 dimmer procurement remains on hold.');
     }
     const pockets=(PLAN.curtainPockets?.pockets||[]).filter(p=>p.room===g.zone);
-    if(pockets.some(p=>p.selected))notes.push(pockets.filter(p=>p.selected).map(p=>`Curtain strip ${p.id} (${p.label}): selected for review, 2700 K, follows LOW; no lux credit.`).join(' '));
+    if(pockets.some(p=>p.selected))notes.push(pockets.filter(p=>p.selected).map(p=>`Curtain strip ${p.id} (${p.label}): selected for review, 2700 K; unmeasured 0-lumen visual placeholder, remains unlit and carries no lux credit.`).join(' '));
     if(pockets.some(p=>p.held))notes.push(`${pockets.filter(p=>p.held).map(p=>p.id).join(', ')} is held (shown grey, unlit).`);
     if(['MBR','CBR'].includes(g.zone))notes.push('Site hold: assumed strip return extends about 0.30 m beyond the modeled room corner. The viewer clips it only for display; actual pocket ends are unmeasured.');
     $('light-note').textContent=notes.join(' ');
@@ -233,7 +241,6 @@ function start(){
       input.addEventListener('change',()=>{lighting.setAccessory(f.id,input.checked);syncLights();});
       label.appendChild(input);list.appendChild(label);
     }
-    $('all-on').setAttribute('aria-pressed',String(lighting.zones.every(z=>lighting.roomLight[z.room].on)));
   }
   function setRoomLight(id,values){
     const r=lighting.setRoomLight(lightRoomOf(id),values);syncLights();return r;
@@ -243,15 +250,14 @@ function start(){
     const v=Number(e.target.value),g=lighting.getRoomLight(lightRoomOf(selectedRoom));
     setRoomLight(selectedRoom,{[lane]:v,...(!g.on&&v>0?{on:true}:{})});
   });
-  $('all-on').addEventListener('click',()=>{lighting.setAllRooms(true);syncLights();});
-  $('all-off').addEventListener('click',()=>{lighting.setAllRooms(false);syncLights();});
-  function setInteriors(on){
-    model.rooms.wardrobeProposals.setVisible(on);
-    $('interiors').setAttribute('aria-pressed',String(Boolean(on)));
-    $('interiors').textContent=on?'Hide proposed interiors':'Show proposed interiors';
-    renderer.shadowMap.needsUpdate=true;
+  for(const lane of ['high','low']){
+    const id='master-'+lane;
+    $(id+'-on').addEventListener('change',e=>{lighting.setMasterLight(lane,{on:e.target.checked});syncLights();});
+    $(id+'-dim').addEventListener('input',e=>{
+      const v=Number(e.target.value),state=lighting.getMasterLight(lane);
+      lighting.setMasterLight(lane,{dim:v,...(!state.on&&v>0?{on:true}:{})});syncLights();
+    });
   }
-  $('interiors').addEventListener('click',()=>setInteriors(!model.rooms.wardrobeProposals.interior.visible));
 
   // ---------- light-map (frozen) ----------
   function renderMap(){
@@ -475,9 +481,6 @@ function start(){
     const name=`light-planner-${mode}-${selectedRoom}.png`;download(name,blob);
     return {name,width:c.width,height:c.height,bytes:blob.size};
   }
-  $('dl-png').addEventListener('click',()=>{exportPng().catch(e=>console.error(e));});
-  $('dl-schedule').addEventListener('click',()=>exportCsv('schedule'));
-  $('dl-groups').addEventListener('click',()=>exportCsv('groups'));
   for(const d of PLAN.downloads||[]){
     const a=document.createElement('a');a.href=d.href;a.download=d.href.split('/').pop();a.target='_blank';a.rel='noopener';
     a.innerHTML=`${esc(d.label)}<small>${esc(d.note)} / PDF</small>`;$('pdf-links').appendChild(a);
@@ -485,7 +488,6 @@ function start(){
 
   // ---------- frame loop ----------
   let last=performance.now(),frames=0,frameElapsed=0,fps=0,tick=0;
-  const amb={hemi:AMBIENT.overview.hemi,env:AMBIENT.overview.env,exposure:AMBIENT.overview.exposure};
   function frame(now){
     if($('fatal').style.display==='grid')return;
     const elapsed=Math.max(0,(now-last)/1000),dt=Math.min(.04,elapsed);last=now;
@@ -510,9 +512,6 @@ function start(){
         const t=reduced?1:1-Math.exp(-dt*5);
         orbitTarget.x+=(orbitGoal.x-orbitTarget.x)*t;orbitTarget.z+=(orbitGoal.z-orbitTarget.z)*t;orbitDistance+=(orbitGoal.distance-orbitDistance)*t;
       }
-      const goal=isWalk()?AMBIENT.walk:AMBIENT.overview,k=reduced?1:1-Math.exp(-dt*5);
-      amb.hemi+=(goal.hemi-amb.hemi)*k;amb.env+=(goal.env-amb.env)*k;amb.exposure+=(goal.exposure-amb.exposure)*k;
-      hemi.intensity=amb.hemi;scene.environmentIntensity=amb.env;renderer.toneMappingExposure=amb.exposure;
       materials.update(reduced?1:dt);model.update(reduced?1:dt,isWalk()?pos:null);lighting.update(reduced?1:dt);cameraUpdate();
       renderer.render(scene,active());
       frames++;frameElapsed+=elapsed;
@@ -540,9 +539,10 @@ function start(){
   $('loading').style.display='none';
   window.walkthrough={
     ready:true,PLAN,lighting,model,renderer,scene,camera,ortho,analysis,setMode,teleport:id=>{selectRoom(id);},selectRoom,
-    setRoomLight,getRoomLight:id=>lighting.getRoomLight(lightRoomOf(id)),setAllRooms:on=>{lighting.setAllRooms(on);syncLights();},setInteriors,
-    exportCsv,exportPng,scheduleRows,groupRows,showInspector,syncLights,
-    getState:()=>({mode,selectedRoom,position:pos.toArray(),yaw,pitch,fov,fps,draws:renderer.info.render.calls,triangles:renderer.info.render.triangles,guided,interiors:model.rooms.wardrobeProposals.interior.visible,orbit:{yaw:orbitYaw,pitch:orbitPitch,distance:orbitDistance,target:orbitTarget.toArray()},rcp:{...rcp},mapScene:analysis?.scene,ambient:{...amb},sheetPx}),
+    setRoomLight,getRoomLight:id=>lighting.getRoomLight(lightRoomOf(id)),setAllRooms:on=>{lighting.setAllRooms(on);syncLights();},
+    setMasterLight:(lane,values)=>{lighting.setMasterLight(lane,values);syncLights();},getMasterLight:lighting.getMasterLight,
+    showInspector,syncLights,
+    getState:()=>({mode,selectedRoom,position:pos.toArray(),yaw,pitch,fov,fps,draws:renderer.info.render.calls,triangles:renderer.info.render.triangles,guided,interiors:model.rooms.wardrobeProposals.interior.visible,orbit:{yaw:orbitYaw,pitch:orbitPitch,distance:orbitDistance,target:orbitTarget.toArray()},rcp:{...rcp},mapScene:analysis?.scene,sheetPx}),
     setPose:(x,z,y=0,p=0,f)=>{pos.set(x*FT,0,z*FT);yaw=y;pitch=p;if(f){fov=f;camera.fov=f;camera.updateProjectionMatrix();}cameraUpdate();},
     setOrbit:(y,p,d)=>{orbitYaw=y;orbitPitch=p;orbitDistance=d;orbitGoal.distance=d;cameraUpdate();},
     setRcp:(x,z,half)=>{rcp.x=x*FT;rcp.z=z*FT;rcp.half=half*FT;cameraUpdate();},fitRcp:id=>{fitRcp(roomById(id));cameraUpdate();},

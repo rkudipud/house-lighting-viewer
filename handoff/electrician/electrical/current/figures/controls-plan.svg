@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="755" height="905" viewBox="0 0 755 905">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40.0" y="26.0" font-family="Arial, Helvetica, sans-serif" font-size="15" text-anchor="start" font-weight="bold" fill="#20343b">Fixed-white controls: boards, supply hatches and curtain-pocket strips (one flat)</text>
+<text x="40.0" y="46.0" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="start" font-weight="normal" fill="#637275">Sheet south-up as the house drawings; true north points to the sheet bottom. Not to scale for construction.</text>
+<polygon points="73.8,449.5 284.5,449.5 284.5,634.0 236.5,634.0 236.5,718.8 73.8,718.8" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="198.2" y="600.8" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">LIV</text>
+<polygon points="73.8,299.5 284.5,299.5 284.5,449.5 73.8,449.5" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="179.1" y="374.5" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">DIN</text>
+<polygon points="73.8,148.0 284.5,148.0 284.5,299.5 73.8,299.5" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="179.1" y="223.8" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">KIT</text>
+<polygon points="68.1,81.2 283.8,81.2 283.8,141.9 68.1,141.9" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="176.0" y="111.5" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">UTL</text>
+<polygon points="291.2,81.1 478.8,81.1 478.8,311.7 291.2,311.7" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="385.0" y="196.4" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">MBR</text>
+<polygon points="289.0,311.5 343.0,311.5 343.0,406.0 289.0,406.0" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="316.0" y="358.8" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">DRS</text>
+<polygon points="347.5,317.4 478.8,317.4 478.8,399.9 347.5,399.9" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="413.1" y="358.6" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">TL1</text>
+<polygon points="289.0,406.0 343.0,406.0 343.0,488.5 289.0,488.5" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="316.0" y="447.2" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">LOB</text>
+<polygon points="347.5,405.4 478.8,405.4 478.8,487.9 347.5,487.9" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="413.1" y="446.7" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">TL2</text>
+<polygon points="291.2,493.8 478.8,493.8 478.8,718.8 335.5,718.8 335.5,632.7 291.2,632.7" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="368.5" y="615.1" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">CBR</text>
+<polygon points="51.2,730.0 209.5,730.0 209.5,850.0 51.2,850.0" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
+<text x="130.4" y="790.0" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">BAL</text>
+<line x1="155.7" y1="724.5" x2="209.8" y2="724.5" stroke="#b08a5a" stroke-width="3"/>
+<line x1="286.1" y1="266.8" x2="286.1" y2="311.1" stroke="#b08a5a" stroke-width="3"/>
+<line x1="288.5" y1="490.8" x2="330.4" y2="490.8" stroke="#b08a5a" stroke-width="3"/>
+<line x1="345.1" y1="357.9" x2="345.1" y2="397.3" stroke="#b08a5a" stroke-width="3"/>
+<line x1="345.1" y1="446.5" x2="345.1" y2="483.4" stroke="#b08a5a" stroke-width="3"/>
+<line x1="209.8" y1="143.8" x2="254.1" y2="143.8" stroke="#b08a5a" stroke-width="3"/>
+<line x1="69.5" y1="237.3" x2="69.5" y2="296.4" stroke="#4f8fbf" stroke-width="3"/>
+<line x1="111.4" y1="143.8" x2="170.4" y2="143.8" stroke="#4f8fbf" stroke-width="3"/>
+<line x1="362.5" y1="75.5" x2="407.5" y2="75.5" stroke="#4f8fbf" stroke-width="3"/>
+<line x1="482.9" y1="222.6" x2="482.9" y2="311.1" stroke="#4f8fbf" stroke-width="3"/>
+<line x1="482.9" y1="628.6" x2="482.9" y2="719.6" stroke="#4f8fbf" stroke-width="3"/>
+<line x1="67.1" y1="520.3" x2="67.1" y2="611.3" stroke="#4f8fbf" stroke-width="3"/>
+<line x1="67.1" y1="355.4" x2="67.1" y2="446.5" stroke="#4f8fbf" stroke-width="3"/>
+<line x1="482.9" y1="338.2" x2="482.9" y2="385.0" stroke="#b08a5a" stroke-width="3"/>
+<line x1="482.9" y1="421.9" x2="482.9" y2="466.2" stroke="#b08a5a" stroke-width="3"/>
+<line x1="128.6" y1="724.5" x2="155.7" y2="724.5" stroke="#b08a5a" stroke-width="3"/>
+<line x1="209.8" y1="724.5" x2="236.8" y2="724.5" stroke="#b08a5a" stroke-width="3"/>
+<circle cx="97.8" cy="479.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="97.8" cy="551.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="97.8" cy="625.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="97.8" cy="697.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="155.5" cy="697.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="214.0" cy="697.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="214.0" cy="614.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="259.0" cy="475.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="259.0" cy="532.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="259.0" cy="589.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="239.5,449.5 239.5,581.5 239.0,585.4 237.5,589.0 235.1,592.1 232.0,594.5 228.4,596.0 224.5,596.5 205.8,596.5 202.8,596.9 200.1,598.0 197.8,599.8 196.0,602.1 194.9,604.8 194.5,607.8 194.5,665.5 194.0,669.4 192.5,673.0 190.1,676.1 187.0,678.5 183.4,680.0 179.5,680.5 124.8,680.5 120.9,680.0 117.2,678.5 114.1,676.1 111.8,673.0 110.3,669.4 109.8,665.5 109.8,449.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="282.2,520.0 282.2,602.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="182.5,665.5 124.0,665.5 124.0,557.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="227.5,484.0 227.5,449.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="72.2,631.8 72.2,672.2" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="100.0" cy="652.0" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="97.8" cy="407.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="143.5" cy="334.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="200.5" cy="334.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="259.0" cy="424.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="155.5" cy="395.5" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="109.8,449.5 109.8,370.0 110.3,366.1 111.8,362.5 114.1,359.4 117.2,357.0 120.9,355.5 124.8,355.0 224.5,355.0 228.4,355.5 232.0,357.0 235.1,359.4 237.5,362.5 239.0,366.1 239.5,370.0 239.5,449.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="227.5,449.5 227.5,364.8 146.5,364.8" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="252.0" cy="334.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="252.0" cy="356.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="252.0" cy="379.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="252.0" cy="385.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="100.0" cy="229.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="83.5" cy="268.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="133.0" cy="178.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="184.0" cy="178.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="130.0" cy="200.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="206.5" cy="200.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="86.5" cy="292.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="206.5" cy="293.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="82.8,154.0 82.8,236.5" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="79.0,156.7 110.5,156.7" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="173.5,156.7 199.0,156.7" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="115.0,198.2 115.4,194.9 116.7,191.9 118.7,189.2 121.4,187.2 124.5,185.9 127.8,185.5 210.2,185.5 213.6,185.9 216.6,187.2 219.3,189.2 221.3,191.9 222.6,194.9 223.0,198.2 223.0,292.8 222.6,296.1 221.3,299.1 219.3,301.8 216.6,303.8 213.6,305.1 210.2,305.5 127.8,305.5 124.5,305.1 121.4,303.8 118.7,301.8 116.7,299.1 115.4,296.1 115.0,292.8 115.0,198.2" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="98.5,238.0 98.5,295.0" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="109.0" cy="112.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="187.0" cy="121.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="244.0" cy="121.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="256.8,85.0 256.8,139.0" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="312.2" cy="145.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="370.8" cy="145.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="429.2" cy="145.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="312.2" cy="199.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="429.2" cy="199.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="312.2" cy="253.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="370.8" cy="253.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="429.2" cy="253.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="326.9,167.5 327.2,165.2 328.2,163.0 329.6,161.1 331.4,159.7 333.6,158.8 335.9,158.5 405.6,158.5 407.9,158.8 410.1,159.7 411.9,161.1 413.4,163.0 414.2,165.2 414.5,167.5 414.5,230.5 414.2,232.8 413.4,235.0 411.9,236.9 410.1,238.3 407.9,239.2 405.6,239.5 335.9,239.5 333.6,239.2 331.4,238.3 329.6,236.9 328.2,235.0 327.2,232.8 326.9,230.5 326.9,167.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="476.5,138.9 476.5,201.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="370.8,153.2 419.8,153.2 419.8,199.0" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="321.7,199.0 321.7,244.8 370.8,244.8" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="473.8" cy="130.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="473.8" cy="189.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="325.0" cy="310.0" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="328.0" cy="337.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="328.0" cy="383.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="356.1" cy="339.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="373.4" cy="339.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="452.5" cy="342.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="452.5" cy="374.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="403.0" cy="352.8" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="350.5,320.4 475.8,320.4 475.8,396.9 350.5,396.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="477.3,345.7 477.3,382.6" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="351.2,337.1 378.3,337.1" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="349.2" cy="319.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="380.3" cy="319.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="316.0" cy="430.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="316.0" cy="469.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="316.0" cy="407.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="342.2" cy="445.0" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="356.1" cy="427.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="373.4" cy="427.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="452.5" cy="430.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="452.5" cy="462.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="403.0" cy="440.9" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="350.5,408.4 475.8,408.4 475.8,484.9 350.5,484.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="477.3,433.7 477.3,470.6" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="351.2,425.1 378.3,425.1" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="349.2" cy="407.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="380.3" cy="407.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="318.3" cy="557.8" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="377.4" cy="557.8" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="318.3" cy="611.9" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="374.9" cy="668.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="418.8" cy="685.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="438.9" cy="557.8" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="357.5,577.4 441.5,577.4 441.5,646.4 357.5,646.4 357.5,577.4" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="387.5,570.7 350.8,570.7 350.8,600.0" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="411.5,570.7 448.2,570.7 448.2,600.0" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="448.2,623.9 448.2,653.2 411.5,653.2" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="387.5,653.2 350.8,653.2 350.8,623.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<polyline points="347.8,661.2 347.8,717.3" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="473.8" cy="572.6" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="473.8" cy="634.1" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="92.5" cy="767.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="170.5" cy="767.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<polyline points="58.0,842.5 202.0,842.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
+<circle cx="145.0" cy="730.8" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
+<circle cx="196.0" cy="730.8" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
+<line x1="79.9" y1="505.5" x2="79.9" y2="626.1" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
+<text x="93.9" y="565.8" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="start" font-weight="bold" fill="#a35a00">CURT-LIV 2.45 m</text>
+<line x1="79.9" y1="340.7" x2="79.9" y2="461.3" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
+<text x="93.9" y="401.0" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="start" font-weight="bold" fill="#a35a00">CURT-DIN 2.45 m</text>
+<line x1="472.6" y1="206.9" x2="472.6" y2="326.3" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
+<text x="458.6" y="266.6" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="end" font-weight="bold" fill="#a35a00">CURT-MBR-S 2.43 m</text>
+<line x1="472.6" y1="657.2" x2="472.6" y2="733.6" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
+<text x="458.6" y="695.4" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="end" font-weight="bold" fill="#a35a00">CURT-CBR 1.55 m</text>
+<line x1="347.8" y1="87.4" x2="422.2" y2="87.4" stroke="#9aa7a9" stroke-width="5" stroke-dasharray="4,4" stroke-linecap="round"/>
+<text x="385.0" y="103.4" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#9aa7a9">CURT-MBR-W03 held</text>
+<rect x="226.8" y="695.5" width="9" height="9" fill="#20343b"/>
+<text x="238.2" y="694.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-01</text>
+<rect x="274.8" y="396.2" width="9" height="9" fill="#20343b"/>
+<text x="286.2" y="394.8" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-02</text>
+<rect x="274.8" y="221.5" width="9" height="9" fill="#20343b"/>
+<text x="286.2" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-03</text>
+<rect x="263.5" y="149.5" width="9" height="9" fill="#20343b"/>
+<text x="275.0" y="148.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-04</text>
+<rect x="298.8" y="250.0" width="9" height="9" fill="#20343b"/>
+<text x="310.2" y="248.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-05</text>
+<rect x="474.2" y="115.6" width="9" height="9" fill="#20343b"/>
+<text x="485.8" y="114.1" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-05L</text>
+<rect x="474.2" y="194.4" width="9" height="9" fill="#20343b"/>
+<text x="485.8" y="192.9" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-05R</text>
+<rect x="333.2" y="341.5" width="9" height="9" fill="#20343b"/>
+<text x="344.8" y="340.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-06</text>
+<rect x="329.5" y="394.0" width="9" height="9" fill="#20343b"/>
+<text x="341.0" y="392.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-06B</text>
+<rect x="333.2" y="428.5" width="9" height="9" fill="#20343b"/>
+<text x="344.8" y="427.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-07</text>
+<rect x="333.2" y="484.8" width="9" height="9" fill="#20343b"/>
+<text x="344.8" y="483.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-07B</text>
+<rect x="356.8" y="489.3" width="9" height="9" fill="#20343b"/>
+<text x="368.3" y="507.8" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-08</text>
+<rect x="474.2" y="543.5" width="9" height="9" fill="#20343b"/>
+<text x="485.8" y="542.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-08RL</text>
+<rect x="474.2" y="660.1" width="9" height="9" fill="#20343b"/>
+<text x="485.8" y="658.6" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-08RR</text>
+<polygon points="106.0,688.0 112.0,694.0 106.0,700.0 100.0,694.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="98.0" y="697.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P04 60W</text>
+<polygon points="224.5,709.0 230.5,715.0 224.5,721.0 218.5,715.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="216.5" y="718.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P05 100W</text>
+<polygon points="259.0,401.5 265.0,407.5 259.0,413.5 253.0,407.5" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="251.0" y="410.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P06 30W</text>
+<polygon points="224.5,421.0 230.5,427.0 224.5,433.0 218.5,427.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="216.5" y="430.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P07 150W*</text>
+<polygon points="242.5,244.0 248.5,250.0 242.5,256.0 236.5,250.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="234.5" y="253.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P08 150W</text>
+<polygon points="242.5,229.0 248.5,235.0 242.5,241.0 236.5,235.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="234.5" y="238.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P10 60W</text>
+<polygon points="268.0,130.0 274.0,136.0 268.0,142.0 262.0,136.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="260.0" y="139.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P11 30W</text>
+<polygon points="304.0,280.0 310.0,286.0 304.0,292.0 298.0,286.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="296.0" y="289.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P12 240W*</text>
+<polygon points="333.2,358.0 339.2,364.0 333.2,370.0 327.2,364.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="325.2" y="367.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P14 200W</text>
+<polygon points="323.5,448.0 329.5,454.0 323.5,460.0 317.5,454.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="315.5" y="457.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P15 240W</text>
+<polygon points="310.9,571.5 316.9,577.5 310.9,583.5 304.9,577.5" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="302.9" y="580.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P16 240W</text>
+<line x1="535.0" y1="760.0" x2="535.0" y2="800.0" stroke="#20343b" stroke-width="2"/>
+<polygon points="529.0,794.0 541.0,794.0 535.0,806.0" fill="#20343b"/>
+<text x="535.0" y="820.0" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#20343b">N</text>
+<circle cx="531.0" cy="80.0" r="5" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
+<text x="551.0" y="84.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">2700 K (coves, lines,</text>
+<text x="551.0" y="96.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">mood, pooja)</text>
+<circle cx="531.0" cy="114.0" r="5" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
+<text x="551.0" y="118.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">3000 K (main</text>
+<text x="551.0" y="130.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">living/bedroom)</text>
+<circle cx="531.0" cy="148.0" r="5" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
+<text x="551.0" y="152.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">4000 K (kitchen, baths,</text>
+<text x="551.0" y="164.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">task)</text>
+<line x1="525.0" y1="182.0" x2="543.0" y2="182.0" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3"/>
+<text x="551.0" y="186.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">curtain-pocket strip, 2700</text>
+<text x="551.0" y="198.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">K, room LOW knob</text>
+<line x1="525.0" y1="216.0" x2="543.0" y2="216.0" stroke="#9aa7a9" stroke-width="5" stroke-dasharray="4,4"/>
+<text x="551.0" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">MBR W03 pocket: held</text>
+<rect x="527.0" y="245.5" width="9" height="9" fill="#20343b"/>
+<text x="551.0" y="254.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">switch board (SB-xx)</text>
+<polygon points="532.0,278.0 538.0,284.0 532.0,290.0 526.0,284.0" fill="#fff" stroke="#7a3fa0" stroke-width="1.6"/>
+<text x="551.0" y="288.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">24 V supply in hatch (* =</text>
+<text x="551.0" y="300.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">upsized for curtain strip)</text>
+<line x1="525.0" y1="318.0" x2="543.0" y2="318.0" stroke="#4f8fbf" stroke-width="3"/>
+<text x="551.0" y="322.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">window</text>
+<line x1="525.0" y1="352.0" x2="543.0" y2="352.0" stroke="#b08a5a" stroke-width="3"/>
+<text x="551.0" y="356.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">door</text>
+<text x="525" y="390" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#7a3fa0">P01 480 W class: hatch</text>
+<text x="525" y="403" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#7a3fa0">location and fit unverified</text>
+</svg>

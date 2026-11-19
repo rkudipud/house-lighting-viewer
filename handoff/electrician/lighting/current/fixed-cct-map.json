@@ -1,0 +1,3979 @@
+{
+  "schema": "lighting-fixed-cct-map/1",
+  "purpose": "One fixed colour temperature per fitting plus the brightness-only control groups, for the public viewer and the controls pack. Not a product schedule.",
+  "binding": {
+    "master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+    "design_inputs_sha256": "fd3ffb1db7f447566cb1f1b0af2b8ed3b0c5a69ebfe5eb9f9745f8b3632f3fc6",
+    "fragment_file_sha256": "9a9de9788adfdce218ee12c5596c057707e9aa281e457822d34c4749c11c3f4f",
+    "baseline_design_inputs_sha256": "4fd1b24c521a37a0ebe7b345805827a64bf7c43579cf12133171a514b3c7f7e7",
+    "curtain_pocket_candidate_json_sha256": "c2bef62a2f9927508fea09e1d4b6b3ffe07e0881d01df6acbebe3fc1cb907bd3",
+    "photometry_source_design_inputs_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
+    "original_map_binding": {
+      "master_sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
+      "design_inputs_sha256": "a8dbdf655b3534e568a44d5a282e0f71124362746cecbb80bc817407d664d8b0",
+      "fragment_file_sha256": "73306931b538ae39808979e9c75be4a5e30d16705353608019957decfbe84e86",
+      "baseline_design_inputs_sha256": "4fd1b24c521a37a0ebe7b345805827a64bf7c43579cf12133171a514b3c7f7e7",
+      "curtain_pocket_candidate_json_sha256": "1135224d612b4f6cb8fb8bac6bbb87ea3e53a1b29d6a973aa8ca63e670a269d7"
+    },
+    "binding_method": "Current master/selection rebind; inherited optical results are not recalculated"
+  },
+  "status": {
+    "construction_release": false,
+    "product_approval": false,
+    "exact_chain_proven": false,
+    "photometry": "generic analytic optics; no manufacturer files; no equivalent-photometry claim for the fixed-white cove strip (720 lm/m generic)"
+  },
+  "policy": "Fixed CCT per fitting; 2700 K coves and mood/decorative strips; 4000 K living, dining and bedroom HIGH mains and task lights; 3000 K readers, art, lobby mains and balcony cylinders. Brightness controls only. Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+  "user_correction": "homeowner correction (forwarded): 'fixed' means one non-adjustable CCT per fitting by room and use, not one white for the house; every cove and decorative/mood LED strip is warm white about 2700 K including the pooja strip; every other light has a fixed CCT chosen by room, task and ergonomics; keep product variants low; no CCT controls or tunable hardware",
+  "cct_rules": {
+    "R27-STRIP": {
+      "cct_k": 2700,
+      "applies_to": "every cove, flush linear in a LOW lane (LINE), TV-bias and headboard graze strip, pooja strip, bath perimeter / niche / under-vanity strip, balcony plinth, curtain-pocket strips (candidate)",
+      "reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane"
+    },
+    "R27-DECOR": {
+      "cct_k": 2700,
+      "applies_to": "dining pendant, pooja pin spot, balcony up-down wall lights, PIR night/step lights",
+      "reason": "visible decorative lamp, or a light used late or at night: warmest, lowest blue content; pooja light is traditionally warm; night routes avoid cool light that wakes people"
+    },
+    "R30-MAIN": {
+      "cct_k": 3000,
+      "applies_to": "art-wall track, readers, lobby mains and balcony cylinders",
+      "reason": "Retained fixed 3000 K for these fittings."
+    },
+    "R40-TASK": {
+      "cct_k": 4000,
+      "applies_to": "kitchen main and worktop task, utility, dressing, bath main/vanity-spot/mirror/face lights, lobby mirror bar, children's study task",
+      "reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer"
+    },
+    "R40-MAIN": {
+      "cct_k": 4000,
+      "applies_to": "HIGH mains in living, dining and both bedrooms",
+      "reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending."
+    }
+  },
+  "cct_bins_k": {
+    "2700": "30 fittings: coves, LINE and mood strips and warm decorative lights.",
+    "3000": "12 fittings: readers, art track, lobby mains and balcony cylinders.",
+    "4000": "62 fittings: living, dining and bedroom mains, kitchen and other task and wet-room lights."
+  },
+  "accepted_minor_mixes": [
+    "kitchen: 2700 K perimeter cove (ceiling) above 4000 K main and worktop task: layered warm background plus neutral task plane; the cove does not light the worktop directly",
+    "bath: 2700 K perimeter/niche/under-vanity strips with 4000 K main, mirror and face lights: the face plane is lit only by 4000 K, the warm strips light the wall and ceiling band",
+    "Kitchen and dining mains are both 4000 K; their coves remain 2700 K.",
+    "balcony: 3000 K cylinders with 2700 K plinth and up-down wall lights (300 K step, outdoor-facing room)"
+  ],
+  "layers": {
+    "HIGH": "functional white (downlights, vanity pair, mirror lights); brightness-only",
+    "LOW": "cove / linear / mood mood layer; brightness-only",
+    "TASK": "task fitting (kitchen under-cabinet, utility, study); brightness-only",
+    "ACCENT": "pooja strip / pooja spot; brightness-only",
+    "FACE": "bathroom mirror face light pair; own brightness knob (HD-17)",
+    "NIGHT": "PIR step light; adjustable brightness on the fitting",
+    "READER": "on-fitting reader with integral dimmer",
+    "PENDANT": "230 V decorative pendant; own mains dimmer",
+    "ART": "48 V magnetic track on the art wall; own dimmer"
+  },
+  "counts": {
+    "fittings": 104,
+    "groups": 37,
+    "knob_groups": 21,
+    "cct_knobs": 0,
+    "mains_dimmers_incl_track": 10,
+    "by_cct_k": {
+      "2700": 30,
+      "3000": 12,
+      "4000": 62
+    },
+    "selected_curtain_pocket_strips": 4,
+    "fixed_cct_items_including_selected_strips": 108
+  },
+  "groups": [
+    {
+      "group_id": "K-BAL-HIGH",
+      "rooms": [
+        "BAL"
+      ],
+      "layer": "HIGH",
+      "label": "Balcony HIGH",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C07"
+      ],
+      "fittings": [
+        "BAL-H1",
+        "BAL-H2"
+      ],
+      "n_fittings": 2,
+      "cct_k": [
+        3000
+      ],
+      "cct_rules": [
+        "R30-MAIN"
+      ],
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "supplies": [
+        "P05"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "BAL"
+    },
+    {
+      "group_id": "K-BAL-LOW",
+      "rooms": [
+        "BAL"
+      ],
+      "layer": "LOW",
+      "label": "Balcony LOW mood",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C08"
+      ],
+      "fittings": [
+        "BAL-L1",
+        "BAL-L2",
+        "BAL-L3"
+      ],
+      "n_fittings": 3,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-DECOR",
+        "R27-STRIP"
+      ],
+      "W_nominal": 26.6,
+      "W_envelope": 26.6,
+      "supplies": [
+        "P05"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "BAL"
+    },
+    {
+      "group_id": "K-CBR-LOW",
+      "rooms": [
+        "CBR"
+      ],
+      "layer": "LOW",
+      "label": "Children's LOW: tray cove + line",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C39",
+        "C40"
+      ],
+      "fittings": [
+        "CBR-L1",
+        "CBR-X1",
+        "CBR-X2",
+        "CBR-X3",
+        "CBR-X4"
+      ],
+      "n_fittings": 5,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 92.6,
+      "W_envelope": 92.6,
+      "supplies": [
+        "P16"
+      ],
+      "knob_outputs": 2,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "CBR"
+    },
+    {
+      "group_id": "K-CBR-STUDY",
+      "rooms": [
+        "CBR"
+      ],
+      "layer": "TASK",
+      "label": "Children's study task",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C38"
+      ],
+      "fittings": [
+        "CBR-S1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 16.0,
+      "W_envelope": 16.0,
+      "supplies": [
+        "P16"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "CBR"
+    },
+    {
+      "group_id": "K-DIN-LOW",
+      "rooms": [
+        "DIN"
+      ],
+      "layer": "LOW",
+      "label": "Dining LOW cove",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C12"
+      ],
+      "fittings": [
+        "DIN-L2"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 49.7,
+      "W_envelope": 49.7,
+      "supplies": [
+        "P07"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "DIN"
+    },
+    {
+      "group_id": "K-DIN-PASSAGE",
+      "rooms": [
+        "DIN"
+      ],
+      "layer": "HIGH",
+      "label": "Dining passage downlight (stays dimmable: homeowner rule)",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C10"
+      ],
+      "fittings": [
+        "DIN-H6"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-MAIN"
+      ],
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "supplies": [
+        "P06"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "DIN"
+    },
+    {
+      "group_id": "K-DRS-HIGH",
+      "rooms": [
+        "DRS"
+      ],
+      "layer": "HIGH",
+      "label": "Dressing HIGH",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C27"
+      ],
+      "fittings": [
+        "DRS-H1",
+        "DRS-H2"
+      ],
+      "n_fittings": 2,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 14,
+      "W_envelope": 14,
+      "supplies": [
+        "P14"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "DRS"
+    },
+    {
+      "group_id": "K-KIT-LOW",
+      "rooms": [
+        "KIT"
+      ],
+      "layer": "LOW",
+      "label": "Kitchen LOW cove",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C17"
+      ],
+      "fittings": [
+        "KIT-L1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 70.6,
+      "W_envelope": 70.6,
+      "supplies": [
+        "P08"
+      ],
+      "knob_outputs": 2,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "KIT"
+    },
+    {
+      "group_id": "K-KIT-TASK",
+      "rooms": [
+        "KIT"
+      ],
+      "layer": "TASK",
+      "label": "Kitchen under-cabinet + sink-end task",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C16"
+      ],
+      "fittings": [
+        "KIT-T1",
+        "KIT-T2",
+        "KIT-T3",
+        "KIT-T4"
+      ],
+      "n_fittings": 4,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 31.8,
+      "W_envelope": 31.8,
+      "supplies": [
+        "P10"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "KIT"
+    },
+    {
+      "group_id": "K-LIV-LOW",
+      "rooms": [
+        "DIN",
+        "LIV"
+      ],
+      "layer": "LOW",
+      "label": "Living LOW: tray cove + TV bias + hall line",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "fittings": [
+        "LIV-L1",
+        "LIV-L2",
+        "LIV-X1",
+        "LIV-X2",
+        "DIN-X1"
+      ],
+      "n_fittings": 5,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 161.9,
+      "W_envelope": 161.9,
+      "supplies": [
+        "P01"
+      ],
+      "knob_outputs": 5,
+      "amplifiers": 1,
+      "dimmable": true,
+      "room": "LIV",
+      "selected_S1": {
+        "curtain_strip": "CURT-LIV",
+        "outputs": 6,
+        "modeled_repeaters": 2,
+        "supply": "P01",
+        "planned_nameplate_W": 480,
+        "protection_and_chain": "HOLD"
+      }
+    },
+    {
+      "group_id": "K-LIV-POOJA-SPOT",
+      "rooms": [
+        "LIV"
+      ],
+      "layer": "ACCENT",
+      "label": "Pooja pin spot (own knob: the shadow-casting source must be dimmable/off alone)",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C06B"
+      ],
+      "fittings": [
+        "LIV-P2"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-DECOR"
+      ],
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "supplies": [
+        "P04"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "LIV"
+    },
+    {
+      "group_id": "K-LIV-POOJA-STRIP",
+      "rooms": [
+        "LIV"
+      ],
+      "layer": "ACCENT",
+      "label": "Pooja niche strip (own knob, homeowner decision)",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C06A"
+      ],
+      "fittings": [
+        "LIV-P1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 21.7,
+      "W_envelope": 21.7,
+      "supplies": [
+        "P04"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "LIV"
+    },
+    {
+      "group_id": "K-LOB",
+      "rooms": [
+        "LOB"
+      ],
+      "layer": "HIGH",
+      "label": "Lobby HIGH + face bar",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C31",
+        "C32"
+      ],
+      "fittings": [
+        "LOB-H1",
+        "LOB-H2",
+        "LOB-F1"
+      ],
+      "n_fittings": 3,
+      "cct_k": [
+        3000,
+        4000
+      ],
+      "cct_rules": [
+        "R30-MAIN",
+        "R40-TASK"
+      ],
+      "W_nominal": 24,
+      "W_envelope": 24,
+      "supplies": [
+        "P15"
+      ],
+      "knob_outputs": 2,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "LOB"
+    },
+    {
+      "group_id": "K-MBR-LOW",
+      "rooms": [
+        "MBR"
+      ],
+      "layer": "LOW",
+      "label": "Master LOW: tray cove + headboard line + mood",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C21",
+        "C22",
+        "C23"
+      ],
+      "fittings": [
+        "MBR-L1",
+        "MBR-L2",
+        "MBR-X1",
+        "MBR-X2"
+      ],
+      "n_fittings": 4,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 90.8,
+      "W_envelope": 90.8,
+      "supplies": [
+        "P12"
+      ],
+      "knob_outputs": 3,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "MBR"
+    },
+    {
+      "group_id": "K-TL1-FACE",
+      "rooms": [
+        "TL1"
+      ],
+      "layer": "FACE",
+      "label": "Bath 1 face pair (HD-17 independent knob)",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C29B"
+      ],
+      "fittings": [
+        "TL1-F1",
+        "TL1-F2"
+      ],
+      "n_fittings": 2,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "supplies": [
+        "P14"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "TL1"
+    },
+    {
+      "group_id": "K-TL1-HIGH",
+      "rooms": [
+        "TL1"
+      ],
+      "layer": "HIGH",
+      "label": "Bath 1 HIGH: ceiling spots + vanity pair",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C28",
+        "C29A"
+      ],
+      "fittings": [
+        "TL1-M1",
+        "TL1-M2",
+        "TL1-G1",
+        "TL1-G2",
+        "TL1-G3"
+      ],
+      "n_fittings": 5,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 43,
+      "W_envelope": 43,
+      "supplies": [
+        "P14"
+      ],
+      "knob_outputs": 2,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "TL1"
+    },
+    {
+      "group_id": "K-TL1-LOW",
+      "rooms": [
+        "TL1"
+      ],
+      "layer": "LOW",
+      "label": "Bath 1 LOW: perimeter + mood",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C30A",
+        "C30B"
+      ],
+      "fittings": [
+        "TL1-L1",
+        "TL1-L2",
+        "TL1-L3"
+      ],
+      "n_fittings": 3,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 39.1,
+      "W_envelope": 39.1,
+      "supplies": [
+        "P14"
+      ],
+      "knob_outputs": 2,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "TL1"
+    },
+    {
+      "group_id": "K-TL2-FACE",
+      "rooms": [
+        "TL2"
+      ],
+      "layer": "FACE",
+      "label": "Bath 2 face pair (HD-17 independent knob)",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C35B"
+      ],
+      "fittings": [
+        "TL2-F1",
+        "TL2-F2"
+      ],
+      "n_fittings": 2,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "supplies": [
+        "P15"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "TL2"
+    },
+    {
+      "group_id": "K-TL2-HIGH",
+      "rooms": [
+        "TL2"
+      ],
+      "layer": "HIGH",
+      "label": "Bath 2 HIGH: ceiling spots + vanity pair",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C34",
+        "C35A"
+      ],
+      "fittings": [
+        "TL2-M1",
+        "TL2-M2",
+        "TL2-G1",
+        "TL2-G2",
+        "TL2-G3"
+      ],
+      "n_fittings": 5,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 43,
+      "W_envelope": 43,
+      "supplies": [
+        "P15"
+      ],
+      "knob_outputs": 2,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "TL2"
+    },
+    {
+      "group_id": "K-TL2-LOW",
+      "rooms": [
+        "TL2"
+      ],
+      "layer": "LOW",
+      "label": "Bath 2 LOW: perimeter + mood",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C36A",
+        "C36B"
+      ],
+      "fittings": [
+        "TL2-L1",
+        "TL2-L2",
+        "TL2-L3"
+      ],
+      "n_fittings": 3,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-STRIP"
+      ],
+      "W_nominal": 39.1,
+      "W_envelope": 39.1,
+      "supplies": [
+        "P15"
+      ],
+      "knob_outputs": 2,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "TL2"
+    },
+    {
+      "group_id": "K-UTL-TASK",
+      "rooms": [
+        "UTL"
+      ],
+      "layer": "TASK",
+      "label": "Utility wash-counter task",
+      "control_device": "24 V single-colour PWM wall knob (knob group)",
+      "circuits": [
+        "C19"
+      ],
+      "fittings": [
+        "UTL-T1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 11.0,
+      "W_envelope": 11.0,
+      "supplies": [
+        "P11"
+      ],
+      "knob_outputs": 1,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "UTL"
+    },
+    {
+      "group_id": "DIM-C01",
+      "rooms": [
+        "LIV"
+      ],
+      "layer": "HIGH",
+      "label": "Living HIGH: window half (5 lamps)",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C01"
+      ],
+      "fittings": [
+        "LIV-H1",
+        "LIV-H2",
+        "LIV-H3",
+        "LIV-H4",
+        "LIV-H5"
+      ],
+      "n_fittings": 5,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-MAIN"
+      ],
+      "W_nominal": 40,
+      "W_envelope": 40,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "LIV"
+    },
+    {
+      "group_id": "DIM-C02",
+      "rooms": [
+        "LIV"
+      ],
+      "layer": "HIGH",
+      "label": "Living HIGH: TV half (5 lamps)",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C02"
+      ],
+      "fittings": [
+        "LIV-H6",
+        "LIV-H7",
+        "LIV-H8",
+        "LIV-H9",
+        "LIV-H10"
+      ],
+      "n_fittings": 5,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-MAIN"
+      ],
+      "W_nominal": 40,
+      "W_envelope": 40,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "LIV"
+    },
+    {
+      "group_id": "DIM-C09",
+      "rooms": [
+        "DIN"
+      ],
+      "layer": "HIGH",
+      "label": "Dining HIGH",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C09"
+      ],
+      "fittings": [
+        "DIN-H1",
+        "DIN-H2",
+        "DIN-H3"
+      ],
+      "n_fittings": 3,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-MAIN"
+      ],
+      "W_nominal": 30,
+      "W_envelope": 30,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "DIN"
+    },
+    {
+      "group_id": "DIM-C11",
+      "rooms": [
+        "DIN"
+      ],
+      "layer": "PENDANT",
+      "label": "Dining pendant (230 V)",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C11"
+      ],
+      "fittings": [
+        "DIN-L1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-DECOR"
+      ],
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "DIN"
+    },
+    {
+      "group_id": "DIM-C14",
+      "rooms": [
+        "KIT"
+      ],
+      "layer": "HIGH",
+      "label": "Kitchen HIGH, dimmer 1 of 2",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C14"
+      ],
+      "fittings": [
+        "KIT-H1",
+        "KIT-H2",
+        "KIT-H3",
+        "KIT-H4"
+      ],
+      "n_fittings": 4,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 40,
+      "W_envelope": 40,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "KIT"
+    },
+    {
+      "group_id": "DIM-C15",
+      "rooms": [
+        "KIT"
+      ],
+      "layer": "HIGH",
+      "label": "Kitchen HIGH, dimmer 2 of 2",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C15"
+      ],
+      "fittings": [
+        "KIT-H5",
+        "KIT-H6",
+        "KIT-H7",
+        "KIT-H8"
+      ],
+      "n_fittings": 4,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 31,
+      "W_envelope": 31,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "KIT"
+    },
+    {
+      "group_id": "DIM-C18",
+      "rooms": [
+        "UTL"
+      ],
+      "layer": "HIGH",
+      "label": "Utility HIGH",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C18"
+      ],
+      "fittings": [
+        "UTL-H1",
+        "UTL-H2",
+        "UTL-H3"
+      ],
+      "n_fittings": 3,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-TASK"
+      ],
+      "W_nominal": 36,
+      "W_envelope": 36,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "UTL"
+    },
+    {
+      "group_id": "DIM-C20",
+      "rooms": [
+        "MBR"
+      ],
+      "layer": "HIGH",
+      "label": "Master bedroom HIGH",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C20"
+      ],
+      "fittings": [
+        "MBR-H1",
+        "MBR-H2",
+        "MBR-H3",
+        "MBR-H4",
+        "MBR-H5",
+        "MBR-H6",
+        "MBR-H7",
+        "MBR-H8"
+      ],
+      "n_fittings": 8,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-MAIN"
+      ],
+      "W_nominal": 48,
+      "W_envelope": 48,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "MBR"
+    },
+    {
+      "group_id": "DIM-C37",
+      "rooms": [
+        "CBR"
+      ],
+      "layer": "HIGH",
+      "label": "Children's bedroom HIGH",
+      "control_device": "230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",
+      "circuits": [
+        "C37"
+      ],
+      "fittings": [
+        "CBR-H1",
+        "CBR-H2",
+        "CBR-H3",
+        "CBR-H4",
+        "CBR-H5",
+        "CBR-H6"
+      ],
+      "n_fittings": 6,
+      "cct_k": [
+        4000
+      ],
+      "cct_rules": [
+        "R40-MAIN"
+      ],
+      "W_nominal": 36,
+      "W_envelope": 36,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "CBR"
+    },
+    {
+      "group_id": "INT-C25",
+      "rooms": [
+        "MBR"
+      ],
+      "layer": "READER",
+      "label": "Master bedroom reader",
+      "control_device": "integral dimmer on the fitting",
+      "circuits": [
+        "C25"
+      ],
+      "fittings": [
+        "MBR-R1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        3000
+      ],
+      "cct_rules": [
+        "R30-MAIN"
+      ],
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "MBR"
+    },
+    {
+      "group_id": "INT-C26",
+      "rooms": [
+        "MBR"
+      ],
+      "layer": "READER",
+      "label": "Master bedroom reader",
+      "control_device": "integral dimmer on the fitting",
+      "circuits": [
+        "C26"
+      ],
+      "fittings": [
+        "MBR-R2"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        3000
+      ],
+      "cct_rules": [
+        "R30-MAIN"
+      ],
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "MBR"
+    },
+    {
+      "group_id": "INT-C41",
+      "rooms": [
+        "CBR"
+      ],
+      "layer": "READER",
+      "label": "Children's bedroom reader",
+      "control_device": "integral dimmer on the fitting",
+      "circuits": [
+        "C41"
+      ],
+      "fittings": [
+        "CBR-R1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        3000
+      ],
+      "cct_rules": [
+        "R30-MAIN"
+      ],
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "CBR"
+    },
+    {
+      "group_id": "INT-C41b",
+      "rooms": [
+        "CBR"
+      ],
+      "layer": "READER",
+      "label": "Children's bedroom reader",
+      "control_device": "integral dimmer on the fitting",
+      "circuits": [
+        "C41b"
+      ],
+      "fittings": [
+        "CBR-R2"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        3000
+      ],
+      "cct_rules": [
+        "R30-MAIN"
+      ],
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "CBR"
+    },
+    {
+      "group_id": "PIR-C24",
+      "rooms": [
+        "MBR"
+      ],
+      "layer": "NIGHT",
+      "label": "Master bedroom night light (PIR)",
+      "control_device": "PIR step light, brightness adjustable on the fitting",
+      "circuits": [
+        "C24"
+      ],
+      "fittings": [
+        "MBR-N1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-DECOR"
+      ],
+      "W_nominal": 1,
+      "W_envelope": 1,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "MBR"
+    },
+    {
+      "group_id": "PIR-C33",
+      "rooms": [
+        "LOB"
+      ],
+      "layer": "NIGHT",
+      "label": "Lobby night light (PIR)",
+      "control_device": "PIR step light, brightness adjustable on the fitting",
+      "circuits": [
+        "C33"
+      ],
+      "fittings": [
+        "LOB-N1"
+      ],
+      "n_fittings": 1,
+      "cct_k": [
+        2700
+      ],
+      "cct_rules": [
+        "R27-DECOR"
+      ],
+      "W_nominal": 1,
+      "W_envelope": 1,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "LOB"
+    },
+    {
+      "group_id": "TRK-C13",
+      "rooms": [
+        "DIN"
+      ],
+      "layer": "ART",
+      "label": "Dining art-wall track (48 V)",
+      "control_device": "48 V track driver with maker-listed dimmer",
+      "circuits": [
+        "C13"
+      ],
+      "fittings": [
+        "FW-T1",
+        "FW-T2",
+        "FW-T3",
+        "FW-T4"
+      ],
+      "n_fittings": 4,
+      "cct_k": [
+        3000
+      ],
+      "cct_rules": [
+        "R30-MAIN"
+      ],
+      "W_nominal": 26,
+      "W_envelope": 26,
+      "supplies": [],
+      "knob_outputs": null,
+      "amplifiers": 0,
+      "dimmable": true,
+      "room": "DIN"
+    }
+  ],
+  "fittings": [
+    {
+      "id": "LIV-H1",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C01",
+      "group_id": "DIM-C01",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-H2",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C01",
+      "group_id": "DIM-C01",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CURTAIN-POCKET"
+      ]
+    },
+    {
+      "id": "LIV-H3",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C01",
+      "group_id": "DIM-C01",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CURTAIN-POCKET"
+      ]
+    },
+    {
+      "id": "LIV-H4",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C01",
+      "group_id": "DIM-C01",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-H5",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C01",
+      "group_id": "DIM-C01",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-H6",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C02",
+      "group_id": "DIM-C02",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-H7",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C02",
+      "group_id": "DIM-C02",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-H8",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C02",
+      "group_id": "DIM-C02",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8A",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-H9",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C02",
+      "group_id": "DIM-C02",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8A",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-H10",
+      "room": "LIV",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C02",
+      "group_id": "DIM-C02",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8A",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-L1",
+      "room": "LIV",
+      "lane": "COVE",
+      "layer": "LOW",
+      "circuit": "C03",
+      "group_id": "K-LIV-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "COVE_FW",
+      "cove": true,
+      "W_nominal": 92.24,
+      "W_envelope": 92.24,
+      "lm": 8301,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-L2",
+      "room": "LIV",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C04",
+      "group_id": "K-LIV-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "BACK",
+      "cove": false,
+      "W_nominal": 10.08,
+      "W_envelope": 10.08,
+      "lm": 922,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LIV-X1",
+      "room": "LIV",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C05",
+      "group_id": "K-LIV-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 27.04,
+      "W_envelope": 27.04,
+      "lm": 2030,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CENTRE-RECESS"
+      ]
+    },
+    {
+      "id": "LIV-X2",
+      "room": "LIV",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C05",
+      "group_id": "K-LIV-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 5.6,
+      "W_envelope": 5.6,
+      "lm": 421,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CENTRE-RECESS"
+      ]
+    },
+    {
+      "id": "LIV-P1",
+      "room": "LIV",
+      "lane": "ACCENT",
+      "layer": "ACCENT",
+      "circuit": "C06A",
+      "group_id": "K-LIV-POOJA-STRIP",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "BACK",
+      "cove": false,
+      "W_nominal": 21.72,
+      "W_envelope": 21.72,
+      "lm": 1991,
+      "ip": "IP20",
+      "cri_min": 95,
+      "r9_min": 80,
+      "placement_hold_ids": [
+        "H-POOJA-GEOMETRY"
+      ]
+    },
+    {
+      "id": "LIV-P2",
+      "room": "LIV",
+      "lane": "ACCENT",
+      "layer": "ACCENT",
+      "circuit": "C06B",
+      "group_id": "K-LIV-POOJA-SPOT",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-DECOR",
+      "cct_reason": "visible decorative lamp, or a light used late or at night: warmest, lowest blue content; pooja light is traditionally warm; night routes avoid cool light that wakes people",
+      "fixture_type": "PIN6V",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 480,
+      "ip": "IP20",
+      "cri_min": 95,
+      "r9_min": 80,
+      "placement_hold_ids": [
+        "H-POOJA-GEOMETRY"
+      ]
+    },
+    {
+      "id": "DIN-H1",
+      "room": "DIN",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C09",
+      "group_id": "DIM-C09",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CURTAIN-POCKET"
+      ]
+    },
+    {
+      "id": "DIN-H2",
+      "room": "DIN",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C09",
+      "group_id": "DIM-C09",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-HALL-BEAM"
+      ]
+    },
+    {
+      "id": "DIN-H3",
+      "room": "DIN",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C09",
+      "group_id": "DIM-C09",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-HALL-BEAM"
+      ]
+    },
+    {
+      "id": "DIN-H6",
+      "room": "DIN",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C10",
+      "group_id": "K-DIN-PASSAGE",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL8V",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "DIN-L1",
+      "room": "DIN",
+      "lane": "MOOD",
+      "layer": "PENDANT",
+      "circuit": "C11",
+      "group_id": "DIM-C11",
+      "control": "TE",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-DECOR",
+      "cct_reason": "visible decorative lamp, or a light used late or at night: warmest, lowest blue content; pooja light is traditionally warm; night routes avoid cool light that wakes people",
+      "fixture_type": "PEND",
+      "cove": false,
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "lm": 1000,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CENTRE-RECESS"
+      ]
+    },
+    {
+      "id": "DIN-L2",
+      "room": "DIN",
+      "lane": "COVE",
+      "layer": "LOW",
+      "circuit": "C12",
+      "group_id": "K-DIN-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "COVE_FW",
+      "cove": true,
+      "W_nominal": 49.68,
+      "W_envelope": 49.68,
+      "lm": 4473,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "DIN-X1",
+      "room": "DIN",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C05",
+      "group_id": "K-LIV-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 26.96,
+      "W_envelope": 26.96,
+      "lm": 2021,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CENTRE-RECESS"
+      ]
+    },
+    {
+      "id": "FW-T1",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "layer": "ART",
+      "circuit": "C13",
+      "group_id": "TRK-C13",
+      "control": "TRK",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "TRK6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 480,
+      "ip": "IP20",
+      "cri_min": 95,
+      "r9_min": 80,
+      "placement_hold_ids": [
+        "H-HALL-BEAM"
+      ]
+    },
+    {
+      "id": "FW-T2",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "layer": "ART",
+      "circuit": "C13",
+      "group_id": "TRK-C13",
+      "control": "TRK",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "TRK6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 480,
+      "ip": "IP20",
+      "cri_min": 95,
+      "r9_min": 80,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "FW-T3",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "layer": "ART",
+      "circuit": "C13",
+      "group_id": "TRK-C13",
+      "control": "TRK",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "TRK6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 480,
+      "ip": "IP20",
+      "cri_min": 95,
+      "r9_min": 80,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "FW-T4",
+      "room": "DIN",
+      "lane": "ACCENT",
+      "layer": "ART",
+      "circuit": "C13",
+      "group_id": "TRK-C13",
+      "control": "TRK",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "TRKLIN",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 95,
+      "r9_min": 80,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H1",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C14",
+      "group_id": "DIM-C14",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H2",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C14",
+      "group_id": "DIM-C14",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H3",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C14",
+      "group_id": "DIM-C14",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H4",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C14",
+      "group_id": "DIM-C14",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H5",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C15",
+      "group_id": "DIM-C15",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL7",
+      "cove": false,
+      "W_nominal": 7,
+      "W_envelope": 7,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H6",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C15",
+      "group_id": "DIM-C15",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL7",
+      "cove": false,
+      "W_nominal": 7,
+      "W_envelope": 7,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H7",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C15",
+      "group_id": "DIM-C15",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL10",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 900,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-H8",
+      "room": "KIT",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C15",
+      "group_id": "DIM-C15",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL7",
+      "cove": false,
+      "W_nominal": 7,
+      "W_envelope": 7,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-T1",
+      "room": "KIT",
+      "lane": "TASK",
+      "layer": "TASK",
+      "circuit": "C16",
+      "group_id": "K-KIT-TASK",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "TASK_LO",
+      "cove": false,
+      "W_nominal": 10.92,
+      "W_envelope": 10.92,
+      "lm": 1090,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-T2",
+      "room": "KIT",
+      "lane": "TASK",
+      "layer": "TASK",
+      "circuit": "C16",
+      "group_id": "K-KIT-TASK",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "TASK",
+      "cove": false,
+      "W_nominal": 6.4,
+      "W_envelope": 6.4,
+      "lm": 640,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-T3",
+      "room": "KIT",
+      "lane": "TASK",
+      "layer": "TASK",
+      "circuit": "C16",
+      "group_id": "K-KIT-TASK",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "TASK",
+      "cove": false,
+      "W_nominal": 5.2,
+      "W_envelope": 5.2,
+      "lm": 518,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-L1",
+      "room": "KIT",
+      "lane": "COVE",
+      "layer": "LOW",
+      "circuit": "C17",
+      "group_id": "K-KIT-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "COVE_FW",
+      "cove": true,
+      "W_nominal": 70.56,
+      "W_envelope": 70.56,
+      "lm": 6348,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "KIT-T4",
+      "room": "KIT",
+      "lane": "TASK",
+      "layer": "TASK",
+      "circuit": "C16",
+      "group_id": "K-KIT-TASK",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 9.28,
+      "W_envelope": 9.28,
+      "lm": 695,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "UTL-H1",
+      "room": "UTL",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C18",
+      "group_id": "DIM-C18",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BULKD",
+      "cove": false,
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "lm": 1100,
+      "ip": "IP65",
+      "cri_min": 80,
+      "r9_min": 0,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "UTL-H2",
+      "room": "UTL",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C18",
+      "group_id": "DIM-C18",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BULKD",
+      "cove": false,
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "lm": 1100,
+      "ip": "IP65",
+      "cri_min": 80,
+      "r9_min": 0,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "UTL-H3",
+      "room": "UTL",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C18",
+      "group_id": "DIM-C18",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BULKD",
+      "cove": false,
+      "W_nominal": 12,
+      "W_envelope": 12,
+      "lm": 1100,
+      "ip": "IP65",
+      "cri_min": 80,
+      "r9_min": 0,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "UTL-T1",
+      "room": "UTL",
+      "lane": "TASK",
+      "layer": "TASK",
+      "circuit": "C19",
+      "group_id": "K-UTL-TASK",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "TASKW",
+      "cove": false,
+      "W_nominal": 11.0,
+      "W_envelope": 11.0,
+      "lm": 988,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H1",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H2",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H3",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H4",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H5",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H6",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H7",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-H8",
+      "room": "MBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C20",
+      "group_id": "DIM-C20",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-L1",
+      "room": "MBR",
+      "lane": "COVE",
+      "layer": "LOW",
+      "circuit": "C21",
+      "group_id": "K-MBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "COVE_FW",
+      "cove": true,
+      "W_nominal": 52.24,
+      "W_envelope": 52.24,
+      "lm": 4705,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-L2",
+      "room": "MBR",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C23",
+      "group_id": "K-MBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "BACK",
+      "cove": false,
+      "W_nominal": 7.68,
+      "W_envelope": 7.68,
+      "lm": 704,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-MBR-BED"
+      ]
+    },
+    {
+      "id": "MBR-X1",
+      "room": "MBR",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C22",
+      "group_id": "K-MBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 15.44,
+      "W_envelope": 15.44,
+      "lm": 1156,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-X2",
+      "room": "MBR",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C22",
+      "group_id": "K-MBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 15.44,
+      "W_envelope": 15.44,
+      "lm": 1156,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "MBR-R1",
+      "room": "MBR",
+      "lane": "READ",
+      "layer": "READER",
+      "circuit": "C25",
+      "group_id": "INT-C25",
+      "control": "INT",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "READ",
+      "cove": false,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "lm": 200,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-MBR-BED"
+      ]
+    },
+    {
+      "id": "MBR-R2",
+      "room": "MBR",
+      "lane": "READ",
+      "layer": "READER",
+      "circuit": "C26",
+      "group_id": "INT-C26",
+      "control": "INT",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "READ",
+      "cove": false,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "lm": 200,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-MBR-BED"
+      ]
+    },
+    {
+      "id": "MBR-N1",
+      "room": "MBR",
+      "lane": "NIGHT",
+      "layer": "NIGHT",
+      "circuit": "C24",
+      "group_id": "PIR-C24",
+      "control": "PIR",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-DECOR",
+      "cct_reason": "visible decorative lamp, or a light used late or at night: warmest, lowest blue content; pooja light is traditionally warm; night routes avoid cool light that wakes people",
+      "fixture_type": "STEP",
+      "cove": false,
+      "W_nominal": 1,
+      "W_envelope": 1,
+      "lm": 40,
+      "ip": "IP20",
+      "cri_min": 80,
+      "r9_min": 0,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "DRS-H1",
+      "room": "DRS",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C27",
+      "group_id": "K-DRS-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL7V",
+      "cove": false,
+      "W_nominal": 7,
+      "W_envelope": 7,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-DRS-SWEEP"
+      ]
+    },
+    {
+      "id": "DRS-H2",
+      "room": "DRS",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C27",
+      "group_id": "K-DRS-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "DL7V",
+      "cove": false,
+      "W_nominal": 7,
+      "W_envelope": 7,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-DRS-SWEEP"
+      ]
+    },
+    {
+      "id": "TL1-M1",
+      "room": "TL1",
+      "lane": "MIRROR",
+      "layer": "HIGH",
+      "circuit": "C29A",
+      "group_id": "K-TL1-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BSPOT8V",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-M2",
+      "room": "TL1",
+      "lane": "MIRROR",
+      "layer": "HIGH",
+      "circuit": "C29A",
+      "group_id": "K-TL1-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BSPOT8V",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-G1",
+      "room": "TL1",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C28",
+      "group_id": "K-TL1-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BDIF9V",
+      "cove": false,
+      "W_nominal": 9,
+      "W_envelope": 9,
+      "lm": 750,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-G2",
+      "room": "TL1",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C28",
+      "group_id": "K-TL1-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BDIF9V",
+      "cove": false,
+      "W_nominal": 9,
+      "W_envelope": 9,
+      "lm": 750,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-G3",
+      "room": "TL1",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C28",
+      "group_id": "K-TL1-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BDIF9V",
+      "cove": false,
+      "W_nominal": 9,
+      "W_envelope": 9,
+      "lm": 750,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-L1",
+      "room": "TL1",
+      "lane": "PERIM",
+      "layer": "LOW",
+      "circuit": "C30A",
+      "group_id": "K-TL1-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "BCOVE",
+      "cove": false,
+      "W_nominal": 31.87,
+      "W_envelope": 31.87,
+      "lm": 2658,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-L2",
+      "room": "TL1",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C30B",
+      "group_id": "K-TL1-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "NICHE",
+      "cove": false,
+      "W_nominal": 4.5,
+      "W_envelope": 4.5,
+      "lm": 375,
+      "ip": "IP67",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-L3",
+      "room": "TL1",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C30B",
+      "group_id": "K-TL1-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "VANITY",
+      "cove": false,
+      "W_nominal": 2.75,
+      "W_envelope": 2.75,
+      "lm": 247,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-F1",
+      "room": "TL1",
+      "lane": "FACE",
+      "layer": "FACE",
+      "circuit": "C29B",
+      "group_id": "K-TL1-FACE",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "FACEV",
+      "cove": false,
+      "W_nominal": 5,
+      "W_envelope": 5,
+      "lm": 350,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL1-F2",
+      "room": "TL1",
+      "lane": "FACE",
+      "layer": "FACE",
+      "circuit": "C29B",
+      "group_id": "K-TL1-FACE",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "FACEV",
+      "cove": false,
+      "W_nominal": 5,
+      "W_envelope": 5,
+      "lm": 350,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LOB-H1",
+      "room": "LOB",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C31",
+      "group_id": "K-LOB",
+      "control": "KNOB1",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "DL7V",
+      "cove": false,
+      "W_nominal": 7,
+      "W_envelope": 7,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LOB-H2",
+      "room": "LOB",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C31",
+      "group_id": "K-LOB",
+      "control": "KNOB1",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "DL7V",
+      "cove": false,
+      "W_nominal": 7,
+      "W_envelope": 7,
+      "lm": 600,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LOB-F1",
+      "room": "LOB",
+      "lane": "MIRROR",
+      "layer": "HIGH",
+      "circuit": "C32",
+      "group_id": "K-LOB",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "FACE10V",
+      "cove": false,
+      "W_nominal": 10,
+      "W_envelope": 10,
+      "lm": 700,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "LOB-N1",
+      "room": "LOB",
+      "lane": "NIGHT",
+      "layer": "NIGHT",
+      "circuit": "C33",
+      "group_id": "PIR-C33",
+      "control": "PIR",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-DECOR",
+      "cct_reason": "visible decorative lamp, or a light used late or at night: warmest, lowest blue content; pooja light is traditionally warm; night routes avoid cool light that wakes people",
+      "fixture_type": "STEP",
+      "cove": false,
+      "W_nominal": 1,
+      "W_envelope": 1,
+      "lm": 40,
+      "ip": "IP20",
+      "cri_min": 80,
+      "r9_min": 0,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-M1",
+      "room": "TL2",
+      "lane": "MIRROR",
+      "layer": "HIGH",
+      "circuit": "C35A",
+      "group_id": "K-TL2-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BSPOT8V",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-M2",
+      "room": "TL2",
+      "lane": "MIRROR",
+      "layer": "HIGH",
+      "circuit": "C35A",
+      "group_id": "K-TL2-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BSPOT8V",
+      "cove": false,
+      "W_nominal": 8,
+      "W_envelope": 8,
+      "lm": 700,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-G1",
+      "room": "TL2",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C34",
+      "group_id": "K-TL2-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BDIF9V",
+      "cove": false,
+      "W_nominal": 9,
+      "W_envelope": 9,
+      "lm": 750,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-G2",
+      "room": "TL2",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C34",
+      "group_id": "K-TL2-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BDIF9V",
+      "cove": false,
+      "W_nominal": 9,
+      "W_envelope": 9,
+      "lm": 750,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-G3",
+      "room": "TL2",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C34",
+      "group_id": "K-TL2-HIGH",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "BDIF9V",
+      "cove": false,
+      "W_nominal": 9,
+      "W_envelope": 9,
+      "lm": 750,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-L1",
+      "room": "TL2",
+      "lane": "PERIM",
+      "layer": "LOW",
+      "circuit": "C36A",
+      "group_id": "K-TL2-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "BCOVE",
+      "cove": false,
+      "W_nominal": 31.87,
+      "W_envelope": 31.87,
+      "lm": 2658,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-L2",
+      "room": "TL2",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C36B",
+      "group_id": "K-TL2-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "NICHE",
+      "cove": false,
+      "W_nominal": 4.5,
+      "W_envelope": 4.5,
+      "lm": 375,
+      "ip": "IP67",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-L3",
+      "room": "TL2",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C36B",
+      "group_id": "K-TL2-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "VANITY",
+      "cove": false,
+      "W_nominal": 2.75,
+      "W_envelope": 2.75,
+      "lm": 247,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-F1",
+      "room": "TL2",
+      "lane": "FACE",
+      "layer": "FACE",
+      "circuit": "C35B",
+      "group_id": "K-TL2-FACE",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "FACEV",
+      "cove": false,
+      "W_nominal": 5,
+      "W_envelope": 5,
+      "lm": 350,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "TL2-F2",
+      "room": "TL2",
+      "lane": "FACE",
+      "layer": "FACE",
+      "circuit": "C35B",
+      "group_id": "K-TL2-FACE",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "FACEV",
+      "cove": false,
+      "W_nominal": 5,
+      "W_envelope": 5,
+      "lm": 350,
+      "ip": "IP44",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "CBR-H1",
+      "room": "CBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C37",
+      "group_id": "DIM-C37",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [],
+      "viewer_operability": "ACTIVE_FOR_REVIEW; C37 dimmer procurement remains held"
+    },
+    {
+      "id": "CBR-H2",
+      "room": "CBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C37",
+      "group_id": "DIM-C37",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [],
+      "viewer_operability": "ACTIVE_FOR_REVIEW; C37 dimmer procurement remains held"
+    },
+    {
+      "id": "CBR-H3",
+      "room": "CBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C37",
+      "group_id": "DIM-C37",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [],
+      "viewer_operability": "ACTIVE_FOR_REVIEW; C37 dimmer procurement remains held"
+    },
+    {
+      "id": "CBR-H4",
+      "room": "CBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C37",
+      "group_id": "DIM-C37",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [],
+      "viewer_operability": "ACTIVE_FOR_REVIEW; C37 dimmer procurement remains held"
+    },
+    {
+      "id": "CBR-H5",
+      "room": "CBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C37",
+      "group_id": "DIM-C37",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [],
+      "viewer_operability": "ACTIVE_FOR_REVIEW; C37 dimmer procurement remains held"
+    },
+    {
+      "id": "CBR-H6",
+      "room": "CBR",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C37",
+      "group_id": "DIM-C37",
+      "control": "TE",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-MAIN",
+      "cct_reason": "Coordinator-selected review proposal responding to the homeowner's preference for whitish HIGH and yellowish LOW; homeowner review and product confirmation pending.",
+      "fixture_type": "DL6",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [],
+      "viewer_operability": "ACTIVE_FOR_REVIEW; C37 dimmer procurement remains held"
+    },
+    {
+      "id": "CBR-L1",
+      "room": "CBR",
+      "lane": "COVE",
+      "layer": "LOW",
+      "circuit": "C39",
+      "group_id": "K-CBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "COVE_FW",
+      "cove": true,
+      "W_nominal": 49.76,
+      "W_envelope": 49.76,
+      "lm": 4478,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-CEIL"
+      ]
+    },
+    {
+      "id": "CBR-X1",
+      "room": "CBR",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C40",
+      "group_id": "K-CBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 10.72,
+      "W_envelope": 10.72,
+      "lm": 805,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-CEIL"
+      ]
+    },
+    {
+      "id": "CBR-X2",
+      "room": "CBR",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C40",
+      "group_id": "K-CBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 10.72,
+      "W_envelope": 10.72,
+      "lm": 805,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-CEIL"
+      ]
+    },
+    {
+      "id": "CBR-X3",
+      "room": "CBR",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C40",
+      "group_id": "K-CBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 10.72,
+      "W_envelope": 10.72,
+      "lm": 805,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-CEIL"
+      ]
+    },
+    {
+      "id": "CBR-X4",
+      "room": "CBR",
+      "lane": "LINE",
+      "layer": "LOW",
+      "circuit": "C40",
+      "group_id": "K-CBR-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "LIN",
+      "cove": false,
+      "W_nominal": 10.72,
+      "W_envelope": 10.72,
+      "lm": 805,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-CEIL"
+      ]
+    },
+    {
+      "id": "CBR-S1",
+      "room": "CBR",
+      "lane": "STUDY",
+      "layer": "TASK",
+      "circuit": "C38",
+      "group_id": "K-CBR-STUDY",
+      "control": "KNOB1",
+      "cct_k": 4000,
+      "cct_fixed": true,
+      "cct_rule": "R40-TASK",
+      "cct_reason": "neutral white for visual tasks where colour judgement and contrast matter (food prep, cleaning, grooming, clothes, homework); used on the task plane, with the 2700 K strips and coves as the warm layer",
+      "fixture_type": "TASK_HO",
+      "cove": false,
+      "W_nominal": 15.96,
+      "W_envelope": 15.96,
+      "lm": 1596,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-DESK"
+      ]
+    },
+    {
+      "id": "CBR-R1",
+      "room": "CBR",
+      "lane": "READ",
+      "layer": "READER",
+      "circuit": "C41",
+      "group_id": "INT-C41",
+      "control": "INT",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "READ",
+      "cove": false,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "lm": 200,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-BED"
+      ]
+    },
+    {
+      "id": "CBR-R2",
+      "room": "CBR",
+      "lane": "READ",
+      "layer": "READER",
+      "circuit": "C41b",
+      "group_id": "INT-C41b",
+      "control": "INT",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "READ",
+      "cove": false,
+      "W_nominal": 3,
+      "W_envelope": 3,
+      "lm": 200,
+      "ip": "IP20",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": [
+        "H-CBR-BED"
+      ]
+    },
+    {
+      "id": "BAL-H1",
+      "room": "BAL",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C07",
+      "group_id": "K-BAL-HIGH",
+      "control": "KNOB1",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "CYLSV",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "BAL-H2",
+      "room": "BAL",
+      "lane": "HIGH",
+      "layer": "HIGH",
+      "circuit": "C07",
+      "group_id": "K-BAL-HIGH",
+      "control": "KNOB1",
+      "cct_k": 3000,
+      "cct_fixed": true,
+      "cct_rule": "R30-MAIN",
+      "cct_reason": "warm-neutral white for faces, food, fabrics and evening comfort in living spaces (Ra >= 90, R9 >= 50); one 300 K step above the 2700 K strips and coves, so the layers read as one warm scheme",
+      "fixture_type": "CYLSV",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 500,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "BAL-L1",
+      "room": "BAL",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C08",
+      "group_id": "K-BAL-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-STRIP",
+      "cct_reason": "user direction: LED strips and coves are warm white 2700 K (mood). Indirect and mood light reads as candle / dimmed-incandescent warmth, stays warm when dimmed, and lights the ceiling and walls rather than a task plane",
+      "fixture_type": "PLINTH",
+      "cove": false,
+      "W_nominal": 14.65,
+      "W_envelope": 14.65,
+      "lm": 1317,
+      "ip": "IP67",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "BAL-L2",
+      "room": "BAL",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C08",
+      "group_id": "K-BAL-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-DECOR",
+      "cct_reason": "visible decorative lamp, or a light used late or at night: warmest, lowest blue content; pooja light is traditionally warm; night routes avoid cool light that wakes people",
+      "fixture_type": "UPDNV",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 440,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    },
+    {
+      "id": "BAL-L3",
+      "room": "BAL",
+      "lane": "MOOD",
+      "layer": "LOW",
+      "circuit": "C08",
+      "group_id": "K-BAL-LOW",
+      "control": "KNOB1",
+      "cct_k": 2700,
+      "cct_fixed": true,
+      "cct_rule": "R27-DECOR",
+      "cct_reason": "visible decorative lamp, or a light used late or at night: warmest, lowest blue content; pooja light is traditionally warm; night routes avoid cool light that wakes people",
+      "fixture_type": "UPDNV",
+      "cove": false,
+      "W_nominal": 6,
+      "W_envelope": 6,
+      "lm": 440,
+      "ip": "IP65",
+      "cri_min": 90,
+      "r9_min": 50,
+      "placement_hold_ids": []
+    }
+  ],
+  "curtain_pocket_candidates": {
+    "status": "HOMEOWNER_SELECTED_S1_REVIEW_EXTENSION; not part of the 104 photometric fittings; site mock-up/measurement and product holds remain",
+    "viewer_hint": "render as a candidate/ghost strip (2700 K, LOW lane, dims with the room's LOW knob group; no separate control, no photometry, no lux); window position comes from the master window record, length is indicative; hold CURT-MBR-W03 hidden or greyed until released",
+    "cct_k": 2700,
+    "cct_rule": "R27-STRIP",
+    "new_knobs": 0,
+    "counts_toward_104": false,
+    "source": "curtain-pocket-s1.json in this review package",
+    "pockets": [
+      {
+        "id": "CURT-LIV",
+        "room": "LIV",
+        "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+        "held": false,
+        "lane": "LOW",
+        "group_id": "K-LIV-LOW",
+        "cct_k": 2700,
+        "indicative_strip_length_m": 2.45,
+        "length_status": "DERIVED_FROM_MASTER_WINDOW_RECORD_NOT_MEASURED",
+        "W_envelope": 19.6,
+        "polyline_ft": [
+          [
+            2.66,
+            29.036
+          ],
+          [
+            2.66,
+            37.074
+          ]
+        ],
+        "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+        "proposed_supply_what_if": "P01",
+        "window_record": {
+          "source": "lighting.design_inputs.calc_geometry.curtains.windows.LIV",
+          "window_span_ft": [
+            30.02,
+            36.09
+          ],
+          "window_span_m": 1.8501,
+          "wall_ft": 2.25,
+          "axis": "x",
+          "into_room_sign": 1,
+          "geometry": "wall plane x = 2.25 ft (solver feet); the window runs along the other axis, room side +1",
+          "return_m": 0.3,
+          "pocket_widths_m": [
+            0.25,
+            0.2
+          ],
+          "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+        },
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile"
+        ],
+        "site_photo": "library/02-references/site-photo-hall-curtain-pocket.jpeg",
+        "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+        "site_measurement_hold": "H-CURTAIN-POCKET",
+        "photometry_credit": false,
+        "supply_selection_status": "HOMEOWNER_SELECTED_P01_480W_REVIEW_ONLY",
+        "voltage_drop_status": "HOLD; previous split-feed screen invalid",
+        "placement_hold_ids": [
+          "H-CURTAIN-POCKET"
+        ]
+      },
+      {
+        "id": "CURT-DIN",
+        "room": "DIN",
+        "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+        "held": false,
+        "lane": "LOW",
+        "group_id": "K-DIN-LOW",
+        "cct_k": 2700,
+        "indicative_strip_length_m": 2.45,
+        "length_status": "DERIVED_FROM_MASTER_WINDOW_RECORD_NOT_MEASURED",
+        "W_envelope": 19.6,
+        "polyline_ft": [
+          [
+            2.66,
+            18.046
+          ],
+          [
+            2.66,
+            26.084
+          ]
+        ],
+        "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+        "proposed_supply_what_if": "P07",
+        "window_record": {
+          "source": "lighting.design_inputs.calc_geometry.curtains.windows.DIN",
+          "window_span_ft": [
+            19.03,
+            25.1
+          ],
+          "window_span_m": 1.8501,
+          "wall_ft": 2.25,
+          "axis": "x",
+          "into_room_sign": 1,
+          "geometry": "wall plane x = 2.25 ft (solver feet); the window runs along the other axis, room side +1",
+          "return_m": 0.3,
+          "pocket_widths_m": [
+            0.25,
+            0.2
+          ],
+          "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+        },
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile"
+        ],
+        "site_photo": "library/02-references/site-photo-hall-curtain-pocket.jpeg",
+        "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+        "site_measurement_hold": "H-CURTAIN-POCKET",
+        "photometry_credit": false,
+        "placement_hold_ids": [
+          "H-CURTAIN-POCKET"
+        ]
+      },
+      {
+        "id": "CURT-MBR-S",
+        "room": "MBR",
+        "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+        "held": false,
+        "lane": "LOW",
+        "group_id": "K-MBR-LOW",
+        "cct_k": 2700,
+        "indicative_strip_length_m": 2.43,
+        "length_status": "DERIVED_FROM_MASTER_WINDOW_RECORD_NOT_MEASURED",
+        "W_envelope": 19.4,
+        "polyline_ft": [
+          [
+            28.84,
+            9.129
+          ],
+          [
+            28.84,
+            17.089
+          ]
+        ],
+        "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+        "proposed_supply_what_if": "P12",
+        "window_record": {
+          "source": "lighting.design_inputs.calc_geometry.curtains.windows.MBR-side",
+          "window_span_ft": [
+            10.113,
+            16.105
+          ],
+          "window_span_m": 1.8264,
+          "wall_ft": 29.25,
+          "axis": "x",
+          "into_room_sign": -1,
+          "geometry": "wall plane x = 29.25 ft (solver feet); the window runs along the other axis, room side -1",
+          "return_m": 0.3,
+          "pocket_widths_m": [
+            0.25,
+            0.2
+          ],
+          "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+        },
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile"
+        ],
+        "site_photo": null,
+        "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+        "site_measurement_hold": "H-CURTAIN-POCKET",
+        "photometry_credit": false,
+        "placement_hold_ids": [
+          "H-CURTAIN-POCKET"
+        ]
+      },
+      {
+        "id": "CURT-CBR",
+        "room": "CBR",
+        "status": "HOMEOWNER_SELECTED_S1_REVIEW",
+        "held": false,
+        "lane": "LOW",
+        "group_id": "K-CBR-LOW",
+        "cct_k": 2700,
+        "indicative_strip_length_m": 1.55,
+        "length_status": "DERIVED_FROM_MASTER_WINDOW_RECORD_NOT_MEASURED",
+        "W_envelope": 12.4,
+        "polyline_ft": [
+          [
+            28.84,
+            39.148
+          ],
+          [
+            28.84,
+            44.24
+          ]
+        ],
+        "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+        "proposed_supply_what_if": "P16",
+        "window_record": {
+          "source": "lighting.design_inputs.calc_geometry.curtains.windows.CBR",
+          "window_span_ft": [
+            40.1323,
+            43.2557
+          ],
+          "window_span_m": 0.952,
+          "wall_ft": 29.25,
+          "axis": "x",
+          "into_room_sign": -1,
+          "geometry": "wall plane x = 29.25 ft (solver feet); the window runs along the other axis, room side -1",
+          "return_m": 0.3,
+          "pocket_widths_m": [
+            0.25,
+            0.2
+          ],
+          "mounting": "ceiling-mounted tracks inside a recessed ceiling pocket (decisions.current_lighting_brief.curtains); above-window wall rod = false"
+        },
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile",
+          "window width is the CBR placeholder (u 3.62-4.572 m, unmeasured)"
+        ],
+        "site_photo": "library/02-references/site-photo-children-curtain-pocket.jpeg",
+        "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+        "site_measurement_hold": "H-CURTAIN-POCKET",
+        "photometry_credit": false,
+        "placement_hold_ids": [
+          "H-CURTAIN-POCKET"
+        ]
+      },
+      {
+        "id": "CURT-MBR-W03",
+        "room": "MBR",
+        "status": "HELD_UNRELEASED",
+        "held": true,
+        "lane": "LOW",
+        "group_id": "K-MBR-LOW",
+        "cct_k": 2700,
+        "indicative_strip_length_m": 1.51,
+        "length_status": "DERIVED_FROM_MASTER_WINDOW_RECORD_NOT_MEASURED",
+        "W_envelope": 12.1,
+        "polyline_ft": [
+          [
+            20.518,
+            1.16
+          ],
+          [
+            25.482,
+            1.16
+          ]
+        ],
+        "polyline_note": "strip centre line inside the pocket at the ASSUMED mid-width (0.25 m pocket); fed at the end nearer the board",
+        "proposed_supply_what_if": "P12",
+        "window_record": {
+          "source": "lighting.design_inputs.calc_geometry.curtains.pending_windows.MBR-rear",
+          "window_along_m": [
+            6.5538096,
+            7.4669904
+          ],
+          "window_span_m": 0.9132,
+          "stack_zone_along_m": [
+            6.2538,
+            7.767
+          ],
+          "geometry": "wall plane z = 0.75 ft (solver feet, south wall); the window runs along x, room side +1",
+          "return_m": 0.3,
+          "pocket_widths_m": [
+            0.25,
+            0.2
+          ],
+          "position_status": "homeowner_confirmed_roughly_centred_offsets_unmeasured"
+        },
+        "to_field_measure": [
+          "clear pocket width and depth (0.25 / 0.20 m are ASSUMED, HD-14 hold H-CURTAIN-POCKET)",
+          "room for two tracks (sheer + blackout), brackets, the stack and a profile in the same pocket",
+          "strip seat level and setback behind the room-side lip: the strip must not be visible from standing or seated eye height (mock-up on site)",
+          "actual pocket run and returns beyond the window reveal (0.30 m each side is the solver's ASSUMED return)",
+          "cable route and access from the ceiling void to the supply hatch, ventilation of the profile",
+          "W03 width and offsets (OI-MBR-04)",
+          "pocket vs loft support section (OI-MBR-02 / OI-MBR-03)"
+        ],
+        "site_photo": null,
+        "approval_status": "HELD",
+        "placement_hold_ids": [
+          "H-MBR-W03"
+        ],
+        "photometry_credit": false
+      }
+    ],
+    "approval_status": "HOMEOWNER_SELECTED_LAYOUT_AND_S1_ONLY",
+    "photometry_credit": false
+  },
+  "selected_curtain_S1": {
+    "strips": [
+      "CURT-CBR",
+      "CURT-DIN",
+      "CURT-LIV",
+      "CURT-MBR-S"
+    ],
+    "lane": "LOW",
+    "cct_k": 2700,
+    "new_knobs": 0,
+    "photometry_credit": false,
+    "construction_release": false,
+    "effective_totals": {
+      "knobs": 21,
+      "knob_outputs": 38,
+      "amplifiers": 3,
+      "psus": 12,
+      "psu_nameplate_total_W": 1980,
+      "psu_over_usable": [],
+      "vd_worst_pct": null,
+      "vd_status": {
+        "OK": 30,
+        "MARGINAL": 2,
+        "HOLD": 5
+      },
+      "fittings_including_selected_strips": 108,
+      "circuits_including_selected_strips": 51,
+      "base_photometric_fittings": 104,
+      "additional_selected_strips": 4,
+      "additional_circuits": 4,
+      "selected_strip_length_m": 8.88,
+      "selected_strip_load_W": 71.04,
+      "photometry_credit_for_selected_strips": false,
+      "worst_known_dV_pct": 3.6,
+      "inrush_status": "HOLD; LT-4 and LT-5 previous screens invalid",
+      "capacity_status": "project allowance only; product, thermal and branch protection held"
+    }
+  }
+}

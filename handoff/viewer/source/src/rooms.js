@@ -5,9 +5,9 @@ export function buildRooms(c){
   const rec=kind=>PLAN.furniture.filter(f=>f.kind===kind);
   const zones=new T.Group();zones.userData.noMerge=true;world.add(zones);
   const closedJoinery=new T.Group(),interiors=new T.Group();
-  closedJoinery.userData.noMerge=true;interiors.userData.noMerge=true;interiors.visible=false;
+  closedJoinery.userData.noMerge=true;closedJoinery.visible=false;interiors.userData.noMerge=true;interiors.visible=true;
   world.add(closedJoinery,interiors);
-  const masterMarkers=[],interiorRecords=[];
+  const interiorRecords=[];
   const proposal=PLAN.wardrobeInteriors?.rooms;
   if(!proposal)throw new Error('Provisional wardrobe proposal is missing');
   const targets={
@@ -79,13 +79,13 @@ export function buildRooms(c){
     const [x,z,X,Z]=b.rect;
     const marker=box((x+X)/2,1.05,(z+Z)/2,X-x,2.1,Z-z,new T.MeshStandardMaterial({color:'#b8b2a5',transparent:true,opacity:.62,depthWrite:false}),zones);
     marker.castShadow=false;marker.name=b.id;
-    if(targets[b.id]){masterMarkers.push(marker);drawInterior(b.id,b.rect,0,2.1);}
+    if(targets[b.id]){marker.visible=false;drawInterior(b.id,b.rect,0,2.1);}
     const cv=document.createElement('canvas');cv.width=768;cv.height=96;const ctx=cv.getContext('2d');
     ctx.fillStyle='rgba(39,53,48,.85)';ctx.fillRect(0,0,768,96);ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='27px Segoe UI';
     ctx.fillText('WARDROBE CONCEPT - MEASURE ON SITE',384,61);
     const tex=new T.CanvasTexture(cv);tex.colorSpace=T.SRGBColorSpace;
     const label=new T.Mesh(new T.PlaneGeometry(Math.min(1.25,X-x-.04),.16),new T.MeshBasicMaterial({map:tex,transparent:true,depthWrite:false,side:T.DoubleSide}));
-    label.position.set((x+X)/2,1.78,Z+.004);zones.add(label);
+    label.position.set((x+X)/2,1.78,Z+.004);label.visible=!targets[b.id];zones.add(label);
     renderedItems.push({id:b.id,rect:b.rect,relationshipOnly:true});
   }
   for(const b of PLAN.tenantBeds||[]){
@@ -218,7 +218,6 @@ export function buildRooms(c){
     box(5.2*FT,.018,2.4*FT,.14,.01,.14,m.steel);
   }
   if(interiorRecords.length!==Object.keys(targets).length)throw new Error('Not all provisional cabinet sections have a model footprint');
-  const wardrobeProposals={interior:interiors,closed:closedJoinery,records:interiorRecords,
-    setVisible(on){interiors.visible=Boolean(on);closedJoinery.visible=!on;for(const marker of masterMarkers)marker.visible=!on;}};
+  const wardrobeProposals={interior:interiors,closed:closedJoinery,records:interiorRecords};
   return {wardrobeZones:zones,wardrobeProposals,breakfast,renderedItems};
 }

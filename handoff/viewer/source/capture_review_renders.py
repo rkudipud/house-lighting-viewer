@@ -66,7 +66,7 @@ with sync_playwright() as p:
     page.evaluate("walkthrough.setAllRooms(true)")
     for spec in captures:
         page.evaluate("(room)=>walkthrough.selectRoom(room)", spec["room"])
-        page.evaluate("(on)=>walkthrough.setInteriors(on)", spec["interiors"])
+        page.evaluate("(on)=>{walkthrough.model.rooms.wardrobeProposals.interior.visible=on}", spec["interiors"])
         if "light" in spec:
             page.evaluate("([room,levels])=>walkthrough.setRoomLight(room,levels)", [spec["room"], spec["light"]])
         page.evaluate(spec["pose"])
@@ -74,10 +74,8 @@ with sync_playwright() as p:
         state = page.evaluate("walkthrough.getState()")
         if state["mode"] != spec["mode"] or state["selectedRoom"] != spec["room"] or state["interiors"] != spec["interiors"]:
             raise RuntimeError(f"Unexpected viewer state before {spec['file']}: {state}")
-        with page.expect_download(timeout=120000) as dl:
-            page.evaluate("walkthrough.exportPng()")
         path = out / spec["file"]
-        dl.value.save_as(str(path))
+        page.locator("#view canvas").screenshot(path=str(path))
         with Image.open(path) as raw:
             im = raw.convert("RGB")
         footer = max(60, round(im.width / 32))

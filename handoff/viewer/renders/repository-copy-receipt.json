@@ -1,52 +1,29 @@
 {
-  "status": "final-illustrative-review-renders-not-physical-simulation",
+  "status": "current-illustrative-review-renders-not-physical-simulation",
   "constructionRelease": false,
-  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-  "sourceManifest": "selected-source-file-hashes.json",
-  "sourceManifestSha256": "b735870427c00acd200202903f27e5dd0fd6c680921bdd74391f45fe1b46a556",
-  "sourceFiles": 4,
-  "omittedFiles": [],
-  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
+  "basisMasterSha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+  "viewerHtmlSha256": "8fd01f6f2801ca3ba715f44109ee89aefee95e2055acd20186d8dc483c462ee5",
+  "currentFixedCctMapSha256": "b673bf4189c251f28fb9327bfbc7e45e2009b452bc727cdaeca158a27eb7aa4f",
+  "renderReceipt": {
+    "path": "render-receipt.json",
+    "sha256": "4d2adfcb20fc8c4cdfefd96512ee312dd06ab7a076e262dffd0a7054a40040d6"
+  },
   "files": [
     {
       "path": "01-whole-flat-dollhouse.png",
-      "bytes": 682022,
-      "sha256": "8e480f6c11e6e1e413cf3afbfdf791073fb45eb9cff34739ffda6e1a557cf95e",
-      "sourceSha256": "8e480f6c11e6e1e413cf3afbfdf791073fb45eb9cff34739ffda6e1a557cf95e",
-      "localPathsRedacted": false,
-      "publicCopyModified": false
+      "bytes": 405687,
+      "sha256": "516d810f3706e2875d427f9088a31ab4f5f1fc6219af9ad84e173730eb06279e"
     },
     {
       "path": "02-living-light-and-curtains.png",
-      "bytes": 904805,
-      "sha256": "175db15d81d43bbd978e8f9cb1229efb8f7a08189c76f8f39dca44972748e14b",
-      "sourceSha256": "175db15d81d43bbd978e8f9cb1229efb8f7a08189c76f8f39dca44972748e14b",
-      "localPathsRedacted": false,
-      "publicCopyModified": false
+      "bytes": 445461,
+      "sha256": "af4607c503ff74525a1d96fb5ed8cfe872286812a5a266e615c3c6b39d267f17"
     },
     {
       "path": "03-master-proposed-interiors.png",
-      "bytes": 1129912,
-      "sha256": "e55d22cbcbe01a3b78b87656a5385873160ac38754c2ca14a18d3c91d593c33b",
-      "sourceSha256": "e55d22cbcbe01a3b78b87656a5385873160ac38754c2ca14a18d3c91d593c33b",
-      "localPathsRedacted": false,
-      "publicCopyModified": false
-    },
-    {
-      "path": "render-receipt.json",
-      "bytes": 2266,
-      "sha256": "b98497b2d5a6b3e85241fa6f95f0db79dca515cc8af852d4edbf7d11d3759924",
-      "sourceSha256": "b98497b2d5a6b3e85241fa6f95f0db79dca515cc8af852d4edbf7d11d3759924",
-      "localPathsRedacted": false,
-      "publicCopyModified": false
-    },
-    {
-      "path": "selected-source-file-hashes.json",
-      "bytes": 415,
-      "sha256": "b735870427c00acd200202903f27e5dd0fd6c680921bdd74391f45fe1b46a556",
-      "sourceSha256": "b735870427c00acd200202903f27e5dd0fd6c680921bdd74391f45fe1b46a556",
-      "localPathsRedacted": false,
-      "publicCopyModified": false
+      "bytes": 590325,
+      "sha256": "83971d32cf2c2e46bfb96f3c0e41d8e6f26f0676fb839fbae2f0f5a6e9aa58d5"
     }
-  ]
+  ],
+  "note": "The renders were captured from the verified offline viewer with the current master. They are illustrative only; site dimensions, lighting performance and proposed interiors remain unverified or unapproved."
 }

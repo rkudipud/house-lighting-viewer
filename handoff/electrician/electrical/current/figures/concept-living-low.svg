@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="730" viewBox="0 0 1160 730">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#435b60"/></marker></defs>
+<rect width="1160" height="730" fill="#fff"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#20343b">
+  <text x="35" y="42" font-size="24" font-weight="bold">K-LIV-LOW: one larger P01 supply, one wall knob</text>
+  <text x="35" y="68" font-size="14">Homeowner-selected concept, not an approved connection diagram. Each output is a model, not an assigned terminal.</text>
+  <rect x="35" y="112" width="215" height="132" rx="8" fill="#f3f5f4" stroke="#8ba1a0" stroke-width="2"/>
+  <text x="142" y="145" text-anchor="middle" font-size="18" font-weight="bold">P01: 24 V CV</text>
+  <text x="142" y="171" text-anchor="middle" font-size="15">480 W planning class</text>
+  <text x="142" y="195" text-anchor="middle" font-size="13">HLG-480H-24 is only</text>
+  <text x="142" y="214" text-anchor="middle" font-size="13">a manufacturer reference.</text>
+  <text x="142" y="233" text-anchor="middle" font-size="13">P03 is removed.</text>
+  <rect x="310" y="112" width="300" height="132" rx="8" fill="#fff1ed" stroke="#be674a" stroke-width="2"/>
+  <text x="460" y="144" text-anchor="middle" font-size="17" font-weight="bold">Distribution / protection</text>
+  <text x="460" y="170" text-anchor="middle" font-size="13">20 A reference supply vs</text>
+  <text x="460" y="190" text-anchor="middle" font-size="13">12.5 A T1-K input nameplate.</text>
+  <text x="460" y="214" text-anchor="middle" font-size="13" font-weight="bold">Actual branches and protection: OPEN</text>
+  <rect x="670" y="112" width="425" height="132" rx="8" fill="#fff0d6" stroke="#b87726" stroke-width="2"/>
+  <text x="882" y="145" text-anchor="middle" font-size="18" font-weight="bold">One K-LIV-LOW brightness knob</text>
+  <text x="882" y="171" text-anchor="middle" font-size="13">Six modeled outputs, two modeled repeaters.</text>
+  <text x="882" y="195" text-anchor="middle" font-size="13">Exact strip / knob / repeater chain: OPEN.</text>
+  <text x="882" y="220" text-anchor="middle" font-size="13">PWM tracking, flicker and failure behaviour: test.</text>
+  <path d="M250 178 H310 M610 178 H670" stroke="#435b60" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M880 244 V287 H160 M160 287 V317 M390 287 V317 M625 287 V317 M860 287 V317" stroke="#435b60" stroke-width="2.5" fill="none"/>
+  <rect x="55" y="317" width="210" height="106" rx="8" fill="#fff8ee" stroke="#b87726"/>
+  <rect x="285" y="317" width="210" height="106" rx="8" fill="#fff8ee" stroke="#b87726"/>
+  <rect x="520" y="317" width="210" height="106" rx="8" fill="#fff8ee" stroke="#b87726"/>
+  <rect x="755" y="317" width="210" height="106" rx="8" fill="#fff8ee" stroke="#b87726"/>
+  <text x="160" y="348" text-anchor="middle" font-size="17" font-weight="bold">C03: cove</text>
+  <text x="160" y="374" text-anchor="middle" font-size="14">92.24 W / 2 outputs</text>
+  <text x="160" y="398" text-anchor="middle" font-size="13">11.53 m at 8 W/m</text>
+  <text x="390" y="348" text-anchor="middle" font-size="17" font-weight="bold">C04: TV bias</text>
+  <text x="390" y="374" text-anchor="middle" font-size="14">10.08 W / 1 output</text>
+  <text x="390" y="398" text-anchor="middle" font-size="13">1.68 m at 6 W/m</text>
+  <text x="625" y="348" text-anchor="middle" font-size="17" font-weight="bold">C05: linear</text>
+  <text x="625" y="374" text-anchor="middle" font-size="14">59.60 W / 2 outputs</text>
+  <text x="625" y="398" text-anchor="middle" font-size="13">7.45 m at 8 W/m</text>
+  <text x="860" y="348" text-anchor="middle" font-size="17" font-weight="bold">CURT-LIV</text>
+  <text x="860" y="374" text-anchor="middle" font-size="14">19.60 W / 1 output</text>
+  <text x="860" y="398" text-anchor="middle" font-size="13">2.45 m; not measured</text>
+  <rect x="35" y="468" width="1090" height="184" rx="8" fill="#f0f4f3" stroke="#8ba1a0"/>
+  <text x="60" y="500" font-size="16" font-weight="bold">181.52 W / 24 V = 7.56 A strip load, excluding auxiliary and feeder losses.</text>
+  <text x="60" y="528" font-size="14">0.60 = assumed 0.80 thermal allowance x 0.75 load allowance, not a manufacturer rating.</text>
+  <text x="60" y="553" font-size="14">181.52 W / 0.60 = 302.53 W; planning minimum rounded up is 303 W. At 480 W the allowance is 288 W.</text>
+  <text x="60" y="582" font-size="14" font-weight="bold">P01 hatch, one-supply voltage drop and LT-4 / LT-5 inrush screens must be re-engineered.</text>
+  <text x="60" y="608" font-size="14">Actual reference input-voltage and case/ambient thermal limits, 480 W size, ventilation and failure mode require review.</text>
+  <text x="60" y="633" font-size="14">One supply removes the cross-supply reference question but becomes a single point of failure.</text>
+</g>
+</svg>

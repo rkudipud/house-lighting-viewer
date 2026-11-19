@@ -219,7 +219,7 @@ def main() -> None:
     group_table = table(["Room", "Class", "Qty", "Fixed CCT", "Strip m", "Fixture IDs"], room_rows)
     text = f"""# Location-linked lighting bill of materials
 
-**Master SHA-256:** `{master_hash}`. These are **modeled quantities for one flat**, not purchase quantities or approved construction dimensions. Four floors are intended to repeat the scheme, but site geometry, returns, cuts, product lead lengths and wastage must be measured independently. No verified current installed quote exists.
+**Master SHA-256:** `{master_hash}`. These are **modeled quantities for one flat**, not purchase quantities or approved construction dimensions. The working planning multiplier is four storeys x one modelled 2BHK flat per floor (four flat schedules); confirm the actual floor and flat count and floor-to-floor variations on site. Site geometry, returns, cuts, product lead lengths and wastage must be measured independently. No verified current installed quote exists.
 
 The complete `schedules/location-linked-bom.csv` lists **108 fixture records**, the separate profile allowances, **12 24 V supply classes**, **31 wall controls**, **three modeled PWM repeaters**, **eight conceptual switch modules**, and one 48 V track driver. It includes circuit/board, model specification, CCT, CRI/R9/IP targets and available indicative solver coordinates or strip paths. A supply, dimmer, switch, profile or repeater appears separately from its fixture; omit a separate profile where an approved integrated product already includes the required diffuser and heat-sinking. Do not treat these entries as certified matched products.
 

@@ -1,0 +1,6 @@
+﻿id,room,status,selected,cct_K,knob,circuit,supply,indicative_length_m,generic_W,recorded_rounded_W,path_ft,photometry_credit,measurement
+CURT-LIV,LIV,SELECTED; H-CURTAIN-POCKET,yes,2700,K-LIV-LOW,X-CURT-LIV,P01,2.45,19.6,19.6,"[[2.66,29.036],[2.66,37.074]]",no,unmeasured; 0.30 m returns and pocket width/depth are assumptions
+CURT-DIN,DIN,SELECTED; H-CURTAIN-POCKET,yes,2700,K-DIN-LOW,X-CURT-DIN,P07,2.45,19.6,19.6,"[[2.66,18.046],[2.66,26.084]]",no,unmeasured; 0.30 m returns and pocket width/depth are assumptions
+CURT-MBR-S,MBR,SELECTED; H-CURTAIN-POCKET,yes,2700,K-MBR-LOW,X-CURT-MBR-S,P12,2.43,19.44,19.4,"[[28.84,9.129],[28.84,17.089]]",no,unmeasured; 0.30 m returns and pocket width/depth are assumptions
+CURT-CBR,CBR,SELECTED; H-CURTAIN-POCKET,yes,2700,K-CBR-LOW,X-CURT-CBR,P16,1.55,12.4,12.4,"[[28.84,39.148],[28.84,44.24]]",no,unmeasured; 0.30 m returns and pocket width/depth are assumptions
+CURT-MBR-W03,MBR,EXCLUDED; W03 remains held,no,2700,K-MBR-LOW,not assigned,not assigned,1.51,12.08,12.1,"[[20.518,1.16],[25.482,1.16]]",no,unmeasured; excluded from all selected totals
