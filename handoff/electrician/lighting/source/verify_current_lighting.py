@@ -82,6 +82,9 @@ def browser_checks(calculations):
             page.select_option("#room", "CBR")
             page.select_option("#scene", "HIGH_100")
             check(page.locator("#fixture option").count() == 16, "CBR shows 14 base fittings and one curtain strip")
+            warning = page.locator("#calc-warning").inner_text().lower()
+            check("modelled on" in warning and "viewer" in warning and "site hold" in warning,
+                  "CBR workbench distinguishes provisional viewer light from the physical hold")
             expected = calculations["rooms"]["CBR"]["combinations"]["HIGH_100"]
             check(page.locator("#avg").inner_text() == str(expected["avg"])
                   and page.locator("#min").inner_text() == str(expected["min"])
@@ -161,6 +164,10 @@ def main():
     master = json.loads(MASTER.read_bytes())
     manifest = read("manifest.json")
     check(manifest["master_sha256"] == EXPECTED_MASTER, "Package manifest is bound to the current master")
+    check(manifest["exporter_sha256"] == digest(Path(__file__).with_name("export_current_lighting.py")),
+          "Package manifest binds the lighting exporter")
+    check(manifest["workbench_template_sha256"] == digest(Path(__file__).with_name("lighting-workbench.template.html")),
+          "Package manifest binds the workbench template")
     expected_names = set(manifest["files"])
     present_names = {str(p.relative_to(OUT)).replace("\\", "/") for p in OUT.rglob("*")
                      if p.is_file() and p.name not in {"manifest.json", "verification.json"}}
@@ -243,6 +250,10 @@ def main():
     check(next(x for x in vd_csv if x["circuit"] == "C39")["dV_pct"] == "3.3"
           and next(x for x in vd_csv if x["circuit"] == "C40")["dV_pct"] == "3.9",
           "C39/C40 marginal S1 voltage-drop values use the updated provisional route")
+    specification = (OUT / "lighting-specification.md").read_text(encoding="utf-8")
+    check("C39 3.3% and C40 3.9%" in specification and "viewer both model" in specification
+          and "installation and actual operation remain held" in specification,
+          "Specification matches the voltage-drop schedule and provisional viewer state")
     check(sum(int(x["quantity_per_flat"]) for x in products) == 108,
           "Generic search list covers 104 base fittings and four selected strips")
     calculations = read("calc-results-current.json")
@@ -265,13 +276,19 @@ def main():
             check(sizes and min(sizes) >= 7, f"{name} zoom-page fitting IDs print at >= 7 pt on A4")
         finally:
             doc.close()
-        check(all(t in text for t in types) and "Label suffix = fixed CCT" in text and "site hold" in text,
+        check(all(t in text for t in types) and "circuit and fixed CCT" in text and "site hold" in text
+              and "not wiring routes" in text,
               f"{name} plan legend shows fitting types, fixed CCT and hold marking")
-    pdf_text("heatmaps-summary.pdf", 11)
+    heatmap_text = pdf_text("heatmaps-summary.pdf", 11)
+    check("CBR cove and LINE are modelled ON for review" in heatmap_text
+          and "physical installation remains held" in heatmap_text,
+          "CBR heatmap describes the provisional ON state and installation hold")
     schedule_text = pdf_text("lighting-review-schedules.pdf", 11)
     check(all(f"CBR-H{i}" in main_text for i in range(1, 7)), "Main plan labels all six CBR HIGH fittings")
     check(all(x in mood_text for x in ("CURT-LIV", "CURT-DIN", "CURT-MBR-S", "CURT-CBR", "CBR-L1", "CBR-X1")),
           "Mood plan labels all four selected curtain strips and the CBR cove/LINE")
+    check("CBR-L1 C39 2700K" in mood_text and "CBR-X1 C40 2700K" in mood_text,
+          "Mood plan labels current CBR cove and LINE circuit identities and fixed CCT")
     check("P01" in schedule_text and "CURT-CBR" in schedule_text, "Schedule PDF includes selected supply and curtain records")
     for kind in ("main", "mood", "task"):
         svg = (OUT / f"lighting-plan-{kind}.svg").read_text(encoding="utf-8")
@@ -284,6 +301,7 @@ def main():
     result = {
         "status": "PASS", "master_sha256": EXPECTED_MASTER,
         "manifest_sha256": digest(OUT / "manifest.json"),
+        "verifier_sha256": digest(Path(__file__)),
         "checks_passed": len(checks), "checks": checks, "browser": browser,
         "limits": [
             "CBR has a targeted analytic reanalysis; other heatmaps are inherited. All are estimates, not measurements or physically validated simulation.",

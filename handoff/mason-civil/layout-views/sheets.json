@@ -4,8 +4,8 @@
   "drawing_source": {
     "staging": false,
     "final": false,
-    "publication_status": "review drawing; not construction-released",
-    "review_draft": false,
+    "publication_status": "REVIEW DRAFT; not construction-released",
+    "review_draft": true,
     "lighting_pending": false,
     "hd18": {
       "fragment": {
@@ -100,7 +100,7 @@
         ]
       },
       "file": "01-plan-furnished.svg",
-      "sha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec"
+      "sha256": "684843b49c06225129238b799e57a27ab378ecb5dc562f180681d1bf70bb509c"
     },
     {
       "id": "02-rcp",
@@ -330,7 +330,7 @@
         ]
       },
       "file": "02-rcp.svg",
-      "sha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1"
+      "sha256": "4e8391b7ef3bb94db7bedcb5650c890111f446eab10577c500b1afd94d37c3db"
     },
     {
       "id": "03-elev-R01-living",
@@ -398,7 +398,7 @@
         "switchStrip": null
       },
       "file": "03-elev-R01-living.svg",
-      "sha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8"
+      "sha256": "7557e0d9c36670a7afcf5ecf90126baa01c0a20889ae55ed612c044deeb89a93"
     },
     {
       "id": "04-elev-R02-dining",
@@ -454,7 +454,7 @@
         "switchStrip": null
       },
       "file": "04-elev-R02-dining.svg",
-      "sha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60"
+      "sha256": "b4fc2f50180f79f4bb8fe8e2f0e3fabbc11fb5b1a6a4027f66b937a43fbdb6c2"
     },
     {
       "id": "05-elev-R03-kitchen",
@@ -544,7 +544,7 @@
         "switchStrip": null
       },
       "file": "05-elev-R03-kitchen.svg",
-      "sha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155"
+      "sha256": "b5f2ffd20d2a20eb241e544ce118575b412ff79bc517e8a42de79f09c3a23c19"
     },
     {
       "id": "06-elev-R04-master",
@@ -601,7 +601,7 @@
         "switchStrip": null
       },
       "file": "06-elev-R04-master.svg",
-      "sha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b"
+      "sha256": "dc4dcebcba9be5386a076f6cb60419d53c3290ae4bd4c2cbb185640b6aed9ad8"
     },
     {
       "id": "07-elev-R04a-dressing",
@@ -658,7 +658,7 @@
         "switchStrip": null
       },
       "file": "07-elev-R04a-dressing.svg",
-      "sha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c"
+      "sha256": "d382d99b60bed25195b3e7d6ea3bd38206d96db20c35fa7f0be91495fb1bd54f"
     },
     {
       "id": "08-elev-R05-children",
@@ -752,7 +752,7 @@
         "switchStrip": "children-s"
       },
       "file": "08-elev-R05-children.svg",
-      "sha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe"
+      "sha256": "b828e4d632c96d1de3924b0d8401c456f80c5427f8d3bc6f8f59b16f6cf32c96"
     },
     {
       "id": "09-elev-R06-TL1",
@@ -809,7 +809,7 @@
         "switchStrip": null
       },
       "file": "09-elev-R06-TL1.svg",
-      "sha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1"
+      "sha256": "e25907edf19c609c2c1725eafc9d6d17fb026cd7f3e3f0026d3c76052135ee71"
     },
     {
       "id": "10-elev-R07-TL2",
@@ -866,7 +866,7 @@
         "switchStrip": null
       },
       "file": "10-elev-R07-TL2.svg",
-      "sha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f"
+      "sha256": "4f59fad19739ab292bd4ead1ac0567fa5cd75018a1fe7473a3c58713b0bd16fc"
     },
     {
       "id": "11-elev-R08-utility",
@@ -967,7 +967,7 @@
         "switchStrip": null
       },
       "file": "11-elev-R08-utility.svg",
-      "sha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3"
+      "sha256": "e549f9ede3724344f8156629955c137c1d1314ecbf95b3b654f0a382854499a8"
     },
     {
       "id": "12-elev-R09-entry",
@@ -1009,7 +1009,7 @@
         "switchStrip": null
       },
       "file": "12-elev-R09-entry.svg",
-      "sha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557"
+      "sha256": "48af38c4e72a39baa7c8a140d77a8fe6cc749b26a104e44a9e0b90999d048e40"
     },
     {
       "id": "13-elev-R12-lobby",
@@ -1052,7 +1052,7 @@
         "switchStrip": null
       },
       "file": "13-elev-R12-lobby.svg",
-      "sha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107"
+      "sha256": "6245c93b5d69592c7a215123f5b4810e2b5e626801f0276fbed306a109fcf749"
     }
   ]
 }

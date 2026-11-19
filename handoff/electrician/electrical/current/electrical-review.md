@@ -1,4 +1,4 @@
-> Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see repository-copy-receipt.json.
+> Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see final-review-source-copy.json.
 
 # Electrical and wall-control handoff
 
@@ -27,7 +27,7 @@ The full machine-readable schedules are in `schedules/`. `circuit-schedule.csv` 
 
 ![Flat controls and indicative positions](figures/controls-plan.svg)
 
-The floor illustration is an indicative overlay, **not** a scaled construction drawing. The larger P01 supply's location and hatch are intentionally not plotted: its size, weight, heat and access must be surveyed. Other hatches are proposals only. CBR H1-H6 are released for review, not for unmeasured construction. True north is shown on the sheet.
+The floor illustration uses current modelled fitting and switchboard positions, **not** surveyed walls or wiring routes. No supply hatches are plotted; the larger P01 supply's location, size, weight, heat and access must be surveyed. CBR H1-H6, cove and LINE are shown for review; installing the cove and LINE remains held. The north arrow is approximate.
 
 ![Curtain pocket section](figures/curtain-pocket.svg)
 

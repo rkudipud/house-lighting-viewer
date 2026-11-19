@@ -1,0 +1,2185 @@
+{
+  "schema": "house-final-handoff-post-copy-overlay/1",
+  "status": "verified-review-only-not-construction",
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "constructionRelease": false,
+  "copyReceiptSha256": {
+    "handoff/electrician/lighting/final-review-source-copy.json": "4725bd5d6091b5a73e74614ba34becc9668c86c943aa1acd8f6932b216441449",
+    "handoff/electrician/electrical/final-review-source-copy.json": "dc8f588aa75c50ccf5fac5fff2773a6bd485cb61d06cb598417d11bb73b1a167",
+    "handoff/mason-civil/final-review-source-copy.json": "61f1c49a56c709312c352b190b308c37b7d30918bc08e4f0907c9a84b2be4f72",
+    "handoff/viewer/drawings/final-review-source-copy.json": "0b2b8988aeb32f9b73fe9b363cc05f358c77ffe5b0d73f49f53b42fcfa8e87ed",
+    "handoff/viewer/source/final-review-source-copy.json": "c3d7b6d63d3ebfa068f31cf07c986306e77ab4928d1b16713934fd27c063ad74",
+    "handoff/viewer/renders/final-review-source-copy.json": "76e9b48a5f2ced297610275fcc189967b1a093640e184bec04e37cc277252f8a"
+  },
+  "lightingLoadSheet": {
+    "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+    "generator_sha256": "b3eec01f2d531f5c65e968af869bd0c3afa12c9f68af618076f2c27a9020d0d0",
+    "outputs": {
+      "lighting-load-per-room.xlsx": "b02258c61d7b8892cb40550fab8d500e4b9b371d0cf6fdce8214b2b61eb60097",
+      "lighting-load-per-room.pdf": "48d5df38bb1d684c3eaf383d8036b8e1aea0ed8efcb22afa7c61a48801d7f829"
+    }
+  },
+  "postCopyOverlays": [
+    {
+      "path": "handoff/electrician/electrical/SHA256SUMS.txt",
+      "previousCopySha256": "c42aeba7482c0baca34226af60a2c81d88907e7142d80247ff4a54a3fc33b025",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "94a55180eef1e063a42b9348b874fcf1904af695ebc39adef7db83e9822a7d9a",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "SHA256SUMS.txt"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/bill-of-materials-render.json",
+      "previousCopySha256": "f263b7dcd4d08116ef82c823c3e7a22495578188e553955959a68b736d69d754",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "f161329d571a727608efda0ccf7e5f33a073dff5ceda7d5071d0128651f22598",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "bill-of-materials-render.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/bill-of-materials.html",
+      "previousCopySha256": "47f8a6c4eac716c6b7b9e899e03d707dcda2063e2a53bea07a158969f049fb9b",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "80389ded928593c42b0c045662c458124a5d2df8756fb86b01279c3705d86ff1",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "bill-of-materials.html"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/bill-of-materials.md",
+      "previousCopySha256": "4f78aacedc5a2b155d020e277ddd93cd0c5a32b1165d43a695476c97b3f97a49",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "5e19b11cbe4c2e248d5c7c614ef9af016b6c7204e922161d69ad6509b16e74b6",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "bill-of-materials.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/bill-of-materials.pdf",
+      "previousCopySha256": "ef0900fd0ecc27bd3d8cd8bc7bace8df8c161ad7bfb0886ba171782f235c442d",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "ac95775fe567cc7e7f4d6ef89633da55d5933b5297275d46e99415555ad3b59c",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "bill-of-materials.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/build-context.json",
+      "previousCopySha256": "7d17a7e11000a7a7a88d358e993b74d24b5f38f4f66f6368b116eb9346cfbcef",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "54faf4b9481f1c87478e6d5961a2f93eac74e2847427c8833911326308f2c1e3",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "build-context.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/control-options-render.json",
+      "previousCopySha256": "f347f0ebe06c84fe41d7a4043b2d4b833519cb579ecbbbd0587db4680b4e706c",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "0382eb416b035bd715fdbb94e098a3d03f97f5023d254373c674d7632e61830a",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "control-options-render.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/control-options.html",
+      "previousCopySha256": "82f0ea4a89bacf9555074b10d2d1df9d705bcf8b32ac0f1d47e4a0cb5aa0d9ba",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "a21f56c65185c70e22b2bcc36917902f8d033fbab1b67ebbdd6d6e1b61247ac3",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "control-options.html"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/control-options.md",
+      "previousCopySha256": "bd93bc162703a41745195bea4a12f4119a2ec8d2bb9ee83e9ab6306f9ad1ffeb",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "8b2dc85b2405cb9852e8ae826a9a1f77f564a29d68a0b4f8ae798acbadeb1890",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "control-options.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/control-options.pdf",
+      "previousCopySha256": "b5af31183b6ebba59e606e99d9b4372249c7c3e98b0e9b6087212e5b205a9ccd",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "99ed7151b6a8f7c2a0507940520b6e295549acc339390dd585f1d18936ddfa48",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "control-options.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/electrical-review-render.json",
+      "previousCopySha256": "4ea8f2ac95363c10fa97c2a0263f895481fbebc569ec91dfcfe58dc76d600bea",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "77af489f9e82292d99183570b219b165a1d3957facca826a4bf665bb7727aceb",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "electrical-review-render.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/electrical-review.html",
+      "previousCopySha256": "fcabe145ec74f93f153c655a59eb744b2f6f84f5040309d40cb4072e0636cee8",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "f616c56b673c73a26f95a61cda17fcf189b2cf696b77c2f04de283cff56748a6",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "electrical-review.html"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/electrical-review.md",
+      "previousCopySha256": "79e8a60c90b59f3d0b5dca57939228b992b8ac2795395dfe4a07d6064a346166",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "44992aa5f3cb3b3acf725c5a4ec14f2c691650a7b2007934749bb223cad1f711",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "electrical-review.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/electrical-review.pdf",
+      "previousCopySha256": "d8d3bdd9faf82412b530cd6859e978e2aeebfda52d4ef951482acb317233daac",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "ccecde80c4aa01c0c0d1518c6856e49b898a639eecb9e67d8d8723680b02f0db",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "electrical-review.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/figures/controls-plan.png",
+      "previousCopySha256": "0f0eb7c6016d47bdbc1c4a54ba4823ca19b52022cab53c46946e927b103c6d02",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "00b190d4d66febb43085e7ea5e4c6e3c89d99eb932cc526fc4243f1c5f7fc218",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "figures/controls-plan.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/figures/controls-plan.svg",
+      "previousCopySha256": "20baebb5194c5a957aa7926f2a9034c0f376d417ebc442f4089409340c4c9027",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "872b816672afd3f3d82502ffe3bda030b6e6e4e472cb973c3bfd6eb860fba896",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "figures/controls-plan.svg"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/receipt.json",
+      "previousCopySha256": "55891630ea323685e143b572233586137d613ef2570ab43fcc984411320b0d17",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "1d2af45e634b3657cc46e6e946e261f377708303fcbc0f720cc0b370b6591493",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "receipt.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/source-evidence/prior-control-plan-receipt.json",
+      "previousCopySha256": "c9ede6a4ec40367291c5477688a18760dd430961255c7c570f75df68ee677ff7",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "eb2e4854b4a84a71ae5d943873ac1c1004558ed0e87297161ae5328d63f1739b",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "source-evidence/prior-control-plan-receipt.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/source-index-render.json",
+      "previousCopySha256": "8ff08ca501017728a863407c8162267732de04639975b12929a0fc32215eba78",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "10daac189f1456fa17a5ddeeddd493db07e131bd87273f642d020e4aa41a8a7e",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "source-index-render.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/source-index.html",
+      "previousCopySha256": "183f34d24f8e557a3b15901c45c3aecf22afb503c5bafe5b9d0dda98aa0f1fbc",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "8f7c249cb14849ce10b9c5a6f59ae8530c24e06335c5c6185cfb018c9cb56d0b",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "source-index.html"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/source-index.md",
+      "previousCopySha256": "107555c9c8fc1fd3923cfdf370add3d5bebdb67b2d773b6fa5db4a44c2e7272a",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "43264b971e4e2da012129f62446f0c809a6e646c0b1a5a59ad9fa867bb3d5c88",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "source-index.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/source-index.pdf",
+      "previousCopySha256": "e87e0cfba73c8c4fb972b3913fafd19990bcf3fbc2e3da607e5c71a48ac675b7",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "91d4fe56e33287cd61fbc73f0c192c607d69c2c5d719e0ca24f60e180856371a",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "source-index.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/tools/electrical-review.template.md",
+      "previousCopySha256": "b2c0626256378e74bc2b13e5ecb98ebaac290adba95468e0e55e32b84ee414fe",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "ba765c4a9e235addfc3ae626c9ff3f2dacadc804c6f2dea1a06903bc95c8fe69",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "tools/electrical-review.template.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/tools/fw_final_build.py",
+      "previousCopySha256": "7e55aa7d2a4f83937a75c86b19b6247373f784cc84fdb47db760397720f1e4a1",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "3007c001e85f905df7d9357574f75807ff53e59f61403465eca921a46c6a2fc1",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "tools/fw_final_build.py"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/tools/fw_final_validate.py",
+      "previousCopySha256": "e56eb78a37347e1101fccd17dba627a24c610015046ea5d7e1214e99aa97f43e",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "7b0993e12eb5c4489b4689d5928dbe23cc9b9b8f609853d114ef2493fa9d4055",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "tools/fw_final_validate.py"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/validation.json",
+      "previousCopySha256": "5b01c1afb5aab26f5a03ec8d6947c6a8cdecbb93fb8e27189204cac002c84587",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "68fc5753850e30295418de9e0742e032b349829521a704dd1762d6908c78d465",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "validation.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/wholesale-rfq-render.json",
+      "previousCopySha256": "9590a312f59bf258e1b6dcb735ae37dfca216e1976489e4f68146676af3b3ca2",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "65eddf89b55acd1a3f2b9a5276743dd439325f763670027e78ff1840e0540146",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "wholesale-rfq-render.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/wholesale-rfq.html",
+      "previousCopySha256": "5ea666e03951eee5c608cb764cadd9e7c6e34e6ebd1a0aad299fb55fc1ea129e",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "fa6a45001dc708e5b051201adac9aca589d8384e848cdbdb8136430e90d95b63",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "wholesale-rfq.html"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/wholesale-rfq.md",
+      "previousCopySha256": "a175bfd5cdd316d4ea487cc8731df7f2c7cdd2f6eaa7dc025ba08ae15f7106e8",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "c20187efe5801410468c5d7b2b6dd2fb3abc32db346d53a513a4ebccf0b84536",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "wholesale-rfq.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/electrical/wholesale-rfq.pdf",
+      "previousCopySha256": "0914547eb997b6216da1af5bc7860f07f6b460d84c8791d4d9e184e94702d7ac",
+      "originalCopyReceipt": "handoff/electrician/electrical/repository-copy-receipt.json",
+      "currentSha256": "411450791a2dabfe2e469de452833ad60e99c2ce9b996fd5648b0747d1255560",
+      "reason": "Regenerated the conceptual control and electrical pack with current fixed-CCT and site-hold information.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/electrical/final-review-source-copy.json",
+        "sourcePath": "wholesale-rfq.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/README.md",
+      "previousCopySha256": "2aed84ec4f590145407fff55429a5a43828d0bbe0db82eb4748c118f2bea58b8",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "a393c7f4cc10eee7903da64767b402d754d8474b03ba71d62f72d5556810a889",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "README.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/heatmaps-summary.pdf",
+      "previousCopySha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "ae22a8b5b24fd0fbece07e1da62024553aa32ffbf48d898f401ba5e99bf3b8c2",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "heatmaps-summary.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/heatmaps/CBR-analytic.png",
+      "previousCopySha256": "5ac79bd48cfa734b371d37b4a97edae54583702c77f311ab140b0b2d516f9e64",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "dabd7ad2e29de7e5f173b35a8e3265e455f7403e8c2e3ce05ae36e921e34c855",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "heatmaps/CBR-analytic.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-1.png",
+      "previousCopySha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "a4a12d8e0727f96ab86ee79d3cf1630ae64e0b26e98f966cb6ced27105eebf68",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main-zoom-1.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-2.png",
+      "previousCopySha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "c8f81db7303f1e8865ad6823afcd50854056b2a1207e29cb6469ab284ae7417a",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main-zoom-2.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-3.png",
+      "previousCopySha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "5643875fcaa5d7e9ee642c49a6de11a0f92efee6df38482c595b05cb0d270254",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main-zoom-3.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-4.png",
+      "previousCopySha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "cccfd17a1f6f63ef3c30f47f66c035bf2643ad529253d97a045e5bd8dc4d11be",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main-zoom-4.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-5.png",
+      "previousCopySha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "e0fa792a17eaded26b6ace32528a700ec266a74344f004fd10346ec65b9a28b7",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main-zoom-5.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-6.png",
+      "previousCopySha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "a1800ef103b913d20fd03e70c168d0218a5b0852e3e06adbfb3c04ac29919174",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main-zoom-6.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main.pdf",
+      "previousCopySha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "26038838343e89348c596f3bd8e64e06c9a805d841af61a44941b38fb9ce3b44",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main.png",
+      "previousCopySha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "28b1a41e5cb7032db8f89ca4ccb26a848a4bfd54b7809ec3f697d6623b6db26a",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main.svg",
+      "previousCopySha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "9dd52437b9db3f37a2b9d795d2866fa040887df7169db7cb52c5edd558ad1ab1",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-main.svg"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-1.png",
+      "previousCopySha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "4f3e251a013499a212a7181396b7295a9aeed9f8732dd955a415aa19fcddd4e2",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood-zoom-1.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-2.png",
+      "previousCopySha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "8d3d39650cf25af269d9991b11479b1414382664321a842d5ed904ce3690d335",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood-zoom-2.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-3.png",
+      "previousCopySha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "bc34dfad364aa7321553a7d120058f14c984300365b93a6273191d12ce843914",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood-zoom-3.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-4.png",
+      "previousCopySha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "f231d255f10fe4d7b9ad9b72cbb6d7c47a964cb4ed9d240c887f3745215878ac",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood-zoom-4.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-5.png",
+      "previousCopySha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "da42ccd5164e960bd9b206d7ae5ca529a004fbabae7519163dabf675fe343085",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood-zoom-5.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-6.png",
+      "previousCopySha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "0869af49b7d2a3a2a38057eb5845358590819cca3482dc0efe8a80457ae4a6b2",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood-zoom-6.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood.pdf",
+      "previousCopySha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "3021fbcebf11b89893dafe8626b3d72d15973bfe04c4379947cc7f2e3ffaa91f",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood.png",
+      "previousCopySha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "0b38ce770c95e86b3751282f88a1c6621bebed02059ec5283e78f9d2a6ae75ed",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood.svg",
+      "previousCopySha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "3951dbae886958f8fc96f7459139da64ce077f0d98df8ef32be805813caa7ab9",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-mood.svg"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-1.png",
+      "previousCopySha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "1b5683705161016784e6cd4a79726bc3daef3a6c4e3d0941af84cf1fd3f6b0a2",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task-zoom-1.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-2.png",
+      "previousCopySha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "6b9c4c96d799781811b4f610ee3f72dd55b35441beb1b2b0a8627b3286f6a98f",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task-zoom-2.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-3.png",
+      "previousCopySha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "dceb61af0a505e0825c957fb7115a70f7dfdffd05b39090b0839c7b2975c7c61",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task-zoom-3.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-4.png",
+      "previousCopySha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "0f9718fb62a8406c03831192e79d2abd2bf644adb81c5b4883eaae5abc741b48",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task-zoom-4.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-5.png",
+      "previousCopySha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "069d20cbad7de00f3c768d0fc1cb8cf7a6c7a0a1f196419da9d1e990132c213b",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task-zoom-5.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-6.png",
+      "previousCopySha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "e48579fab7af065faa9a243bcb6ad88d60c81be3e6494ff1ec57d42d556af494",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task-zoom-6.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task.pdf",
+      "previousCopySha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "4708926b102ed2d3a07a932be6583fd9292bcb565e3d4c8dab6036827bce73f7",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task.png",
+      "previousCopySha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "f36284bd62cda7e25ac3066145bbd7f72332872775173f8e2928a4760172e6eb",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task.png"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task.svg",
+      "previousCopySha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "d92187b8a49744be5f8b9e4f5675b2fbf0501b13d89931c599873e30c4f94321",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-plan-task.svg"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-review-schedules.pdf",
+      "previousCopySha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "1a30e615ec29a1e66df9e57a26e39f447adf3a4188f6ea35d10ab2f475ac1179",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-review-schedules.pdf"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-specification.md",
+      "previousCopySha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "755f6653f2aafd22d454e303e17e4ac29af82179d1a9263201922006ca063d58",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-specification.md"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-workbench.html",
+      "previousCopySha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "0b3de3c60361d0d55f46de1710cef1bb66fd722dacc77cd35d5c91a345fb0dc7",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "lighting-workbench.html"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/manifest.json",
+      "previousCopySha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "b06f6f68e9ceed28518585ea2ed94e102aebee60fbe2b4713034bb7d3ab6861d",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "manifest.json"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/source/export_current_lighting.py",
+      "previousCopySha256": "29ee1f5cdcd563a2fead0c4c7c465d5b3f8407bd9f48a4e6b2daaeb129e322d1",
+      "originalCopyReceipt": "handoff/electrician/lighting/source/repository-copy-receipt.json",
+      "currentSha256": "800b9113f296e0bf36f398565a7e0316d192434f0ef9bf211c436aa9796383bd",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "lightingGenerator": "exporter"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "7544fc9b9a272301e2d25177653efeb5992935db3f2894b6efe9551c67514ae9"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/source/lighting-workbench.template.html",
+      "previousCopySha256": "95b47a0634326ef7fb20b4f60aca34d8e332e87611d1a40788f8255ba20d97c9",
+      "originalCopyReceipt": "handoff/electrician/lighting/source/repository-copy-receipt.json",
+      "currentSha256": "ab5cc46873141ad9d8d5f192f1ff3b074630987f1b20caa33217c44b8f6d8f18",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "lightingGenerator": "workbench"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "1130c9440d67441219d6190cf9e651b6e7c4c643d9027a94f1eb362f3a6f692b"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/source/verify_current_lighting.py",
+      "previousCopySha256": "8e540e581a47716e6d163524aa5ebe5aef924ff35708b6157ad1c468bc18a9c5",
+      "originalCopyReceipt": "handoff/electrician/lighting/source/repository-copy-receipt.json",
+      "currentSha256": "ac5448867a60d1528895792ef940984fb239b60f2e8857479e0562df08b91e8b",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "lightingGenerator": "verifier"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "171d0f30ac696b83124553f651f75434e441e6f2732952cef9e238fb1fa25c54"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/verification.json",
+      "previousCopySha256": "83ab7785544359b3c9ecd6ef3b831cb89c943c33911c704f83d77c2a1e9848b1",
+      "originalCopyReceipt": "handoff/electrician/lighting/repository-copy-receipt.json",
+      "currentSha256": "dcfa894549e49bd306d67fdfe9821055f515dc7484f8608c4ae92075cd625490",
+      "reason": "Regenerated fixed-CCT lighting plans and review schedules with A4 type-coded sheets.",
+      "evidence": {
+        "copyReceipt": "handoff/electrician/lighting/final-review-source-copy.json",
+        "sourcePath": "verification.json"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/README.md",
+      "previousCopySha256": "75a28c1a49e5af018cb049201cd748c123e965c6bf5f616ac00f205e62e7620a",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "947fbb7ea703e9e6d38d475deb2e39364c3b46a0dfd9ba19ade1d24f4a613bce",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "README.md"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/SHA256SUMS.txt",
+      "previousCopySha256": "0f08ed432850a1f8e2d4fd21b0d93d35b02715ce4b79817b69150d4d8d7d1e40",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "7ea5a7197e2028f27edeb4de6c520932c2ef3b8c2443aed5c912720c878afac1",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "SHA256SUMS.txt"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/artifact-receipt.json",
+      "previousCopySha256": "313884739919ce6e3604857651e72a35a2d027a82897c7a9fc15bce36206dfa4",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "26869cf105e10a1d7696a795d285574b14608d0ae373c736e4ca7c3e95bdc43f",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "artifact-receipt.json"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/contractor-civil-review.pdf",
+      "previousCopySha256": "fd69702e20fc296405165fc5881c99b7eb4a6d11ad500e1f945c4bcd7543a2da",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "3ca667041f35eea138ff91e49a5bed7640dee345949e9e952d6f3fb249d9ca17",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "contractor-civil-review.pdf"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/civil_details.mjs",
+      "previousCopySha256": "94c8ebefa6ec6f914d0fa3438601a084794ff8e3c2380bfc93d4dad08392afaa",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "e4a75830cef493f1a5c9f8f70483d89e1876e263d3eb96218e4b4ae48179c56a",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/civil_details.mjs"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/drawing-source.mjs",
+      "previousCopySha256": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "ccfd98b00bf665fe2b470fc8efd8ae0411da8463c7f7ff5b4f1c37be4a02444c",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/drawing-source.mjs"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/finalize_civil_pack.py",
+      "previousCopySha256": "17082245e0d369f9436cf646ed57a39e3865c531fe218df968fd660a60b94921",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "fb7484e618a4f5259d267c395522f397f04ac78da99119adca14c7b5cf292ab9",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/finalize_civil_pack.py"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/generate_source_index.py",
+      "previousCopySha256": "4bf626155675faeca709181219f5c7868dec74da1afd1eb9a3eafa3e9a1c9da7",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "1e9a88065ec3948d86cbb78abf259335308f643c17b1dbd3774c7b9e0e0b7ca0",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/generate_source_index.py"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/layout_views/data.mjs",
+      "previousCopySha256": "7ea4cc5d596401193a818fdf8fbc8292a9abf30d5eeab3333940f28bd371a7c5",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "8f2268cbffb1d43ecc5beecf6dd2c3dfae306d8731ccbff3d7a1f7b72e653de0",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/layout_views/data.mjs"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/layout_views/elev.mjs",
+      "previousCopySha256": "7a00c4cd906af72bb614975c31bf3ebcbbf81f2b8484c837d249c6738f8363c5",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "adbeca60244a1b5142ec4e67533d3f4d92e158881d162bbccad5c60a8d066c99",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/layout_views/elev.mjs"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/layout_views/plan.mjs",
+      "previousCopySha256": "8af52d99dcd630963d711ab3a3abd3f1fc828b90b498aa3c27eea93b32053402",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "c9e631d9b1793db90cf1ca71d4570072182af4aace9c7e27f512cb6174654e55",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/layout_views/plan.mjs"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/layout_views/rcp.mjs",
+      "previousCopySha256": "0e1750311864105116a892b8504521245cdd382cd1e5ceb7bd63b6fc558c1b41",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "81d0f1dc5f245dd6ac2b18a2cb84b8b6274b5b7e47e51b5360e1877ac2291262",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/layout_views/rcp.mjs"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/layout_views/svg.mjs",
+      "previousCopySha256": "c85fffb5fc45075dce418312e2d8e01b2df9191d6264a2cd9c61f835465f204c",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "ddde2f0ba5c785f99b58c19a17eae0f1d364b932a409156a2cd7c6ed596f79d1",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/layout_views/svg.mjs"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/render_civil_details.py",
+      "previousCopySha256": "d256e52b8e2022d310e1602565d2513d99ba0b867e8952128ac7d98ccc557cf3",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "d72bafcc4a4c7a6246d08c51bff9fd95fb63148eab5a7e1ff5b59f71f74b0eba",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/render_civil_details.py"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/render_layout_views.py",
+      "previousCopySha256": "f38e97620b1f411e2c10d0dbe28908667b4d63f08bce01185e6fd11ca591fa1a",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "97e4afa0c786da021c29196394ff6a87c99f91e7448726dca5e619832fd24515",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/render_layout_views.py"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/generator/src/master-adapter.js",
+      "previousCopySha256": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "generator/src/master-adapter.js"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/01-plan-furnished.png",
+      "previousCopySha256": "78fdcf4f70f77554aaf4757698246b4fc8f51a2418114a8145b79c06b30a1b05",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "7cab57ed7ddb6e8b45ed43e36d6bee8d81b89f2533c5df35e92724155c9615fa",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/01-plan-furnished.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/01-plan-furnished.svg",
+      "previousCopySha256": "32e31ede03506872c71dbab30c92536a107641bd638f6e6e2043edc5107fdf08",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "684843b49c06225129238b799e57a27ab378ecb5dc562f180681d1bf70bb509c",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/01-plan-furnished.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/02-rcp.png",
+      "previousCopySha256": "5a0b4e28d2d962362100864f4feb40258f8064db34a20cf86f70ce04e4b18da1",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "77d57a261ac5094be8de49faaa6b6a76d3f817590a210a3b8c3f4981a4d58d2c",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/02-rcp.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/02-rcp.svg",
+      "previousCopySha256": "6d757bd30411ecd295d4b4c0b885ef63c932e2501560de5699226236df41a988",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "4e8391b7ef3bb94db7bedcb5650c890111f446eab10577c500b1afd94d37c3db",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/02-rcp.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/03-elev-R01-living.png",
+      "previousCopySha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "d03c0bf1b9e4f6b69081b7723f4311e3b7605c465b8bb08c0f7e1b019fb075a4",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/03-elev-R01-living.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/03-elev-R01-living.svg",
+      "previousCopySha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "7557e0d9c36670a7afcf5ecf90126baa01c0a20889ae55ed612c044deeb89a93",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/03-elev-R01-living.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/04-elev-R02-dining.png",
+      "previousCopySha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "f29c0e83307e45518e5169eac421e8f55c93e4bda28e9f3d0e183974453223b0",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/04-elev-R02-dining.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/04-elev-R02-dining.svg",
+      "previousCopySha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "b4fc2f50180f79f4bb8fe8e2f0e3fabbc11fb5b1a6a4027f66b937a43fbdb6c2",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/04-elev-R02-dining.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/05-elev-R03-kitchen.png",
+      "previousCopySha256": "bbb588333f2d7462326ea0e945f909b458a4246bc8a2eccfee7b2bd112d2d083",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "8ec64e61770709d6c5d11d48b7f384dc623d37773850fd8c24a5141389d146c8",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/05-elev-R03-kitchen.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/05-elev-R03-kitchen.svg",
+      "previousCopySha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "b5f2ffd20d2a20eb241e544ce118575b412ff79bc517e8a42de79f09c3a23c19",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/05-elev-R03-kitchen.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/06-elev-R04-master.png",
+      "previousCopySha256": "f256510f8bed6ecbeb0ce0cce2c49f43737ef4930bb5ce536bf4d0652e4558c3",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "a31139a2888be23c4510c8f3668b4142acc0e927096b75ef9d016f8de31a65d4",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/06-elev-R04-master.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/06-elev-R04-master.svg",
+      "previousCopySha256": "29cb3e6e6a01dd0f8f860a02000e8b0631c9ad745590c70ff1de314f075aac8b",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "dc4dcebcba9be5386a076f6cb60419d53c3290ae4bd4c2cbb185640b6aed9ad8",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/06-elev-R04-master.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/07-elev-R04a-dressing.png",
+      "previousCopySha256": "ad09a6dc6b29c0592793e45edc43131f50b8537ad4e54694f0389a4335f97d49",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "f21698fecfa60b7d5a20819557ba8c8af1cc07fe37d0ead053515ffe070aab55",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/07-elev-R04a-dressing.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/07-elev-R04a-dressing.svg",
+      "previousCopySha256": "6f02bf5a403d4b9a53c6253bb0b283f4ad937929c908df9b53b7ed566bf39b68",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "d382d99b60bed25195b3e7d6ea3bd38206d96db20c35fa7f0be91495fb1bd54f",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/07-elev-R04a-dressing.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/08-elev-R05-children.png",
+      "previousCopySha256": "61b69c6a77cb8efbbbbc203f7db4754c16aa56351dfb1386432bba8bc3a263cd",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "f7ab640d1c80cc002e0a3067f4c41189fb32975437d2e6f9e83d758eaa885f1a",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/08-elev-R05-children.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/08-elev-R05-children.svg",
+      "previousCopySha256": "cfc5a89c4379d718a17dcec32b52ee348b801e186278184f2f27f1cf187a518e",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "b828e4d632c96d1de3924b0d8401c456f80c5427f8d3bc6f8f59b16f6cf32c96",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/08-elev-R05-children.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/09-elev-R06-TL1.png",
+      "previousCopySha256": "2c3faa390257805ce7d347506821f116a529d91ee65cf73a54de0927f55a532b",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "39a67fd92b58dd989d773b3feb8cfd50ccc76f1d894d21221a822960a8a8894b",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/09-elev-R06-TL1.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/09-elev-R06-TL1.svg",
+      "previousCopySha256": "e5ccca9c76ddd464e7ac56b02e3e19a40d355bd787ce882f5afb1cbd7d84cba5",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "e25907edf19c609c2c1725eafc9d6d17fb026cd7f3e3f0026d3c76052135ee71",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/09-elev-R06-TL1.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/10-elev-R07-TL2.png",
+      "previousCopySha256": "0a81938a2d195f056dcc7a77968cae9d3b40a5d43b1a1b435c29639731496a5d",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "efd8dcab3ab35f9cf29dba3aa056d1cf25703ef4c83b7d86ac13480d3e69ac53",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/10-elev-R07-TL2.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/10-elev-R07-TL2.svg",
+      "previousCopySha256": "c4f276aa07ae40821702180a03d9acab9ac4c7dca09b316ee7a1932f9aa27b34",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "4f59fad19739ab292bd4ead1ac0567fa5cd75018a1fe7473a3c58713b0bd16fc",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/10-elev-R07-TL2.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/11-elev-R08-utility.png",
+      "previousCopySha256": "a166a94a2b7bbce82ad423aec393179af7420fef82abd544f0ba912569d2738f",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "8615383d0d4a9cab7fe501a414e474c06655a1bafae10a789d29c65d80f9f635",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/11-elev-R08-utility.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/11-elev-R08-utility.svg",
+      "previousCopySha256": "7d9cb16e5c57a05a29560625d0bc584332ac9f51a311520c934e257dce6eac15",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "e549f9ede3724344f8156629955c137c1d1314ecbf95b3b654f0a382854499a8",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/11-elev-R08-utility.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/12-elev-R09-entry.png",
+      "previousCopySha256": "76132f7852185dc9c2309ba50bd327136457d7814f6a210b7b786abd32740d06",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "2237e756aae6c5948fcf0b216865bf2d6375f7aca5c9c85168b22799e2b9c4b8",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/12-elev-R09-entry.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/12-elev-R09-entry.svg",
+      "previousCopySha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "48af38c4e72a39baa7c8a140d77a8fe6cc749b26a104e44a9e0b90999d048e40",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/12-elev-R09-entry.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/13-elev-R12-lobby.png",
+      "previousCopySha256": "7fecf904ad06bdf84af590260b056910c06639575d132f68097bc587e7e3df4a",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "2e7f0c310fc288d827fdcc440b7efc93047969fa60734658fc01c676e86ac656",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/13-elev-R12-lobby.png"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/13-elev-R12-lobby.svg",
+      "previousCopySha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "6245c93b5d69592c7a215123f5b4810e2b5e626801f0276fbed306a109fcf749",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/13-elev-R12-lobby.svg"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/README.md",
+      "previousCopySha256": "7f6f2f6c7b048fe802c075f313839a32d32040eab8e658a9843ab6b3a9909462",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "3f46c28a997d0b61c0ad1a8731aac0e552b6f85d8b73461d88dff3b6f67b9dc7",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/README.md"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/current-layout-views.pdf",
+      "previousCopySha256": "c488d3e0f5338eb4b243d596019d36a6a0b9a890cc1f82ae01eb8cace22796a4",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "caff47a10398897ac559ebd97e1992bb5a4c99a6e1ab12f4b0d2165da50fc3f3",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/current-layout-views.pdf"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/layout-views-verification.json",
+      "previousCopySha256": "00839d2526393c30287465c9840bfb95d76faaf21d4d202d5444e47e8d9f7115",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "d8eecca28253ef1f40daf97c288702396c55fccdc9ca782b377121f98c08af5b",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/layout-views-verification.json"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "f63ed31a443fbebe2d8277b962c68b846be7b486950d34540ed72e9035665f1b"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/sheets.json",
+      "previousCopySha256": "e5db606573570a5f6d9d886ca900c5a0a0623fe0271173191fc14b1ddcf79a19",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "3ce127420a7bffa0a62a2fa1d0cf661008a73be20b2bffed2097da53c021dd7e",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "layout-views/sheets.json"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "currentSha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C01-ceiling-section.png",
+      "previousCopySha256": "17f9563b1e6d7cde8b77aa18265d084c83c45e5f9218dd00fb51709e162e3b7e",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "5c28f1a154811026892bd72c6f9d8975d96c0a92a87528e387b1095b287b81e0",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C01-ceiling-section.png"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C01-ceiling-section.svg",
+      "previousCopySha256": "8dfbd5064b621efa66229603e1cdc1815f9cbb2cdbfaa6a78ccf3e3e0015bac7",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "0f344952c3c0195679cb40febc252486b40d2ba3f22f597f3eff2ad43d61599f",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C01-ceiling-section.svg"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C02-openings-stair.png",
+      "previousCopySha256": "188ca9943cfd3c384c62ac5cd7f72b56eb5178c958e81dfbb1dc9d85e24e94ab",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "1fa340d3714ede7ca431b2297b53ed4be9492ad046ab194d0c3cab6cf1a7252b",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C02-openings-stair.png"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C02-openings-stair.svg",
+      "previousCopySha256": "baae1a72e0417b4d79e24631af1c063532429d7b52260bf1d17735be0661d3ed",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "7882ee1c432ebade9cf366307d9bcf7e3c674beac4b4857e69500c5226ddeccb",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C02-openings-stair.svg"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C03-pooja-lofts.png",
+      "previousCopySha256": "ebe7f0de7dec435ef1bd63549e3bb81487dcedd5932c0043220a7ea480058c0d",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "cf508ecd5acf3c6a243ce4405adcc937a4b11a830a08aa3adfe2ea01567cefc0",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C03-pooja-lofts.png"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C03-pooja-lofts.svg",
+      "previousCopySha256": "e015f51966aeaff6ba069bda202428a5b2175313d4841a54135ebd534e19718e",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "c4e8fef4cc00f166f1d146f955b1c76bb68d9810bf99f1d383321e61c88bfb24",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C03-pooja-lofts.svg"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C04-site-checklist.png",
+      "previousCopySha256": "f128d3f6c07b28a9d2975f3de068a133d761b6a2fb564e23944ec730101114e5",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "e548d0c4618a6a2f5c295d9541a4a144339bb7aa1958d1bb0d63a0a99c966191",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C04-site-checklist.png"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/C04-site-checklist.svg",
+      "previousCopySha256": "7b9cd73b64b08384232d6bfa7049016cad651542a006a0fa5d89ec8fe4861136",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "bb3b61a6e8d46823f2cff25a8d2ff65c6122154d66686b6e83c3339052c3846d",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/C04-site-checklist.svg"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/details-source.json",
+      "previousCopySha256": "f0226f57c7f62e9d63ee8aebe9d8253f42a3fe0b38c86c3fcf1adbd4b3f30cb6",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "0a0ff5ae81b081b8653d7dda11c1db723a453f06a13d7862c3e37109457f085b",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/details-source.json"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/opening-register.json",
+      "previousCopySha256": "d8be1578c523854175f22dcf9131dfe38fbb6755dfe95a27a0865f7c908f25cf",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "bba81bce28362e79a3edd98f6fe383cd459e91b6d6cf86418da7340939914a97",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/opening-register.json"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/site-coordination-details.pdf",
+      "previousCopySha256": "459724dd50f3c989631496ede69596cc7c18e07c58be15e65295413d603c1ce8",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "5938cea6223c9cbe3c7b02573aadf0e2f6003897d3712e24063f911a1062f73c",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/site-coordination-details.pdf"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/site-details/site-details-verification.json",
+      "previousCopySha256": "e85baa361b669a63bd729593152a4832f058b06149017182c26dfd85d8be5cd6",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "1a4db23ad350744fbbfad09953dd5ef307585ed1793fde44453ae729267b51c4",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "site-details/site-details-verification.json"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index-01.png",
+      "previousCopySha256": "733fdc4ebc6c9d7ac0a4188529675f5c9f989a593427cc73499d97104f99e425",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "d5c89eaf2d875d73f4dd2315e097892ee807d16cb6d0a9ca46c6bf4a9b769ff1",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index-01.png"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index-01.svg",
+      "previousCopySha256": "5b97e936d27062d7653197f4edf32ee4be1af6013708a3429d053b376515ce0f",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "9855f9c510f4466e2fb53e2b8838747c8801dc4e59606839635f020bb287bbb1",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index-01.svg"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index-02.png",
+      "previousCopySha256": "69cfa9cef8f03c4f44ce4ecc2b7b2f763163d12d33cc80bb208e5df82ef8c005",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "ef0ea251aa78e64e52fee8b6120e43b5f689524e4ce933e83a76fb4d059dedf3",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index-02.png"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index-02.svg",
+      "previousCopySha256": "887b53f0c0a587a1b50c5a8bc355ce39debc7d326a95d934e1c1f9643adaa202",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "0c2279511631ac0cdba0cefc9e8d50445f8f91b441b4513360242ab3d31cb690",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index-02.svg"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index-03.png",
+      "previousCopySha256": "7db17decd39341902654ac302d810d1c4a8e71377f2e6deed89c028a19af3331",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "5289bb5f35226df7ff35d60d6ab73cf603a257d6660409f2bfc4bfaaa93106ed",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index-03.png"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index-03.svg",
+      "previousCopySha256": "3915c538354efc03c8ed1055d4cf1d9534a26594e52d075574e5a182fcf56584",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "16702e2a172557bef2ca12e750be16697ed2adb066b4c5d2538e1398e8e6c868",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index-03.svg"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index.json",
+      "previousCopySha256": "c6d67a056f8474ac6c0f0fdf4530815b4a6cf498213ed1c6116cfe795ae0afec",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "816ee068faa2544104f026ad3ce9901bc555d74d968e8c3b5a8620607dfa90e3",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index.json"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index.md",
+      "previousCopySha256": "e5d1ca22dbb53b48a0b9240ec130387baedfc37fe3ee4b65ad56bba476bf50d8",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "c1ec06a406535f255b563cc1f246c2043e1033976ed6ee6d7ed159b1f557e706",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index.md"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/room-opening-index.pdf",
+      "previousCopySha256": "34dee5307d8dc5e8fe6ac9aee81d52343c90da5c20921f3ab4614872a88fd2a9",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "0d6e904e1f23f9cdc238af15e81492572cfc0e8b6eb8e9df135e3b20d8746e34",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/room-opening-index.pdf"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/source-index/source-index-verification.json",
+      "previousCopySha256": "c0e2cabda1f014d7fe5043ce540faee7c0efdc18225da8c407cbc507cff8fbdf",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "currentSha256": "e1f4b24467d1637af03bc61c77403aa462f2635442402fac17d7a0bdfcd86a50",
+      "reason": "Regenerated source-based civil and room/opening drawings with the reported R05 levels and holds.",
+      "evidence": {
+        "copyReceipt": "handoff/mason-civil/final-review-source-copy.json",
+        "sourcePath": "source-index/source-index-verification.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/drawing-public-privacy-receipt.json",
+      "previousCopySha256": "ab797091ab31112dcb8130711201383f6153aa37db78d50f0df8c6d71beeffb3",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "29731d31b350dd4154499d0ac0fbe3352fcc9b6bf5b09af3b34b06fdd1ec6c0d",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "drawing-public-privacy-receipt.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/01-plan-furnished.png",
+      "previousCopySha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "7cab57ed7ddb6e8b45ed43e36d6bee8d81b89f2533c5df35e92724155c9615fa",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/01-plan-furnished.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/01-plan-furnished.svg",
+      "previousCopySha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "684843b49c06225129238b799e57a27ab378ecb5dc562f180681d1bf70bb509c",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/01-plan-furnished.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/02-rcp.png",
+      "previousCopySha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "77d57a261ac5094be8de49faaa6b6a76d3f817590a210a3b8c3f4981a4d58d2c",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/02-rcp.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/02-rcp.svg",
+      "previousCopySha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "4e8391b7ef3bb94db7bedcb5650c890111f446eab10577c500b1afd94d37c3db",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/02-rcp.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/03-elev-R01-living.png",
+      "previousCopySha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "d03c0bf1b9e4f6b69081b7723f4311e3b7605c465b8bb08c0f7e1b019fb075a4",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/03-elev-R01-living.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/03-elev-R01-living.svg",
+      "previousCopySha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "7557e0d9c36670a7afcf5ecf90126baa01c0a20889ae55ed612c044deeb89a93",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/03-elev-R01-living.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/04-elev-R02-dining.png",
+      "previousCopySha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "f29c0e83307e45518e5169eac421e8f55c93e4bda28e9f3d0e183974453223b0",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/04-elev-R02-dining.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/04-elev-R02-dining.svg",
+      "previousCopySha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "b4fc2f50180f79f4bb8fe8e2f0e3fabbc11fb5b1a6a4027f66b937a43fbdb6c2",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/04-elev-R02-dining.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/05-elev-R03-kitchen.png",
+      "previousCopySha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "8ec64e61770709d6c5d11d48b7f384dc623d37773850fd8c24a5141389d146c8",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/05-elev-R03-kitchen.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/05-elev-R03-kitchen.svg",
+      "previousCopySha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "b5f2ffd20d2a20eb241e544ce118575b412ff79bc517e8a42de79f09c3a23c19",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/05-elev-R03-kitchen.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/06-elev-R04-master.png",
+      "previousCopySha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "a31139a2888be23c4510c8f3668b4142acc0e927096b75ef9d016f8de31a65d4",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/06-elev-R04-master.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/06-elev-R04-master.svg",
+      "previousCopySha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "dc4dcebcba9be5386a076f6cb60419d53c3290ae4bd4c2cbb185640b6aed9ad8",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/06-elev-R04-master.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/07-elev-R04a-dressing.png",
+      "previousCopySha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "f21698fecfa60b7d5a20819557ba8c8af1cc07fe37d0ead053515ffe070aab55",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/07-elev-R04a-dressing.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/07-elev-R04a-dressing.svg",
+      "previousCopySha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "d382d99b60bed25195b3e7d6ea3bd38206d96db20c35fa7f0be91495fb1bd54f",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/07-elev-R04a-dressing.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/08-elev-R05-children.png",
+      "previousCopySha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "f7ab640d1c80cc002e0a3067f4c41189fb32975437d2e6f9e83d758eaa885f1a",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/08-elev-R05-children.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/08-elev-R05-children.svg",
+      "previousCopySha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "b828e4d632c96d1de3924b0d8401c456f80c5427f8d3bc6f8f59b16f6cf32c96",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/08-elev-R05-children.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/09-elev-R06-TL1.png",
+      "previousCopySha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "39a67fd92b58dd989d773b3feb8cfd50ccc76f1d894d21221a822960a8a8894b",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/09-elev-R06-TL1.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/09-elev-R06-TL1.svg",
+      "previousCopySha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "e25907edf19c609c2c1725eafc9d6d17fb026cd7f3e3f0026d3c76052135ee71",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/09-elev-R06-TL1.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/10-elev-R07-TL2.png",
+      "previousCopySha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "efd8dcab3ab35f9cf29dba3aa056d1cf25703ef4c83b7d86ac13480d3e69ac53",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/10-elev-R07-TL2.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/10-elev-R07-TL2.svg",
+      "previousCopySha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "4f59fad19739ab292bd4ead1ac0567fa5cd75018a1fe7473a3c58713b0bd16fc",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/10-elev-R07-TL2.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/11-elev-R08-utility.png",
+      "previousCopySha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "8615383d0d4a9cab7fe501a414e474c06655a1bafae10a789d29c65d80f9f635",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/11-elev-R08-utility.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/11-elev-R08-utility.svg",
+      "previousCopySha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "e549f9ede3724344f8156629955c137c1d1314ecbf95b3b654f0a382854499a8",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/11-elev-R08-utility.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/12-elev-R09-entry.png",
+      "previousCopySha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "2237e756aae6c5948fcf0b216865bf2d6375f7aca5c9c85168b22799e2b9c4b8",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/12-elev-R09-entry.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/12-elev-R09-entry.svg",
+      "previousCopySha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "48af38c4e72a39baa7c8a140d77a8fe6cc749b26a104e44a9e0b90999d048e40",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/12-elev-R09-entry.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/13-elev-R12-lobby.png",
+      "previousCopySha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "2e7f0c310fc288d827fdcc440b7efc93047969fa60734658fc01c676e86ac656",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/13-elev-R12-lobby.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/13-elev-R12-lobby.svg",
+      "previousCopySha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "6245c93b5d69592c7a215123f5b4810e2b5e626801f0276fbed306a109fcf749",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/13-elev-R12-lobby.svg"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/README.md",
+      "previousCopySha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "3f46c28a997d0b61c0ad1a8731aac0e552b6f85d8b73461d88dff3b6f67b9dc7",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/README.md"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/current-layout-views.pdf",
+      "previousCopySha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "caff47a10398897ac559ebd97e1992bb5a4c99a6e1ab12f4b0d2165da50fc3f3",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/current-layout-views.pdf"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/layout-views-verification.json",
+      "previousCopySha256": "f63ed31a443fbebe2d8277b962c68b846be7b486950d34540ed72e9035665f1b",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "a8b98d414f6955291fb9f5135b30ff18a7a169bc2a3c2977b4eff97db8e36b62",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/layout-views-verification.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/drawings/layout-views/sheets.json",
+      "previousCopySha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288",
+      "originalCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+      "currentSha256": "4d6ea877329096dd5509f2898ea1ee8fc50d9690d4346046080292ac726c657f",
+      "reason": "Regenerated verified review drawings with current R05 levels and privacy-safe metadata.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/drawings/final-review-source-copy.json",
+        "sourcePath": "layout-views/sheets.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/renders/01-whole-flat-dollhouse.png",
+      "previousCopySha256": "6c3b2f19e20d6257d5e39506b518c9af235f917d767297354eaad04e7acbb6af",
+      "originalCopyReceipt": "handoff/viewer/renders/repository-copy-receipt.json",
+      "currentSha256": "47e1d9fd50604a09c6b533ee44f13f30c1f652b34d6c5fc075b30d33734dbd4e",
+      "reason": "Captured the current viewer for design review; no measured or construction approval is implied.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/renders/final-review-source-copy.json",
+        "sourcePath": "01-whole-flat-dollhouse.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/renders/02-living-light-and-curtains.png",
+      "previousCopySha256": "5caea5f0b948af115d3ed46e10883e489f52689e241eb03bb9f4a9d006def178",
+      "originalCopyReceipt": "handoff/viewer/renders/repository-copy-receipt.json",
+      "currentSha256": "4ee840b2161b40a3e6312fed1fe5250c691bad7b154fd7b07eb0a9f55674eadc",
+      "reason": "Captured the current viewer for design review; no measured or construction approval is implied.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/renders/final-review-source-copy.json",
+        "sourcePath": "02-living-light-and-curtains.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/renders/03-master-proposed-interiors.png",
+      "previousCopySha256": "68e99b2522e00551576f72198a6d6616f545d5bc596b5136e5731d908a986c94",
+      "originalCopyReceipt": "handoff/viewer/renders/repository-copy-receipt.json",
+      "currentSha256": "9356f538a962c62d928e4e0101b5e50a26292aa00c2e5df1719742a019bd74a0",
+      "reason": "Captured the current viewer for design review; no measured or construction approval is implied.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/renders/final-review-source-copy.json",
+        "sourcePath": "03-master-proposed-interiors.png"
+      }
+    },
+    {
+      "path": "handoff/viewer/renders/render-receipt.json",
+      "previousCopySha256": "3aec8b9c8a3347e4ba8442a0fe05d62e3dc6dcd2f70f8cc02e5a4b3f8cb51951",
+      "originalCopyReceipt": "handoff/viewer/renders/repository-copy-receipt.json",
+      "currentSha256": "699cde220459e053761200b735caf30e673d13bb0acbaf8e0e1150a7f2a4981b",
+      "reason": "Captured the current viewer for design review; no measured or construction approval is implied.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/renders/final-review-source-copy.json",
+        "sourcePath": "render-receipt.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/renders/selected-source-file-hashes.json",
+      "previousCopySha256": "7eca78e3dac67dcbcb240b2d75eb3f16646362bee00b2b8ea81dd92e79271edf",
+      "originalCopyReceipt": "handoff/viewer/renders/repository-copy-receipt.json",
+      "currentSha256": "f6a17507d065bb1c671ac77c1762d8cc632e0a9d2ea52d6de6a932b859a775c7",
+      "reason": "Captured the current viewer for design review; no measured or construction approval is implied.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/renders/final-review-source-copy.json",
+        "sourcePath": "selected-source-file-hashes.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/build.mjs",
+      "previousCopySha256": "0582af9511ee34cc01ae907311e4d136d89192ef9c89a1decdc94e213a1d4472",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "3d00d6f14c291aad04b085398080b09987fc5ab428a6b06268aa7adf46c43c1a",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "build.mjs"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/capture_review_renders.py",
+      "previousCopySha256": "936c7e4fd86cb64f878c05772e6c2eeda01bc79cd64f0e931392098682ad5dfa",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "532696ae8140180a2e313afa4ed58e9b1d5ddb3e850e49e7cc8214072f28b38a",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "capture_review_renders.py"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/layout_views/elev.mjs",
+      "previousCopySha256": "17fc2e3d4dc6e90b089af009889466efe635cfab4f580466aa6f0dc4f65e0a9f",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "adbeca60244a1b5142ec4e67533d3f4d92e158881d162bbccad5c60a8d066c99",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "layout_views/elev.mjs"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/layout_views/rcp.mjs",
+      "previousCopySha256": "acdb3e7d1455765dbc726f961c860c62dd695696a66c3a726c7da1a58830e836",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "81d0f1dc5f245dd6ac2b18a2cb84b8b6274b5b7e47e51b5360e1877ac2291262",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "layout_views/rcp.mjs"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/layout_views/svg.mjs",
+      "previousCopySha256": "b0d674725edeb45234a8cd38dd520625d1e8b28aaa239a5e8e2040d81585e5e1",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "ddde2f0ba5c785f99b58c19a17eae0f1d364b932a409156a2cd7c6ed596f79d1",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "layout_views/svg.mjs"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/privacy-transform.json",
+      "previousCopySha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "privacy-transform.json"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
+        "currentSha256": "9acda06204affe1a39260f57e5d1d7aedf4f96724a24561ed038cfc904e71347"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/public-source-manifest.json",
+      "previousCopySha256": "aaa3f8de95001aee68784cec8fa51aadf8bc351d1696c6569daec2bc24a05658",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "public-source-manifest.json"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
+        "currentSha256": "93b073d48e59aa7f5a34d8e034414ed57249fa444b1c9d7fd2ef01ade3970538"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/render_layout_views.py",
+      "previousCopySha256": "51f22a413ca46b571bec398e0adf581b83fb2a799767f1a9f8a172fb8466ab16",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "97e4afa0c786da021c29196394ff6a87c99f91e7448726dca5e619832fd24515",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "render_layout_views.py"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/src/house-data.generated.json",
+      "previousCopySha256": "89a56c67315c74c10af8a9a9f1535a1d17f390cd675fe1cfd156cc5163806867",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "d26163411ebd885914d5347740539954b5ed186dbd21d5302a9acf5bd6c3ddae",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "src/house-data.generated.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/template.html",
+      "previousCopySha256": "b5ca1a56dd84a2f03bef98301ccafb967c09ed89b9ec8053bf1c1706b8f54dac",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "de1f007c530027651752ce930452ff42e56ff24979f1514121f1fe87e1192c9c",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "template.html"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/tour-data.mjs",
+      "previousCopySha256": "9c933db736a79d7d8be5c050d8fe6cee5a1b11e87dcd00b9db5cc7f82d4e9f8f",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "e71d5ab476584c0f5d49518529e549ec1098ee3d31617a905ad2749ab3a1ed6b",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "tour-data.mjs"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/verify_site.py",
+      "previousCopySha256": "d7701d46db08fe1ad5024def2f56128886a9cc2f3a63dd4dbef01ebdeddc7752",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "9e888373bcc8815a62fc2648668086fc00669eec2cac303af63f68cae926feaf",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "verify_site.py"
+      }
+    }
+  ]
+}

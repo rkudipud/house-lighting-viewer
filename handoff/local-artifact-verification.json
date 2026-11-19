@@ -5,28 +5,28 @@
     "(no extension)": 3,
     ".cal": 1,
     ".csv": 47,
-    ".html": 24,
+    ".html": 26,
     ".jpeg": 7,
     ".js": 17,
-    ".json": 168,
-    ".md": 40,
+    ".json": 178,
+    ".md": 41,
     ".mjs": 22,
-    ".pdf": 41,
-    ".png": 109,
-    ".py": 44,
+    ".pdf": 35,
+    ".png": 145,
+    ".py": 45,
     ".rad": 54,
     ".svg": 94,
     ".txt": 5,
     ".xlsx": 1
   },
-  "pdfPagesRenderedAt72Dpi": 282,
+  "pdfPagesRenderedAt72Dpi": 265,
   "distinctApprovedUserSitePhotos": 3,
   "largestFile": {
     "path": "handoff/mason-civil/contractor-civil-review.pdf",
-    "bytes": 7052004
+    "bytes": 7094341
   },
   "privacyScope": "Text source files; every PDF page text, standard/XML metadata, links and decoded object dictionaries; approved photographs checked for EXIF and exact allowlisted hashes.",
-  "htmlSha256": "75b813f4ff7c655884bf3cc13e64ebe1aba4fcc4a9ff82bfe99a15c2def510a2",
+  "htmlSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
   "errors": [],
   "constructionRelease": false
 }

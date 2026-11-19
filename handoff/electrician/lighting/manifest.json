@@ -1,5 +1,7 @@
 {
   "schema": "house-lighting-current-review/1",
+  "exporter_sha256": "800b9113f296e0bf36f398565a7e0316d192434f0ef9bf211c436aa9796383bd",
+  "workbench_template_sha256": "ab5cc46873141ad9d8d5f192f1ff3b074630987f1b20caa33217c44b8f6d8f18",
   "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "current_design_inputs_canonical_sha256": "8caef996de6231f6adef0bb7407f1c29c8a5fbc8bd87d108782748e38087f1d7",
   "original_photometry_design_inputs_canonical_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
@@ -174,8 +176,8 @@
       "bytes": 77756
     },
     "heatmaps/CBR-analytic.png": {
-      "sha256": "5ac79bd48cfa734b371d37b4a97edae54583702c77f311ab140b0b2d516f9e64",
-      "bytes": 85266
+      "sha256": "dabd7ad2e29de7e5f173b35a8e3265e455f7403e8c2e3ce05ae36e921e34c855",
+      "bytes": 85586
     },
     "heatmaps/DIN-analytic.png": {
       "sha256": "a1692362822faf5ce89d01e6de396068728ef2ac8caedc63c857aca09b994295",
@@ -218,8 +220,8 @@
       "bytes": 72391
     },
     "heatmaps-summary.pdf": {
-      "sha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be",
-      "bytes": 152275
+      "sha256": "ae22a8b5b24fd0fbece07e1da62024553aa32ffbf48d898f401ba5e99bf3b8c2",
+      "bytes": 152840
     },
     "heatmaps.json": {
       "sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
@@ -230,128 +232,128 @@
       "bytes": 377451
     },
     "lighting-plan-main-zoom-1.png": {
-      "sha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7",
-      "bytes": 109830
+      "sha256": "a4a12d8e0727f96ab86ee79d3cf1630ae64e0b26e98f966cb6ced27105eebf68",
+      "bytes": 116956
     },
     "lighting-plan-main-zoom-2.png": {
-      "sha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae",
-      "bytes": 101816
+      "sha256": "c8f81db7303f1e8865ad6823afcd50854056b2a1207e29cb6469ab284ae7417a",
+      "bytes": 105729
     },
     "lighting-plan-main-zoom-3.png": {
-      "sha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a",
-      "bytes": 105174
+      "sha256": "5643875fcaa5d7e9ee642c49a6de11a0f92efee6df38482c595b05cb0d270254",
+      "bytes": 109060
     },
     "lighting-plan-main-zoom-4.png": {
-      "sha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8",
-      "bytes": 121127
+      "sha256": "cccfd17a1f6f63ef3c30f47f66c035bf2643ad529253d97a045e5bd8dc4d11be",
+      "bytes": 127800
     },
     "lighting-plan-main-zoom-5.png": {
-      "sha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417",
-      "bytes": 99631
+      "sha256": "e0fa792a17eaded26b6ace32528a700ec266a74344f004fd10346ec65b9a28b7",
+      "bytes": 102946
     },
     "lighting-plan-main-zoom-6.png": {
-      "sha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6",
-      "bytes": 91314
+      "sha256": "a1800ef103b913d20fd03e70c168d0218a5b0852e3e06adbfb3c04ac29919174",
+      "bytes": 93620
     },
     "lighting-plan-main.pdf": {
-      "sha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270",
-      "bytes": 122962
+      "sha256": "26038838343e89348c596f3bd8e64e06c9a805d841af61a44941b38fb9ce3b44",
+      "bytes": 121919
     },
     "lighting-plan-main.png": {
-      "sha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48",
-      "bytes": 142999
+      "sha256": "28b1a41e5cb7032db8f89ca4ccb26a848a4bfd54b7809ec3f697d6623b6db26a",
+      "bytes": 143022
     },
     "lighting-plan-main.svg": {
-      "sha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e",
-      "bytes": 121953
+      "sha256": "9dd52437b9db3f37a2b9d795d2866fa040887df7169db7cb52c5edd558ad1ab1",
+      "bytes": 115229
     },
     "lighting-plan-mood-zoom-1.png": {
-      "sha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9",
-      "bytes": 93915
+      "sha256": "4f3e251a013499a212a7181396b7295a9aeed9f8732dd955a415aa19fcddd4e2",
+      "bytes": 98265
     },
     "lighting-plan-mood-zoom-2.png": {
-      "sha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04",
-      "bytes": 111856
+      "sha256": "8d3d39650cf25af269d9991b11479b1414382664321a842d5ed904ce3690d335",
+      "bytes": 117142
     },
     "lighting-plan-mood-zoom-3.png": {
-      "sha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939",
-      "bytes": 114743
+      "sha256": "bc34dfad364aa7321553a7d120058f14c984300365b93a6273191d12ce843914",
+      "bytes": 121256
     },
     "lighting-plan-mood-zoom-4.png": {
-      "sha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb",
-      "bytes": 115530
+      "sha256": "f231d255f10fe4d7b9ad9b72cbb6d7c47a964cb4ed9d240c887f3745215878ac",
+      "bytes": 125550
     },
     "lighting-plan-mood-zoom-5.png": {
-      "sha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee",
-      "bytes": 111193
+      "sha256": "da42ccd5164e960bd9b206d7ae5ca529a004fbabae7519163dabf675fe343085",
+      "bytes": 118860
     },
     "lighting-plan-mood-zoom-6.png": {
-      "sha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de",
-      "bytes": 108269
+      "sha256": "0869af49b7d2a3a2a38057eb5845358590819cca3482dc0efe8a80457ae4a6b2",
+      "bytes": 115344
     },
     "lighting-plan-mood.pdf": {
-      "sha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820",
-      "bytes": 106406
+      "sha256": "3021fbcebf11b89893dafe8626b3d72d15973bfe04c4379947cc7f2e3ffaa91f",
+      "bytes": 107985
     },
     "lighting-plan-mood.png": {
-      "sha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8",
-      "bytes": 160673
+      "sha256": "0b38ce770c95e86b3751282f88a1c6621bebed02059ec5283e78f9d2a6ae75ed",
+      "bytes": 164424
     },
     "lighting-plan-mood.svg": {
-      "sha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31",
-      "bytes": 139450
+      "sha256": "3951dbae886958f8fc96f7459139da64ce077f0d98df8ef32be805813caa7ab9",
+      "bytes": 134747
     },
     "lighting-plan-task-zoom-1.png": {
-      "sha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331",
-      "bytes": 100814
+      "sha256": "1b5683705161016784e6cd4a79726bc3daef3a6c4e3d0941af84cf1fd3f6b0a2",
+      "bytes": 104528
     },
     "lighting-plan-task-zoom-2.png": {
-      "sha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53",
-      "bytes": 103865
+      "sha256": "6b9c4c96d799781811b4f610ee3f72dd55b35441beb1b2b0a8627b3286f6a98f",
+      "bytes": 107990
     },
     "lighting-plan-task-zoom-3.png": {
-      "sha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae",
-      "bytes": 95768
+      "sha256": "dceb61af0a505e0825c957fb7115a70f7dfdffd05b39090b0839c7b2975c7c61",
+      "bytes": 97488
     },
     "lighting-plan-task-zoom-4.png": {
-      "sha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609",
-      "bytes": 113216
+      "sha256": "0f9718fb62a8406c03831192e79d2abd2bf644adb81c5b4883eaae5abc741b48",
+      "bytes": 121407
     },
     "lighting-plan-task-zoom-5.png": {
-      "sha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8",
-      "bytes": 94469
+      "sha256": "069d20cbad7de00f3c768d0fc1cb8cf7a6c7a0a1f196419da9d1e990132c213b",
+      "bytes": 96815
     },
     "lighting-plan-task-zoom-6.png": {
-      "sha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2",
-      "bytes": 96499
+      "sha256": "e48579fab7af065faa9a243bcb6ad88d60c81be3e6494ff1ec57d42d556af494",
+      "bytes": 98468
     },
     "lighting-plan-task.pdf": {
-      "sha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4",
-      "bytes": 89526
+      "sha256": "4708926b102ed2d3a07a932be6583fd9292bcb565e3d4c8dab6036827bce73f7",
+      "bytes": 89296
     },
     "lighting-plan-task.png": {
-      "sha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0",
-      "bytes": 142647
+      "sha256": "f36284bd62cda7e25ac3066145bbd7f72332872775173f8e2928a4760172e6eb",
+      "bytes": 142639
     },
     "lighting-plan-task.svg": {
-      "sha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9",
-      "bytes": 126868
+      "sha256": "d92187b8a49744be5f8b9e4f5675b2fbf0501b13d89931c599873e30c4f94321",
+      "bytes": 119944
     },
     "lighting-review-schedules.pdf": {
-      "sha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d",
+      "sha256": "1a30e615ec29a1e66df9e57a26e39f447adf3a4188f6ea35d10ab2f475ac1179",
       "bytes": 91409
     },
     "lighting-specification.md": {
-      "sha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b",
-      "bytes": 12330
+      "sha256": "755f6653f2aafd22d454e303e17e4ac29af82179d1a9263201922006ca063d58",
+      "bytes": 12332
     },
     "lighting-workbench.html": {
-      "sha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822",
-      "bytes": 618701
+      "sha256": "0b3de3c60361d0d55f46de1710cef1bb66fd722dacc77cd35d5c91a345fb0dc7",
+      "bytes": 618756
     },
     "README.md": {
-      "sha256": "2aed84ec4f590145407fff55429a5a43828d0bbe0db82eb4748c118f2bea58b8",
-      "bytes": 2768
+      "sha256": "a393c7f4cc10eee7903da64767b402d754d8474b03ba71d62f72d5556810a889",
+      "bytes": 2879
     },
     "supply-ledger-selected-s1.csv": {
       "sha256": "84b49749c1c54ba0c14e74066b38981e6b449d32d7be1a9f50e84585fffadf08",
@@ -367,5 +369,5 @@
     }
   },
   "verification_receipt": "verification.json binds this manifest and is excluded from files to avoid a circular hash",
-  "generated_utc": "2026-11-19T20:40:35.564061+00:00"
+  "generated_utc": "2026-11-19T23:28:06.635640+00:00"
 }

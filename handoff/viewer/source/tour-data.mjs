@@ -197,7 +197,7 @@ export function prepareTour(D, {preview, outDir, analysis, cctMap}) {
     rooms: Object.fromEntries(Object.entries(fixedRooms).map(([id, r]) => [id, {high: sameLine(r.high), low: sameLine(r.low), independent: sameLine(r.independent)}])),
   } : {
     status: 'PROVISIONAL room table - replace when the fixed-CCT lighting schedule is issued',
-    rule: 'Warm 2700-3000 K in living, dining, bedrooms, balcony and pooja; neutral 4000 K in kitchen, bathrooms, utility and dressing task light. Only the master tunable-white coves are re-pinned: living, dining, master and children 2700 K; kitchen 4000 K.',
+    rule: 'Provisional room table only: the listed coves are fixed at 2700 K. Use the verified current fixed-CCT map for final review; brightness changes, not colour temperature.',
     coveRePin: FIXED_COVE_CCT,
     rooms: Object.fromEntries(Object.entries(fixedRooms).map(([id, r]) => [id, {high: sameLine(r.high), low: sameLine(r.low), independent: sameLine(r.independent)}])),
   };

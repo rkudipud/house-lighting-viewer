@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1030" viewBox="0 0 1100 1030">
-<title>CBR / LOW_100 / exploratory Radiance estimate</title>
+<title>CBR / LOW_100 / historical Radiance baseline, superseded</title>
 <rect width="1100" height="1030" fill="#ffffff"/>
 <g font-family="sans-serif" fill="#172a35">
-<text x="50" y="40" font-size="24">CBR / LOW_100 / exploratory Radiance estimate</text>
+<text x="50" y="40" font-size="24">CBR / LOW_100 / historical Radiance baseline, superseded</text>
 <text x="50" y="72" font-size="18">GENERIC / PROVISIONAL / NOT MEASURED / NOT PRODUCT VALIDATION</text>
 <text x="50" y="102" font-size="17">Workplane 0.75 m; MF 0.8; 100% stored output; 0.25 ft source grid</text>
 <text x="80" y="815" font-size="17">Plan x / ft; plan z increases down the page. Blank cells are outside the source mask.</text>
 <text x="50" y="860" font-size="17">P1 excluded; pooja strip/spot and KIT-L1 cove remain HELD. No fixtures moved.</text>
 <text x="50" y="888" font-size="17">Curtain strips have no lux credit. UTL/BAL assume enclosure, not real open-air conditions.</text>
-<text x="50" y="916" font-size="17">Base-run map; see separate six-room revision. Glare/UGR and daylight not computed; holds remain.</text>
+<text x="50" y="916" font-size="17">HISTORICAL CBR: geometry and LOW are superseded; use current review heatmaps.</text>
 <text x="50" y="944" font-size="17">Viewer/workbench maps remain separate frozen analytic estimates, not this ray-tracing result.</text>
 <text x="50" y="982" font-size="14">Source: analysis/sim-heatmaps.json. Values are supplied rounded lux; no lighting recalculated.</text>
 </g>

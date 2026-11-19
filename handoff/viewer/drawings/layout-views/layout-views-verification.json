@@ -1,12 +1,12 @@
 {
   "schema": "layout_views_receipt/1",
-  "verified_utc": "2026-11-19T20:43:23.322440+00:00",
+  "verified_utc": "2026-11-19T23:30:08.516519+00:00",
   "purpose": "Read-only current layout views (top-down plan, reflected ceiling plan, interior elevations) from the canonical master; not a construction release.",
   "drawing_source": {
     "staging": false,
     "final": false,
-    "publication_status": "review drawing; not construction-released",
-    "review_draft": false,
+    "publication_status": "REVIEW DRAFT; not construction-released",
+    "review_draft": true,
     "lighting_pending": false,
     "hd18": {
       "fragment": {
@@ -155,18 +155,18 @@
       "title": "Furnished floor plan (top-down)",
       "page_px": [
         1700.0,
-        2234.0
+        2216.0
       ],
       "png_scale": 2,
       "svg": {
         "file": "01-plan-furnished.svg",
-        "sha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec",
-        "bytes": 56897
+        "sha256": "684843b49c06225129238b799e57a27ab378ecb5dc562f180681d1bf70bb509c",
+        "bytes": 56761
       },
       "png": {
         "file": "01-plan-furnished.png",
-        "sha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848",
-        "bytes": 1146374
+        "sha256": "7cab57ed7ddb6e8b45ed43e36d6bee8d81b89f2533c5df35e92724155c9615fa",
+        "bytes": 1135209
       },
       "counts": {
         "rooms": 12,
@@ -179,8 +179,8 @@
         "stairParts": 3,
         "baths": 2
       },
-      "svg_elements": 531,
-      "svg_text_elements": 188,
+      "svg_elements": 530,
+      "svg_text_elements": 187,
       "pdf_page": 1
     },
     {
@@ -188,18 +188,18 @@
       "title": "Reflected ceiling plan (bottoms-up)",
       "page_px": [
         1700.0,
-        4103.0
+        4127.0
       ],
       "png_scale": 2,
       "svg": {
         "file": "02-rcp.svg",
-        "sha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1",
-        "bytes": 91555
+        "sha256": "4e8391b7ef3bb94db7bedcb5650c890111f446eab10577c500b1afd94d37c3db",
+        "bytes": 91931
       },
       "png": {
         "file": "02-rcp.png",
-        "sha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2",
-        "bytes": 1905699
+        "sha256": "77d57a261ac5094be8de49faaa6b6a76d3f817590a210a3b8c3f4981a4d58d2c",
+        "bytes": 1917470
       },
       "counts": {
         "fixtures": 104,
@@ -216,8 +216,8 @@
         "rooms": 12,
         "walls": 21
       },
-      "svg_elements": 954,
-      "svg_text_elements": 234,
+      "svg_elements": 956,
+      "svg_text_elements": 235,
       "pdf_page": 2
     },
     {
@@ -230,13 +230,13 @@
       "png_scale": 2,
       "svg": {
         "file": "03-elev-R01-living.svg",
-        "sha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8",
-        "bytes": 58443
+        "sha256": "7557e0d9c36670a7afcf5ecf90126baa01c0a20889ae55ed612c044deeb89a93",
+        "bytes": 58394
       },
       "png": {
         "file": "03-elev-R01-living.png",
-        "sha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35",
-        "bytes": 1066928
+        "sha256": "d03c0bf1b9e4f6b69081b7723f4311e3b7605c465b8bb08c0f7e1b019fb075a4",
+        "bytes": 1061204
       },
       "counts": {
         "panels": 5,
@@ -260,13 +260,13 @@
       "png_scale": 2,
       "svg": {
         "file": "04-elev-R02-dining.svg",
-        "sha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60",
-        "bytes": 36353
+        "sha256": "b4fc2f50180f79f4bb8fe8e2f0e3fabbc11fb5b1a6a4027f66b937a43fbdb6c2",
+        "bytes": 36304
       },
       "png": {
         "file": "04-elev-R02-dining.png",
-        "sha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c",
-        "bytes": 717309
+        "sha256": "f29c0e83307e45518e5169eac421e8f55c93e4bda28e9f3d0e183974453223b0",
+        "bytes": 711953
       },
       "counts": {
         "panels": 3,
@@ -290,13 +290,13 @@
       "png_scale": 2,
       "svg": {
         "file": "05-elev-R03-kitchen.svg",
-        "sha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155",
-        "bytes": 47433
+        "sha256": "b5f2ffd20d2a20eb241e544ce118575b412ff79bc517e8a42de79f09c3a23c19",
+        "bytes": 47384
       },
       "png": {
         "file": "05-elev-R03-kitchen.png",
-        "sha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7",
-        "bytes": 840605
+        "sha256": "8ec64e61770709d6c5d11d48b7f384dc623d37773850fd8c24a5141389d146c8",
+        "bytes": 835681
       },
       "counts": {
         "panels": 4,
@@ -320,13 +320,13 @@
       "png_scale": 2,
       "svg": {
         "file": "06-elev-R04-master.svg",
-        "sha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b",
-        "bytes": 43491
+        "sha256": "dc4dcebcba9be5386a076f6cb60419d53c3290ae4bd4c2cbb185640b6aed9ad8",
+        "bytes": 43442
       },
       "png": {
         "file": "06-elev-R04-master.png",
-        "sha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b",
-        "bytes": 830834
+        "sha256": "a31139a2888be23c4510c8f3668b4142acc0e927096b75ef9d016f8de31a65d4",
+        "bytes": 826182
       },
       "counts": {
         "panels": 4,
@@ -350,13 +350,13 @@
       "png_scale": 2,
       "svg": {
         "file": "07-elev-R04a-dressing.svg",
-        "sha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c",
-        "bytes": 42001
+        "sha256": "d382d99b60bed25195b3e7d6ea3bd38206d96db20c35fa7f0be91495fb1bd54f",
+        "bytes": 41952
       },
       "png": {
         "file": "07-elev-R04a-dressing.png",
-        "sha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991",
-        "bytes": 649998
+        "sha256": "f21698fecfa60b7d5a20819557ba8c8af1cc07fe37d0ead053515ffe070aab55",
+        "bytes": 644841
       },
       "counts": {
         "panels": 4,
@@ -380,13 +380,13 @@
       "png_scale": 2,
       "svg": {
         "file": "08-elev-R05-children.svg",
-        "sha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe",
-        "bytes": 61480
+        "sha256": "b828e4d632c96d1de3924b0d8401c456f80c5427f8d3bc6f8f59b16f6cf32c96",
+        "bytes": 58993
       },
       "png": {
         "file": "08-elev-R05-children.png",
-        "sha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40",
-        "bytes": 1008949
+        "sha256": "f7ab640d1c80cc002e0a3067f4c41189fb32975437d2e6f9e83d758eaa885f1a",
+        "bytes": 976921
       },
       "counts": {
         "panels": 6,
@@ -396,8 +396,8 @@
         "curtains": 1,
         "openEdgeNotes": 0
       },
-      "svg_elements": 515,
-      "svg_text_elements": 146,
+      "svg_elements": 497,
+      "svg_text_elements": 140,
       "pdf_page": 8
     },
     {
@@ -410,13 +410,13 @@
       "png_scale": 2,
       "svg": {
         "file": "09-elev-R06-TL1.svg",
-        "sha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1",
-        "bytes": 42179
+        "sha256": "e25907edf19c609c2c1725eafc9d6d17fb026cd7f3e3f0026d3c76052135ee71",
+        "bytes": 42130
       },
       "png": {
         "file": "09-elev-R06-TL1.png",
-        "sha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db",
-        "bytes": 591826
+        "sha256": "39a67fd92b58dd989d773b3feb8cfd50ccc76f1d894d21221a822960a8a8894b",
+        "bytes": 586347
       },
       "counts": {
         "panels": 4,
@@ -440,13 +440,13 @@
       "png_scale": 2,
       "svg": {
         "file": "10-elev-R07-TL2.svg",
-        "sha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f",
-        "bytes": 42168
+        "sha256": "4f59fad19739ab292bd4ead1ac0567fa5cd75018a1fe7473a3c58713b0bd16fc",
+        "bytes": 42119
       },
       "png": {
         "file": "10-elev-R07-TL2.png",
-        "sha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23",
-        "bytes": 594801
+        "sha256": "efd8dcab3ab35f9cf29dba3aa056d1cf25703ef4c83b7d86ac13480d3e69ac53",
+        "bytes": 589278
       },
       "counts": {
         "panels": 4,
@@ -470,13 +470,13 @@
       "png_scale": 2,
       "svg": {
         "file": "11-elev-R08-utility.svg",
-        "sha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3",
-        "bytes": 48689
+        "sha256": "e549f9ede3724344f8156629955c137c1d1314ecbf95b3b654f0a382854499a8",
+        "bytes": 48640
       },
       "png": {
         "file": "11-elev-R08-utility.png",
-        "sha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a",
-        "bytes": 831466
+        "sha256": "8615383d0d4a9cab7fe501a414e474c06655a1bafae10a789d29c65d80f9f635",
+        "bytes": 826597
       },
       "counts": {
         "panels": 4,
@@ -500,13 +500,13 @@
       "png_scale": 2,
       "svg": {
         "file": "12-elev-R09-entry.svg",
-        "sha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557",
-        "bytes": 18161
+        "sha256": "48af38c4e72a39baa7c8a140d77a8fe6cc749b26a104e44a9e0b90999d048e40",
+        "bytes": 18112
       },
       "png": {
         "file": "12-elev-R09-entry.png",
-        "sha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411",
-        "bytes": 412007
+        "sha256": "2237e756aae6c5948fcf0b216865bf2d6375f7aca5c9c85168b22799e2b9c4b8",
+        "bytes": 407080
       },
       "counts": {
         "panels": 1,
@@ -530,13 +530,13 @@
       "png_scale": 2,
       "svg": {
         "file": "13-elev-R12-lobby.svg",
-        "sha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107",
-        "bytes": 30621
+        "sha256": "6245c93b5d69592c7a215123f5b4810e2b5e626801f0276fbed306a109fcf749",
+        "bytes": 30572
       },
       "png": {
         "file": "13-elev-R12-lobby.png",
-        "sha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896",
-        "bytes": 426200
+        "sha256": "2e7f0c310fc288d827fdcc440b7efc93047969fa60734658fc01c676e86ac656",
+        "bytes": 420731
       },
       "counts": {
         "panels": 3,
@@ -553,21 +553,21 @@
   ],
   "combined_pdf": {
     "file": "current-layout-views.pdf",
-    "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
-    "bytes": 6849877,
+    "sha256": "caff47a10398897ac559ebd97e1992bb5a4c99a6e1ab12f4b0d2165da50fc3f3",
+    "bytes": 6837476,
     "pages": 13,
     "page_points": [
       [
         0.0,
         0.0,
         1275.1,
-        1675.9
+        1663.0
       ],
       [
         0.0,
         0.0,
         1275.1,
-        3078.0
+        3096.0
       ],
       [
         0.0,
@@ -641,13 +641,13 @@
   },
   "readme": {
     "file": "README.md",
-    "sha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445",
-    "bytes": 11128
+    "sha256": "3f46c28a997d0b61c0ad1a8731aac0e552b6f85d8b73461d88dff3b6f67b9dc7",
+    "bytes": 11440
   },
   "manifest": {
     "file": "sheets.json",
-    "sha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288",
-    "bytes": 25260
+    "sha256": "4d6ea877329096dd5509f2898ea1ee8fc50d9690d4346046080292ac726c657f",
+    "bytes": 25257
   },
   "reconciliation": {
     "plan": {
@@ -834,6 +834,24 @@
       "ok": true
     },
     {
+      "check": "R05 tray metadata uses the reported approximate level, not the older slab reference",
+      "ok": true,
+      "detail": {
+        "tray-HALL": {
+          "height": 3.1877,
+          "basis": "derived-reference-unsurveyed"
+        },
+        "tray-MBR": {
+          "height": 3.1877,
+          "basis": "derived-reference-unsurveyed"
+        },
+        "tray-CBR": {
+          "height": 3.2766,
+          "basis": "homeowner-reported-approximate-unsurveyed"
+        }
+      }
+    },
+    {
       "check": "plan: every master room drawn once (10 visualization rooms + 2 bathrooms)",
       "ok": true,
       "detail": [
@@ -1007,6 +1025,14 @@
     },
     {
       "check": "rcp: master holds named (H-MBR-BED, H-MBR-W03) and children held (H-CBR-*)",
+      "ok": true
+    },
+    {
+      "check": "rcp: current R05 fan and modelled-on ceiling remain distinct from installation holds",
+      "ok": true
+    },
+    {
+      "check": "R05 elevation: reported band and unsurveyed centre are shown without the old band",
       "ok": true
     },
     {
@@ -1710,23 +1736,27 @@
       "ok": true
     },
     {
+      "check": "review draft: every sheet and the README marked REVIEW DRAFT, not construction released, on the OPT-1 integrated master",
+      "ok": true
+    },
+    {
       "check": "open-item correction: superseded OI compass wording and loft-load figure absent from every sheet, PDF page and README",
       "ok": true,
       "detail": {}
     }
   ],
-  "checks_passed": 157,
-  "checks_total": 157,
+  "checks_passed": 161,
+  "checks_total": 161,
   "generators": {
     "layout_views.mjs": "e2491173271f00bcfbdea524e897d710b8bc4a06f165532b3cee086fb47893a7",
     "drawing-source.mjs": "ccfd98b00bf665fe2b470fc8efd8ae0411da8463c7f7ff5b4f1c37be4a02444c",
     "layout_views/data.mjs": "8f2268cbffb1d43ecc5beecf6dd2c3dfae306d8731ccbff3d7a1f7b72e653de0",
-    "layout_views/elev.mjs": "17fc2e3d4dc6e90b089af009889466efe635cfab4f580466aa6f0dc4f65e0a9f",
+    "layout_views/elev.mjs": "adbeca60244a1b5142ec4e67533d3f4d92e158881d162bbccad5c60a8d066c99",
     "layout_views/plan.mjs": "c9e631d9b1793db90cf1ca71d4570072182af4aace9c7e27f512cb6174654e55",
-    "layout_views/rcp.mjs": "acdb3e7d1455765dbc726f961c860c62dd695696a66c3a726c7da1a58830e836",
-    "layout_views/svg.mjs": "b0d674725edeb45234a8cd38dd520625d1e8b28aaa239a5e8e2040d81585e5e1",
+    "layout_views/rcp.mjs": "81d0f1dc5f245dd6ac2b18a2cb84b8b6274b5b7e47e51b5360e1877ac2291262",
+    "layout_views/svg.mjs": "ddde2f0ba5c785f99b58c19a17eae0f1d364b932a409156a2cd7c6ed596f79d1",
     "src/master-adapter.js": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398",
-    "render_layout_views.py": "51f22a413ca46b571bec398e0adf581b83fb2a799767f1a9f8a172fb8466ab16"
+    "render_layout_views.py": "97e4afa0c786da021c29196394ff6a87c99f91e7448726dca5e619832fd24515"
   },
   "pdf_note": "PDF carries creation timestamps; SVG/PNG are reproducible from the same master and generators."
 }

@@ -1,10 +1,10 @@
 {
   "schema": "civil_source_index_receipt/1",
   "source_master": {
-    "path": "handoff/source-basis/house-design.json",
-    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+    "path": "not-distributed/house-design.json",
+    "sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
   },
-  "source_register_sha256": "d8be1578c523854175f22dcf9131dfe38fbb6755dfe95a27a0865f7c908f25cf",
+  "source_register_sha256": "bba81bce28362e79a3edd98f6fe383cd459e91b6d6cf86418da7340939914a97",
   "construction_release": false,
   "checks": {
     "rooms": 14,
@@ -30,48 +30,48 @@
   "files": [
     {
       "file": "room-opening-index-01.png",
-      "sha256": "733fdc4ebc6c9d7ac0a4188529675f5c9f989a593427cc73499d97104f99e425",
-      "bytes": 176354
+      "sha256": "d5c89eaf2d875d73f4dd2315e097892ee807d16cb6d0a9ca46c6bf4a9b769ff1",
+      "bytes": 176347
     },
     {
       "file": "room-opening-index-01.svg",
-      "sha256": "5b97e936d27062d7653197f4edf32ee4be1af6013708a3429d053b376515ce0f",
-      "bytes": 31474
+      "sha256": "9855f9c510f4466e2fb53e2b8838747c8801dc4e59606839635f020bb287bbb1",
+      "bytes": 31460
     },
     {
       "file": "room-opening-index-02.png",
-      "sha256": "69cfa9cef8f03c4f44ce4ecc2b7b2f763163d12d33cc80bb208e5df82ef8c005",
-      "bytes": 207305
+      "sha256": "ef0ea251aa78e64e52fee8b6120e43b5f689524e4ce933e83a76fb4d059dedf3",
+      "bytes": 207296
     },
     {
       "file": "room-opening-index-02.svg",
-      "sha256": "887b53f0c0a587a1b50c5a8bc355ce39debc7d326a95d934e1c1f9643adaa202",
-      "bytes": 39936
+      "sha256": "0c2279511631ac0cdba0cefc9e8d50445f8f91b441b4513360242ab3d31cb690",
+      "bytes": 39922
     },
     {
       "file": "room-opening-index-03.png",
-      "sha256": "7db17decd39341902654ac302d810d1c4a8e71377f2e6deed89c028a19af3331",
-      "bytes": 166840
+      "sha256": "5289bb5f35226df7ff35d60d6ab73cf603a257d6660409f2bfc4bfaaa93106ed",
+      "bytes": 181260
     },
     {
       "file": "room-opening-index-03.svg",
-      "sha256": "3915c538354efc03c8ed1055d4cf1d9534a26594e52d075574e5a182fcf56584",
-      "bytes": 24488
+      "sha256": "16702e2a172557bef2ca12e750be16697ed2adb066b4c5d2538e1398e8e6c868",
+      "bytes": 26379
     },
     {
       "file": "room-opening-index.json",
-      "sha256": "b945b2f4406231a5b0a00896eeca8354f46402bada9f678916cc9d89f30d4c60",
-      "bytes": 36711
+      "sha256": "18914a6167b5e79a0cca574ed3e2bc64e13c782563c30c59e87f984d9027f15a",
+      "bytes": 37079
     },
     {
       "file": "room-opening-index.md",
-      "sha256": "e5d1ca22dbb53b48a0b9240ec130387baedfc37fe3ee4b65ad56bba476bf50d8",
-      "bytes": 6459
+      "sha256": "c1ec06a406535f255b563cc1f246c2043e1033976ed6ee6d7ed159b1f557e706",
+      "bytes": 6545
     },
     {
       "file": "room-opening-index.pdf",
-      "sha256": "34dee5307d8dc5e8fe6ac9aee81d52343c90da5c20921f3ab4614872a88fd2a9",
-      "bytes": 54709
+      "sha256": "0d6e904e1f23f9cdc238af15e81492572cfc0e8b6eb8e9df135e3b20d8746e34",
+      "bytes": 55229
     }
   ]
 }

@@ -10,6 +10,7 @@ import shutil
 import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from html import escape
 from pathlib import Path
 
 
@@ -91,23 +92,105 @@ def require(condition: bool, message: str) -> None:
         raise ValueError(message)
 
 
-def prepare_floor_figure(destination: Path, fixed: Path) -> None:
-    source = (fixed / "assets" / "fw-plan.svg").read_text(encoding="utf-8")
-    old = (
-        '<polygon points="224.5,655.0 230.5,661.0 224.5,667.0 218.5,661.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>\n'
-        '<text x="216.5" y="664.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P01 240W*</text>\n'
-        '<polygon points="224.5,643.0 230.5,649.0 224.5,655.0 218.5,649.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>\n'
-        '<text x="216.5" y="652.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P03 150W</text>\n'
-    )
-    require(source.count(old) == 1, "Expected historical P01/P03 symbols were not found exactly once")
-    source = source.replace(old, "")
-    source = source.replace(
-        "</svg>",
-        '<text x="525" y="390" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#7a3fa0">P01 480 W class: hatch</text>\n'
-        '<text x="525" y="403" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#7a3fa0">location and fit unverified</text>\n'
-        "</svg>",
-    )
-    destination.write_text(source, encoding="utf-8")
+def prepare_floor_figure(destination: Path, master: dict) -> None:
+    lighting = master["lighting"]
+    rooms = lighting["design_inputs"]["rooms"]
+    fixtures = lighting["fixtures"]
+    curtains = lighting["curtain_pocket_s1"]["strips"]
+    points = [p for room in rooms for p in room["poly_ft"]]
+    points += [p for f in fixtures for p in (f["path_ft"] or [[f["x_ft"], f["z_ft"]]])]
+    points += [p for strip in curtains for p in strip["polyline_ft"]]
+    min_x, max_x = min(p[0] for p in points) - 1, max(p[0] for p in points) + 1
+    min_z, max_z = min(p[1] for p in points) - 1, max(p[1] for p in points) + 1
+    scale = min(500 / (max_x - min_x), 790 / (max_z - min_z))
+
+    def project(p):
+        return 40 + (p[0] - min_x) * scale, 115 + (p[1] - min_z) * scale
+
+    def coords(pts):
+        return " ".join(f"{x:.2f},{y:.2f}" for x, y in map(project, pts))
+
+    colours = {2700: "#b54800", 3000: "#007450", 4000: "#005c9c"}
+    lines = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1030" viewBox="0 0 900 1030" '
+        f'data-min-x="{min_x}" data-min-z="{min_z}" data-scale="{scale}">',
+        '<rect width="900" height="1030" fill="white"/>',
+        '<g font-family="Arial, Helvetica, sans-serif" fill="#20343b">',
+        '<text x="40" y="33" font-size="21" font-weight="bold">Lighting and controls: conceptual layout</text>',
+        '<text x="40" y="58" font-size="13" fill="#a13620">REVIEW ONLY - NOT FOR WIRING OR CONSTRUCTION</text>',
+        '<text x="40" y="80" font-size="12">Approximate lighting zones, not surveyed walls. Lines are fittings, not cable routes.</text>',
+    ]
+    for room in rooms:
+        poly = room["poly_ft"]
+        cx, cz = project((sum(p[0] for p in poly) / len(poly), sum(p[1] for p in poly) / len(poly)))
+        lines.append(f'<polygon points="{coords(poly)}" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>')
+        lines.append(f'<text x="{cx:.2f}" y="{cz:.2f}" text-anchor="middle" font-size="12" fill="#617878">{escape(room["id"])}</text>')
+
+    def fitting(ident, circuit, cct, lane, pts):
+        require(cct in colours and pts, f"{ident}: missing plan position or fixed CCT")
+        x, y = project(pts[len(pts) // 2])
+        colour = colours[cct]
+        lines.append(f'<g data-fixture-id="{escape(ident)}" data-circuit="{escape(circuit)}" data-cct-k="{cct}">')
+        if len(pts) > 1:
+            dash = {"LINE": "9 3 2 3", "PERIM": "7 3", "CURTAIN": "2 4"}.get(lane, "")
+            lines.append(f'<polyline points="{coords(pts)}" fill="none" stroke="{colour}" stroke-width="3"'
+                         + (f' stroke-dasharray="{dash}"' if dash else "") + '/>')
+        lines.append(f'<g data-marker="1" transform="translate({x:.2f} {y:.2f})">')
+        if cct == 2700:
+            lines.append(f'<circle r="4.3" fill="{colour}" stroke="#111" stroke-width="0.8"/>')
+        elif cct == 3000:
+            lines.append(f'<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="{colour}" stroke="#111" stroke-width="0.8"/>')
+        else:
+            lines.append(f'<rect x="-4" y="-4" width="8" height="8" fill="{colour}" stroke="#111" stroke-width="0.8"/>')
+        if ident in {"CBR-L1", "CBR-X1", "CBR-X2", "CBR-X3", "CBR-X4"}:
+            lines.append('<circle r="7" fill="none" stroke="#111" stroke-width="1.1"/>')
+        lines.append('</g></g>')
+
+    for fixture in fixtures:
+        pts = fixture["path_ft"] or [[fixture["x_ft"], fixture["z_ft"]]]
+        fitting(fixture["id"], fixture["circuit"], int(fixture["cct"].removesuffix("K")), fixture["lane"], pts)
+    for strip in curtains:
+        fitting(strip["id"], "X-" + strip["id"], strip["cct_k"], "CURTAIN", strip["polyline_ft"])
+
+    boards = {}
+    for circuit in lighting["controls"]["circuits"]:
+        board, pos = circuit["board"], circuit["board_xz_ft"]
+        require(pos and len(pos) == 2, f"{circuit['circuit']}: board position missing")
+        require(board not in boards or boards[board] == pos, f"{board}: inconsistent board positions")
+        boards[board] = pos
+    for board, pos in sorted(boards.items()):
+        x, y = project(pos)
+        lines.append(f'<g data-board-id="{escape(board)}" transform="translate({x:.2f} {y:.2f})">'
+                     f'<path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/>'
+                     f'<text x="8" y="-4" font-size="10" font-weight="bold" '
+                     f'paint-order="stroke" stroke="white" stroke-width="3">{escape(board)}</text></g>')
+    lines.extend([
+        '<g transform="translate(570 130)" font-size="13">',
+        '<text y="0" font-size="16" font-weight="bold">Fixed CCT / symbol</text>',
+        '<circle cx="7" cy="27" r="5" fill="#b54800" stroke="#111"/><text x="23" y="32">2700 K: LOW / mood / cove</text>',
+        '<path d="M7 47 L13 53 L7 59 L1 53 Z" fill="#007450" stroke="#111"/><text x="23" y="58">3000 K: reading / art; lobby</text>',
+        '<text x="23" y="75">and balcony HIGH</text>',
+        '<rect x="2" y="89" width="10" height="10" fill="#005c9c" stroke="#111"/><text x="23" y="99">4000 K: most HIGH and task</text>',
+        '<text y="136" font-size="16" font-weight="bold">Line patterns</text>',
+        '<path d="M0 158 H38" stroke="#b54800" stroke-width="3"/><text x="50" y="163">Cove / other strip</text>',
+        '<path d="M0 184 H38" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/><text x="50" y="189">LINE strip</text>',
+        '<path d="M0 210 H38" stroke="#b54800" stroke-width="3" stroke-dasharray="2 4"/><text x="50" y="215">Curtain strip; no lux credit</text>',
+        '<path d="M0 236 H38" stroke="#b54800" stroke-width="3" stroke-dasharray="7 3"/><text x="50" y="241">Bathroom perimeter cove</text>',
+        '<path d="M7 255 L14 267 L0 267 Z" fill="#182c32"/><text x="23" y="267">SB = modelled switchboard</text>',
+        '<circle cx="7" cy="293" r="7" fill="none" stroke="#111" stroke-width="1.5"/><text x="23" y="298">CBR cove / LINE site hold</text>',
+        '<text y="339" font-size="16" font-weight="bold">Before installation</text>',
+        '<text y="363">Board positions and all dimensions</text><text y="381">are indicative, not measured.</text>',
+        '<text y="407">P01 480 W class: hatch</text><text y="425">location and fit unverified.</text>',
+        '<text y="451">No supply hatches or cable routes</text><text y="469">are released or plotted here.</text>',
+        '<text y="495">See circuit-labelled lighting plans,</text><text y="513">the switchboard schedule and BoM.</text>',
+        '<text y="547">CBR fan: room-centred 1050 mm</text><text y="565">planning sweep; no product selected.</text>',
+        '<text y="591">Site, clearance, product, driver and</text><text y="609">protection checks remain open.</text>',
+        '</g>',
+        '<path d="M840 855 V900 M830 890 L840 900 L850 890" fill="none" stroke="#20343b" stroke-width="3"/>',
+        '<text x="840" y="920" text-anchor="middle" font-size="16" font-weight="bold">N</text>',
+        '</g></svg>',
+    ])
+    destination.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def prepare_curtain_figure(destination: Path, fixed: Path) -> None:
@@ -218,7 +301,7 @@ def main() -> None:
         (out / subdir).mkdir(parents=True, exist_ok=True)
     for name in ("concept-flat.svg", "concept-living-low.svg"):
         shutil.copy2(fixed / "templates" / name, out / "figures" / name)
-    prepare_floor_figure(out / "figures" / "controls-plan.svg", fixed)
+    prepare_floor_figure(out / "figures" / "controls-plan.svg", master)
     prepare_curtain_figure(out / "figures" / "curtain-pocket.svg", fixed)
 
     originals = lighting["controls"]["circuits"]

@@ -1,6 +1,6 @@
 # Room and opening source index - review only
 
-**Canonical master SHA-256:** `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac`. Not for construction or fabrication.
+**Canonical master SHA-256:** `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822`. Not for construction or fabrication.
 
 The 14 records include rooms, service areas, a lift footprint and a margin. The 21 openings include doors, windows, vents, niche fronts and a parapet opening. Each modeled span is an identification aid, not a measured size. Survey each actual floor separately; F1-F4 do not establish storey labels or identical built layouts.
 
@@ -74,7 +74,7 @@ The following are carry-forward model relationships, not verified site openings.
 
 S01: two modeled flights and a turning area; the drawn 7 / 15 tread lines are illustrative, not verified riser counts. Measure rise, going, flight width, landing, arrival direction, headroom and guard per floor.
 
-HD-11: homeowner-stated 11 ft floor-to-floor and approximately 9 in band drop, not measured on site. Derived 3.188 m slab underside and 2.959 m band underside depend on assumed slab and finish thicknesses. Raised-panel level, cavity depth, bath/utility/lobby levels and most opening heads/sills remain unmeasured.
+HD-11: homeowner-stated 11 ft floor-to-floor and approximately 9 in band drop, not measured on site. The older 3.188 m slab and 2.959 m band estimates depend on assumed slab and finish thicknesses. R05 is separately homeowner-reported at a 3.048 m band and approximately 3.277 m centre; this conflicts with the older slab estimate. The R05 slab is unmeasured. Verify all levels and cavities on site.
 
 South-up: page top south, bottom north, left east, right west. The homeowner-described compass is not a surveyed true bearing.
 

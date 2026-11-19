@@ -6,21 +6,21 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 2614170,
-      "sha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
-      "sourceSha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0"
+      "bytes": 2613988,
+      "sha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
+      "sourceSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29"
     },
     {
       "path": "build-info.json",
-      "bytes": 2455,
-      "sha256": "ee56c222aa18493688544458e89c53a8611045f3bc9580a47fedbf0d4de20076",
-      "sourceSha256": "ee56c222aa18493688544458e89c53a8611045f3bc9580a47fedbf0d4de20076"
+      "bytes": 2404,
+      "sha256": "3b4ea1de8bd5f79d76ca3021a2cfcc37c20b2ab6363e0d0ca2091d32f5cef56e",
+      "sourceSha256": "3b4ea1de8bd5f79d76ca3021a2cfcc37c20b2ab6363e0d0ca2091d32f5cef56e"
     },
     {
       "path": "privacy-transform.json",
       "bytes": 1185,
-      "sha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc",
-      "sourceSha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc"
+      "sha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
+      "sourceSha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce"
     },
     {
       "path": "THREE-LICENSE.txt",
@@ -35,25 +35,25 @@
       "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "downloads/layout-views-review-draft-79ece2ae.pdf",
-      "bytes": 6849877,
-      "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
-      "sourceSha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0"
+      "path": "downloads/layout-views-review.pdf",
+      "bytes": 6837476,
+      "sha256": "caff47a10398897ac559ebd97e1992bb5a4c99a6e1ab12f4b0d2165da50fc3f3",
+      "sourceSha256": "caff47a10398897ac559ebd97e1992bb5a4c99a6e1ab12f4b0d2165da50fc3f3"
     },
     {
-      "path": "downloads/working-floor-plan-review-draft-79ece2ae.pdf",
+      "path": "downloads/floor-plan-review.pdf",
       "bytes": 864756,
       "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
       "sourceSha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603"
     },
     {
-      "path": "downloads/curtain-pocket-section-review-79ece2ae.pdf",
+      "path": "downloads/curtain-pocket-review.pdf",
       "bytes": 71474,
       "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
       "sourceSha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d"
     },
     {
-      "path": "downloads/wardrobe-interiors-review-79ece2ae.pdf",
+      "path": "downloads/wardrobe-interiors-review.pdf",
       "bytes": 245180,
       "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3",
       "sourceSha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3"

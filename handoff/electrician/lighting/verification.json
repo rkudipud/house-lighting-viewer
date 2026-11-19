@@ -1,11 +1,14 @@
 {
   "status": "PASS",
   "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
-  "manifest_sha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
-  "checks_passed": 92,
+  "manifest_sha256": "b06f6f68e9ceed28518585ea2ed94e102aebee60fbe2b4713034bb7d3ab6861d",
+  "verifier_sha256": "ac5448867a60d1528895792ef940984fb239b60f2e8857479e0562df08b91e8b",
+  "checks_passed": 98,
   "checks": [
     "Current master hash is guarded",
     "Package manifest is bound to the current master",
+    "Package manifest binds the lighting exporter",
+    "Package manifest binds the workbench template",
     "Manifest enumerates every package file",
     "All package file hashes and sizes match",
     "Historical and CBR-reanalysed heatmap bases retained",
@@ -28,6 +31,7 @@
     "Selected voltage-drop rows retain five holds and two marginal cases",
     "Old P01/P03 living voltage-drop results are not carried forward",
     "C39/C40 marginal S1 voltage-drop values use the updated provisional route",
+    "Specification matches the voltage-drop schedule and provisional viewer state",
     "Generic search list covers 104 base fittings and four selected strips",
     "K-2 nominal worktop values preserved",
     "CBR-reanalysed heatmap byte fingerprint matches",
@@ -48,10 +52,12 @@
     "task plan legend shows fitting types, fixed CCT and hold marking",
     "heatmaps-summary.pdf: page count 11",
     "heatmaps-summary.pdf: review-only marking",
+    "CBR heatmap describes the provisional ON state and installation hold",
     "lighting-review-schedules.pdf: page count 11",
     "lighting-review-schedules.pdf: review-only marking",
     "Main plan labels all six CBR HIGH fittings",
     "Mood plan labels all four selected curtain strips and the CBR cove/LINE",
+    "Mood plan labels current CBR cove and LINE circuit identities and fixed CCT",
     "Schedule PDF includes selected supply and curtain records",
     "main SVG is present and review-marked",
     "lighting-plan-main.png has usable resolution",
@@ -82,6 +88,7 @@
     "Workbench master binding",
     "Workbench photometry provenance",
     "CBR shows 14 base fittings and one curtain strip",
+    "CBR workbench distinguishes provisional viewer light from the physical hold",
     "CBR stored HIGH statistics match the source calculation",
     "CBR-H1 is active for review without a blanket hold",
     "CBR-H6 is active for review without a blanket hold",
@@ -110,5 +117,5 @@
     "Living feeder, branch protection and LT-4/LT-5 inrush are open; P16/C39/C40 remain marginal.",
     "All construction, product and exact-chain approvals remain false."
   ],
-  "verified_utc": "2026-11-19T20:41:02.499103+00:00"
+  "verified_utc": "2026-11-19T23:28:10.466009+00:00"
 }

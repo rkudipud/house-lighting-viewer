@@ -1,7 +1,11 @@
-# Exploratory Radiance evidence addendum
+# Historical exploratory Radiance evidence
+
+The children's-room grids and report predate the centred 1050 mm fan, shifted
+LINE and modelled-ON LOW design. They are superseded for CBR; use the
+[current review heatmaps](../lighting/current/heatmaps-summary.pdf) instead.
 
 **Generic provisional ray-tracing estimates only. Not measured, not product-specific,
-not construction, product, procurement, fabrication or publication approval.**
+not construction, product, procurement or fabrication approval.**
 
 Open the [report and static heatmaps](index.html), [full report](simulation-report.html),
 [source report Markdown](simulation-report.md), [numerical model summary](analysis/sim-summary.json)

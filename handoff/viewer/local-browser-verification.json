@@ -1,5 +1,6 @@
 {
-  "status": "PASS_local_integrated_browser_checks",
+  "status": "HISTORICAL_PASS_on_prior_master_not_current_viewer",
+  "historicalNotice": "Retained only as evidence for the earlier viewer overlay; this report does not verify the current viewer.",
   "masterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
   "htmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
   "profiles": [

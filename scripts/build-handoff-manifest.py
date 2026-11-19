@@ -3,7 +3,114 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+
+
+def repository_path(root, value):
+    if not isinstance(value, str) or "\\" in value:
+        raise ValueError(f"Invalid evidence path: {value!r}")
+    relative = PurePosixPath(value)
+    if relative.is_absolute() or not relative.parts or ".." in relative.parts or ":" in value:
+        raise ValueError(f"Unsafe evidence path: {value!r}")
+    path = root.joinpath(*relative.parts).resolve()
+    if not path.is_relative_to(root):
+        raise ValueError(f"Evidence path leaves repository: {value!r}")
+    return path
+
+
+def file_hash(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def verify_review_overlay(root, overlay, master_sha256):
+    """Recheck each successor copy against its pinned receipt and source manifest."""
+    if overlay.get("masterSha256") != master_sha256:
+        raise ValueError("Final overlay is bound to a different master")
+    receipts = {}
+    for receipt_name, expected_hash in overlay["copyReceiptSha256"].items():
+        receipt_path = repository_path(root, receipt_name)
+        if file_hash(receipt_path) != expected_hash:
+            raise ValueError(f"Final overlay copy receipt changed: {receipt_name}")
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8-sig"))
+        if receipt["basisMasterSha256"] != master_sha256 or receipt["constructionRelease"] is not False:
+            raise ValueError(f"Final overlay copy receipt has an invalid basis: {receipt_name}")
+        entries = {item["path"]: item for item in receipt["files"]}
+        if len(entries) != len(receipt["files"]):
+            raise ValueError(f"Duplicate paths in {receipt_name}")
+        manifest_name = receipt["sourceManifest"]
+        manifest_entry = entries.get(manifest_name)
+        if not manifest_entry or manifest_entry["sourceSha256"] != receipt["sourceManifestSha256"]:
+            raise ValueError(f"Source manifest is not bound by {receipt_name}")
+        manifest_path = repository_path(root, (receipt_path.parent / manifest_name).relative_to(root).as_posix())
+        if manifest_path.suffix.lower() == ".txt":
+            source_files = {}
+            for line in manifest_path.read_text(encoding="utf-8-sig").splitlines():
+                digest, name = line.split(maxsplit=1)
+                source_files[name.lstrip("*").replace("\\", "/")] = digest
+        else:
+            source_files = {
+                name: item["sha256"]
+                for name, item in json.loads(manifest_path.read_text(encoding="utf-8-sig"))["files"].items()
+            }
+        for name, item in entries.items():
+            path = repository_path(root, (receipt_path.parent / name).relative_to(root).as_posix())
+            if path.stat().st_size != item["bytes"] or file_hash(path) != item["sha256"]:
+                raise ValueError(f"Reviewed copy differs from {receipt_name}: {name}")
+            if name != manifest_name and name not in source_files:
+                if receipt_name != "handoff/electrician/lighting/final-review-source-copy.json" or name != "verification.json":
+                    raise ValueError(f"Reviewed copy is absent from its source manifest: {name}")
+            elif name != manifest_name and source_files[name] != item["sourceSha256"]:
+                raise ValueError(f"Source hash differs from its manifest: {name}")
+        for item in receipt.get("omittedFiles", []):
+            if source_files.get(item["path"]) != item["sourceSha256"]:
+                raise ValueError(f"Omitted source is not bound by its manifest: {item['path']}")
+            if repository_path(root, (receipt_path.parent / item["path"]).relative_to(root).as_posix()).exists():
+                raise ValueError(f"Omitted third-party source is still present: {item['path']}")
+        receipts[receipt_name] = entries
+
+    lighting_root = root / "handoff" / "electrician" / "lighting"
+    lighting_manifest = json.loads((lighting_root / "manifest.json").read_text(encoding="utf-8-sig"))
+    lighting_verification = json.loads((lighting_root / "verification.json").read_text(encoding="utf-8-sig"))
+    lighting_copy = json.loads((lighting_root / "final-review-source-copy.json").read_text(encoding="utf-8-sig"))
+    if (lighting_manifest["master_sha256"] != master_sha256
+            or lighting_verification["status"] != "PASS"
+            or lighting_verification["master_sha256"] != master_sha256
+            or lighting_verification["manifest_sha256"] != lighting_copy["sourceManifestSha256"]
+            or lighting_manifest["exporter_sha256"] != file_hash(lighting_root / "source" / "export_current_lighting.py")
+            or lighting_manifest["workbench_template_sha256"] != file_hash(lighting_root / "source" / "lighting-workbench.template.html")
+            or lighting_verification["verifier_sha256"] != file_hash(lighting_root / "source" / "verify_current_lighting.py")):
+        raise ValueError("Lighting exporter, template, verifier, manifest or current master is not bound")
+    load_sheet = overlay["lightingLoadSheet"]
+    if (load_sheet["master_sha256"] != master_sha256
+            or load_sheet["generator_sha256"] != file_hash(lighting_root / "source" / "build_load_sheet.py")
+            or set(load_sheet["outputs"]) != {"lighting-load-per-room.pdf", "lighting-load-per-room.xlsx"}
+            or any(file_hash(lighting_root / name) != digest for name, digest in load_sheet["outputs"].items())):
+        raise ValueError("Lighting load-sheet generator, outputs or current master is not bound")
+
+    for item in overlay["postCopyOverlays"]:
+        evidence = item["evidence"]
+        if "copyReceipt" in evidence:
+            receipt_name = evidence["copyReceipt"]
+            source_name = evidence["sourcePath"]
+            source = receipts[receipt_name][source_name]
+            receipt_dir = repository_path(root, receipt_name).parent
+            expected_path = (receipt_dir / source_name).relative_to(root).as_posix()
+            if item["path"] != expected_path or item["currentSha256"] != source["sha256"]:
+                raise ValueError(f"Overlay does not match its reviewed copy: {item['path']}")
+        elif evidence.get("lightingGenerator") == "exporter":
+            if item["path"] != "handoff/electrician/lighting/source/export_current_lighting.py" or item["currentSha256"] != lighting_manifest["exporter_sha256"]:
+                raise ValueError("Lighting exporter overlay is not bound to the generated manifest")
+        elif evidence.get("lightingGenerator") == "verifier":
+            if item["path"] != "handoff/electrician/lighting/source/verify_current_lighting.py" or item["currentSha256"] != lighting_verification["verifier_sha256"]:
+                raise ValueError("Lighting verifier overlay is not bound to its verification receipt")
+        elif evidence.get("lightingGenerator") == "workbench":
+            if item["path"] != "handoff/electrician/lighting/source/lighting-workbench.template.html" or item["currentSha256"] != lighting_manifest["workbench_template_sha256"]:
+                raise ValueError("Lighting workbench overlay is not bound to the generated manifest")
+        elif evidence.get("lightingGenerator") == "loadSheet":
+            if item["path"] != "handoff/electrician/lighting/source/build_load_sheet.py" or item["currentSha256"] != load_sheet["generator_sha256"]:
+                raise ValueError("Lighting load-sheet overlay is not bound to its generated outputs")
+        else:
+            raise ValueError(f"Missing final overlay evidence for {item['path']}")
 
 
 def coverage(path):
@@ -58,6 +165,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--master-sha256", required=True)
     parser.add_argument("--decision-addendum-publication-authorized", action="store_true")
+    parser.add_argument("--publication-authorized", action="store_true",
+                        help="Record authorization to publish the current review handoff, not construction approval")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     build = json.loads((root / "build-info.json").read_text())
@@ -81,11 +190,14 @@ def main():
         "handoff/decisions/2026-11-18-material-selection-receipt.json",
         "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
         "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+        "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
     )
     overlays = {}
     for overlay_path in overlay_paths:
-        overlay_data = json.loads((root / overlay_path).read_text())["postCopyOverlays"]
-        overlays.update({item["path"]: (item, overlay_path) for item in overlay_data})
+        overlay_data = json.loads((root / overlay_path).read_text())
+        if overlay_path.endswith("2026-11-19-final-handoff-overlay-receipt.json"):
+            verify_review_overlay(root, overlay_data, args.master_sha256)
+        overlays.update({item["path"]: (item, overlay_path) for item in overlay_data["postCopyOverlays"]})
     paths = [
         root / name for name in (
             "README.md", "index.html", "build-info.json", "privacy-transform.json",
@@ -121,22 +233,20 @@ def main():
         records.append(record)
     integration = json.loads((root / "handoff" / "integration-receipt.json").read_text())
     review = integration["coordinatorReview"]
-    accepted = review["status"] == "accepted" and review["scope"] == "local-design-review-only"
     manifest = {
         "schema": "house-handoff-inventory/1",
-        "status": ("local-design-review-simulation-revision-pending"
-                   if accepted and integration.get("simulationAddendum", {}).get("pendingSmallRoomRevision")
-                   else "local-design-review-simulation-addendum-awaiting-review"
-                   if accepted and integration.get("simulationAddendum", {}).get("integrationReview") == "pending"
-                   else "local-design-review-accepted" if accepted else "local-review-awaiting-coordinator-approval"),
+        "status": "current-design-review-not-construction-released",
         "coordinatorReview": review,
+        "coordinatorReviewNote": "This records the earlier local review; it is not construction or product approval.",
         "masterSha256": args.master_sha256,
         "constructionRelease": False,
         "productRelease": False,
         "procurementRelease": False,
         "fabricationRelease": False,
-        "publicationAuthorized": args.decision_addendum_publication_authorized,
-        "publicationScope": ("Dated owner-decision addendum and review overlays only; no design or construction release."
+        "publicationAuthorized": args.publication_authorized or args.decision_addendum_publication_authorized,
+        "publicationScope": ("Current design-review handoff; no construction or product release."
+                             if args.publication_authorized
+                             else "Dated owner-decision addendum and review overlays only; no design or construction release."
                              if args.decision_addendum_publication_authorized else "No publication authorization asserted."),
         "decisionAddendum": {
             "path": "handoff/decisions/2026-11-18-owner-selections.md",
@@ -149,7 +259,7 @@ def main():
             "modelAndHistoricalOutputsRegenerated": False,
             "historicalCostOutputsRepriced": False,
         },
-        "note": "Original master, public-copy and delivered hashes are distinct. The dated material addendum supersedes only the stale WR-H630 material-pending and DEC-ST-01 readiness-pending entries; its construction details remain unapproved. Viewer/workbench maps remain frozen analytic estimates; the separate exploratory Radiance addendum is generic, provisional and not measured or product-specific. Manifest excludes itself.",
+        "note": "Original master, public-copy and delivered hashes are distinct. Viewer/workbench maps are provisional frozen analytic estimates, not measured or product-specific. Site and professional approvals remain open. Manifest excludes itself.",
         "files": records,
     }
     (root / "handoff" / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")

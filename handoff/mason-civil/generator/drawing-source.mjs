@@ -28,7 +28,7 @@ export function drawingSource(house,source,{staging=false,reviewDraft=false,outD
     assert(Math.abs((binding.rect[0]-binding.assembly_rect_m[0])*1000-41.148)<1e-8);
     assert.equal(binding.rect[2],binding.assembly_rect_m[2]);
     note=`HD-18 clarifies feet-and-inches notation: sill 1 ft 5 in (${p.sillM} m), depth 1 ft 3 in (${p.depthMm} mm), north-corner gap 1 ft 4 in (${f.placement.north_edge_clear_offset_m} m). All remain homeowner estimates, not site measurements. Opening height ${p.heightMm} mm is derived from the estimated top minus sill.`;
-    notation={fragment:{file,sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length},dimensions:f.dimensions,placement:f.placement,construction_release:false};
+    notation={fragment:{file:path.basename(file),sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length},dimensions:f.dimensions,placement:f.placement,construction_release:false};
   }
   return {staging,final:false,publication_status:staging?'STAGING - NOT FINAL; awaiting integrated master hash':reviewDraft?'REVIEW DRAFT; not construction-released':'review drawing; not construction-released',review_draft:reviewDraft,lighting_pending:pending,hd18:notation,note};
 }

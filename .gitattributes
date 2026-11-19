@@ -1,3 +1,7 @@
 * -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.pdf binary
+*.png binary
+*.jpeg binary
+*.xlsx binary
 # Keep the approved generated bundle byte-identical; check its editable source separately.
 index.html -whitespace

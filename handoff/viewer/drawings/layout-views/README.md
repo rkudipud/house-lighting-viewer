@@ -1,7 +1,8 @@
-# Current layout views (read-only)
+# Layout views (read-only) - REVIEW DRAFT, not construction released
 
 Drawn only from the canonical master `house-design.json`, sha256 `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822`.
-review drawing; not construction-released
+REVIEW DRAFT; not construction-released
+This is a new review edition on the integrated OPT-1 lighting master; the earlier published set (bound to master 124ef698) is a separate folder and is not overwritten or superseded by it.
 Nothing here edits the master, adds a design decision or replaces a drawing in it. Not a construction release.
 Sheet drawings are south-up: the page is **not rotated**, and the north arrow on every sheet points to the bottom of the page.
 
@@ -25,7 +26,7 @@ Sheet drawings are south-up: the page is **not rotated**, and the north arrow on
 | 12 | Elevations — R09 Entry / balcony | `12-elev-R09-entry.svg` / `.png` |
 | 13 | Elevations — R12 Common lobby | `13-elev-R12-lobby.svg` / `.png` |
 
-1. **Top-down** = a colour-filled furnished plan with room names, confirmed sizes, walls, door swings, windows, the parapet opening, stairs, lift and essential furniture/storage.
+1. **Top-down** = a colour-filled furnished plan with room names, recorded nominal sizes, walls, door swings, windows, the parapet opening, stairs, lift and essential furniture/storage.
 2. **Bottoms-up** = the reflected ceiling plan: the ~9 in perimeter band, unmeasured raised centre and pocket details, lofts, fan points and all 104 base fixtures in 47 groups. Four selected 2700 K curtain strips bring the review count to 108 fittings / 51 circuits; the paths are indicative and clipped to the shown room, with no added knob or photometry credit. K-2 is selected for review; product, fit and construction holds remain. Hold marks (CR, HB, DS, PG) indicate conditional fittings.
 3. **All walls** = interior elevations of every wall of every room, each with a key plan and a view arrow. The living east-wall sheet carries the pooja niche PN1 and an enlarged niche detail.
 
@@ -36,7 +37,7 @@ Sheet drawings are south-up: the page is **not rotated**, and the north arrow on
 
 ## What is real, what is assumed
 - Room sizes come from the finalised master layout. **Most opening offsets are inherited or placeholder** values: every window/door is drawn at a "modelled plan position; not site verified", and a dagger (†) marks openings that are assumed, placeholder or centred-but-unmeasured.
-- **Every level is unmeasured (HD-11).** Homeowner-stated: 11 ft floor-to-floor (3.353 m) and a ~9 in band drop. Derived from those (5 in slab and 1.5 in finish assumed): slab underside about 3.19 m, band underside 2.959 m, kitchen flat ceiling 2.959 m. The raised centre is a separate gypsum/POP panel below the slab (HD-14): its level and cavity depth are unmeasured. Not provided (placeholders): bathrooms 2.40 m, utility 2.95 m, lobby 2.70 m, balcony. Window and door heads and sills are assumptions. The hall cross-beam soffit is unmeasured (H-HALL-BEAM). Every sheet says so.
+- **Every level remains unsurveyed.** The homeowner reports the R05 band at 3.048 m and the centre approximately 3.277 m; the actual slab height and cavity are unmeasured, and the reported centre conflicts with the older slab estimate. Elsewhere, the homeowner-stated 11 ft floor-to-floor and ~9 in band drop, with assumed slab and finish thicknesses, yield older references of about 3.19 m slab underside and 2.959 m band (HD-11); the raised-panel level and cavity depth are unmeasured (HD-14). Bathrooms, utility, lobby and balcony levels and opening heads/sills are placeholders. The hall cross-beam soffit is unmeasured (H-HALL-BEAM). Verify all levels on site.
 - The **loft** top of 3.08 m is an unmeasured legacy placeholder and is not raised to the slab (H-LOFT). The old 2.64 m curtain top is retired; 2.939 m is used only as an assumed HD-11 drawing top for the children's curtain, not measured hardware.
 - Items whose height is not in the master (sofa, TV unit, tenant beds and so on) are drawn only as footprints below the floor line. No height was invented. Wall cabinets show a bottom of 1.45 m and no top.
 - **Pooja niche PN1 (HD-16 / HD-18)** is already built at the north end of the living east wall. Its relationship is homeowner-confirmed, but the 609.6 mm width, 1701.8 mm opening height, 0.4318 m sill, 381.0 mm depth and modeled position are **homeowner estimates, not site measurements**. HD-18 clarifies feet-and-inches notation: sill 1 ft 5 in (0.4318 m), depth 1 ft 3 in (381 mm), north-corner gap 1 ft 4 in (0.4064 m). All remain homeowner estimates, not site measurements. Opening height 1701.8 mm is derived from the estimated top minus sill. The homeowner reports a reinforced slab extension beyond the 9-inch wall, top to bottom through the building; its geometry and capacity are unverified. The model does not contain this extension. Only the estimated front outline and dimensions are shown: **no physical back or structural cross-section is drawn**. This model mismatch does not establish that the existing niche is unsafe or impossible. Confirm dimensions, support/capacity and balcony-edge relation on site (OI-POOJA-01). No cutting or deepening is requested or approved; no finishes or frame construction are newly selected.

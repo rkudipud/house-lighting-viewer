@@ -9,7 +9,7 @@
 | Original photometry calculation input (canonical JSON) | `ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e` |
 | Current mixed-provenance heatmap | `e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6` |
 
-The children's room has a targeted generic-optics reanalysis for the provisional shifted LINE paths. Other room heatmap grids retain the original optical calculation. The CBR reanalysis includes held CBR-L1 and CBR-X1-X4 at full output; it is not the lighting currently available in the viewer. Generic optics, maintenance factor 0.8, estimated geometry and assumed reflectance remain; no measured lux or manufacturer IES/LDT equivalence is claimed.
+The children's room has a targeted generic-optics reanalysis for the provisional shifted LINE paths. Other room heatmap grids retain the original optical calculation. The CBR reanalysis and viewer both model CBR-L1 and CBR-X1-X4 ON for review; their installation and actual operation remain held. Generic optics, maintenance factor 0.8, estimated geometry and assumed reflectance remain; no measured lux or manufacturer IES/LDT equivalence is claimed.
 
 ## Fixed CCT and fitting schedule
 
@@ -80,7 +80,7 @@ K-LIV-LOW uses **P01 at 480 W class**, C03/C04/C05/X-CURT-LIV, six modeled outpu
 | P15 | C31; C32; C34; C35A; C35B; C36A; C36B | 240 | 116.1 |
 | P16 | C38; C39; C40; X-CURT-CBR | 240 | 121.0 |
 
-**OPEN, no breaker PASS:** the 20 A reference exceeds the candidate T1-K's 12.5 A input nameplate. Distribution, branch and equipment protection, exact chain, low-end dimming/flicker, heat and supply location need licensed electrician and manufacturer design. Old P01/P03 living voltage-drop checks and LT-4/LT-5 inrush screens are invalid. The HLG-480H datasheet and retained installation table disagree on B16/C16 unit limits; obtain manufacturer guidance. P16 remains 121 W on 240 W; modeled S1 C39 3.3% and C40 3.6% are MARGINAL, not a cable-size instruction. `voltage-drop-selected-s1.csv` marks five living sections HOLD and unknown.
+**OPEN, no breaker PASS:** the 20 A reference exceeds the candidate T1-K's 12.5 A input nameplate. Distribution, branch and equipment protection, exact chain, low-end dimming/flicker, heat and supply location need licensed electrician and manufacturer design. Old P01/P03 living voltage-drop checks and LT-4/LT-5 inrush screens are invalid. The HLG-480H datasheet and retained installation table disagree on B16/C16 unit limits; obtain manufacturer guidance. P16 remains 121 W on 240 W; modeled S1 C39 3.3% and C40 3.9% are MARGINAL, not a cable-size instruction. `voltage-drop-selected-s1.csv` marks five living sections HOLD and unknown.
 
 ## Calculated results: limitations
 

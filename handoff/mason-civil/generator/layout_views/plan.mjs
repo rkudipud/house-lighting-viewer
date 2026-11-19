@@ -101,9 +101,8 @@ function storage(S,D){
   const drawn=[],list=D.items.filter(i=>i.storage);
   for(const it of list.filter(i=>!/loft|overhead/.test(i.kind))){
     const s=it.storage,r=s.drawBounds,[x,z,X,Z]=r,w=X-x,d=Z-z;
-    const conditional=s.homeowner_selection?.status==='selected_subject_to_site_holds';
-    S.add(`<g data-storage-id="${esc(s.id)}" data-storage-kind="${esc(s.kind)}"${conditional?' data-selection="site-held"':''}>`);
-    S.rect(r,/wardrobe|cabinet/.test(s.kind)?'#dce4ef':'#e9edf0','#5b7795',.014,conditional?'stroke-dasharray=".07 .04"':'');
+    S.add(`<g data-storage-id="${esc(s.id)}" data-storage-kind="${esc(s.kind)}">`);
+    S.rect(r,/wardrobe|cabinet/.test(s.kind)?'#dce4ef':'#e9edf0','#5b7795',.014);
     if(s.leaves){const lx=w>d;for(let i=1;i<s.leaves;i++)S.line(lx?[x+w*i/s.leaves,z]:[x,z+d*i/s.leaves],lx?[x+w*i/s.leaves,Z]:[X,z+d*i/s.leaves],'#90a3b9',.008);}
     S.add('</g>');drawn.push(s.id);
   }
@@ -177,7 +176,7 @@ function masterOverlay(S,D){
   S.label((bay[2]+band[2])/2,band[1]+.30,'WARDROBE',.1,'#466c92');
   S.label((bay[2]+band[2])/2,band[1]+.43,'ZONE',.1,'#466c92');
   S.label((bay[0]+bay[2])/2,band[1]+.28,'W03 BAY',.095,'#466c92');
-  S.label((band[0]+band[2])/2,band[3]+.15,'south wall: split wardrobes in principle; size held',.075,'#466c92');
+  S.label((band[0]+band[2])/2,band[3]+.15,'split wardrobe approved in principle; size unmeasured',.085,'#466c92');
   // TV marker on the east wall (sheet-left of the master), D02 end
   const tvZ=(ML.openings.W04.span_m[0]+ML.frame.room_rect_m[1])/2;
   S.line([room[0]+.05,tvZ-.4],[room[0]+.05,tvZ+.4],'#466c92',.05);
@@ -279,7 +278,7 @@ export function buildPlan(D,{no,total}){
   sw('snich','Shower niche SN1 / SN2 (dotted)');
   sw('joinery','Built storage record (hinged / counters)');
   sw('loft','Loft / overhead (dashed outline)');
-  sw('zone','Wardrobe zones: approved in principle, sizes held');
+  sw('zone','Split wardrobe in principle \u2014 unmeasured zones');
   sw('bed',"Tenant's own bed: queen\u2013king envelope");
   sw('feature','Shower wet-area walls (kit-kat tile)');
   y+=26;
@@ -288,11 +287,10 @@ export function buildPlan(D,{no,total}){
     COMPASS_NOTE,COMPASS_SOURCE,
     HEIGHT_NOTE+' This sheet draws no heights; elevations and the ceiling plan label each as homeowner-stated, derived or assumed.',
     'Room sizes are the homeowner-confirmed nominal sizes. Wall and opening positions are the master\u2019s assembled geometry; the master records which are inferred or unmeasured, and most opening offsets are inherited or placeholder (modelled plan position; not site verified).',
-    'W03 (master window): centred (homeowner-confirmed); offsets unmeasured. W05 (children\u2019s window): placeholder concealed behind the curtain. UP1 (utility parapet opening, OI-UTL-01): assumed.',
+    'D01 is single-leaf in the model, while the architectural description says double-leaf; confirm on site. W03 (master window): centred (homeowner-confirmed); offsets unmeasured. W05 (children\u2019s window): placeholder concealed behind the curtain. UP1 (utility parapet opening, OI-UTL-01): assumed.',
     'Beds are the tenants\u2019 own: dashed queen-to-king mattress envelope, 1524\u20131829 \u00d7 1981 mm; no tenant frame is drawn. Fixed bedside cabinets are omitted by the homeowner (HD-14: ST-R04-NS01, ST-R04-NS02, ST-R05-NS01); tenants may use movable tables. Room and bed positions are unchanged.',
     D.r05ClearanceNote,
-    'Master split wardrobe approved in principle: hatched relationship zones only; dimensions and loft support remain site holds. OPT-E BWP plywood carcass and laminate shutters are selected. Five superseded ST-R04 footprints are not drawn.',
-    'Dressing cabinet ST-R04a-WR01 and utility cabinet ST-R08-UC01 are selected subject to site fit. Dashed footprints are unmeasured placeholders, not fabrication dimensions; verify route / door clearance and utility services / access.',
+    'Master split wardrobe is approved in principle; its hatched zones, compartments and loft remain unmeasured. The five superseded ST-R04 records are not drawn. Dressing and utility cabinets are selected conditionally, subject to FH-ST-03 / FH-ST-12 site checks.',
     POOJA_NOTE,
     'The lift interior and the stair are drawn in plan only. Tags W/D/G/V are opening codes used on the elevation sheets; PN1 (pooja niche), SN1/SN2 (shower niches) and UP1 are tagged on the elevations.'
   ];

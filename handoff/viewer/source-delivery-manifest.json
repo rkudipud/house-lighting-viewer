@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL REVIEW DRAFT - not a construction release; not published",
+  "status": "HISTORICAL source delivery for a prior master; superseded by current source and copy receipts",
   "authoritative_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
   "derived_embedded_plan_sha256": "33dd7317e805a9c9bc790c160dcfd6187c38fed9fffd97c13ba74b64267ed600",
   "derived_embedded_heat_sha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",

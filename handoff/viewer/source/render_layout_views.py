@@ -114,6 +114,7 @@ JS_DOM = """() => {
   return {W, H, texts: texts.length, outside, overlaps,
     ids: Object.fromEntries(['room-id','wall-id','opening-id','storage-id','item-id','panel-id','fixture-id','fan-room','curtain-pocket','curtain-strip',
       'groove','bath-id','stair-part','bed','suppressed-storage','inactive','fixture-room','hold-mark','hold-fixture','pooja-callout','detail','niche-representation'].map(a => [a, ids(a)])),
+    trayHeights: Object.fromEntries([...svg.querySelectorAll('[data-ceiling^="tray-"]')].map(e => [e.getAttribute('data-ceiling'), {height: Number(e.getAttribute('data-tray-height')), basis: e.getAttribute('data-height-basis')}])),
     inactiveFixtureIds: [...svg.querySelectorAll('[data-fixture-id][data-inactive]')].map(e => e.getAttribute('data-fixture-id')).sort(),
     allowanceFixtureIds: [...svg.querySelectorAll('[data-fixture-id][data-held-allowance]')].map(e => e.getAttribute('data-fixture-id')).sort(),
     elements: svg.querySelectorAll('*').length,
@@ -193,6 +194,11 @@ overlaps = {r["sheet"]["id"]: r["dom"]["overlaps"] for r in sheet_results if r["
 check("no text-on-text overlaps (bounding boxes)", not overlaps, overlaps)
 check("generated SVG final bytes match the sheet manifest",
       all(sha(out / s["file"]) == s["sha256"] for s in manifest["sheets"]))
+check("R05 tray metadata uses the reported approximate level, not the older slab reference",
+      rcp["trayHeights"].get("tray-CBR") == {
+          "height": house["lighting"]["design_inputs"]["ceilings"]["CBR"]["tray_h_m"],
+          "basis": "homeowner-reported-approximate-unsurveyed",
+      }, rcp["trayHeights"])
 
 # plan vs raw master
 fx_ids = sorted(f["id"] for f in house["lighting"]["fixtures"])
@@ -265,6 +271,13 @@ check("rcp: four bathroom face bars retain their separate HD-17 groups",
               for f in lighting["fixtures"] if f["type"] == "FACEV")
       and "Each bathroom face-light pair has its own knob (HD-17)" in rcp["text"])
 check("rcp: master holds named (H-MBR-BED, H-MBR-W03) and children held (H-CBR-*)", all(k in rcp["text"] for k in ["H-MBR-BED", "H-MBR-W03", "H-CBR-"]))
+check("rcp: current R05 fan and modelled-on ceiling remain distinct from installation holds",
+      all(k in rcp["text"] for k in ["nominal room centre", "1050 mm planning sweep", "modelled ON for review", "H-CBR-CEIL"])
+      and not re.search(r"remain held and unlit|proposed cove centre", rcp["text"], re.I))
+child_elevation = by_id["08-elev-R05-children"]["dom"]["text"]
+check("R05 elevation: reported band and unsurveyed centre are shown without the old band",
+      all(k in child_elevation for k in ["band 3.048", "centre approximately 3.277", "slab estimate", "unsurveyed"])
+      and "false-ceiling band 2.96" not in child_elevation)
 check("rcp: integrated proposal wording, not released, and no photometry words", ("OPT-1" if opt1 else "HD-14") in rcp["text"] and "not released" in rcp["text"]
       and not re.search(r"\b(lux|lumen|lm|cd/m|UGR)\b", rcp["text"], re.I))
 check("rcp: same openings and walls as the plan", rcp["ids"]["opening-id"] == plan["ids"]["opening-id"] and rcp["ids"]["wall-id"] == plan["ids"]["wall-id"])
@@ -414,7 +427,7 @@ Sheet drawings are south-up: the page is **not rotated**, and the north arrow on
 |---|---|---|
 {sheets_md}
 
-1. **Top-down** = a colour-filled furnished plan with room names, confirmed sizes, walls, door swings, windows, the parapet opening, stairs, lift and essential furniture/storage.
+1. **Top-down** = a colour-filled furnished plan with room names, recorded nominal sizes, walls, door swings, windows, the parapet opening, stairs, lift and essential furniture/storage.
 2. **Bottoms-up** = the reflected ceiling plan: the ~9 in perimeter band, unmeasured raised centre and pocket details, lofts, fan points and all {fixture_count} base fixtures in {circuit_count} groups. Four selected 2700 K curtain strips bring the review count to 108 fittings / 51 circuits; the paths are indicative and clipped to the shown room, with no added knob or photometry credit. K-2 is selected for review; product, fit and construction holds remain. Hold marks (CR, HB, DS, PG) indicate conditional fittings.
 3. **All walls** = interior elevations of every wall of every room, each with a key plan and a view arrow. The living east-wall sheet carries the pooja niche PN1 and an enlarged niche detail.
 
@@ -425,7 +438,7 @@ Sheet drawings are south-up: the page is **not rotated**, and the north arrow on
 
 ## What is real, what is assumed
 - Room sizes come from the finalised master layout. **Most opening offsets are inherited or placeholder** values: every window/door is drawn at a "modelled plan position; not site verified", and a dagger (†) marks openings that are assumed, placeholder or centred-but-unmeasured.
-- **Every level is unmeasured (HD-11).** Homeowner-stated: 11 ft floor-to-floor (3.353 m) and a ~9 in band drop. Derived from those (5 in slab and 1.5 in finish assumed): slab underside about 3.19 m, band underside 2.959 m, kitchen flat ceiling 2.959 m. The raised centre is a separate gypsum/POP panel below the slab (HD-14): its level and cavity depth are unmeasured. Not provided (placeholders): bathrooms 2.40 m, utility 2.95 m, lobby 2.70 m, balcony. Window and door heads and sills are assumptions. The hall cross-beam soffit is unmeasured (H-HALL-BEAM). Every sheet says so.
+- **Every level remains unsurveyed.** The homeowner reports the R05 band at 3.048 m and the centre approximately 3.277 m; the actual slab height and cavity are unmeasured, and the reported centre conflicts with the older slab estimate. Elsewhere, the homeowner-stated 11 ft floor-to-floor and ~9 in band drop, with assumed slab and finish thicknesses, yield older references of about 3.19 m slab underside and 2.959 m band (HD-11); the raised-panel level and cavity depth are unmeasured (HD-14). Bathrooms, utility, lobby and balcony levels and opening heads/sills are placeholders. The hall cross-beam soffit is unmeasured (H-HALL-BEAM). Verify all levels on site.
 - The **loft** top of 3.08 m is an unmeasured legacy placeholder and is not raised to the slab (H-LOFT). The old 2.64 m curtain top is retired; 2.939 m is used only as an assumed HD-11 drawing top for the children's curtain, not measured hardware.
 - Items whose height is not in the master (sofa, TV unit, tenant beds and so on) are drawn only as footprints below the floor line. No height was invented. Wall cabinets show a bottom of 1.45 m and no top.
 - **Pooja niche PN1 (HD-16 / HD-18)** is already built at the north end of the living east wall. Its relationship is homeowner-confirmed, but the {V["pooja"]["widthMm"]} mm width, {V["pooja"]["heightMm"]} mm opening height, {V["pooja"]["sillM"]} m sill, {V["pooja"]["depthMm"]} mm depth and modeled position are **homeowner estimates, not site measurements**. {drawing_source["note"]} The homeowner reports a reinforced slab extension beyond the 9-inch wall, top to bottom through the building; its geometry and capacity are unverified. The model does not contain this extension. Only the estimated front outline and dimensions are shown: **no physical back or structural cross-section is drawn**. This model mismatch does not establish that the existing niche is unsafe or impossible. Confirm dimensions, support/capacity and balcony-edge relation on site (OI-POOJA-01). No cutting or deepening is requested or approved; no finishes or frame construction are newly selected.

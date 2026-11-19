@@ -9,7 +9,7 @@ these files are present. HTML, Markdown and the adapted source-index PDF link to
 official publications instead. The PDF has an additional public-copy notice page.
 Remote availability and byte identity of manufacturer URLs are not guaranteed.
 
-`repository-copy-receipt.json` lists every omission, its official URL, original
+`final-review-source-copy.json` lists every omission, its official URL, original
 source hash and delivered-file hash. `public-file-hashes.json` verifies the
 delivered source-pack copies; the repository-wide handoff manifest also covers
 repository-added navigation and notes.

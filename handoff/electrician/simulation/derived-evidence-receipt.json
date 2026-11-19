@@ -157,37 +157,37 @@
     },
     {
       "path": "heatmaps/CBR-HIGH_100.svg",
-      "sha256": "addf19f83fc2a9a2fcbe13ae4b29c6b308c3ae30770297c676251485c02760ce",
+      "sha256": "b858659beba66e235ebd21ed3cf2f40f1b932063676bac8c38ac8753b82aa6aa",
       "sourcePath": "analysis/sim-heatmaps.json",
       "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
     },
     {
       "path": "heatmaps/CBR-HIGH_100.png",
-      "sha256": "477bcc610970a7b74ed3d9b78a2765c2b0409b45f106bd5c15faceb72f41f636",
+      "sha256": "5d81e05a26b14176656fdf5742515822a8f253b4bd23eef259f156cb159cd236",
       "sourcePath": "analysis/sim-heatmaps.json",
       "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
     },
     {
       "path": "heatmaps/CBR-LOW_100.svg",
-      "sha256": "f3749231ada8aca8e62742e8dcf18b254c52447169463e7cbdfb3636c601d0a7",
+      "sha256": "1b2dc1ae206ffc8814947db028d200fd636c833666b1a2ae17bd5ef07a5d5922",
       "sourcePath": "analysis/sim-heatmaps.json",
       "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
     },
     {
       "path": "heatmaps/CBR-LOW_100.png",
-      "sha256": "4afb48c7db882b2b2040a7b6660d693885b074f3509428c189af37d071cdb492",
+      "sha256": "23fc7814e555e3b7abb94d67d718869f250f41fc6061877b83b5dd40ce3e457c",
       "sourcePath": "analysis/sim-heatmaps.json",
       "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
     },
     {
       "path": "heatmaps/CBR-HIGH+LOW_100.svg",
-      "sha256": "1dcb5467610d313aa7dd0ee510ad50baa02072e5c7e157003c7c60936524504e",
+      "sha256": "2ffa8361e22a4bac0f9edc60ed0e1b86652735e6d3185a29e7fc213e5175498b",
       "sourcePath": "analysis/sim-heatmaps.json",
       "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
     },
     {
       "path": "heatmaps/CBR-HIGH+LOW_100.png",
-      "sha256": "22bf18bc605b88f1abf373ea5da86d570f39be4707a44ca3b55ce312a12ed86a",
+      "sha256": "1b9857b306d86a6d791c25082dac46bfafec1220484f9928976ad457c0788786",
       "sourcePath": "analysis/sim-heatmaps.json",
       "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
     },

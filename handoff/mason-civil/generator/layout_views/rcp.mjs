@@ -70,11 +70,14 @@ function pathStyle(type,lane){
 function fansDraw(S,D){
   let n=0;
   for(const f of D.fans){
-    const pending=!f.at_m,at=f.at_m||f.proposal.global_xz_m,[x,z]=at;
-    S.add(`<g data-fan-room="${esc(f.room)}" data-fan-status="${pending?'pending':'assumed'}"${pending?' opacity=".6"':''}>`);
-    S.add(`<circle cx="${fx(x,4)}" cy="${fx(z,4)}" r=".26" fill="#fff" stroke="#4f6b73" stroke-width=".014"${pending?' stroke-dasharray=".05 .04"':''}/>`);
+    const pending=!f.at_m,provisional=pending||/^provisional/.test(f.status||''),at=f.at_m||f.proposal.global_xz_m,[x,z]=at;
+    S.add(`<g data-fan-room="${esc(f.room)}" data-fan-status="${provisional?'provisional':'assumed'}"${provisional?' opacity=".6"':''}>`);
+    // planning sweep (nominal blade-tip circle) where one is recorded; not a product clearance
+    const sweep=Number(f.proposal?.sweep_mm);
+    if(sweep>0)S.add(`<circle data-fan-sweep-mm="${sweep}" cx="${fx(x,4)}" cy="${fx(z,4)}" r="${fx(sweep/2000,4)}" fill="none" stroke="#4f6b73" stroke-width=".012" stroke-dasharray=".06 .05"/>`);
+    S.add(`<circle cx="${fx(x,4)}" cy="${fx(z,4)}" r=".26" fill="#fff" stroke="#4f6b73" stroke-width=".014"${provisional?' stroke-dasharray=".05 .04"':''}/>`);
     for(let a=0;a<4;a++){const t=a*Math.PI/2+Math.PI/4;S.line([x,z],[x+.26*Math.cos(t),z+.26*Math.sin(t)],'#4f6b73',.02);}
-    S.label(x,pending?z-.36:z+.43,pending?'FAN \u2014 pending approval':'FAN POINT',.075,'#3f565d');
+    S.label(x,provisional?z-.36:z+.43,provisional?(sweep>0?`FAN \u2014 provisional, ${sweep} mm planning sweep`:'FAN \u2014 provisional'):'FAN POINT',.075,'#3f565d');
     S.add('</g>');n++;
   }
   return n;
@@ -86,26 +89,26 @@ export function buildRcp(D,{no,total}){
   const circuitIds=[...new Set(fixtures.map(f=>f.circuit))].sort();
   assert(fixtures.every(f=>typeof f.circuit==='string'&&f.circuit),'Every fitting must name its circuit');
   assert.deepEqual(circuitIds,L.controls.circuits.map(c=>c.circuit).sort(),'Fitting circuits must reconcile with the canonical controls');
-  const lightingSummary=`${fixtures.length} fittings, ${circuitIds.length} controlled groups`;
-  const opt1=/^OPT1/.test(L.status),fixedWhite=/^FIXED_WHITE_HOMEOWNER_SIGNED/.test(L.status),k2=L.calculation_validity.homeowner_selections?.kitchen_worktop;
-  assert(fixedWhite,'Civil review requires the integrated homeowner-signed fixed-CCT master');
-  if(opt1||fixedWhite){
+  const lightingSummary=`${fixtures.length} base fittings, ${circuitIds.length} controlled groups`;
+  const fixedWhite=L.status==='FIXED_WHITE_HOMEOWNER_SIGNED_REVIEW_CANDIDATE_NOT_CONSTRUCTION_RELEASED';
+  const opt1=/^OPT1/.test(L.status)||fixedWhite,k2=L.calculation_validity.homeowner_selections?.kitchen_worktop;
+  const strips=fixedWhite?L.curtain_pocket_s1.strips:[];
+  if(fixedWhite){
+    assert.equal(strips.length,4);assert(strips.every(s=>s.cct_k===2700&&!s.new_knob&&!s.photometry_credit));
+    assert.equal(L.curtain_pocket_s1.selected_S1_totals.fittings_including_selected_strips,108);
+    assert.equal(L.curtain_pocket_s1.selected_S1_totals.circuits_including_selected_strips,51);
+  }
+  if(opt1){
     assert.equal(k2?.option,'K-2','OPT-1 master must record the homeowner-selected kitchen option K-2');
     assert(fixtures.some(f=>f.id==='KIT-T4')&&fixtures.some(f=>f.id==='KIT-T1'&&f.type==='TASK_LO'),'K-2 fittings KIT-T4 and KIT-T1 (lower output) must be in the master');
     assert.equal(L.calculation_validity.construction_release,false);
   }
-  const strips=L.curtain_pocket_s1.strips;
-  assert.deepEqual(strips.map(s=>s.id).sort(),['CURT-CBR','CURT-DIN','CURT-LIV','CURT-MBR-S']);
-  assert(strips.every(s=>s.cct_k===2700&&s.fabrication_release===false));
-  assert.match(L.calculation_validity.post_calculation_status_delta,/CBR H1-H6 release/);
-  const lightingNote=fixedWhite
-    ?`Homeowner-signed fixed-CCT review candidate: ${lightingSummary} base, plus four selected S1 curtain strips (108 fittings / 51 groups including S1). Coves and selected strips are fixed 2700 K; other fittings keep their assigned fixed CCT. CBR-H1 to H6 are active and switchable at accepted positions (C37); dimmer procurement remains held. W03 strip is held and excluded. No photometry or construction release. Site and product-fit holds remain open. Each bathroom face-light pair has its own knob (HD-17). Pooja fittings remain count/load allowances only, with inherited positions held (H-POOJA-GEOMETRY).`
-    :opt1
-    ?`OPT-1 calculated review candidate from the bound master (${lightingSummary}). Kitchen task option K-2 is homeowner-selected for review: it adds the sink-end linear KIT-T4 and lowers KIT-T1 output. Generic-optics analytic estimates, not measured or manufacturer-validated; no photometry is shown on this sheet. Not construction-released; product, driver, dimmer and site-fit holds remain open. Each bathroom face-light pair has its own knob (HD-17). Pooja fittings remain count/load allowances only, with inherited positions held (H-POOJA-GEOMETRY); no corrected placement is implied.`
+  const lightingNote=opt1
+    ?`OPT-1 calculated review candidate from the bound master (${lightingSummary}). Four selected 2700 K curtain strips bring the review schedule to 108 fittings / 51 circuits; no new knobs or photometry credit. Kitchen task option K-2 is homeowner-selected for review: it adds the sink-end linear KIT-T4 and lowers KIT-T1 output. Generic-optics analytic estimates, not measured or manufacturer-validated; no photometry is shown on this sheet. Not construction-released; product, driver, dimmer and site-fit holds remain open. Each bathroom face-light pair has its own knob (HD-17). Pooja fittings remain count/load allowances only, with inherited positions held (H-POOJA-GEOMETRY); no corrected placement is implied.`
     :`${D.drawingSource.lighting_pending?'STAGING: lighting is stale pending HD-18 recoordination. ':''}HD-14 lighting proposal from the bound master (${lightingSummary}), including HD-16 and HD-17. Not construction-released; no photometry is shown. Each bathroom face-light pair has its own knob (HD-17). Pooja fittings remain count/load allowances only, with inherited positions held (H-POOJA-GEOMETRY); no corrected placement is implied. Site and product-fit holds remain open.`;
-  const S=makeSheet({width:W,title:'Reflected ceiling plan (looking up)',desc:`Read-only reflected ceiling plan from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; lighting is the homeowner-signed fixed-CCT review candidate, not construction-released.`,
+  const S=makeSheet({width:W,title:'Reflected ceiling plan (looking up)',desc:`Read-only reflected ceiling plan from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; lighting is the ${opt1?'OPT-1 calculated review candidate':'HD-14 coordinated proposal'}, not construction-released.`,
     metadata:{sheet:'02-rcp',master_sha256:D.hash,fixtures:fixtures.length,circuits:circuitIds.length,heights:'hd11_homeowner_stated_or_derived_unmeasured',lighting_status:L.status}});
-  pageHeader(S,{title:'Reflected ceiling plan \u2014 bottoms-up',subtitle:`Looking up \u00b7 south-up, same as plan \u00b7 ${fixedWhite?'fixed-CCT review':'HD-14 proposal'}: ${lightingSummary} base + 4 strips \u00b7 not released`,no,total,hash:D.hash});
+  pageHeader(S,{title:'Reflected ceiling plan \u2014 bottoms-up',subtitle:`Looking up \u00b7 south-up, same as plan \u00b7 ${opt1?'OPT-1 review candidate (K-2 kitchen)':'HD-14 proposal'}: ${lightingSummary} \u00b7 not released`,no,total,hash:D.hash});
   S.add(`<g id="rcp-plan" transform="translate(${TX} ${TY}) scale(${SC})">`);
   S.rect([0,0,D.plot.x*FT,D.plot.z*FT],'none','#b8c5c4',.012,'stroke-dasharray=".08 .06"');
   // ceiling levels
@@ -118,7 +121,8 @@ export function buildRcp(D,{no,total}){
   const ft2=a=>a.map(p=>[p[0]*FT,p[1]*FT]);
   const tray=(key,fill='#fbf4de')=>{
     const c=CE[key],pts=ft2(c.tray_corners_ft),radii=Array.isArray(c.tray_radii_ft)?c.tray_radii_ft.map(r=>r*FT):c.tray_radii_ft*FT;
-    S.add(`<g data-ceiling="tray-${key}" data-tray-height="${D.H.panel}">`);S.path(roundedPath(pts,radii,true),fill,'#b9a36d',.018);S.add('</g>');
+    const heightBasis=/homeowner-reported/i.test(c.level_basis||'')?'homeowner-reported-approximate-unsurveyed':'derived-reference-unsurveyed';
+    S.add(`<g data-ceiling="tray-${key}" data-tray-height="${c.tray_h_m}" data-height-basis="${heightBasis}">`);S.path(roundedPath(pts,radii,true),fill,'#b9a36d',.018);S.add('</g>');
   };
   tray('HALL');tray('MBR');tray('CBR');
   // frames on the band and the painted-black false-track grooves
@@ -138,7 +142,7 @@ export function buildRcp(D,{no,total}){
   }
   const band=D.ML.relationship_zones_m.wardrobe_wall_band.rect;
   S.add('<g data-zone="master-wardrobe-wall-held">');S.rect(band,'url(#zone)','#5b7795',.014,'stroke-dasharray=".07 .04"');S.add('</g>');
-  S.label((band[0]+band[2])/2,band[3]-.10,'split wardrobe in principle; sizes + loft held',.075,'#466c92');
+  S.label((band[0]+band[2])/2,band[3]-.10,'split wardrobe in principle; size and loft held',.075,'#466c92');
   // curtain pockets (lighting geometry; pocket sizes assumed); the W03 pocket is HELD (H-MBR-W03)
   const cw=L.design_inputs.calc_geometry.curtains,pw=cw.pocket_widths_m[0];
   const pocketRect=w=>{const a=w.along0_ft*FT,b=w.along1_ft*FT,wall=w.wall_ft*FT,e=wall+w.into_room_sign*pw;
@@ -152,11 +156,11 @@ export function buildRcp(D,{no,total}){
   // walls drawn over the fills
   drawWalls(S,D,{swings:false,tags:false});
   // lit paths
-  const counts={paths:0,points:0},byRoom={},byType={},releasedCbr=new Set(['CBR-H1','CBR-H2','CBR-H3','CBR-H4','CBR-H5','CBR-H6']);
+  const counts={paths:0,points:0},byRoom={},byType={};
   for(const f of fixtures){
     assert(LANE_COLOR[f.lane],`No RCP lane colour for ${f.lane}`);
     byRoom[f.room]=(byRoom[f.room]||0)+1;byType[f.type]=(byType[f.type]||0)+1;
-    const inactive=f.room==='CBR'&&!releasedCbr.has(f.id),allowance=HOLD_FIX['H-POOJA-GEOMETRY'].includes(f.id),ghost=inactive||allowance;
+    const inactive=f.room==='CBR'&&!/^CBR-(H[1-6]|L1|X[1-4])$/.test(f.id),allowance=HOLD_FIX['H-POOJA-GEOMETRY'].includes(f.id),ghost=inactive||allowance;
     S.add(`<g data-fixture-id="${esc(f.id)}" data-fixture-type="${esc(f.type)}" data-fixture-room="${esc(f.room)}" data-lane="${esc(f.lane)}"${inactive?' data-inactive="placeholder"':''}${allowance?' data-held-allowance="count-load-only"':''}>`);
     if(f.path_ft){
       const st=pathStyle(f.type,f.lane);
@@ -167,11 +171,13 @@ export function buildRcp(D,{no,total}){
     }
     S.add('</g>');
   }
-  for(const strip of strips){
-    assert(strip.polyline_ft.length>=2,`Missing proposed centre line for ${strip.id}`);
-    S.add(`<g data-curtain-strip="${esc(strip.id)}" data-status="selected-site-fit-hold">`);
-    S.path(`M${strip.polyline_ft.map(p=>fx(p[0]*FT,4)+' '+fx(p[1]*FT,4)).join('L')}`,'none','#d05a3a',.045,'stroke-dasharray=".10 .04" stroke-linecap="round"');
-    S.add('</g>');
+  const stripRooms={'CURT-LIV':'living','CURT-DIN':'dining','CURT-MBR-S':'master','CURT-CBR':'children'};
+  for(const s of strips){
+    const room=D.rooms.find(r=>r.id===stripRooms[s.id]);assert(room,`Unknown curtain strip ${s.id}`);
+    const clip='clip-'+s.id;
+    S.add(`<defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><path d="${polyPath(room.poly)}"/></clipPath></defs>`);
+    S.add(`<g data-curtain-strip="${esc(s.id)}" data-circuit="X-${esc(s.id)}" data-control="${esc(s.target_knob_group)}">`);
+    S.path(`M${s.polyline_ft.map(p=>fx(p[0]*FT,4)+' '+fx(p[1]*FT,4)).join('L')}`,'none','#d08a22',.03,`stroke-dasharray=".04 .025" clip-path="url(#${clip})"`);S.add('</g>');
   }
   // fittings held by the lighting hold list get a dashed red outline and a short tag
   const fixById=Object.fromEntries(fixtures.map(f=>[f.id,f]));
@@ -195,8 +201,8 @@ export function buildRcp(D,{no,total}){
   S.label((mr[0]+mr[2])/2,mr[3]-.28,'MASTER \u2014 HELD (H-MBR-BED, H-MBR-W03)',.11,RC);
   S.label((mr[0]+mr[2])/2,mr[3]-.15,'bed position is a test centreline only (tenant bed not supplied); W03 pocket held',.075,RC);
   const ch=D.rooms.find(r=>r.id==='children'),cx=(ch.rect[0]+ch.rect[2])/2;
-  S.label(cx,ch.rect[1]+.25,'CBR-H1 to H6 active / switchable (C37)',.085,RC);
-  S.label(cx,ch.rect[1]+.38,'other CBR coordination holds; site + product checks remain',.07,RC);
+  S.label(cx,ch.rect[1]+.25,"CHILDREN'S \u2014 H1-H6, COVE, LINE MODELLED ON",.09,RC);
+  S.label(cx,ch.rect[1]+.38,'cove/LINE install, fan and pockets held, unmeasured (H-CBR-*)',.07,RC);
   // pooja niche PN1: its lighting is LIV-P1 (back strip) and LIV-P2 (pin spot)
   const pn=D.openings.find(o=>o.id==='pooja-niche'),pwl=D.walls.find(w=>w.id===pn.wall),pnx=Math.max(pwl.rect[0],pwl.rect[2]);
   S.add('<g data-pooja-light="PN1">');
@@ -204,7 +210,7 @@ export function buildRcp(D,{no,total}){
   S.add('</g>');
   // room labels with ceiling levels
   const pos={living:[2.3,11.5],dining:[2.8,7.45],kitchen:[2.65,3.5],master:[6.9,4.1],children:[7.75,12.95],utility:[2.2,.62],balcony:[1.9,15.2],dressing:[5.6,5.9],lobby:[5.55,7.68],bath1:[7.55,6.35],bath2:[7.55,8.15]};
-  const lev={living:'band 2.96 \u00b7 panel unmeasured',dining:'band 2.96 \u00b7 panel unmeasured',kitchen:'flat 2.96',master:'band 2.96 \u00b7 panel unmeasured',children:'band 2.96 \u00b7 panel unmeasured',utility:'2.95 (not provided)',balcony:'no ceiling recorded',dressing:'band 2.96',lobby:'2.70 (not provided)',bath1:'2.40 (not provided)',bath2:'2.40 (not provided)'};
+  const lev={living:'band 2.96 \u00b7 panel unmeasured',dining:'band 2.96 \u00b7 panel unmeasured',kitchen:'flat 2.96',master:'band 2.96 \u00b7 panel unmeasured',children:CE.CBR?.level_basis?`band ${CE.CBR.band_h_m.toFixed(3)} \u00b7 centre ~${CE.CBR.tray_h_m.toFixed(2)} (reported, unsurveyed)`:'band 2.96 \u00b7 panel unmeasured',utility:'2.95 (not provided)',balcony:'no ceiling recorded',dressing:'band 2.96',lobby:'2.70 (not provided)',bath1:'2.40 (not provided)',bath2:'2.40 (not provided)'};
   const nm={living:'LIVING',dining:'DINING',kitchen:'KITCHEN',master:'MASTER',children:"CHILDREN'S",utility:'UTILITY + WASH',balcony:'ENTRY / BALCONY',dressing:'DRESSING',lobby:'LOBBY',bath1:'TL1',bath2:'TL2'};
   for(const id of Object.keys(pos)){
     const r=D.rooms.find(r=>r.id===id),[x,z]=pos[id],small=['dressing','lobby','bath1','bath2'].includes(id);
@@ -222,10 +228,10 @@ export function buildRcp(D,{no,total}){
   const X0=1200;let y=170;
   y=S.wrap(X0,y+4,lightingNote,440,13,18,'red');y+=10;
   S.text(X0,y+20,'CEILING LEVELS (HD-11, unmeasured)',17,'sect');y+=34;
-  const lv=[['band','2.96 m perimeter band (derived, unmeasured)'],['tray','Raised centre: gypsum/POP panel; level unmeasured (HD-14)'],['flat','Kitchen: one flat ceiling at 2.96 m (band level)'],['beam','Hall cross-beam band \u2014 soffit unmeasured'],['bath','2.40 m bath ceiling (not provided)'],['lobby','2.70 m lobby (not provided; placeholder)'],['utility','2.95 m utility soffit (not provided)'],['loft','Loft / overhead area (dashed)'],['curtain','Indicative pocket; track count / size to verify'],['hold','Held curtain pocket W03 (H-MBR-W03)'],['groove','Black-painted false-track groove']];
+  const lv=[['band','2.96 m perimeter band (derived; except R05)'],['r05',`R05 band ${CE.CBR.band_h_m.toFixed(3)}, centre ~${CE.CBR.tray_h_m.toFixed(3)} m (reported)`],['tray','Raised centre: gypsum/POP panel; level unmeasured (HD-14)'],['flat','Kitchen: one flat ceiling at 2.96 m (band level)'],['beam','Hall cross-beam band \u2014 soffit unmeasured'],['bath','2.40 m bath ceiling (not provided)'],['lobby','2.70 m lobby (not provided; placeholder)'],['utility','2.95 m utility soffit (not provided)'],['loft','Loft / overhead area (dashed)'],['curtain','Curtain pocket, 2 tracks (size indicative)'],['hold','Held curtain pocket W03 (H-MBR-W03)'],['groove','Black-painted false-track groove']];
   for(const [k,t] of lv){
     y+=24;
-    const fill={band:LEVEL_FILL.band,tray:'#fbf4de',flat:LEVEL_FILL.flat,beam:'url(#beam)',bath:LEVEL_FILL.bath,lobby:LEVEL_FILL.lobby,utility:LEVEL_FILL.utility,loft:'url(#loft)',curtain:'#e9dff0',hold:'#f3e6e6',groove:'#111'}[k];
+    const fill={band:LEVEL_FILL.band,r05:LEVEL_FILL.band,tray:'#fbf4de',flat:LEVEL_FILL.flat,beam:'url(#beam)',bath:LEVEL_FILL.bath,lobby:LEVEL_FILL.lobby,utility:LEVEL_FILL.utility,loft:'url(#loft)',curtain:'#e9dff0',hold:'#f3e6e6',groove:'#111'}[k];
     S.add(`<rect x="${X0}" y="${y-15}" width="34" height="16" fill="${fill}" stroke="${k==='groove'?'#111':k==='hold'?'#b02f2f':'#8a97a0'}"${k==='loft'||k==='hold'?' stroke-dasharray="6 3"':''}/>`);
     S.text(X0+48,y-2,t,14);
   }
@@ -238,15 +244,14 @@ export function buildRcp(D,{no,total}){
     S.text(X0+48,y-2,`${codeName}  ${txt}`,14);
   }
   y+=10;
-  const lineRows=[['COVE_FW','COVE','fixed-white cove strip / bath BCOVE','8 4'],['LIN','LINE','lit LINE profile (LIN)',''],['BACK','MOOD','diffused back-light (BACK)','3 4'],['TASK','TASK','strip: task / niche / vanity / plinth','6 3']];
+  const lineRows=[['COVE_TW','COVE','cove strip (COVE_TW / bath BCOVE)','8 4'],['LIN','LINE','lit LINE profile (LIN)',''],['BACK','MOOD','diffused back-light (BACK)','3 4'],['TASK','TASK','strip: task / niche / vanity / plinth','6 3']];
   for(const [,lane,txt,dash] of lineRows){
     y+=26;
     S.add(`<path d="M${X0} ${y-6}H${X0+34}" stroke="${LANE_COLOR[lane]}" stroke-width="${lane==='LINE'?5:4}" ${dash?`stroke-dasharray="${dash}"`:''} fill="none"/>`);
     S.text(X0+48,y-2,txt,14);
   }
   y+=26;S.add(`<circle cx="${X0+17}" cy="${y-6}" r="13" fill="#fff" stroke="#4f6b73" stroke-width="2"/><path d="M${X0+8} ${y-15}L${X0+26} ${y+3}M${X0+26} ${y-15}L${X0+8} ${y+3}" stroke="#4f6b73" stroke-width="2"/>`);S.text(X0+48,y-2,'Fan point (symbol, not to scale)',14);
-  y+=26;S.add(`<g opacity=".45"><circle cx="${X0+17}" cy="${y-6}" r="9" fill="#fff" stroke="#3d6fa5" stroke-width="2"/></g>`);S.text(X0+48,y-2,'Faded = other CBR fittings with site holds',14);
-  y+=26;S.add(`<path d="M${X0} ${y-6}H${X0+34}" stroke="#d05a3a" stroke-width="4" stroke-dasharray="8 4"/>`);S.text(X0+48,y-2,'4 selected S1 pocket strips: site fit held',14);
+  y+=26;S.add(`<g opacity=".45"><circle cx="${X0+17}" cy="${y-6}" r="9" fill="#fff" stroke="#3d6fa5" stroke-width="2"/></g>`);S.text(X0+48,y-2,'Faded = held CBR fittings; H1-H6 active for review',14);
   y+=26;S.add(`<rect x="${X0+3}" y="${y-17}" width="28" height="18" fill="none" stroke="#b02f2f" stroke-width="2" stroke-dasharray="6 3"/>`);S.text(X0+48,y-2,'Held fitting: CR product-fit/access check,',14);y+=17;S.text(X0+48,y-2,'HB hall beam, DS dressing sweep,',14);y+=17;S.text(X0+48,y-2,'PG pooja count/load allowance only',14);
   y+=30;
   S.text(X0,y,'Colour = lane recorded in the master:',13,'muted');
@@ -265,16 +270,16 @@ export function buildRcp(D,{no,total}){
     y+=22;S.text(X0,y,`${FIX_ROOM[r]}: ${byRoom[r]}`,14,'mono',undefined);
     y=S.wrap(X0+16,y+17,Object.entries(types).map(([t,n])=>`${t}\u00d7${n}`).join('  '),420,12.5,16,'muted mono');y-=6;
   }
-  y+=26;S.text(X0,y,`BASE ${fixtures.length} fittings + ${strips.length} selected strips`,15,'mono');
+  y+=26;S.text(X0,y,`TOTAL ${fixtures.length} fittings`,15,'mono');
   y+=30;
   const notes=[
     lightingNote,
     HEIGHT_NOTE,COMPASS_NOTE,COMPASS_SOURCE,
-    CENTRE_NOTE+' H-HALL-BEAM \u2014 beam soffit unmeasured for DIN-H2/H3 and FW-T1. Actual band void and usable clearance are unmeasured.',
+    CENTRE_NOTE+' H-HALL-BEAM \u2014 beam soffit unmeasured for DIN-H2/H3 and FW-T1. Band void is 228.6 mm gross (~216 mm net).',
     'MASTER: bed position is a held test centreline (H-MBR-BED); the tenant bed is not supplied. The W03 curtain pocket is held (H-MBR-W03: pocket and loft interface unresolved; offsets unmeasured).',
     CURTAIN_NOTE,
-    'CHILDREN\u2019S ROOM: CBR-H1 to H6 are active/switchable in review at the accepted positions; C37 exact dimmer procurement remains held. Other CBR coordination, curtain, bed and desk holds remain (H-CBR-*); fan position is pending approval.',
-    'S1: CURT-LIV, CURT-DIN, CURT-MBR-S and CURT-CBR are selected at 2700 K, conditionally on site measurement. CURT-MBR-W03 remains held and excluded. MBR-S and CBR assumed return lines extend about 0.30 m past their modeled room corners: do not set out from these lines. Tracks, strip profile, cable access and pocket clearances need a site mock-up.',
+    'S1 MODEL CLASH: assumed MBR-S and CBR strip returns each extend about 0.30 m beyond a modeled room corner. Lines are clipped for display only. Measure pocket ends and coordinate site fit; do not extend or cut from the model.',
+    `CHILDREN\u2019S ROOM: the fan is at the nominal room centre with a 1050 mm planning sweep; no product is selected. The cove is retained and LINE paths are shifted outward. Cove and LINE are modelled ON for review, while installation, procurement and operation remain held (H-CBR-CEIL). Verify room, fan, loft, downlight and pocket clearances on site.`,
     'Dining + living share one raised centre panel. The kitchen ceiling is one flat level at band height. Black-painted grooves are drawn only where the master records them (master and children\u2019s rooms).',
     POOJA_NOTE+' LIV-P1 / LIV-P2 are count/load allowances only; inherited positions are held (H-POOJA-GEOMETRY).',
     'Fan points and lofts are assumed; curtain-pocket sizes are indicative only (HD-14). Switch-plate zones are not drawn: the master holds none (only the R05 latch-side strip appears on the children\u2019s elevation).'
@@ -314,6 +319,6 @@ export function buildRcp(D,{no,total}){
   void H;void W;
   const svg=S.finish(bottom+50);
   return {id:'02-rcp',title:'Reflected ceiling plan (bottoms-up)',svg,
-    counts:{fixtures:fixtures.length,circuits:circuitIds.length,selectedCurtainStrips:strips.length,paths:counts.paths,points:counts.points,fans,curtainPockets:pockets,grooves,holdMarks,rooms:D.rooms.length,walls:D.walls.length},
-    drawn:{fixtureTypes:byType,fixtureRooms:byRoom,fixtureIds:fixtures.map(f=>f.id),selectedCurtainStripIds:strips.map(s=>s.id),releasedCbrIds:[...releasedCbr],circuitIds}};
+    counts:{fixtures:fixtures.length,circuits:circuitIds.length,selectedCurtainStrips:strips.length,reviewFixtures:fixtures.length+strips.length,reviewCircuits:circuitIds.length+strips.length,paths:counts.paths,points:counts.points,fans,curtainPockets:pockets,grooves,holdMarks,rooms:D.rooms.length,walls:D.walls.length},
+    drawn:{fixtureTypes:byType,fixtureRooms:byRoom,fixtureIds:fixtures.map(f=>f.id),circuitIds,curtainStrips:strips.map(s=>s.id)}};
 }

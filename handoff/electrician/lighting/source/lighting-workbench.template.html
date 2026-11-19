@@ -43,7 +43,7 @@
   <div class="status"><strong>Design review only</strong><br>One floor repeated four times. Site, product and electrical checks remain open.</div>
 </header>
 <main>
-  <div class="notice"><strong>Calculated, not measured.</strong> The coloured map is a saved analytic estimate using generic optics, not a live or physically validated simulation. Children's maps include the held cove and LINE fittings and do not represent the currently available viewer lighting. The four selected curtain strips have no lux credit.</div>
+  <div class="notice"><strong>Calculated, not measured.</strong> The coloured map is a saved analytic estimate using generic optics, not a live or physically validated simulation. The children's cove and LINE contribute to both the saved maps and the provisional viewer simulation; installation and operation remain on site hold. The four selected curtain strips have no lux credit.</div>
   <div class="tools" aria-label="Plan filters">
     <label for="room">Room<select id="room"><option value="all">All rooms</option></select></label>
     <label for="scene">Saved calculation<select id="scene">
@@ -201,7 +201,7 @@ function updateStats(){
   $("plan-heading").textContent=id==="all"?"Typical floor":roomById[id].name+" / "+id;
   for(const key of ["avg","min","u0"])$(key).textContent="--";
   let warning="";if(id==="all"||id==="LIV")if(scene!=="HIGH_100"&&scene!=="Off"&&scene!=="Night")warning="Living LOW and scenes using accent retain an inherited pooja allowance; the revised niche is held.";
-  if(id==="CBR"||id==="all")warning+=(warning?" ":"")+"Children's geometry and outward LINE proposal are unmeasured. The saved CBR estimates include the held cove and LINE strips; they are not currently available viewer light. H1-H6 are active for review; ceiling, bed and desk holds remain.";
+  if(id==="CBR"||id==="all")warning+=(warning?" ":"")+"Children's geometry and outward LINE proposal are unmeasured. The cove and LINE are modelled ON in the saved estimates and viewer for review only; installation and operation remain on site hold. H1-H6 are active for review; ceiling, bed and desk holds remain.";
   if(scene==="Off"||scene==="Night"){
     $("calc-context").textContent="No stored "+scene.toLowerCase()+" room-grid calculation. No substitute grid is shown.";
   }else if(!calc){$("calc-context").textContent="Choose one room to see its saved "+scene+" statistics."}

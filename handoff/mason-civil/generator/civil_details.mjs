@@ -12,6 +12,9 @@ const D=prepare(source,expected),H=D.house,L=H.lighting;
 const masterBytes=fs.readFileSync(source);
 const digest=b=>createHash('sha256').update(b).digest('hex');
 const P=H.decisions.pooja_niche.dimensions;
+const R05=L.design_inputs.ceilings.CBR;
+assert.equal(R05.band_h_m,3.048);
+assert.equal(R05.tray_h_m,3.2766);
 const selected=L.curtain_pocket_s1.strips;
 assert.deepEqual(selected.map(x=>x.id).sort(),['CURT-CBR','CURT-DIN','CURT-LIV','CURT-MBR-S']);
 assert.equal(H.decisions.r05_clearance.estimated_clearance_mm,387.6);
@@ -46,7 +49,7 @@ function add(id,title,svg){sheets.push({id,title,svg});}
 {
   const S=sheet('Section A \u2014 ceiling and curtain coordination','Conceptual section only; no construction or set-out dimensions','C01-ceiling-section',1);
   section(S,75,165,'SCHEMATIC SECTION / NOT TO SCALE');
-  text(S,75,193,'Interior on left; window wall on right. Pocket, cove and slab are separate conditions.',16,'muted');
+  text(S,75,193,'Illustrative section, not verified in R05; pocket, cove and slab are separate conditions.',16,'muted');
   frame(S,75,215,790,720);
   S.add('<rect x="145" y="270" width="650" height="32" fill="#d9dde0" stroke="#5d6e77"/>');
   text(S,165,291,'Concrete slab (underside reference; not surveyed)',15);
@@ -61,7 +64,7 @@ function add(id,title,svg){sheets.push({id,title,svg});}
   S.add('<path d="M135 832H830" stroke="#203b43" stroke-width="5"/>');
   S.add('<path d="M120 304V832" stroke="#466c92" stroke-width="2" stroke-dasharray="7 5"/>');
   text(S,163,340,'A  separate gypsum / POP centre panel',15);
-  text(S,163,396,'Panel level and cavity depth unknown',14,'red');
+  text(S,163,396,'Panel level and cavity unverified',14,'red');
   text(S,475,448,'B  band + perimeter cove',15);
   text(S,475,470,'Separate LOW lighting',14,'muted');
   text(S,550,510,'C  curtain pocket',15);
@@ -72,8 +75,9 @@ function add(id,title,svg){sheets.push({id,title,svg});}
   section(S,920,165,'DATUMS / PER FLAT');
   let y=lines(S,920,198,[
     '11 ft floor-to-floor (3.3528 m) and about 9 in band drop (0.2286 m): homeowner-stated, not measured.',
-    'Assumed 5 in slab and 1.5 in finish yield about 3.188 m FFL-to-slab soffit and 2.959 m FFL-to-band underside. Verify all levels on site.',
-    'The raised centre is a separate panel below the slab: its actual level and clear profile/wiring cavity are unknown. Do not mistake the slab reference for the panel surface.',
+    'Elsewhere, assumed slab and finish thicknesses yield an old 3.188 m slab and 2.959 m band estimate; neither is surveyed.',
+    `R05 only: band ${R05.band_h_m.toFixed(3)} m and centre approx. ${R05.tray_h_m.toFixed(3)} m are homeowner-reported, not surveyed.`,
+    'R05 slab unmeasured: the reported centre conflicts with the older slab estimate. The real section and wiring cavity remain unknown.',
     'Bathroom, utility, lobby and balcony levels and hall cross-beam soffit are not provided. Measure before coordination.'
   ],690,16,23,11);
   section(S,920,y+16,'COVE IS NOT THE CURTAIN POCKET');y+=48;

@@ -191,11 +191,10 @@ const scanText=(label,text)=>{for(const re of PRIVATE){const m=text.match(re);if
 await rm(outDir,{recursive:true,force:true});
 await mkdir(join(outDir,'downloads'),{recursive:true});
 
-const tag=masterSha.slice(0,8);
 const DOWNLOADS=[
-  ['layout-views','current-layout-views.pdf',`layout-views-review-draft-${tag}.pdf`,'Layout views: plan, ceiling plan, wall elevations','review draft, not construction released','layout-views-verification.json'],
-  ['working-plan','house-working-floorplan.pdf',`working-floor-plan-review-draft-${tag}.pdf`,'Working floor plan','review draft, not construction released','floorplan-verification.json'],
-  ['curtain-section','curtain-pocket-section-review.pdf',`curtain-pocket-section-review-${tag}.pdf`,'Curtain pocket section','schematic, unmeasured, not for fabrication','curtain-section-verification.json']
+  ['layout-views','current-layout-views.pdf','layout-views-review.pdf','Layout views: plan, ceiling plan, wall elevations','review draft, not construction released','layout-views-verification.json'],
+  ['working-plan','house-working-floorplan.pdf','floor-plan-review.pdf','Working floor plan','review draft, not construction released','floorplan-verification.json'],
+  ['curtain-section','curtain-pocket-section-review.pdf','curtain-pocket-review.pdf','Curtain pocket section','schematic, unmeasured, not for fabrication','curtain-section-verification.json']
 ];
 PLAN.downloads=[];
 if(drawings){
@@ -223,9 +222,9 @@ const wardrobePdf=await readFile(join(wardrobePackDir,'wardrobe-signoff-pack.pdf
 const wardrobePdfSha=createHash('sha256').update(wardrobePdf).digest('hex');
 if(wardrobeReceipt.outputs_sha256?.['wardrobe-signoff-pack.pdf']!==wardrobePdfSha||wardrobeReceipt.pdf_pages!==17)
   throw new Error('Wardrobe review PDF does not match the rollup receipt');
-const wardrobePdfName=`wardrobe-interiors-review-${tag}.pdf`;
+const wardrobePdfName='wardrobe-interiors-review.pdf';
 await writeFile(join(outDir,'downloads',wardrobePdfName),wardrobePdf);
-PLAN.downloads.push({href:`downloads/${wardrobePdfName}`,label:'Wardrobe and storage proposals',note:'current review pack; interiors originate from 2ce3fcb4; unmeasured, unapproved',bytes:wardrobePdf.length,sha256:wardrobePdfSha});
+PLAN.downloads.push({href:`downloads/${wardrobePdfName}`,label:'Wardrobe and storage proposals',note:'provisional interiors; unmeasured and unapproved',bytes:wardrobePdf.length,sha256:wardrobePdfSha});
 
 const PUBLIC=redact(PLAN);
 checkRedaction(PLAN,PUBLIC);
@@ -255,7 +254,7 @@ const info={
   masterSha256:masterSha,heatmapsSha256:heatSha,
   fixtures:nFix,circuits:nCirc,selectedCurtainStrips:4,effectiveReviewFixtures:108,effectiveReviewCircuits:51,
   fixedCctMapCanonicalJsonSha256:embeddedSha,currentFixedCctMapSha256:mapSha,baseFixedCctMapSha256:cctMap.baseMapSha,cctBins:PLAN.fixedCct.source.bins,
-  curtainPocketRecords:PLAN.curtainPockets.pockets.length,status:'LOCAL REVIEW - not published',
+  curtainPocketRecords:PLAN.curtainPockets.pockets.length,status:'DESIGN REVIEW ONLY - not for construction',
   wardrobeInteriorsSha256:wardrobeSha,wardrobeBasisMasterSha256:wardrobe.source_master_sha256,wardrobeStatus:wardrobe.status,
   wardrobeReferenceReceiptSha256:createHash('sha256').update(interiorReceiptBytes).digest('hex'),
   supplyCabinetReceiptSha256:createHash('sha256').update(supplyBytes).digest('hex'),
@@ -283,16 +282,16 @@ Open \`index.html\` (or the published page): choose a room, walk or orbit the fl
 on and off, and set LOW (cove / mood) and HIGH (main) brightness per room.
 Colour temperatures are fixed per fitting and are not adjustable.
 - Fixed CCT per base fitting from the integrated master: ${Object.entries(PLAN.fixedCct.source.bins).map(([k,n])=>`${n} x ${k} K`).join(', ')}. Brightness controls only.
-- Current lighting-review fixed-CCT map SHA-256 \`${mapSha}\`; its placement holds are retained separately from viewer on/off state.
+- The fixed-temperature schedule and placement holds are available in the linked handoff; brightness controls do not change colour temperature.
 - Four selected 2700 K curtain strips follow existing LOW controls. The review schedule has 108 fittings / 51 circuits including these additions; the frozen photometric baseline remains 104 / 47 with no curtain-strip lux credit. Pocket sizes are unmeasured and CURT-MBR-W03 remains held and unlit.
 - The children's fan is illustrated at the nominal room centre with a 1050 mm planning sweep (product not selected; airflow adequacy for this room unconfirmed). The intact cove (C39) and outward LINE (C40) are modelled ON with scheduled lumens in the review simulation; they remain site-held (H-CBR-CEIL) and are not installed, measured or approved. R05 band 3.048 m / centre approx. 3.277 m are homeowner-reported; slab height unmeasured.
 - Dimming is visual only; the lux maps are frozen generic-optics estimates and are not recomputed.
 - The four bedside readers and two PIR night lights are individual fitting previews, off by default; held readers cannot be enabled. The actual readers dim on the fitting and the night lights are PIR-operated, not extra wall dimmers.
 - The selected dressing and utility cabinets are unmeasured conditional illustrations (FH-ST-03 / FH-ST-12), not construction-ready. One living LOW supply is selected for review; product, protection and electrical design remain on hold.
-- Wardrobe interiors are provisional and unapproved; the viewer's open-cabinet illustration is not measured joinery. The current-bound wardrobe review PDF identifies the unchanged original interior-generation basis as 2ce3fcb4; measurement and sign-off remain open.
+- Wardrobe interiors are provisional and unapproved; the viewer's open-cabinet illustration is not measured joinery. Measurement and sign-off remain open.
 - Door leaves are hidden in the viewer; openings remain in the design. D01's leaf arrangement remains a site check. Assumed MBR-S and CBR pocket returns extend about 0.30 m beyond modeled room corners. The viewer clips them only for display; actual pocket ends remain unmeasured and held.
 - The linked review PDFs are in the adjacent \`downloads\` folder. When the viewer is opened from disk, a browser may open a PDF in a new tab; use the PDF viewer's Save button.
-- Bound to the integrated lighting master SHA-256 \`${masterSha}\`.
+- The [trade handoff](handoff/index.html) links the current plans, schedules, drawings and renders. Build provenance is retained in \`build-info.json\`.
 - Three.js 0.181.1 is bundled into \`index.html\`; its MIT notice is embedded and provided as \`THREE-LICENSE.txt\`. No CDN or network access is needed at runtime.
 `;
 scanText('README.md',readme);

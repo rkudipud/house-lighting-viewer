@@ -184,9 +184,11 @@ def main():
 <a href="../index.html">Earlier report and base heatmaps</a>
 <h1>Remaining-room sensitivity revision</h1>
 <p class="hold"><strong>EXPLORATORY, GENERIC, NOT MEASURED OR PRODUCT-SPECIFIC.
-All construction, product, procurement, fabrication and publication holds remain.</strong>
+All construction, product, procurement and fabrication holds remain.</strong>
 This revision supersedes only the earlier statement that small-room sensitivity was not run.
-It supplements rather than rewrites the historical report. No fixtures, canonical data or prior holds changed.</p>
+It supplements rather than rewrites the historical report. It predates the current children's-room design;
+use the <a href="../../lighting/current/heatmaps-summary.pdf">current review heatmaps</a> for CBR.
+No fixtures, canonical data or prior holds changed in this historical revision.</p>
 <p>Six rooms (UTL, DRS, LOB, TL1, TL2, BAL), nine cases each: 54 enclosure/case calculations.
 Pocket narrow/wide are <strong>identical-scene controls, not physical pocket sensitivity</strong>;
 actual pocket geometry response remains unknown. No-op scatter is not a confidence interval.</p>

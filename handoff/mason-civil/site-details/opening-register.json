@@ -1,6 +1,6 @@
 {
   "schema": "civil_opening_register/1",
-  "source_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "source_master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "scope": "model identification only; rounded to 0.01 m; no as-built dimensions",
   "storeys": [
     {

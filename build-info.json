@@ -16,34 +16,34 @@
     "4000": 62
   },
   "curtainPocketRecords": 5,
-  "status": "LOCAL REVIEW - not published",
+  "status": "DESIGN REVIEW ONLY - not for construction",
   "wardrobeInteriorsSha256": "0e6cafd94960eacb3ee1e38533f985adc31f57829c574506eeb5db73c281048d",
   "wardrobeBasisMasterSha256": "2ce3fcb43aeb5f8df98d426777e6ae30ae0f330c90c80e085ff73834f151b228",
   "wardrobeStatus": "provisional_design_not_homeowner_approved_or_fabrication_released",
   "wardrobeReferenceReceiptSha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
   "supplyCabinetReceiptSha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
-  "htmlSha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
-  "htmlBytes": 2614170,
-  "embeddedPlanDataSha256": "fea6208e9df6e8982ddf880f7e52ea1a0e1aefbb8366eb31c7e10449b96b9bec",
+  "htmlSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
+  "htmlBytes": 2613988,
+  "embeddedPlanDataSha256": "a75aeb46650e0ff46f0d29e94baf6e6e8cea2f8c3719928243feeb95036ee9cf",
   "embeddedHeatDataSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
   "downloads": [
     {
-      "href": "downloads/layout-views-review-draft-79ece2ae.pdf",
-      "bytes": 6849877,
-      "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0"
+      "href": "downloads/layout-views-review.pdf",
+      "bytes": 6837476,
+      "sha256": "caff47a10398897ac559ebd97e1992bb5a4c99a6e1ab12f4b0d2165da50fc3f3"
     },
     {
-      "href": "downloads/working-floor-plan-review-draft-79ece2ae.pdf",
+      "href": "downloads/floor-plan-review.pdf",
       "bytes": 864756,
       "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603"
     },
     {
-      "href": "downloads/curtain-pocket-section-review-79ece2ae.pdf",
+      "href": "downloads/curtain-pocket-review.pdf",
       "bytes": 71474,
       "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d"
     },
     {
-      "href": "downloads/wardrobe-interiors-review-79ece2ae.pdf",
+      "href": "downloads/wardrobe-interiors-review.pdf",
       "bytes": 245180,
       "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3"
     }

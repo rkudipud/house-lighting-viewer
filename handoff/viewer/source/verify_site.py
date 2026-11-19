@@ -484,20 +484,24 @@ def run_profile(p, name, ctx_args, crop_fn):
     ch = page.evaluate("walkthrough.getRoomLight('children')")
     cbr = page.evaluate("""()=>{const w=walkthrough,fx=w.PLAN.fixtures.zones.find(z=>z.id==='CBR').fixtures;
       return {high:fx.filter(f=>/^CBR-H[1-6]$/.test(f.id)).map(f=>({id:f.id,held:f.held,on:w.lighting.groupStates[f.circuit].on})),
-      other:fx.filter(f=>!/^CBR-H[1-6]$/.test(f.id)).map(f=>({id:f.id,held:f.held,on:w.lighting.groupStates[f.circuit].on,holdIds:f.placementHoldIds,holdReason:f.holdReason})),
+      other:fx.filter(f=>!/^CBR-H[1-6]$/.test(f.id)).map(f=>({id:f.id,held:f.held,on:w.lighting.groupStates[f.circuit].on,siteOn:f.siteHeldModelledOn,holdIds:f.placementHoldIds,holdReason:f.holdReason})),
       lowBudget:w.lighting.getLumenBudget('children'),
       lowCircuits:Object.fromEntries(['C39','C40'].map(id=>[id,{on:w.lighting.groupStates[id].on,fixtures:w.lighting.groupStates[id].fixtures.map(f=>({id:f.id,lm:f.lm,held:f.held}))}]))}}""")
-    check(name, "children's six HIGH fittings are switchable; other CBR fixtures remain held", not ch["held"] and ch["on"] and len(cbr["high"]) == 6 and all(not f["held"] and f["on"] for f in cbr["high"]) and all(f["held"] and not f["on"] for f in cbr["other"]), cbr)
+    check(name, "children's HIGH and site-held LOW are modelled on; other held fittings stay off",
+          not ch["held"] and ch["on"] and len(cbr["high"]) == 6
+          and all(not f["held"] and f["on"] for f in cbr["high"])
+          and all((not f["held"] and f["on"]) if f["siteOn"] else (f["held"] and not f["on"])
+                  for f in cbr["other"]), cbr)
     cbr_cove = next(f for f in cbr["other"] if f["id"] == "CBR-L1")
     cbr_line = [f for f in cbr["other"] if f["id"] in {"CBR-X1", "CBR-X2", "CBR-X3", "CBR-X4"}]
-    check(name, "CBR cove and LINE remain held only by their explicit ceiling coordination hold",
-          cbr_cove["held"] and not cbr_cove["on"] and cbr_cove["holdIds"] == ["H-CBR-CEIL"]
-          and len(cbr_line) == 4 and all(f["held"] and not f["on"] and f["holdIds"] == ["H-CBR-CEIL"] for f in cbr_line)
+    check(name, "CBR cove and LINE retain their site hold while contributing scheduled LOW lumens",
+          not cbr_cove["held"] and cbr_cove["on"] and cbr_cove["siteOn"] and cbr_cove["holdIds"] == ["H-CBR-CEIL"]
+          and len(cbr_line) == 4 and all(not f["held"] and f["on"] and f["siteOn"] and f["holdIds"] == ["H-CBR-CEIL"] for f in cbr_line)
           and cbr_cove["holdReason"].startswith("H-CBR-CEIL")
-          and cbr["lowCircuits"]["C39"]["on"] is False
-          and cbr["lowCircuits"]["C40"]["on"] is False
+          and cbr["lowCircuits"]["C39"]["on"] is True
+          and cbr["lowCircuits"]["C40"]["on"] is True
           and cbr["lowBudget"]["scheduled"]["low"] == 7698
-          and cbr["lowBudget"]["available"]["low"] == 0,
+          and cbr["lowBudget"]["available"]["low"] == 7698,
           {"cove": cbr_cove, "line": cbr_line, "lowCircuits": cbr["lowCircuits"], "lowBudget": cbr["lowBudget"]})
     set_range(page, "low-dim", 0)
     page.wait_for_timeout(900)
@@ -515,9 +519,9 @@ def run_profile(p, name, ctx_args, crop_fn):
           cbr_low < .001 and cbr_full > .01
           and page.evaluate("walkthrough.lighting.groupStates['X-CURT-CBR'].fixtures.every(f=>f.visualOnly&&f.lm===0)"),
           [cbr_low, cbr_full])
-    check(name, "held cove and shifted LINE have controllable visual-only previews without available lumen credit",
+    check(name, "site-held cove and shifted LINE dim visually and contribute 7,698 lm at full LOW",
           all(value < .01 for value in preview_off) and all(value > .1 for value in preview_on)
-          and page.evaluate("!walkthrough.lighting.groupStates.C39.on&&!walkthrough.lighting.groupStates.C40.on&&walkthrough.lighting.getLumenBudget('children').available.low===0"),
+          and page.evaluate("walkthrough.lighting.groupStates.C39.on&&walkthrough.lighting.groupStates.C40.on&&walkthrough.lighting.getLumenBudget('children').effective.low===7698"),
           {"off": preview_off, "on": preview_on})
     shot("lights-children-review")
 

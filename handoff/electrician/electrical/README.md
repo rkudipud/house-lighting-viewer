@@ -1,4 +1,4 @@
-> Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see repository-copy-receipt.json.
+> Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see `final-review-source-copy.json`.
 
 # Electrical and lighting-control review package
 
@@ -7,9 +7,8 @@ The homeowner's selected fixed CCT, S1 curtain strips, CBR H1-H6 review release
 and one-supply living LOW concept are included. Product, exact-chain, site,
 professional and construction releases remain open.
 
-**Bound master SHA-256:** `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac`.
-The newest master adds a provisional wardrobe-interior reference without
-changing lighting or geometry. No new wardrobe lighting is selected or costed.
+The current review includes the fixed-CCT selection and children's ceiling proposal.
+No new wardrobe lighting is selected or costed.
 
 ## Read first
 
@@ -27,23 +26,27 @@ changing lighting or geometry. No new wardrobe lighting is selected or costed.
   in the master and must be checked on site.
 * `schedules\` - circuit, fixture, CCT, switchboard, control, supply, drop,
   dimmer, curtain and location-linked BOM tables, plus `electrical-ledger.json`.
-* `sources\` - retained manufacturer documents; `source-evidence\` - decision
-  receipts and historical verification. `receipt.json` records the basis and
+* Official manufacturer links replace third-party PDFs in the public copy;
+  `source-evidence\` retains decision receipts and historical verification. `receipt.json` records the basis and
   holds; `validation.json` records artifact-consistency checks;
   `SHA256SUMS.txt` inventories every file except itself.
 
 All counts are per flat unless identified otherwise. The 108 fixtures / 51
 circuits include four unmeasured curtain strips totaling 8.88 m / 71.04 W;
 those strips receive no photometric credit. The historical 82/82 photometry
-result applies to its original verified input and was **not rerun on this
-master**.
+result applies to its original verified input. The children's room has a
+separate provisional generic-optics reanalysis; other rooms retain historical
+estimates. No result is a measured field value.
 
 P01 is one 480 W-class 24 V planning supply serving a modeled 181.52 W of
 living LOW strips; P03 is removed. HLG-480H-24 is only a reference. Actual
 strip/controller/repeater compatibility, 20 A versus controller-input
 protection, 480 W hatch fit, voltage drop and LT-4/LT-5 inrush remain held.
 P16/C39/C40, pocket dimensions, wet zones, local availability, warranty and
-all site/professional checks remain open. No current installed price is verified.
+all site/professional checks remain open. The 1050 mm fan at the nominal room
+centre is a planning choice, not a selected product or airflow approval. The
+CBR cove and LINE are ON in the design simulation, but their installation and
+operation remain held. No current installed price is verified.
 
 ## Provenance and regeneration
 
@@ -64,8 +67,8 @@ The builder accepts explicit `--house-root`, `--lighting-root`, `--fixed-root`,
 `--manufacturer-sources`, `--dimmer-sources`, `--master` and `--out` paths;
 its default paths refer to the current session environment. Preserve the
 master's previous snapshots, signed receipts and original lighting fragment
-when moving the build to another repository. The packaged `sources\` directory
-can be supplied for both manufacturer-source arguments. Rebinding after any
+when moving the build to another repository. The omitted third-party source PDFs
+must be obtained from their official publishers. Rebinding after any
 master change requires inspecting its receipt and changes, not merely replacing
 the hash.
 

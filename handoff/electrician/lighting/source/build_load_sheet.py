@@ -35,6 +35,7 @@ ROOM_NAMES = OrderedDict([
     ("BAL", "Balcony / arrival"),
 ])
 LOW_LAYERS = {"LOW", "PENDANT"}
+CBR_REVIEW_ON = {"CBR-L1", "CBR-X1", "CBR-X2", "CBR-X3", "CBR-X4"}
 # Homeowner-selected curtain-pocket strips (S1 extension): W per room, no photometric credit.
 CURTAIN_W = {"LIV": 19.60, "DIN": 19.60, "MBR": 19.44, "CBR": 12.40}
 
@@ -76,7 +77,8 @@ for rid, name in ROOM_NAMES.items():
     r["held_W"] = sum(f["W_nominal"] for f in fs if hold_ids.get(f["id"]))
     r["held_lm"] = sum(f["lm"] for f in fs if hold_ids.get(f["id"]))
     r["held_low_lm"] = sum(f["lm"] for f in fs if grp(f) == "LOW" and hold_ids.get(f["id"]))
-    r["available_low_lm"] = sum(f["lm"] for f in fs if grp(f) == "LOW" and not hold_ids.get(f["id"]))
+    r["available_low_lm"] = sum(f["lm"] for f in fs if grp(f) == "LOW"
+                                and (not hold_ids.get(f["id"]) or f["id"] in CBR_REVIEW_ON))
     r["W_all"] = r["W"] + r["curtain_W"]
     # Input power: 230 V fittings as rated, 24/48 V loads (incl. curtain strips) / PSU efficiency
     r["W_input"] = (r["W"] - r["W_lv"]) + (r["W_lv"] + r["curtain_W"]) / PSU_EFF
@@ -132,7 +134,7 @@ ASSUMPTIONS = [
     "Contractor rules (20 lm per sq ft; 1 W per 100 lm) are rough sanity checks, not a design method. The design uses efficient LEDs (about 85 lm/W average), so actual wattage is a little higher than lm/100 for the same lumens.",
     f"Areas are approximate lighting calculation zones, not verified net floor measurements. The working building multiplier assumes {STOREYS} storeys x {FLATS_PER_FLOOR} modelled 2BHK flat per floor = {FLATS} flat schedules; confirm the actual floor and flat count, floor variations and quantities on site. Common stair/lift lobby, terrace, exterior and parking lighting are excluded.",
     "Groups: HIGH is the main functional layer: 4000 K in the main rooms; the two lobby and two balcony HIGH fittings remain at 3000 K. LOW = coves/strips/mood including the dining pendant (2700 K). Task/accent/other = kitchen and study task, face, art, reading, pooja accent and PIR night lights.",
-    f"CBR-L1 (C39 cove; {next(f['lm'] for f in fx if f['id']=='CBR-L1'):,} lm) and CBR-X1..X4 (C40 LINE; {sum(f['lm'] for f in fx if f['id'] in ('CBR-X1','CBR-X2','CBR-X3','CBR-X4')):,} lm) are all explicitly held by H-CBR-CEIL pending ceiling/curtain-section evidence and fan selection. The children LOW schedule is {next(r['lm_LOW'] for r in rows if r['id']=='CBR'):,} lm, of which 0 lm is viewer-available until that hold is released; held watts and lumens remain included in connected-load planning.",
+    f"CBR-L1 (C39 cove; {next(f['lm'] for f in fx if f['id']=='CBR-L1'):,} lm) and CBR-X1..X4 (C40 LINE; {sum(f['lm'] for f in fx if f['id'] in ('CBR-X1','CBR-X2','CBR-X3','CBR-X4')):,} lm) are modelled ON in the design-review viewer. The children LOW schedule contributes {next(r['lm_LOW'] for r in rows if r['id']=='CBR'):,} lm in that provisional model; H-CBR-CEIL still holds physical installation and operation pending site and product checks.",
     "Selected curtain-pocket strips (LIV, DIN, MBR, CBR; 8.88 m, 71.04 W per flat) are included in electrical load, but have no separate lumen credit. Their lengths remain to be measured.",
     f"Planning assumptions, not manufacturer data: 24/48 V supply efficiency {int(PSU_EFF*100)}%, power factor {PF} for illustrative VA, inverter efficiency {int(INV_EFF*100)}%, usable battery {int(BATT_DOD*100)}%. An illustrative partial load assumes all LOW including curtain strips, 50% of HIGH wattage and 30% of other wattage, plus estimated standby; this is not measured or a promised dimming setting.",
     "The 12.6 W standby allowance is added on top of assumed operating supply losses as a conservative allowance, not a measured value. Linear dimming and aggregate power factor are assumptions; PIR lights are switched, not necessarily dimmable. Actual controls, battery chemistry, ageing, surge and derating affect sizing.",
@@ -163,9 +165,9 @@ def table(ws, r0, headers, data, fmts, total=None, widths=None):
 ws = wb.active; ws.title = "Per room"
 ws["A1"] = "Per-room lumens and lighting wattage - one modelled flat"; ws["A1"].font = Font(bold=True, size=13)
 hdr = ["Room", "Code", "Fittings", "Area m²", "Area sq ft", "Contractor target lm (20/sq ft)",
-       "HIGH lm", "LOW lm", "Task/accent lm", "Installed lm total", "Installed lm/sq ft", "% of contractor target", "HIGH-only % of target",
+       "HIGH lm", "LOW lm", "Task/accent lm", "Scheduled lm total", "Scheduled lm/sq ft", "% of contractor target", "HIGH-only % of target",
        "HIGH W", "LOW W", "Task/accent W", "LED W (base)", "Curtain-strip W", "LED W incl. curtain",
-       "Input W incl. supply loss", "Contractor W (target lm/100)", "Rule W (installed lm/100)", "Design lm/W"]
+       "Input W incl. supply loss", "Contractor W (target lm/100)", "Rule W (scheduled lm/100)", "Design lm/W"]
 keys = ["name", "id", "n", "m2", "sqft", "target_lm", "lm_HIGH", "lm_LOW", "lm_OTHER", "lm", "lm_per_sqft", "pct_target", "pct_high",
         "W_HIGH", "W_LOW", "W_OTHER", "W", "curtain_W", "W_all", "W_input", "rule_W_target", "rule_W_installed", "lm_per_W"]
 fm = [None, None, "0", "0.00", "0", "#,##0", "#,##0", "#,##0", "#,##0", "#,##0", "0.0", "0%", "0%", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0", "0", "0"]
@@ -184,9 +186,10 @@ r = table(ws2, r + 2, ["Battery guide (illustrative load)", "Per flat", f"Per fl
           [[k, a, b, c] for k, (a, b, c) in batt.items()], [None, None, None, None])
 
 ws3 = wb.create_sheet("Fittings")
-fh = ["Fitting", "Room", "Group", "Layer", "Description", "Supply", "Circuit", "CCT K", "W", "lm", "Hold IDs", "Viewer available"]
+fh = ["Fitting", "Room", "Group", "Layer", "Description", "Supply", "Circuit", "CCT K", "W", "lm", "Hold IDs", "Viewer model ON allowed"]
 fdata = [[f["id"], f["room"], grp(f), layer[f["id"]], f["desc"], f["supply"], f["circuit"], f["cct"], f["W_nominal"], f["lm"],
-          "; ".join(hold_ids.get(f["id"], [])), "No" if hold_ids.get(f["id"]) else "Yes"] for f in fx]
+          "; ".join(hold_ids.get(f["id"], [])), "Yes (site held)" if f["id"] in CBR_REVIEW_ON
+          else "No" if hold_ids.get(f["id"]) else "Yes"] for f in fx]
 table(ws3, 1, fh, fdata, [None] * 8 + ["0.00", "#,##0", None, None],
       [None, None, "TOTAL", None, None, None, None, None, T["W"], T["lm"], None, None],
       [10, 6, 8, 9, 60, 8, 8, 7, 8, 8, 22, 16])
@@ -216,7 +219,7 @@ def f1(v): return f"{v:,.1f}"
 story = [Paragraph("Lighting load and lumen schedule - per room, per flat, per floor, whole building", ss["Title"]),
          Paragraph(f"Working assumption: {STOREYS} storeys x {FLATS_PER_FLOOR} modelled flat per floor = {FLATS} flats; confirm floor and flat count and variations on site. Lighting only. Master SHA-256 {sha[:16]}...; 104 fittings + 4 provisional curtain strips per flat.", small),
          Spacer(1, 4 * mm),
-         Paragraph("1. Per room (one flat): area, contractor target, installed lumens and watts", ss["Heading3"])]
+         Paragraph("1. Per room (one flat): area, contractor target, scheduled lumens and watts", ss["Heading3"])]
 h1 = ["Room", "Fit-\ntings", "Area\nm²", "Area\nsq ft", "Target lm\n20/sq ft", "HIGH\nlm", "LOW\nlm", "Task/acc.\nlm", "Total\nlm", "lm /\nsq ft",
       "% of\ntarget", "HIGH\nonly %", "HIGH\nW", "LOW\nW", "Task/acc.\nW", "LED W\nbase", "Curtain\nW", "Input W\n(incl. loss)", "Contractor\nW (lm/100)"]
 def prow(r):
@@ -239,7 +242,9 @@ story += [t2, Spacer(1, 4 * mm), Paragraph("3. Assumptions and limits", ss["Head
 story += [Paragraph(f"{i}. {a}", small) for i, a in enumerate(ASSUMPTIONS, 1)]
 doc.build(story)
 
-summary = dict(master_sha256=sha, fittings=104, per_flat=dict(target_lm=round(T["target_lm"]), installed_lm=T["lm"],
+summary = dict(master_sha256=sha, generator_sha256=hashlib.sha256(open(__file__, "rb").read()).hexdigest(),
+               outputs={os.path.basename(p): hashlib.sha256(open(p, "rb").read()).hexdigest() for p in (xlsx, pdf)},
+               fittings=104, per_flat=dict(target_lm=round(T["target_lm"]), installed_lm=T["lm"],
                lm_HIGH=T["lm_HIGH"], lm_LOW=T["lm_LOW"], lm_OTHER=T["lm_OTHER"], W_base=round(T["W"], 1), W_curtain=round(T["curtain_W"], 1),
                W_input=round(T["W_input"], 1), standby_W=standby, planning_W=round(flat_input, 1), contractor_W=round(T["rule_W_target"]),
                typical_W=round(typical_in, 1), area_sqft=round(T["sqft"])),

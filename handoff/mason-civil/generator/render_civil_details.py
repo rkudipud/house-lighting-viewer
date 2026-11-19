@@ -145,6 +145,10 @@ check("site-selected strips and W03 exclusion represented",
       all(k in rows[0]["visible_text"] for k in ["CURT-LIV", "CURT-DIN", "CURT-MBR-S", "CURT-CBR", "CURT-MBR-W03", "held and excluded"]))
 check("return clash is identified without construction set-out",
       all(k in rows[0]["visible_text"] for k in ["0.30 m", "model clash", "not a site measurement"]))
+check("R05 reported heights and unresolved slab are explicit",
+      all(k in rows[0]["visible_text"] for k in ["R05 only", "3.048 m", "3.277 m",
+                                                  "homeowner-reported", "R05 slab unmeasured",
+                                                  "conflicts with the older slab estimate"]))
 check("pooja choice and structural holds represented",
       all(k in rows[2]["visible_text"] for k in ["small idols", "framed picture", "not independently verified", "No niche deepening"]))
 check("CBR accepted layout and site pinch represented",

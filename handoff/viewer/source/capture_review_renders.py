@@ -28,7 +28,7 @@ captures = [
         "room": "living",
         "mode": "doll",
         "interiors": False,
-        "pose": "walkthrough.setMode('doll');walkthrough.setOrbit(.22,1.12,19)",
+        "pose": "walkthrough.setMode('doll');walkthrough.setOrbit(.22,1.12,17)",
         "caption": "WHOLE FLAT / ROOF-OFF  |  REVIEW DRAFT - SITE MEASUREMENTS AND PROFESSIONAL APPROVALS REQUIRED",
     },
     {
@@ -63,6 +63,7 @@ with sync_playwright() as p:
     page.wait_for_function("window.walkthrough?.ready", timeout=180000)
     if page.evaluate("walkthrough.PLAN.master.sha256") != args.master:
         raise ValueError("Running viewer does not contain the expected master")
+    page.add_style_tag(content="#desk, #restore, #place, #mini-panel, #status, #hint, #dpad, #inspector { visibility: hidden !important; }")
     page.evaluate("walkthrough.setAllRooms(true)")
     for spec in captures:
         page.evaluate("(room)=>walkthrough.selectRoom(room)", spec["room"])
@@ -70,6 +71,7 @@ with sync_playwright() as p:
         if "light" in spec:
             page.evaluate("([room,levels])=>walkthrough.setRoomLight(room,levels)", [spec["room"], spec["light"]])
         page.evaluate(spec["pose"])
+        page.evaluate("walkthrough.model.markers.visible=false;walkthrough.model.labels.visible=false")
         page.wait_for_timeout(2500)
         state = page.evaluate("walkthrough.getState()")
         if state["mode"] != spec["mode"] or state["selectedRoom"] != spec["room"] or state["interiors"] != spec["interiors"]:

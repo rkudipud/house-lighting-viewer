@@ -1,236 +1,537 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="755" height="905" viewBox="0 0 755 905">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<text x="40.0" y="26.0" font-family="Arial, Helvetica, sans-serif" font-size="15" text-anchor="start" font-weight="bold" fill="#20343b">Fixed-white controls: boards, supply hatches and curtain-pocket strips (one flat)</text>
-<text x="40.0" y="46.0" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="start" font-weight="normal" fill="#637275">Sheet south-up as the house drawings; true north points to the sheet bottom. Not to scale for construction.</text>
-<polygon points="73.8,449.5 284.5,449.5 284.5,634.0 236.5,634.0 236.5,718.8 73.8,718.8" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="198.2" y="600.8" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">LIV</text>
-<polygon points="73.8,299.5 284.5,299.5 284.5,449.5 73.8,449.5" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="179.1" y="374.5" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">DIN</text>
-<polygon points="73.8,148.0 284.5,148.0 284.5,299.5 73.8,299.5" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="179.1" y="223.8" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">KIT</text>
-<polygon points="68.1,81.2 283.8,81.2 283.8,141.9 68.1,141.9" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="176.0" y="111.5" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">UTL</text>
-<polygon points="291.2,81.1 478.8,81.1 478.8,311.7 291.2,311.7" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="385.0" y="196.4" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">MBR</text>
-<polygon points="289.0,311.5 343.0,311.5 343.0,406.0 289.0,406.0" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="316.0" y="358.8" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">DRS</text>
-<polygon points="347.5,317.4 478.8,317.4 478.8,399.9 347.5,399.9" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="413.1" y="358.6" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">TL1</text>
-<polygon points="289.0,406.0 343.0,406.0 343.0,488.5 289.0,488.5" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="316.0" y="447.2" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">LOB</text>
-<polygon points="347.5,405.4 478.8,405.4 478.8,487.9 347.5,487.9" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="413.1" y="446.7" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">TL2</text>
-<polygon points="291.2,493.8 478.8,493.8 478.8,718.8 335.5,718.8 335.5,632.7 291.2,632.7" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="368.5" y="615.1" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">CBR</text>
-<polygon points="51.2,730.0 209.5,730.0 209.5,850.0 51.2,850.0" fill="#f4f6f6" stroke="#9aa7a9" stroke-width="1"/>
-<text x="130.4" y="790.0" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="middle" font-weight="bold" fill="#9aa7a9">BAL</text>
-<line x1="155.7" y1="724.5" x2="209.8" y2="724.5" stroke="#b08a5a" stroke-width="3"/>
-<line x1="286.1" y1="266.8" x2="286.1" y2="311.1" stroke="#b08a5a" stroke-width="3"/>
-<line x1="288.5" y1="490.8" x2="330.4" y2="490.8" stroke="#b08a5a" stroke-width="3"/>
-<line x1="345.1" y1="357.9" x2="345.1" y2="397.3" stroke="#b08a5a" stroke-width="3"/>
-<line x1="345.1" y1="446.5" x2="345.1" y2="483.4" stroke="#b08a5a" stroke-width="3"/>
-<line x1="209.8" y1="143.8" x2="254.1" y2="143.8" stroke="#b08a5a" stroke-width="3"/>
-<line x1="69.5" y1="237.3" x2="69.5" y2="296.4" stroke="#4f8fbf" stroke-width="3"/>
-<line x1="111.4" y1="143.8" x2="170.4" y2="143.8" stroke="#4f8fbf" stroke-width="3"/>
-<line x1="362.5" y1="75.5" x2="407.5" y2="75.5" stroke="#4f8fbf" stroke-width="3"/>
-<line x1="482.9" y1="222.6" x2="482.9" y2="311.1" stroke="#4f8fbf" stroke-width="3"/>
-<line x1="482.9" y1="628.6" x2="482.9" y2="719.6" stroke="#4f8fbf" stroke-width="3"/>
-<line x1="67.1" y1="520.3" x2="67.1" y2="611.3" stroke="#4f8fbf" stroke-width="3"/>
-<line x1="67.1" y1="355.4" x2="67.1" y2="446.5" stroke="#4f8fbf" stroke-width="3"/>
-<line x1="482.9" y1="338.2" x2="482.9" y2="385.0" stroke="#b08a5a" stroke-width="3"/>
-<line x1="482.9" y1="421.9" x2="482.9" y2="466.2" stroke="#b08a5a" stroke-width="3"/>
-<line x1="128.6" y1="724.5" x2="155.7" y2="724.5" stroke="#b08a5a" stroke-width="3"/>
-<line x1="209.8" y1="724.5" x2="236.8" y2="724.5" stroke="#b08a5a" stroke-width="3"/>
-<circle cx="97.8" cy="479.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="97.8" cy="551.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="97.8" cy="625.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="97.8" cy="697.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="155.5" cy="697.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="214.0" cy="697.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="214.0" cy="614.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="259.0" cy="475.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="259.0" cy="532.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="259.0" cy="589.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="239.5,449.5 239.5,581.5 239.0,585.4 237.5,589.0 235.1,592.1 232.0,594.5 228.4,596.0 224.5,596.5 205.8,596.5 202.8,596.9 200.1,598.0 197.8,599.8 196.0,602.1 194.9,604.8 194.5,607.8 194.5,665.5 194.0,669.4 192.5,673.0 190.1,676.1 187.0,678.5 183.4,680.0 179.5,680.5 124.8,680.5 120.9,680.0 117.2,678.5 114.1,676.1 111.8,673.0 110.3,669.4 109.8,665.5 109.8,449.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="282.2,520.0 282.2,602.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="182.5,665.5 124.0,665.5 124.0,557.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="227.5,484.0 227.5,449.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="72.2,631.8 72.2,672.2" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="100.0" cy="652.0" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="97.8" cy="407.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="143.5" cy="334.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="200.5" cy="334.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="259.0" cy="424.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="155.5" cy="395.5" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="109.8,449.5 109.8,370.0 110.3,366.1 111.8,362.5 114.1,359.4 117.2,357.0 120.9,355.5 124.8,355.0 224.5,355.0 228.4,355.5 232.0,357.0 235.1,359.4 237.5,362.5 239.0,366.1 239.5,370.0 239.5,449.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="227.5,449.5 227.5,364.8 146.5,364.8" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="252.0" cy="334.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="252.0" cy="356.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="252.0" cy="379.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="252.0" cy="385.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="100.0" cy="229.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="83.5" cy="268.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="133.0" cy="178.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="184.0" cy="178.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="130.0" cy="200.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="206.5" cy="200.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="86.5" cy="292.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="206.5" cy="293.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="82.8,154.0 82.8,236.5" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="79.0,156.7 110.5,156.7" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="173.5,156.7 199.0,156.7" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="115.0,198.2 115.4,194.9 116.7,191.9 118.7,189.2 121.4,187.2 124.5,185.9 127.8,185.5 210.2,185.5 213.6,185.9 216.6,187.2 219.3,189.2 221.3,191.9 222.6,194.9 223.0,198.2 223.0,292.8 222.6,296.1 221.3,299.1 219.3,301.8 216.6,303.8 213.6,305.1 210.2,305.5 127.8,305.5 124.5,305.1 121.4,303.8 118.7,301.8 116.7,299.1 115.4,296.1 115.0,292.8 115.0,198.2" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="98.5,238.0 98.5,295.0" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="109.0" cy="112.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="187.0" cy="121.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="244.0" cy="121.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="256.8,85.0 256.8,139.0" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="312.2" cy="145.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="370.8" cy="145.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="429.2" cy="145.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="312.2" cy="199.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="429.2" cy="199.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="312.2" cy="253.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="370.8" cy="253.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="429.2" cy="253.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="326.9,167.5 327.2,165.2 328.2,163.0 329.6,161.1 331.4,159.7 333.6,158.8 335.9,158.5 405.6,158.5 407.9,158.8 410.1,159.7 411.9,161.1 413.4,163.0 414.2,165.2 414.5,167.5 414.5,230.5 414.2,232.8 413.4,235.0 411.9,236.9 410.1,238.3 407.9,239.2 405.6,239.5 335.9,239.5 333.6,239.2 331.4,238.3 329.6,236.9 328.2,235.0 327.2,232.8 326.9,230.5 326.9,167.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="476.5,138.9 476.5,201.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="370.8,153.2 419.8,153.2 419.8,199.0" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="321.7,199.0 321.7,244.8 370.8,244.8" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="473.8" cy="130.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="473.8" cy="189.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="325.0" cy="310.0" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="328.0" cy="337.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="328.0" cy="383.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="356.1" cy="339.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="373.4" cy="339.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="452.5" cy="342.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="452.5" cy="374.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="403.0" cy="352.8" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="350.5,320.4 475.8,320.4 475.8,396.9 350.5,396.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="477.3,345.7 477.3,382.6" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="351.2,337.1 378.3,337.1" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="349.2" cy="319.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="380.3" cy="319.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="316.0" cy="430.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="316.0" cy="469.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="316.0" cy="407.5" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="342.2" cy="445.0" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="356.1" cy="427.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="373.4" cy="427.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="452.5" cy="430.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="452.5" cy="462.0" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="403.0" cy="440.9" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="350.5,408.4 475.8,408.4 475.8,484.9 350.5,484.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="477.3,433.7 477.3,470.6" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="351.2,425.1 378.3,425.1" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="349.2" cy="407.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="380.3" cy="407.6" r="3.4" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="318.3" cy="557.8" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="377.4" cy="557.8" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="318.3" cy="611.9" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="374.9" cy="668.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="418.8" cy="685.0" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="438.9" cy="557.8" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="357.5,577.4 441.5,577.4 441.5,646.4 357.5,646.4 357.5,577.4" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="387.5,570.7 350.8,570.7 350.8,600.0" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="411.5,570.7 448.2,570.7 448.2,600.0" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="448.2,623.9 448.2,653.2 411.5,653.2" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="387.5,653.2 350.8,653.2 350.8,623.9" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<polyline points="347.8,661.2 347.8,717.3" fill="none" stroke="#5aa9e6" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="473.8" cy="572.6" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="473.8" cy="634.1" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="92.5" cy="767.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="170.5" cy="767.5" r="3.4" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<polyline points="58.0,842.5 202.0,842.5" fill="none" stroke="#e39a2d" stroke-width="2.2" stroke-opacity="0.9"/>
-<circle cx="145.0" cy="730.8" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
-<circle cx="196.0" cy="730.8" r="3.4" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
-<line x1="79.9" y1="505.5" x2="79.9" y2="626.1" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
-<text x="93.9" y="565.8" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="start" font-weight="bold" fill="#a35a00">CURT-LIV 2.45 m</text>
-<line x1="79.9" y1="340.7" x2="79.9" y2="461.3" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
-<text x="93.9" y="401.0" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="start" font-weight="bold" fill="#a35a00">CURT-DIN 2.45 m</text>
-<line x1="472.6" y1="206.9" x2="472.6" y2="326.3" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
-<text x="458.6" y="266.6" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="end" font-weight="bold" fill="#a35a00">CURT-MBR-S 2.43 m</text>
-<line x1="472.6" y1="657.2" x2="472.6" y2="733.6" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3" stroke-linecap="round"/>
-<text x="458.6" y="695.4" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="end" font-weight="bold" fill="#a35a00">CURT-CBR 1.55 m</text>
-<line x1="347.8" y1="87.4" x2="422.2" y2="87.4" stroke="#9aa7a9" stroke-width="5" stroke-dasharray="4,4" stroke-linecap="round"/>
-<text x="385.0" y="103.4" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#9aa7a9">CURT-MBR-W03 held</text>
-<rect x="226.8" y="695.5" width="9" height="9" fill="#20343b"/>
-<text x="238.2" y="694.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-01</text>
-<rect x="274.8" y="396.2" width="9" height="9" fill="#20343b"/>
-<text x="286.2" y="394.8" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-02</text>
-<rect x="274.8" y="221.5" width="9" height="9" fill="#20343b"/>
-<text x="286.2" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-03</text>
-<rect x="263.5" y="149.5" width="9" height="9" fill="#20343b"/>
-<text x="275.0" y="148.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-04</text>
-<rect x="298.8" y="250.0" width="9" height="9" fill="#20343b"/>
-<text x="310.2" y="248.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-05</text>
-<rect x="474.2" y="115.6" width="9" height="9" fill="#20343b"/>
-<text x="485.8" y="114.1" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-05L</text>
-<rect x="474.2" y="194.4" width="9" height="9" fill="#20343b"/>
-<text x="485.8" y="192.9" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-05R</text>
-<rect x="333.2" y="341.5" width="9" height="9" fill="#20343b"/>
-<text x="344.8" y="340.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-06</text>
-<rect x="329.5" y="394.0" width="9" height="9" fill="#20343b"/>
-<text x="341.0" y="392.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-06B</text>
-<rect x="333.2" y="428.5" width="9" height="9" fill="#20343b"/>
-<text x="344.8" y="427.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-07</text>
-<rect x="333.2" y="484.8" width="9" height="9" fill="#20343b"/>
-<text x="344.8" y="483.2" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-07B</text>
-<rect x="356.8" y="489.3" width="9" height="9" fill="#20343b"/>
-<text x="368.3" y="507.8" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-08</text>
-<rect x="474.2" y="543.5" width="9" height="9" fill="#20343b"/>
-<text x="485.8" y="542.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-08RL</text>
-<rect x="474.2" y="660.1" width="9" height="9" fill="#20343b"/>
-<text x="485.8" y="658.6" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="start" font-weight="bold" fill="#20343b">SB-08RR</text>
-<polygon points="106.0,688.0 112.0,694.0 106.0,700.0 100.0,694.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="98.0" y="697.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P04 60W</text>
-<polygon points="224.5,709.0 230.5,715.0 224.5,721.0 218.5,715.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="216.5" y="718.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P05 100W</text>
-<polygon points="259.0,401.5 265.0,407.5 259.0,413.5 253.0,407.5" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="251.0" y="410.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P06 30W</text>
-<polygon points="224.5,421.0 230.5,427.0 224.5,433.0 218.5,427.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="216.5" y="430.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P07 150W*</text>
-<polygon points="242.5,244.0 248.5,250.0 242.5,256.0 236.5,250.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="234.5" y="253.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P08 150W</text>
-<polygon points="242.5,229.0 248.5,235.0 242.5,241.0 236.5,235.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="234.5" y="238.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P10 60W</text>
-<polygon points="268.0,130.0 274.0,136.0 268.0,142.0 262.0,136.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="260.0" y="139.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P11 30W</text>
-<polygon points="304.0,280.0 310.0,286.0 304.0,292.0 298.0,286.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="296.0" y="289.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P12 240W*</text>
-<polygon points="333.2,358.0 339.2,364.0 333.2,370.0 327.2,364.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="325.2" y="367.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P14 200W</text>
-<polygon points="323.5,448.0 329.5,454.0 323.5,460.0 317.5,454.0" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="315.5" y="457.0" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P15 240W</text>
-<polygon points="310.9,571.5 316.9,577.5 310.9,583.5 304.9,577.5" fill="#ffffff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="302.9" y="580.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="end" font-weight="bold" fill="#7a3fa0">P16 240W</text>
-<line x1="535.0" y1="760.0" x2="535.0" y2="800.0" stroke="#20343b" stroke-width="2"/>
-<polygon points="529.0,794.0 541.0,794.0 535.0,806.0" fill="#20343b"/>
-<text x="535.0" y="820.0" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#20343b">N</text>
-<circle cx="531.0" cy="80.0" r="5" fill="#e39a2d" stroke="#20343b" stroke-width="0.5"/>
-<text x="551.0" y="84.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">2700 K (coves, lines,</text>
-<text x="551.0" y="96.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">mood, pooja)</text>
-<circle cx="531.0" cy="114.0" r="5" fill="#f2c94c" stroke="#20343b" stroke-width="0.5"/>
-<text x="551.0" y="118.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">3000 K (main</text>
-<text x="551.0" y="130.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">living/bedroom)</text>
-<circle cx="531.0" cy="148.0" r="5" fill="#5aa9e6" stroke="#20343b" stroke-width="0.5"/>
-<text x="551.0" y="152.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">4000 K (kitchen, baths,</text>
-<text x="551.0" y="164.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">task)</text>
-<line x1="525.0" y1="182.0" x2="543.0" y2="182.0" stroke="#c96f00" stroke-width="5" stroke-dasharray="9,3"/>
-<text x="551.0" y="186.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">curtain-pocket strip, 2700</text>
-<text x="551.0" y="198.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">K, room LOW knob</text>
-<line x1="525.0" y1="216.0" x2="543.0" y2="216.0" stroke="#9aa7a9" stroke-width="5" stroke-dasharray="4,4"/>
-<text x="551.0" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">MBR W03 pocket: held</text>
-<rect x="527.0" y="245.5" width="9" height="9" fill="#20343b"/>
-<text x="551.0" y="254.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">switch board (SB-xx)</text>
-<polygon points="532.0,278.0 538.0,284.0 532.0,290.0 526.0,284.0" fill="#fff" stroke="#7a3fa0" stroke-width="1.6"/>
-<text x="551.0" y="288.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">24 V supply in hatch (* =</text>
-<text x="551.0" y="300.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">upsized for curtain strip)</text>
-<line x1="525.0" y1="318.0" x2="543.0" y2="318.0" stroke="#4f8fbf" stroke-width="3"/>
-<text x="551.0" y="322.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">window</text>
-<line x1="525.0" y1="352.0" x2="543.0" y2="352.0" stroke="#b08a5a" stroke-width="3"/>
-<text x="551.0" y="356.0" font-family="Arial, Helvetica, sans-serif" font-size="9.5" text-anchor="start" font-weight="normal" fill="#20343b">door</text>
-<text x="525" y="390" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#7a3fa0">P01 480 W class: hatch</text>
-<text x="525" y="403" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#7a3fa0">location and fit unverified</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1030" viewBox="0 0 900 1030" data-min-x="-0.25" data-min-z="-0.2631" data-scale="14.83203193205052">
+<rect width="900" height="1030" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#20343b">
+<text x="40" y="33" font-size="21" font-weight="bold">Lighting and controls: conceptual layout</text>
+<text x="40" y="58" font-size="13" fill="#a13620">REVIEW ONLY - NOT FOR WIRING OR CONSTRUCTION</text>
+<text x="40" y="80" font-size="12">Approximate lighting zones, not surveyed walls. Lines are fittings, not cable routes.</text>
+<polygon points="77.08,494.15 285.47,494.15 285.47,676.59 238.01,676.59 238.01,760.39 77.08,760.39" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="200.19" y="643.71" text-anchor="middle" font-size="12" fill="#617878">LIV</text>
+<polygon points="77.08,345.83 285.47,345.83 285.47,494.15 77.08,494.15" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="181.28" y="419.99" text-anchor="middle" font-size="12" fill="#617878">DIN</text>
+<polygon points="77.08,196.03 285.47,196.03 285.47,345.83 77.08,345.83" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="181.28" y="270.93" text-anchor="middle" font-size="12" fill="#617878">KIT</text>
+<polygon points="71.46,129.98 284.82,129.98 284.82,189.98 71.46,189.98" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="178.14" y="159.98" text-anchor="middle" font-size="12" fill="#617878">UTL</text>
+<polygon points="292.14,129.83 477.54,129.83 477.54,357.87 292.14,357.87" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="384.84" y="243.85" text-anchor="middle" font-size="12" fill="#617878">MBR</text>
+<polygon points="289.92,357.70 343.32,357.70 343.32,451.14 289.92,451.14" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="316.62" y="404.42" text-anchor="middle" font-size="12" fill="#617878">DRS</text>
+<polygon points="347.76,363.51 477.54,363.51 477.54,445.09 347.76,445.09" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="412.65" y="404.30" text-anchor="middle" font-size="12" fill="#617878">TL1</text>
+<polygon points="289.92,451.14 343.32,451.14 343.32,532.72 289.92,532.72" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="316.62" y="491.93" text-anchor="middle" font-size="12" fill="#617878">LOB</text>
+<polygon points="347.76,450.58 477.54,450.58 477.54,532.15 347.76,532.15" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="412.65" y="491.36" text-anchor="middle" font-size="12" fill="#617878">TL2</text>
+<polygon points="292.14,537.99 477.54,537.99 477.54,760.47 335.94,760.47 335.94,675.31 292.14,675.31" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="368.54" y="657.93" text-anchor="middle" font-size="12" fill="#617878">CBR</text>
+<polygon points="54.83,771.51 211.31,771.51 211.31,890.17 54.83,890.17" fill="#f3f6f5" stroke="#9aaead" stroke-width="1"/>
+<text x="133.07" y="830.84" text-anchor="middle" font-size="12" fill="#617878">BAL</text>
+<g data-fixture-id="LIV-H1" data-circuit="C01" data-cct-k="4000">
+<g data-marker="1" transform="translate(100.81 523.82)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H2" data-circuit="C01" data-cct-k="4000">
+<g data-marker="1" transform="translate(100.81 595.01)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H3" data-circuit="C01" data-cct-k="4000">
+<g data-marker="1" transform="translate(100.81 667.69)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H4" data-circuit="C01" data-cct-k="4000">
+<g data-marker="1" transform="translate(100.81 738.88)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H5" data-circuit="C01" data-cct-k="4000">
+<g data-marker="1" transform="translate(157.91 738.88)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H6" data-circuit="C02" data-cct-k="4000">
+<g data-marker="1" transform="translate(215.76 738.88)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H7" data-circuit="C02" data-cct-k="4000">
+<g data-marker="1" transform="translate(215.76 657.31)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H8" data-circuit="C02" data-cct-k="4000">
+<g data-marker="1" transform="translate(260.26 519.37)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H9" data-circuit="C02" data-cct-k="4000">
+<g data-marker="1" transform="translate(260.26 575.73)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-H10" data-circuit="C02" data-cct-k="4000">
+<g data-marker="1" transform="translate(260.26 632.09)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-L1" data-circuit="C03" data-cct-k="2700">
+<polyline points="240.97,494.15 240.97,624.67 240.47,628.52 238.99,632.09 236.63,635.16 233.56,637.52 229.98,639.00 226.14,639.51 207.60,639.51 204.72,639.89 202.04,640.99 199.74,642.77 197.96,645.07 196.86,647.75 196.48,650.63 196.48,707.73 195.97,711.58 194.49,715.15 192.13,718.22 189.06,720.58 185.49,722.06 181.65,722.57 127.51,722.57 123.67,722.06 120.09,720.58 117.02,718.22 114.66,715.15 113.18,711.58 112.68,707.73 112.68,494.15" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(196.48 707.73)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-L2" data-circuit="C04" data-cct-k="2700">
+<polyline points="283.25,563.86 283.25,645.44" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(283.25 645.44)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-X1" data-circuit="C05" data-cct-k="2700">
+<polyline points="184.61,707.73 126.77,707.73 126.77,600.94" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(126.77 707.73)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-X2" data-circuit="C05" data-cct-k="2700">
+<polyline points="229.11,528.27 229.11,494.15" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(229.11 494.15)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-P1" data-circuit="C06A" data-cct-k="2700">
+<polyline points="75.60,674.36 75.60,714.41" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(75.60 714.41)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LIV-P2" data-circuit="C06B" data-cct-k="2700">
+<g data-marker="1" transform="translate(103.04 694.39)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DIN-H1" data-circuit="C09" data-cct-k="4000">
+<g data-marker="1" transform="translate(100.81 452.62)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DIN-H2" data-circuit="C09" data-cct-k="4000">
+<g data-marker="1" transform="translate(146.05 379.95)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DIN-H3" data-circuit="C09" data-cct-k="4000">
+<g data-marker="1" transform="translate(202.41 379.95)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DIN-H6" data-circuit="C10" data-cct-k="4000">
+<g data-marker="1" transform="translate(260.26 468.94)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DIN-L1" data-circuit="C11" data-cct-k="2700">
+<g data-marker="1" transform="translate(157.91 440.76)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DIN-L2" data-circuit="C12" data-cct-k="2700">
+<polyline points="112.68,494.15 112.68,415.54 113.18,411.70 114.66,408.13 117.02,405.06 120.09,402.70 123.67,401.22 127.51,400.71 226.14,400.71 229.98,401.22 233.56,402.70 236.63,405.06 238.99,408.13 240.47,411.70 240.97,415.54 240.97,494.15" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(226.14 400.71)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DIN-X1" data-circuit="C05" data-cct-k="2700">
+<polyline points="229.11,494.15 229.11,410.35 149.02,410.35" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(229.11 410.35)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="FW-T1" data-circuit="C13" data-cct-k="3000">
+<g data-marker="1" transform="translate(253.28 379.95)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="FW-T2" data-circuit="C13" data-cct-k="3000">
+<g data-marker="1" transform="translate(253.28 402.19)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="FW-T3" data-circuit="C13" data-cct-k="3000">
+<g data-marker="1" transform="translate(253.28 424.44)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="FW-T4" data-circuit="C13" data-cct-k="3000">
+<g data-marker="1" transform="translate(253.28 430.37)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H1" data-circuit="C14" data-cct-k="4000">
+<g data-marker="1" transform="translate(103.04 276.12)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H2" data-circuit="C14" data-cct-k="4000">
+<g data-marker="1" transform="translate(86.72 314.69)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H3" data-circuit="C14" data-cct-k="4000">
+<g data-marker="1" transform="translate(135.67 225.69)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H4" data-circuit="C14" data-cct-k="4000">
+<g data-marker="1" transform="translate(186.10 225.69)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H5" data-circuit="C15" data-cct-k="4000">
+<g data-marker="1" transform="translate(132.70 247.94)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H6" data-circuit="C15" data-cct-k="4000">
+<g data-marker="1" transform="translate(208.34 247.94)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H7" data-circuit="C15" data-cct-k="4000">
+<g data-marker="1" transform="translate(89.69 338.42)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-H8" data-circuit="C15" data-cct-k="4000">
+<g data-marker="1" transform="translate(208.34 339.90)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-T1" data-circuit="C16" data-cct-k="4000">
+<polyline points="85.98,201.96 85.98,283.54" fill="none" stroke="#005c9c" stroke-width="3"/>
+<g data-marker="1" transform="translate(85.98 283.54)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-T2" data-circuit="C16" data-cct-k="4000">
+<polyline points="82.27,204.63 113.42,204.63" fill="none" stroke="#005c9c" stroke-width="3"/>
+<g data-marker="1" transform="translate(113.42 204.63)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-T3" data-circuit="C16" data-cct-k="4000">
+<polyline points="175.71,204.63 200.93,204.63" fill="none" stroke="#005c9c" stroke-width="3"/>
+<g data-marker="1" transform="translate(200.93 204.63)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-L1" data-circuit="C17" data-cct-k="2700">
+<polyline points="117.87,245.72 118.30,242.45 119.56,239.41 121.56,236.80 124.17,234.80 127.21,233.54 130.48,233.11 212.05,233.11 215.31,233.54 218.36,234.80 220.97,236.80 222.97,239.41 224.23,242.45 224.66,245.72 224.66,339.16 224.23,342.42 222.97,345.46 220.97,348.07 218.36,350.07 215.31,351.34 212.05,351.77 130.48,351.77 127.21,351.34 124.17,350.07 121.56,348.07 119.56,345.46 118.30,342.42 117.87,339.16 117.87,245.72" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(224.66 339.16)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="KIT-T4" data-circuit="C16" data-cct-k="4000">
+<polyline points="101.55,285.02 101.55,341.38" fill="none" stroke="#005c9c" stroke-width="3"/>
+<g data-marker="1" transform="translate(101.55 341.38)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="UTL-H1" data-circuit="C18" data-cct-k="4000">
+<g data-marker="1" transform="translate(111.94 160.43)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="UTL-H2" data-circuit="C18" data-cct-k="4000">
+<g data-marker="1" transform="translate(189.06 169.33)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="UTL-H3" data-circuit="C18" data-cct-k="4000">
+<g data-marker="1" transform="translate(245.42 169.33)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="UTL-T1" data-circuit="C19" data-cct-k="4000">
+<polyline points="258.03,133.73 258.03,187.13" fill="none" stroke="#005c9c" stroke-width="3"/>
+<g data-marker="1" transform="translate(258.03 187.13)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H1" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(312.91 193.06)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H2" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(370.75 193.06)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H3" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(428.60 193.06)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H4" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(312.91 246.46)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H5" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(428.60 246.46)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H6" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(312.91 299.85)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H7" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(370.75 299.85)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-H8" data-circuit="C20" data-cct-k="4000">
+<g data-marker="1" transform="translate(428.60 299.85)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-L1" data-circuit="C21" data-cct-k="2700">
+<polyline points="327.44,215.31 327.74,213.01 328.63,210.86 330.06,209.02 331.89,207.60 334.05,206.71 336.34,206.41 405.16,206.41 407.46,206.71 409.61,207.60 411.45,209.02 412.88,210.86 413.77,213.01 414.06,215.31 414.06,277.61 413.77,279.90 412.88,282.05 411.45,283.89 409.61,285.32 407.46,286.21 405.16,286.50 336.34,286.50 334.05,286.21 331.89,285.32 330.06,283.89 328.63,282.05 327.74,279.90 327.44,277.61 327.44,215.31" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(414.06 277.61)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-L2" data-circuit="C23" data-cct-k="2700">
+<polyline points="475.32,187.03 475.32,249.32" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(475.32 249.32)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-X1" data-circuit="C22" data-cct-k="2700">
+<polyline points="370.75,201.22 419.26,201.22 419.26,246.46" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(419.26 201.22)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-X2" data-circuit="C22" data-cct-k="2700">
+<polyline points="322.25,246.46 322.25,291.70 370.75,291.70" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(322.25 291.70)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-R1" data-circuit="C25" data-cct-k="3000">
+<g data-marker="1" transform="translate(472.68 178.19)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-R2" data-circuit="C26" data-cct-k="3000">
+<g data-marker="1" transform="translate(472.68 236.58)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="MBR-N1" data-circuit="C24" data-cct-k="2700">
+<g data-marker="1" transform="translate(325.52 356.21)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DRS-H1" data-circuit="C27" data-cct-k="4000">
+<g data-marker="1" transform="translate(328.48 382.91)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="DRS-H2" data-circuit="C27" data-cct-k="4000">
+<g data-marker="1" transform="translate(328.48 428.89)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-M1" data-circuit="C29A" data-cct-k="4000">
+<g data-marker="1" transform="translate(356.31 385.41)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-M2" data-circuit="C29A" data-cct-k="4000">
+<g data-marker="1" transform="translate(373.34 385.41)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-G1" data-circuit="C28" data-cct-k="4000">
+<g data-marker="1" transform="translate(451.59 387.84)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-G2" data-circuit="C28" data-cct-k="4000">
+<g data-marker="1" transform="translate(451.59 419.47)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-G3" data-circuit="C28" data-cct-k="4000">
+<g data-marker="1" transform="translate(402.64 398.55)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-L1" data-circuit="C30A" data-cct-k="2700">
+<polyline points="350.73,366.48 474.58,366.48 474.58,442.12 350.73,442.12" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="7 3"/>
+<g data-marker="1" transform="translate(474.58 442.12)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-L2" data-circuit="C30B" data-cct-k="2700">
+<polyline points="476.09,391.49 476.09,427.99" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(476.09 427.99)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-L3" data-circuit="C30B" data-cct-k="2700">
+<polyline points="351.44,382.98 378.20,382.98" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(378.20 382.98)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-F1" data-circuit="C29B" data-cct-k="4000">
+<g data-marker="1" transform="translate(349.49 365.70)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL1-F2" data-circuit="C29B" data-cct-k="4000">
+<g data-marker="1" transform="translate(380.15 365.70)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LOB-H1" data-circuit="C31" data-cct-k="3000">
+<g data-marker="1" transform="translate(316.62 474.87)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LOB-H2" data-circuit="C31" data-cct-k="3000">
+<g data-marker="1" transform="translate(316.62 513.43)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LOB-F1" data-circuit="C32" data-cct-k="4000">
+<g data-marker="1" transform="translate(316.62 452.62)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="LOB-N1" data-circuit="C33" data-cct-k="2700">
+<g data-marker="1" transform="translate(342.57 489.70)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-M1" data-circuit="C35A" data-cct-k="4000">
+<g data-marker="1" transform="translate(356.31 472.47)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-M2" data-circuit="C35A" data-cct-k="4000">
+<g data-marker="1" transform="translate(373.34 472.47)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-G1" data-circuit="C34" data-cct-k="4000">
+<g data-marker="1" transform="translate(451.59 474.91)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-G2" data-circuit="C34" data-cct-k="4000">
+<g data-marker="1" transform="translate(451.59 506.54)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-G3" data-circuit="C34" data-cct-k="4000">
+<g data-marker="1" transform="translate(402.64 485.61)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-L1" data-circuit="C36A" data-cct-k="2700">
+<polyline points="350.73,453.54 474.58,453.54 474.58,529.19 350.73,529.19" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="7 3"/>
+<g data-marker="1" transform="translate(474.58 529.19)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-L2" data-circuit="C36B" data-cct-k="2700">
+<polyline points="476.09,478.56 476.09,515.05" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(476.09 515.05)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-L3" data-circuit="C36B" data-cct-k="2700">
+<polyline points="351.44,470.04 378.20,470.04" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(378.20 470.04)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-F1" data-circuit="C35B" data-cct-k="4000">
+<g data-marker="1" transform="translate(349.49 452.77)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="TL2-F2" data-circuit="C35B" data-cct-k="4000">
+<g data-marker="1" transform="translate(380.15 452.77)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-H1" data-circuit="C37" data-cct-k="4000">
+<g data-marker="1" transform="translate(318.91 601.25)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-H2" data-circuit="C37" data-cct-k="4000">
+<g data-marker="1" transform="translate(377.30 601.25)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-H3" data-circuit="C37" data-cct-k="4000">
+<g data-marker="1" transform="translate(318.91 654.78)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-H4" data-circuit="C37" data-cct-k="4000">
+<g data-marker="1" transform="translate(374.87 710.74)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-H5" data-circuit="C37" data-cct-k="4000">
+<g data-marker="1" transform="translate(418.22 727.02)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-H6" data-circuit="C37" data-cct-k="4000">
+<g data-marker="1" transform="translate(438.13 601.25)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-L1" data-circuit="C39" data-cct-k="2700">
+<polyline points="357.64,620.67 440.76,620.67 440.76,688.89 357.64,688.89 357.64,620.67" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(440.76 688.89)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+<circle r="7" fill="none" stroke="#111" stroke-width="1.1"/>
+</g></g>
+<g data-fixture-id="CBR-X1" data-circuit="C40" data-cct-k="2700">
+<polyline points="382.91,595.01 346.58,595.01 346.58,623.93" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(346.58 595.01)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+<circle r="7" fill="none" stroke="#111" stroke-width="1.1"/>
+</g></g>
+<g data-fixture-id="CBR-X2" data-circuit="C40" data-cct-k="2700">
+<polyline points="415.49,595.01 451.82,595.01 451.82,623.93" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(451.82 595.01)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+<circle r="7" fill="none" stroke="#111" stroke-width="1.1"/>
+</g></g>
+<g data-fixture-id="CBR-X3" data-circuit="C40" data-cct-k="2700">
+<polyline points="451.82,689.92 451.82,718.84 415.49,718.84" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(451.82 718.84)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+<circle r="7" fill="none" stroke="#111" stroke-width="1.1"/>
+</g></g>
+<g data-fixture-id="CBR-X4" data-circuit="C40" data-cct-k="2700">
+<polyline points="382.91,718.84 346.58,718.84 346.58,689.92" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/>
+<g data-marker="1" transform="translate(346.58 718.84)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+<circle r="7" fill="none" stroke="#111" stroke-width="1.1"/>
+</g></g>
+<g data-fixture-id="CBR-S1" data-circuit="C38" data-cct-k="4000">
+<polyline points="348.11,703.44 348.11,758.91" fill="none" stroke="#005c9c" stroke-width="3"/>
+<g data-marker="1" transform="translate(348.11 758.91)">
+<rect x="-4" y="-4" width="8" height="8" fill="#005c9c" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-R1" data-circuit="C41" data-cct-k="3000">
+<g data-marker="1" transform="translate(472.68 615.85)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CBR-R2" data-circuit="C41b" data-cct-k="3000">
+<g data-marker="1" transform="translate(472.68 676.68)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="BAL-H1" data-circuit="C07" data-cct-k="3000">
+<g data-marker="1" transform="translate(95.62 808.59)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="BAL-H2" data-circuit="C07" data-cct-k="3000">
+<g data-marker="1" transform="translate(172.75 808.59)">
+<path d="M0 -5 L5 0 L0 5 L-5 0 Z" fill="#007450" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="BAL-L1" data-circuit="C08" data-cct-k="2700">
+<polyline points="61.51,882.75 203.89,882.75" fill="none" stroke="#b54800" stroke-width="3"/>
+<g data-marker="1" transform="translate(203.89 882.75)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="BAL-L2" data-circuit="C08" data-cct-k="2700">
+<g data-marker="1" transform="translate(147.53 772.25)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="BAL-L3" data-circuit="C08" data-cct-k="2700">
+<g data-marker="1" transform="translate(197.96 772.25)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CURT-LIV" data-circuit="X-CURT-LIV" data-cct-k="2700">
+<polyline points="83.16,549.57 83.16,668.79" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="2 4"/>
+<g data-marker="1" transform="translate(83.16 668.79)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CURT-DIN" data-circuit="X-CURT-DIN" data-cct-k="2700">
+<polyline points="83.16,386.56 83.16,505.78" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="2 4"/>
+<g data-marker="1" transform="translate(83.16 505.78)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CURT-MBR-S" data-circuit="X-CURT-MBR-S" data-cct-k="2700">
+<polyline points="471.46,254.30 471.46,372.37" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="2 4"/>
+<g data-marker="1" transform="translate(471.46 372.37)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-fixture-id="CURT-CBR" data-circuit="X-CURT-CBR" data-cct-k="2700">
+<polyline points="471.46,699.55 471.46,775.07" fill="none" stroke="#b54800" stroke-width="3" stroke-dasharray="2 4"/>
+<g data-marker="1" transform="translate(471.46 775.07)">
+<circle r="4.3" fill="#b54800" stroke="#111" stroke-width="0.8"/>
+</g></g>
+<g data-board-id="SB-01" transform="translate(232.82 741.85)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-01</text></g>
+<g data-board-id="SB-02" transform="translate(280.28 445.95)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-02</text></g>
+<g data-board-id="SB-03" transform="translate(280.28 273.16)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-03</text></g>
+<g data-board-id="SB-04" transform="translate(269.15 201.96)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-04</text></g>
+<g data-board-id="SB-05" transform="translate(304.01 301.34)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-05</text></g>
+<g data-board-id="SB-05L" transform="translate(477.54 168.45)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-05L</text></g>
+<g data-board-id="SB-05R" transform="translate(477.54 246.31)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-05R</text></g>
+<g data-board-id="SB-06" transform="translate(338.12 391.81)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-06</text></g>
+<g data-board-id="SB-06B" transform="translate(334.42 443.72)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-06B</text></g>
+<g data-board-id="SB-07" transform="translate(338.12 477.84)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-07</text></g>
+<g data-board-id="SB-07B" transform="translate(338.12 533.46)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-07B</text></g>
+<g data-board-id="SB-08" transform="translate(361.41 537.99)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-08</text></g>
+<g data-board-id="SB-08RL" transform="translate(477.54 591.52)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-08RL</text></g>
+<g data-board-id="SB-08RR" transform="translate(477.54 706.85)"><path d="M0 -6 L6 5 L-6 5 Z" fill="#182c32"/><text x="8" y="-4" font-size="10" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="3">SB-08RR</text></g>
+<g transform="translate(570 130)" font-size="13">
+<text y="0" font-size="16" font-weight="bold">Fixed CCT / symbol</text>
+<circle cx="7" cy="27" r="5" fill="#b54800" stroke="#111"/><text x="23" y="32">2700 K: LOW / mood / cove</text>
+<path d="M7 47 L13 53 L7 59 L1 53 Z" fill="#007450" stroke="#111"/><text x="23" y="58">3000 K: reading / art; lobby</text>
+<text x="23" y="75">and balcony HIGH</text>
+<rect x="2" y="89" width="10" height="10" fill="#005c9c" stroke="#111"/><text x="23" y="99">4000 K: most HIGH and task</text>
+<text y="136" font-size="16" font-weight="bold">Line patterns</text>
+<path d="M0 158 H38" stroke="#b54800" stroke-width="3"/><text x="50" y="163">Cove / other strip</text>
+<path d="M0 184 H38" stroke="#b54800" stroke-width="3" stroke-dasharray="9 3 2 3"/><text x="50" y="189">LINE strip</text>
+<path d="M0 210 H38" stroke="#b54800" stroke-width="3" stroke-dasharray="2 4"/><text x="50" y="215">Curtain strip; no lux credit</text>
+<path d="M0 236 H38" stroke="#b54800" stroke-width="3" stroke-dasharray="7 3"/><text x="50" y="241">Bathroom perimeter cove</text>
+<path d="M7 255 L14 267 L0 267 Z" fill="#182c32"/><text x="23" y="267">SB = modelled switchboard</text>
+<circle cx="7" cy="293" r="7" fill="none" stroke="#111" stroke-width="1.5"/><text x="23" y="298">CBR cove / LINE site hold</text>
+<text y="339" font-size="16" font-weight="bold">Before installation</text>
+<text y="363">Board positions and all dimensions</text><text y="381">are indicative, not measured.</text>
+<text y="407">P01 480 W class: hatch</text><text y="425">location and fit unverified.</text>
+<text y="451">No supply hatches or cable routes</text><text y="469">are released or plotted here.</text>
+<text y="495">See circuit-labelled lighting plans,</text><text y="513">the switchboard schedule and BoM.</text>
+<text y="547">CBR fan: room-centred 1050 mm</text><text y="565">planning sweep; no product selected.</text>
+<text y="591">Site, clearance, product, driver and</text><text y="609">protection checks remain open.</text>
+</g>
+<path d="M840 855 V900 M830 890 L840 900 L850 890" fill="none" stroke="#20343b" stroke-width="3"/>
+<text x="840" y="920" text-anchor="middle" font-size="16" font-weight="bold">N</text>
+</g></svg>

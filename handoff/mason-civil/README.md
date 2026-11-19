@@ -16,15 +16,14 @@
 
 ## Binding and orientation
 
-Canonical `house-design.json` SHA-256: `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac`. The homeowner-signoff integration, pooja-display, living-supply/cabinet and provisional wardrobe-interior reference receipts form the source chain to this master. The retired original layout is not a geometry source.
-
-The latest change adds only a versioned provisional wardrobe-interior reference, its source-register entry and the update timestamp. A parsed comparison against the previous master verifies that existing geometry, dimensions, decisions and holds are unchanged. The interior proposal is not homeowner-approved or fabrication-released; no compartment geometry or wardrobe lighting is newly added to these civil drawings.
+The current canonical house design, the fixed-CCT successor and the children's ceiling review are bound by the source and verification receipts. The retired original layout is not a geometry source. Wardrobe interiors remain provisional and are not fabrication-released; no wardrobe lighting is newly added to these civil drawings.
 
 Sheets retain the preferred simple style and south-up orientation: sheet-top South, bottom North, left East, right West. North is homeowner-described cardinal north, not a surveyed true bearing. The master has four requested instances F1–F4; their actual storey labels, elevations and variations are unverified. Complete a separate checklist for each actual floor.
 
 ## Decisions already recorded
 
 - Fixed CCT by fitting, with 2700 K coves and selected curtain-pocket strips. CBR-H1–H6 are active and switchable at accepted positions for review; the C37 exact dimmer chain remains a procurement hold.
+- In the children's room, the existing cove is retained, LINE strips are provisionally shifted and a 1050 mm fan sweep is shown at the nominal room centre. Cove and LINE are ON in the design simulation but their physical installation and operation are held pending site and product checks.
 - CURT-LIV, CURT-DIN, CURT-MBR-S and CURT-CBR are selected conditionally on site measurements and mock-up. CURT-MBR-W03 remains held and excluded. The S1 extension is separate from the 104-base-fitting / 47-base-group lighting ledger.
 - The assumed MBR-S and CBR strip return lines each extend approximately 0.30 m beyond their modeled room corner. This is a clash in unmeasured model geometry, not an as-built finding. Measure actual pocket ends and coordinate a site-fit solution; do not extend or cut on the basis of the lines.
 - The master-bedroom split wardrobe is approved in principle; OPT-E BWP plywood carcass and laminate shutters are selected. Dimensions and loft supports are held for site measurement. Fixed bedside cabinets remain omitted.
@@ -35,7 +34,7 @@ Sheets retain the preferred simple style and south-up orientation: sheet-top Sou
 
 ## Site and professional holds
 
-Measure actual rooms, openings, wall thicknesses, floor levels, ceiling/beam soffits, niche and loft geometry, stair dimensions and room-to-room connections on every floor. HD-11's 11 ft floor-to-floor and approximately 9 in band drop are homeowner-stated, not surveyed; the 3.188 m slab and 2.959 m band elevations are derived from assumed slab/finish thicknesses. Raised-panel level, cavity depth, bathroom and utility ceilings and most opening dimensions remain unmeasured.
+Measure actual rooms, openings, wall thicknesses, floor levels, ceiling/beam soffits, niche and loft geometry, stair dimensions and room-to-room connections on every floor. HD-11's 11 ft floor-to-floor and approximately 9 in band drop are homeowner-stated, not surveyed; the older 3.188 m slab and 2.959 m band estimates assume slab/finish thicknesses. For R05 only, the homeowner reports an approximately 3.048 m band and 3.277 m centre. The centre conflicts with the older slab estimate; the actual slab is unmeasured and the section must be checked on site. Other raised-panel levels, cavity depths, bathroom and utility ceilings and most openings remain unmeasured.
 
 The current model depicts D01 as a single leaf while the architecture description says double leaf. Confirm the existing entrance rather than treating either as fabrication instruction. W05 is a visual placeholder; W03 offsets and toilet hinges remain site checks. Model stair tread lines are not a verified rise count.
 

@@ -1,0 +1,52 @@
+{
+  "status": "current-viewer-renders-not-construction",
+  "constructionRelease": false,
+  "basisMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "sourceManifest": "selected-source-file-hashes.json",
+  "sourceManifestSha256": "f6a17507d065bb1c671ac77c1762d8cc632e0a9d2ea52d6de6a932b859a775c7",
+  "sourceFiles": 4,
+  "omittedFiles": [],
+  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
+  "files": [
+    {
+      "path": "01-whole-flat-dollhouse.png",
+      "bytes": 388952,
+      "sha256": "47e1d9fd50604a09c6b533ee44f13f30c1f652b34d6c5fc075b30d33734dbd4e",
+      "sourceSha256": "47e1d9fd50604a09c6b533ee44f13f30c1f652b34d6c5fc075b30d33734dbd4e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "02-living-light-and-curtains.png",
+      "bytes": 427069,
+      "sha256": "4ee840b2161b40a3e6312fed1fe5250c691bad7b154fd7b07eb0a9f55674eadc",
+      "sourceSha256": "4ee840b2161b40a3e6312fed1fe5250c691bad7b154fd7b07eb0a9f55674eadc",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "03-master-proposed-interiors.png",
+      "bytes": 539423,
+      "sha256": "9356f538a962c62d928e4e0101b5e50a26292aa00c2e5df1719742a019bd74a0",
+      "sourceSha256": "9356f538a962c62d928e4e0101b5e50a26292aa00c2e5df1719742a019bd74a0",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "render-receipt.json",
+      "bytes": 2265,
+      "sha256": "699cde220459e053761200b735caf30e673d13bb0acbaf8e0e1150a7f2a4981b",
+      "sourceSha256": "699cde220459e053761200b735caf30e673d13bb0acbaf8e0e1150a7f2a4981b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "selected-source-file-hashes.json",
+      "bytes": 821,
+      "sha256": "f6a17507d065bb1c671ac77c1762d8cc632e0a9d2ea52d6de6a932b859a775c7",
+      "sourceSha256": "f6a17507d065bb1c671ac77c1762d8cc632e0a9d2ea52d6de6a932b859a775c7",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    }
+  ]
+}

@@ -65,26 +65,14 @@ fixture_count = len(lighting["fixtures"])
 circuit_ids = sorted({f["circuit"] for f in lighting["fixtures"]})
 circuit_count = len(circuit_ids)
 cbr_count = sum(f["room"] == "CBR" for f in lighting["fixtures"])
-lighting_summary = f"{fixture_count} fittings, {circuit_count} controlled groups"
-opt1 = lighting["status"].startswith("OPT1")
-fixed_white = lighting["status"].startswith("FIXED_WHITE_HOMEOWNER_SIGNED")
-assert fixed_white, "This civil review requires the integrated homeowner-signed fixed-CCT master."
-selected_strips = lighting["curtain_pocket_s1"]["strips"]
-selected_strip_ids = sorted(s["id"] for s in selected_strips)
-released_cbr = [f"CBR-H{i}" for i in range(1, 7)]
+lighting_summary = f"{fixture_count} base fittings, {circuit_count} controlled groups"
+fixed_white = lighting["status"] == "FIXED_WHITE_HOMEOWNER_SIGNED_REVIEW_CANDIDATE_NOT_CONSTRUCTION_RELEASED"
+opt1 = lighting["status"].startswith("OPT1") or fixed_white
+selected_strips = lighting["curtain_pocket_s1"]["strips"] if fixed_white else []
 k2 = lighting["calculation_validity"].get("homeowner_selections", {}).get("kitchen_worktop", {})
-if fixed_white:
-    assert k2.get("option") == "K-2", "The selected kitchen option must remain recorded"
-    assert selected_strip_ids == ["CURT-CBR", "CURT-DIN", "CURT-LIV", "CURT-MBR-S"]
-    assert all(s["cct_k"] == 2700 and s["fabrication_release"] is False for s in selected_strips)
-    lighting_note = (f"Homeowner-signed fixed-CCT review candidate ({lighting_summary} base plus four selected S1 strips): "
-                     "2700 K coves and pocket strips, with CCT fixed by fitting. CBR-H1 to H6 are active/switchable "
-                     "at accepted positions; the C37 exact dimmer chain remains held. CURT-MBR-W03 is held and excluded. "
-                     "Pocket dimensions, other CBR coordination, product fit and construction release remain held. "
-                     "Pooja fittings LIV-P1/P2 remain count/load allowances only.")
-elif opt1:
+if opt1:
     assert k2.get("option") == "K-2", "OPT-1 master must record the homeowner-selected kitchen option K-2"
-    lighting_note = (f"OPT-1 calculated review candidate from the bound master ({lighting_summary}). Kitchen task option K-2 is homeowner-selected for review: "
+    lighting_note = (f"OPT-1 calculated review candidate from the bound master ({lighting_summary}). Four selected 2700 K curtain strips bring the review schedule to 108 fittings / 51 circuits; no new knobs or photometry credit. Kitchen task option K-2 is homeowner-selected for review: "
                      "it adds the sink-end linear KIT-T4 and lowers KIT-T1 output. Generic-optics analytic estimates, not measured or manufacturer-validated; "
                      "no photometry is shown on this sheet. Not construction-released; product, driver, dimmer and site-fit holds remain open. "
                      "Each bathroom face-light pair has its own knob (HD-17). "
@@ -126,6 +114,7 @@ JS_DOM = """() => {
   return {W, H, texts: texts.length, outside, overlaps,
     ids: Object.fromEntries(['room-id','wall-id','opening-id','storage-id','item-id','panel-id','fixture-id','fan-room','curtain-pocket','curtain-strip',
       'groove','bath-id','stair-part','bed','suppressed-storage','inactive','fixture-room','hold-mark','hold-fixture','pooja-callout','detail','niche-representation'].map(a => [a, ids(a)])),
+    trayHeights: Object.fromEntries([...svg.querySelectorAll('[data-ceiling^="tray-"]')].map(e => [e.getAttribute('data-ceiling'), {height: Number(e.getAttribute('data-tray-height')), basis: e.getAttribute('data-height-basis')}])),
     inactiveFixtureIds: [...svg.querySelectorAll('[data-fixture-id][data-inactive]')].map(e => e.getAttribute('data-fixture-id')).sort(),
     allowanceFixtureIds: [...svg.querySelectorAll('[data-fixture-id][data-held-allowance]')].map(e => e.getAttribute('data-fixture-id')).sort(),
     elements: svg.querySelectorAll('*').length,
@@ -205,6 +194,11 @@ overlaps = {r["sheet"]["id"]: r["dom"]["overlaps"] for r in sheet_results if r["
 check("no text-on-text overlaps (bounding boxes)", not overlaps, overlaps)
 check("generated SVG final bytes match the sheet manifest",
       all(sha(out / s["file"]) == s["sha256"] for s in manifest["sheets"]))
+check("R05 tray metadata uses the reported approximate level, not the older slab reference",
+      rcp["trayHeights"].get("tray-CBR") == {
+          "height": house["lighting"]["design_inputs"]["ceilings"]["CBR"]["tray_h_m"],
+          "basis": "homeowner-reported-approximate-unsurveyed",
+      }, rcp["trayHeights"])
 
 # plan vs raw master
 fx_ids = sorted(f["id"] for f in house["lighting"]["fixtures"])
@@ -225,12 +219,6 @@ bath_open = set(plan["ids"]["opening-id"]) - v_open
 check("plan: all 15 master openings drawn plus the 3 openings (door, niche, vent) of each bathroom record", v_open <= set(plan["ids"]["opening-id"]) and len(v_open) == 15 and len(bath_open) == 3 * n_bath and all(re.fullmatch(r"bath[12]-(door|niche|vent)", i) for i in bath_open), sorted(bath_open))
 check("plan: drawn storage = master storage minus 5 superseded R04 records minus built beds and the 3 HD-14 omitted bedside units", want_storage == plan["ids"]["storage-id"],
       {"want": want_storage, "got": plan["ids"]["storage-id"]})
-selected_cabinets = house["storage"]["homeowner_selections"]["included_optional_storage"]
-check("plan: both selected cabinets remain dashed, conditional and unmeasured",
-      selected_cabinets["status"] == "homeowner_selected_subject_to_site_holds"
-      and all(i["id"] in plan["text"] and i["id"] in plan["ids"]["storage-id"] for i in selected_cabinets["items"])
-      and by_id["01-plan-furnished"]["svg"].count('data-selection="site-held"') == 2
-      and "unmeasured placeholders, not fabrication dimensions" in plan["text"])
 check("plan: no superseded R04 footprint drawn as storage", not set(sup) & set(plan["ids"]["storage-id"] + plan["ids"]["item-id"]))
 check("HD-14: omitted bedside units are not drawn as an item, storage record or optional outline on any sheet",
       not hd14_omitted & set(sum((r["dom"]["ids"]["storage-id"] + r["dom"]["ids"]["item-id"] for r in sheet_results), [])))
@@ -250,15 +238,12 @@ check("master: niche extension is reported, not a surveyed structural design",
       and pn["existing_construction"]["outside_wall_extension"]["measured_geometry"] is None
       and pn["geometry_hold"]["new_or_deeper_cutting_authorized"] is False)
 
-# RCP vs raw master (CBR H1-H6 released in review; other CBR coordination remains held)
+# RCP vs raw master (CBR H1-H6, cove and LINE modelled ON for review; other CBR fixtures held)
 check("rcp: all master lighting fixtures drawn, ids equal", rcp["ids"]["fixture-id"] == fx_ids and len(fx_ids) == len(set(fx_ids)), len(fx_ids))
 cbr = sorted(f["id"] for f in house["lighting"]["fixtures"] if f["room"] == "CBR")
-check("rcp: CBR-H1-H6 active and switchable; other CBR fixtures remain held",
-      set(released_cbr) <= set(cbr) and rcp["inactiveFixtureIds"] == sorted(set(cbr) - set(released_cbr))
-      and "CBR-H1 to H6 are active" in rcp["text"] and "C37" in rcp["text"], rcp["inactiveFixtureIds"])
-check("rcp: four selected S1 strips drawn separately; W03 excluded",
-      rcp["ids"]["curtain-strip"] == selected_strip_ids and "CURT-MBR-W03" in rcp["text"]
-      and "2700 K" in rcp["text"] and "past their modeled room corners" in rcp["text"])
+modelled_on = {f"CBR-H{n}" for n in range(1, 7)} | {"CBR-L1"} | {f"CBR-X{n}" for n in range(1, 5)}
+held_cbr = sorted(i for i in cbr if i not in modelled_on)
+check("rcp: CBR H1-H6, cove and LINE drawn as modelled ON; remaining CBR fittings faded and held", rcp["inactiveFixtureIds"] == held_cbr and len(cbr) > len(held_cbr), rcp["inactiveFixtureIds"])
 rcp_sheet = by_id["02-rcp"]["sheet"]
 check("rcp: circuit ids reconcile with canonical controls",
       rcp_sheet["drawn"]["circuitIds"] == circuit_ids == sorted(c["circuit"] for c in lighting["controls"]["circuits"]))
@@ -270,6 +255,10 @@ check("rcp: path and point counts reconcile with canonical records",
       and rcp_sheet["counts"]["paths"] + rcp_sheet["counts"]["points"] == fixture_count)
 check("rcp: 3 fan points", sorted(f["room"] for f in V["fans"]) == rcp["ids"]["fan-room"])
 check("rcp: 5 curtain pockets (4 windows + held W03)", len(rcp["ids"]["curtain-pocket"]) == 5)
+check("rcp: four selected strips drawn without new knobs or photometry credit",
+      rcp["ids"]["curtain-strip"] == sorted(s["id"] for s in selected_strips)
+      and len(selected_strips) == 4 and all(s["cct_k"] == 2700 and not s["new_knob"] and not s["photometry_credit"] for s in selected_strips)
+      and rcp_sheet["counts"]["reviewFixtures"] == 108 and rcp_sheet["counts"]["reviewCircuits"] == 51)
 check("rcp: hold marks drawn for centre, hall beam, dressing sweep and pooja allowances",
       sorted(set(rcp["ids"]["hold-mark"])) == ["H-CENTRE-RECESS", "H-DRS-SWEEP", "H-HALL-BEAM", "H-POOJA-GEOMETRY"]
       and len(rcp["ids"]["hold-fixture"]) == 11, rcp["ids"]["hold-fixture"])
@@ -282,7 +271,14 @@ check("rcp: four bathroom face bars retain their separate HD-17 groups",
               for f in lighting["fixtures"] if f["type"] == "FACEV")
       and "Each bathroom face-light pair has its own knob (HD-17)" in rcp["text"])
 check("rcp: master holds named (H-MBR-BED, H-MBR-W03) and children held (H-CBR-*)", all(k in rcp["text"] for k in ["H-MBR-BED", "H-MBR-W03", "H-CBR-"]))
-check("rcp: integrated proposal wording, not released, and no photometry words", ("fixed-CCT" if fixed_white else ("OPT-1" if opt1 else "HD-14")) in rcp["text"] and "not released" in rcp["text"]
+check("rcp: current R05 fan and modelled-on ceiling remain distinct from installation holds",
+      all(k in rcp["text"] for k in ["nominal room centre", "1050 mm planning sweep", "modelled ON for review", "H-CBR-CEIL"])
+      and not re.search(r"remain held and unlit|proposed cove centre", rcp["text"], re.I))
+child_elevation = by_id["08-elev-R05-children"]["dom"]["text"]
+check("R05 elevation: reported band and unsurveyed centre are shown without the old band",
+      all(k in child_elevation for k in ["band 3.048", "centre approximately 3.277", "slab estimate", "unsurveyed"])
+      and "false-ceiling band 2.96" not in child_elevation)
+check("rcp: integrated proposal wording, not released, and no photometry words", ("OPT-1" if opt1 else "HD-14") in rcp["text"] and "not released" in rcp["text"]
       and not re.search(r"\b(lux|lumen|lm|cd/m|UGR)\b", rcp["text"], re.I))
 check("rcp: same openings and walls as the plan", rcp["ids"]["opening-id"] == plan["ids"]["opening-id"] and rcp["ids"]["wall-id"] == plan["ids"]["wall-id"])
 STALE = ["hypothetical", "ALL HEIGHTS ASSUMED", "position along the wall is real", "OLD W03", "Phase D", "bed head now", "inactive placeholder",
@@ -309,14 +305,14 @@ for r in [by_id["02-rcp"], *elev]:
     t = r["dom"]["text"].lower()
     check(f"{r['sheet']['id']}: HD-14 curtain wording (two tracks, sheer + blackout)", "sheer" in t and "blackout" in t and "two tracks" in t)
 check("rcp: integrated lighting totals and conditional status shown",
-      lighting_summary in rcp["text"] and ("Homeowner-signed fixed-CCT review candidate" if fixed_white else ("OPT-1 calculated review candidate" if opt1 else "HD-14 lighting proposal")) in rcp["text"]
+      lighting_summary in rcp["text"] and ("OPT-1 calculated review candidate" if opt1 else "HD-14 lighting proposal") in rcp["text"]
       and "holds remain open" in rcp["text"]
       and ("stale pending HD-18 recoordination" in rcp["text"] if pending else "stale pending" not in rcp["text"]))
 if opt1:
     kit_t4 = next(f for f in lighting["fixtures"] if f["id"] == "KIT-T4")
     kit_t1 = next(f for f in lighting["fixtures"] if f["id"] == "KIT-T1")
     check("OPT-1: 104 fittings in 47 groups, status not construction-released, K-2 selected",
-          fixture_count == 104 and circuit_count == 47 and lighting["status"] == "OPT1_calculated_review_candidate_not_construction_released"
+          fixture_count == 104 and circuit_count == 47 and lighting["status"] in ["OPT1_calculated_review_candidate_not_construction_released", "FIXED_WHITE_HOMEOWNER_SIGNED_REVIEW_CANDIDATE_NOT_CONSTRUCTION_RELEASED"]
           and lighting["calculation_validity"]["construction_release"] is False and lighting["calculation_validity"]["product_approval"] is False
           and k2.get("option") == "K-2" and k2.get("status") == "selected_for_review_not_construction_release")
     check("OPT-1 rcp: K-2 kitchen fittings KIT-T4 (new sink-end linear) and lower-output KIT-T1 are drawn as lit paths",
@@ -420,7 +416,7 @@ readme = f"""# {"Layout views (read-only) - REVIEW DRAFT, not construction relea
 
 Drawn only from the canonical master `house-design.json`, sha256 `{master_sha}`.
 {drawing_source["publication_status"]}
-{"This is a new review edition on the homeowner-signed fixed-CCT master; the earlier published set (bound to master 124ef698) is a separate folder and is not overwritten." + chr(10) if args.review_draft else ""}Nothing here edits the master, adds a design decision or replaces a drawing in it. Not a construction release.
+{"This is a new review edition on the integrated OPT-1 lighting master; the earlier published set (bound to master 124ef698) is a separate folder and is not overwritten or superseded by it." + chr(10) if args.review_draft else ""}Nothing here edits the master, adds a design decision or replaces a drawing in it. Not a construction release.
 Sheet drawings are south-up: the page is **not rotated**, and the north arrow on every sheet points to the bottom of the page.
 
 **Look and feel.** This is the original sheet style (the same 13 sheets, "Sheet n / 13" headers, pastel room fills, right-hand schedule/legend/notes). The later "drafter" redesign was rejected by the homeowner and is archived, not used. The roll-back is style only: the data underneath is the current finalised layout (HD-11 levels, current lighting, compass names). The original layout is retired (HD-13) and is not used as a source.
@@ -431,8 +427,8 @@ Sheet drawings are south-up: the page is **not rotated**, and the north arrow on
 |---|---|---|
 {sheets_md}
 
-1. **Top-down** = a colour-filled furnished plan with room names, confirmed sizes, walls, door swings, windows, the parapet opening, stairs, lift and essential furniture/storage.
-2. **Bottoms-up** = the reflected ceiling plan (the ceiling as seen looking up): the ~9 in perimeter band (underside 2.959 m), the raised centre as a separate gypsum/POP panel below the slab (level and cavity depth unmeasured; the 3.19 m slab underside is only a reference plane), the flat kitchen ceiling, cove lines, bath/utility/lobby ceilings (levels not provided), lofts, curtain pockets (two tracks), fan points and all {fixture_count} canonical base `lighting.fixtures` in {circuit_count} base controlled groups, plus four homeowner-selected S1 curtain strips. **Fixed CCT by fitting, 2700 K coves/selected strips; not construction-released.** Hold marks (CR, HB, DS, PG) outline fittings that remain conditional: CR means product-fit/access, HB hall beam, DS dressing sweep, PG pooja count/load allowance. A small "conditional details" block shows the raised-centre product-fit/access idea and the two-track curtain pocket, schematically and not to scale.
+1. **Top-down** = a colour-filled furnished plan with room names, recorded nominal sizes, walls, door swings, windows, the parapet opening, stairs, lift and essential furniture/storage.
+2. **Bottoms-up** = the reflected ceiling plan: the ~9 in perimeter band, unmeasured raised centre and pocket details, lofts, fan points and all {fixture_count} base fixtures in {circuit_count} groups. Four selected 2700 K curtain strips bring the review count to 108 fittings / 51 circuits; the paths are indicative and clipped to the shown room, with no added knob or photometry credit. K-2 is selected for review; product, fit and construction holds remain. Hold marks (CR, HB, DS, PG) indicate conditional fittings.
 3. **All walls** = interior elevations of every wall of every room, each with a key plan and a view arrow. The living east-wall sheet carries the pooja niche PN1 and an enlarged niche detail.
 
 ## How to read the compass
@@ -442,23 +438,21 @@ Sheet drawings are south-up: the page is **not rotated**, and the north arrow on
 
 ## What is real, what is assumed
 - Room sizes come from the finalised master layout. **Most opening offsets are inherited or placeholder** values: every window/door is drawn at a "modelled plan position; not site verified", and a dagger (†) marks openings that are assumed, placeholder or centred-but-unmeasured.
-- **Every level is unmeasured (HD-11).** Homeowner-stated: 11 ft floor-to-floor (3.353 m) and a ~9 in band drop. Derived from those (5 in slab and 1.5 in finish assumed): slab underside about 3.19 m, band underside 2.959 m, kitchen flat ceiling 2.959 m. The raised centre is a separate gypsum/POP panel below the slab (HD-14): its level and cavity depth are unmeasured. Not provided (placeholders): bathrooms 2.40 m, utility 2.95 m, lobby 2.70 m, balcony. Window and door heads and sills are assumptions. The hall cross-beam soffit is unmeasured (H-HALL-BEAM). Every sheet says so.
+- **Every level remains unsurveyed.** The homeowner reports the R05 band at 3.048 m and the centre approximately 3.277 m; the actual slab height and cavity are unmeasured, and the reported centre conflicts with the older slab estimate. Elsewhere, the homeowner-stated 11 ft floor-to-floor and ~9 in band drop, with assumed slab and finish thicknesses, yield older references of about 3.19 m slab underside and 2.959 m band (HD-11); the raised-panel level and cavity depth are unmeasured (HD-14). Bathrooms, utility, lobby and balcony levels and opening heads/sills are placeholders. The hall cross-beam soffit is unmeasured (H-HALL-BEAM). Verify all levels on site.
 - The **loft** top of 3.08 m is an unmeasured legacy placeholder and is not raised to the slab (H-LOFT). The old 2.64 m curtain top is retired; 2.939 m is used only as an assumed HD-11 drawing top for the children's curtain, not measured hardware.
 - Items whose height is not in the master (sofa, TV unit, tenant beds and so on) are drawn only as footprints below the floor line. No height was invented. Wall cabinets show a bottom of 1.45 m and no top.
 - **Pooja niche PN1 (HD-16 / HD-18)** is already built at the north end of the living east wall. Its relationship is homeowner-confirmed, but the {V["pooja"]["widthMm"]} mm width, {V["pooja"]["heightMm"]} mm opening height, {V["pooja"]["sillM"]} m sill, {V["pooja"]["depthMm"]} mm depth and modeled position are **homeowner estimates, not site measurements**. {drawing_source["note"]} The homeowner reports a reinforced slab extension beyond the 9-inch wall, top to bottom through the building; its geometry and capacity are unverified. The model does not contain this extension. Only the estimated front outline and dimensions are shown: **no physical back or structural cross-section is drawn**. This model mismatch does not establish that the existing niche is unsafe or impossible. Confirm dimensions, support/capacity and balcony-edge relation on site (OI-POOJA-01). No cutting or deepening is requested or approved; no finishes or frame construction are newly selected.
-- **Pooja display:** small idols with a framed picture behind are homeowner-selected conceptually. Their positions and sizes, any platform fixings, thermal/fire clearance and support capacity remain unmeasured or unapproved.
 - **W03** (master south window) is "centred (homeowner-confirmed); offsets unmeasured"; its curtain pocket is held (H-MBR-W03). **W05** (children's west window) is still a visual placeholder, concealed behind its curtain.
 - Tenants bring their own beds: beds are dashed "tenant's bed - queen to king envelope" (1524-1829 x 1981 mm mattress), not joinery and not a tested frame (the 1.68 x 2.13 frame is not drawn). **Fixed bedside cabinets are omitted by the homeowner (HD-14: ST-R04-NS01, ST-R04-NS02, ST-R05-NS01)**; no optional outline is drawn and tenants may use movable tables. Room and bed positions are unchanged. The master's built queen bed is not drawn; the master bed position is a held test centreline (H-MBR-BED).
 - **R05 clearance (HD-15):** keep the finalized room and furniture positions. The approximately {RC["estimated_clearance_mm"]} mm bed-foot/study-return clearance is a **site-check pinch, not a comfortable walking route**. Measure the actual tenant bed frame, fixed return and unobstructed route on site (OI-R05-03); no furniture relocation is authorised.
 - The only switch zone in the master is the children's latch-side switch board (1.06-1.785 m along the south wall). No other switch plates are drawn because none are recorded.
-- Retired wardrobe/joinery footprints are excluded: the five superseded ST-R04 records are suppressed. The master split wardrobe is approved in principle, with dimensions held for site measurement; OPT-E BWP plywood carcass and laminate shutters are selected.
-- Dressing cabinet ST-R04a-WR01 and utility cabinet ST-R08-UC01 are homeowner-selected subject to measured fit, circulation and utility-service access. Dashed outlines and elevation dimensions are unmeasured placeholders, not fabrication dimensions.
-- **Lighting:** {lighting_note} CBR-H1 to H6 are active/switchable in review; the other {cbr_count - len(released_cbr)} children's-room fittings remain faded under coordination holds. Additional holds include H-CENTRE-RECESS (conditional product-fit/access check; no slab chase or structural cutting is authorised), H-HALL-BEAM, H-DRS-SWEEP, H-MBR-W03, H-MBR-BED and H-LOFT.
+- Retired wardrobe/joinery footprints are excluded: five superseded ST-R04 records are suppressed. The split wardrobe is approved in principle, but the hatched zones and interiors are unmeasured. Dressing and utility cabinets are selected conditionally, subject to FH-ST-03 / FH-ST-12 checks.
+- **Lighting:** {lighting_note} CBR-H1 to H6 and its curtain strip are selected for review; the remaining CBR fittings are held and faded. C37 procurement remains held. Other holds include H-CENTRE-RECESS, H-HALL-BEAM, H-DRS-SWEEP, H-MBR-W03, H-MBR-BED and H-LOFT.
 - **Raised centre (HD-14):** a separate gypsum/POP panel below the concrete slab. The homeowner confirms space will be provided for the aluminium profile/track and wiring; clear cavity depth, panel level, profile recess/fixing dimensions, wiring access and driver location are unmeasured. No categorical "no void / no space" claim is made.
 - **Curtains (HD-14):** the living, master and children's rooms have two layers (sheer + blackout) on ceiling-mounted tracks concealed in recessed pockets, so each pocket needs two tracks. Pocket outlines on the RCP and elevations are indicative only; clear width, depth, track spacing and stack are unverified and no enlarged pocket is assumed.
-- **Selected S1 strips:** CURT-LIV, CURT-DIN, CURT-MBR-S and CURT-CBR are selected conditionally on site measurement; the W03 strip remains held/excluded. Selected strips do not receive photometry credit. Total including S1 is 108 fittings / 51 groups, versus 104 / 47 base.
-- **S1 geometry conflict:** assumed MBR-S and CBR return centre-lines extend about 0.30 m beyond their modeled room corners. This is a clash in the unmeasured model, not an as-built measurement or an instruction to cut or extend the pocket. Measure the actual ends and coordinate a site-fit solution before set-out.
-- Curtain pockets on the RCP and elevations are ceiling-recessed track pockets (not rods over the windows, and not LED coves). Their sizes are indicative, not measured (see HD-14 above).
+- Curtain pockets are recessed two-track pockets, not rods. Four selected strips are shown at 2700 K on the existing LOW controls; W03 remains held. Pocket sizes, returns and feed access are unmeasured and need a site mock-up.
+- Assumed MBR-S and CBR strip returns each extend about 0.30 m beyond the model room corner; paths are clipped for display only. Measure actual pocket ends and coordinate a site-fit solution; do not extend or cut from the model.
+- D01 is a single leaf in the model while the architectural description says double leaf. Confirm the existing entrance and swing on site.
 
 ## Source status
 - Bound master: `{master_sha}` (the file was only read).
@@ -506,7 +500,7 @@ if args.staging:
 if args.review_draft:
     check("review draft: every sheet and the README marked REVIEW DRAFT, not construction released, on the OPT-1 integrated master",
           all("REVIEW DRAFT" in r["dom"]["text"] and "not a construction release" in r["dom"]["text"] for r in sheet_results)
-          and drawing_source["review_draft"] and not drawing_source["staging"] and not pending and fixed_white
+          and drawing_source["review_draft"] and not drawing_source["staging"] and not pending and opt1
           and "REVIEW DRAFT" in (out / "README.md").read_text(encoding="utf-8"))
 obsolete_hits = {k: [p for p in OBSOLETE_OI if p in t] + LOAD_FIGURE.findall(t) for k, t in set_texts.items()}
 obsolete_hits = {k: v for k, v in obsolete_hits.items() if v}
@@ -598,10 +592,8 @@ receipt = {
                  "storage_not_drawn_tenant_beds": not_drawn_storage, "tenant_bed_envelopes": 2,
                  "furniture_items_drawn": len([i for i in plan["ids"]["item-id"] if not i.startswith(("TENANT", "BATH"))])},
         "rcp": {"fixtures": len(rcp["ids"]["fixture-id"]), "circuits": circuit_count, "circuit_ids": circuit_ids,
-                "released_CBR_H1_H6": released_cbr,
-                "other_CBR_fixtures_drawn_faded": rcp["inactiveFixtureIds"],
-                "selected_S1_curtain_strips": selected_strip_ids,
-                "held_W03_strip_excluded": True,
+                "held_CBR_fixtures_drawn_faded": len(rcp["inactiveFixtureIds"]),
+                "selected_curtain_strips": rcp["ids"]["curtain-strip"], "review_fittings": 108, "review_circuits": 51,
                 "count_load_only_allowances": rcp["allowanceFixtureIds"], "bathroom_face_bar_ids": face_ids,
                 "hold_marks": rcp["ids"]["hold-fixture"],
                 "fans": rcp["ids"]["fan-room"], "curtain_pockets": rcp["ids"]["curtain-pocket"]},

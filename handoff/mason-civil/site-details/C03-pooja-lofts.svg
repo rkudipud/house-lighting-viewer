@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1375" viewBox="0 0 1700 1375" role="img" aria-labelledby="t d">
 <title id="t">Pooja and lofts — no structural assumptions</title>
 <desc id="d">Existing niche, proposed display and held loft details</desc>
-<metadata>{&quot;sheet&quot;:&quot;C03-pooja-lofts&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;construction_release&quot;:false}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;C03-pooja-lofts&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;construction_release&quot;:false}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -21,7 +21,11 @@
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >Civil coordination · review only · all site dimensions require verification</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 3 / 4</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
+<g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
+<path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
+<text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
+<text y="-26" font-size="12" class="muted" text-anchor="middle">S</text></g>
 <path d="M60 116H1640" stroke="#c8d2d3"/>
 <text x="75.00" y="165.00" font-size="18" class="sect" text-anchor="start" >PN1 / EXISTING NICHE — FRONT ONLY</text>
 <rect x="75" y="195" width="730" height="650" fill="#fff" stroke="#cfd9d9" rx="6"/>
@@ -65,6 +69,6 @@
 <text x="75.00" y="1156.00" font-size="16" class="" text-anchor="start" >Dressing cabinet ST-R04a-WR01 and utility cabinet ST-R08-UC01 are selected subject to measured fit, circulation and service access; their drawn dimensions are unmeasured</text>
 <text x="75.00" y="1179.00" font-size="16" class="" text-anchor="start" >placeholders.</text>
 <path d="M60 1336H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="1358.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
+<text x="60.00" y="1358.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
 <text x="1640.00" y="1358.00" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

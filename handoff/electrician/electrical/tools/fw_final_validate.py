@@ -194,10 +194,57 @@ def main() -> None:
         with Image.open(image) as rendered:
             check(f"figure pair {image_path.stem}", rendered.size == (2 * width, 2 * height),
                   {"svg": [width, height], "png": list(rendered.size)})
-    floor_text = (out / "figures" / "controls-plan.svg").read_text(encoding="utf-8")
+    floor_path = out / "figures" / "controls-plan.svg"
+    floor_text = floor_path.read_text(encoding="utf-8")
     check("superseded living supply markers absent",
           "P01 240W" not in floor_text and "P03 150W" not in floor_text
           and "P01 480 W class: hatch" in floor_text, "P01 location intentionally unplotted")
+    floor = ElementTree.parse(floor_path).getroot()
+    groups = [element for element in floor.iter() if "data-fixture-id" in element.attrib]
+    plotted = {element.attrib["data-fixture-id"]: element for element in groups}
+    expected_figures = {
+        f["id"]: (f["circuit"], int(f["cct"].removesuffix("K")),
+                  f["path_ft"] or [[f["x_ft"], f["z_ft"]]])
+        for f in m["lighting"]["fixtures"]
+    }
+    expected_figures.update({
+        p["id"]: ("X-" + p["id"], p["cct_k"], p["polyline_ft"]) for p in curtains
+    })
+    check("controls plan fixture identities", len(groups) == len(plotted) == 108
+          and set(plotted) == set(expected_figures), "104 master fixtures and four selected curtain strips")
+    min_x, min_z, scale = (float(floor.attrib[key]) for key in ("data-min-x", "data-min-z", "data-scale"))
+    def projected(point):
+        return (40 + (point[0] - min_x) * scale, 115 + (point[1] - min_z) * scale)
+    def near(a, b):
+        return all(abs(x - y) <= .02 for x, y in zip(a, b))
+    geometry_errors = []
+    for ident, (circuit, cct, points) in expected_figures.items():
+        group = plotted[ident]
+        marker = next((e for e in group if e.attrib.get("data-marker") == "1"), None)
+        match = re.fullmatch(r"translate\(([-\d.]+) ([-\d.]+)\)", marker.attrib["transform"]) if marker is not None else None
+        path = next((e for e in group if e.tag.endswith("polyline")), None)
+        actual_points = [tuple(map(float, p.split(","))) for p in path.attrib["points"].split()] if path is not None else []
+        if (group.attrib["data-circuit"] != circuit or int(group.attrib["data-cct-k"]) != cct
+                or not match or not near(tuple(map(float, match.groups())), projected(points[len(points) // 2]))
+                or (len(points) > 1 and (len(actual_points) != len(points)
+                    or not all(near(a, projected(b)) for a, b in zip(actual_points, points))))):
+            geometry_errors.append(ident)
+    check("controls plan fixture geometry, circuit and CCT", not geometry_errors, geometry_errors)
+    board_groups = [element for element in floor.iter() if "data-board-id" in element.attrib]
+    expected_boards = {c["board"]: c["board_xz_ft"] for c in m["lighting"]["controls"]["circuits"]}
+    board_errors = []
+    for board in board_groups:
+        ident = board.attrib["data-board-id"]
+        match = re.fullmatch(r"translate\(([-\d.]+) ([-\d.]+)\)", board.attrib["transform"])
+        if ident not in expected_boards or not match or not near(tuple(map(float, match.groups())), projected(expected_boards[ident])):
+            board_errors.append(ident)
+    check("controls plan board geometry", len(board_groups) == len(expected_boards)
+          and {b.attrib["data-board-id"] for b in board_groups} == set(expected_boards)
+          and not board_errors, board_errors)
+    check("controls plan current CCT legend and route hold",
+          all(label in floor_text for label in ("2700 K: LOW", "3000 K: reading", "4000 K: most HIGH",
+                                                "Lines are fittings, not cable routes."))
+          and "3000 K (main" not in floor_text, "fixed CCT and conceptual routes")
     index = (out / "source-index.md").read_text(encoding="utf-8")
     for href in re.findall(r"\]\((sources/[^)]+)\)", index):
         check(f"source index link {href}", (out / href).is_file(), href)

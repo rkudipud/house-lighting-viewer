@@ -1,16 +1,15 @@
 {
   "status": "PASS_exact_public_viewer_rebuild",
   "constructionRelease": false,
-  "publicationAuthorized": false,
-  "masterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-  "sourceManifestSha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1",
-  "htmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
-  "htmlBytes": 2590423,
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "sourceManifestSha256": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
+  "htmlSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
+  "htmlBytes": 2613988,
   "nodeVersion": "v26.6.0",
   "pinnedPackages": {
     "three": "0.181.1",
     "esbuild": "0.27.0"
   },
   "privateMasterUsed": false,
-  "method": "Clean temporary copy; npm ci from pinned package lock; public-data rebuild; byte comparison against integrated root viewer; temporary dependencies removed."
+  "method": "Rebuilt from the public source using the installed locked dependencies and compared the resulting bytes against the root viewer."
 }

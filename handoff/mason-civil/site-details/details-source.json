@@ -1,30 +1,30 @@
 {
-  "source_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "source_master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "construction_release": false,
   "sheets": [
     {
       "id": "C01-ceiling-section",
       "title": "Ceiling, cove and curtain section",
       "file": "C01-ceiling-section.svg",
-      "sha256": "8dfbd5064b621efa66229603e1cdc1815f9cbb2cdbfaa6a78ccf3e3e0015bac7"
+      "sha256": "0f344952c3c0195679cb40febc252486b40d2ba3f22f597f3eff2ad43d61599f"
     },
     {
       "id": "C02-openings-stair",
       "title": "Opening register and stair site survey",
       "file": "C02-openings-stair.svg",
-      "sha256": "baae1a72e0417b4d79e24631af1c063532429d7b52260bf1d17735be0661d3ed"
+      "sha256": "7882ee1c432ebade9cf366307d9bcf7e3c674beac4b4857e69500c5226ddeccb"
     },
     {
       "id": "C03-pooja-lofts",
       "title": "Pooja front, loft and wardrobe coordination",
       "file": "C03-pooja-lofts.svg",
-      "sha256": "e015f51966aeaff6ba069bda202428a5b2175313d4841a54135ebd534e19718e"
+      "sha256": "c4e8fef4cc00f166f1d146f955b1c76bb68d9810bf99f1d383321e61c88bfb24"
     },
     {
       "id": "C04-site-checklist",
       "title": "Per-floor site and professional checklist",
       "file": "C04-site-checklist.svg",
-      "sha256": "7b9cd73b64b08384232d6bfa7049016cad651542a006a0fa5d89ec8fe4861136"
+      "sha256": "bb3b61a6e8d46823f2cff25a8d2ff65c6122154d66686b6e83c3339052c3846d"
     }
   ],
   "selected_strips": [

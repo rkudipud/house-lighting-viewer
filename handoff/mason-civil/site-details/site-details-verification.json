@@ -1,26 +1,26 @@
 {
   "schema": "civil_details_receipt/1",
-  "verified_utc": "2026-11-18T11:19:56.785459+00:00",
+  "verified_utc": "2026-11-19T22:33:52.026707+00:00",
   "source_master": {
-    "path": "handoff/source-basis/house-design.json",
-    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-    "bytes": 1591969
+    "path": "not-distributed/house-design.json",
+    "sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+    "bytes": 1602914
   },
   "construction_release": false,
   "source_manifest": {
     "file": "details-source.json",
-    "sha256": "f0226f57c7f62e9d63ee8aebe9d8253f42a3fe0b38c86c3fcf1adbd4b3f30cb6",
+    "sha256": "0a0ff5ae81b081b8653d7dda11c1db723a453f06a13d7862c3e37109457f085b",
     "bytes": 1459
   },
   "opening_register": {
     "file": "opening-register.json",
-    "sha256": "d8be1578c523854175f22dcf9131dfe38fbb6755dfe95a27a0865f7c908f25cf",
+    "sha256": "bba81bce28362e79a3edd98f6fe383cd459e91b6d6cf86418da7340939914a97",
     "bytes": 11792
   },
   "pdf": {
     "file": "site-coordination-details.pdf",
-    "sha256": "459724dd50f3c989631496ede69596cc7c18e07c58be15e65295413d603c1ce8",
-    "bytes": 193689
+    "sha256": "5938cea6223c9cbe3c7b02573aadf0e2f6003897d3712e24063f911a1062f73c",
+    "bytes": 202528
   },
   "sheets": [
     {
@@ -28,15 +28,15 @@
       "title": "Ceiling, cove and curtain section",
       "svg": {
         "file": "C01-ceiling-section.svg",
-        "sha256": "8dfbd5064b621efa66229603e1cdc1815f9cbb2cdbfaa6a78ccf3e3e0015bac7",
-        "bytes": 9657
+        "sha256": "0f344952c3c0195679cb40febc252486b40d2ba3f22f597f3eff2ad43d61599f",
+        "bytes": 10123
       },
       "png": {
         "file": "C01-ceiling-section.png",
-        "sha256": "17f9563b1e6d7cde8b77aa18265d084c83c45e5f9218dd00fb51709e162e3b7e",
-        "bytes": 447734
+        "sha256": "5c28f1a154811026892bd72c6f9d8975d96c0a92a87528e387b1095b287b81e0",
+        "bytes": 460198
       },
-      "text_count": 42,
+      "text_count": 45,
       "outside_text": [],
       "text_overlaps": []
     },
@@ -45,15 +45,15 @@
       "title": "Opening register and stair site survey",
       "svg": {
         "file": "C02-openings-stair.svg",
-        "sha256": "baae1a72e0417b4d79e24631af1c063532429d7b52260bf1d17735be0661d3ed",
-        "bytes": 16326
+        "sha256": "7882ee1c432ebade9cf366307d9bcf7e3c674beac4b4857e69500c5226ddeccb",
+        "bytes": 16681
       },
       "png": {
         "file": "C02-openings-stair.png",
-        "sha256": "188ca9943cfd3c384c62ac5cd7f72b56eb5178c958e81dfbb1dc9d85e24e94ab",
-        "bytes": 513587
+        "sha256": "1fa340d3714ede7ca431b2297b53ed4be9492ad046ab194d0c3cab6cf1a7252b",
+        "bytes": 518185
       },
-      "text_count": 117,
+      "text_count": 119,
       "outside_text": [],
       "text_overlaps": []
     },
@@ -62,15 +62,15 @@
       "title": "Pooja front, loft and wardrobe coordination",
       "svg": {
         "file": "C03-pooja-lofts.svg",
-        "sha256": "e015f51966aeaff6ba069bda202428a5b2175313d4841a54135ebd534e19718e",
-        "bytes": 8884
+        "sha256": "c4e8fef4cc00f166f1d146f955b1c76bb68d9810bf99f1d383321e61c88bfb24",
+        "bytes": 9239
       },
       "png": {
         "file": "C03-pooja-lofts.png",
-        "sha256": "ebe7f0de7dec435ef1bd63549e3bb81487dcedd5932c0043220a7ea480058c0d",
-        "bytes": 376677
+        "sha256": "cf508ecd5acf3c6a243ce4405adcc937a4b11a830a08aa3adfe2ea01567cefc0",
+        "bytes": 381457
       },
-      "text_count": 38,
+      "text_count": 40,
       "outside_text": [],
       "text_overlaps": []
     },
@@ -79,15 +79,15 @@
       "title": "Per-floor site and professional checklist",
       "svg": {
         "file": "C04-site-checklist.svg",
-        "sha256": "7b9cd73b64b08384232d6bfa7049016cad651542a006a0fa5d89ec8fe4861136",
-        "bytes": 10393
+        "sha256": "bb3b61a6e8d46823f2cff25a8d2ff65c6122154d66686b6e83c3339052c3846d",
+        "bytes": 10748
       },
       "png": {
         "file": "C04-site-checklist.png",
-        "sha256": "f128d3f6c07b28a9d2975f3de068a133d761b6a2fb564e23944ec730101114e5",
-        "bytes": 493431
+        "sha256": "e548d0c4618a6a2f5c295d9541a4a144339bb7aa1958d1bb0d63a0a99c966191",
+        "bytes": 497689
       },
-      "text_count": 49,
+      "text_count": 51,
       "outside_text": [],
       "text_overlaps": []
     }
@@ -133,6 +133,10 @@
       "ok": true
     },
     {
+      "check": "R05 reported heights and unresolved slab are explicit",
+      "ok": true
+    },
+    {
       "check": "pooja choice and structural holds represented",
       "ok": true
     },
@@ -149,14 +153,14 @@
       "ok": true
     }
   ],
-  "checks_passed": 12,
-  "checks_total": 12,
+  "checks_passed": 13,
+  "checks_total": 13,
   "render": {
     "browser": "headless Edge 157.0.4341.60",
     "network_requests": []
   },
   "generators": {
-    "civil_details.mjs": "94c8ebefa6ec6f914d0fa3438601a084794ff8e3c2380bfc93d4dad08392afaa",
-    "render_civil_details.py": "d256e52b8e2022d310e1602565d2513d99ba0b867e8952128ac7d98ccc557cf3"
+    "civil_details.mjs": "e4a75830cef493f1a5c9f8f70483d89e1876e263d3eb96218e4b4ae48179c56a",
+    "render_civil_details.py": "d72bafcc4a4c7a6246d08c51bff9fd95fb63148eab5a7e1ff5b59f71f74b0eba"
   }
 }

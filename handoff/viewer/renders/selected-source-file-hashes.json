@@ -1,9 +1,22 @@
 {
   "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "viewer_html_sha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
   "files": {
-    "01-whole-flat-dollhouse.png": "6c3b2f19e20d6257d5e39506b518c9af235f917d767297354eaad04e7acbb6af",
-    "02-living-light-and-curtains.png": "5caea5f0b948af115d3ed46e10883e489f52689e241eb03bb9f4a9d006def178",
-    "03-master-proposed-interiors.png": "68e99b2522e00551576f72198a6d6616f545d5bc596b5136e5731d908a986c94",
-    "render-receipt.json": "3aec8b9c8a3347e4ba8442a0fe05d62e3dc6dcd2f70f8cc02e5a4b3f8cb51951"
+    "01-whole-flat-dollhouse.png": {
+      "sha256": "47e1d9fd50604a09c6b533ee44f13f30c1f652b34d6c5fc075b30d33734dbd4e",
+      "bytes": 388952
+    },
+    "02-living-light-and-curtains.png": {
+      "sha256": "4ee840b2161b40a3e6312fed1fe5250c691bad7b154fd7b07eb0a9f55674eadc",
+      "bytes": 427069
+    },
+    "03-master-proposed-interiors.png": {
+      "sha256": "9356f538a962c62d928e4e0101b5e50a26292aa00c2e5df1719742a019bd74a0",
+      "bytes": 539423
+    },
+    "render-receipt.json": {
+      "sha256": "699cde220459e053761200b735caf30e673d13bb0acbaf8e0e1150a7f2a4981b",
+      "bytes": 2265
+    }
   }
 }

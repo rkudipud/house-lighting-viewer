@@ -1,5 +1,6 @@
 {
   "schema": "house-local-integration/1",
+  "historicalNotice": "This records an earlier local integration only. Current master, viewer, deliveries and holds are documented by the current handoff and copy receipts; earlier counts and publication statements below are historical.",
   "status": "local-design-review-simulation-addendum-awaiting-review",
   "constructionRelease": false,
   "productRelease": false,

@@ -151,10 +151,9 @@ export function prepare(source,expected=DEFAULT_SHA){
   assert.equal(PN.existing_construction.outside_wall_extension.reported,true);
   assert.equal(PN.existing_construction.outside_wall_extension.measured_geometry,null);
   assert.equal(PN.geometry_hold.new_or_deeper_cutting_authorized,false);
-  assert.match(V.pooja.rendering_hold,/front outline and dimensions/);
-  assert.match(V.pooja.rendering_hold,/physical back or structural cross-section/);
   assert.equal(V.pooja.display_arrangement?.choice,'Small idols with a framed picture behind');
-  assert.equal(V.pooja.display_arrangement?.construction_release,false);
+  assert.equal(V.pooja.display_arrangement.construction_release,false);
+  assert.match(V.pooja.rendering_hold,/conceptual placeholders only/);
 
   // rooms (assembled geometry in metres, nominal sizes kept for labels)
   const rooms=P.rooms.map(r=>({
@@ -204,15 +203,6 @@ export function prepare(source,expected=DEFAULT_SHA){
   const storageAll=house.storage.items;
   const storage=storageAll.filter(i=>!suppressedIds.has(i.id)).map(i=>({...i,drawBounds:boundsOf(i)}));
   assert.equal(storageAll.length,18);assert.equal(suppressedIds.size,5);assert.equal(storage.length,13);
-  const selectedCabinets=house.storage.homeowner_selections.included_optional_storage;
-  assert.equal(selectedCabinets.status,'homeowner_selected_subject_to_site_holds');
-  assert.deepEqual(selectedCabinets.items.map(i=>i.id).sort(),['ST-R04a-WR01','ST-R08-UC01']);
-  const selectedCabinetLabels={'ST-R04a-WR01':'Dressing cabinet','ST-R08-UC01':'Utility cabinet'};
-  for(const id of Object.keys(selectedCabinetLabels)){
-    const item=storage.find(i=>i.id===id);
-    assert.equal(item?.homeowner_selection?.status,'selected_subject_to_site_holds');
-    assert.equal(house.storage.item_applicability[id].status,'homeowner_selected_conditional_review');
-  }
 
   // item list for elevations (plan-only items are flagged)
   const items=[];
@@ -264,7 +254,9 @@ export function prepare(source,expected=DEFAULT_SHA){
       tenantBeds.push({...env,id:`TENANT-BED-${s.room_id}`,fromStorage:s.id});
       continue;
     }
-    addItem({id:s.id,kind:s.kind,label:selectedCabinetLabels[s.id]||s.kind.replaceAll('_',' '),rect:s.drawBounds,h:s.height_range_m,storage:s,src:'master storage'});
+    const selection=s.homeowner_selection;
+    addItem({id:s.id,kind:s.kind,label:s.kind.replaceAll('_',' '),rect:s.drawBounds,h:s.height_range_m,storage:s,src:'master storage',
+      ...(selection?{hNote:`homeowner-selected conditional; unmeasured, not construction-ready: ${selection.condition}`}:{})});
   }
   {
     const band=ML.relationship_zones_m.wardrobe_wall_band.rect,w04=ML.openings.W04.span_m;

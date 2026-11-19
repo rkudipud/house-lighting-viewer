@@ -38,7 +38,7 @@ def redact(value, mappings):
     return value
 
 
-def externalize_pdf(data, literature):
+def externalize_pdf(data, literature, receipt_name):
     import pymupdf
 
     changed = False
@@ -74,7 +74,7 @@ def externalize_pdf(data, literature):
             "do not guarantee the bytes currently served by a manufacturer URL.\n\n"
             "All product, exact-chain, availability, pricing, installation and professional "
             "approval holds remain. Source-versus-delivered hashes and explicit omissions are "
-            "recorded in repository-copy-receipt.json.",
+            f"recorded in {receipt_name}.",
             fontsize=12,
         )
         return document.tobytes(garbage=4, deflate=True)
@@ -97,12 +97,18 @@ def main():
                         metavar=("SOURCE_FILE", "SHA256"))
     parser.add_argument("--external-literature-map", type=Path,
                         help="Official URL map; matching source PDFs are verified but not copied")
+    parser.add_argument("--receipt-name", default="repository-copy-receipt.json",
+                        help="Output receipt filename; use a distinct name to preserve an earlier copy receipt")
     args = parser.parse_args()
     source = args.source.resolve()
     destination = args.destination.resolve()
     repo = Path(__file__).resolve().parents[1]
     if not destination.is_relative_to(repo / "handoff"):
         parser.error("Destination must be inside this repository's handoff directory")
+    if (Path(args.receipt_name).name != args.receipt_name
+            or not args.receipt_name.endswith(".json")
+            or args.receipt_name == "public-file-hashes.json"):
+        parser.error("Receipt name must be a plain JSON filename distinct from public-file-hashes.json")
     mappings = [(PureWindowsPath(str(source)), destination.relative_to(repo).as_posix())]
     for original, public in args.reference_map:
         relative_file(repo, public)
@@ -193,7 +199,7 @@ def main():
             if safe != text:
                 public = safe.encode("utf-8")
         elif path.suffix.lower() == ".pdf" and literature:
-            public = externalize_pdf(data, literature)
+            public = externalize_pdf(data, literature, args.receipt_name)
         paths_redacted = public != data
         if literature and path.suffix in {".md", ".html"}:
             text = public.decode("utf-8-sig")
@@ -204,7 +210,7 @@ def main():
                     "Public-copy note: manufacturer PDFs are not redistributed. Links open "
                     "official sources; mentions of retained archives describe the privately "
                     "inspected source evidence. Source and delivered hashes differ where "
-                    "paths or links were adapted; see repository-copy-receipt.json."
+                    f"paths or links were adapted; see {args.receipt_name}."
                 )
                 if path.suffix == ".md":
                     text = "> " + note + "\n\n" + text
@@ -246,13 +252,12 @@ def main():
         ),
         "files": records,
     }
-    (destination / "repository-copy-receipt.json").write_text(
+    receipt_path = destination / args.receipt_name
+    receipt_path.write_text(
         json.dumps(receipt, indent=2) + "\n", encoding="utf-8"
     )
     public_hashes = {record["path"]: record["sha256"] for record in records}
-    public_hashes["repository-copy-receipt.json"] = digest(
-        (destination / "repository-copy-receipt.json").read_bytes()
-    )
+    public_hashes[args.receipt_name] = digest(receipt_path.read_bytes())
     (destination / "public-file-hashes.json").write_text(
         json.dumps(public_hashes, indent=2) + "\n", encoding="utf-8"
     )

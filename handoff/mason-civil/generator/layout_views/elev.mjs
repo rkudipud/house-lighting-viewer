@@ -43,10 +43,15 @@ function fitBox(S,box,lines,{sizes=[.1,.09,.08,.07,.062],color='#203b43',weight=
   return false;
 }
 
-// HD-11 datum: FFL 0.000; slab underside and raised centre panel are derived (unmeasured); bath/utility/lobby levels were not provided
+// R05 has its own reported band height; its slab and centre-panel section are not surveyed.
 const RAISED_ROOMS=new Set(['living','dining','master','children']);
 function levelsOf(D,roomId){
   const H=D.H,DER=['derived \u2013 unmeasured','derived'],NP=['not provided; placeholder','placeholder'];
+  if(roomId==='children'){
+    const c=D.house.lighting.design_inputs.ceilings.CBR;
+    assert(c?.level_basis&&Number.isFinite(c.band_h_m)&&Number.isFinite(c.tray_h_m),'R05 reported ceiling levels are missing');
+    return {top:c.band_h_m,tray:null,name:'false-ceiling band',st:['reported, unsurveyed','reported']};
+  }
   if(roomId==='kitchen')return {top:H.kitchenFlat,tray:null,name:'flat ceiling (band level)',st:DER};
   if(roomId==='bath1'||roomId==='bath2')return {top:H.bath,tray:null,name:'bath ceiling',st:NP};
   if(roomId==='utility')return {top:H.utility,tray:null,name:'utility ceiling',st:NP};
@@ -132,23 +137,21 @@ function buildNotes(D,p,lv){
   const bath=D.baths.find(b=>b.renderer_room_id===p.roomId);
   if(bath&&p.dir==='S'){
     const vn=bath.vanity,wc=bath.wc;
-    n.push(`Vanity ${f2(vn.height_range_m[0])}\u2013${f2(vn.height_range_m[1])} m, basin top ${f2(vn.basin_top_m)} m, faucet ${f2(vn.faucet_top_m)} m; mirror ${vn.mirror_size_m[0]} \u00d7 ${vn.mirror_size_m[1]} m centred at ${f2(vn.mirror_center_xyz_m[1])} m. WC cistern to ${f2(wc.cistern_height_m)} m, seat ${f2(wc.seat_height_m)} m (dashed). All fixture dimensions are proposed, not site measured.`);
+    n.push(`Vanity ${f2(vn.height_range_m[0])}\u2013${f2(vn.height_range_m[1])} m, basin top ${f2(vn.basin_top_m)} m, faucet ${f2(vn.faucet_top_m)} m; mirror ${vn.mirror_size_m[0]} \u00d7 ${vn.mirror_size_m[1]} m centred at ${f2(vn.mirror_center_xyz_m[1])} m. WC cistern to ${f2(wc.cistern_height_m)} m, seat ${f2(wc.seat_height_m)} m (dashed).`);
   }
   if(bath&&p.dir==='S'){
     const sh=bath.shower;
-    n.push(`Shower: head ${f2(sh.head_xyz_m[1])} m, mixer ${f2(sh.mixer_xyz_m[1])} m, glass screen ${f2(sh.screen_height_m)} m. These are proposed dimensions, not site measured. Kit-kat tile only on this faucet wall inside the shower; plain porcelain elsewhere.`);
+    n.push(`Shower: head ${f2(sh.head_xyz_m[1])} m, mixer ${f2(sh.mixer_xyz_m[1])} m, glass screen ${f2(sh.screen_height_m)} m. Kit-kat tile only on this faucet wall inside the shower; plain porcelain elsewhere.`);
   }
   if(bath&&p.dir==='W'){
     const sh=bath.shower;
-    n.push(`Shower niche ${sh.niche_width_m} \u00d7 ${sh.niche_height_m} m, ${Math.round(sh.niche_depth_m*1000)} mm deep, centred ${f2(sh.niche_center_xyz_m[1])} m: proposed model dimensions, not site measured. No new cutting without professional approval. Kit-kat covers this wet-area wall except the niche and vent.`);
+    n.push(`Shower niche ${sh.niche_width_m} \u00d7 ${sh.niche_height_m} m, ${Math.round(sh.niche_depth_m*1000)} mm deep, centred ${f2(sh.niche_center_xyz_m[1])} m. Kit-kat covers this wet-area wall except the niche and vent.`);
   }
   for(const it of p.items){
     if(it.kind==='bath-shower'||it.kind==='bath-vanity'||it.kind==='bath-wc')continue;
     if(it.h){
-      const selectedHeld=it.storage?.homeowner_selection?.status==='selected_subject_to_site_holds';
-      const status=selectedHeld?' \u2014 conditionally selected, unmeasured placeholder; not fabrication dimensions':'';
-      if(it.h[1]==null)n.push(`${it.id} ${it.label}: bottom ${f2(it.h[0])} m, top not in the master${it.outside?' \u2014 seen beyond the open edge':''}${status}.`);
-      else n.push(`${it.id} ${it.label}: ${f2(it.h[0])}\u2013${f2(it.h[1])} m${it.outside?' \u2014 seen beyond the open edge':''}${it.hNote?` (${it.hNote})`:''}${status}.`);
+      if(it.h[1]==null)n.push(`${it.id} ${it.label}: bottom ${f2(it.h[0])} m, top not in the master${it.outside?' \u2014 seen beyond the open edge':''}.`);
+      else n.push(`${it.id} ${it.label}: ${f2(it.h[0])}\u2013${f2(it.h[1])} m${it.outside?' \u2014 seen beyond the open edge':''}${it.hNote?` (${it.hNote})`:''}.`);
     }
   }
   if(p.items.some(i=>!i.h))n.push('Items below the floor line are footprint only: their height is not in the master, so none is drawn.');
@@ -156,7 +159,7 @@ function buildNotes(D,p,lv){
   if(bed)n.push(`Tenant's own bed: dashed queen (1524 mm) to king (1829 mm) \u00d7 1981 mm mattress envelope, head against this wall. Not joinery and not a tenant frame. Fixed bedside cabinets are omitted by the homeowner (HD-14); tenants may use movable tables.`);
   if(p.roomId==='master'){
     const R=D.ML.relations,dn=DIR_NAME[p.dir];
-    if(R.wardrobe_wall.compass_wall===dn)n.push('Split wardrobe around W03 approved in principle; OPT-E BWP plywood carcass and laminate shutters selected. The relationship band is not fabrication geometry: dimensions remain held for site measurement. Loft size and support are held.');
+    if(R.wardrobe_wall.compass_wall===dn)n.push('The split wardrobe around W03 is approved in principle. These are relationship bands only: size, shutters and interior design remain unmeasured. Loft support and dimensions remain held; no fabrication detail is drawn.');
     if(R.tv_door_wall.compass_wall===dn)n.push('TV opposite the bed: its position along this wall is held, so it is not drawn.');
     if(R.dressing_wall.compass_wall===dn)n.push('Dressing passage to R04a is on this wall, beside the TV/door wall; modelled plan position, not site verified.');
     if(R.headboard_wall.compass_wall===dn)n.push('Bed-head test wall only (H-MBR-BED; the tenant bed is not supplied): W04 sits at the end away from the wardrobe wall. W03 curtain pocket is held (H-MBR-W03).');
@@ -165,7 +168,7 @@ function buildNotes(D,p,lv){
     const S5=D.house.storage.context_constraints_R05.switch_strip;
     if(p.dir==='S'&&!p.suffix)n.push(`Latch-side switch board (R05 only switch zone in the master): ${S5.v_m[0]}\u2013${S5.v_m[1]} m along the wall; keep free. Height not in the master.`);
   }
-  if(p.roomId==='children'&&p.openings.some(o=>o.curtain))n.push(`CBR-H1 to H6 active/switchable at accepted positions (C37); product chain held. Curtain, bed and remaining fitting coordination have site holds. Curtain top ${f2(D.H.curtainTopAssumed)} m is an assumed HD-11 drawing top, not measured hardware (legacy 2.64 m retired).`);
+  if(p.roomId==='children'&&p.openings.some(o=>o.curtain))n.push(`CBR-H1 to H6, cove and LINE are modelled on for review. Cove and LINE installation remain held (H-CBR-CEIL); bedside and desk fittings remain held. Window and pocket are unmeasured. Curtain top ${f2(D.H.curtainTopAssumed)} m is an assumed HD-11 drawing top, not measured hardware.`);
   if(p.roomId==='kitchen')n.push(`Kitchen ceiling is one flat level at ${f2(D.H.kitchenFlat)} m (derived \u2013 unmeasured); no kitchen step. The hall cross-beam soffit is unmeasured (H-HALL-BEAM).`);
   if(p.roomId==='dining'&&p.dir==='S')n.push('Hall cross-beam depth and soffit are unmeasured (H-HALL-BEAM): DIN-H2/H3 and FW-T1 are held; the kitchen beyond is open to the dining.');
   if(p.openings.some(o=>o.curtain||['living-window','master-window','master-top-window'].includes(o.id)))n.push('Concealed ceiling curtain pocket: TWO tracks (sheer + blackout, HD-14). Clear pocket width/depth, track spacing and stack are unverified; the outline is indicative only.');
@@ -184,7 +187,7 @@ export function drawPanel(S,D,p,ox,oy,lay,rec){
   let hy=oy+28+tl.length*22;
   S.text(ox+16,hy,`Standing inside, looking ${DIR_NAME[p.dir].toUpperCase()} \u00b7 left to right`,12.5,'muted');hy+=17;
   S.text(ox+16,hy,`${f2(L)} m long \u00b7 tag ${p.id}`,11.5,'muted mono');hy+=17;
-  S.text(ox+16,hy,'HD-11 LEVELS UNMEASURED \u00b7 HEADS ASSUMED',11.5,'red','start','font-weight="700"');
+  S.text(ox+16,hy,p.roomId==='children'?'R05 LEVELS REPORTED \u00b7 SITE VERIFY':'HD-11 LEVELS UNMEASURED \u00b7 HEADS ASSUMED',11.5,'red','start','font-weight="700"');
   keyPlan(S,D,p,ox+w-84,oy+40);
   // elevation group (metres, y flipped through negative heights)
   S.add(`<g transform="translate(${ox+PADX} ${oy+floorY}) scale(${SCL})">`);
@@ -192,7 +195,7 @@ export function drawPanel(S,D,p,ox,oy,lay,rec){
   let loftHeld=false;
   const ceilOcc=[],placed=[],openLabels=[];
   // ceiling void to the slab
-  if(top!=null)S.rect([0,-slab,L,-top],'#e9edf1','none',0);
+  if(top!=null&&p.roomId!=='children')S.rect([0,-slab,L,-top],'#e9edf1','none',0);
   for(const wl of p.walls)S.rect([wl.u0,-wallTop,wl.u1,0],'#f4f1ea','none',0);
   for(const g of p.gaps){
     const open=g.openTo||g.u1-g.u0>.15;
@@ -226,7 +229,7 @@ export function drawPanel(S,D,p,ox,oy,lay,rec){
     S.add('<g data-zone="master-wardrobe-wall-held">');
     for(const [a,c] of [[b0,y0],[y1,b1]]){
       S.rect([a,-top,c,0],'url(#zone)','#5b7795',.012,'stroke-dasharray=".07 .04"');
-      fitBox(S,[a,-top,c,0],['WARDROBE ZONE','in principle','sizes held'],{color:'#466c92',sizes:[.09,.08]});
+      fitBox(S,[a,-top,c,0],['WARDROBE ZONE','in principle','unmeasured'],{color:'#466c92',sizes:[.09,.08]});
     }
     S.add('</g><g data-zone="master-loft-held">');
     S.rect([b0,-slab,b1,-top],'url(#loft)','#7a6fa8',.012,'stroke-dasharray=".07 .04"');
@@ -274,7 +277,7 @@ export function drawPanel(S,D,p,ox,oy,lay,rec){
       const e=p.edge,[s0,s1]=uRange(e,sh.screen_segment_m[0][1],sh.screen_segment_m[1][1]);
       S.add(`<g data-bath-id="${esc(bath.id)}" data-bath-detail="shower-screen">`);
       S.rect([s0,-sh.screen_height_m,s1,0],'none','#4f9a98',.014,'stroke-dasharray=".06 .04"');
-      S.label(s0+.05,-.12,`screen ${f2(sh.screen_height_m)} m proposed`,.07,'#2f6f6c','start');
+      S.label(s0+.05,-.12,`screen height ${f2(sh.screen_height_m)} m (in front)`,.07,'#2f6f6c','start');
       S.add('</g>');
     }
   }
@@ -305,13 +308,13 @@ export function drawPanel(S,D,p,ox,oy,lay,rec){
       const BASE={'living-window':'LIV','dining-window':'DIN','master-top-window':'MBR-rear','master-window':'MBR-side'};
       S.add(`<g data-curtain-for="${esc(o.id)}">`);
       if(o.curtain){
-        // children's curtain: top is the assumed HD-11 drawing level (legacy 2.64 m retired); fittings held under H-CBR-CURTAIN
+        // The window and curtain-pocket dimensions remain placeholders even though the strip is selected for review.
         const [c0,c1]=uRange(p.edge,o.curtain.span[0],o.curtain.span[1]);
-        S.rect([c0,-o.curtain.top,c1,-o.curtain.bottom],'none','#b02f2f',.012,'stroke-dasharray=".05 .04"');
-        S.label((c0+c1)/2,-o.curtain.top+.14,'curtain drop HELD (H-CBR-CURTAIN)',.07,'#b02f2f');
-        S.label((c0+c1)/2,-o.curtain.top+.24,`top ${f2(o.curtain.top)} assumed, not hardware`,.065,'#b02f2f');
+        S.rect([c0,-o.curtain.top,c1,-o.curtain.bottom],'none','#9b641c',.012,'stroke-dasharray=".05 .04"');
+        S.label((c0+c1)/2,-o.curtain.top+.14,'curtain window / pocket unmeasured',.07,'#9b641c');
+        S.label((c0+c1)/2,-o.curtain.top+.24,`top ${f2(o.curtain.top)} assumed, not hardware`,.065,'#9b641c');
         ceilOcc.push([c0,c1]);
-        rec.curtains.push({opening:o.id,panel:p.id,kind:'cbr-held-assumed-top'});
+        rec.curtains.push({opening:o.id,panel:p.id,kind:'cbr-unmeasured-assumed-top'});
       }else if(BASE[o.id]&&top!=null){
         const held=BASE[o.id]==='MBR-rear',win=held?cw.pending_windows[BASE[o.id]]:cw.windows[BASE[o.id]];
         assert(win,`curtain record for ${BASE[o.id]}`);
@@ -388,9 +391,9 @@ export function drawPanel(S,D,p,ox,oy,lay,rec){
   const ext=.12;
   S.line([-ext,0],[L+ext,0],'#203b43',.035);
   S.label(-ext+.02,.13,'FFL 0.00',.07,'#5d7174','start');
-  S.line([-ext,-slab],[L+ext,-slab],'#5d6e77',.018,'stroke-dasharray=".08 .05"');
+  if(p.roomId!=='children')S.line([-ext,-slab],[L+ext,-slab],'#5d6e77',.018,'stroke-dasharray=".08 .05"');
   const merged=lv.tray!=null&&Math.abs(lv.tray-slab)<.005;
-  S.label(.02,-slab-.05,`slab underside ${f2(slab)} (derived \u2013 unmeasured)`,.075,'#5d6e77','start');
+  if(p.roomId!=='children')S.label(.02,-slab-.05,`slab underside ${f2(slab)} (derived \u2013 unmeasured)`,.075,'#5d6e77','start');
   if(top!=null){
     S.line([-ext,-top],[L+ext,-top],'#203b43',.035);
     const flat=p.roomId==='kitchen';
@@ -415,7 +418,8 @@ export function drawPanel(S,D,p,ox,oy,lay,rec){
       else S.label(L-.03,altY,t,size,color,'end');
     };
     const bathRoom=p.roomId==='bath1'||p.roomId==='bath2';
-    ceilLabel(bathRoom?-top-.05:-top+.1,[`${lv.name} ${f2(top)} (${lv.st[0]})`,`${lv.name==='false-ceiling band'?'band':lv.name.split(' ')[0]} ${f2(top)} (${lv.st[1]})`],.075,'#203b43',{altY:-top-.04});
+    const shownTop=p.roomId==='children'?top.toFixed(3):f2(top);
+    ceilLabel(bathRoom?-top-.05:-top+.1,[`${lv.name} ${shownTop} (${lv.st[0]})`,`${lv.name==='false-ceiling band'?'band':lv.name.split(' ')[0]} ${shownTop} (${lv.st[1]})`],.075,'#203b43',{altY:-top-.04});
     if(lv.tray&&!merged){
       S.line([0,-lv.tray],[L,-lv.tray],'#9b8a5a',.014,'stroke-dasharray=".06 .04"');
       const tvars=[`raised tray ${f2(lv.tray)} \u2014 room centre only (derived \u2013 unmeasured)`,`raised tray ${f2(lv.tray)} (derived)`,`tray ${f2(lv.tray)} (derived)`];

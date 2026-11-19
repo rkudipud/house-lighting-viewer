@@ -1,12 +1,12 @@
 {
   "schema": "civil_room_opening_source_index/1",
   "source_master": {
-    "path": "handoff/source-basis/house-design.json",
-    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+    "path": "not-distributed/house-design.json",
+    "sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
   },
   "source_opening_register": {
-    "path": "handoff/mason-civil/site-details/opening-register.json",
-    "sha256": "d8be1578c523854175f22dcf9131dfe38fbb6755dfe95a27a0865f7c908f25cf"
+    "path": "not-distributed/opening-register.json",
+    "sha256": "bba81bce28362e79a3edd98f6fe383cd459e91b6d6cf86418da7340939914a97"
   },
   "status": "review_only_not_for_construction",
   "scope": "14 room/area records, 21 model openings, 10 carry-forward connections and S01 stair; survey each floor separately",
@@ -980,7 +980,14 @@
     "floor_to_floor_m": 3.3528,
     "band_drop_m": 0.2286,
     "status": "homeowner_stated_unmeasured",
-    "note": "The 3.188 m slab and 2.959 m band elevations depend on assumed slab and finish thicknesses; centre-panel and other room levels are unmeasured."
+    "note": "The older 3.188 m slab and 2.959 m band estimates depend on assumed thicknesses. R05 has separate homeowner-reported levels which conflict with the older slab estimate; its actual slab is unmeasured.",
+    "children_R05": {
+      "source_ref": "house-design.json#/lighting/design_inputs/ceilings/CBR",
+      "band_m": 3.048,
+      "centre_m_approx": 3.2766,
+      "status": "homeowner_reported_approximate_not_surveyed",
+      "slab_status": "unmeasured_conflict_with_older_estimate"
+    }
   },
   "active_children_relationship_source": {
     "canonical_ref": "house-design.json#/source_register/current_children_visual_layout",

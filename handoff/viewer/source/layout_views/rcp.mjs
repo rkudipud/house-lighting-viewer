@@ -121,7 +121,8 @@ export function buildRcp(D,{no,total}){
   const ft2=a=>a.map(p=>[p[0]*FT,p[1]*FT]);
   const tray=(key,fill='#fbf4de')=>{
     const c=CE[key],pts=ft2(c.tray_corners_ft),radii=Array.isArray(c.tray_radii_ft)?c.tray_radii_ft.map(r=>r*FT):c.tray_radii_ft*FT;
-    S.add(`<g data-ceiling="tray-${key}" data-tray-height="${D.H.panel}">`);S.path(roundedPath(pts,radii,true),fill,'#b9a36d',.018);S.add('</g>');
+    const heightBasis=/homeowner-reported/i.test(c.level_basis||'')?'homeowner-reported-approximate-unsurveyed':'derived-reference-unsurveyed';
+    S.add(`<g data-ceiling="tray-${key}" data-tray-height="${c.tray_h_m}" data-height-basis="${heightBasis}">`);S.path(roundedPath(pts,radii,true),fill,'#b9a36d',.018);S.add('</g>');
   };
   tray('HALL');tray('MBR');tray('CBR');
   // frames on the band and the painted-black false-track grooves
@@ -227,10 +228,10 @@ export function buildRcp(D,{no,total}){
   const X0=1200;let y=170;
   y=S.wrap(X0,y+4,lightingNote,440,13,18,'red');y+=10;
   S.text(X0,y+20,'CEILING LEVELS (HD-11, unmeasured)',17,'sect');y+=34;
-  const lv=[['band','2.96 m perimeter band (derived, unmeasured)'],['tray','Raised centre: gypsum/POP panel; level unmeasured (HD-14)'],['flat','Kitchen: one flat ceiling at 2.96 m (band level)'],['beam','Hall cross-beam band \u2014 soffit unmeasured'],['bath','2.40 m bath ceiling (not provided)'],['lobby','2.70 m lobby (not provided; placeholder)'],['utility','2.95 m utility soffit (not provided)'],['loft','Loft / overhead area (dashed)'],['curtain','Curtain pocket, 2 tracks (size indicative)'],['hold','Held curtain pocket W03 (H-MBR-W03)'],['groove','Black-painted false-track groove']];
+  const lv=[['band','2.96 m perimeter band (derived; except R05)'],['r05',`R05 band ${CE.CBR.band_h_m.toFixed(3)}, centre ~${CE.CBR.tray_h_m.toFixed(3)} m (reported)`],['tray','Raised centre: gypsum/POP panel; level unmeasured (HD-14)'],['flat','Kitchen: one flat ceiling at 2.96 m (band level)'],['beam','Hall cross-beam band \u2014 soffit unmeasured'],['bath','2.40 m bath ceiling (not provided)'],['lobby','2.70 m lobby (not provided; placeholder)'],['utility','2.95 m utility soffit (not provided)'],['loft','Loft / overhead area (dashed)'],['curtain','Curtain pocket, 2 tracks (size indicative)'],['hold','Held curtain pocket W03 (H-MBR-W03)'],['groove','Black-painted false-track groove']];
   for(const [k,t] of lv){
     y+=24;
-    const fill={band:LEVEL_FILL.band,tray:'#fbf4de',flat:LEVEL_FILL.flat,beam:'url(#beam)',bath:LEVEL_FILL.bath,lobby:LEVEL_FILL.lobby,utility:LEVEL_FILL.utility,loft:'url(#loft)',curtain:'#e9dff0',hold:'#f3e6e6',groove:'#111'}[k];
+    const fill={band:LEVEL_FILL.band,r05:LEVEL_FILL.band,tray:'#fbf4de',flat:LEVEL_FILL.flat,beam:'url(#beam)',bath:LEVEL_FILL.bath,lobby:LEVEL_FILL.lobby,utility:LEVEL_FILL.utility,loft:'url(#loft)',curtain:'#e9dff0',hold:'#f3e6e6',groove:'#111'}[k];
     S.add(`<rect x="${X0}" y="${y-15}" width="34" height="16" fill="${fill}" stroke="${k==='groove'?'#111':k==='hold'?'#b02f2f':'#8a97a0'}"${k==='loft'||k==='hold'?' stroke-dasharray="6 3"':''}/>`);
     S.text(X0+48,y-2,t,14);
   }
@@ -278,7 +279,7 @@ export function buildRcp(D,{no,total}){
     'MASTER: bed position is a held test centreline (H-MBR-BED); the tenant bed is not supplied. The W03 curtain pocket is held (H-MBR-W03: pocket and loft interface unresolved; offsets unmeasured).',
     CURTAIN_NOTE,
     'S1 MODEL CLASH: assumed MBR-S and CBR strip returns each extend about 0.30 m beyond a modeled room corner. Lines are clipped for display only. Measure pocket ends and coordinate site fit; do not extend or cut from the model.',
-    `CHILDREN\u2019S ROOM: CBR-H1 to H6 and the curtain strip are selected for review. The cove is retained; the outward-shifted LINE paths and cove remain held and unlit. The fan is shown at the unmeasured proposed cove centre. Verify fan sweep, clearances, wiring and ceiling details (H-CBR-*).`,
+    `CHILDREN\u2019S ROOM: the fan is at the nominal room centre with a 1050 mm planning sweep; no product is selected. The cove is retained and LINE paths are shifted outward. Cove and LINE are modelled ON for review, while installation, procurement and operation remain held (H-CBR-CEIL). Verify room, fan, loft, downlight and pocket clearances on site.`,
     'Dining + living share one raised centre panel. The kitchen ceiling is one flat level at band height. Black-painted grooves are drawn only where the master records them (master and children\u2019s rooms).',
     POOJA_NOTE+' LIV-P1 / LIV-P2 are count/load allowances only; inherited positions are held (H-POOJA-GEOMETRY).',
     'Fan points and lofts are assumed; curtain-pocket sizes are indicative only (HD-14). Switch-plate zones are not drawn: the master holds none (only the R05 latch-side strip appears on the children\u2019s elevation).'

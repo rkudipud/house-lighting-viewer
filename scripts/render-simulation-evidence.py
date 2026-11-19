@@ -72,7 +72,10 @@ def main():
             for scene, values in grid["layers"].items():
                 if len(values) != len(zs) or any(len(row) != len(xs) for row in values):
                     raise ValueError("Grid shape mismatch")
-                title = room + " / " + scene + " / exploratory Radiance estimate"
+                title = room + " / " + scene + (
+                    " / historical Radiance baseline, superseded" if room == "CBR"
+                    else " / exploratory Radiance estimate"
+                )
                 lines = [
                     '<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1030" viewBox="0 0 1100 1030">',
                     f"<title>{html.escape(title)}</title>",
@@ -84,7 +87,9 @@ def main():
                     '<text x="80" y="815" font-size="17">Plan x / ft; plan z increases down the page. Blank cells are outside the source mask.</text>',
                     '<text x="50" y="860" font-size="17">P1 excluded; pooja strip/spot and KIT-L1 cove remain HELD. No fixtures moved.</text>',
                     '<text x="50" y="888" font-size="17">Curtain strips have no lux credit. UTL/BAL assume enclosure, not real open-air conditions.</text>',
-                    '<text x="50" y="916" font-size="17">Base-run map; see separate six-room revision. Glare/UGR and daylight not computed; holds remain.</text>',
+                    ('<text x="50" y="916" font-size="17">HISTORICAL CBR: geometry and LOW are superseded; use current review heatmaps.</text>'
+                     if room == "CBR" else
+                     '<text x="50" y="916" font-size="17">Base-run map; see separate six-room revision. Glare/UGR and daylight not computed; holds remain.</text>'),
                     '<text x="50" y="944" font-size="17">Viewer/workbench maps remain separate frozen analytic estimates, not this ray-tracing result.</text>',
                     '<text x="50" y="982" font-size="14">Source: analysis/sim-heatmaps.json. Values are supplied rounded lux; no lighting recalculated.</text>',
                     "</g>", '<g id="cells">',
@@ -137,7 +142,8 @@ def main():
                     f'alt="{html.escape(title)}; generic unmeasured estimate; all holds remain"></a>'
                     f'<figcaption>{html.escape(scene)}: <a href="heatmaps/{stem}.png">PNG</a> / '
                     f'<a href="heatmaps/{stem}.svg">editable SVG</a>. '
-                    'Fixed 0-750 lux colour scale; higher colours clipped, numerical values retained. '
+                    + ('Historical CBR geometry and LOW state are superseded; use the current heatmaps. ' if room == "CBR" else '')
+                    + 'Fixed 0-750 lux colour scale; higher colours clipped, numerical values retained. '
                     'A zero LOW grid means no modelled LOW contribution, not a missing mask.</figcaption></figure>'
                 )
             cards.append("</div></section>")
@@ -145,19 +151,23 @@ def main():
                                     extensions=["tables", "fenced_code"])
     (PACK / "simulation-report.html").write_text(
         page("Exploratory simulation report", '<a href="index.html">Simulation evidence and heatmaps</a>'
-             '<p class="hold">Historical report: its small-room sensitivity not-run statement is superseded only by the '
-             '<a href="revision-all-rooms/index.html">six-room revision</a>. All other limitations and holds remain.</p>' + report_body),
+             '<p class="hold">Historical report: CBR geometry and LOW state predate the current design; use the '
+             '<a href="../lighting/current/heatmaps-summary.pdf">current review heatmaps</a>. Its small-room '
+             'sensitivity not-run statement is superseded by the '
+             '<a href="revision-all-rooms/index.html">six-room revision</a>. Limitations and holds remain.</p>' + report_body),
         encoding="utf-8",
     )
     intro = """
 <a href="../index.html">Electrician handoff</a>
-<h1>Exploratory Radiance simulation - separate evidence addendum</h1>
-<p class="hold"><strong>Local design-review evidence; simulation integration awaits coordinator review.</strong>
+<h1>Historical exploratory Radiance evidence</h1>
+<p class="hold"><strong>Historical baseline, not the current children's-room design.</strong>
+The CBR grids below predate the centred fan, shifted LINE and modelled-ON LOW simulation.
+Use the <a href="../lighting/current/heatmaps-summary.pdf">current review heatmaps</a> for CBR.
 The <a href="revision-all-rooms/index.html">verified six-room small-room sensitivity revision</a>
 is now included. It supersedes only the historical report's not-run statement.
 This page preserves the earlier report and base grids; it is not a construction release.</p>
 <p class="hold"><strong>GENERIC, PROVISIONAL, NOT MEASURED, NOT PRODUCT-SPECIFIC.
-No construction, product, procurement, fabrication or publication approval.</strong>
+No construction, product, procurement or fabrication approval.</strong>
 No fixtures or canonical data were changed. These static ray-tracing estimates do not replace
 the viewer/workbench's frozen analytic maps and do not respond to their sliders.</p>
 <p>Radiance rcontrib 6.0a: backward Monte-Carlo ray tracing with inter-reflection,

@@ -21,6 +21,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--master", required=True, type=Path)
 parser.add_argument("--pack", required=True, type=Path)
 parser.add_argument("--sha", required=True)
+parser.add_argument("--revision-validation", required=True, type=Path)
+parser.add_argument("--revision-receipt", required=True, type=Path)
 args = parser.parse_args()
 master = args.master.resolve()
 pack = args.pack.resolve()
@@ -70,11 +72,28 @@ wardrobe_path = base / "generated" / "wardrobe-interiors-reference-receipt.json"
 notation_path = base / "fragments" / "pooja-notation-hd18.json"
 integration, pooja, supply = data(integration_path), data(pooja_path), data(supply_path)
 wardrobe = data(wardrobe_path)
+revision_validation = data(args.revision_validation)
+revision_receipt = data(args.revision_receipt)
+revision_checks = {c["check"]: c for c in revision_validation["checks"]}
+required_revision_checks = ("master hash", "validated CCT-only successor",
+                            "validated provisional CBR successor", "receipt chain",
+                            "wardrobe reference linkage", "all release flags false")
+if (revision_receipt["validation_sha256"] != digest(args.revision_validation)
+        or revision_receipt["master_sha256"] != args.sha
+        or revision_validation["master_sha256"] != args.sha
+        or revision_validation["status"] != "PASS"
+        or revision_receipt["validation_checks_passed"] != len(revision_validation["checks"])
+        or any(revision_checks.get(name, {}).get("status") != "PASS" for name in required_revision_checks)):
+    sys.exit("Current electrical revision validation is missing, unbound or failed.")
+cct_revision = revision_checks["validated CCT-only successor"]["detail"]
+cbr_revision = revision_checks["validated provisional CBR successor"]["detail"]
 if (integration["after_master_sha256"] != pooja["before_master_sha256"]
         or pooja["after_master_sha256"] != supply["before_master_sha256"]
         or supply["after_master_sha256"] != wardrobe["before_master_sha256"]
-        or wardrobe["after_master_sha256"] != args.sha):
-    sys.exit("Homeowner, pooja, supply/cabinet and wardrobe-reference receipts do not form the expected master chain.")
+        or wardrobe["after_master_sha256"] != cct_revision["prior_master_sha256"]
+        or cct_revision["current_master_sha256"] != cbr_revision["prior_master_sha256"]
+        or cbr_revision["current_master_sha256"] != args.sha):
+    sys.exit("Homeowner, wardrobe, CCT and CBR receipts do not form the expected master chain.")
 if (integration["holds_preserved"]["construction_release"] or pooja["retained"]["construction_release"]
         or supply["holds"]["construction_release"] or wardrobe["retained"]["construction_release"]
         or wardrobe["retained"]["homeowner_interior_approval"]):
@@ -84,8 +103,6 @@ reference = current_house["storage"]["wardrobe_interiors_review"]
 fragment_path = base / reference["file"]
 if reference != wardrobe["reference"] or digest(fragment_path) != reference["sha256"]:
     sys.exit("Wardrobe reference differs from its receipt.")
-if current_house["metadata"]["updated_utc"] != reference["recorded_utc"]:
-    sys.exit("Master update timestamp differs from the wardrobe-reference timestamp.")
 
 pdf = pymupdf.open()
 toc = []
@@ -112,14 +129,18 @@ with pymupdf.open(combined) as p:
         raise RuntimeError("A combined PDF page lacks the master hash or construction hold.")
     required = [
         (0, ["Furnished floor plan", "HD-15"]),
-        (1, ["Reflected ceiling plan", "CBR-H1 to H6", "CURT-MBR-W03", "past their modeled room corners"]),
-        (13, ["SCHEMATIC SECTION", "CURT-MBR-W03", "model clash"]),
+        (1, ["Reflected ceiling plan", "H1-H6", "H-MBR-W03", "beyond a modeled room corner",
+             "1050 mm", "modelled ON", "H-CBR-CEIL"]),
+        (7, ["3.048", "3.277", "homeowner-reported", "conflicts", "H-CBR-CEIL"]),
+        (13, ["SCHEMATIC SECTION", "CURT-MBR-W03", "model clash",
+              "3.048", "3.277", "slab unmeasured", "conflicts"]),
         (14, ["OPENING IDS", "STAIR", "D01", "W05"]),
         (15, ["small idols", "framed picture", "No niche deepening"]),
         (16, ["CBR-H1-H6", "387.6 mm", "back / base finish", "ST-R04a-WR01", "ST-R08-UC01", "480 W", "12.5 A"]),
         (17, ["Rooms and areas", "14 master records", "independent site verification", "R13"]),
         (18, ["Openings", "unmeasured", "D01", "W05"]),
-        (19, ["Connections", "S01", "illustrative", "not measured"]),
+        (19, ["Connections", "S01", "illustrative", "not measured",
+              "3.048", "3.277", "slab unmeasured", "conflicts"]),
     ]
     for index, terms in required:
         missing = [term for term in terms if term.lower() not in pages[index].lower()]
@@ -154,13 +175,16 @@ receipt = {
         {"path": str(fragment_path), "sha256": digest(fragment_path), "status": reference["status"],
          "homeowner_interior_approval": False, "construction_release": False},
         {"path": str(notation_path), "sha256": digest(notation_path)},
+        {"path": str(args.revision_validation), "sha256": digest(args.revision_validation),
+         "status": revision_validation["status"]},
+        {"path": str(args.revision_receipt), "sha256": digest(args.revision_receipt),
+         "master_sha256": revision_receipt["master_sha256"]},
     ],
     "source_compatibility": {
-        "previous_master_sha256": wardrobe["before_master_sha256"],
-        "only_additions": ["storage.wardrobe_interiors_review", "source_register.contributions.storage_wardrobe_interiors_review"],
-        "only_existing_field_change": "metadata.updated_utc",
-        "compatibility_basis": "Hash-verified wardrobe-reference receipt; prior snapshot comparison performed during rebinding validation",
-        "reported_unchanged": wardrobe["unchanged"],
+        "wardrobe_reference_master_sha256": wardrobe["after_master_sha256"],
+        "cct_revision": cct_revision,
+        "cbr_revision": cbr_revision,
+        "compatibility_basis": "The separately verified electrical receipt binds the checked CCT and CBR successor chain to the current master.",
         "provisional_interior_reference_does_not_replace_geometry_or_approvals": True,
     },
     "checks": {"layout": f'{layout_receipt["checks_passed"]}/{layout_receipt["checks_total"]}',

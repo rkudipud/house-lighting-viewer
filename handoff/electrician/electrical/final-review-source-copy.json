@@ -1,0 +1,629 @@
+{
+  "status": "current-electrical-review-not-construction",
+  "constructionRelease": false,
+  "basisMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "sourceManifest": "SHA256SUMS.txt",
+  "sourceManifestSha256": "94a55180eef1e063a42b9348b874fcf1904af695ebc39adef7db83e9822a7d9a",
+  "sourceFiles": 79,
+  "omittedFiles": [
+    {
+      "path": "sources/ELG-150-SPEC.PDF",
+      "sourceSha256": "cb0a1c37dec9bd8983f5c6b20cac2280ff41af76f0c8cb281b3b941b61a68f55",
+      "officialUrl": "https://www.meanwell.com/Upload/PDF/ELG-150/ELG-150-SPEC.PDF",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/ELG-240-SPEC.PDF",
+      "sourceSha256": "57af9cbbd13f025e49d25b29633f965be177b20f7e5e541ea80e2249e9c51a18",
+      "officialUrl": "https://www.meanwell.com/Upload/PDF/ELG-240/ELG-240-SPEC.PDF",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/HLG-480H-SPEC.PDF",
+      "sourceSha256": "790048cbd6b35066dc5c7a7c29ad87a52f302e0e08e92034691087dfc552171e",
+      "officialUrl": "https://www.meanwell.com/Upload/PDF/HLG-480H/HLG-480H-SPEC.PDF",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/legrand-arteor-advance-F04600EN-00.pdf",
+      "sourceSha256": "854f280b94e1eb7b5b1a8b4e31a59e95f590142c9555633f29bd09c77ae3b6e4",
+      "officialUrl": "https://assets.legrand.com/pim/NP-FT-GT/F04600EN-00.pdf",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/meanwell-led-driver-installation-manual-en.pdf",
+      "sourceSha256": "f07b8467541263d62eb6a515a05643ac5c56d0d21753169574cbc5505175ca10",
+      "officialUrl": "https://www.meanwell.com/Upload/PDF/LED_EN.pdf",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/orient-consumer-catalogue.pdf",
+      "sourceSha256": "0514e344060d078ce9dbc01b27b4e54e8afc65b02ffa306a47260bce228032e0",
+      "officialUrl": "https://cdn.shopify.com/s/files/1/0568/5166/0962/files/Consumer_Lighting_Catalog_-_Orient_Electric.pdf?v=1728908630",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/schneider-avataron-PHA1631900.pdf",
+      "sourceSha256": "ddc2234be659732353ffd219815b0eba5486930632f0bff7bc6ee69e5a5c5d8a",
+      "officialUrl": "https://download.se.com/files?p_enDocType=Instruction+sheet&p_File_Name=PHA1631900.pdf&p_Doc_Ref=PHA1631900",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/signify-greenspace-flex.pdf",
+      "sourceSha256": "322ea5416802e972f50220f874b67d0f6c3f61edc1eaeddb199e8f196bc9a0c2",
+      "officialUrl": "https://www.docs.signify.com/assets/Leaflet/Philips_PROF/CF/en_IN/LP_CF_RS378B_EU.en_IN.PROF.CF.pdf",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/skydance-t1k-t2k-manual.pdf",
+      "sourceSha256": "c2ff76fa1be2faa499cec4aade28c78a93cec6ce3713b383266f7ae1e78d616b",
+      "officialUrl": "https://www.iskydance.com/en/product/manual/id/114/index/0.html/T1-K%2CT2-K%2CT3-K.pdf",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/wipro-fokus-plus.pdf",
+      "sourceSha256": "9d03fcf0c94822378834c8f1886736b4f8a9222add0f1a76899d4918ab97d595",
+      "officialUrl": "https://www.wiprolighting.com/storage/11988/Fokus-Plus-Catalogue_Product-Basket.pdf",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/wipro-mollis-pro.pdf",
+      "sourceSha256": "849fbd9d49e1c54a65300f6fc442d41677e5658d4e9f169f1d4a933dd78e38e0",
+      "officialUrl": "https://www.wiprolighting.com/storage/12094/Mollis-Pro-Leaflet_Product-Basket.pdf",
+      "reason": "Third-party literature: redistribution rights not established"
+    },
+    {
+      "path": "sources/wipro-mollis-range.pdf",
+      "sourceSha256": "2ce645919022876034ca9d6bf95afaf4aab6117c906a77ecb4101e42d8f7af75",
+      "officialUrl": "https://www.wiprolighting.com/storage/12096/Mollis-range-catalogue.pdf",
+      "reason": "Third-party literature: redistribution rights not established"
+    }
+  ],
+  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
+  "files": [
+    {
+      "path": "bill-of-materials-render.json",
+      "bytes": 562,
+      "sha256": "f161329d571a727608efda0ccf7e5f33a073dff5ceda7d5071d0128651f22598",
+      "sourceSha256": "f161329d571a727608efda0ccf7e5f33a073dff5ceda7d5071d0128651f22598",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "bill-of-materials.html",
+      "bytes": 13337,
+      "sha256": "80389ded928593c42b0c045662c458124a5d2df8756fb86b01279c3705d86ff1",
+      "sourceSha256": "d80ca9bd0a62189aadfae78041875701de3f30fd992f6db17da82eb90be48a9b",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "bill-of-materials.md",
+      "bytes": 6593,
+      "sha256": "5e19b11cbe4c2e248d5c7c614ef9af016b6c7204e922161d69ad6509b16e74b6",
+      "sourceSha256": "d93b38e45be4f7df58a10e6525fcf7b314e3edbf32eb68b109f9639dff28b73c",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "bill-of-materials.pdf",
+      "bytes": 88469,
+      "sha256": "ac95775fe567cc7e7f4d6ef89633da55d5933b5297275d46e99415555ad3b59c",
+      "sourceSha256": "ac95775fe567cc7e7f4d6ef89633da55d5933b5297275d46e99415555ad3b59c",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "build-context.json",
+      "bytes": 887,
+      "sha256": "54faf4b9481f1c87478e6d5961a2f93eac74e2847427c8833911326308f2c1e3",
+      "sourceSha256": "54faf4b9481f1c87478e6d5961a2f93eac74e2847427c8833911326308f2c1e3",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "control-options-render.json",
+      "bytes": 562,
+      "sha256": "0382eb416b035bd715fdbb94e098a3d03f97f5023d254373c674d7632e61830a",
+      "sourceSha256": "0382eb416b035bd715fdbb94e098a3d03f97f5023d254373c674d7632e61830a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "control-options.html",
+      "bytes": 9084,
+      "sha256": "a21f56c65185c70e22b2bcc36917902f8d033fbab1b67ebbdd6d6e1b61247ac3",
+      "sourceSha256": "4ab4d14b089f1b47bcb9d7008ba5525e72e8585cec90f7e62b42d1fc374486cb",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "control-options.md",
+      "bytes": 5654,
+      "sha256": "8b2dc85b2405cb9852e8ae826a9a1f77f564a29d68a0b4f8ae798acbadeb1890",
+      "sourceSha256": "825fbbb9a22b4b2e406d259e68e9c2782e151165ccb216f377ba9465484ff64c",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "control-options.pdf",
+      "bytes": 84387,
+      "sha256": "99ed7151b6a8f7c2a0507940520b6e295549acc339390dd585f1d18936ddfa48",
+      "sourceSha256": "99ed7151b6a8f7c2a0507940520b6e295549acc339390dd585f1d18936ddfa48",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "electrical-review-render.json",
+      "bytes": 829,
+      "sha256": "77af489f9e82292d99183570b219b165a1d3957facca826a4bf665bb7727aceb",
+      "sourceSha256": "77af489f9e82292d99183570b219b165a1d3957facca826a4bf665bb7727aceb",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "electrical-review.html",
+      "bytes": 177354,
+      "sha256": "f616c56b673c73a26f95a61cda17fcf189b2cf696b77c2f04de283cff56748a6",
+      "sourceSha256": "b9e11f00c86dfe63e98b45d3d81d1a98fb5e4f99998056b387a224675ac560e5",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "electrical-review.md",
+      "bytes": 21806,
+      "sha256": "44992aa5f3cb3b3acf725c5a4ec14f2c691650a7b2007934749bb223cad1f711",
+      "sourceSha256": "018ece79edb235747862d35784b71f3896ebd435c4d79bf2a8429a4cca36c823",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "electrical-review.pdf",
+      "bytes": 264205,
+      "sha256": "ccecde80c4aa01c0c0d1518c6856e49b898a639eecb9e67d8d8723680b02f0db",
+      "sourceSha256": "ccecde80c4aa01c0c0d1518c6856e49b898a639eecb9e67d8d8723680b02f0db",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/concept-flat.png",
+      "bytes": 197819,
+      "sha256": "4a11e5e767118d7c0e6d7617dbcc2388c704596f62183b01832b27e3aca687d6",
+      "sourceSha256": "4a11e5e767118d7c0e6d7617dbcc2388c704596f62183b01832b27e3aca687d6",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/concept-flat.svg",
+      "bytes": 4083,
+      "sha256": "1a253f54e27c462e6974b44f688249a1ca4f60f0e223ad5b3c86eb29cbc1bab7",
+      "sourceSha256": "1a253f54e27c462e6974b44f688249a1ca4f60f0e223ad5b3c86eb29cbc1bab7",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/concept-living-low.png",
+      "bytes": 232858,
+      "sha256": "b2080b4020ac0919a95ae3507bd637009973bc9ce17d7e5a277e5e590ce0c5fd",
+      "sourceSha256": "b2080b4020ac0919a95ae3507bd637009973bc9ce17d7e5a277e5e590ce0c5fd",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/concept-living-low.svg",
+      "bytes": 4962,
+      "sha256": "03f1db7ebebfe54fb962580ef549c417f765cc98c0ffee244647eb70af616ab2",
+      "sourceSha256": "03f1db7ebebfe54fb962580ef549c417f765cc98c0ffee244647eb70af616ab2",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/controls-plan.png",
+      "bytes": 249842,
+      "sha256": "00b190d4d66febb43085e7ea5e4c6e3c89d99eb932cc526fc4243f1c5f7fc218",
+      "sourceSha256": "00b190d4d66febb43085e7ea5e4c6e3c89d99eb932cc526fc4243f1c5f7fc218",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/controls-plan.svg",
+      "bytes": 37674,
+      "sha256": "872b816672afd3f3d82502ffe3bda030b6e6e4e472cb973c3bfd6eb860fba896",
+      "sourceSha256": "872b816672afd3f3d82502ffe3bda030b6e6e4e472cb973c3bfd6eb860fba896",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/curtain-pocket.png",
+      "bytes": 123121,
+      "sha256": "8eba55060b504415b2fe8f2fba7858f60500b7804fc5a7a4f4f572b73b03a808",
+      "sourceSha256": "8eba55060b504415b2fe8f2fba7858f60500b7804fc5a7a4f4f572b73b03a808",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/curtain-pocket.svg",
+      "bytes": 5690,
+      "sha256": "728ce233cbc516f49817acd28cf99c1bffb9b749b85dadd2e9d9807f364c5cac",
+      "sourceSha256": "728ce233cbc516f49817acd28cf99c1bffb9b749b85dadd2e9d9807f364c5cac",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/photos/site-photo-children-curtain-pocket.jpeg",
+      "bytes": 30783,
+      "sha256": "b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2",
+      "sourceSha256": "b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "figures/photos/site-photo-hall-curtain-pocket.jpeg",
+      "bytes": 25671,
+      "sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+      "sourceSha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 11051,
+      "sha256": "1d2af45e634b3657cc46e6e946e261f377708303fcbc0f720cc0b370b6591493",
+      "sourceSha256": "1d2af45e634b3657cc46e6e946e261f377708303fcbc0f720cc0b370b6591493",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/circuit-schedule.csv",
+      "bytes": 7550,
+      "sha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d",
+      "sourceSha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/curtain-pockets.csv",
+      "bytes": 1169,
+      "sha256": "074f4198ebe9f73b7b7f3a4e3e90eb030041312a6f4fea4ef175adf259fda26b",
+      "sourceSha256": "074f4198ebe9f73b7b7f3a4e3e90eb030041312a6f4fea4ef175adf259fda26b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/electrical-ledger.json",
+      "bytes": 152608,
+      "sha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f",
+      "sourceSha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/fitting-controls.csv",
+      "bytes": 630,
+      "sha256": "aa4976abbe98f4efb86cd8e4bb2b0223277ae3c17e231f935160e5f985c9dbce",
+      "sourceSha256": "aa4976abbe98f4efb86cd8e4bb2b0223277ae3c17e231f935160e5f985c9dbce",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/fixture-class-specifications.csv",
+      "bytes": 8072,
+      "sha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c",
+      "sourceSha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/fixtures.csv",
+      "bytes": 22925,
+      "sha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52",
+      "sourceSha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/knob-groups.csv",
+      "bytes": 2502,
+      "sha256": "4bbe04d7b6c806336c3799bb7d17476e324a9712ce2527fc24bfceafc7881a8c",
+      "sourceSha256": "4bbe04d7b6c806336c3799bb7d17476e324a9712ce2527fc24bfceafc7881a8c",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/lighting-distribution.csv",
+      "bytes": 971,
+      "sha256": "c74870239c110736dfd68dc3135872bfa6aa97a932c9e894c5e85222ed97102c",
+      "sourceSha256": "c74870239c110736dfd68dc3135872bfa6aa97a932c9e894c5e85222ed97102c",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/location-linked-bom.csv",
+      "bytes": 58759,
+      "sha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2",
+      "sourceSha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/mains-dimmer-check.csv",
+      "bytes": 901,
+      "sha256": "0667c571c117946dc50b7f2be4a2a29b087284b99016b4ee4f93d54613322620",
+      "sourceSha256": "0667c571c117946dc50b7f2be4a2a29b087284b99016b4ee4f93d54613322620",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/supplementary-switches.csv",
+      "bytes": 376,
+      "sha256": "a6c41f664f4cb4b435436f797fb3742fb2950e056ff2c3542badadb436baefe1",
+      "sourceSha256": "a6c41f664f4cb4b435436f797fb3742fb2950e056ff2c3542badadb436baefe1",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/supply-schedule.csv",
+      "bytes": 1955,
+      "sha256": "3bca4d3886985dec83bb50a219cb1b629ea3c5bcfd09d2fb184264f08e211d44",
+      "sourceSha256": "3bca4d3886985dec83bb50a219cb1b629ea3c5bcfd09d2fb184264f08e211d44",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/switchboard-schedule.csv",
+      "bytes": 1717,
+      "sha256": "f09654234309806937d571819ac9f9c5f945e9af1a3accfbb50967595da09dab",
+      "sourceSha256": "f09654234309806937d571819ac9f9c5f945e9af1a3accfbb50967595da09dab",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/voltage-drop-review.csv",
+      "bytes": 2943,
+      "sha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa",
+      "sourceSha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "schedules/wall-control-schedule.csv",
+      "bytes": 4406,
+      "sha256": "753f80b7d563a6385f089aa54ea6653655f81703d15750c08792d98f5d1af51a",
+      "sourceSha256": "753f80b7d563a6385f089aa54ea6653655f81703d15750c08792d98f5d1af51a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "source-evidence/homeowner-coordination-receipt.json",
+      "bytes": 3377,
+      "sha256": "c726455091ccad5fe5886f750f9a98b644decc243c1dbb6908c11f444b2d4a11",
+      "sourceSha256": "c726455091ccad5fe5886f750f9a98b644decc243c1dbb6908c11f444b2d4a11",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "source-evidence/living-low-one-supply-option.json",
+      "bytes": 5906,
+      "sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+      "sourceSha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "source-evidence/living-supply-and-cabinet-selections-receipt.json",
+      "bytes": 5139,
+      "sha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
+      "sourceSha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "source-evidence/pooja-display-receipt.json",
+      "bytes": 1776,
+      "sha256": "9242c012e3b57a529f070ccd21e82734ff8115d3529994a4e8b019eb1e730a06",
+      "sourceSha256": "9242c012e3b57a529f070ccd21e82734ff8115d3529994a4e8b019eb1e730a06",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "source-evidence/prior-control-plan-receipt.json",
+      "bytes": 6679,
+      "sha256": "eb2e4854b4a84a71ae5d943873ac1c1004558ed0e87297161ae5328d63f1739b",
+      "sourceSha256": "b492db9852dced8af16a2e1274fe7bb0960824ead3680f5d1480a1da43f2f46c",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
+    },
+    {
+      "path": "source-evidence/prior-control-plan.json",
+      "bytes": 75837,
+      "sha256": "fe0e6e536772f341960cf26a69c8859543e30610f070ec518e15600e03747cb1",
+      "sourceSha256": "fe0e6e536772f341960cf26a69c8859543e30610f070ec518e15600e03747cb1",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "source-evidence/verified-fixed-white-verification.json",
+      "bytes": 33153,
+      "sha256": "54fce2f4c54d4ca2422597f1309e7fb1285961c5aec382718300ef783448c3ca",
+      "sourceSha256": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
+    },
+    {
+      "path": "source-evidence/wardrobe-interiors-reference-receipt.json",
+      "bytes": 3858,
+      "sha256": "57ffadc0e92f3285e3bc37ccacd33ee411235d8e6ddaa05f5caad5460cb8dca5",
+      "sourceSha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
+    },
+    {
+      "path": "source-index-render.json",
+      "bytes": 562,
+      "sha256": "10daac189f1456fa17a5ddeeddd493db07e131bd87273f642d020e4aa41a8a7e",
+      "sourceSha256": "10daac189f1456fa17a5ddeeddd493db07e131bd87273f642d020e4aa41a8a7e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "source-index.html",
+      "bytes": 16951,
+      "sha256": "8f7c249cb14849ce10b9c5a6f59ae8530c24e06335c5c6185cfb018c9cb56d0b",
+      "sourceSha256": "32ed80fbf47ab164d306d208e622f39bddcd9f2b6e320598f92329f2c2f71439",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "source-index.md",
+      "bytes": 12589,
+      "sha256": "43264b971e4e2da012129f62446f0c809a6e646c0b1a5a59ad9fa867bb3d5c88",
+      "sourceSha256": "47ed2e3243885ac39e9425a54126c379a00f8f7f03a0e9054b95789a181e19ea",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "source-index.pdf",
+      "bytes": 99241,
+      "sha256": "91d4fe56e33287cd61fbc73f0c192c607d69c2c5d719e0ca24f60e180856371a",
+      "sourceSha256": "7772f11c550dc9bf6972eef2a5ccde78a92d201dfca5ebd834c24673a8a5d6b5",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
+    },
+    {
+      "path": "sources/meanwell-led-manual-breaker-table.json",
+      "bytes": 9005,
+      "sha256": "1f012f2ec70d7b2dd438825777a75f84047341dff4bdfaa7d6f26ae0fb38ba73",
+      "sourceSha256": "1f012f2ec70d7b2dd438825777a75f84047341dff4bdfaa7d6f26ae0fb38ba73",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/control-options.template.md",
+      "bytes": 5328,
+      "sha256": "6227702b640d6e331feb7a889fe4c080d86164fc8778d7b21cba6c9bda1b2b6b",
+      "sourceSha256": "6227702b640d6e331feb7a889fe4c080d86164fc8778d7b21cba6c9bda1b2b6b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/electrical-review.template.md",
+      "bytes": 14673,
+      "sha256": "ba765c4a9e235addfc3ae626c9ff3f2dacadc804c6f2dea1a06903bc95c8fe69",
+      "sourceSha256": "ba765c4a9e235addfc3ae626c9ff3f2dacadc804c6f2dea1a06903bc95c8fe69",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/export_figures_png.py",
+      "bytes": 2067,
+      "sha256": "d6dd7e0daf94e78ddc598019205792ea5c5cf3d717c4b5af74432f33eb152d58",
+      "sourceSha256": "d6dd7e0daf94e78ddc598019205792ea5c5cf3d717c4b5af74432f33eb152d58",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/fw_final_bom.py",
+      "bytes": 15613,
+      "sha256": "eb1d03eb2b72fcb0f9db03070ee51594d7c72d189cddcae212429c2589a77533",
+      "sourceSha256": "eb1d03eb2b72fcb0f9db03070ee51594d7c72d189cddcae212429c2589a77533",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/fw_final_build.py",
+      "bytes": 41308,
+      "sha256": "3007c001e85f905df7d9357574f75807ff53e59f61403465eca921a46c6a2fc1",
+      "sourceSha256": "3007c001e85f905df7d9357574f75807ff53e59f61403465eca921a46c6a2fc1",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/fw_final_receipt.py",
+      "bytes": 4433,
+      "sha256": "0f56f024397ffe191e9fb0ab9eb90288e423f787694c3fb1bf36b1863e05aefd",
+      "sourceSha256": "0f56f024397ffe191e9fb0ab9eb90288e423f787694c3fb1bf36b1863e05aefd",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/fw_final_validate.py",
+      "bytes": 17910,
+      "sha256": "7b0993e12eb5c4489b4689d5928dbe23cc9b9b8f609853d114ef2493fa9d4055",
+      "sourceSha256": "7b0993e12eb5c4489b4689d5928dbe23cc9b9b8f609853d114ef2493fa9d4055",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/fw_render.py",
+      "bytes": 11610,
+      "sha256": "2f3820f1c6a38b529293869e61d7ccd04aa0e98b0929e3ed6a06fb7c94f445b7",
+      "sourceSha256": "2f3820f1c6a38b529293869e61d7ccd04aa0e98b0929e3ed6a06fb7c94f445b7",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/source-index.template.md",
+      "bytes": 9891,
+      "sha256": "571b948e22a081a4bdaf32f28d004393d00e0524bf6f4edb471e8974fde62980",
+      "sourceSha256": "571b948e22a081a4bdaf32f28d004393d00e0524bf6f4edb471e8974fde62980",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "tools/wholesale-rfq.template.md",
+      "bytes": 12071,
+      "sha256": "0e1cdb118710015d3732eee5c3c7d3daf97a96cf902287cb455ae0f2cb1a5b31",
+      "sourceSha256": "0e1cdb118710015d3732eee5c3c7d3daf97a96cf902287cb455ae0f2cb1a5b31",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "validation.json",
+      "bytes": 35278,
+      "sha256": "68fc5753850e30295418de9e0742e032b349829521a704dd1762d6908c78d465",
+      "sourceSha256": "68fc5753850e30295418de9e0742e032b349829521a704dd1762d6908c78d465",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "wholesale-rfq-render.json",
+      "bytes": 562,
+      "sha256": "65eddf89b55acd1a3f2b9a5276743dd439325f763670027e78ff1840e0540146",
+      "sourceSha256": "65eddf89b55acd1a3f2b9a5276743dd439325f763670027e78ff1840e0540146",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "wholesale-rfq.html",
+      "bytes": 16644,
+      "sha256": "fa6a45001dc708e5b051201adac9aca589d8384e848cdbdb8136430e90d95b63",
+      "sourceSha256": "504889f21d3b842316d48f89e865cfd4a2f3a6e085c79644fa39bc9f30498688",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "wholesale-rfq.md",
+      "bytes": 12397,
+      "sha256": "c20187efe5801410468c5d7b2b6dd2fb3abc32db346d53a513a4ebccf0b84536",
+      "sourceSha256": "1f09d18a0c4d41efd40e5ceb2092ff0ae72b411f3839f06e97bdb7853973e037",
+      "localPathsRedacted": false,
+      "publicCopyModified": true
+    },
+    {
+      "path": "wholesale-rfq.pdf",
+      "bytes": 101862,
+      "sha256": "411450791a2dabfe2e469de452833ad60e99c2ce9b996fd5648b0747d1255560",
+      "sourceSha256": "411450791a2dabfe2e469de452833ad60e99c2ce9b996fd5648b0747d1255560",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "bytes": 7750,
+      "sha256": "94a55180eef1e063a42b9348b874fcf1904af695ebc39adef7db83e9822a7d9a",
+      "sourceSha256": "94a55180eef1e063a42b9348b874fcf1904af695ebc39adef7db83e9822a7d9a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    }
+  ]
+}
