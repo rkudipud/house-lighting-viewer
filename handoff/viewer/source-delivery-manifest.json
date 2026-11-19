@@ -9,7 +9,7 @@
   "site": {
     "directory": "site-final",
     "index": "site-final\\index.html",
-    "index_sha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+    "index_sha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
     "build_receipt": "site-final\\build-info.json",
     "build_receipt_sha256": "8e1bd2df2e7308dad979ac826ddfe88f5c4b4ac0b5b8a28ece31cfcc74567312",
     "privacy_receipt": "site-final\\privacy-transform.json",
@@ -18,7 +18,7 @@
   "source": {
     "directory": "source-release",
     "manifest": "source-release\\public-source-manifest.json",
-    "manifest_sha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1",
+    "manifest_sha256": "93b073d48e59aa7f5a34d8e034414ed57249fa444b1c9d7fd2ef01ade3970538",
     "note": "The original master is not included. The derived public data rebuild the identical viewer; original drawing-generator snapshots are retained separately."
   },
   "drawings": {

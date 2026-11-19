@@ -217,7 +217,7 @@ function start(){
       const extra=lanes.filter(l=>!['READ','NIGHT'].includes(l)).map(l=>INDEPENDENT_NAME[l]).filter(Boolean);
       if(extra.length)notes.push(`Also on with the room, not dimmed here: ${extra.join(', ')}${g.cct.independent.length?' ('+fmtK(g.cct.independent)+')':''}.`);
       if(g.sharedLow.length)notes.push('The living and dining line profile shares one LOW level: the last slider moved wins.');
-      if(g.zone==='CBR')notes.push('H1-H6 are active for review; other held ceiling, bedside and desk fittings stay unlit. C37 dimmer procurement remains on hold.');
+      if(g.zone==='CBR')notes.push('H1-H6 are active for review. The square CBR-X1 to CBR-X4 LINE frame is present but held for coordination, so it remains unlit and is not controlled by LOW; the four black slits are separate dark grooves, not light fittings. Bedside and desk fittings also remain held. C37 dimmer procurement remains on hold.');
     }
     const pockets=(PLAN.curtainPockets?.pockets||[]).filter(p=>p.room===g.zone);
     if(pockets.some(p=>p.selected))notes.push(pockets.filter(p=>p.selected).map(p=>`Curtain strip ${p.id} (${p.label}): selected for review, 2700 K, follows LOW; no lux credit.`).join(' '));

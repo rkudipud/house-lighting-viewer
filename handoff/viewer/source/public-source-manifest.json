@@ -3,7 +3,7 @@
   "authoritativeMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
   "embeddedPlanDataSha256": "33dd7317e805a9c9bc790c160dcfd6187c38fed9fffd97c13ba74b64267ed600",
   "embeddedHeatDataSha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",
-  "viewerHtmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+  "viewerHtmlSha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
   "privacyPathScan": "PASS for staged text, JSON values and delivered HTML; original master omitted",
   "originalDrawingGeneratorSha256": {
     "floorplan.mjs": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a",
@@ -67,8 +67,8 @@
       "sha256": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a"
     },
     "privacy-transform.json": {
-      "bytes": 1185,
-      "sha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77"
+      "bytes": 1186,
+      "sha256": "9acda06204affe1a39260f57e5d1d7aedf4f96724a24561ed038cfc904e71347"
     },
     "provenance/generation-source/drawing-source.mjs": {
       "bytes": 2996,
@@ -135,8 +135,8 @@
       "sha256": "7066f77ba9f3217e5eaf9e424c4ed5157ea5b461aee58895d713b153d3ad9c18"
     },
     "src/main.js": {
-      "bytes": 39982,
-      "sha256": "c33790bc3ddd39dda5e05eb7f0ef5fa4e908e62c2da596f63203b8192e9c8e62"
+      "bytes": 40163,
+      "sha256": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e"
     },
     "src/master-adapter.js": {
       "bytes": 11029,

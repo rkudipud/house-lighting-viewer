@@ -25,7 +25,13 @@
     "scope": "Six loft doors, three retained trays, matte-black handle finish; retain prior OPT-E matte-laminate material and master split only. Shutter mechanism, shade and complete interiors remain provisional.",
     "modelAndHistoricalOutputsRegenerated": false
   },
-  "note": "Original master, public-copy and delivered hashes are distinct. Viewer/workbench maps remain frozen analytic estimates; the separate exploratory Radiance addendum is generic, provisional and not measured or product-specific. Manifest excludes itself.",
+  "materialSelectionAddendum": {
+    "path": "handoff/decisions/2026-11-18-material-selection.md",
+    "scope": "BWP plywood wardrobe carcasses with granite plinths; retain OPT-E matte-laminate shutters and master split. Granite shelves and unrelated utility/outdoor joinery are not included.",
+    "modelAndHistoricalOutputsRegenerated": false,
+    "historicalCostOutputsRepriced": false
+  },
+  "note": "Original master, public-copy and delivered hashes are distinct. The dated material addendum supersedes only the stale WR-H630 material-pending and DEC-ST-01 readiness-pending entries; its construction details remain unapproved. Viewer/workbench maps remain frozen analytic estimates; the separate exploratory Radiance addendum is generic, provisional and not measured or product-specific. Manifest excludes itself.",
   "files": [
     {
       "path": ".gitattributes",
@@ -85,8 +91,8 @@
     },
     {
       "path": "handoff/contractor/index.html",
-      "bytes": 7260,
-      "sha256": "91494c72a3306dcebde31406671b4fb033fbc5faebd4a47313ed2ab4d63bc196",
+      "bytes": 7769,
+      "sha256": "4334e905f2cc22d3adf93f6cd46004bc69663b7a50371b5818e49b721a525904",
       "coverage": []
     },
     {
@@ -459,9 +465,10 @@
     },
     {
       "path": "handoff/contractor/wardrobe/README.md",
-      "bytes": 2738,
-      "sha256": "3331facc56b41c2fbf87071a8223e25e27d30ef8a8916022e64cbddb2dc4a1bd",
+      "bytes": 3290,
+      "sha256": "fd45a8528fc1946876c602f0e016bf82e2b3efc2671ab677c42d4eb5b1551f4b",
       "coverage": [],
+      "postCopyOverlayReceipt": "handoff/decisions/2026-11-18-material-selection-receipt.json",
       "sourceSha256": "3331facc56b41c2fbf87071a8223e25e27d30ef8a8916022e64cbddb2dc4a1bd"
     },
     {
@@ -531,6 +538,24 @@
       "coverage": [
         "editable-sources",
         "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/2026-11-18-material-selection-receipt.json",
+      "bytes": 1265,
+      "sha256": "2c5e84714b4da31881d1aa810c9f99240ddcf1870f28c454effb355bc837a916",
+      "coverage": [
+        "editable-sources",
+        "owner-decision-addendum"
+      ]
+    },
+    {
+      "path": "handoff/decisions/2026-11-18-material-selection.md",
+      "bytes": 2759,
+      "sha256": "6e597580f5ff377724989df9f8f5abf2273f6805c610bd1724bcb052a61e4117",
+      "coverage": [
+        "owner-decision-addendum",
+        "wardrobe-material-selection"
       ]
     },
     {
@@ -3316,8 +3341,8 @@
     },
     {
       "path": "handoff/index.html",
-      "bytes": 9071,
-      "sha256": "4a85338e8fa3a6764aae2f9a3aa9dfd2c04982304474256f7c329c2e531208ce",
+      "bytes": 9607,
+      "sha256": "8383214cdca0e10f083b703625fc7e665a85c4007081d06b130501e5ec3175f9",
       "coverage": []
     },
     {
@@ -3331,7 +3356,7 @@
     {
       "path": "handoff/local-artifact-verification.json",
       "bytes": 1131,
-      "sha256": "adaa5b86e757b5fb6e2bc5885835e485ea4cd7bb79972f662d6a2a0a57195efd",
+      "sha256": "851db7ac24dc4f6c3cdbea57af5d911a7a68250bbec81fd7f278ec528ae4a4ca",
       "coverage": [
         "editable-sources"
       ]
@@ -4506,8 +4531,8 @@
     },
     {
       "path": "handoff/viewer/index.html",
-      "bytes": 5364,
-      "sha256": "6183df1808f3e7ee9d1af56645dee3e4e64a59bcaeafe90e8335d656ff458886",
+      "bytes": 6068,
+      "sha256": "6b43accd028d8c021f0d9bcbd7bbff2567fd28d7f63bb63ddfe485833785c63c",
       "coverage": []
     },
     {
@@ -4729,11 +4754,12 @@
     },
     {
       "path": "handoff/viewer/source/privacy-transform.json",
-      "bytes": 1185,
-      "sha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77",
+      "bytes": 1186,
+      "sha256": "9acda06204affe1a39260f57e5d1d7aedf4f96724a24561ed038cfc904e71347",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
       "sourceSha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77"
     },
     {
@@ -4757,7 +4783,7 @@
     {
       "path": "handoff/viewer/source/public-file-hashes.json",
       "bytes": 4517,
-      "sha256": "9741be8c3ed7c3d88fb051b3988e118e1fc974e50d7aad0818286a58f3c3abf3",
+      "sha256": "b471ba4273e3a3be892eca8ae7a7c62a56d4b7a0a4d23b1c1fc2962170264a6d",
       "coverage": [
         "editable-sources"
       ]
@@ -4765,10 +4791,11 @@
     {
       "path": "handoff/viewer/source/public-source-manifest.json",
       "bytes": 7429,
-      "sha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1",
+      "sha256": "93b073d48e59aa7f5a34d8e034414ed57249fa444b1c9d7fd2ef01ade3970538",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
       "sourceSha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1"
     },
     {
@@ -4905,11 +4932,12 @@
     },
     {
       "path": "handoff/viewer/source/src/main.js",
-      "bytes": 39982,
-      "sha256": "c33790bc3ddd39dda5e05eb7f0ef5fa4e908e62c2da596f63203b8192e9c8e62",
+      "bytes": 40163,
+      "sha256": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
       "sourceSha256": "c33790bc3ddd39dda5e05eb7f0ef5fa4e908e62c2da596f63203b8192e9c8e62"
     },
     {
@@ -5037,7 +5065,23 @@
     {
       "path": "handoff/viewer/source-delivery-manifest.json",
       "bytes": 4095,
-      "sha256": "bb643fb1539550aaba2c182a607154a64bd37222d9cd030d868a26acec93b75c",
+      "sha256": "bab6893d4ee8ca86ae14c95ea1c840d49b390eb042db84e286a50e0ecd646a10",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/viewer/verification/2026-11-18-local-reverification.json",
+      "bytes": 3987,
+      "sha256": "f29ef1d3a892622de003944f1b4a16ffe56649b977d22ae932cfc7f616a59e8d",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
+      "bytes": 2382,
+      "sha256": "4ecac73ea5a6446ad5c5a9519b0f64b9fa6d6ce008c46479ab2bfce0600f782b",
       "coverage": [
         "editable-sources"
       ]
@@ -5087,11 +5131,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 2590423,
-      "sha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+      "bytes": 2590604,
+      "sha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
       "coverage": [
         "threejs-viewer"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
+      "correctedPriorCopySha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3",
       "sourceSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e"
     },
     {
@@ -5111,8 +5157,8 @@
     },
     {
       "path": "scripts/build-handoff-manifest.py",
-      "bytes": 7045,
-      "sha256": "c1b9cd0e14090afa793d822ef0d054d01fe0e9891bf2b0613da1e3a38f1a7c1a",
+      "bytes": 8861,
+      "sha256": "115c8ef273ba6437fddd297cd55ccedd7d75291a5efe1276039b0f3d82597c00",
       "coverage": [
         "editable-sources"
       ]

@@ -11,6 +11,8 @@ def coverage(path):
     name = Path(path).name
     if path.startswith("handoff/decisions/"):
         tags.add("owner-decision-addendum")
+        if name == "2026-11-18-material-selection.md":
+            tags.add("wardrobe-material-selection")
     if "source-index/room-opening-index" in path:
         tags.add("room-opening-index")
     if name == "lighting-workbench.html":
@@ -75,6 +77,14 @@ def main():
             if not path.is_relative_to(root):
                 raise ValueError("A copy receipt points outside the repository")
             imported[path.relative_to(root).as_posix()] = item
+    overlay_paths = (
+        "handoff/decisions/2026-11-18-material-selection-receipt.json",
+        "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
+    )
+    overlays = {}
+    for overlay_path in overlay_paths:
+        overlay_data = json.loads((root / overlay_path).read_text())["postCopyOverlays"]
+        overlays.update({item["path"]: (item, overlay_path) for item in overlay_data})
     paths = [
         root / name for name in (
             "README.md", "index.html", "build-info.json", "privacy-transform.json",
@@ -96,7 +106,16 @@ def main():
         if relative in imported:
             source = imported[relative]
             if source["sha256"] != sha or source["bytes"] != len(data):
-                raise ValueError(f"Imported artifact changed since its copy receipt: {relative}")
+                matched = overlays.get(relative)
+                if not matched:
+                    raise ValueError(f"Imported artifact changed without a verified overlay: {relative}")
+                overlay, receipt_path = matched
+                previous_copy_value = overlay.get("previousCopyReceiptValue", overlay["previousCopySha256"])
+                if previous_copy_value != source["sha256"] or overlay["currentSha256"] != sha:
+                    raise ValueError(f"Imported artifact changed without a verified overlay: {relative}")
+                record["postCopyOverlayReceipt"] = receipt_path
+                if previous_copy_value != overlay["previousCopySha256"]:
+                    record["correctedPriorCopySha256"] = overlay["previousCopySha256"]
             record["sourceSha256"] = source.get("sourceSha256", source["sha256"])
         records.append(record)
     integration = json.loads((root / "handoff" / "integration-receipt.json").read_text())
@@ -123,7 +142,13 @@ def main():
             "scope": "Six loft doors, three retained trays, matte-black handle finish; retain prior OPT-E matte-laminate material and master split only. Shutter mechanism, shade and complete interiors remain provisional.",
             "modelAndHistoricalOutputsRegenerated": False,
         },
-        "note": "Original master, public-copy and delivered hashes are distinct. Viewer/workbench maps remain frozen analytic estimates; the separate exploratory Radiance addendum is generic, provisional and not measured or product-specific. Manifest excludes itself.",
+        "materialSelectionAddendum": {
+            "path": "handoff/decisions/2026-11-18-material-selection.md",
+            "scope": "BWP plywood wardrobe carcasses with granite plinths; retain OPT-E matte-laminate shutters and master split. Granite shelves and unrelated utility/outdoor joinery are not included.",
+            "modelAndHistoricalOutputsRegenerated": False,
+            "historicalCostOutputsRepriced": False,
+        },
+        "note": "Original master, public-copy and delivered hashes are distinct. The dated material addendum supersedes only the stale WR-H630 material-pending and DEC-ST-01 readiness-pending entries; its construction details remain unapproved. Viewer/workbench maps remain frozen analytic estimates; the separate exploratory Radiance addendum is generic, provisional and not measured or product-specific. Manifest excludes itself.",
         "files": records,
     }
     (root / "handoff" / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")

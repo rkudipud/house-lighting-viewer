@@ -13,7 +13,7 @@
   "layout_views.mjs": "e2491173271f00bcfbdea524e897d710b8bc4a06f165532b3cee086fb47893a7",
   "package-lock.json": "1d69187824d4ce1c3a966d97de825638f2bc37e7ec272464308cc413be28137e",
   "package.json": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a",
-  "privacy-transform.json": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77",
+  "privacy-transform.json": "9acda06204affe1a39260f57e5d1d7aedf4f96724a24561ed038cfc904e71347",
   "provenance/generation-source/drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656",
   "provenance/generation-source/floorplan.mjs": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a",
   "README.md": "760478172b95dbe4baafdc9c7a08ee002be94632503ef5ccf2a205dbed2c9cbf",
@@ -30,7 +30,7 @@
   "src/hall.js": "1ceaa2937a54bf07137c8c48c92681a4ec9f917bbd1700a934872982d3f5c177",
   "src/house-data.generated.json": "66dc8ceb7ba8ef0214e646b4ba3c510c50d8b17f5e75b33fe425c3e9b2c78017",
   "src/lighting.js": "7066f77ba9f3217e5eaf9e424c4ed5157ea5b461aee58895d713b153d3ad9c18",
-  "src/main.js": "c33790bc3ddd39dda5e05eb7f0ef5fa4e908e62c2da596f63203b8192e9c8e62",
+  "src/main.js": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e",
   "src/master-adapter.js": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da",
   "src/materials.js": "9831081fc1bc67c6180f5d1244f211222048bbbb7efbfc8883ea18c61291e15d",
   "src/model.js": "5dbb9b66c247d330d66391ebc14cf394f97594f3a56e3dfd151e6ee0c47547d7",
@@ -45,6 +45,6 @@
   "THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
   "tour-data.mjs": "6c387f0ecd0709d09f6f04e166a61d81da8ffbacd009cc334c342ff5083a2833",
   "verify_site.py": "b55fd4a364487799653a099431b1b84fb8dea852f63e1a8ffcecb21befaa87f0",
-  "public-source-manifest.json": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1",
+  "public-source-manifest.json": "93b073d48e59aa7f5a34d8e034414ed57249fa444b1c9d7fd2ef01ade3970538",
   "repository-copy-receipt.json": "708f8c78689d9e1ccd718361958463be28633e48297d0fcd2b8854005c7a4c3e"
 }

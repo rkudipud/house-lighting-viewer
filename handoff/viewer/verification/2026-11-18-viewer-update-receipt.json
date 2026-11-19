@@ -1,0 +1,45 @@
+{
+  "schema": "house-post-copy-viewer-overlay/1",
+  "date": "2026-11-18",
+  "status": "verified-local-viewer-clarification",
+  "postCopyOverlays": [
+    {
+      "path": "index.html",
+      "previousCopySha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3",
+      "previousCopyReceiptValue": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+      "priorHashCorrectionBasis": [
+        "handoff/viewer/source/public-source-manifest.json before this update",
+        "handoff/viewer/local-browser-verification.json"
+      ],
+      "currentSha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
+      "reason": "Rebuilt from the updated, privacy-safe viewer source; only the CBR held-fixture explanation changed."
+    },
+    {
+      "path": "handoff/viewer/source/src/main.js",
+      "previousCopySha256": "c33790bc3ddd39dda5e05eb7f0ef5fa4e908e62c2da596f63203b8192e9c8e62",
+      "currentSha256": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e",
+      "reason": "Clarifies that CBR-X1 to CBR-X4 are represented but held/unlit, LOW controls the selected review curtain strip rather than the held frame, and the black slits are dark grooves."
+    },
+    {
+      "path": "handoff/viewer/source/privacy-transform.json",
+      "previousCopySha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77",
+      "currentSha256": "9acda06204affe1a39260f57e5d1d7aedf4f96724a24561ed038cfc904e71347",
+      "reason": "Updates the public viewer HTML fingerprint; public plan and heat-data hashes remain unchanged."
+    },
+    {
+      "path": "handoff/viewer/source/public-source-manifest.json",
+      "previousCopySha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1",
+      "currentSha256": "93b073d48e59aa7f5a34d8e034414ed57249fa444b1c9d7fd2ef01ade3970538",
+      "reason": "Records the rebuilt viewer and current changed main.js/privacy-transform hashes; master-derived plan and heat data are unchanged."
+    }
+  ],
+  "canonicalMasterModified": false,
+  "fixtureScheduleOrGeometryModified": false,
+  "lightingHoldsModified": false,
+  "analyticMapRecomputed": false,
+  "historicalRadianceOutputsModified": false,
+  "constructionRelease": false,
+  "productRelease": false,
+  "procurementRelease": false,
+  "fabricationRelease": false
+}

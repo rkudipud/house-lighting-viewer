@@ -10,6 +10,14 @@ are recorded identifiers here, not independently verified master files.
 Interior layouts remain provisional; site measurement, fit, support and
 fabrication holds remain open.
 
+The current post-master material choice is recorded separately in
+[`../../decisions/2026-11-18-material-selection.md`](../../decisions/2026-11-18-material-selection.md):
+BWP plywood wardrobe carcasses with granite plinths, retaining the previously
+selected OPT-E matte-laminate shutters. It does not select granite shelves or
+change the separate utility aluminium or outdoor/wet-area joinery. The source
+snapshot and generated costs remain unchanged; thickness, grade, plinth detail,
+waterproofing and other shop details require confirmation.
+
 ## Run in an isolated copy
 
 The generator rewrites its own snapshot and `final` folder, and writes

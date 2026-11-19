@@ -8,8 +8,8 @@
     ".html": 20,
     ".jpeg": 5,
     ".js": 17,
-    ".json": 164,
-    ".md": 34,
+    ".json": 167,
+    ".md": 35,
     ".mjs": 22,
     ".pdf": 23,
     ".png": 102,
@@ -25,7 +25,7 @@
     "bytes": 7052004
   },
   "privacyScope": "Text source files; every PDF page text, standard/XML metadata, links and decoded object dictionaries; approved photographs checked for EXIF and exact allowlisted hashes.",
-  "htmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
+  "htmlSha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
   "errors": [],
   "constructionRelease": false
 }

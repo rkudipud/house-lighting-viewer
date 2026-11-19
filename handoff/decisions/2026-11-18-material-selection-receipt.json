@@ -1,0 +1,26 @@
+{
+  "schema": "house-post-copy-overlay-receipt/1",
+  "date": "2026-11-18",
+  "status": "verified-current-owner-decision-overlay",
+  "sourceUserDecision": "lets go with all BWP and granite plinth. finalize this.",
+  "decisionAddendum": {
+    "path": "handoff/decisions/2026-11-18-material-selection.md",
+    "sha256": "6e597580f5ff377724989df9f8f5abf2273f6805c610bd1724bcb052a61e4117"
+  },
+  "postCopyOverlays": [
+    {
+      "path": "handoff/contractor/wardrobe/README.md",
+      "previousCopySha256": "3331facc56b41c2fbf87071a8223e25e27d30ef8a8916022e64cbddb2dc4a1bd",
+      "currentSha256": "fd45a8528fc1946876c602f0e016bf82e2b3efc2671ab677c42d4eb5b1551f4b",
+      "reason": "The current navigation now links to the earlier owner choices and this BWP/granite-plinth addendum; the original repository-copy receipt remains unchanged."
+    }
+  ],
+  "originalMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "publicMasterSha256": "a62024621af559191896334b9ba96235a3749d0a646ba943dee7ed2dfbe2b659",
+  "historicalDrawingsModelsRendersAndCostsChanged": false,
+  "costsRepriced": false,
+  "constructionRelease": false,
+  "productRelease": false,
+  "procurementRelease": false,
+  "fabricationRelease": false
+}

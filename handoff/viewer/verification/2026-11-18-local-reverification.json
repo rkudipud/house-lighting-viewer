@@ -1,0 +1,63 @@
+{
+  "schema": "house-viewer-reverification/1",
+  "date": "2026-11-18",
+  "status": "PASS_local_browser_regression",
+  "scope": "Local static handoff viewer; this receipt is not evidence of live Pages deployment.",
+  "masterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "previousViewerHtmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3",
+  "viewerHtmlSha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
+  "viewerMainSourceSha256": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e",
+  "localBrowserChecks": {
+    "roomJumps": 12,
+    "viewModes": ["first", "third", "doll", "heat", "rcp"],
+    "dollhouseRoofOff": "PASS; the roof remains a non-color/depth-writing occluder while the model renders roof-off",
+    "ceilingPlanVisibility": "PASS; ceiling and RCP plan groups are visible",
+    "guidedWalkStartStop": "PASS",
+    "allRoomsOnOff": "PASS",
+    "availablePerRoomHighLowSliders": "PASS; values changed and read back for each enabled lane; held groups remained unavailable",
+    "pdfLinks": 4,
+    "pdfHttpStatuses": [200, 200, 200, 200],
+    "generatedDownloads": ["fixture schedule CSV", "circuit groups CSV", "current-view PNG"],
+    "pageErrors": [],
+    "consoleErrors": [],
+    "timeOfDayOrStyleControls": []
+  },
+  "childrenCeiling": {
+    "scheduledCeilingCrossCheck": {
+      "linearFixturesExpectedAndPresent": ["LIV-X1", "LIV-X2", "DIN-X1", "KIT-T4", "MBR-X1", "MBR-X2", "CBR-X1", "CBR-X2", "CBR-X3", "CBR-X4"],
+      "coveScheduleFixtures": ["LIV-L1", "DIN-L2", "KIT-L1", "MBR-L1", "CBR-L1"],
+      "bathPerimeterStripFixtures": ["TL1-L1", "TL2-L1"],
+      "CBRBlackGrooveCount": 4,
+      "result": "The data-driven viewer model built without exceptions and its runtime LIN inventory contains all 10 scheduled LIN fixtures. The ceiling builder requires scheduled COVE fixtures for HALL, kitchen, MBR and CBR rendering paths; bathroom perimeter strips are built from each bath schedule. This cross-check verifies adapter/mesh presence, not photometric brightness for every fitting."
+    },
+    "viewerGeometry": "CBR-X1 to CBR-X4 are present as four 2700 K LIN/LINE square-frame fixtures; the four CBR black slits are separate dark grooves.",
+    "viewerCircuitState": "CBR-X1 to CBR-X4 are on held circuit C40 and remain unlit. CBR LOW can be active because selected review strip CURT-CBR follows LOW; that does not energize the held LINE frame. The CBR cove, bedside and desk fittings remain held.",
+    "clarificationAdded": "The room lighting note now states that the square frame is present but held, is not controlled by LOW, and the black slits are not light fittings. No fixture, geometry, hold or control behavior was changed.",
+    "frozenAnalyticMap": "CBR is excluded; the map table contains no CBR row. It is not a current CBR lux validation.",
+    "radianceBaseRun": {
+      "perFixtureArraysInclude": ["CBR-X1", "CBR-X2", "CBR-X3", "CBR-X4"],
+      "taskMaskPointCount": 1403,
+      "taskPlaneAverageLux": 118,
+      "taskPlaneMinimumLux": 68,
+      "taskPlaneU0": 0.58,
+      "roomGridAverageLux": 102,
+      "qualification": "Recomputed from the base run's per-fixture arrays and its task mask; generic exploratory Radiance evidence, not measured or selected-product validation. This result is scene-specific and does not establish that every published lux result includes the CBR line."
+    },
+    "screenshotsRetainedOutsideRepository": [
+      "children-doll-low-on.png",
+      "children-doll-low-off.png",
+      "children-first-low-on.png",
+      "children-first-low-off.png"
+    ]
+  },
+  "deployment": {
+    "livePagesVerified": false,
+    "note": "The live URL must be checked after this local update is pushed; do not infer deployment from this receipt."
+  },
+  "releases": {
+    "construction": false,
+    "product": false,
+    "procurement": false,
+    "fabrication": false
+  }
+}
