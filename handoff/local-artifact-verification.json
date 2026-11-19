@@ -1,31 +1,32 @@
 {
   "status": "PASS_local_render_decode_privacy_and_Markdown_link_checks",
-  "scope": "Repository content excluding git internals, dependency/cache directories and this report. Markdown navigation checks exclude generator templates whose links resolve in generated output. Final manifest integrity is checked separately.",
+  "scope": "Git-visible repository content excluding dependency/cache directories and this report. Ignored local caches are not publication inputs. Markdown navigation checks exclude generator templates whose links resolve in generated output. Final manifest integrity is checked separately.",
   "formatCounts": {
     "(no extension)": 3,
     ".cal": 1,
-    ".csv": 27,
-    ".html": 20,
-    ".jpeg": 5,
+    ".csv": 47,
+    ".html": 24,
+    ".jpeg": 7,
     ".js": 17,
-    ".json": 167,
-    ".md": 35,
+    ".json": 168,
+    ".md": 40,
     ".mjs": 22,
-    ".pdf": 23,
-    ".png": 102,
-    ".py": 39,
+    ".pdf": 41,
+    ".png": 109,
+    ".py": 44,
     ".rad": 54,
-    ".svg": 87,
-    ".txt": 5
+    ".svg": 94,
+    ".txt": 5,
+    ".xlsx": 1
   },
-  "pdfPagesRenderedAt72Dpi": 165,
+  "pdfPagesRenderedAt72Dpi": 282,
   "distinctApprovedUserSitePhotos": 3,
   "largestFile": {
     "path": "handoff/mason-civil/contractor-civil-review.pdf",
     "bytes": 7052004
   },
   "privacyScope": "Text source files; every PDF page text, standard/XML metadata, links and decoded object dictionaries; approved photographs checked for EXIF and exact allowlisted hashes.",
-  "htmlSha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
+  "htmlSha256": "75b813f4ff7c655884bf3cc13e64ebe1aba4fcc4a9ff82bfe99a15c2def510a2",
   "errors": [],
   "constructionRelease": false
 }

@@ -1,15 +1,15 @@
 {
-  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-  "master_bytes": 1591969,
+  "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "master_bytes": 1602914,
   "drawing_source": {
     "staging": false,
     "final": false,
-    "publication_status": "REVIEW DRAFT; not construction-released",
-    "review_draft": true,
+    "publication_status": "review drawing; not construction-released",
+    "review_draft": false,
     "lighting_pending": false,
     "hd18": {
       "fragment": {
-        "file": "handoff/source-basis/fragments/pooja-notation-hd18.json",
+        "file": "pooja-notation-hd18.json",
         "sha256": "598796435ba3b37d6fedf655f243d87e09c663cbf338eb5fd7a25cbff37a46ec",
         "bytes": 2458
       },
@@ -100,7 +100,7 @@
         ]
       },
       "file": "01-plan-furnished.svg",
-      "sha256": "32e31ede03506872c71dbab30c92536a107641bd638f6e6e2043edc5107fdf08"
+      "sha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec"
     },
     {
       "id": "02-rcp",
@@ -109,6 +109,8 @@
         "fixtures": 104,
         "circuits": 47,
         "selectedCurtainStrips": 4,
+        "reviewFixtures": 108,
+        "reviewCircuits": 51,
         "paths": 30,
         "points": 74,
         "fans": 3,
@@ -271,20 +273,6 @@
           "BAL-L2",
           "BAL-L3"
         ],
-        "selectedCurtainStripIds": [
-          "CURT-LIV",
-          "CURT-DIN",
-          "CURT-MBR-S",
-          "CURT-CBR"
-        ],
-        "releasedCbrIds": [
-          "CBR-H1",
-          "CBR-H2",
-          "CBR-H3",
-          "CBR-H4",
-          "CBR-H5",
-          "CBR-H6"
-        ],
         "circuitIds": [
           "C01",
           "C02",
@@ -333,10 +321,16 @@
           "C40",
           "C41",
           "C41b"
+        ],
+        "curtainStrips": [
+          "CURT-LIV",
+          "CURT-DIN",
+          "CURT-MBR-S",
+          "CURT-CBR"
         ]
       },
       "file": "02-rcp.svg",
-      "sha256": "6d757bd30411ecd295d4b4c0b885ef63c932e2501560de5699226236df41a988"
+      "sha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1"
     },
     {
       "id": "03-elev-R01-living",
@@ -404,7 +398,7 @@
         "switchStrip": null
       },
       "file": "03-elev-R01-living.svg",
-      "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b"
+      "sha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8"
     },
     {
       "id": "04-elev-R02-dining",
@@ -460,7 +454,7 @@
         "switchStrip": null
       },
       "file": "04-elev-R02-dining.svg",
-      "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a"
+      "sha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60"
     },
     {
       "id": "05-elev-R03-kitchen",
@@ -550,7 +544,7 @@
         "switchStrip": null
       },
       "file": "05-elev-R03-kitchen.svg",
-      "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2"
+      "sha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155"
     },
     {
       "id": "06-elev-R04-master",
@@ -607,7 +601,7 @@
         "switchStrip": null
       },
       "file": "06-elev-R04-master.svg",
-      "sha256": "29cb3e6e6a01dd0f8f860a02000e8b0631c9ad745590c70ff1de314f075aac8b"
+      "sha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b"
     },
     {
       "id": "07-elev-R04a-dressing",
@@ -664,7 +658,7 @@
         "switchStrip": null
       },
       "file": "07-elev-R04a-dressing.svg",
-      "sha256": "6f02bf5a403d4b9a53c6253bb0b283f4ad937929c908df9b53b7ed566bf39b68"
+      "sha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c"
     },
     {
       "id": "08-elev-R05-children",
@@ -752,13 +746,13 @@
           {
             "opening": "children-window",
             "panel": "children-w",
-            "kind": "cbr-held-assumed-top"
+            "kind": "cbr-unmeasured-assumed-top"
           }
         ],
         "switchStrip": "children-s"
       },
       "file": "08-elev-R05-children.svg",
-      "sha256": "cfc5a89c4379d718a17dcec32b52ee348b801e186278184f2f27f1cf187a518e"
+      "sha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe"
     },
     {
       "id": "09-elev-R06-TL1",
@@ -815,7 +809,7 @@
         "switchStrip": null
       },
       "file": "09-elev-R06-TL1.svg",
-      "sha256": "e5ccca9c76ddd464e7ac56b02e3e19a40d355bd787ce882f5afb1cbd7d84cba5"
+      "sha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1"
     },
     {
       "id": "10-elev-R07-TL2",
@@ -872,7 +866,7 @@
         "switchStrip": null
       },
       "file": "10-elev-R07-TL2.svg",
-      "sha256": "c4f276aa07ae40821702180a03d9acab9ac4c7dca09b316ee7a1932f9aa27b34"
+      "sha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f"
     },
     {
       "id": "11-elev-R08-utility",
@@ -973,7 +967,7 @@
         "switchStrip": null
       },
       "file": "11-elev-R08-utility.svg",
-      "sha256": "7d9cb16e5c57a05a29560625d0bc584332ac9f51a311520c934e257dce6eac15"
+      "sha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3"
     },
     {
       "id": "12-elev-R09-entry",
@@ -1015,7 +1009,7 @@
         "switchStrip": null
       },
       "file": "12-elev-R09-entry.svg",
-      "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e"
+      "sha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557"
     },
     {
       "id": "13-elev-R12-lobby",
@@ -1058,7 +1052,7 @@
         "switchStrip": null
       },
       "file": "13-elev-R12-lobby.svg",
-      "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333"
+      "sha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107"
     }
   ]
 }

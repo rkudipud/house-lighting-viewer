@@ -7,10 +7,11 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "electrician" / "lighting" / "source"))
-from validate_cct_revision import verify
+from validate_cbr_revision import PRIOR_SHA, CURRENT_SHA, load_verified, verify
 
 
 ABS_PATH = re.compile(r"^[A-Za-z]:[\\/]")
+EMBEDDED_PATH = re.compile(r"(?<![A-Za-z])[A-Za-z]:[\\/]")
 
 
 def sha(path):
@@ -36,7 +37,8 @@ def collect_path_map(source, public, path="", mapping=None):
         for i, (a, b) in enumerate(zip(source, public)):
             collect_path_map(a, b, f"{path}/{i}", mapping)
     elif source != public:
-        if not isinstance(source, str) or not ABS_PATH.match(source):
+        if not isinstance(source, str) or not (ABS_PATH.match(source)
+                or public == "[private source path, not published]"):
             raise ValueError(f"Prior public-copy difference is not a local path at {path}")
         if not isinstance(public, str) or ABS_PATH.match(public):
             raise ValueError(f"Unexpected prior path redaction at {path}")
@@ -52,8 +54,8 @@ def main():
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args()
 
-    prior = json.loads(args.prior_master.read_text(encoding="utf-8"))
-    current = json.loads(args.master.read_text(encoding="utf-8"))
+    prior = load_verified(args.prior_master, PRIOR_SHA)
+    current = load_verified(args.master, CURRENT_SHA)
     verify(prior, current)
     prior_public = json.loads(args.prior_public.read_text(encoding="utf-8"))
     path_map = collect_path_map(prior, prior_public)
@@ -63,18 +65,18 @@ def main():
             return {k: transform(v, f"{path}/{k}") for k, v in value.items()}
         if isinstance(value, list):
             return [transform(v, f"{path}/{i}") for i, v in enumerate(value)]
-        if isinstance(value, str) and re.search(r"[A-Za-z]:[\\/]", value):
+        previous = path_map.get(path)
+        if previous and value == previous[0]:
+            return previous[1]
+        if isinstance(value, str) and EMBEDDED_PATH.search(value):
             if ABS_PATH.match(value):
-                previous = path_map.get(path)
-                if previous and value == previous[0]:
-                    return previous[1]
                 return path_replacement(value)
             return "[private source path, not published]"
         return value
 
     public = transform(current)
     raw = json.dumps(public, ensure_ascii=False, indent=2) + "\n"
-    if re.search(r"(?i)(?:[A-Z]:[\\/]|file://|\.copilot[\\/]|session-state[\\/]|attachments[\\/])", raw):
+    if re.search(r"(?i)(?:(?<![A-Z])[A-Z]:[\\/]|file://|\.copilot[\\/]|session-state[\\/]|attachments[\\/])", raw):
         raise ValueError("Private path remains in the staged master")
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(raw, encoding="utf-8", newline="\n")

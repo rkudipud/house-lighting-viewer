@@ -2,7 +2,7 @@
 
 # Location-linked lighting bill of materials
 
-**Master SHA-256:** `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac`. These are **modeled quantities for one flat**, not purchase quantities or approved construction dimensions. Four floors are intended to repeat the scheme, but site geometry, returns, cuts, product lead lengths and wastage must be measured independently. No verified current installed quote exists.
+**Master SHA-256:** `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822`. These are **modeled quantities for one flat**, not purchase quantities or approved construction dimensions. The working planning multiplier is four storeys x one modelled 2BHK flat per floor (four flat schedules); confirm the actual floor and flat count and floor-to-floor variations on site. Site geometry, returns, cuts, product lead lengths and wastage must be measured independently. No verified current installed quote exists.
 
 The complete `schedules/location-linked-bom.csv` lists **108 fixture records**, the separate profile allowances, **12 24 V supply classes**, **31 wall controls**, **three modeled PWM repeaters**, **eight conceptual switch modules**, and one 48 V track driver. It includes circuit/board, model specification, CCT, CRI/R9/IP targets and available indicative solver coordinates or strip paths. A supply, dimmer, switch, profile or repeater appears separately from its fixture; omit a separate profile where an approved integrated product already includes the required diffuser and heat-sinking. Do not treat these entries as certified matched products.
 
@@ -18,13 +18,13 @@ Descriptions, individual modeled watts/lumens/beams, minimum CRI/R9, IP targets,
 | BAL | PLINTH | 1 | 2700K | 2.93 | BAL-L1 |
 | BAL | UPDNV | 2 | 2700K | - | BAL-L2, BAL-L3 |
 | CBR | COVE_FW | 2 | 2700K | 7.77 | CBR-L1, CURT-CBR |
-| CBR | DL6 | 6 | 3000K | - | CBR-H1, CBR-H2, CBR-H3, CBR-H4, CBR-H5, CBR-H6 |
+| CBR | DL6 | 6 | 4000K | - | CBR-H1, CBR-H2, CBR-H3, CBR-H4, CBR-H5, CBR-H6 |
 | CBR | LIN | 4 | 2700K | 5.36 | CBR-X1, CBR-X2, CBR-X3, CBR-X4 |
 | CBR | READ | 2 | 3000K | - | CBR-R1, CBR-R2 |
 | CBR | TASK_HO | 1 | 4000K | 1.14 | CBR-S1 |
 | DIN | COVE_FW | 2 | 2700K | 8.66 | DIN-L2, CURT-DIN |
-| DIN | DL10 | 3 | 3000K | - | DIN-H1, DIN-H2, DIN-H3 |
-| DIN | DL8V | 1 | 3000K | - | DIN-H6 |
+| DIN | DL10 | 3 | 4000K | - | DIN-H1, DIN-H2, DIN-H3 |
+| DIN | DL8V | 1 | 4000K | - | DIN-H6 |
 | DIN | LIN | 1 | 2700K | 3.37 | DIN-X1 |
 | DIN | PEND | 1 | 2700K | - | DIN-L1 |
 | DIN | TRK6 | 3 | 3000K | - | FW-T1, FW-T2, FW-T3 |
@@ -38,8 +38,8 @@ Descriptions, individual modeled watts/lumens/beams, minimum CRI/R9, IP targets,
 | KIT | TASK_LO | 1 | 4000K | 1.68 | KIT-T1 |
 | LIV | BACK | 2 | 2700K | 5.3 | LIV-L2, LIV-P1 |
 | LIV | COVE_FW | 2 | 2700K | 13.98 | LIV-L1, CURT-LIV |
-| LIV | DL8 | 7 | 3000K | - | LIV-H1, LIV-H2, LIV-H3, LIV-H4, LIV-H5, LIV-H6, LIV-H7 |
-| LIV | DL8A | 3 | 3000K | - | LIV-H8, LIV-H9, LIV-H10 |
+| LIV | DL8 | 7 | 4000K | - | LIV-H1, LIV-H2, LIV-H3, LIV-H4, LIV-H5, LIV-H6, LIV-H7 |
+| LIV | DL8A | 3 | 4000K | - | LIV-H8, LIV-H9, LIV-H10 |
 | LIV | LIN | 2 | 2700K | 4.08 | LIV-X1, LIV-X2 |
 | LIV | PIN6V | 1 | 2700K | - | LIV-P2 |
 | LOB | DL7V | 2 | 3000K | - | LOB-H1, LOB-H2 |
@@ -47,7 +47,7 @@ Descriptions, individual modeled watts/lumens/beams, minimum CRI/R9, IP targets,
 | LOB | STEP | 1 | 2700K | - | LOB-N1 |
 | MBR | BACK | 1 | 2700K | 1.28 | MBR-L2 |
 | MBR | COVE_FW | 2 | 2700K | 8.96 | MBR-L1, CURT-MBR-S |
-| MBR | DL6 | 8 | 3000K | - | MBR-H1, MBR-H2, MBR-H3, MBR-H4, MBR-H5, MBR-H6, MBR-H7, MBR-H8 |
+| MBR | DL6 | 8 | 4000K | - | MBR-H1, MBR-H2, MBR-H3, MBR-H4, MBR-H5, MBR-H6, MBR-H7, MBR-H8 |
 | MBR | LIN | 2 | 2700K | 3.86 | MBR-X1, MBR-X2 |
 | MBR | READ | 2 | 3000K | - | MBR-R1, MBR-R2 |
 | MBR | STEP | 1 | 2700K | - | MBR-N1 |

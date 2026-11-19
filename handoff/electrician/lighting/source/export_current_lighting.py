@@ -22,7 +22,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.lines import Line2D
 from matplotlib.patches import Polygon
-from validate_cct_revision import CURRENT_SHA, PRIOR_SHA, load_verified, verify
+from validate_cct_revision import CURRENT_SHA as CCT_SHA, PRIOR_SHA, load_verified, verify
+from validate_cbr_revision import CURRENT_SHA, HEATMAP_SHA as CURRENT_HEATMAP, verify as verify_cbr
 
 SESSION = Path(r"not-distributed/lighting-session-inputs")
 MASTER = Path(r"handoff/source-basis/house-design.json")
@@ -36,9 +37,43 @@ EXPECTED_HEATMAP = "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf69891
 EXPECTED_OLD_VERIFICATION = "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9"
 RELEASE = "REVIEW ONLY - NOT FOR CONSTRUCTION"
 KIND = {"HIGH": "main", "COVE": "mood", "MOOD": "mood", "LINE": "mood", "PERIM": "mood", "LOW": "mood"}
-COLORS = {2700: "#b44700", 3000: "#782596", 4000: "#0059ad"}
-MARKERS = {2700: "o", 3000: "s", 4000: "^"}
-LINESTYLES = {2700: "-", 3000: "--", 4000: ":"}
+# Fitting type -> (colour, line pattern, marker). Colours differ in luminance and every type also has its
+# own line pattern and marker so the sheets stay legible in grayscale.
+TYPE_STYLES = {
+    "main": {
+        "Recessed downlight": ("#0b3c5d", "-", "o"),
+        "Surface / bathroom fitting": ("#e69f00", (0, (5, 2)), "s"),
+    },
+    "mood": {
+        "Cove strip": ("#d55e00", "-", "o"),
+        "LINE strip": ("#0072b2", (0, (7, 2, 1.5, 2)), "D"),
+        "Curtain-pocket strip": ("#009e73", (0, (1.2, 1.6)), "^"),
+        "Bathroom perimeter cove": ("#cc79a7", (0, (5, 2)), "s"),
+        "Mood point / backlight / niche / pendant": ("#3a3a3a", (0, (3, 1.5, 3, 4)), "P"),
+    },
+    "task": {
+        "Reading light": ("#0072b2", "-", "o"),
+        "Mirror / face light": ("#e69f00", (0, (5, 2)), "s"),
+        "Accent / track": ("#cc79a7", (0, (7, 2, 1.5, 2)), "D"),
+        "Task / study light": ("#009e73", (0, (1.2, 1.6)), "^"),
+        "Night step light": ("#3a3a3a", "-", "v"),
+    },
+}
+A4_PORTRAIT_IN = (8.27, 11.69)
+TILE_GRID = (2, 3)
+
+
+def plan_type(fixture_type, lane, fid):
+    if fid.startswith("CURT-"):
+        return "Curtain-pocket strip"
+    if lane == "HIGH":
+        return "Recessed downlight" if fixture_type.startswith("DL") else "Surface / bathroom fitting"
+    if lane in ("COVE", "LINE", "PERIM"):
+        return {"COVE": "Cove strip", "LINE": "LINE strip", "PERIM": "Bathroom perimeter cove"}[lane]
+    if lane in ("MOOD", "LOW"):
+        return "Mood point / backlight / niche / pendant"
+    return {"READ": "Reading light", "MIRROR": "Mirror / face light", "FACE": "Mirror / face light",
+            "ACCENT": "Accent / track", "NIGHT": "Night step light"}.get(lane, "Task / study light")
 
 
 def sha(raw: bytes) -> str:
@@ -132,6 +167,12 @@ def validate_optical_provenance(data, heatmap):
     require(verification["summary"] == {"PASS": 82} and all(c["result"] == "PASS" for c in verification["checks"]),
             "Original fixed-white calculation verification is not all-pass")
     require(verification["design_inputs"]["sha256"] == EXPECTED_OPTICAL_DI, "Original verification used a different DI")
+    statistics = validate_grid_statistics(data, heatmap)
+    return {**statistics, "original_verification_passes": 82, "unchanged_optical_fixture_count": len(old_fixtures)}
+
+
+def validate_grid_statistics(data, heatmap):
+    lighting = data["lighting"]
     checked = 0
     missing_stats = []
     for room_id, grid in heatmap["rooms"].items():
@@ -154,8 +195,7 @@ def validate_optical_provenance(data, heatmap):
                 require(abs(minimum/average-ref["U0"]) <= .025, f"{room_id} {scene} uniformity disagrees")
             checked += 1
     require(checked == 71, f"Unexpected number of comparable grid statistics: {checked}")
-    return {"grid_statistics_compared": checked, "grids_without_reported_statistics": missing_stats,
-            "original_verification_passes": 82, "unchanged_optical_fixture_count": len(old_fixtures)}
+    return {"grid_statistics_compared": checked, "grids_without_reported_statistics": missing_stats}
 
 
 def reconcile(data):
@@ -232,7 +272,7 @@ def reconcile(data):
         }
     require(len(vd) == 37 and Counter(x["status"] for x in vd.values()) == {"OK": 30, "MARGINAL": 2, "HOLD": 5},
             "Selected voltage-drop ledger does not reproduce")
-    require(vd[("C39", "all")]["dV_pct"] == 3.3 and vd[("C40", "all")]["dV_pct"] == 3.6,
+    require(vd[("C39", "all")]["dV_pct"] == 3.3 and vd[("C40", "all")]["dV_pct"] == 3.9,
             "P16 C39/C40 marginal results changed")
     require(all(x["status"] == "HOLD" and x["dV_pct"] is None for x in vd.values()
                 if x["circuit"] in {"C03", "C04", "C05", "X-CURT-LIV"}),
@@ -363,79 +403,122 @@ def product_rows(fixtures, cp):
 
 
 def plot_plans(data, plot_fixtures):
+    """A4 portrait plan sets: one overview page plus 2 x 3 zoom tiles with fitting IDs at print-readable size."""
     rooms = data["lighting"]["design_inputs"]["rooms"]
+    types = {f["id"]: plan_type(f["type"], f["lane"], f["id"]) for f in data["lighting"]["fixtures"]}
     polygons = [r["poly_ft"] for r in rooms]
     all_points = [p for poly in polygons for p in poly] + [p for f in plot_fixtures for p in (f["path_ft"] or ([[f["x_ft"], f["z_ft"]]] if f["x_ft"] is not None else []))]
     min_x, max_x = min(p[0] for p in all_points)-.5, max(p[0] for p in all_points)+.5
     min_z, max_z = min(p[1] for p in all_points)-.5, max(p[1] for p in all_points)+.5
-    legends = [
-        Line2D([0], [0], color=COLORS[k], lw=2, linestyle=LINESTYLES[k],
-               marker=MARKERS[k], markersize=6, markeredgecolor="black", markeredgewidth=.5,
-               label=f"{k} K: {shape} / {line}")
-        for k, shape, line in ((2700, "circle", "solid"), (3000, "square", "dashed"),
-                               (4000, "triangle", "dotted"))
-    ] + [Line2D([0], [0], marker="o", markersize=11, markerfacecolor="none",
-                markeredgecolor="black", markeredgewidth=1.5, linestyle="none",
-                label="Black ring: placement / site hold")]
+    cols, rows_n = TILE_GRID
+    tw, th = (max_x - min_x) / cols, (max_z - min_z) / rows_n
+    tiles = [(min_x + c * tw, min_x + (c + 1) * tw, min_z + r * th, min_z + (r + 1) * th)
+             for r in range(rows_n) for c in range(cols)]
+    pad = 1.0
+
+    def anchor(f):
+        points = f["path_ft"] or ([[f["x_ft"], f["z_ft"]]] if f["x_ft"] is not None else [])
+        if not points:
+            return None, None
+        return points, (points[len(points)//2] if len(points) > 1 else points[0])
+
     for kind, title in (("main", "Main lights"), ("mood", "Coves and mood"), ("task", "Task, accent and night")):
-        fig, ax = plt.subplots(figsize=(13, 18))
-        annotations = []
-        for room in rooms:
-            poly = room["poly_ft"]
-            ax.add_patch(Polygon(poly, closed=True, facecolor="#f5f8f8", edgecolor="#79919a", linewidth=.65, zorder=1))
-            x = sum(p[0] for p in poly)/len(poly)
-            z = sum(p[1] for p in poly)/len(poly)
-            ax.text(x, z, room["id"], ha="center", va="center", color="#90a5ab", fontsize=9, zorder=2)
+        styles = TYPE_STYLES[kind]
+        chosen = []
         for f in plot_fixtures:
             if KIND.get(f["lane"], "task") != kind:
                 continue
-            points = f["path_ft"] or ([[f["x_ft"], f["z_ft"]]] if f["x_ft"] is not None else [])
+            points, mid = anchor(f)
             if not points:
                 continue
-            color = COLORS[f["cct_k"]]
-            held = bool(f["hold_ids"])
-            if len(points) > 1:
-                ax.plot([p[0] for p in points], [p[1] for p in points],
-                        color=color, linestyle=LINESTYLES[f["cct_k"]], linewidth=2.2, zorder=4)
-                x, z = points[len(points)//2]
-            else:
-                x, z = points[0]
-            ax.scatter([x], [z], s=40, c=color, marker=MARKERS[f["cct_k"]],
-                       edgecolors="black", linewidths=.5, zorder=5)
-            if held:
-                ax.scatter([x], [z], s=140, facecolors="none", edgecolors="black",
-                           linewidths=1.1, zorder=6)
-            annotations.append(ax.annotate(
-                f["id"], (x, z), xytext=(3, 3), textcoords="offset points", fontsize=7,
-                color="#101820", bbox={"facecolor": "white", "edgecolor": "none", "alpha": .8, "pad": .25},
-                zorder=7))
-        ax.set_xlim(min_x, max_x); ax.set_ylim(max_z, min_z); ax.set_aspect("equal")
-        ax.set_xlabel("Sheet x (feet; west to right)"); ax.set_ylabel("Sheet z (feet; north downward)")
-        ax.grid(color="#b4c6cc", linewidth=.3, alpha=.45)
-        ax.set_title(f"{title} | typical floor\n{RELEASE}", fontsize=14, fontweight="bold", loc="left")
-        ax.legend(handles=legends, loc="upper center", bbox_to_anchor=(.5, -.055), ncol=2, fontsize=9, frameon=False)
-        fig.text(.09, .025, "Approximate lighting zones, not measured walls. Unringed symbols are not product or construction approval.\n"
-                 "No PSU hatch location, wiring route, structural cutting or fixing detail is released. See schedules and site holds.",
-                 fontsize=8, color="#744023")
-        fig.tight_layout(rect=(0, .07, 1, .98))
-        fig.canvas.draw()
-        renderer = fig.canvas.get_renderer()
-        placed = []
-        for annotation in annotations:
-            for dx, dy in ((3, 3), (3, -11), (-50, 3), (-50, -11),
-                           (3, 14), (-50, 14), (3, -22), (-50, -22)):
-                annotation.set_position((dx, dy))
-                bounds = annotation.get_window_extent(renderer).expanded(1.05, 1.15)
-                if ax.bbox.contains(bounds.x0, bounds.y0) and ax.bbox.contains(bounds.x1, bounds.y1) \
-                        and not any(bounds.overlaps(other) for other in placed):
-                    break
-            else:
-                raise ValueError(f"Unable to place a readable {kind} label for {annotation.get_text()}")
-            placed.append(bounds)
-        for suffix in ("pdf", "svg", "png"):
-            fig.savefig(OUT / f"lighting-plan-{kind}.{suffix}", dpi=150,
-                        metadata={"Creator": "House lighting review"} if suffix in ("pdf", "svg") else None)
-        plt.close(fig)
+            x, z = mid
+            name = "Curtain-pocket strip" if f["id"].startswith("CURT-") else types[f["id"]]
+            require(name in styles, f"{f['id']}: plan type {name} not styled on the {kind} sheet")
+            chosen.append((f, points, x, z, name))
+        present = [n for n in styles if any(c[4] == n for c in chosen)]
+        ccts = sorted({c[0]["cct_k"] for c in chosen})
+        legends = [Line2D([0], [0], color=styles[n][0], lw=2.4, linestyle=styles[n][1], marker=styles[n][2],
+                          markersize=7, markeredgecolor="black", markeredgewidth=.6, label=n) for n in present]
+        legends.append(Line2D([0], [0], marker="o", markersize=12, markerfacecolor="none", markeredgecolor="black",
+                              markeredgewidth=1.6, linestyle="none", label="Black ring: placement / site hold"))
+        cct_note = ("Label suffix = fixed CCT (" + ", ".join(f"{k} K" for k in ccts) + "). "
+                    "Colour, line pattern and marker identify fitting type.")
+
+        def sheet(page_title, view, label_tile):
+            fig = plt.figure(figsize=A4_PORTRAIT_IN)
+            ax = fig.add_axes((.09, .24, .86, .66))
+            for room in rooms:
+                poly = room["poly_ft"]
+                ax.add_patch(Polygon(poly, closed=True, facecolor="#f5f8f8", edgecolor="#79919a", linewidth=.6, zorder=1))
+                cx = sum(p[0] for p in poly)/len(poly)
+                cz = sum(p[1] for p in poly)/len(poly)
+                if view[0] <= cx <= view[1] and view[2] <= cz <= view[3]:
+                    ax.text(cx, cz, room["id"], ha="center", va="center", color="#8399a0", fontsize=9, zorder=2)
+            annotations = []
+            for f, points, x, z, name in chosen:
+                color, ls, marker = styles[name]
+                if len(points) > 1:
+                    ax.plot([p[0] for p in points], [p[1] for p in points], color=color, linestyle=ls,
+                            linewidth=2.4, zorder=4, solid_capstyle="butt")
+                ax.scatter([x], [z], s=46, c=color, marker=marker, edgecolors="black", linewidths=.6, zorder=5)
+                if f["hold_ids"]:
+                    ax.scatter([x], [z], s=170, facecolors="none", edgecolors="black", linewidths=1.2, zorder=6)
+                if label_tile is not None:
+                    x0, x1, z0, z1 = label_tile
+                    if x0 <= x < x1 + (1e-9 if x1 >= max_x - 1e-9 else 0) and z0 <= z < z1 + (1e-9 if z1 >= max_z - 1e-9 else 0):
+                        annotations.append(ax.annotate(
+                            f"{f['id']} {f['cct_k']}K", (x, z), xytext=(4, 4), textcoords="offset points",
+                            fontsize=7.5, color="#101820", zorder=7,
+                            bbox={"facecolor": "white", "edgecolor": "#9aa9ae", "linewidth": .3, "alpha": .9, "pad": .3}))
+            if label_tile is None:
+                for i, (x0, x1, z0, z1) in enumerate(tiles, 1):
+                    ax.add_patch(Polygon([[x0, z0], [x1, z0], [x1, z1], [x0, z1]], closed=True, fill=False,
+                                         edgecolor="#5b6b70", linestyle=(0, (2, 2)), linewidth=.7, zorder=3))
+                    ax.text(x0 + .4, z0 + .4, f"Zoom {i}", ha="left", va="top", fontsize=8, color="#3f4b4f",
+                            bbox={"facecolor": "white", "edgecolor": "none", "alpha": .85, "pad": .4}, zorder=8)
+            ax.set_xlim(view[0], view[1]); ax.set_ylim(view[3], view[2]); ax.set_aspect("equal")
+            ax.set_xlabel("Sheet x (feet; west to right)", fontsize=8)
+            ax.set_ylabel("Sheet z (feet; north downward)", fontsize=8)
+            ax.tick_params(labelsize=7.5)
+            ax.grid(color="#b4c6cc", linewidth=.3, alpha=.45)
+            fig.text(.09, .965, f"{title} | typical floor | {page_title}", fontsize=12, fontweight="bold")
+            fig.text(.09, .943, RELEASE, fontsize=9.5, fontweight="bold", color="#8a2d0b")
+            fig.legend(handles=legends, loc="upper left", bbox_to_anchor=(.08, .185), ncol=2, fontsize=8,
+                       frameon=False, handlelength=4.2, columnspacing=1.6)
+            fig.text(.09, .045, cct_note + "\nApproximate lighting zones, not measured walls. Unringed symbols are not "
+                     "product or construction approval.\nNo PSU hatch location, wiring route, structural cutting or "
+                     "fixing detail is released. A4 portrait; see schedules and site holds.", fontsize=7.5, color="#744023")
+            fig.canvas.draw()
+            renderer = fig.canvas.get_renderer()
+            placed = [ax.transData.transform((c[2], c[3])) for c in chosen]
+            boxes = []
+            for annotation in annotations:
+                for dx, dy in ((4, 4), (4, -12), (-62, 4), (-62, -12), (4, 15), (-62, 15), (4, -23), (-62, -23),
+                               (14, -4), (-74, -4), (4, 26), (-62, 26), (4, -34), (-62, -34), (-30, 18), (-30, -26)):
+                    annotation.set_position((dx, dy))
+                    bounds = annotation.get_window_extent(renderer).expanded(1.04, 1.1)
+                    if ax.bbox.contains(bounds.x0, bounds.y0) and ax.bbox.contains(bounds.x1, bounds.y1) \
+                            and not any(bounds.overlaps(other) for other in boxes):
+                        break
+                else:
+                    raise ValueError(f"Unable to place a readable {kind} label for {annotation.get_text()}")
+                boxes.append(bounds)
+            return fig
+
+        with PdfPages(OUT / f"lighting-plan-{kind}.pdf", metadata={"Creator": "House lighting review",
+                                                                     "Title": f"{title} - {RELEASE}"}) as pdf:
+            fig = sheet("overview (IDs on zoom pages)", (min_x, max_x, min_z, max_z), None)
+            pdf.savefig(fig)
+            fig.savefig(OUT / f"lighting-plan-{kind}.svg", metadata={"Creator": "House lighting review"})
+            fig.savefig(OUT / f"lighting-plan-{kind}.png", dpi=150)
+            plt.close(fig)
+            for i, tile in enumerate(tiles, 1):
+                x0, x1, z0, z1 = tile
+                view = (max(min_x, x0 - pad), min(max_x, x1 + pad), max(min_z, z0 - pad), min(max_z, z1 + pad))
+                fig = sheet(f"zoom {i} of {len(tiles)}", view, tile)
+                pdf.savefig(fig)
+                fig.savefig(OUT / f"lighting-plan-{kind}-zoom-{i}.png", dpi=150)
+                plt.close(fig)
 
 
 def plot_heatmaps(data, heatmaps):
@@ -466,7 +549,7 @@ def plot_heatmaps(data, heatmaps):
             if room_id == "LIV":
                 caveat += " Mood retains inherited pooja allowance; revised niche held."
             if room_id == "CBR":
-                caveat += " Children's geometry remains an unmeasured planned frame."
+                caveat += " CBR estimate includes held cove and LINE; not currently available viewer light."
             fig.text(.05, .025, caveat, fontsize=8, color="#803f22")
             pdf.savefig(fig)
             fig.savefig(folder / f"{room_id}-analytic.png", dpi=125)
@@ -571,19 +654,21 @@ def make_spec(data, fixtures, cp, psus, groups):
 | Current house master | `{EXPECTED_MASTER}` |
 | Current lighting design-input record (canonical JSON) | `{canon(l['design_inputs'])}` |
 | Original photometry calculation input (canonical JSON) | `{EXPECTED_OPTICAL_DI}` |
-| Saved analytic heatmap | `{EXPECTED_HEATMAP}` |
+| Current mixed-provenance heatmap | `{CURRENT_HEATMAP}` |
 
-The photometric calculations and heatmaps were **not recalculated** for this rebind. Original optical inputs, every fixture position and every room/task result were compared with the verified fixed-white source. The recent changes are status/selection and electrical topology changes. Generic optics, maintenance factor 0.8, estimated geometry and assumed reflectance remain; no measured lux or manufacturer IES/LDT equivalence is claimed.
+The children's room has a targeted generic-optics reanalysis for the provisional shifted LINE paths. Other room heatmap grids retain the original optical calculation. The CBR reanalysis includes held CBR-L1 and CBR-X1-X4 at full output; it is not the lighting currently available in the viewer. Generic optics, maintenance factor 0.8, estimated geometry and assumed reflectance remain; no measured lux or manufacturer IES/LDT equivalence is claimed.
 
 ## Fixed CCT and fitting schedule
 
-All coves, decorative strips and selected curtain strips are **2700 K**. Living, dining and bedroom mains are proposed at **4000 K** for homeowner review; readers and art remain **3000 K**. Kitchen task, utility, dressing and bath face/task lights are **4000 K**. The CCT is fixed by fitting; the controls adjust brightness only. `fixture-ledger.csv` and `fixed-cct-map.json` give each fitting, rule and hold.
+All coves, decorative strips and selected curtain strips are **2700 K**. Living, dining and bedroom mains are proposed at **4000 K** for homeowner review; lobby and balcony HIGH fittings remain **3000 K**, as do readers and art. Kitchen task, utility, dressing and bath face/task lights are **4000 K**. The CCT is fixed by fitting; the controls adjust brightness only. `fixture-ledger.csv` and `fixed-cct-map.json` give each fitting, rule and hold.
 
 | Room | Base fittings | Fixed white bins |
 |---|---:|---|
 {chr(10).join(room_lines)}
 
-Base: 104 fittings, 47 controlled groups. Selected extension: four additional curtain strips and four circuit records, with no lux credit. CBR-H1-H6 are shown as switchable review fittings on C37 at their existing locations; the C37 dimmer and other CBR ceiling/bed/desk/site holds remain.
+Base: 104 fittings, 47 controlled groups. Selected extension: four additional curtain strips and four circuit records, with no lux credit. CBR-H1-H6 are shown as switchable review fittings on C37 at their existing locations; CBR-L1 (retained cove, C39) and the outward-shifted CBR-X1-X4 (LINE, C40) are modelled ON with their scheduled lumens in the provisional review simulation (CBR LOW 100 % {data['decisions']['children_ceiling_review']['modelled_risks']['CBR_LOW_100_avg_lux']} lx, HIGH+LOW 100 % {data['decisions']['children_ceiling_review']['modelled_risks']['CBR_HIGH_LOW_100_avg_lux']} lx; generic optics, not measured). Their installation, procurement and actual operation remain held under H-CBR-CEIL. The fan is shown at the nominal room centre with a {data['decisions']['children_ceiling_review']['fan_nominal_sweep_mm']} mm planning sweep; no fan product is selected, its airflow for this approx. 12.5 x 15 ft room is unconfirmed, and fan load is excluded from lighting totals. R05 band {data['decisions']['children_ceiling_review']['reported_heights_m']['band']} m and raised centre approx. {data['decisions']['children_ceiling_review']['reported_heights_m']['raised_centre_approx']} m are homeowner-reported; the slab is unmeasured. The C37 dimmer and other CBR ceiling/bed/desk/site holds remain.
+
+The proposed LINE centres are {min(v['fan_center_to_line_m'] for v in data['decisions']['children_ceiling_review']['centreline_checks_not_clearance_approval'].values())} m or more from the nominal fan centre. The nominal blade tip is only approx. {data['decisions']['children_ceiling_review']['plan_checks_not_clearance_approval']['nominal_blade_tip_to_cove_centreline_plan_m']} m in plan from the nearest cove centreline; that is not a clearance or fit approval. The nearest HIGH centre is approximately {min(v['high_center_to_line_m'] for v in data['decisions']['children_ceiling_review']['centreline_checks_not_clearance_approval'].values())} m from a line (approx. {min(v['high_cutout_edge_to_line_m_if_150mm'] for v in data['decisions']['children_ceiling_review']['centreline_checks_not_clearance_approval'].values())} m to an assumed 150 mm cut-out edge). These are plan comparisons, not safe clearances. The modelled wardrobe-front value is {data['decisions']['children_ceiling_review']['modelled_risks']['wardrobe_vertical_lux_high_plus_low']} lx against a {data['decisions']['children_ceiling_review']['modelled_risks']['wardrobe_target_lux']} lx project target. Verify the complete ceiling, cove section, fan drop and product clearances, loft shutter and curtain pocket on site before release.
 
 ## Curtain pockets: selected, not measured
 
@@ -636,6 +721,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--master", required=True, type=Path)
     parser.add_argument("--prior-master", required=True, type=Path)
+    parser.add_argument("--cct-master", required=True, type=Path,
+                        help="CCT master immediately before the CBR-only proposal")
+    parser.add_argument("--heatmaps", required=True, type=Path,
+                        help="CBR-reanalysed heatmap pack")
     parser.add_argument("--inputs", required=True, type=Path, help="Original lighting producer files directory")
     parser.add_argument("--output", type=Path, default=OUT,
                         help="New empty output directory")
@@ -645,16 +734,30 @@ def main():
     OPT = SESSION / "final-lighting-opt1-rev1"
     SOURCE = SESSION / "lighting-integrated-current"
     previous = load_verified(args.prior_master, PRIOR_SHA)
+    cct_master = load_verified(args.cct_master, CCT_SHA)
     current = load_verified(MASTER, EXPECTED_MASTER)
-    delta = verify(previous, current)
+    delta = verify(previous, cct_master)
+    cbr_delta = verify_cbr(cct_master, current)
     raw_master = MASTER.read_bytes()
     require(sha(raw_master) == EXPECTED_MASTER, f"Master changed: {sha(raw_master)}; do not rebind blindly")
     require(not OUT.exists() or not any(OUT.iterdir()),
             f"Output directory {OUT} is not empty; choose a new directory to preserve previous review evidence")
     data = json.loads(raw_master)
-    heatmaps = read(PACK / "heatmaps.json")
-    optical_check = validate_optical_provenance(previous, heatmaps)
+    original_heatmaps = read(PACK / "heatmaps.json")
+    optical_check = validate_optical_provenance(previous, original_heatmaps)
+    heatmap_bytes = args.heatmaps.read_bytes()
+    require(sha(heatmap_bytes) == CURRENT_HEATMAP, "CBR-reanalysed heatmap fingerprint changed")
+    heatmaps = json.loads(heatmap_bytes)
+    require(heatmaps["units"] == original_heatmaps["units"] and heatmaps["frame"] == original_heatmaps["frame"]
+            # desk_CBR is the children's study-desk grid, so the R05 CBR re-analysis may change its values only.
+            and set(heatmaps) == set(original_heatmaps)
+            and set(heatmaps["desk_CBR"]) == set(original_heatmaps["desk_CBR"])
+            and set(heatmaps["rooms"]) == set(original_heatmaps["rooms"])
+            and [r for r in heatmaps["rooms"] if heatmaps["rooms"][r] != original_heatmaps["rooms"][r]] == ["CBR"],
+            "The reanalysis changed unexpected heatmap data")
+    optical_check["current_grid_comparison"] = validate_grid_statistics(current, heatmaps)
     optical_check["cct_revision"] = delta
+    optical_check["cbr_revision"] = cbr_delta
     cct_map, cp, hold_map, psu_rows, voltage_rows = reconcile(data)
     for strip in cp["strips"]:
         strip["proposed_supply_status"] = (
@@ -674,8 +777,9 @@ def main():
         "fragment_file_sha256": sha(fragment_bytes),
         "curtain_pocket_candidate_json_sha256": sha(cp_bytes),
         "photometry_source_design_inputs_sha256": EXPECTED_OPTICAL_DI,
+        "children_photometry_design_inputs_sha256": canon(lighting["design_inputs"]),
         "original_map_binding": original_binding,
-        "binding_method": "Current master/selection rebind; inherited optical results are not recalculated",
+        "binding_method": "CBR-only generic-optics reanalysis; other room grids retain original optical provenance",
     })
     cct_map["curtain_pocket_candidates"]["source"] = "curtain-pocket-s1.json in this review package"
     cct_map["selected_curtain_S1"]["effective_totals"] = copy.deepcopy(lighting["controls"]["selected_curtain_S1_extension"]["with_S1"])
@@ -696,7 +800,7 @@ def main():
     write_json("calc-results-current.json", lighting["calculations"])
     write_json("calculation-validity.json", lighting["calculation_validity"])
     write_json("bom-historical-estimate.json", lighting["bom"])
-    output("heatmaps.json", (PACK / "heatmaps.json").read_bytes())
+    output("heatmaps.json", heatmap_bytes)
     output("compliance-analytic-reference.csv", (PACK / "compliance.csv").read_bytes())
     criteria = (SESSION / "lighting-criteria-and-combinations.md").read_text(encoding="utf-8")
     output("criteria-historical-reference.md", (
@@ -737,7 +841,7 @@ def main():
         "rooms": [{"id": r["id"], "name": r["name"], "poly_ft": r["poly_ft"]} for r in lighting["design_inputs"]["rooms"]],
         "fixtures": plot_fixtures, "heatmaps": heatmaps, "room_results": lighting["calculations"]["rooms"],
     }
-    template = (SOURCE / "lighting-workbench.template.html").read_text(encoding="utf-8")
+    template = (Path(__file__).parent / "lighting-workbench.template.html").read_text(encoding="utf-8")
     require(template.count("__DATA__") == 1, "Workbench template data placeholder")
     safe_payload = json.dumps(payload, separators=(",", ":"), ensure_ascii=False, allow_nan=False).replace("<", "\\u003c")
     output("lighting-workbench.html", template.replace("__DATA__", safe_payload).encode("utf-8"))
@@ -746,16 +850,16 @@ def main():
 
 **{RELEASE}.** One typical Hyderabad 2BHK floor; confirm conditions independently on all four floors.
 
-Master SHA-256: `{EXPECTED_MASTER}`. The package is generated from that master; `manifest.json` binds each file. The optical calculation input remains `{EXPECTED_OPTICAL_DI}` and the saved heatmap remains `{EXPECTED_HEATMAP}`. Fixture geometry and the optical numerical dependencies were checked against the previously verified source; no new photometric run or product equivalence is claimed.
+Master SHA-256: `{EXPECTED_MASTER}`. The package is generated from that master; `manifest.json` binds each file. Historical optical input: `{EXPECTED_OPTICAL_DI}`. The new heatmap `{CURRENT_HEATMAP}` contains a targeted CBR-only reanalysis; every other room grid is unchanged from the verified original. Generic optics and provisional geometry are not measured or product-validated.
 
 - `lighting-workbench.html`: offline plan, individual fitting inspector and saved analytic room maps. The controls select stored results, not live recalculation.
-- `lighting-plan-main`, `lighting-plan-mood`, `lighting-plan-task`: PDF, SVG and PNG plan sheets. Lighting-zone outlines and the four curtain lengths remain approximate.
+- `lighting-plan-main`, `lighting-plan-mood`, `lighting-plan-task`: A4 portrait PDF sets (page 1 overview with a zoom key; pages 2-7 are 2 x 3 zoom tiles with fitting IDs at 7.5 pt and a fixed-CCT suffix). Fitting types are distinguished by colour, line pattern and marker, legible in grayscale; a black ring marks placement/site holds. SVG/PNG give the overview, `-zoom-N.png` the tiles. Lighting-zone outlines and the four curtain lengths remain approximate.
 - `lighting-review-schedules.pdf`: review quantities, fitting/control/supply and generic product tables.
-- `heatmaps-summary.pdf`, `heatmaps/*.png`, `heatmaps.json`: inherited numerical model, no curtain lux credit.
+- `heatmaps-summary.pdf`, `heatmaps/*.png`, `heatmaps.json`: CBR-reanalysed and otherwise inherited numerical model, no curtain lux credit. CBR estimates include held fittings and are not currently available viewer light.
 - `lighting-specification.md`, `fixture-ledger.csv`, `curtain-strips.csv`, `switchboard-schedule.csv`, `circuit-ledger.csv`, `supply-ledger-selected-s1.csv`, `voltage-drop-selected-s1.csv`, `generic-product-search.csv`: current review schedules.
 - `compliance-analytic-reference.csv`, `criteria-historical-reference.md`, `bom-historical-estimate.json`: prior calculations, research and cost allowances; not current product, cost or statutory approval.
 
-Four curtain strips are homeowner-selected but held for pocket measurement/mock-up; W03 is excluded. CBR-H1-H6 are active for review; their C37 dimmer and other site holds remain. P01 is one 480 W-class reference supply; P03 is removed. P01 distribution/protection, LT-4/LT-5 inrush and living voltage drop are OPEN. P16/C39/C40 remain MARGINAL. Product approval, exact-chain proof and construction release are false; a licensed electrician and manufacturers must resolve the electrical design.
+Four curtain strips are homeowner-selected but held for pocket measurement/mock-up; W03 is excluded. CBR-H1-H6, the retained cove and relocated LINE strips are modelled ON for review; the cove and LINE installation remain held (H-CBR-CEIL). The CBR fan, loft/shutter, profile and electrical clearances are unmeasured; the wardrobe and glare diagnostics need review. P01 is one 480 W-class reference supply; P03 is removed. P01 distribution/protection, LT-4/LT-5 inrush and living voltage drop are OPEN. P16/C39/C40 remain MARGINAL. Product approval, exact-chain proof and construction release are false; a licensed electrician and manufacturers must resolve the electrical design.
 """.encode("utf-8"))
     plot_plans(data, plot_fixtures)
     plot_heatmaps(data, heatmaps)
@@ -773,8 +877,9 @@ Four curtain strips are homeowner-selected but held for pocket measurement/mock-
         "schema": "house-lighting-current-review/1",
         "master_sha256": EXPECTED_MASTER, "current_design_inputs_canonical_sha256": canon(lighting["design_inputs"]),
         "original_photometry_design_inputs_canonical_sha256": EXPECTED_OPTICAL_DI,
-        "original_heatmaps_sha256": EXPECTED_HEATMAP, "source_verification_sha256": EXPECTED_OLD_VERIFICATION,
-        "rebind_status": "OPTICAL_SOURCE_UNCHANGED; numerical heatmaps reused, not a new photometric run",
+        "original_heatmaps_sha256": EXPECTED_HEATMAP, "heatmaps_sha256": CURRENT_HEATMAP,
+        "source_verification_sha256": EXPECTED_OLD_VERIFICATION,
+        "rebind_status": "CBR_ONLY_GENERIC_OPTICS_REANALYSIS; other room grids retain original optical provenance",
         "site_assumptions": "approximate lighting zones, unmeasured curtain lengths, generic optics; no curtain lux credit",
         "counts": {"base_fittings": 104, "base_circuits": 47, "selected_curtain_strips": 4,
                    "selected_circuits": 51, "brightness_knobs": 21, "modeled_outputs": 38,

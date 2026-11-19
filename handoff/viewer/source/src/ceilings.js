@@ -96,5 +96,5 @@ export function ceilingPlan(PLAN,style=PLAN.design.cornerStyle) {
     const rect = R[id].rect, ins = 0.10 / FT, zone = PLAN.fixtures.zones.find(z => z.room === id);
     return {id, rect, panelRect: insetRect(rect, ins), h: zone.ceil_m, recessH: zone.ceil_m + 0.12, gap: ins,style};
   });
-  return {zones, trays, baths, band, tray,style,kitchen:{h:kitchenH,beam:beamZ,step:kitchenH-band,stepHeld:!!PLAN.levels,x:[kit[0],kit[2]]},fans: PLAN.fixtures.zones.filter(z => z.fan).map(z => ({room: z.room, at: z.fan}))};
+  return {zones, trays, baths, band, tray,style,kitchen:{h:kitchenH,beam:beamZ,step:kitchenH-band,stepHeld:!!PLAN.levels,x:[kit[0],kit[2]]},fans: PLAN.fixtures.zones.filter(z => z.fan).map(z => ({room: z.room, at: z.fan, sweepM: z.fanSweepM}))};
 }

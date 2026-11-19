@@ -1,0 +1,142 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wholesale and retailer request for quotation</title><style>
+@page { size: A4; }
+* { box-sizing: border-box; }
+html { color: #233138; background: #e8eceb; font-family: Arial, sans-serif; }
+body { margin: 0 auto; max-width: 1000px; background: white; padding: 48px; }
+main { font-size: 15px; line-height: 1.48; }
+h1 { font-size: 30px; line-height: 1.18; margin: 0 0 14px; }
+h2 { color: #1c4d51; font-size: 23px; margin: 30px 0 12px; border-top: 2px solid #87a7a4; padding-top: 12px; }
+h3 { font-size: 18px; margin: 20px 0 9px; }
+p { margin: 0 0 11px; }
+strong { color: #102e37; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13px; line-height: 1.36; }
+th { background: #e9f1ef; text-align: left; color: #173c43; }
+td, th { border: 1px solid #c7d3d2; padding: 6px 8px; vertical-align: top; }
+tbody tr:nth-child(even) { background: #f7f9f8; }
+img { display: block; max-width: 100%; height: auto; margin: 14px auto; }
+img.photo { max-height: 430px; object-fit: contain; }
+a { color: #245f69; overflow-wrap: anywhere; }
+code, pre { font-size: 12.5px; }
+pre { background: #f3f6f4; border: 1px solid #d5dedc; padding: 10px 12px; white-space: pre-wrap; }
+blockquote { border-left: 4px solid #b5522f; margin: 14px 0; padding: 8px 14px; background: #fbf1ec; }
+.toc { padding: 12px 18px; background: #f1f5f3; font-size: 13px; columns: 2; column-gap: 22px; }
+.toc ul { padding-left: 16px; margin: 0; }
+@media print {
+  html, body { background: white; max-width: none; padding: 0; margin: 0; }
+  main { font-size: 10.2pt; line-height: 1.34; }
+  h1 { font-size: 22pt; }
+  h2 { font-size: 15.5pt; margin-top: 0; padding-top: 6pt; break-before: page; }
+  h2#contents { break-before: auto; margin-top: 14pt; }
+  h3 { font-size: 12pt; margin-top: 12pt; }
+  h1, h2, h3 { break-after: avoid; }
+  p, li { widows: 3; orphans: 3; }
+  table { font-size: 8.9pt; line-height: 1.3; margin: 7pt 0 10pt; }
+  td, th { padding: 4pt 5pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  pre { font-size: 8.3pt; break-inside: avoid; }
+  img { width: 100%; max-height: 215mm; object-fit: contain; break-inside: avoid; margin: 9pt auto; }
+  img.photo { width: auto; height: 76mm; }
+  p:has(> img) { break-inside: avoid; }
+  a { color: #233138; text-decoration: none; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style></head><body><aside style="padding:1rem;border:2px solid #98610d">Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see repository-copy-receipt.json.</aside><main><h1 id="wholesale-and-retailer-request-for-quotation">Wholesale and retailer request for quotation</h1>
+<p><strong>Master SHA-256:</strong> <code>79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</code>. Working assumption: four storeys x one modelled 2BHK flat per floor (four flat schedules). Quote per-flat quantities and the four-flat repeat separately; actual floor and flat count, variations, site quantities and product compatibility remain unverified. Send this to branded manufacturers, local wholesalers and reputable importers. Generic/imported products are welcome if they meet the same written specifications, local support and acceptance tests. <strong>None is approved merely because its label resembles the target.</strong></p>
+<p>Quantities are modeled per flat; <code>schedules/location-linked-bom.csv</code> ties every modeled fitting, strip, profile, supply and control to a room, circuit and indicative position. Real pocket, strip and cable lengths, cutouts, profile details and four-floor repetition must be measured before ordering. Prices, stock and product approvals are open.</p>
+<h2 id="search-and-match-by-fitting-role">Search and match by fitting role</h2>
+<p>All numbers below are <strong>project targets</strong>, not verified catalogue promises. Lumens and beam values are model assumptions and must be replaced with actual luminaire/optic data and photometric rechecking where materially different. CRI/R9 are measured source properties, not inferred from a warm CCT. Typical living and bathroom targets are CRI &gt;= 90 / R9 &gt;= 50, while the pooja display and track accents target CRI &gt;= 95 / R9 &gt;= 80. The modeled utility bulkheads and PIR step lights have different, lower class targets in the detailed CSV.</p>
+<table>
+<thead>
+<tr>
+<th>Role / search terms</th>
+<th>Planning specification to request</th>
+<th>Essential caveats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Warm cove / curtain-pocket strip</td>
+<td>Fixed <strong>2700 K</strong>, single-colour, <strong>24 V CV</strong>, approximately <strong>8 W/m</strong> and <strong>720 lm/m emitted</strong>; CRI &gt;= 90 / R9 &gt;= 50; documented external wired PWM dimming; aluminium profile with diffuser.</td>
+<td>Generic assumption, not a confirmed SKU. Verify cut length, minimum/maximum run, permissible end/centre feeding, actual loaded volts and voltage drop. Pocket 8.88 m total is derived, not measured; no lux credit.</td>
+</tr>
+<tr>
+<td>TV / headboard bias and pooja strip</td>
+<td>24 V CV, fixed 2700 K, approximately <strong>6 W/m / 550 lm/m</strong>; profile/diffuser. Pooja requires CRI &gt;= 95 / R9 &gt;= 80.</td>
+<td>The pooja base strip and pin-spot have separate controls. Confirm niche dimensions, heat clearance and accessible driver.</td>
+</tr>
+<tr>
+<td>Linear ceiling strips</td>
+<td>24 V CV, approximately <strong>8 W/m</strong>, model approximately <strong>600 lm/m delivered after profile</strong>; fixed 2700 K for mood lines or 4000 K for specified task lines.</td>
+<td>Delivered lumens are not bare-strip emitted lumens; ask for complete profile loss and measured output. Check ceiling slot, width, depth and service access.</td>
+</tr>
+<tr>
+<td>Kitchen and utility under-cabinet</td>
+<td>24 V, fixed 4000 K; kitchen modeled at <strong>6.5 or 10 W/m</strong>, around <strong>650 or 1,000 lm/m</strong>, depending on segment; downward diffused profile. Utility shelf uses <strong>10 W/m / 900 lm/m</strong> and IP65 target.</td>
+<td>The source describes the 6.5 W/m class as 600-700 lm/m delivered; get tested output and heat data. Measure cabinet/shelf underside and confirm wet-area IP / sealing for the whole assembly.</td>
+</tr>
+<tr>
+<td>Children's study task</td>
+<td>24 V, fixed 4000 K, approximately <strong>14 W/m / 1,400 lm/m</strong> in a deep diffused profile, face-down behind the shelf lip.</td>
+<td>These are generic assumptions, not a documented SKU; glare, profile size, mounting position and delivered illumination need a sample and calculation.</td>
+</tr>
+<tr>
+<td>Main recessed downlights</td>
+<td>Proposed fixed <strong>4000 K</strong> for living, dining and bedroom mains and specified task groups; lobby and balcony mains remain <strong>3000 K</strong>. Modeled deep-recessed classes: <strong>6 W / ~500 lm / 60 deg</strong>, <strong>7 W / ~600 lm / 60 deg</strong>, <strong>8 W / ~700 lm / 60 deg</strong>, and <strong>10 W / ~900 lm / 70 deg</strong>.</td>
+<td>Use actual model schedule, not one guessed universal SKU. Request complete fitting + replaceable/accessible driver + approved LED wall dimmer, cutout, recess depth, beam and glare data. Do not mix 230 V constant-current modules with a 24 V CV output.</td>
+</tr>
+<tr>
+<td>Adjustable accent / pooja pin spot</td>
+<td>Pooja: 24 V, <strong>6 W / ~480 lm / 24 deg</strong>, fixed 2700 K, CRI &gt;= 95 / R9 &gt;= 80. Living main adjustable gimbals use 8 W / ~700 lm / 50 deg / proposed 4000 K.</td>
+<td>Supplier must document whether the exact fitting accepts 24 V CV PWM or requires its own compatible driver. Independently dim the pooja pin-spot. Test shadow at the actual standing position.</td>
+</tr>
+<tr>
+<td>Vanity, bath general, face and niche</td>
+<td>Fixed <strong>4000 K</strong>: vanity spot <strong>8 W / ~700 lm / 40 deg</strong>, IP44 minimum target; shower/WC downlight <strong>9 W / ~750 lm / 60 deg</strong>, IP65 whole-assembly target; face bars <strong>5 W / ~350 lm / 0.6 m each</strong>, IP44 minimum target. Fixed <strong>2700 K</strong>: bath perimeter <strong>4.8 W/m / ~400 lm/m</strong>, niche <strong>6 W/m / ~500 lm/m</strong>, and vanity mood <strong>5 W/m / ~450 lm/m</strong>.</td>
+<td>Wet-zone suitability is determined by the electrician and manufacturer, not IP alone. Bath perimeter is modeled IP65 and IP67 inside shower; niche IP67. Request tested complete luminaire, connectors and remote-driver requirements. Dimensions and light position remain subject to site/ergonomic review.</td>
+</tr>
+<tr>
+<td>Track accents and linear</td>
+<td>The DIN track is a <strong>48 V system</strong>: three 6 W / ~480 lm / 24 deg spot heads plus one 8 W / ~600 lm / 110 deg diffused linear, fixed 3000 K, CRI &gt;= 95 / R9 &gt;= 80.</td>
+<td>Exact 48 V track, heads, supply and local dimmer must be a documented system. The 26 W modeled LED load is not necessarily the actual mains input.</td>
+</tr>
+<tr>
+<td>Integral readers / night step lights</td>
+<td>Reading: 3 W / ~200 lm / 30 deg, 3000 K, local integral dimmer. Step: 1 W / ~40 lm, 2700 K, PIR switching.</td>
+<td>Four readers and two PIR units per modeled flat; dimming and ON/AUTO/OFF override are unverified and must not be assumed. Match actual controls, memory, location, safety and replacement availability.</td>
+</tr>
+<tr>
+<td>Balcony / damp utility</td>
+<td>Balcony 24 V cylinders 6 W / ~500 lm / 60 deg, IP65; up/down wall lights 6 W / ~440 lm total, IP65; parapet strip 5 W/m / ~450 lm/m, IP67. Utility bulkhead 12 W / ~1,100 lm, 4000 K, IP65 / IK08 target.</td>
+<td>Surface exposure, UV, water, coastal/corrosion class and full assembly suitability need manufacturer evidence and site review. IP/IK in the plan are targets, not a product certificate.</td>
+</tr>
+<tr>
+<td>Dining pendant</td>
+<td>230 V phase-cut dimmable <strong>12 W / ~1,000 lm</strong>, fixed 2700 K.</td>
+<td>Specify the exact pendant, included/replacement driver, dimmer compatibility, suspension length and measured table/ceiling clearances.</td>
+</tr>
+</tbody>
+</table>
+<p><code>fixture-class-specifications.csv</code> provides every modeled fitting class and its design description. <code>fixtures.csv</code> and the location-linked bill identify the particular rooms/circuits, model positions, counts and assumed strip lengths. <strong>A value in those files is not a measured site dimension or a verified product datasheet.</strong></p>
+<h2 id="controls-power-supplies-and-complete-chain-requirements">Controls, power supplies and complete-chain requirements</h2>
+<ul>
+<li><strong>24 V strip dimming:</strong> request fixed-white 24 V constant-voltage supply + single-colour wired wall PWM controller + any required repeater + exact strip/profile as one documented chain. Provide rated input/output currents at the proposed PWM frequency and ambient temperature; include manufacturer-authorised branch distribution, maximum run and fault-protection data. A controller candidate's three 4 A outputs do not establish three safe project branches or compatibility with a 20 A supply.</li>
+<li><strong>Living P01:</strong> homeowner prefers one <strong>480 W class</strong>, 24 V supply. Its modeled 181.52 W strips use six outputs and two modeled repeaters; K-LIV-LOW is one knob. Obtain a suitable documented equipment/protection design, actual enclosure dimensions, ventilation and availability. HLG-480H-24 is only a reference; its 20 A rating and the 12.5 A candidate controller input require protective coordination. No 480 W price delta is verified.</li>
+<li><strong>Other supplies:</strong> the twelve 24 V supply classes, loads and groups are in <code>supply-schedule.csv</code>; use only as provisional sizing targets. Request tested input-voltage/temperature curves, case-temperature limits, serviceability, isolation, inrush and protection guidance for each exact model. Track power is a separate 48 V system.</li>
+<li><strong>Mains dimming:</strong> quote each exact dimmable luminaire + included driver + compatible wall dimmer, rated for the actual group input <strong>VA</strong>, manufacturer lamp/driver-count limits, ambient and phase mode. The modeled light-side watts alone cannot prove a VA rating. All ten groups remain on procurement hold.</li>
+<li><strong>Controls/boards:</strong> quote 21 single-colour wall knobs, 10 mains-dimmer groups, three <strong>modeled</strong> repeaters and the eight conceptual on/off switch modules only as a review basis. The physical board faceplate, spacing, back-box depth and amplifier count must be confirmed for actual products. Pooja strip and spot, bathroom face and HIGH, and LOW/HIGH remain separate.</li>
+</ul>
+<h2 id="send-these-questions-and-require-an-itemised-answer">Send these questions and require an itemised answer</h2>
+<ol>
+<li>What are the <strong>manufacturer, importer, exact orderable SKU and variant</strong>, current datasheet and manufacturing batch? Is it available in the requested quantities to the Hyderabad delivery postcode, and what is the lead time?</li>
+<li>Provide source <strong>CCT/bin and tolerance, lumens and optical distribution</strong>, power at measured input voltage, CRI and R9 reports. For strips, give emitted lm/m, profile-delivered lm/m, PCB width, cut increment, reel length, maximum run, mounting/profile needs, temperature limits and permitted feed/injection method. Identify the test lab and applicable test method; do not infer R9 from CRI.</li>
+<li>Give actual <strong>cutout diameter, body depth, mounting spring clearance, bezel/trim, profile cross-section, diffuser, cable exits and accessible driver dimensions</strong>. The project does not yet know the site dimensions: do not substitute a guessed standard diameter or pocket width.</li>
+<li>Name every supplied <strong>LED module, driver/CV supply, wall dimmer, repeater and accessory SKU</strong>. Provide written manufacturer approval for the entire exact chain, mode, frequency, number of units and loading, and the specified power-failure memory. Quote suitable overcurrent/branch protection and installation guidance for the electrician to review.</li>
+<li>Provide full <strong>ambient and case-temperature derating</strong>, input range, surge/inrush, power factor/VA, start-up and low-end dimming performance; confirm replaceable parts and whether visible flicker, hum, strobing, ghosting and cold-start problems are within agreed limits.</li>
+<li>For bathrooms/balcony/utility, provide complete-assembly <strong>IP/IK, wet-zone and connector</strong> evidence and cleaning/chemical/UV limits. Ask the electrician to assess the actual zone and current standards.</li>
+<li>Give <strong>unit price, per-flat and four-flat totals, GST separately, shipping, labour, profiles, drivers, controls, accessories, cut-waste, installation, after-sales terms and exclusions</strong>. If catalogues show MRP, distinguish dated MRP from a binding delivered quote.</li>
+<li>State <strong>warranty duration and terms</strong>, Hyderabad service address, repair/return logistics, availability of replacement drivers and matching CCT bins, spare costs and discontinuation support. Imported stock is acceptable only if its exact specification, service and replacement commitments are evidenced; do not assume it is inherently compatible or durable.</li>
+</ol>
+<h2 id="sample-and-acceptance">Sample and acceptance</h2>
+<p>Before any purchase or construction release, the supplier and qualified electrician should bench-test the <strong>exact</strong> proposed group: low-to-high smooth dimming, intended minimum and maximum group counts, all six living modeled outputs, repeater tracking, dimmed start, OFF glow, mains-loss memory, actual strip current, colour/bin matching, fan/camera flicker, hum, temperatures and measured voltage drop. Mock up the actual curtain pocket, seating sightlines and profile/track clearance. Record product codes, measurements, failures and agreed replacements; retain the sample as the comparison standard.</p>
+<p>The homeowner may choose appearance and approve a budget, but a supplier statement, visual sample or manufacturer family is not a substitute for electrical design, exact-chain evidence, site measurements or a separate construction release.</p></main></body></html>

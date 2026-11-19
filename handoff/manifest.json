@@ -13,7 +13,7 @@
       "publication"
     ]
   },
-  "masterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "constructionRelease": false,
   "productRelease": false,
   "procurementRelease": false,
@@ -41,8 +41,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 48,
-      "sha256": "a3a93593dadd9f48fa31f25dec87bd67c247f92529340115b08c6da80d62ccb8",
+      "bytes": 89,
+      "sha256": "b47cc48eb92b9d43b5c1dd431695301f9c7589a074ad871d209ce8b3f4208e14",
       "coverage": []
     },
     {
@@ -55,35 +55,35 @@
     {
       "path": "build-info.json",
       "bytes": 2455,
-      "sha256": "8e1bd2df2e7308dad979ac826ddfe88f5c4b4ac0b5b8a28ece31cfcc74567312",
+      "sha256": "ee56c222aa18493688544458e89c53a8611045f3bc9580a47fedbf0d4de20076",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "8e1bd2df2e7308dad979ac826ddfe88f5c4b4ac0b5b8a28ece31cfcc74567312"
+      "sourceSha256": "ee56c222aa18493688544458e89c53a8611045f3bc9580a47fedbf0d4de20076"
     },
     {
-      "path": "downloads/curtain-pocket-section-review-b6f6bf1a.pdf",
+      "path": "downloads/curtain-pocket-section-review-79ece2ae.pdf",
       "bytes": 71474,
       "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d",
       "coverage": [],
       "sourceSha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d"
     },
     {
-      "path": "downloads/layout-views-review-draft-b6f6bf1a.pdf",
-      "bytes": 6815041,
-      "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+      "path": "downloads/layout-views-review-draft-79ece2ae.pdf",
+      "bytes": 6849877,
+      "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
       "coverage": [],
-      "sourceSha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3"
+      "sourceSha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0"
     },
     {
-      "path": "downloads/wardrobe-interiors-review-b6f6bf1a.pdf",
+      "path": "downloads/wardrobe-interiors-review-79ece2ae.pdf",
       "bytes": 245180,
       "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3",
       "coverage": [],
       "sourceSha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3"
     },
     {
-      "path": "downloads/working-floor-plan-review-draft-b6f6bf1a.pdf",
+      "path": "downloads/working-floor-plan-review-draft-79ece2ae.pdf",
       "bytes": 864756,
       "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603",
       "coverage": [],
@@ -541,6 +541,14 @@
       ]
     },
     {
+      "path": "handoff/decisions/2026-11-18-light-colour-review.md",
+      "bytes": 874,
+      "sha256": "3685eb018cc453093b2b51518a45825f0aa30d2f1cc5e0ed8d857fae5759e23c",
+      "coverage": [
+        "owner-decision-addendum"
+      ]
+    },
+    {
       "path": "handoff/decisions/2026-11-18-material-selection-receipt.json",
       "bytes": 1265,
       "sha256": "2c5e84714b4da31881d1aa810c9f99240ddcf1870f28c454effb355bc837a916",
@@ -628,107 +636,403 @@
     {
       "path": "handoff/electrician/electrical/bill-of-materials-render.json",
       "bytes": 562,
-      "sha256": "e5aef196ff61ec78e89eb3d04abecdd0f415c1e4afa0fa79e164f54c873bd333",
+      "sha256": "f263b7dcd4d08116ef82c823c3e7a22495578188e553955959a68b736d69d754",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "e5aef196ff61ec78e89eb3d04abecdd0f415c1e4afa0fa79e164f54c873bd333"
+      "sourceSha256": "f263b7dcd4d08116ef82c823c3e7a22495578188e553955959a68b736d69d754"
     },
     {
       "path": "handoff/electrician/electrical/bill-of-materials.html",
-      "bytes": 13202,
-      "sha256": "62e7402a5e9982fb859407b01636b3210282141076d42e1f0c79e00342436060",
+      "bytes": 13336,
+      "sha256": "47f8a6c4eac716c6b7b9e899e03d707dcda2063e2a53bea07a158969f049fb9b",
       "coverage": [],
-      "sourceSha256": "444cc90b61141bdd796031a5f285378d13adf702fc0616368c08220feffb84fb"
+      "sourceSha256": "d80ca9bd0a62189aadfae78041875701de3f30fd992f6db17da82eb90be48a9b"
     },
     {
       "path": "handoff/electrician/electrical/bill-of-materials.md",
-      "bytes": 6458,
-      "sha256": "72c86538cbdabe4d2bdfd529112b07f14a0909f1a6f00ed705b17cebf6c33f4a",
+      "bytes": 6592,
+      "sha256": "4f78aacedc5a2b155d020e277ddd93cd0c5a32b1165d43a695476c97b3f97a49",
       "coverage": [],
-      "sourceSha256": "a8236e2b2d954ff5dcd233be7360c2a28b49ac5c9d7af0f0c012aa67eab6821f"
+      "sourceSha256": "d93b38e45be4f7df58a10e6525fcf7b314e3edbf32eb68b109f9639dff28b73c"
     },
     {
       "path": "handoff/electrician/electrical/bill-of-materials.pdf",
-      "bytes": 87965,
-      "sha256": "3b36b26087531b50b067755078687d72957f84d664dd91ada9054ed072fa345d",
+      "bytes": 88469,
+      "sha256": "ef0900fd0ecc27bd3d8cd8bc7bace8df8c161ad7bfb0886ba171782f235c442d",
       "coverage": [],
-      "sourceSha256": "3b36b26087531b50b067755078687d72957f84d664dd91ada9054ed072fa345d"
+      "sourceSha256": "ef0900fd0ecc27bd3d8cd8bc7bace8df8c161ad7bfb0886ba171782f235c442d"
     },
     {
       "path": "handoff/electrician/electrical/build-context.json",
       "bytes": 887,
-      "sha256": "091386b6a7d1f8f3fd7d48981d8a7f96405dd9acf2e0f849ecd680fdcd452345",
+      "sha256": "7d17a7e11000a7a7a88d358e993b74d24b5f38f4f66f6368b116eb9346cfbcef",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "091386b6a7d1f8f3fd7d48981d8a7f96405dd9acf2e0f849ecd680fdcd452345"
+      "sourceSha256": "7d17a7e11000a7a7a88d358e993b74d24b5f38f4f66f6368b116eb9346cfbcef"
     },
     {
       "path": "handoff/electrician/electrical/control-options-render.json",
       "bytes": 562,
-      "sha256": "866e018cf6a5903664d5e05ef0e60d48a559e39b4dee34fa52d46d8147d439bf",
+      "sha256": "f347f0ebe06c84fe41d7a4043b2d4b833519cb579ecbbbd0587db4680b4e706c",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "866e018cf6a5903664d5e05ef0e60d48a559e39b4dee34fa52d46d8147d439bf"
+      "sourceSha256": "f347f0ebe06c84fe41d7a4043b2d4b833519cb579ecbbbd0587db4680b4e706c"
     },
     {
       "path": "handoff/electrician/electrical/control-options.html",
       "bytes": 9083,
-      "sha256": "78e4b632435ccee649f4365afb27c997d74b995271caf0174865f366da261a93",
+      "sha256": "82f0ea4a89bacf9555074b10d2d1df9d705bcf8b32ac0f1d47e4a0cb5aa0d9ba",
       "coverage": [
         "control-options"
       ],
-      "sourceSha256": "7a6b72577f4ea166a78faa9454b54fce961e486c05ccf7bb93828eca40033280"
+      "sourceSha256": "4ab4d14b089f1b47bcb9d7008ba5525e72e8585cec90f7e62b42d1fc374486cb"
     },
     {
       "path": "handoff/electrician/electrical/control-options.md",
       "bytes": 5653,
-      "sha256": "559044675842d24093f779af6bd5128d34edba414f717e2e5c744d575f73cf2f",
+      "sha256": "bd93bc162703a41745195bea4a12f4119a2ec8d2bb9ee83e9ab6306f9ad1ffeb",
       "coverage": [
         "control-options"
       ],
-      "sourceSha256": "0cedd08c1386f9301ecee5fa9df364bb0c8f10df6ea4c91f7990568765ec43bb"
+      "sourceSha256": "825fbbb9a22b4b2e406d259e68e9c2782e151165ccb216f377ba9465484ff64c"
     },
     {
       "path": "handoff/electrician/electrical/control-options.pdf",
       "bytes": 84387,
-      "sha256": "d4b71c077dd8745b8573324b9b487e6da0ecb14d54455a20523d9fe67c80288c",
+      "sha256": "b5af31183b6ebba59e606e99d9b4372249c7c3e98b0e9b6087212e5b205a9ccd",
       "coverage": [
         "control-options"
       ],
-      "sourceSha256": "d4b71c077dd8745b8573324b9b487e6da0ecb14d54455a20523d9fe67c80288c"
+      "sourceSha256": "b5af31183b6ebba59e606e99d9b4372249c7c3e98b0e9b6087212e5b205a9ccd"
+    },
+    {
+      "path": "handoff/electrician/electrical/current/bill-of-materials.html",
+      "bytes": 13336,
+      "sha256": "47f8a6c4eac716c6b7b9e899e03d707dcda2063e2a53bea07a158969f049fb9b",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/bill-of-materials.md",
+      "bytes": 6592,
+      "sha256": "4f78aacedc5a2b155d020e277ddd93cd0c5a32b1165d43a695476c97b3f97a49",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/bill-of-materials.pdf",
+      "bytes": 88469,
+      "sha256": "ef0900fd0ecc27bd3d8cd8bc7bace8df8c161ad7bfb0886ba171782f235c442d",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/control-options.html",
+      "bytes": 9083,
+      "sha256": "82f0ea4a89bacf9555074b10d2d1df9d705bcf8b32ac0f1d47e4a0cb5aa0d9ba",
+      "coverage": [
+        "control-options"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/control-options.md",
+      "bytes": 5653,
+      "sha256": "bd93bc162703a41745195bea4a12f4119a2ec8d2bb9ee83e9ab6306f9ad1ffeb",
+      "coverage": [
+        "control-options"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/control-options.pdf",
+      "bytes": 84387,
+      "sha256": "b5af31183b6ebba59e606e99d9b4372249c7c3e98b0e9b6087212e5b205a9ccd",
+      "coverage": [
+        "control-options"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/electrical-review.html",
+      "bytes": 164367,
+      "sha256": "fcabe145ec74f93f153c655a59eb744b2f6f84f5040309d40cb4072e0636cee8",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/electrical-review.md",
+      "bytes": 21799,
+      "sha256": "79e8a60c90b59f3d0b5dca57939228b992b8ac2795395dfe4a07d6064a346166",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/electrical-review.pdf",
+      "bytes": 259243,
+      "sha256": "d8d3bdd9faf82412b530cd6859e978e2aeebfda52d4ef951482acb317233daac",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/concept-flat.png",
+      "bytes": 197819,
+      "sha256": "4a11e5e767118d7c0e6d7617dbcc2388c704596f62183b01832b27e3aca687d6",
+      "coverage": [
+        "wiring-electrical-layout"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/concept-flat.svg",
+      "bytes": 4083,
+      "sha256": "1a253f54e27c462e6974b44f688249a1ca4f60f0e223ad5b3c86eb29cbc1bab7",
+      "coverage": [
+        "editable-sources",
+        "wiring-electrical-layout"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/concept-living-low.png",
+      "bytes": 232858,
+      "sha256": "b2080b4020ac0919a95ae3507bd637009973bc9ce17d7e5a277e5e590ce0c5fd",
+      "coverage": [
+        "wiring-electrical-layout"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/concept-living-low.svg",
+      "bytes": 4962,
+      "sha256": "03f1db7ebebfe54fb962580ef549c417f765cc98c0ffee244647eb70af616ab2",
+      "coverage": [
+        "editable-sources",
+        "wiring-electrical-layout"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/controls-plan.png",
+      "bytes": 160063,
+      "sha256": "0f0eb7c6016d47bdbc1c4a54ba4823ca19b52022cab53c46946e927b103c6d02",
+      "coverage": [
+        "wiring-electrical-layout"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/controls-plan.svg",
+      "bytes": 27938,
+      "sha256": "20baebb5194c5a957aa7926f2a9034c0f376d417ebc442f4089409340c4c9027",
+      "coverage": [
+        "editable-sources",
+        "wiring-electrical-layout"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/curtain-pocket.png",
+      "bytes": 123121,
+      "sha256": "8eba55060b504415b2fe8f2fba7858f60500b7804fc5a7a4f4f572b73b03a808",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/curtain-pocket.svg",
+      "bytes": 5690,
+      "sha256": "728ce233cbc516f49817acd28cf99c1bffb9b749b85dadd2e9d9807f364c5cac",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/photos/site-photo-children-curtain-pocket.jpeg",
+      "bytes": 30783,
+      "sha256": "b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/figures/photos/site-photo-hall-curtain-pocket.jpeg",
+      "bytes": 25671,
+      "sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/circuit-schedule.csv",
+      "bytes": 7550,
+      "sha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/curtain-pockets.csv",
+      "bytes": 1169,
+      "sha256": "074f4198ebe9f73b7b7f3a4e3e90eb030041312a6f4fea4ef175adf259fda26b",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/electrical-ledger.json",
+      "bytes": 152608,
+      "sha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/fitting-controls.csv",
+      "bytes": 630,
+      "sha256": "aa4976abbe98f4efb86cd8e4bb2b0223277ae3c17e231f935160e5f985c9dbce",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/fixture-class-specifications.csv",
+      "bytes": 8072,
+      "sha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/fixtures.csv",
+      "bytes": 22925,
+      "sha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/knob-groups.csv",
+      "bytes": 2502,
+      "sha256": "4bbe04d7b6c806336c3799bb7d17476e324a9712ce2527fc24bfceafc7881a8c",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/lighting-distribution.csv",
+      "bytes": 971,
+      "sha256": "c74870239c110736dfd68dc3135872bfa6aa97a932c9e894c5e85222ed97102c",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/location-linked-bom.csv",
+      "bytes": 58759,
+      "sha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2",
+      "coverage": [
+        "editable-sources",
+        "location-specification-bom"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/mains-dimmer-check.csv",
+      "bytes": 901,
+      "sha256": "0667c571c117946dc50b7f2be4a2a29b087284b99016b4ee4f93d54613322620",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/supplementary-switches.csv",
+      "bytes": 376,
+      "sha256": "a6c41f664f4cb4b435436f797fb3742fb2950e056ff2c3542badadb436baefe1",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/supply-schedule.csv",
+      "bytes": 1955,
+      "sha256": "3bca4d3886985dec83bb50a219cb1b629ea3c5bcfd09d2fb184264f08e211d44",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/switchboard-schedule.csv",
+      "bytes": 1717,
+      "sha256": "f09654234309806937d571819ac9f9c5f945e9af1a3accfbb50967595da09dab",
+      "coverage": [
+        "editable-sources",
+        "switchboard-control-schedule"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/voltage-drop-review.csv",
+      "bytes": 2943,
+      "sha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/schedules/wall-control-schedule.csv",
+      "bytes": 4406,
+      "sha256": "753f80b7d563a6385f089aa54ea6653655f81703d15750c08792d98f5d1af51a",
+      "coverage": [
+        "editable-sources",
+        "switchboard-control-schedule"
+      ]
+    },
+    {
+      "path": "handoff/electrician/electrical/current/source-index.html",
+      "bytes": 16950,
+      "sha256": "183f34d24f8e557a3b15901c45c3aecf22afb503c5bafe5b9d0dda98aa0f1fbc",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/source-index.md",
+      "bytes": 12588,
+      "sha256": "107555c9c8fc1fd3923cfdf370add3d5bebdb67b2d773b6fa5db4a44c2e7272a",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/source-index.pdf",
+      "bytes": 99238,
+      "sha256": "e87e0cfba73c8c4fb972b3913fafd19990bcf3fbc2e3da607e5c71a48ac675b7",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/wholesale-rfq.html",
+      "bytes": 16643,
+      "sha256": "5ea666e03951eee5c608cb764cadd9e7c6e34e6ebd1a0aad299fb55fc1ea129e",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/wholesale-rfq.md",
+      "bytes": 12396,
+      "sha256": "a175bfd5cdd316d4ea487cc8731df7f2c7cdd2f6eaa7dc025ba08ae15f7106e8",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/electrical/current/wholesale-rfq.pdf",
+      "bytes": 101862,
+      "sha256": "0914547eb997b6216da1af5bc7860f07f6b460d84c8791d4d9e184e94702d7ac",
+      "coverage": []
     },
     {
       "path": "handoff/electrician/electrical/electrical-review-render.json",
       "bytes": 829,
-      "sha256": "59a1b1fca63658eda7b3ac205b5b6b0d79d117f02ecf1437aab32d312e5fd888",
+      "sha256": "4ea8f2ac95363c10fa97c2a0263f895481fbebc569ec91dfcfe58dc76d600bea",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "59a1b1fca63658eda7b3ac205b5b6b0d79d117f02ecf1437aab32d312e5fd888"
+      "sourceSha256": "4ea8f2ac95363c10fa97c2a0263f895481fbebc569ec91dfcfe58dc76d600bea"
     },
     {
       "path": "handoff/electrician/electrical/electrical-review.html",
-      "bytes": 163479,
-      "sha256": "a037eac67d46c7f2fa25fab72dad12065205d09f343f225bb259a8c9b3dcc4a1",
+      "bytes": 164367,
+      "sha256": "fcabe145ec74f93f153c655a59eb744b2f6f84f5040309d40cb4072e0636cee8",
       "coverage": [],
-      "sourceSha256": "02d503a97538652b66ffd13277ad9a5cf025505a955bf31d53c8090d30ebbb97"
+      "sourceSha256": "bf340569ba7be928e2f7e4adb5d4b6e7d27cb7f7a6856870a248d3dbba591ce9"
     },
     {
       "path": "handoff/electrician/electrical/electrical-review.md",
-      "bytes": 20924,
-      "sha256": "5b69c649eb8f26674851382ddd7c0630a67d1c85b2f13cbc917439cf5f205d70",
+      "bytes": 21799,
+      "sha256": "79e8a60c90b59f3d0b5dca57939228b992b8ac2795395dfe4a07d6064a346166",
       "coverage": [],
-      "sourceSha256": "4fe78eea286a386091fb98533f7b7fb5786009cd35225c6af08ccccf09c19741"
+      "sourceSha256": "92a9527e0e4f7041c56e783011ea5b921c0cd5866bac4ae7a9b1360d3d0958b6"
     },
     {
       "path": "handoff/electrician/electrical/electrical-review.pdf",
-      "bytes": 257860,
-      "sha256": "8d518b8a7295bbe4da277cc7aec51fb9a9247922bdd591c2f8941cf985ed278d",
+      "bytes": 259243,
+      "sha256": "d8d3bdd9faf82412b530cd6859e978e2aeebfda52d4ef951482acb317233daac",
       "coverage": [],
-      "sourceSha256": "8d518b8a7295bbe4da277cc7aec51fb9a9247922bdd591c2f8941cf985ed278d"
+      "sourceSha256": "d8d3bdd9faf82412b530cd6859e978e2aeebfda52d4ef951482acb317233daac"
     },
     {
       "path": "handoff/electrician/electrical/figures/concept-flat.png",
@@ -825,8 +1129,8 @@
     },
     {
       "path": "handoff/electrician/electrical/public-file-hashes.json",
-      "bytes": 7277,
-      "sha256": "cf56f1907428ca67cac821047cb2350ed03382de119add5ef13c64869eebc448",
+      "bytes": 7193,
+      "sha256": "2ce2cf3db1c62248baa25ec6a0619e837d9420516a0f1dbc790de98eb117ef27",
       "coverage": [
         "editable-sources"
       ]
@@ -835,22 +1139,21 @@
       "path": "handoff/electrician/electrical/README.md",
       "bytes": 4619,
       "sha256": "99820e33495827a9a0864ea17f3f439d416478374440a3524d7b407288e98637",
-      "coverage": [],
-      "sourceSha256": "459f4530e530c60ff556e128887299fb5a154cd6d59010fe42df132f0a2d9526"
+      "coverage": []
     },
     {
       "path": "handoff/electrician/electrical/receipt.json",
-      "bytes": 11137,
-      "sha256": "185fdb8018772a5c07a9dbdb65916194cff01c5e0fe5eb1b9935e080e3aaa09f",
+      "bytes": 11051,
+      "sha256": "55891630ea323685e143b572233586137d613ef2570ab43fcc984411320b0d17",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "185fdb8018772a5c07a9dbdb65916194cff01c5e0fe5eb1b9935e080e3aaa09f"
+      "sourceSha256": "55891630ea323685e143b572233586137d613ef2570ab43fcc984411320b0d17"
     },
     {
       "path": "handoff/electrician/electrical/repository-copy-receipt.json",
-      "bytes": 27959,
-      "sha256": "d2340943ecef2e1f18322768931a1825c8e592915533def09f7bff8721d284c0",
+      "bytes": 27644,
+      "sha256": "8c73ce84ac1b8500677b4a57ee8629441f122c64eea7bb212c9fef2d2a61ced3",
       "coverage": [
         "editable-sources"
       ]
@@ -858,11 +1161,11 @@
     {
       "path": "handoff/electrician/electrical/schedules/circuit-schedule.csv",
       "bytes": 7550,
-      "sha256": "05fe700aed526ce97793a862fba84df033955b82c11a023a602f88e2b8c24beb",
+      "sha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "05fe700aed526ce97793a862fba84df033955b82c11a023a602f88e2b8c24beb"
+      "sourceSha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d"
     },
     {
       "path": "handoff/electrician/electrical/schedules/curtain-pockets.csv",
@@ -875,12 +1178,12 @@
     },
     {
       "path": "handoff/electrician/electrical/schedules/electrical-ledger.json",
-      "bytes": 150541,
-      "sha256": "4a7cbe544c93a5ef1158540ce30bf88836aa6a24b9b762db67112bc9e1997f16",
+      "bytes": 152608,
+      "sha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "4a7cbe544c93a5ef1158540ce30bf88836aa6a24b9b762db67112bc9e1997f16"
+      "sourceSha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f"
     },
     {
       "path": "handoff/electrician/electrical/schedules/fitting-controls.csv",
@@ -893,21 +1196,21 @@
     },
     {
       "path": "handoff/electrician/electrical/schedules/fixture-class-specifications.csv",
-      "bytes": 8079,
-      "sha256": "b930252f74a26420d678c757bfe8f34738869aa70b3dd3082565cc7b3321e3fa",
+      "bytes": 8072,
+      "sha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "b930252f74a26420d678c757bfe8f34738869aa70b3dd3082565cc7b3321e3fa"
+      "sourceSha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c"
     },
     {
       "path": "handoff/electrician/electrical/schedules/fixtures.csv",
-      "bytes": 22941,
-      "sha256": "e37b7631d0fb147720b43ef7db823331751dca92004d45164cc1baaf0c67d21c",
+      "bytes": 22925,
+      "sha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "e37b7631d0fb147720b43ef7db823331751dca92004d45164cc1baaf0c67d21c"
+      "sourceSha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52"
     },
     {
       "path": "handoff/electrician/electrical/schedules/knob-groups.csv",
@@ -929,13 +1232,13 @@
     },
     {
       "path": "handoff/electrician/electrical/schedules/location-linked-bom.csv",
-      "bytes": 58791,
-      "sha256": "bd76c7428e76f628cc765ec7b94120d5f44131b1c02c3c7184bdcf3ff0f65630",
+      "bytes": 58759,
+      "sha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2",
       "coverage": [
         "editable-sources",
         "location-specification-bom"
       ],
-      "sourceSha256": "bd76c7428e76f628cc765ec7b94120d5f44131b1c02c3c7184bdcf3ff0f65630"
+      "sourceSha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2"
     },
     {
       "path": "handoff/electrician/electrical/schedules/mains-dimmer-check.csv",
@@ -977,11 +1280,11 @@
     {
       "path": "handoff/electrician/electrical/schedules/voltage-drop-review.csv",
       "bytes": 2943,
-      "sha256": "b8f3deb573f0fa4dedb45ba45cda0c8fb9227f5be00d07f0e6ff133c8dbb2f9c",
+      "sha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "b8f3deb573f0fa4dedb45ba45cda0c8fb9227f5be00d07f0e6ff133c8dbb2f9c"
+      "sourceSha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa"
     },
     {
       "path": "handoff/electrician/electrical/schedules/wall-control-schedule.csv",
@@ -995,10 +1298,10 @@
     },
     {
       "path": "handoff/electrician/electrical/SHA256SUMS.txt",
-      "bytes": 7827,
-      "sha256": "859de7c2efda9ba47a97825458a81d734c544c8f33144c004f6f1c923532e081",
+      "bytes": 7750,
+      "sha256": "c42aeba7482c0baca34226af60a2c81d88907e7142d80247ff4a54a3fc33b025",
       "coverage": [],
-      "sourceSha256": "859de7c2efda9ba47a97825458a81d734c544c8f33144c004f6f1c923532e081"
+      "sourceSha256": "c42aeba7482c0baca34226af60a2c81d88907e7142d80247ff4a54a3fc33b025"
     },
     {
       "path": "handoff/electrician/electrical/source-evidence/homeowner-coordination-receipt.json",
@@ -1038,8 +1341,8 @@
     },
     {
       "path": "handoff/electrician/electrical/source-evidence/prior-control-plan-receipt.json",
-      "bytes": 6679,
-      "sha256": "eb2e4854b4a84a71ae5d943873ac1c1004558ed0e87297161ae5328d63f1739b",
+      "bytes": 6674,
+      "sha256": "c9ede6a4ec40367291c5477688a18760dd430961255c7c570f75df68ee677ff7",
       "coverage": [
         "editable-sources"
       ],
@@ -1075,32 +1378,32 @@
     {
       "path": "handoff/electrician/electrical/source-index-render.json",
       "bytes": 562,
-      "sha256": "ececce703376172e20b51c6f813b32b8f619082ddcd375710d6b33ac09b5b2a3",
+      "sha256": "8ff08ca501017728a863407c8162267732de04639975b12929a0fc32215eba78",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "ececce703376172e20b51c6f813b32b8f619082ddcd375710d6b33ac09b5b2a3"
+      "sourceSha256": "8ff08ca501017728a863407c8162267732de04639975b12929a0fc32215eba78"
     },
     {
       "path": "handoff/electrician/electrical/source-index.html",
-      "bytes": 16946,
-      "sha256": "614b97a26673f05fc6ffe4e8798f56dea0deea035d373d809b860b5da5b1eea5",
+      "bytes": 16950,
+      "sha256": "183f34d24f8e557a3b15901c45c3aecf22afb503c5bafe5b9d0dda98aa0f1fbc",
       "coverage": [],
-      "sourceSha256": "86c2ee0bccd0fcbaafdce3e6b964f3b0ecaafda34b8ee86756f8ba48dc23ec4d"
+      "sourceSha256": "32ed80fbf47ab164d306d208e622f39bddcd9f2b6e320598f92329f2c2f71439"
     },
     {
       "path": "handoff/electrician/electrical/source-index.md",
-      "bytes": 12584,
-      "sha256": "afcd4c56f58c7b3071d5d5d09e12b0b874f0013bf1404d477c8843769936641b",
+      "bytes": 12588,
+      "sha256": "107555c9c8fc1fd3923cfdf370add3d5bebdb67b2d773b6fa5db4a44c2e7272a",
       "coverage": [],
-      "sourceSha256": "57d622987e243cea60dd04d3e80efc0ee5d715e290d85a4725b1f6789d5201ce"
+      "sourceSha256": "47ed2e3243885ac39e9425a54126c379a00f8f7f03a0e9054b95789a181e19ea"
     },
     {
       "path": "handoff/electrician/electrical/source-index.pdf",
-      "bytes": 99207,
-      "sha256": "935e988f47c91802a37fd7dc4b513a3f179f43c9d7c7b31b7da660efcf88fed5",
+      "bytes": 99238,
+      "sha256": "e87e0cfba73c8c4fb972b3913fafd19990bcf3fbc2e3da607e5c71a48ac675b7",
       "coverage": [],
-      "sourceSha256": "65cbbd6c4d2c4856d114f6c44eacbc319d214612c2f8108b1beafeed7df10161"
+      "sourceSha256": "533ec52851d49b2ddf6a2e1c76b50958adbcd0a617672fd071c86f0db3fc7f94"
     },
     {
       "path": "handoff/electrician/electrical/sources/meanwell-led-manual-breaker-table.json",
@@ -1122,10 +1425,10 @@
     },
     {
       "path": "handoff/electrician/electrical/tools/electrical-review.template.md",
-      "bytes": 13894,
-      "sha256": "12f8272f7c7531204c22e93c585f785825c52eac89dcee7d83ea3cc53df0294b",
+      "bytes": 14667,
+      "sha256": "b2c0626256378e74bc2b13e5ecb98ebaac290adba95468e0e55e32b84ee414fe",
       "coverage": [],
-      "sourceSha256": "12f8272f7c7531204c22e93c585f785825c52eac89dcee7d83ea3cc53df0294b"
+      "sourceSha256": "b2c0626256378e74bc2b13e5ecb98ebaac290adba95468e0e55e32b84ee414fe"
     },
     {
       "path": "handoff/electrician/electrical/tools/export_figures_png.py",
@@ -1138,21 +1441,21 @@
     },
     {
       "path": "handoff/electrician/electrical/tools/fw_final_bom.py",
-      "bytes": 15479,
-      "sha256": "ce7c48c1509e45bb78455cc59d5f581c8c39e9c61610651671bc3bf896e0d403",
+      "bytes": 15613,
+      "sha256": "eb1d03eb2b72fcb0f9db03070ee51594d7c72d189cddcae212429c2589a77533",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "97a5b0d9b962a61b1e6d988f2ee5a01da6ec5ba0ae1bafa3bcf94514f90ad2fb"
+      "sourceSha256": "eb1d03eb2b72fcb0f9db03070ee51594d7c72d189cddcae212429c2589a77533"
     },
     {
       "path": "handoff/electrician/electrical/tools/fw_final_build.py",
-      "bytes": 34604,
-      "sha256": "912c516c85f07d8af92e3dc898bf82fe8bf70fe1d88764590459553a65c308fd",
+      "bytes": 35459,
+      "sha256": "7e55aa7d2a4f83937a75c86b19b6247373f784cc84fdb47db760397720f1e4a1",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "a92780a32ca5fcebc09a63e1381742b06d3e765cd2f528850a313a065ed6d17d"
+      "sourceSha256": "7e55aa7d2a4f83937a75c86b19b6247373f784cc84fdb47db760397720f1e4a1"
     },
     {
       "path": "handoff/electrician/electrical/tools/fw_final_receipt.py",
@@ -1161,16 +1464,16 @@
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "568930b56199da367796a89d31e0eed32a911bf55c161389b38020e91a61a471"
+      "sourceSha256": "0f56f024397ffe191e9fb0ab9eb90288e423f787694c3fb1bf36b1863e05aefd"
     },
     {
       "path": "handoff/electrician/electrical/tools/fw_final_validate.py",
-      "bytes": 13865,
-      "sha256": "4485a9adc8e6f54e6db47f90ea5e9305af9f9a8c6caf4c2a00700d3744eda4db",
+      "bytes": 14638,
+      "sha256": "e56eb78a37347e1101fccd17dba627a24c610015046ea5d7e1214e99aa97f43e",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "0682e3ddb2e4af5bd8bcbbd8091bd346cbb5e33dd47478508753ce7ed356cfa7"
+      "sourceSha256": "e56eb78a37347e1101fccd17dba627a24c610015046ea5d7e1214e99aa97f43e"
     },
     {
       "path": "handoff/electrician/electrical/tools/fw_render.py",
@@ -1183,61 +1486,61 @@
     },
     {
       "path": "handoff/electrician/electrical/tools/source-index.template.md",
-      "bytes": 9887,
-      "sha256": "14a303385a7f53448fa3309c7110ab9611dcfdb27345159321648642a7bf0b4e",
+      "bytes": 9891,
+      "sha256": "571b948e22a081a4bdaf32f28d004393d00e0524bf6f4edb471e8974fde62980",
       "coverage": [],
-      "sourceSha256": "14a303385a7f53448fa3309c7110ab9611dcfdb27345159321648642a7bf0b4e"
+      "sourceSha256": "571b948e22a081a4bdaf32f28d004393d00e0524bf6f4edb471e8974fde62980"
     },
     {
       "path": "handoff/electrician/electrical/tools/wholesale-rfq.template.md",
-      "bytes": 11768,
-      "sha256": "7be4eb6d9b9bf1d5d0e6dff1af30e57507003679e5d8f0a0d64edd5d5834d805",
+      "bytes": 12071,
+      "sha256": "0e1cdb118710015d3732eee5c3c7d3daf97a96cf902287cb455ae0f2cb1a5b31",
       "coverage": [],
-      "sourceSha256": "7be4eb6d9b9bf1d5d0e6dff1af30e57507003679e5d8f0a0d64edd5d5834d805"
+      "sourceSha256": "0e1cdb118710015d3732eee5c3c7d3daf97a96cf902287cb455ae0f2cb1a5b31"
     },
     {
       "path": "handoff/electrician/electrical/validation.json",
-      "bytes": 32249,
-      "sha256": "dd2bba5eabce9218e8ada7cd2e6a5321a1d6b51ea56741ae72908cd50e800967",
+      "bytes": 34720,
+      "sha256": "5b01c1afb5aab26f5a03ec8d6947c6a8cdecbb93fb8e27189204cac002c84587",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "dd2bba5eabce9218e8ada7cd2e6a5321a1d6b51ea56741ae72908cd50e800967"
+      "sourceSha256": "5b01c1afb5aab26f5a03ec8d6947c6a8cdecbb93fb8e27189204cac002c84587"
     },
     {
       "path": "handoff/electrician/electrical/wholesale-rfq-render.json",
       "bytes": 562,
-      "sha256": "9574536386d5d0f89c2a05509f7bc07b06197620e83470f3918fd20fd79fa256",
+      "sha256": "9590a312f59bf258e1b6dcb735ae37dfca216e1976489e4f68146676af3b3ca2",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "9574536386d5d0f89c2a05509f7bc07b06197620e83470f3918fd20fd79fa256"
+      "sourceSha256": "9590a312f59bf258e1b6dcb735ae37dfca216e1976489e4f68146676af3b3ca2"
     },
     {
       "path": "handoff/electrician/electrical/wholesale-rfq.html",
-      "bytes": 16340,
-      "sha256": "8264e0fdefb3ad555964be178b7625fec0858d1dcb4f5fc87e116aa3b61d5564",
+      "bytes": 16643,
+      "sha256": "5ea666e03951eee5c608cb764cadd9e7c6e34e6ebd1a0aad299fb55fc1ea129e",
       "coverage": [],
-      "sourceSha256": "7b04bcb40dccd5211a120b9418a9f865ccc2af0adaf41f917c67927976c0a791"
+      "sourceSha256": "504889f21d3b842316d48f89e865cfd4a2f3a6e085c79644fa39bc9f30498688"
     },
     {
       "path": "handoff/electrician/electrical/wholesale-rfq.md",
-      "bytes": 12093,
-      "sha256": "5f664658f95a08a3ae1c7cb3d8877f811c96ee3978adb9d265e72948cb0b0860",
+      "bytes": 12396,
+      "sha256": "a175bfd5cdd316d4ea487cc8731df7f2c7cdd2f6eaa7dc025ba08ae15f7106e8",
       "coverage": [],
-      "sourceSha256": "a3eafde759509a0c96fbfe29284c9fa2d2c01b7593235507ea6629551f9ab511"
+      "sourceSha256": "1f09d18a0c4d41efd40e5ceb2092ff0ae72b411f3839f06e97bdb7853973e037"
     },
     {
       "path": "handoff/electrician/electrical/wholesale-rfq.pdf",
-      "bytes": 101148,
-      "sha256": "d56820de7495ea4b5ca142c2712406d159a5009ca0e0bbcbee52497edae2f47c",
+      "bytes": 101862,
+      "sha256": "0914547eb997b6216da1af5bc7860f07f6b460d84c8791d4d9e184e94702d7ac",
       "coverage": [],
-      "sourceSha256": "d56820de7495ea4b5ca142c2712406d159a5009ca0e0bbcbee52497edae2f47c"
+      "sourceSha256": "0914547eb997b6216da1af5bc7860f07f6b460d84c8791d4d9e184e94702d7ac"
     },
     {
       "path": "handoff/electrician/index.html",
-      "bytes": 10363,
-      "sha256": "77c1b9a60f44ca168efbe4023f97727366270ec9054471af68d2dd8eea0ac4a2",
+      "bytes": 3022,
+      "sha256": "04c3ef4b040a21590dc764cc3a769dbc592fbdff200c1148042e2e23a8ef1bd3",
       "coverage": []
     },
     {
@@ -1251,39 +1554,39 @@
     },
     {
       "path": "handoff/electrician/lighting/calc-results-current.json",
-      "bytes": 274649,
-      "sha256": "e2aebe88f12977fbf460ff723a788e32c177f63706c858ff69f14bf1389abf32",
+      "bytes": 275472,
+      "sha256": "0bb2651bb0cce217b2923f4307fb0277ef8e15e766362b9f571217e765125843",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "ada692c3ace0aaf86447ef2e9c6c12717d93bcbc44ae726007113178245f7c43"
+      "sourceSha256": "99e309907cddb031dea971bac3460c9ba22bcda7ebb1bc858bf3f39d587187bc"
     },
     {
       "path": "handoff/electrician/lighting/calculation-validity.json",
-      "bytes": 12071,
-      "sha256": "d661791112d952a2835a4570697b685035b6c51e325aa2219772eb27f8832f62",
+      "bytes": 13418,
+      "sha256": "c2273cc0706aaa28f16dc05f8d557d63f3d954eab2932e37c5e17ffd276c7bec",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "d661791112d952a2835a4570697b685035b6c51e325aa2219772eb27f8832f62"
+      "sourceSha256": "c2273cc0706aaa28f16dc05f8d557d63f3d954eab2932e37c5e17ffd276c7bec"
     },
     {
       "path": "handoff/electrician/lighting/circuit-control-psu-ledger.json",
       "bytes": 68635,
-      "sha256": "e090aa5acfbef834cc75c920327cc2c081bb8f8128786e352773c8c291dd6e43",
+      "sha256": "5a38eb06d3b709778e4bf7f13c94c0e13faf09536bc9a83c5c553de2a3ccf132",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "e090aa5acfbef834cc75c920327cc2c081bb8f8128786e352773c8c291dd6e43"
+      "sourceSha256": "5a38eb06d3b709778e4bf7f13c94c0e13faf09536bc9a83c5c553de2a3ccf132"
     },
     {
       "path": "handoff/electrician/lighting/circuit-ledger.csv",
       "bytes": 5198,
-      "sha256": "3db99fd763a5752d43419dba947eadc46652443123d5e690a050ce699c2492a3",
+      "sha256": "c4a6c424bac2f014666607e68b4f3296c2a4633c00880629883bc9aec037135a",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "3db99fd763a5752d43419dba947eadc46652443123d5e690a050ce699c2492a3"
+      "sourceSha256": "c4a6c424bac2f014666607e68b4f3296c2a4633c00880629883bc9aec037135a"
     },
     {
       "path": "handoff/electrician/lighting/compliance-analytic-reference.csv",
@@ -1302,13 +1605,309 @@
       "sourceSha256": "eee2eb69c01c3cc39cec9dc90c89d1e6d30af3964ae4b70ed1cc74c2e1bb37b3"
     },
     {
+      "path": "handoff/electrician/lighting/current/circuit-ledger.csv",
+      "bytes": 5198,
+      "sha256": "c4a6c424bac2f014666607e68b4f3296c2a4633c00880629883bc9aec037135a",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/curtain-strips.csv",
+      "bytes": 1092,
+      "sha256": "a706b0ca3c6436e6f4fa83a7be7a40fa9223f41d10c4aec709eb0302d0ec3ba7",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/fixed-cct-map.json",
+      "bytes": 115982,
+      "sha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/fixture-ledger.csv",
+      "bytes": 26594,
+      "sha256": "8302c2b916b41ee9137be1c5b0bc4b7de1c3ddb0351441f068c99ab83101e17f",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/generic-product-search.csv",
+      "bytes": 8077,
+      "sha256": "e897d4ab9cba915f6fcc1d33aebcc1a4ddb5b6b4124b1afc4a0f4bdf7eec1bde",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/heatmaps-summary.pdf",
+      "bytes": 152275,
+      "sha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be",
+      "coverage": [
+        "heatmaps"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-1.png",
+      "bytes": 109830,
+      "sha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-2.png",
+      "bytes": 101816,
+      "sha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-3.png",
+      "bytes": 105174,
+      "sha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-4.png",
+      "bytes": 121127,
+      "sha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-5.png",
+      "bytes": 99631,
+      "sha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-6.png",
+      "bytes": 91314,
+      "sha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main.pdf",
+      "bytes": 122962,
+      "sha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main.png",
+      "bytes": 142999,
+      "sha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-main.svg",
+      "bytes": 121953,
+      "sha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e",
+      "coverage": [
+        "editable-sources",
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-1.png",
+      "bytes": 93915,
+      "sha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-2.png",
+      "bytes": 111856,
+      "sha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-3.png",
+      "bytes": 114743,
+      "sha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-4.png",
+      "bytes": 115530,
+      "sha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-5.png",
+      "bytes": 111193,
+      "sha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-6.png",
+      "bytes": 108269,
+      "sha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood.pdf",
+      "bytes": 106406,
+      "sha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood.png",
+      "bytes": 160673,
+      "sha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-mood.svg",
+      "bytes": 139450,
+      "sha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31",
+      "coverage": [
+        "editable-sources",
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-1.png",
+      "bytes": 100814,
+      "sha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-2.png",
+      "bytes": 103865,
+      "sha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-3.png",
+      "bytes": 95768,
+      "sha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-4.png",
+      "bytes": 113216,
+      "sha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-5.png",
+      "bytes": 94469,
+      "sha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-6.png",
+      "bytes": 96499,
+      "sha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task.pdf",
+      "bytes": 89526,
+      "sha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task.png",
+      "bytes": 142647,
+      "sha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0",
+      "coverage": [
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-plan-task.svg",
+      "bytes": 126868,
+      "sha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9",
+      "coverage": [
+        "editable-sources",
+        "lighting-placement"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-review-schedules.pdf",
+      "bytes": 91409,
+      "sha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-specification.md",
+      "bytes": 12330,
+      "sha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/lighting/current/lighting-workbench.html",
+      "bytes": 618701,
+      "sha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822",
+      "coverage": [
+        "lighting-workbench"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/current/switchboard-schedule.csv",
+      "bytes": 5926,
+      "sha256": "901e201da88c8185c1b142e9fc8f1f0932e486b8fdb1aa6b02ad56504313a70a",
+      "coverage": [
+        "editable-sources",
+        "switchboard-control-schedule"
+      ]
+    },
+    {
       "path": "handoff/electrician/lighting/curtain-pocket-s1.json",
       "bytes": 41373,
-      "sha256": "c2bef62a2f9927508fea09e1d4b6b3ffe07e0881d01df6acbebe3fc1cb907bd3",
+      "sha256": "1605d3187d970df6d2a5840370418a794087a01d199f2ad15724ccc2d29b71f8",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "c2bef62a2f9927508fea09e1d4b6b3ffe07e0881d01df6acbebe3fc1cb907bd3"
+      "sourceSha256": "1605d3187d970df6d2a5840370418a794087a01d199f2ad15724ccc2d29b71f8"
     },
     {
       "path": "handoff/electrician/lighting/curtain-strips.csv",
@@ -1322,47 +1921,47 @@
     {
       "path": "handoff/electrician/lighting/electrical-checks.json",
       "bytes": 89280,
-      "sha256": "b6d7ca623320cc6446c5d2cc44db29c27c558b6608bb6288bf42057aea17a712",
+      "sha256": "5c64709009008699b4529cc570e1475e9f7a1e13d8f954a578c09b99e57407cd",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "b6d7ca623320cc6446c5d2cc44db29c27c558b6608bb6288bf42057aea17a712"
+      "sourceSha256": "5c64709009008699b4529cc570e1475e9f7a1e13d8f954a578c09b99e57407cd"
     },
     {
       "path": "handoff/electrician/lighting/fixed-cct-map.json",
-      "bytes": 116779,
-      "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
+      "bytes": 115982,
+      "sha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4"
+      "sourceSha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1"
     },
     {
       "path": "handoff/electrician/lighting/fixture-ledger.csv",
-      "bytes": 26610,
-      "sha256": "433856feb149d5a6dcad08a194eee4c4640750ec0899633d60cbf30f221cd280",
+      "bytes": 26594,
+      "sha256": "8302c2b916b41ee9137be1c5b0bc4b7de1c3ddb0351441f068c99ab83101e17f",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "433856feb149d5a6dcad08a194eee4c4640750ec0899633d60cbf30f221cd280"
+      "sourceSha256": "8302c2b916b41ee9137be1c5b0bc4b7de1c3ddb0351441f068c99ab83101e17f"
     },
     {
       "path": "handoff/electrician/lighting/fixture-ledger.json",
-      "bytes": 72540,
-      "sha256": "579933c72bd768da7ca20c8e7bcbe50a57c62ea1ecdfb2aaa97d4dc3da0c58ac",
+      "bytes": 73300,
+      "sha256": "3fb36a0aca7d068116a0674421ec707896c76c2411e469450fbe26ad9e0afe48",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "579933c72bd768da7ca20c8e7bcbe50a57c62ea1ecdfb2aaa97d4dc3da0c58ac"
+      "sourceSha256": "3fb36a0aca7d068116a0674421ec707896c76c2411e469450fbe26ad9e0afe48"
     },
     {
       "path": "handoff/electrician/lighting/generic-product-search.csv",
-      "bytes": 8249,
-      "sha256": "a046dbb096f522e7e78de3435836598e1c64f7145533660658b12b0026e37c90",
+      "bytes": 8077,
+      "sha256": "e897d4ab9cba915f6fcc1d33aebcc1a4ddb5b6b4124b1afc4a0f4bdf7eec1bde",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "a046dbb096f522e7e78de3435836598e1c64f7145533660658b12b0026e37c90"
+      "sourceSha256": "e897d4ab9cba915f6fcc1d33aebcc1a4ddb5b6b4124b1afc4a0f4bdf7eec1bde"
     },
     {
       "path": "handoff/electrician/lighting/heatmaps/BAL-analytic.png",
@@ -1375,12 +1974,12 @@
     },
     {
       "path": "handoff/electrician/lighting/heatmaps/CBR-analytic.png",
-      "bytes": 84297,
-      "sha256": "277c3e6a99c1adda6afe9c804c3f7f93c5560782601903013df6da698a088abb",
+      "bytes": 85266,
+      "sha256": "5ac79bd48cfa734b371d37b4a97edae54583702c77f311ab140b0b2d516f9e64",
       "coverage": [
         "heatmaps"
       ],
-      "sourceSha256": "277c3e6a99c1adda6afe9c804c3f7f93c5560782601903013df6da698a088abb"
+      "sourceSha256": "5ac79bd48cfa734b371d37b4a97edae54583702c77f311ab140b0b2d516f9e64"
     },
     {
       "path": "handoff/electrician/lighting/heatmaps/DIN-analytic.png",
@@ -1474,186 +2073,400 @@
     },
     {
       "path": "handoff/electrician/lighting/heatmaps-summary.pdf",
-      "bytes": 151629,
-      "sha256": "ecf8bc45ecd55eb26b111816c33cc0a7f6026ee7c231c73b0f032f4c42a3e0c3",
+      "bytes": 152275,
+      "sha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be",
       "coverage": [
         "heatmaps"
       ],
-      "sourceSha256": "ecf8bc45ecd55eb26b111816c33cc0a7f6026ee7c231c73b0f032f4c42a3e0c3"
+      "sourceSha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be"
     },
     {
       "path": "handoff/electrician/lighting/heatmaps.json",
-      "bytes": 1801418,
-      "sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+      "bytes": 1801309,
+      "sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
       "coverage": [
         "editable-sources",
         "heatmaps"
       ],
-      "sourceSha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a"
+      "sourceSha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6"
     },
     {
       "path": "handoff/electrician/lighting/lighting-design-inputs.json",
-      "bytes": 375055,
-      "sha256": "a4d99a1637aee5daf123d7f051d0a4a9e558f61568a348c35ec1290a0b62e8d0",
+      "bytes": 377260,
+      "sha256": "f44201edb455ccc3efa2e78640273926a3596f834564effb4851159c990c6f1b",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "73306931b538ae39808979e9c75be4a5e30d16705353608019957decfbe84e86"
+      "sourceSha256": "67f3a43f9fd96e2cadf9b1be8202baef783ffc35185fead72ed34b2222debe1e"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-load-per-room.pdf",
+      "bytes": 10046,
+      "sha256": "ddf48c91410be31e85f8ad33b6f87005916b5c1ce8408a8fbdcebe9ebc2f5b89",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-load-per-room.xlsx",
+      "bytes": 19839,
+      "sha256": "4301bc8a98586010c179dbd7a676e48ca6992c1da2d8032d0289fb94e0e351a3",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-1.png",
+      "bytes": 109830,
+      "sha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-2.png",
+      "bytes": 101816,
+      "sha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-3.png",
+      "bytes": 105174,
+      "sha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-4.png",
+      "bytes": 121127,
+      "sha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-5.png",
+      "bytes": 99631,
+      "sha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-main-zoom-6.png",
+      "bytes": 91314,
+      "sha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-main.pdf",
-      "bytes": 44958,
-      "sha256": "3db96699e6fb6badfba7b15131d31cce2740dca58cb0b2df4952383032abcfba",
+      "bytes": 122962,
+      "sha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270",
       "coverage": [
         "lighting-placement"
       ],
-      "sourceSha256": "3db96699e6fb6badfba7b15131d31cce2740dca58cb0b2df4952383032abcfba"
+      "sourceSha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-main.png",
-      "bytes": 151758,
-      "sha256": "170f5ab07570082f28d2e25198c02e407f8091bf071ffe75b2fb87b8a76b13f4",
+      "bytes": 142999,
+      "sha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48",
       "coverage": [
         "lighting-placement"
       ],
-      "sourceSha256": "170f5ab07570082f28d2e25198c02e407f8091bf071ffe75b2fb87b8a76b13f4"
+      "sourceSha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-main.svg",
-      "bytes": 135192,
-      "sha256": "a462acf7fd22820f681496691f33c66ef9ef86073b7af2e83d0fc12ace2b1bd2",
+      "bytes": 121953,
+      "sha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e",
       "coverage": [
         "editable-sources",
         "lighting-placement"
       ],
-      "sourceSha256": "a462acf7fd22820f681496691f33c66ef9ef86073b7af2e83d0fc12ace2b1bd2"
+      "sourceSha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-1.png",
+      "bytes": 93915,
+      "sha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-2.png",
+      "bytes": 111856,
+      "sha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-3.png",
+      "bytes": 114743,
+      "sha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-4.png",
+      "bytes": 115530,
+      "sha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-5.png",
+      "bytes": 111193,
+      "sha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-mood-zoom-6.png",
+      "bytes": 108269,
+      "sha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-mood.pdf",
-      "bytes": 36237,
-      "sha256": "cea24866409f4667f0761858348f5798fa1243ca0fc6b3c626d08b257966014c",
+      "bytes": 106406,
+      "sha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820",
       "coverage": [
         "lighting-placement"
       ],
-      "sourceSha256": "cea24866409f4667f0761858348f5798fa1243ca0fc6b3c626d08b257966014c"
+      "sourceSha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-mood.png",
-      "bytes": 146976,
-      "sha256": "0f38d41aa5bcad8ad8544a96bda2f9fa44f292e79014adddd3e85d6e132f7446",
+      "bytes": 160673,
+      "sha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8",
       "coverage": [
         "lighting-placement"
       ],
-      "sourceSha256": "0f38d41aa5bcad8ad8544a96bda2f9fa44f292e79014adddd3e85d6e132f7446"
+      "sourceSha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-mood.svg",
-      "bytes": 115125,
-      "sha256": "058877c18a2e87e6bc3f1ced3864ca6cc45b51c80bdcd759a4e745c9e5a0067d",
+      "bytes": 139450,
+      "sha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31",
       "coverage": [
         "editable-sources",
         "lighting-placement"
       ],
-      "sourceSha256": "058877c18a2e87e6bc3f1ced3864ca6cc45b51c80bdcd759a4e745c9e5a0067d"
+      "sourceSha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-1.png",
+      "bytes": 100814,
+      "sha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-2.png",
+      "bytes": 103865,
+      "sha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-3.png",
+      "bytes": 95768,
+      "sha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-4.png",
+      "bytes": 113216,
+      "sha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-5.png",
+      "bytes": 94469,
+      "sha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-plan-task-zoom-6.png",
+      "bytes": 96499,
+      "sha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2",
+      "coverage": [
+        "lighting-placement"
+      ],
+      "sourceSha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-task.pdf",
-      "bytes": 39168,
-      "sha256": "5f76af78b2d5fc6626f1bc2c8ec923ee5b1bd7fd7c337378caebb0f9e9b80999",
+      "bytes": 89526,
+      "sha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4",
       "coverage": [
         "lighting-placement"
       ],
-      "sourceSha256": "5f76af78b2d5fc6626f1bc2c8ec923ee5b1bd7fd7c337378caebb0f9e9b80999"
+      "sourceSha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-task.png",
-      "bytes": 130651,
-      "sha256": "9f1b8e6a73fceba0816d86ebcaa6920d7ca15104beb9daf5d1688721138b5072",
+      "bytes": 142647,
+      "sha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0",
       "coverage": [
         "lighting-placement"
       ],
-      "sourceSha256": "9f1b8e6a73fceba0816d86ebcaa6920d7ca15104beb9daf5d1688721138b5072"
+      "sourceSha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0"
     },
     {
       "path": "handoff/electrician/lighting/lighting-plan-task.svg",
-      "bytes": 115138,
-      "sha256": "8b2aa1ed51df58e6baeaeae43004c9f1a2af962165274e23804eb55b06df0e3f",
+      "bytes": 126868,
+      "sha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9",
       "coverage": [
         "editable-sources",
         "lighting-placement"
       ],
-      "sourceSha256": "8b2aa1ed51df58e6baeaeae43004c9f1a2af962165274e23804eb55b06df0e3f"
+      "sourceSha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9"
     },
     {
       "path": "handoff/electrician/lighting/lighting-review-schedules.pdf",
-      "bytes": 91481,
-      "sha256": "8d38e657d05fee4cc95f3e4a0df4c535de54dd7df0b24e831727a155ab825b65",
+      "bytes": 91409,
+      "sha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d",
       "coverage": [],
-      "sourceSha256": "8d38e657d05fee4cc95f3e4a0df4c535de54dd7df0b24e831727a155ab825b65"
+      "sourceSha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d"
     },
     {
       "path": "handoff/electrician/lighting/lighting-specification.md",
-      "bytes": 10899,
-      "sha256": "230418fdf31068930a1b3e533c1285c4e07c6950832c60b5966dc2b24478579e",
+      "bytes": 12330,
+      "sha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b",
       "coverage": [],
-      "sourceSha256": "230418fdf31068930a1b3e533c1285c4e07c6950832c60b5966dc2b24478579e"
+      "sourceSha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b"
     },
     {
       "path": "handoff/electrician/lighting/lighting-workbench.html",
-      "bytes": 617518,
-      "sha256": "924a9056d01dcb1b1f29b56a6a1aa7574f400c9dd03c915bb817ed3853c74af2",
+      "bytes": 618701,
+      "sha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822",
       "coverage": [
         "lighting-workbench"
       ],
-      "sourceSha256": "924a9056d01dcb1b1f29b56a6a1aa7574f400c9dd03c915bb817ed3853c74af2"
+      "sourceSha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822"
     },
     {
       "path": "handoff/electrician/lighting/manifest.json",
-      "bytes": 8511,
-      "sha256": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b",
+      "bytes": 13752,
+      "sha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b"
+      "sourceSha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59"
     },
     {
       "path": "handoff/electrician/lighting/public-file-hashes.json",
-      "bytes": 4736,
-      "sha256": "0a652d81f2864dbcbbe2e945df92978e225680e842982b3a06446a56ac31cc3b",
+      "bytes": 6608,
+      "sha256": "683cabe3d215e2834612fb1629470c9597316aaf53c9142e3f0a7104863533a4",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "handoff/electrician/lighting/README.md",
-      "bytes": 2190,
-      "sha256": "efd1a641e58236106f91b3f134fd12c90d476ebd8f508f8be376a929005639d7",
+      "bytes": 2768,
+      "sha256": "2aed84ec4f590145407fff55429a5a43828d0bbe0db82eb4748c118f2bea58b8",
       "coverage": [],
-      "sourceSha256": "efd1a641e58236106f91b3f134fd12c90d476ebd8f508f8be376a929005639d7"
+      "sourceSha256": "2aed84ec4f590145407fff55429a5a43828d0bbe0db82eb4748c118f2bea58b8"
     },
     {
       "path": "handoff/electrician/lighting/repository-copy-receipt.json",
-      "bytes": 14470,
-      "sha256": "4e3967c0ae06001e1add9343677d71b45f18a31e9c2b4b55467a5355f89d1008",
+      "bytes": 22349,
+      "sha256": "be4bd38d7cb94648f0350106f9718ffea77078810e6247238ccd5ead5429eba2",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/room-lighting-load.csv",
+      "bytes": 1312,
+      "sha256": "21e6846af1dc846aa3eb3028b7604b87861156189bf3f9e65422704f0264b4de",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/room-lighting-load.pdf",
+      "bytes": 64427,
+      "sha256": "2ff8bbf9e9c0889001a6512d0e82bd4f3ea3eeab24ebb4c57bea2470088d5b3d",
+      "coverage": []
+    },
+    {
+      "path": "handoff/electrician/lighting/source/build_load_sheet.py",
+      "bytes": 19436,
+      "sha256": "3c6f8e5a3f35acaadb3470b9c6a9066f7a99c047ffb0d3b11749621fd5be2d09",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/source/cbr-r05-revision.json",
+      "bytes": 79761,
+      "sha256": "85b32eb9685641b6c62ccaebfef655f903f816d51e18f96b2dc15c95a03fa168",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "handoff/electrician/lighting/source/export_current_lighting.py",
-      "bytes": 51501,
-      "sha256": "29ee1f5cdcd563a2fead0c4c7c465d5b3f8407bd9f48a4e6b2daaeb129e322d1",
+      "bytes": 62092,
+      "sha256": "7544fc9b9a272301e2d25177653efeb5992935db3f2894b6efe9551c67514ae9",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "562d38b17a131543dd89952b457cac3359d52f193cbe10a092be50c381a06ea5"
     },
     {
       "path": "handoff/electrician/lighting/source/lighting-workbench.template.html",
-      "bytes": 17753,
-      "sha256": "95b47a0634326ef7fb20b4f60aca34d8e332e87611d1a40788f8255ba20d97c9",
+      "bytes": 19081,
+      "sha256": "1130c9440d67441219d6190cf9e651b6e7c4c643d9027a94f1eb362f3a6f692b",
       "coverage": [],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "95b47a0634326ef7fb20b4f60aca34d8e332e87611d1a40788f8255ba20d97c9"
+    },
+    {
+      "path": "handoff/electrician/lighting/source/make_cbr_r05_patch.py",
+      "bytes": 2831,
+      "sha256": "71f51b8340630306b7c11d9af007485cb471a7f594ad4739efb9b0d6a6cbb4c5",
+      "coverage": [
+        "editable-sources"
+      ]
     },
     {
       "path": "handoff/electrician/lighting/source/public-file-hashes.json",
@@ -1687,12 +2500,29 @@
       "sourceSha256": "a4c20c991c9378fdeba88145c9a904f9dddf0b3c9dd3a1407542f8728fc9e7f8"
     },
     {
+      "path": "handoff/electrician/lighting/source/validate_cbr_revision.py",
+      "bytes": 17808,
+      "sha256": "96d922004d9ba394b65648c0eeb7adcf3f2f31a5bfe90f57086f81d4d99f146c",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/electrician/lighting/source/validate_cct_revision.py",
+      "bytes": 4839,
+      "sha256": "462742a6445075c683589ac59afffccd1d9b203f73bce6ca2e72cbbdb0619a1d",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
       "path": "handoff/electrician/lighting/source/verify_current_lighting.py",
-      "bytes": 17684,
-      "sha256": "8e540e581a47716e6d163524aa5ebe5aef924ff35708b6157ad1c468bc18a9c5",
+      "bytes": 19611,
+      "sha256": "171d0f30ac696b83124553f651f75434e441e6f2732952cef9e238fb1fa25c54",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "bc670bcdc17d6bd3ce1fb09f24c941f78f029f564deaa52fa6162d4529d28f07"
     },
     {
@@ -1707,30 +2537,30 @@
     {
       "path": "handoff/electrician/lighting/switchboard-schedule.csv",
       "bytes": 5926,
-      "sha256": "afe760ae80e7f8d8792ae0a0b1469441122b7ab9630e8553b773af3c96a557a0",
+      "sha256": "901e201da88c8185c1b142e9fc8f1f0932e486b8fdb1aa6b02ad56504313a70a",
       "coverage": [
         "editable-sources",
         "switchboard-control-schedule"
       ],
-      "sourceSha256": "afe760ae80e7f8d8792ae0a0b1469441122b7ab9630e8553b773af3c96a557a0"
+      "sourceSha256": "901e201da88c8185c1b142e9fc8f1f0932e486b8fdb1aa6b02ad56504313a70a"
     },
     {
       "path": "handoff/electrician/lighting/verification.json",
-      "bytes": 4495,
-      "sha256": "4a9e817717bd1bd43f2ec7f537ec5d305bca5a72cd5594ff4cbefdd8ea3cbb36",
+      "bytes": 6515,
+      "sha256": "83ab7785544359b3c9ecd6ef3b831cb89c943c33911c704f83d77c2a1e9848b1",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "159fef18909993180b7f634c0ad7a6da4fd0feeae89ab02604cf269fad3e61d0"
+      "sourceSha256": "24245edc7bed9338a83e2d664c1f5997e97276b1fa412bfc526f8a4b3d34eb08"
     },
     {
       "path": "handoff/electrician/lighting/voltage-drop-selected-s1.csv",
       "bytes": 1785,
-      "sha256": "634da4696b95a9dc1a35d697a1b7b125b7a5987f9bb11ca2b37aed87f7c76dfe",
+      "sha256": "9a6fca743354479c083f135a73674923f87cb428d5f2d83533540e0d7ce59c75",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "634da4696b95a9dc1a35d697a1b7b125b7a5987f9bb11ca2b37aed87f7c76dfe"
+      "sourceSha256": "9a6fca743354479c083f135a73674923f87cb428d5f2d83533540e0d7ce59c75"
     },
     {
       "path": "handoff/electrician/simulation/analysis/checks.json",
@@ -3341,8 +4171,8 @@
     },
     {
       "path": "handoff/index.html",
-      "bytes": 9607,
-      "sha256": "8383214cdca0e10f083b703625fc7e665a85c4007081d06b130501e5ec3175f9",
+      "bytes": 5481,
+      "sha256": "83e66d6e78a5b92cc58733e284e5e092307bbd9d8f3c6b07629a5acff51eec65",
       "coverage": []
     },
     {
@@ -3355,8 +4185,8 @@
     },
     {
       "path": "handoff/local-artifact-verification.json",
-      "bytes": 1131,
-      "sha256": "851db7ac24dc4f6c3cdbea57af5d911a7a68250bbec81fd7f278ec528ae4a4ca",
+      "bytes": 1194,
+      "sha256": "35321dec4d517ec1dba9641e4cd3481c09a3ecb8ad1a3a2dbe43e6f799487312",
       "coverage": [
         "editable-sources"
       ]
@@ -3511,278 +4341,308 @@
     },
     {
       "path": "handoff/mason-civil/layout-views/01-plan-furnished.png",
-      "bytes": 1165081,
-      "sha256": "78fdcf4f70f77554aaf4757698246b4fc8f51a2418114a8145b79c06b30a1b05",
+      "bytes": 1146374,
+      "sha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848",
       "coverage": [],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "78fdcf4f70f77554aaf4757698246b4fc8f51a2418114a8145b79c06b30a1b05"
     },
     {
       "path": "handoff/mason-civil/layout-views/01-plan-furnished.svg",
-      "bytes": 57209,
-      "sha256": "32e31ede03506872c71dbab30c92536a107641bd638f6e6e2043edc5107fdf08",
+      "bytes": 56897,
+      "sha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "32e31ede03506872c71dbab30c92536a107641bd638f6e6e2043edc5107fdf08"
     },
     {
       "path": "handoff/mason-civil/layout-views/02-rcp.png",
-      "bytes": 1895888,
-      "sha256": "5a0b4e28d2d962362100864f4feb40258f8064db34a20cf86f70ce04e4b18da1",
+      "bytes": 1905699,
+      "sha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2",
       "coverage": [
         "ceiling"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "5a0b4e28d2d962362100864f4feb40258f8064db34a20cf86f70ce04e4b18da1"
     },
     {
       "path": "handoff/mason-civil/layout-views/02-rcp.svg",
-      "bytes": 90645,
-      "sha256": "6d757bd30411ecd295d4b4c0b885ef63c932e2501560de5699226236df41a988",
+      "bytes": 91555,
+      "sha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1",
       "coverage": [
         "ceiling",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "6d757bd30411ecd295d4b4c0b885ef63c932e2501560de5699226236df41a988"
     },
     {
       "path": "handoff/mason-civil/layout-views/03-elev-R01-living.png",
-      "bytes": 1068711,
-      "sha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
+      "bytes": 1066928,
+      "sha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744"
     },
     {
       "path": "handoff/mason-civil/layout-views/03-elev-R01-living.svg",
-      "bytes": 58459,
-      "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
+      "bytes": 58443,
+      "sha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b"
     },
     {
       "path": "handoff/mason-civil/layout-views/04-elev-R02-dining.png",
-      "bytes": 719231,
-      "sha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
+      "bytes": 717309,
+      "sha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5"
     },
     {
       "path": "handoff/mason-civil/layout-views/04-elev-R02-dining.svg",
-      "bytes": 36369,
-      "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
+      "bytes": 36353,
+      "sha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a"
     },
     {
       "path": "handoff/mason-civil/layout-views/05-elev-R03-kitchen.png",
-      "bytes": 842465,
-      "sha256": "bbb588333f2d7462326ea0e945f909b458a4246bc8a2eccfee7b2bd112d2d083",
+      "bytes": 840605,
+      "sha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "bbb588333f2d7462326ea0e945f909b458a4246bc8a2eccfee7b2bd112d2d083"
     },
     {
       "path": "handoff/mason-civil/layout-views/05-elev-R03-kitchen.svg",
-      "bytes": 47449,
-      "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
+      "bytes": 47433,
+      "sha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2"
     },
     {
       "path": "handoff/mason-civil/layout-views/06-elev-R04-master.png",
-      "bytes": 835753,
-      "sha256": "f256510f8bed6ecbeb0ce0cce2c49f43737ef4930bb5ce536bf4d0652e4558c3",
+      "bytes": 830834,
+      "sha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "f256510f8bed6ecbeb0ce0cce2c49f43737ef4930bb5ce536bf4d0652e4558c3"
     },
     {
       "path": "handoff/mason-civil/layout-views/06-elev-R04-master.svg",
-      "bytes": 43524,
-      "sha256": "29cb3e6e6a01dd0f8f860a02000e8b0631c9ad745590c70ff1de314f075aac8b",
+      "bytes": 43491,
+      "sha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "29cb3e6e6a01dd0f8f860a02000e8b0631c9ad745590c70ff1de314f075aac8b"
     },
     {
       "path": "handoff/mason-civil/layout-views/07-elev-R04a-dressing.png",
-      "bytes": 618709,
-      "sha256": "ad09a6dc6b29c0592793e45edc43131f50b8537ad4e54694f0389a4335f97d49",
+      "bytes": 649998,
+      "sha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "ad09a6dc6b29c0592793e45edc43131f50b8537ad4e54694f0389a4335f97d49"
     },
     {
       "path": "handoff/mason-civil/layout-views/07-elev-R04a-dressing.svg",
-      "bytes": 41258,
-      "sha256": "6f02bf5a403d4b9a53c6253bb0b283f4ad937929c908df9b53b7ed566bf39b68",
+      "bytes": 42001,
+      "sha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "6f02bf5a403d4b9a53c6253bb0b283f4ad937929c908df9b53b7ed566bf39b68"
     },
     {
       "path": "handoff/mason-civil/layout-views/08-elev-R05-children.png",
-      "bytes": 1006732,
-      "sha256": "61b69c6a77cb8efbbbbc203f7db4754c16aa56351dfb1386432bba8bc3a263cd",
+      "bytes": 1008949,
+      "sha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "61b69c6a77cb8efbbbbc203f7db4754c16aa56351dfb1386432bba8bc3a263cd"
     },
     {
       "path": "handoff/mason-civil/layout-views/08-elev-R05-children.svg",
-      "bytes": 61475,
-      "sha256": "cfc5a89c4379d718a17dcec32b52ee348b801e186278184f2f27f1cf187a518e",
+      "bytes": 61480,
+      "sha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "cfc5a89c4379d718a17dcec32b52ee348b801e186278184f2f27f1cf187a518e"
     },
     {
       "path": "handoff/mason-civil/layout-views/09-elev-R06-TL1.png",
-      "bytes": 609805,
-      "sha256": "2c3faa390257805ce7d347506821f116a529d91ee65cf73a54de0927f55a532b",
+      "bytes": 591826,
+      "sha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "2c3faa390257805ce7d347506821f116a529d91ee65cf73a54de0927f55a532b"
     },
     {
       "path": "handoff/mason-civil/layout-views/09-elev-R06-TL1.svg",
-      "bytes": 42722,
-      "sha256": "e5ccca9c76ddd464e7ac56b02e3e19a40d355bd787ce882f5afb1cbd7d84cba5",
+      "bytes": 42179,
+      "sha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "e5ccca9c76ddd464e7ac56b02e3e19a40d355bd787ce882f5afb1cbd7d84cba5"
     },
     {
       "path": "handoff/mason-civil/layout-views/10-elev-R07-TL2.png",
-      "bytes": 612278,
-      "sha256": "0a81938a2d195f056dcc7a77968cae9d3b40a5d43b1a1b435c29639731496a5d",
+      "bytes": 594801,
+      "sha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "0a81938a2d195f056dcc7a77968cae9d3b40a5d43b1a1b435c29639731496a5d"
     },
     {
       "path": "handoff/mason-civil/layout-views/10-elev-R07-TL2.svg",
-      "bytes": 42711,
-      "sha256": "c4f276aa07ae40821702180a03d9acab9ac4c7dca09b316ee7a1932f9aa27b34",
+      "bytes": 42168,
+      "sha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "c4f276aa07ae40821702180a03d9acab9ac4c7dca09b316ee7a1932f9aa27b34"
     },
     {
       "path": "handoff/mason-civil/layout-views/11-elev-R08-utility.png",
-      "bytes": 804039,
-      "sha256": "a166a94a2b7bbce82ad423aec393179af7420fef82abd544f0ba912569d2738f",
+      "bytes": 831466,
+      "sha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "a166a94a2b7bbce82ad423aec393179af7420fef82abd544f0ba912569d2738f"
     },
     {
       "path": "handoff/mason-civil/layout-views/11-elev-R08-utility.svg",
-      "bytes": 48612,
-      "sha256": "7d9cb16e5c57a05a29560625d0bc584332ac9f51a311520c934e257dce6eac15",
+      "bytes": 48689,
+      "sha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "7d9cb16e5c57a05a29560625d0bc584332ac9f51a311520c934e257dce6eac15"
     },
     {
       "path": "handoff/mason-civil/layout-views/12-elev-R09-entry.png",
-      "bytes": 413291,
-      "sha256": "76132f7852185dc9c2309ba50bd327136457d7814f6a210b7b786abd32740d06",
+      "bytes": 412007,
+      "sha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "76132f7852185dc9c2309ba50bd327136457d7814f6a210b7b786abd32740d06"
     },
     {
       "path": "handoff/mason-civil/layout-views/12-elev-R09-entry.svg",
-      "bytes": 18177,
-      "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
+      "bytes": 18161,
+      "sha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e"
     },
     {
       "path": "handoff/mason-civil/layout-views/13-elev-R12-lobby.png",
-      "bytes": 428073,
-      "sha256": "7fecf904ad06bdf84af590260b056910c06639575d132f68097bc587e7e3df4a",
+      "bytes": 426200,
+      "sha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "7fecf904ad06bdf84af590260b056910c06639575d132f68097bc587e7e3df4a"
     },
     {
       "path": "handoff/mason-civil/layout-views/13-elev-R12-lobby.svg",
-      "bytes": 30637,
-      "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
+      "bytes": 30621,
+      "sha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333"
     },
     {
       "path": "handoff/mason-civil/layout-views/current-layout-views.pdf",
-      "bytes": 6804433,
-      "sha256": "c488d3e0f5338eb4b243d596019d36a6a0b9a890cc1f82ae01eb8cace22796a4",
+      "bytes": 6849877,
+      "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
       "coverage": [],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "c488d3e0f5338eb4b243d596019d36a6a0b9a890cc1f82ae01eb8cace22796a4"
     },
     {
       "path": "handoff/mason-civil/layout-views/layout-views-verification.json",
-      "bytes": 47007,
-      "sha256": "00839d2526393c30287465c9840bfb95d76faaf21d4d202d5444e47e8d9f7115",
+      "bytes": 47063,
+      "sha256": "f63ed31a443fbebe2d8277b962c68b846be7b486950d34540ed72e9035665f1b",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "710b0320c9b55b972a6aa5cec49789e3773278557c4d17e15abb746d5b4efd52"
     },
     {
       "path": "handoff/mason-civil/layout-views/README.md",
-      "bytes": 12210,
-      "sha256": "7f6f2f6c7b048fe802c075f313839a32d32040eab8e658a9843ab6b3a9909462",
+      "bytes": 11128,
+      "sha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445",
       "coverage": [],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "7f6f2f6c7b048fe802c075f313839a32d32040eab8e658a9843ab6b3a9909462"
     },
     {
       "path": "handoff/mason-civil/layout-views/sheets.json",
-      "bytes": 25389,
-      "sha256": "e5db606573570a5f6d9d886ca900c5a0a0623fe0271173191fc14b1ddcf79a19",
+      "bytes": 25260,
+      "sha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "c8dba42ccecf5dcd2222501ce1d5a0084312136415eb89feb6e413807d466f75"
     },
     {
@@ -4107,11 +4967,12 @@
     },
     {
       "path": "handoff/source-basis/house-design.json",
-      "bytes": 1588267,
-      "sha256": "a62024621af559191896334b9ba96235a3749d0a646ba943dee7ed2dfbe2b659",
+      "bytes": 1599186,
+      "sha256": "542fd109bd9fbbe4f108b252f00c11e5b1ac3da8004d79d2ff2919faa84c0598",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
       "sourceSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
     },
     {
@@ -4144,6 +5005,14 @@
         "editable-sources"
       ],
       "sourceSha256": "d7abccd61e63e914bb14b8c658a0c34d11bfcfbcb98caed2312a383289507a64"
+    },
+    {
+      "path": "handoff/source-basis/stage_public_master.py",
+      "bytes": 3898,
+      "sha256": "e8252220f7a2ee870ac660f1c0b970489148818cc31a7c631ce24ee4c0cd57a3",
+      "coverage": [
+        "editable-sources"
+      ]
     },
     {
       "path": "handoff/viewer/drawings/curtain-section/curtain-pocket-section-review.pdf",
@@ -4186,301 +5055,301 @@
     },
     {
       "path": "handoff/viewer/drawings/drawing-public-privacy-receipt.json",
-      "bytes": 10482,
-      "sha256": "e06c734c60197573a5504ebefcb0c125de7cc9e1ceb49fadc00a68b1329e3c1b",
+      "bytes": 9893,
+      "sha256": "ab797091ab31112dcb8130711201383f6153aa37db78d50f0df8c6d71beeffb3",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "e06c734c60197573a5504ebefcb0c125de7cc9e1ceb49fadc00a68b1329e3c1b"
+      "sourceSha256": "ab797091ab31112dcb8130711201383f6153aa37db78d50f0df8c6d71beeffb3"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/01-plan-furnished.png",
-      "bytes": 1149566,
-      "sha256": "993833149fc7c8efe8e618b0f544fd90adc043e503996213cdcd0b8be1122a9f",
+      "bytes": 1146374,
+      "sha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848",
       "coverage": [],
-      "sourceSha256": "993833149fc7c8efe8e618b0f544fd90adc043e503996213cdcd0b8be1122a9f"
+      "sourceSha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/01-plan-furnished.svg",
-      "bytes": 56913,
-      "sha256": "3452ab485d7cf5a402b53fb394f69aa65d579e4d2f55bde849c04c5ae45b8616",
+      "bytes": 56897,
+      "sha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "3452ab485d7cf5a402b53fb394f69aa65d579e4d2f55bde849c04c5ae45b8616"
+      "sourceSha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/02-rcp.png",
-      "bytes": 1888671,
-      "sha256": "799ed5b0338af4f74b27c0fb49ff517e12d505caf5b73b47f3add34dd803a36d",
+      "bytes": 1905699,
+      "sha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2",
       "coverage": [
         "ceiling"
       ],
-      "sourceSha256": "799ed5b0338af4f74b27c0fb49ff517e12d505caf5b73b47f3add34dd803a36d"
+      "sourceSha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/02-rcp.svg",
-      "bytes": 91415,
-      "sha256": "65758485b986e7943af281bb524faf08cca19ad5e7265088f592b703bab33c1f",
+      "bytes": 91555,
+      "sha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1",
       "coverage": [
         "ceiling",
         "editable-sources"
       ],
-      "sourceSha256": "65758485b986e7943af281bb524faf08cca19ad5e7265088f592b703bab33c1f"
+      "sourceSha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/03-elev-R01-living.png",
-      "bytes": 1068711,
-      "sha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
+      "bytes": 1066928,
+      "sha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744"
+      "sourceSha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/03-elev-R01-living.svg",
-      "bytes": 58459,
-      "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
+      "bytes": 58443,
+      "sha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b"
+      "sourceSha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/04-elev-R02-dining.png",
-      "bytes": 719231,
-      "sha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
+      "bytes": 717309,
+      "sha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5"
+      "sourceSha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/04-elev-R02-dining.svg",
-      "bytes": 36369,
-      "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
+      "bytes": 36353,
+      "sha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a"
+      "sourceSha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/05-elev-R03-kitchen.png",
-      "bytes": 842465,
-      "sha256": "7459c5f3e9a526c8665dd6994c5a0bc457d1cec29f64e472d18eff9f0b83ef1e",
+      "bytes": 840605,
+      "sha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "7459c5f3e9a526c8665dd6994c5a0bc457d1cec29f64e472d18eff9f0b83ef1e"
+      "sourceSha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/05-elev-R03-kitchen.svg",
-      "bytes": 47449,
-      "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
+      "bytes": 47433,
+      "sha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2"
+      "sourceSha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/06-elev-R04-master.png",
-      "bytes": 832838,
-      "sha256": "94b2230f591a365efe83da51f37d93033667dc314a57cc9a6136cfcca0acb9c0",
+      "bytes": 830834,
+      "sha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "94b2230f591a365efe83da51f37d93033667dc314a57cc9a6136cfcca0acb9c0"
+      "sourceSha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/06-elev-R04-master.svg",
-      "bytes": 43507,
-      "sha256": "7bf79310c91f6a7133ee3a16321578e5aa0b3a94b0840fa1f965df625e832309",
+      "bytes": 43491,
+      "sha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "7bf79310c91f6a7133ee3a16321578e5aa0b3a94b0840fa1f965df625e832309"
+      "sourceSha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/07-elev-R04a-dressing.png",
-      "bytes": 651781,
-      "sha256": "db1bc1b846e2b0add9007e0f2b14307b6f08ac324cf847123d0466c1692fd331",
+      "bytes": 649998,
+      "sha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "db1bc1b846e2b0add9007e0f2b14307b6f08ac324cf847123d0466c1692fd331"
+      "sourceSha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/07-elev-R04a-dressing.svg",
-      "bytes": 42017,
-      "sha256": "a638178863df93d3812895b920596f83f5c5e258aad367468c260defc840c66b",
+      "bytes": 42001,
+      "sha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "a638178863df93d3812895b920596f83f5c5e258aad367468c260defc840c66b"
+      "sourceSha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/08-elev-R05-children.png",
-      "bytes": 1010804,
-      "sha256": "c2f561ab07ea6f8f92adb84ed2cf425ebc69302adc4a5609f50f1afbc428accd",
+      "bytes": 1008949,
+      "sha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "c2f561ab07ea6f8f92adb84ed2cf425ebc69302adc4a5609f50f1afbc428accd"
+      "sourceSha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/08-elev-R05-children.svg",
-      "bytes": 61496,
-      "sha256": "d8f02b551adc330fe59da4acea87221fc2cf9241b4eb3863598322f6799e03fa",
+      "bytes": 61480,
+      "sha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "d8f02b551adc330fe59da4acea87221fc2cf9241b4eb3863598322f6799e03fa"
+      "sourceSha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/09-elev-R06-TL1.png",
-      "bytes": 593698,
-      "sha256": "fb45e4f7d14334aff83cea80dc605b12a197a5476341f941a780aede86d9bda7",
+      "bytes": 591826,
+      "sha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "fb45e4f7d14334aff83cea80dc605b12a197a5476341f941a780aede86d9bda7"
+      "sourceSha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/09-elev-R06-TL1.svg",
-      "bytes": 42195,
-      "sha256": "84060a662b8752dbcee187d1f0adc7fdbe8324ccaea9a7f02499146be577df84",
+      "bytes": 42179,
+      "sha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "84060a662b8752dbcee187d1f0adc7fdbe8324ccaea9a7f02499146be577df84"
+      "sourceSha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/10-elev-R07-TL2.png",
-      "bytes": 596725,
-      "sha256": "b1d78fc8cea97d975dbecf9676d566ef9f5943d25505017ce3922c14d4c54315",
+      "bytes": 594801,
+      "sha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "b1d78fc8cea97d975dbecf9676d566ef9f5943d25505017ce3922c14d4c54315"
+      "sourceSha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/10-elev-R07-TL2.svg",
-      "bytes": 42184,
-      "sha256": "7d3650c204fa049a1522baaec6496eba838b4975454cebab195983e315659c43",
+      "bytes": 42168,
+      "sha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "7d3650c204fa049a1522baaec6496eba838b4975454cebab195983e315659c43"
+      "sourceSha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/11-elev-R08-utility.png",
-      "bytes": 833447,
-      "sha256": "d61ef0c5caaf8aefac91c477499c27b59e06cce6a22f1e65920e14fa51d43cf0",
+      "bytes": 831466,
+      "sha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "d61ef0c5caaf8aefac91c477499c27b59e06cce6a22f1e65920e14fa51d43cf0"
+      "sourceSha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/11-elev-R08-utility.svg",
-      "bytes": 48705,
-      "sha256": "627d109d239a41a498da1a2416f8b5761699d1ea5ec78fffb14d06b482a895f8",
+      "bytes": 48689,
+      "sha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "627d109d239a41a498da1a2416f8b5761699d1ea5ec78fffb14d06b482a895f8"
+      "sourceSha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/12-elev-R09-entry.png",
-      "bytes": 413294,
-      "sha256": "a38d873ece403259659f32333e102244568be8623d7eb5d68114e0649262d1c4",
+      "bytes": 412007,
+      "sha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "a38d873ece403259659f32333e102244568be8623d7eb5d68114e0649262d1c4"
+      "sourceSha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/12-elev-R09-entry.svg",
-      "bytes": 18177,
-      "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
+      "bytes": 18161,
+      "sha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e"
+      "sourceSha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/13-elev-R12-lobby.png",
-      "bytes": 428106,
-      "sha256": "1b38b2a02425ffbb1157b9d50b300d5f5453e3262127ae4b72cbd406e0381f9b",
+      "bytes": 426200,
+      "sha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896",
       "coverage": [
         "dimensioned-wall-layouts"
       ],
-      "sourceSha256": "1b38b2a02425ffbb1157b9d50b300d5f5453e3262127ae4b72cbd406e0381f9b"
+      "sourceSha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/13-elev-R12-lobby.svg",
-      "bytes": 30637,
-      "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
+      "bytes": 30621,
+      "sha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107",
       "coverage": [
         "dimensioned-wall-layouts",
         "editable-sources"
       ],
-      "sourceSha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333"
+      "sourceSha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/current-layout-views.pdf",
-      "bytes": 6815041,
-      "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
+      "bytes": 6849877,
+      "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
       "coverage": [],
-      "sourceSha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3"
+      "sourceSha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/layout-views-verification.json",
-      "bytes": 47300,
-      "sha256": "37021261a3e09148e5053c1dcbd063c5279ce20f533cc7ba770a8e0740d72919",
+      "bytes": 47063,
+      "sha256": "f63ed31a443fbebe2d8277b962c68b846be7b486950d34540ed72e9035665f1b",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "37021261a3e09148e5053c1dcbd063c5279ce20f533cc7ba770a8e0740d72919"
+      "sourceSha256": "f63ed31a443fbebe2d8277b962c68b846be7b486950d34540ed72e9035665f1b"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/README.md",
-      "bytes": 11349,
-      "sha256": "5895543248a610b386e61f46eae54fbe9c59a351dc4900d9f46f6c66fc14d7d1",
+      "bytes": 11128,
+      "sha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445",
       "coverage": [],
-      "sourceSha256": "5895543248a610b386e61f46eae54fbe9c59a351dc4900d9f46f6c66fc14d7d1"
+      "sourceSha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445"
     },
     {
       "path": "handoff/viewer/drawings/layout-views/sheets.json",
-      "bytes": 25257,
-      "sha256": "28b915bc8c506df1e51c06c3b3dc84d1725932962d3e6e2d2ac398c3eadca4e6",
+      "bytes": 25260,
+      "sha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "28b915bc8c506df1e51c06c3b3dc84d1725932962d3e6e2d2ac398c3eadca4e6"
+      "sourceSha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288"
     },
     {
       "path": "handoff/viewer/drawings/public-file-hashes.json",
       "bytes": 4629,
-      "sha256": "186ccf8d6d1c1d04bdeaf507db43b8eb83b997b3f301af983dbeb7c389488ad1",
+      "sha256": "d94f9b88ce13c513fcf21844987e1cde48f36a0ddc53a6f59061fdbaf20c821e",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "handoff/viewer/drawings/repository-copy-receipt.json",
-      "bytes": 14865,
-      "sha256": "a0b555d49591a72a2cae0ca20b83aad7827c8f500e0cd9fa77a5ca0a40bcfae8",
+      "bytes": 14878,
+      "sha256": "29f0df01a0532e1a5e4af17352cc7870080282e973a6194f3f9fc0d06b4787a0",
       "coverage": [
         "editable-sources"
       ]
@@ -4531,8 +5400,8 @@
     },
     {
       "path": "handoff/viewer/index.html",
-      "bytes": 6068,
-      "sha256": "6b43accd028d8c021f0d9bcbd7bbff2567fd28d7f63bb63ddfe485833785c63c",
+      "bytes": 2614170,
+      "sha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
       "coverage": []
     },
     {
@@ -4553,75 +5422,75 @@
     },
     {
       "path": "handoff/viewer/renders/01-whole-flat-dollhouse.png",
-      "bytes": 682022,
-      "sha256": "8e480f6c11e6e1e413cf3afbfdf791073fb45eb9cff34739ffda6e1a557cf95e",
+      "bytes": 412284,
+      "sha256": "6c3b2f19e20d6257d5e39506b518c9af235f917d767297354eaad04e7acbb6af",
       "coverage": [
         "renders"
       ],
-      "sourceSha256": "8e480f6c11e6e1e413cf3afbfdf791073fb45eb9cff34739ffda6e1a557cf95e"
+      "sourceSha256": "6c3b2f19e20d6257d5e39506b518c9af235f917d767297354eaad04e7acbb6af"
     },
     {
       "path": "handoff/viewer/renders/02-living-light-and-curtains.png",
-      "bytes": 904805,
-      "sha256": "175db15d81d43bbd978e8f9cb1229efb8f7a08189c76f8f39dca44972748e14b",
+      "bytes": 456674,
+      "sha256": "5caea5f0b948af115d3ed46e10883e489f52689e241eb03bb9f4a9d006def178",
       "coverage": [
         "renders"
       ],
-      "sourceSha256": "175db15d81d43bbd978e8f9cb1229efb8f7a08189c76f8f39dca44972748e14b"
+      "sourceSha256": "5caea5f0b948af115d3ed46e10883e489f52689e241eb03bb9f4a9d006def178"
     },
     {
       "path": "handoff/viewer/renders/03-master-proposed-interiors.png",
-      "bytes": 1129912,
-      "sha256": "e55d22cbcbe01a3b78b87656a5385873160ac38754c2ca14a18d3c91d593c33b",
+      "bytes": 593081,
+      "sha256": "68e99b2522e00551576f72198a6d6616f545d5bc596b5136e5731d908a986c94",
       "coverage": [
         "renders"
       ],
-      "sourceSha256": "e55d22cbcbe01a3b78b87656a5385873160ac38754c2ca14a18d3c91d593c33b"
+      "sourceSha256": "68e99b2522e00551576f72198a6d6616f545d5bc596b5136e5731d908a986c94"
     },
     {
       "path": "handoff/viewer/renders/public-file-hashes.json",
       "bytes": 625,
-      "sha256": "129ef30e8a4f1938d2f69917b203f09147cefb9fbf8f0b5a8be7a8eab1ed861b",
+      "sha256": "9a219c3dcb7ded176e9384734130580304c7095c3b7bc6ec44abf8ab155aa4f1",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "handoff/viewer/renders/render-receipt.json",
-      "bytes": 2266,
-      "sha256": "b98497b2d5a6b3e85241fa6f95f0db79dca515cc8af852d4edbf7d11d3759924",
+      "bytes": 2265,
+      "sha256": "3aec8b9c8a3347e4ba8442a0fe05d62e3dc6dcd2f70f8cc02e5a4b3f8cb51951",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "b98497b2d5a6b3e85241fa6f95f0db79dca515cc8af852d4edbf7d11d3759924"
+      "sourceSha256": "3aec8b9c8a3347e4ba8442a0fe05d62e3dc6dcd2f70f8cc02e5a4b3f8cb51951"
     },
     {
       "path": "handoff/viewer/renders/repository-copy-receipt.json",
-      "bytes": 2620,
-      "sha256": "1c5449180599c36fd6a24d71ee2a7b166008d54de104f866baebb2ea0be1d657",
+      "bytes": 2621,
+      "sha256": "d6b77b508b553073d18092d290f6dba3170d57098fca835a2a73508c7ab01768",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "handoff/viewer/renders/selected-source-file-hashes.json",
-      "bytes": 415,
-      "sha256": "b735870427c00acd200202903f27e5dd0fd6c680921bdd74391f45fe1b46a556",
+      "bytes": 529,
+      "sha256": "7eca78e3dac67dcbcb240b2d75eb3f16646362bee00b2b8ea81dd92e79271edf",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "b735870427c00acd200202903f27e5dd0fd6c680921bdd74391f45fe1b46a556"
+      "sourceSha256": "7eca78e3dac67dcbcb240b2d75eb3f16646362bee00b2b8ea81dd92e79271edf"
     },
     {
       "path": "handoff/viewer/SITE-README.md",
-      "bytes": 2662,
-      "sha256": "da0c1e0c7ba170bb70e94b6eb1b8e180d2870a7d6e2d283369ef5e7a04ebafc7",
+      "bytes": 3049,
+      "sha256": "58b96e7db620bb984e6e6cb81d80863f7df9acd17d4a5a4891b25d6aceeea77f",
       "coverage": []
     },
     {
       "path": "handoff/viewer/site-repository-copy-receipt.json",
-      "bytes": 2901,
-      "sha256": "a997620dd1afc1fe8e899422149ef4c4e2fb1605fe92f29bbc5d4ed06db9344a",
+      "bytes": 2620,
+      "sha256": "8b633a42e83bda3cc1176816ff2e99a34bf8a2947c5c128cb4acb60d4275bc53",
       "coverage": [
         "editable-sources"
       ]
@@ -4637,30 +5506,30 @@
     },
     {
       "path": "handoff/viewer/source/build.mjs",
-      "bytes": 24829,
-      "sha256": "190d035fa03404bed62d90f044338c35648f5fe95bb25d31283b2291c276928e",
+      "bytes": 26254,
+      "sha256": "0582af9511ee34cc01ae907311e4d136d89192ef9c89a1decdc94e213a1d4472",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "190d035fa03404bed62d90f044338c35648f5fe95bb25d31283b2291c276928e"
+      "sourceSha256": "0582af9511ee34cc01ae907311e4d136d89192ef9c89a1decdc94e213a1d4472"
     },
     {
       "path": "handoff/viewer/source/capture_review_renders.py",
-      "bytes": 5944,
-      "sha256": "e73fe9240f4344449e5efa80146f04ea42f4ed4c792eae3cc6d52c362321fb42",
+      "bytes": 5895,
+      "sha256": "936c7e4fd86cb64f878c05772e6c2eeda01bc79cd64f0e931392098682ad5dfa",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "e73fe9240f4344449e5efa80146f04ea42f4ed4c792eae3cc6d52c362321fb42"
+      "sourceSha256": "936c7e4fd86cb64f878c05772e6c2eeda01bc79cd64f0e931392098682ad5dfa"
     },
     {
       "path": "handoff/viewer/source/data/heat-data.json",
-      "bytes": 547918,
-      "sha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",
+      "bytes": 547809,
+      "sha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866"
+      "sourceSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153"
     },
     {
       "path": "handoff/viewer/source/drawing-source.mjs",
@@ -4709,12 +5578,12 @@
     },
     {
       "path": "handoff/viewer/source/layout_views/rcp.mjs",
-      "bytes": 27981,
-      "sha256": "21ac2c41bed65df2d7a773e00b36aadc8ac51c17f202881c0f7ed45f4e45d2b7",
+      "bytes": 28371,
+      "sha256": "acdb3e7d1455765dbc726f961c860c62dd695696a66c3a726c7da1a58830e836",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "21ac2c41bed65df2d7a773e00b36aadc8ac51c17f202881c0f7ed45f4e45d2b7"
+      "sourceSha256": "acdb3e7d1455765dbc726f961c860c62dd695696a66c3a726c7da1a58830e836"
     },
     {
       "path": "handoff/viewer/source/layout_views/svg.mjs",
@@ -4754,13 +5623,12 @@
     },
     {
       "path": "handoff/viewer/source/privacy-transform.json",
-      "bytes": 1186,
-      "sha256": "9acda06204affe1a39260f57e5d1d7aedf4f96724a24561ed038cfc904e71347",
+      "bytes": 1185,
+      "sha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
-      "sourceSha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77"
+      "sourceSha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc"
     },
     {
       "path": "handoff/viewer/source/provenance/generation-source/drawing-source.mjs",
@@ -4783,27 +5651,26 @@
     {
       "path": "handoff/viewer/source/public-file-hashes.json",
       "bytes": 4517,
-      "sha256": "b471ba4273e3a3be892eca8ae7a7c62a56d4b7a0a4d23b1c1fc2962170264a6d",
+      "sha256": "731a636793e3e6bb5d531ff3b0d0d8e487cf3ec483638996af162805633646e0",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "handoff/viewer/source/public-source-manifest.json",
-      "bytes": 7429,
-      "sha256": "93b073d48e59aa7f5a34d8e034414ed57249fa444b1c9d7fd2ef01ade3970538",
+      "bytes": 7430,
+      "sha256": "aaa3f8de95001aee68784cec8fa51aadf8bc351d1696c6569daec2bc24a05658",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
-      "sourceSha256": "d71f8dceb3e6da37cde3f6318adf8469270217d37d14db4ed98503608e5a88f1"
+      "sourceSha256": "aaa3f8de95001aee68784cec8fa51aadf8bc351d1696c6569daec2bc24a05658"
     },
     {
       "path": "handoff/viewer/source/README.md",
-      "bytes": 1796,
-      "sha256": "760478172b95dbe4baafdc9c7a08ee002be94632503ef5ccf2a205dbed2c9cbf",
+      "bytes": 2285,
+      "sha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016",
       "coverage": [],
-      "sourceSha256": "760478172b95dbe4baafdc9c7a08ee002be94632503ef5ccf2a205dbed2c9cbf"
+      "sourceSha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016"
     },
     {
       "path": "handoff/viewer/source/rebuild-public.mjs",
@@ -4834,17 +5701,17 @@
     },
     {
       "path": "handoff/viewer/source/render_layout_views.py",
-      "bytes": 52015,
-      "sha256": "6765a7f18f08c200c39fca18aa090820bcf7805f96a973e49cbce59ffebac8a5",
+      "bytes": 51527,
+      "sha256": "51f22a413ca46b571bec398e0adf581b83fb2a799767f1a9f8a172fb8466ab16",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "6765a7f18f08c200c39fca18aa090820bcf7805f96a973e49cbce59ffebac8a5"
+      "sourceSha256": "51f22a413ca46b571bec398e0adf581b83fb2a799767f1a9f8a172fb8466ab16"
     },
     {
       "path": "handoff/viewer/source/repository-copy-receipt.json",
-      "bytes": 16077,
-      "sha256": "708f8c78689d9e1ccd718361958463be28633e48297d0fcd2b8854005c7a4c3e",
+      "bytes": 16098,
+      "sha256": "47ed4c55bd6c4488bfdf762eebec7f79ed57bf3eafc84272b968f4803dfcc4bd",
       "coverage": [
         "editable-sources"
       ]
@@ -4878,21 +5745,21 @@
     },
     {
       "path": "handoff/viewer/source/src/ceilings.js",
-      "bytes": 6191,
-      "sha256": "7c9a89e4d779d25997e80e273b64ead1919910ba2705f509b84beb3a0cac17ff",
+      "bytes": 6112,
+      "sha256": "1a007cfdc69e664d73876af3661aec934219398bdd98781610cc89b6a54481e1",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "7c9a89e4d779d25997e80e273b64ead1919910ba2705f509b84beb3a0cac17ff"
+      "sourceSha256": "1a007cfdc69e664d73876af3661aec934219398bdd98781610cc89b6a54481e1"
     },
     {
       "path": "handoff/viewer/source/src/fixtureMeshes.js",
-      "bytes": 20683,
-      "sha256": "03479ecc33dd4117d08dd936bc39ed3cd2f47b61fa452bc5f7eaa03663e8644a",
+      "bytes": 21985,
+      "sha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "03479ecc33dd4117d08dd936bc39ed3cd2f47b61fa452bc5f7eaa03663e8644a"
+      "sourceSha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1"
     },
     {
       "path": "handoff/viewer/source/src/geometry.js",
@@ -4914,40 +5781,39 @@
     },
     {
       "path": "handoff/viewer/source/src/house-data.generated.json",
-      "bytes": 682982,
-      "sha256": "66dc8ceb7ba8ef0214e646b4ba3c510c50d8b17f5e75b33fe425c3e9b2c78017",
+      "bytes": 691839,
+      "sha256": "89a56c67315c74c10af8a9a9f1535a1d17f390cd675fe1cfd156cc5163806867",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "66dc8ceb7ba8ef0214e646b4ba3c510c50d8b17f5e75b33fe425c3e9b2c78017"
+      "sourceSha256": "89a56c67315c74c10af8a9a9f1535a1d17f390cd675fe1cfd156cc5163806867"
     },
     {
       "path": "handoff/viewer/source/src/lighting.js",
-      "bytes": 21180,
-      "sha256": "7066f77ba9f3217e5eaf9e424c4ed5157ea5b461aee58895d713b153d3ad9c18",
+      "bytes": 23589,
+      "sha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "7066f77ba9f3217e5eaf9e424c4ed5157ea5b461aee58895d713b153d3ad9c18"
+      "sourceSha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665"
     },
     {
       "path": "handoff/viewer/source/src/main.js",
-      "bytes": 40163,
-      "sha256": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e",
+      "bytes": 39742,
+      "sha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
-      "sourceSha256": "c33790bc3ddd39dda5e05eb7f0ef5fa4e908e62c2da596f63203b8192e9c8e62"
+      "sourceSha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31"
     },
     {
       "path": "handoff/viewer/source/src/master-adapter.js",
-      "bytes": 11029,
-      "sha256": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da",
+      "bytes": 10948,
+      "sha256": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da"
+      "sourceSha256": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398"
     },
     {
       "path": "handoff/viewer/source/src/materials.js",
@@ -4960,12 +5826,12 @@
     },
     {
       "path": "handoff/viewer/source/src/model.js",
-      "bytes": 23837,
-      "sha256": "5dbb9b66c247d330d66391ebc14cf394f97594f3a56e3dfd151e6ee0c47547d7",
+      "bytes": 22529,
+      "sha256": "ef6583c8ed26e56c1dec95a320d045a93b305da7f574e4ad8de07da41dac4151",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "5dbb9b66c247d330d66391ebc14cf394f97594f3a56e3dfd151e6ee0c47547d7"
+      "sourceSha256": "ef6583c8ed26e56c1dec95a320d045a93b305da7f574e4ad8de07da41dac4151"
     },
     {
       "path": "handoff/viewer/source/src/navigation.js",
@@ -4987,12 +5853,12 @@
     },
     {
       "path": "handoff/viewer/source/src/rooms.js",
-      "bytes": 14306,
-      "sha256": "148d299e7523a24bb1fa7369d66f8af91bdf41ce36005785da673b2820343cec",
+      "bytes": 14207,
+      "sha256": "d31be19e40b4b82ca90330a933211837c7ff31eb973d6febe04f0fb119dc4982",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "148d299e7523a24bb1fa7369d66f8af91bdf41ce36005785da673b2820343cec"
+      "sourceSha256": "d31be19e40b4b82ca90330a933211837c7ff31eb973d6febe04f0fb119dc4982"
     },
     {
       "path": "handoff/viewer/source/src/schedule.js",
@@ -5005,21 +5871,21 @@
     },
     {
       "path": "handoff/viewer/source/stage_public_drawings.py",
-      "bytes": 9941,
-      "sha256": "f50b5871ba9e2bd2f0135f0a75cb00124c2a501027d7d330109ca4bd8c684628",
+      "bytes": 10232,
+      "sha256": "fd22b0c28929b8657a866a8bfd09fc162cefc1a9b872b254478df3a970805f6e",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "f50b5871ba9e2bd2f0135f0a75cb00124c2a501027d7d330109ca4bd8c684628"
+      "sourceSha256": "fd22b0c28929b8657a866a8bfd09fc162cefc1a9b872b254478df3a970805f6e"
     },
     {
       "path": "handoff/viewer/source/stage_public_source.py",
-      "bytes": 8952,
-      "sha256": "65c41a08769fb18a1b35f0adbab1fdfd7d1a0ebb58ffe90bca22197df507f8af",
+      "bytes": 7234,
+      "sha256": "91f718a54f196ef9f8da670491fd44d196919ddc493c335055c8f2f5ec32844d",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "65c41a08769fb18a1b35f0adbab1fdfd7d1a0ebb58ffe90bca22197df507f8af"
+      "sourceSha256": "91f718a54f196ef9f8da670491fd44d196919ddc493c335055c8f2f5ec32844d"
     },
     {
       "path": "handoff/viewer/source/stage_public_verification.py",
@@ -5032,10 +5898,10 @@
     },
     {
       "path": "handoff/viewer/source/template.html",
-      "bytes": 16844,
-      "sha256": "e265e699a46cace3797d120ece38f259723154fe047adc1fbeeadb4d8fe128f4",
+      "bytes": 22068,
+      "sha256": "b5ca1a56dd84a2f03bef98301ccafb967c09ed89b9ec8053bf1c1706b8f54dac",
       "coverage": [],
-      "sourceSha256": "e265e699a46cace3797d120ece38f259723154fe047adc1fbeeadb4d8fe128f4"
+      "sourceSha256": "b5ca1a56dd84a2f03bef98301ccafb967c09ed89b9ec8053bf1c1706b8f54dac"
     },
     {
       "path": "handoff/viewer/source/THREE-LICENSE.txt",
@@ -5046,21 +5912,21 @@
     },
     {
       "path": "handoff/viewer/source/tour-data.mjs",
-      "bytes": 17571,
-      "sha256": "6c387f0ecd0709d09f6f04e166a61d81da8ffbacd009cc334c342ff5083a2833",
+      "bytes": 18470,
+      "sha256": "9c933db736a79d7d8be5c050d8fe6cee5a1b11e87dcd00b9db5cc7f82d4e9f8f",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "6c387f0ecd0709d09f6f04e166a61d81da8ffbacd009cc334c342ff5083a2833"
+      "sourceSha256": "9c933db736a79d7d8be5c050d8fe6cee5a1b11e87dcd00b9db5cc7f82d4e9f8f"
     },
     {
       "path": "handoff/viewer/source/verify_site.py",
-      "bytes": 36356,
-      "sha256": "b55fd4a364487799653a099431b1b84fb8dea852f63e1a8ffcecb21befaa87f0",
+      "bytes": 48073,
+      "sha256": "d7701d46db08fe1ad5024def2f56128886a9cc2f3a63dd4dbef01ebdeddc7752",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "b55fd4a364487799653a099431b1b84fb8dea852f63e1a8ffcecb21befaa87f0"
+      "sourceSha256": "d7701d46db08fe1ad5024def2f56128886a9cc2f3a63dd4dbef01ebdeddc7752"
     },
     {
       "path": "handoff/viewer/source-delivery-manifest.json",
@@ -5082,6 +5948,14 @@
       "path": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
       "bytes": 2382,
       "sha256": "4ecac73ea5a6446ad5c5a9519b0f64b9fa6d6ce008c46479ab2bfce0600f782b",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
+      "bytes": 32678,
+      "sha256": "ec7bb2ea3e70f9f3483a1c24e599e7c22760934c5da5515be86157addaae52fa",
       "coverage": [
         "editable-sources"
       ]
@@ -5131,42 +6005,40 @@
     },
     {
       "path": "index.html",
-      "bytes": 2590604,
-      "sha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
+      "bytes": 2614170,
+      "sha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
       "coverage": [
         "threejs-viewer"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
-      "correctedPriorCopySha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3",
-      "sourceSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e"
+      "sourceSha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0"
     },
     {
       "path": "privacy-transform.json",
       "bytes": 1185,
-      "sha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77",
+      "sha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "3010d133a00ddf6ae57a382a9dcb41bc533407cc31188fdd5aa4f3f5ff503b77"
+      "sourceSha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc"
     },
     {
       "path": "README.md",
-      "bytes": 7284,
-      "sha256": "2df7d0e68e48f77ba64db69dcbec1d6cfca90a607f84c0f4e1891564bd73fc72",
+      "bytes": 3049,
+      "sha256": "58b96e7db620bb984e6e6cb81d80863f7df9acd17d4a5a4891b25d6aceeea77f",
       "coverage": []
     },
     {
       "path": "scripts/build-handoff-manifest.py",
-      "bytes": 8861,
-      "sha256": "115c8ef273ba6437fddd297cd55ccedd7d75291a5efe1276039b0f3d82597c00",
+      "bytes": 8941,
+      "sha256": "0d239b2e83d9b5c2dc7c0799191349146bac42ed7cc8b7baa9761ef54c74f701",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "scripts/check-handoff-artifacts.py",
-      "bytes": 6966,
-      "sha256": "0714b1c125b1a519e998af64a5f149970ed99e7c21058aaca14ad4e978e06903",
+      "bytes": 7283,
+      "sha256": "d69d0fbc582609e9e7d1c081ae28a944ee9cfb8390bbc962af3163fd14db4f6a",
       "coverage": [
         "editable-sources"
       ]
@@ -5204,6 +6076,14 @@
       ]
     },
     {
+      "path": "scripts/record-viewer-copy.py",
+      "bytes": 2213,
+      "sha256": "e936448d82f3153d1fa3b226149458dcfd77f12c8cccc041cfc2cefd32644f1e",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
       "path": "scripts/render-owner-decision-review.py",
       "bytes": 8285,
       "sha256": "0cdc4495e9a769c1c821cfc7d4c83bd132c8e41f104ceaaed7bdba0a0042fb6b",
@@ -5229,8 +6109,8 @@
     },
     {
       "path": "scripts/verify-handoff.py",
-      "bytes": 6976,
-      "sha256": "371c0421d82ce87b72afc2e2bf6cb517cc4a473ebc3f7afe781e0bcb1d4df4b8",
+      "bytes": 7011,
+      "sha256": "b3fb62889c39c5412d746a146f6a58fc5022e9620df814477a432589f04db8f5",
       "coverage": [
         "editable-sources"
       ]

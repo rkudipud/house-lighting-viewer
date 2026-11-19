@@ -125,6 +125,7 @@ function start(){
   function showHint(text){const h=$('hint');h.textContent=text;h.classList.remove('fade');clearTimeout(hintTimer);hintTimer=setTimeout(()=>h.classList.add('fade'),7000);}
   function syncView(){
     const doll=mode==='doll',heat=mode==='heat',plan=mode==='rcp',look=isWalk();
+    scene.scale.x=plan?-1:1;
     model.world.visible=!plan;model.ceiling.visible=look||plan;model.lights.visible=look||plan||doll;
     model.grooves.visible=look||plan||doll;model.rcp.visible=plan;rcpPoche.visible=plan;
     model.avatar.visible=mode==='third';model.labels.visible=doll||heat||plan;model.labels.position.y=plan?2.25:0;
@@ -132,6 +133,7 @@ function start(){
     model.features.painting.visible=!plan;
     if(analysis)analysis.show(heat);
     $('sec-map').hidden=!heat;
+    $('marker-legend').hidden=!(doll||plan);
     for(const b of document.querySelectorAll('[data-view]')){const on=b.dataset.view===mode;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));}
     $('view-status').textContent=VIEW_TEXT[mode];showHint(HINT[mode]);
     if(look||heat)$('inspector').hidden=true;
@@ -225,10 +227,10 @@ function start(){
       const extra=lanes.filter(l=>!['READ','NIGHT'].includes(l)).map(l=>INDEPENDENT_NAME[l]).filter(Boolean);
       if(extra.length)notes.push(`Also on with the room, not dimmed here: ${extra.join(', ')}${g.cct.independent.length?' ('+fmtK(g.cct.independent)+')':''}.`);
       if(g.sharedLow.length)notes.push('The living and dining line profile shares one LOW level: the last slider moved wins.');
-      if(g.zone==='CBR')notes.push('H1-H6 are active for review. The square CBR-X1 to CBR-X4 LINE frame is present but held for coordination, so it remains unlit and is not controlled by LOW; the four black slits are separate dark grooves, not light fittings. Bedside and desk fittings also remain held. C37 dimmer procurement remains on hold.');
+      if(g.zone==='CBR')notes.push('H1-H6, the retained cove (C39) and outward LINE strips (C40) are modelled ON with scheduled lumens for design review: provisional, unmeasured, not installed or approved. Fan at room centre, 1050 mm planning sweep (model not selected; airflow for this room unconfirmed). Reported band 3.048 m / centre approx. 3.277 m, slab unmeasured. Cove, LINE, fan, pockets and clearances stay site-held (H-CBR-CEIL). Black grooves are not lights. Bedside and desk fittings and C37 dimmer procurement remain held.');
     }
     const pockets=(PLAN.curtainPockets?.pockets||[]).filter(p=>p.room===g.zone);
-    if(pockets.some(p=>p.selected))notes.push(pockets.filter(p=>p.selected).map(p=>`Curtain strip ${p.id} (${p.label}): selected for review, 2700 K; unmeasured 0-lumen visual placeholder, remains unlit and carries no lux credit.`).join(' '));
+    if(pockets.some(p=>p.selected))notes.push(pockets.filter(p=>p.selected).map(p=>`Curtain strip ${p.id} (${p.label}): selected for review, 2700 K; unmeasured visual preview follows LOW and carries no lux credit.`).join(' '));
     if(pockets.some(p=>p.held))notes.push(`${pockets.filter(p=>p.held).map(p=>p.id).join(', ')} is held (shown grey, unlit).`);
     if(['MBR','CBR'].includes(g.zone))notes.push('Site hold: assumed strip return extends about 0.30 m beyond the modeled room corner. The viewer clips it only for display; actual pocket ends are unmeasured.');
     $('light-note').textContent=notes.join(' ');
@@ -272,7 +274,7 @@ function start(){
       return `<tr title="${r.name}: grid plane ${r.plane_m} m, ceiling ${r.ceiling_m} m"><td>${r.name}</td><td>${s?n(s.avg):'--'}</td><td>${s?n(s.min):'--'}</td><td>${s&&Number.isFinite(s.U0)?s.U0.toFixed(2):'--'}</td></tr>`;
     }).join('');
     const c=meta.complianceCounts||{},k=meta.k2;
-    $('map-flags').textContent=`Work plane ${planes.filter(p=>p>0).join(' / ')} m (baths and balcony at floor level). The older children\u2019s-room estimate is withheld; selected curtain strips have no lux credit. Checks vs criteria: ${c.PASS??0} pass, ${c.MARGINAL??0} marginal, ${c.HOLD??0} hold. K-2 kitchen worktop (selected for review): ${k.nominal}; marginal in sensitivity cases.`;
+    $('map-flags').textContent=`Work plane ${planes.filter(p=>p>0).join(' / ')} m (baths and balcony at floor level). The children\u2019s-room estimate includes held fittings and is withheld; selected curtain strips have no lux credit. Checks vs criteria: ${c.PASS??0} pass, ${c.MARGINAL??0} marginal, ${c.HOLD??0} hold. K-2 kitchen worktop (selected for review): ${k.nominal}; marginal in sensitivity cases.`;
   }
   for(const b of document.querySelectorAll('[data-map]'))b.addEventListener('click',()=>{mapScene=b.dataset.map;analysis?.setScene(mapScene);renderMap();});
   if(analysis)analysis.setScene(mapScene);
@@ -291,12 +293,20 @@ function start(){
       `<dt>Beam</dt><dd>${i.beam!=null?i.beam+'&deg;':'n/a'}</dd><dt>Ingress</dt><dd>${esc(i.ip)}</dd>${i.h_m!=null?`<dt>Mount height</dt><dd>${esc(i.h_m)} m</dd>`:''}${i.placementHoldIds?.length?`<dt>Site holds</dt><dd>${esc(i.placementHoldIds.join(', '))}</dd>`:''}</dl>${i.desc?`<p class="fine">${esc(i.desc)}</p>`:''}`;
     $('inspector').hidden=false;
   }
-  function inspectAt(clientX,clientY){
+  function inspectAt(clientX,clientY,pointerType){
     if(!model.markers.visible)return;
-    const rect=renderer.domElement.getBoundingClientRect(),ndc=new T.Vector2((clientX-rect.left)/rect.width*2-1,-((clientY-rect.top)/rect.height)*2+1);
-    ray.far=Infinity;ray.setFromCamera(ndc,active());
-    const hit=ray.intersectObjects(model.markers.children.filter(s=>s.userData.fixture),false)[0];
-    if(hit)showInspector(hit.object.userData.fixture);
+    const rect=renderer.domElement.getBoundingClientRect(),camera=active(),point=new T.Vector3();
+    scene.updateMatrixWorld(true);camera.updateMatrixWorld(true);
+    let nearest=null,distance=pointerType==='touch'?22:14;
+    for(const marker of model.markers.children){
+      if(!marker.userData.fixture)continue;
+      marker.getWorldPosition(point).project(camera);
+      if(point.z < -1 || point.z > 1)continue;
+      const x=rect.left+(point.x+1)*rect.width/2,y=rect.top+(1-point.y)*rect.height/2;
+      const d=Math.hypot(clientX-x,clientY-y);
+      if(d<distance){nearest=marker;distance=d;}
+    }
+    if(nearest)showInspector(nearest.userData.fixture);
   }
   $('close-inspector').addEventListener('click',()=>{$('inspector').hidden=true;});
 
@@ -304,7 +314,7 @@ function start(){
   function cameraUpdate(){
     if(mode==='rcp'){
       const a=innerWidth/innerHeight;ortho.left=-rcp.half*a;ortho.right=rcp.half*a;ortho.top=rcp.half;ortho.bottom=-rcp.half;ortho.updateProjectionMatrix();
-      ortho.up.set(0,0,-1);ortho.position.set(rcp.x,.35,rcp.z);ortho.lookAt(rcp.x,3,rcp.z);
+      ortho.up.set(0,0,-1);ortho.position.set(-rcp.x,.35,rcp.z);ortho.lookAt(-rcp.x,3,rcp.z);
     }else if(mode==='doll'||mode==='heat'){
       camera.position.set(orbitTarget.x+Math.sin(orbitYaw)*Math.cos(orbitPitch)*orbitDistance,orbitTarget.y+Math.sin(orbitPitch)*orbitDistance,orbitTarget.z+Math.cos(orbitYaw)*Math.cos(orbitPitch)*orbitDistance);
       camera.lookAt(orbitTarget);
@@ -383,13 +393,14 @@ function start(){
       if(pinch>0&&(mode==='doll'||mode==='heat'||mode==='rcp'))zoom(pinch/d);
       pinch=d;return;
     }
-    if(mode==='rcp'){const k=2*rcp.half/innerHeight;rcp.x+=dx*k;rcp.z-=dy*k;}
-    else if(mode==='doll'||mode==='heat'){orbitYaw-=dx*.006;orbitPitch=T.MathUtils.clamp(orbitPitch+dy*.005,.25,Math.PI/2-.01);}
-    else{yaw-=dx*.004;pitch=T.MathUtils.clamp(pitch-dy*.004,-1.4,1.4);}
+    const direction=e.pointerType==='mouse'?-1:1;
+    if(mode==='rcp'){const k=2*rcp.half/innerHeight;rcp.x-=dx*k*direction;rcp.z-=dy*k*direction;}
+    else if(mode==='doll'||mode==='heat'){orbitYaw-=dx*.006*direction;orbitPitch=T.MathUtils.clamp(orbitPitch+dy*.005*direction,.25,Math.PI/2-.01);}
+    else{yaw-=dx*.004*direction;pitch=T.MathUtils.clamp(pitch-dy*.004*direction,-1.4,1.4);}
   });
   const release=e=>{
     const had=pointers.delete(e.pointerId);if(pointers.size<2)pinch=0;
-    if(had&&e.type==='pointerup'&&!moved&&pointers.size===0)inspectAt(e.clientX,e.clientY);
+    if(had&&e.type==='pointerup'&&!moved&&pointers.size===0)inspectAt(e.clientX,e.clientY,e.pointerType);
   };
   dom.addEventListener('pointerup',release);dom.addEventListener('pointercancel',release);
   dom.addEventListener('wheel',e=>{
@@ -424,7 +435,7 @@ function start(){
   function titleUpdate(force){
     const r=roomById(selectedRoom);
     $('room-title').textContent=guided?path[Math.min(routeIndex,path.length-1)][2]:(mode==='heat'?'Light map / '+roomName(selectedRoom):roomName(selectedRoom));
-    $('room-dim').textContent=isWalk()?(r?.dimension?.text||'Review draft / provisional placement'):mode==='rcp'?`Ceiling plan / left-right mirrored from the floor plan / heights assumed (band ${PLAN.heights.band.value} m)`:mode==='heat'?'Frozen generic-optics estimate / not recomputed / not construction-released':'Review draft / not construction-released';
+    $('room-dim').textContent=isWalk()?(r?.dimension?.text||'Review draft / provisional placement'):mode==='rcp'?`Ceiling plan / floor-plan orientation / heights assumed (band ${PLAN.heights.band.value} m)`:mode==='heat'?'Frozen generic-optics estimate / not recomputed / not construction-released':'Review draft / not construction-released';
   }
 
   // ---------- exports ----------

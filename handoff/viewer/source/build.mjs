@@ -26,10 +26,14 @@ const masterSha=createHash('sha256').update(bytes).digest('hex');
 const house=JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,''));
 if(masterSha!==expected)throw new Error('Master hash differs from authorized --sha');
 const priorPath=option('--prior-master');
-if(!priorPath)throw new Error('--prior-master is required to validate the CCT-only successor.');
+const cctPath=option('--cct-master');
+if(!priorPath||!cctPath)throw new Error('--prior-master and --cct-master are required to validate the reviewed CCT and children-ceiling successors.');
 const cctDelta=JSON.parse(execFileSync(process.env.PYTHON || 'python',
-  [resolve(root,'../../electrician/lighting/source/validate_cct_revision.py'),priorPath,source],{encoding:'utf8'}));
-if(cctDelta.current_master_sha256!==masterSha)throw new Error('CCT successor verification does not bind this master.');
+  [resolve(root,'../../electrician/lighting/source/validate_cct_revision.py'),priorPath,cctPath],{encoding:'utf8'}));
+const cbrDelta=JSON.parse(execFileSync(process.env.PYTHON || 'python',
+  [resolve(root,'../../electrician/lighting/source/validate_cbr_revision.py'),cctPath,source],{encoding:'utf8'}));
+if(cctDelta.current_master_sha256!==cbrDelta.prior_master_sha256||cbrDelta.current_master_sha256!==masterSha||
+   cbrDelta.heatmaps_sha256!==heatSha)throw new Error('CCT and CBR successor verification does not bind this master and heatmap.');
 const priorSha=cctDelta.prior_master_sha256;
 if(!house.visualization_geometry||house.bathrooms.rooms.length!==2||!house.lighting.design_inputs)throw new Error('Required canonical design sections are missing');
 
@@ -105,7 +109,7 @@ const lightingDir=dirname(resolve(cctMapPath)),manifestBytes=await readFile(join
 const manifest=JSON.parse(manifestBytes.toString('utf8').replace(/^\uFEFF/,''));
 const lightingVerification=JSON.parse(await readFile(join(lightingDir,'verification.json'),'utf8'));
 if(manifest.master_sha256!==masterSha||manifest.files?.['fixed-cct-map.json']?.sha256!==mapSha||
-   manifest.files?.['fixed-cct-map.json']?.bytes!==mapBytes.length||manifest.original_heatmaps_sha256!==heatSha||
+   manifest.files?.['fixed-cct-map.json']?.bytes!==mapBytes.length||manifest.heatmaps_sha256!==heatSha||
    lightingVerification.status!=='PASS'||lightingVerification.master_sha256!==masterSha||
    lightingVerification.manifest_sha256!==createHash('sha256').update(manifestBytes).digest('hex'))
   throw new Error('Lighting review manifest and verification do not bind this master, fixed-CCT map and frozen heatmap');
@@ -201,8 +205,9 @@ if(drawings){
     const bound=receipt.source_master?.sha256??receipt.master_sha256;
     const pdf=receipt.combined_pdf??receipt.artifacts?.pdf??receipt.artifacts?.find?.(a=>a.file===name);
     const got=createHash('sha256').update(buf).digest('hex');
-    if(bound!==priorSha||pdf?.file!==name||pdf.sha256!==got||pdf.bytes!==buf.length)
-      throw new Error(`${name}: drawing receipt does not bind the verified predecessor and PDF bytes`);
+    const drawingBasis=dir==='layout-views'?masterSha:priorSha;
+    if(bound!==drawingBasis||pdf?.file!==name||pdf.sha256!==got||pdf.bytes!==buf.length)
+      throw new Error(`${name}: drawing receipt does not bind its verified basis and PDF bytes`);
     if(dir==='layout-views'&&(receipt.checks_total!==receipt.checks_passed||receipt.combined_pdf.pages!==13))
       throw new Error(`${name}: drawing checks or page count failed`);
     if(dir==='working-plan'&&(!receipt.verified_utc||receipt.construction_release!==false||receipt.render?.pdf_pages!==1))
@@ -280,6 +285,7 @@ Colour temperatures are fixed per fitting and are not adjustable.
 - Fixed CCT per base fitting from the integrated master: ${Object.entries(PLAN.fixedCct.source.bins).map(([k,n])=>`${n} x ${k} K`).join(', ')}. Brightness controls only.
 - Current lighting-review fixed-CCT map SHA-256 \`${mapSha}\`; its placement holds are retained separately from viewer on/off state.
 - Four selected 2700 K curtain strips follow existing LOW controls. The review schedule has 108 fittings / 51 circuits including these additions; the frozen photometric baseline remains 104 / 47 with no curtain-strip lux credit. Pocket sizes are unmeasured and CURT-MBR-W03 remains held and unlit.
+- The children's fan is illustrated at the nominal room centre with a 1050 mm planning sweep (product not selected; airflow adequacy for this room unconfirmed). The intact cove (C39) and outward LINE (C40) are modelled ON with scheduled lumens in the review simulation; they remain site-held (H-CBR-CEIL) and are not installed, measured or approved. R05 band 3.048 m / centre approx. 3.277 m are homeowner-reported; slab height unmeasured.
 - Dimming is visual only; the lux maps are frozen generic-optics estimates and are not recomputed.
 - The four bedside readers and two PIR night lights are individual fitting previews, off by default; held readers cannot be enabled. The actual readers dim on the fitting and the night lights are PIR-operated, not extra wall dimmers.
 - The selected dressing and utility cabinets are unmeasured conditional illustrations (FH-ST-03 / FH-ST-12), not construction-ready. One living LOW supply is selected for review; product, protection and electrical design remain on hold.

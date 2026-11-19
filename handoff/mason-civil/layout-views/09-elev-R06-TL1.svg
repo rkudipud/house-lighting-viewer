@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2015.556" viewBox="0 0 1700 2015.556" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1985.556" viewBox="0 0 1700 1985.556" role="img" aria-labelledby="t d">
 <title id="t">Elevations — R06 TL1 attached toilet</title>
 <desc id="d">Read-only interior elevations from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; wall names by compass.</desc>
-<metadata>{&quot;sheet&quot;:&quot;09-elev-R06-TL1&quot;,&quot;room&quot;:&quot;bath1&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;09-elev-R06-TL1&quot;,&quot;room&quot;:&quot;bath1&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -16,12 +16,12 @@
 .mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
 .title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
 .halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
-<rect width="1700" height="2015.556" fill="#fcfdfc"/>
+<rect width="1700" height="1985.556" fill="#fcfdfc"/>
 <text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Interior elevations — R06 TL1 attached toilet</text>
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >8 ft 9 in x 5 ft 6 in · every wall seen from inside · named by compass · HD-11 levels unmeasured</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 9 / 13</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
 <g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
 <text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
@@ -52,7 +52,7 @@
 <rect x="774.0000000000001" y="150" width="22" height="14" fill="#f1ece2" stroke="#8a7a66" stroke-dasharray="4 3"/>
 <text x="802.00" y="162.00" font-size="12" class="muted" text-anchor="start" >Footprint only (below floor)</text>
 <g data-panel-id="bath1-s" data-room-id="bath1" data-wall-dir="S">
-<rect x="60" y="178" width="453.38" height="795.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<rect x="60" y="178" width="453.38" height="765.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
 <text x="76.00" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – south wall</text>
 <text x="76.00" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking SOUTH · left to right</text>
 <text x="76.00" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >2.67 m long · tag bath1-s</text>
@@ -142,14 +142,12 @@
 </g>
 <path d="M72 843.278H501.38" stroke="#e1e8e8"/>
 <text x="74.00" y="855.28" font-size="11" class="muted" text-anchor="start" >• Vanity 0.20–0.85 m, basin top 0.92 m, faucet 1.06 m; mirror 0.55 × 0.8 m</text>
-<text x="84.00" y="870.28" font-size="11" class="muted" text-anchor="start" >centred at 1.55 m. WC cistern to 1.00 m, seat 0.43 m (dashed). All</text>
-<text x="84.00" y="885.28" font-size="11" class="muted" text-anchor="start" >fixture dimensions are proposed, not site measured.</text>
-<text x="74.00" y="900.28" font-size="11" class="muted" text-anchor="start" >• Shower: head 2.15 m, mixer 1.05 m, glass screen 2.00 m. These are</text>
-<text x="84.00" y="915.28" font-size="11" class="muted" text-anchor="start" >proposed dimensions, not site measured. Kit-kat tile only on this faucet</text>
-<text x="84.00" y="930.28" font-size="11" class="muted" text-anchor="start" >wall inside the shower; plain porcelain elsewhere.</text>
+<text x="84.00" y="870.28" font-size="11" class="muted" text-anchor="start" >centred at 1.55 m. WC cistern to 1.00 m, seat 0.43 m (dashed).</text>
+<text x="74.00" y="885.28" font-size="11" class="muted" text-anchor="start" >• Shower: head 2.15 m, mixer 1.05 m, glass screen 2.00 m. Kit-kat tile</text>
+<text x="84.00" y="900.28" font-size="11" class="muted" text-anchor="start" >only on this faucet wall inside the shower; plain porcelain elsewhere.</text>
 </g>
 <g data-panel-id="bath1-w" data-room-id="bath1" data-wall-dir="W">
-<rect x="543.38" y="178" width="440" height="825.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<rect x="543.38" y="178" width="440" height="795.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
 <text x="559.38" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – west wall</text>
 <text x="559.38" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking WEST · left to right</text>
 <text x="559.38" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >1.68 m long · tag bath1-w</text>
@@ -202,7 +200,7 @@
 </g>
 <g data-bath-id="BATH-TL1" data-bath-detail="shower-screen">
 <rect x="0.0000" y="-2.0000" width="0.9764" height="2.0000" fill="none" stroke="#4f9a98" stroke-width="0.014" stroke-dasharray=".06 .04"/>
-<text x="0.0500" y="-0.1200" font-size="0.07" fill="#2f6f6c" text-anchor="start" class="halo" stroke-width="0.0154" >screen 2.00 m proposed</text>
+<text x="0.0500" y="-0.1200" font-size="0.07" fill="#2f6f6c" text-anchor="start" class="halo" stroke-width="0.0154" >screen height 2.00 m (in front)</text>
 </g>
 <g data-opening-id="bath1-vent" data-opening-code="V01" data-panel-id="bath1-w">
 <rect x="0.3865" y="-2.3000" width="0.9997" height="0.4000" fill="#d7ebf2" stroke="#4b6a78" stroke-width="0.018" />
@@ -233,10 +231,8 @@
 <text x="567.38" y="870.28" font-size="11" class="muted" text-anchor="start" >(sill/head assumed).</text>
 <text x="557.38" y="885.28" font-size="11" class="muted" text-anchor="start" >• SN1 TL1 shower niche: 750 mm wide, sill 0.95 m, head 1.30 m (sill/head</text>
 <text x="567.38" y="900.28" font-size="11" class="muted" text-anchor="start" >assumed).</text>
-<text x="557.38" y="915.28" font-size="11" class="muted" text-anchor="start" >• Shower niche 0.75 × 0.35 m, 120 mm deep, centred 1.13 m: proposed</text>
-<text x="567.38" y="930.28" font-size="11" class="muted" text-anchor="start" >model dimensions, not site measured. No new cutting without</text>
-<text x="567.38" y="945.28" font-size="11" class="muted" text-anchor="start" >professional approval. Kit-kat covers this wet-area wall except the</text>
-<text x="567.38" y="960.28" font-size="11" class="muted" text-anchor="start" >niche and vent.</text>
+<text x="557.38" y="915.28" font-size="11" class="muted" text-anchor="start" >• Shower niche 0.75 × 0.35 m, 120 mm deep, centred 1.13 m. Kit-kat</text>
+<text x="567.38" y="930.28" font-size="11" class="muted" text-anchor="start" >covers this wet-area wall except the niche and vent.</text>
 </g>
 <g data-panel-id="bath1-n" data-room-id="bath1" data-wall-dir="N">
 <rect x="1013.38" y="178" width="453.38" height="705.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
@@ -302,12 +298,12 @@
 <path d="M1025.38 843.278H1454.76" stroke="#e1e8e8"/>
 </g>
 <g data-panel-id="bath1-e" data-room-id="bath1" data-wall-dir="E">
-<rect x="60" y="1033.278" width="440" height="720.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
-<text x="76.00" y="1061.28" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – east wall</text>
-<text x="76.00" y="1083.28" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
-<text x="76.00" y="1100.28" font-size="11.5" class="muted mono" text-anchor="start" >1.68 m long · tag bath1-e</text>
-<text x="76.00" y="1117.28" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
-<g data-keyplan="bath1-e" transform="translate(416.00 1073.28) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="60" y="1003.278" width="440" height="720.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="76.00" y="1031.28" font-size="17" class="" text-anchor="start" font-weight="600">TL1 attached toilet – east wall</text>
+<text x="76.00" y="1053.28" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
+<text x="76.00" y="1070.28" font-size="11.5" class="muted mono" text-anchor="start" >1.68 m long · tag bath1-e</text>
+<text x="76.00" y="1087.28" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="bath1-e" transform="translate(416.00 1043.28) scale(7.4) translate(-0.2277 -0.2246)">
 <rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
 <path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
 <path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
@@ -345,8 +341,8 @@
 <path d="M6.2484 5.0268L6.2484 6.7032" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
 <path d="M7.7484 5.8650L6.6984 5.8650" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
 </g>
-<text x="456.00" y="1070.28" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
-<g transform="translate(100 1678.556) scale(140)">
+<text x="456.00" y="1040.28" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(100 1648.556) scale(140)">
 <rect x="0.0000" y="-3.1877" width="1.6764" height="0.7877" fill="#e9edf1" stroke="none" stroke-width="0" />
 <rect x="0.0000" y="-2.4000" width="1.6764" height="2.4000" fill="#f4f1ea" stroke="none" stroke-width="0" />
 <g data-tile="plain" data-room-id="bath1">
@@ -367,20 +363,20 @@
 <path d="M0.0000 0.0000L0.0000 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
 <path d="M1.6764 0.0000L1.6764 -2.4000" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
 </g>
-<path d="M72 1698.556H488" stroke="#e1e8e8"/>
-<text x="74.00" y="1710.56" font-size="11" class="muted" text-anchor="start" >• D04 TL1 door: 799 mm wide, head 2.13 m (sill/head assumed).</text>
+<path d="M72 1668.556H488" stroke="#e1e8e8"/>
+<text x="74.00" y="1680.56" font-size="11" class="muted" text-anchor="start" >• D04 TL1 door: 799 mm wide, head 2.13 m (sill/head assumed).</text>
 </g>
-<text x="60.00" y="1787.56" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
-<text x="60.00" y="1811.56" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
-<text x="60.00" y="1829.56" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
-<text x="60.00" y="1847.56" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
-<text x="60.00" y="1869.56" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
-<text x="60.00" y="1891.56" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
-<text x="60.00" y="1913.56" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
-<text x="60.00" y="1931.56" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
-<text x="60.00" y="1949.56" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
-<text x="60.00" y="1971.56" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
-<path d="M60 1981.556H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="2003.56" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
-<text x="1640.00" y="2003.56" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+<text x="60.00" y="1757.56" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
+<text x="60.00" y="1781.56" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
+<text x="60.00" y="1799.56" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
+<text x="60.00" y="1817.56" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
+<text x="60.00" y="1839.56" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
+<text x="60.00" y="1861.56" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
+<text x="60.00" y="1883.56" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
+<text x="60.00" y="1901.56" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
+<text x="60.00" y="1919.56" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
+<text x="60.00" y="1941.56" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
+<path d="M60 1951.556H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="1973.56" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
+<text x="1640.00" y="1973.56" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

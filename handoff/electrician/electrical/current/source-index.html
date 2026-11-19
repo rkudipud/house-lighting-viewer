@@ -1,0 +1,176 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Manufacturer and sourcing index</title><style>
+@page { size: A4; }
+* { box-sizing: border-box; }
+html { color: #233138; background: #e8eceb; font-family: Arial, sans-serif; }
+body { margin: 0 auto; max-width: 1000px; background: white; padding: 48px; }
+main { font-size: 15px; line-height: 1.48; }
+h1 { font-size: 30px; line-height: 1.18; margin: 0 0 14px; }
+h2 { color: #1c4d51; font-size: 23px; margin: 30px 0 12px; border-top: 2px solid #87a7a4; padding-top: 12px; }
+h3 { font-size: 18px; margin: 20px 0 9px; }
+p { margin: 0 0 11px; }
+strong { color: #102e37; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13px; line-height: 1.36; }
+th { background: #e9f1ef; text-align: left; color: #173c43; }
+td, th { border: 1px solid #c7d3d2; padding: 6px 8px; vertical-align: top; }
+tbody tr:nth-child(even) { background: #f7f9f8; }
+img { display: block; max-width: 100%; height: auto; margin: 14px auto; }
+img.photo { max-height: 430px; object-fit: contain; }
+a { color: #245f69; overflow-wrap: anywhere; }
+code, pre { font-size: 12.5px; }
+pre { background: #f3f6f4; border: 1px solid #d5dedc; padding: 10px 12px; white-space: pre-wrap; }
+blockquote { border-left: 4px solid #b5522f; margin: 14px 0; padding: 8px 14px; background: #fbf1ec; }
+.toc { padding: 12px 18px; background: #f1f5f3; font-size: 13px; columns: 2; column-gap: 22px; }
+.toc ul { padding-left: 16px; margin: 0; }
+@media print {
+  html, body { background: white; max-width: none; padding: 0; margin: 0; }
+  main { font-size: 10.2pt; line-height: 1.34; }
+  h1 { font-size: 22pt; }
+  h2 { font-size: 15.5pt; margin-top: 0; padding-top: 6pt; break-before: page; }
+  h2#contents { break-before: auto; margin-top: 14pt; }
+  h3 { font-size: 12pt; margin-top: 12pt; }
+  h1, h2, h3 { break-after: avoid; }
+  p, li { widows: 3; orphans: 3; }
+  table { font-size: 8.9pt; line-height: 1.3; margin: 7pt 0 10pt; }
+  td, th { padding: 4pt 5pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  pre { font-size: 8.3pt; break-inside: avoid; }
+  img { width: 100%; max-height: 215mm; object-fit: contain; break-inside: avoid; margin: 9pt auto; }
+  img.photo { width: auto; height: 76mm; }
+  p:has(> img) { break-inside: avoid; }
+  a { color: #233138; text-decoration: none; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style></head><body><aside style="padding:1rem;border:2px solid #98610d">Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see repository-copy-receipt.json.</aside><main><h1 id="manufacturer-and-sourcing-index">Manufacturer and sourcing index</h1>
+<p><strong>Basis:</strong> master SHA-256 <code>79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</code>. Manufacturer evidence checked 17-18 November 2026; product and chain approval remain open. Archived PDFs are manufacturer literature, not live stock, local quotes or installation approval.</p>
+<p>The project asks for fixed 2700 K, approximately 8 W/m, 24 V, single-white cove and curtain strips; TV bias is an approximately 6 W/m planning class. CRI &gt;= 90 and R9 &gt;= 50 are project requirements, not verified attributes of the generic strip. No inspected exact India-orderable strip is proven to meet all of these attributes <strong>and</strong> the specified wired PWM dimmer and repeater chain. Request the exact strip, power supply, controller and repeater as one documented, sample-tested proposal. Quantities remain subject to site measurement.</p>
+<h2 id="brand-and-product-findings">Brand and product findings</h2>
+<table>
+<thead>
+<tr>
+<th>Manufacturer / candidate</th>
+<th>Evidence and scope</th>
+<th>Open point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Havells Flexion 528 COB, listing <code>LHEHDKP5UNNW060-c</code></td>
+<td><a href="https://havells.com/flexion-cob-strip.html">Manufacturer product page</a>: 60 W / 5 m = 12 W/m, 24 V and 3000 K; the specification table says non-dimmable.</td>
+<td>Not the required 8 W/m, 2700 K dimmable strip. The feature text says CRI &gt; 90 while the table says &gt;= 80; input-voltage wording also conflicts. No matched chain.</td>
+</tr>
+<tr>
+<td>Panasonic / Anchor</td>
+<td><a href="https://lsin.panasonic.com/led-lighting/product/led-strip-light-variant-157508">Panasonic strip <code>PSLM06253</code></a> is listed as 12 V DC, 25 W / 5 m, 3000 K, IP20 and CRI 80; the page also has conflicting generic lifetime and input-voltage language. <a href="https://lsin.panasonic.com/led-lighting/product/led-honeycomb-tri-cct">Honeycomb Tri-CCT family</a> is not proof of dimming or independent wall colour control.</td>
+<td>The strip is not the 24 V / 2700 K / 8 W/m / CRI 90 project class. PWM approval, longevity and compatible chain are unverified.</td>
+</tr>
+<tr>
+<td>Wipro Mollis Pro and Mollis</td>
+<td><a href="https://www.wiprolighting.com/storage/12094/Mollis-Pro-Leaflet_Product-Basket.pdf">Mollis Pro official leaflet</a> and <a href="https://www.wiprolighting.com/storage/12096/Mollis-range-catalogue.pdf">Mollis official catalogue</a> specify 4000 K and 5700 K variants in the reviewed pages.</td>
+<td>The 4000 K variants alone do not establish an exact match; dimming of a complete proposed chain is undocumented. Exact fitting, lumen, cutout and driver must match the room schedule.</td>
+</tr>
+<tr>
+<td>Wipro Fokus Plus</td>
+<td><a href="https://www.wiprolighting.com/products/modern-workspaces/downlight/fokus">Official product page</a> gives downlight specifications and links its <a href="https://www.wiprolighting.com/storage/11988/Fokus-Plus-Catalogue_Product-Basket.pdf">catalogue</a>, which is image-only in the copy inspected.</td>
+<td>The listed variants include a 4000 K option; an exact candidate and documented dimmer/driver chain are not established. The page's 9 W / 0.004 A entry is internally suspect, so request a corrected datasheet rather than designing from that current.</td>
+</tr>
+<tr>
+<td>Asian Paints / White Teak</td>
+<td><a href="https://www.whiteteak.com/eclipse-12w-white-chrome-3000k-6500k-36-beam-angle-recessed-led-cob-downlight-dl02-10431/">Eclipse <code>DL02-10431</code></a> states TRIAC dimmable, but also mentions an optional tunable/RF package. <a href="https://www.whiteteak.com/luna-10w-m-24vdc-4000k-120-led-m-ip20-led-strip-lights-5-meter-per-roll-sl01-10033/">Luna <code>SL01-10033</code></a> is described as non-dimmable, 4000 K.</td>
+<td>Eclipse needs its exact driver, dimmer, configuration and sample proof; the Luna strip is not the selected warm dimmable strip.</td>
+</tr>
+<tr>
+<td>Lauritz Knudsen</td>
+<td><a href="https://www.lk-ea.com/products/home-and-distribution-products/modular-switches/englaze">enGlaze switch family</a>. This is only a likely interpretation of the homeowner's spelling, not a confirmed identity.</td>
+<td>A switch/plate family is not evidence of an exact LED-dimmer/driver match.</td>
+</tr>
+<tr>
+<td>Signify / Philips GreenSpace Flex</td>
+<td><a href="https://www.signify.com/en-in/prof/indoor-luminaires/downlights/philips-greenspace-flex/LP_CF_RS378B_EU/family">India family page</a> and its <a href="https://www.docs.signify.com/assets/Leaflet/Philips_PROF/CF/en_IN/LP_CF_RS378B_EU.en_IN.PROF.CF.pdf">family leaflet</a> state CRI 90, 2700/3000/4000 K, replaceable drivers, and family PSU / PSD / PSR control variants.</td>
+<td>Family options do not prove an orderable Indian trailing-edge PSR SKU or a matched wall dimmer. Exact <code>911401721292</code> is PSU/non-dimmable; <code>911401535471</code> is PSD/digital. Do not treat either as a proved phase-cut chain. The remote leaflet returned HTTP 403 during this check; use the retained official copy below.</td>
+</tr>
+<tr>
+<td>Orient Electric</td>
+<td><a href="https://cdn.shopify.com/s/files/1/0568/5166/0962/files/Consumer_Lighting_Catalog_-_Orient_Electric.pdf?v=1728908630">Official consumer catalogue</a>, PDF p. 89, lists 3000 K strip variants. The preceding page separately lists 12 V supplies as suitable for strips generally.</td>
+<td>Individual strip input voltage and PWM dimming are not stated in that strip table; do not infer them from the separate supply page. No exact 24 V / 2700 K / 8 W/m, CRI/R9/PWM match is established. Orient is a CKA Birla Group company; no separately Birla-branded lighting match is established.</td>
+</tr>
+<tr>
+<td>Jaquar <code>STI-WHT-LSTPCOB008XC</code></td>
+<td><a href="https://www.jaquar.com/en/cls-led-strip/cls-led-indoor-cob-strip-light?Id=11101">Official product page</a> and <a href="https://www.jaquar.com/en/cls-led-strip">listing</a> returned HTTP 403 in this check. The coordinator's earlier successful capture reported 8 W/m, 24 V and conflicting warm-white/cool-white wording; the listing gave 6500 K.</td>
+<td>CCT is conflicting and not proven 2700 K; CRI/R9, PWM, the supply and controller are unverified. Request a corrected datasheet. It is not an approved strip.</td>
+</tr>
+</tbody>
+</table>
+<p>Philips is a Signify brand; a common brand family does not prove a component chain. No manufacturer has been shown to be categorically the most durable.</p>
+<h2 id="controls-and-electrical-reference-documents">Controls and electrical reference documents</h2>
+<ul>
+<li><a href="https://www.iskydance.com/en/product/manual/id/114/index/0.html/T1-K%2CT2-K%2CT3-K.pdf">Skydance T1-K manual</a>: candidate single-colour, 12-48 V controller, three 4 A outputs, maximum 12.5 A input, 2/8 kHz selection. It states higher frequency reduces output current. The project screens at 2 kHz and 2.4 A/output as a planning assumption, not a manufacturer-certified rating at site temperature. The precise repeater, strip, branch distribution and protection remain unverified. The manual's illustrated connections do not certify the complete project chain.</li>
+<li><a href="https://www.meanwell.com/Upload/PDF/HLG-480H/HLG-480H-SPEC.PDF">Mean Well HLG-480H-24 datasheet</a>, p. 8: reference family has 24 V, 20 A and 480 W nameplate; at above 230 V AC, its graph shows 100% load to 60 C ambient, versus 50 C at 110 V AC, reducing to about 60% at 65 C. The static graph shows 80% at 90 V AC and 100% from 110 V AC. The stated maximum case temperature is 90 C. Verify combined input/thermal conditions and mounted <code>tc</code> with the manufacturer; these graphs are not the project 0.60 assumption. The 480 W class is a homeowner sizing preference, not an approved manufacturer, suffix, order code or installation. Its nameplate output current exceeds the candidate T1-K input rating; protective coordination and all downstream ratings must be designed.</li>
+<li><a href="https://www.meanwell.com/Upload/PDF/ELG-240/ELG-240-SPEC.PDF">Mean Well ELG-240 datasheet</a>: the 24 V model is rated 240 W at 200-305 V AC, but 180 W at 100-180 V AC. The living strip's 181.52 W nominal load alone exceeds 180 W, before any losses. Do not use 240 W nameplate as a universal low-line capacity.</li>
+<li><a href="https://www.meanwell.com/Upload/PDF/LED_EN.pdf">Mean Well LED-driver installation manual</a> and the bundled lookup conflict with the HLG-480H datasheet on B16/C16 maximum counts. The datasheet states 2/3 units; the retained installation-table lookup has 1/2. Neither number is a mixed-circuit or actual-breaker approval; resolve with the manufacturer and electrician.</li>
+<li><a href="https://shop.legrand.co.in/legrand-lyncus-rotary-led-dimmer-1-module-50w-677304">Legrand Lyncus 677304</a>: manufacturer India listing describes 3-50 W and up to 8 LED lamps; supporting table wording is inconsistent. Actual driver input watts, count, ambient and edge require written clarification. A nominal W comparison is not a compatibility test.</li>
+<li><a href="https://assets.legrand.com/pim/NP-FT-GT/F04600EN-00.pdf">Legrand Arteor Advance <code>AA24107MB</code> technical sheet</a>: LED 7-200 VA, maximum 10 lamps, and +5 to +35 C operating range for the documented models. <a href="https://shop.legrand.co.in/elite-rotary-dimmer-200-watts-led-with-or-without-neutral-elite-2-module-matt-black">India product listing</a>. The 35 C operating limit matters for local wall-box assessment. VA is not watts.</li>
+<li><a href="https://www.se.com/in/en/product/E8331RD250_WE/dimmer-avataron-rotary-push-type-250-va-white/">Schneider AvatarOn <code>E8331RD250_WE</code> India page</a> and <a href="https://download.se.com/files?p_enDocType=Instruction+sheet&amp;p_File_Name=PHA1631900.pdf&amp;p_Doc_Ref=PHA1631900">instruction sheet</a>: documented dimmable-LED 3-100 VA. Exact edge, Indian stock and compatible driver remain unverified. An assumed power factor cannot establish the real VA.</li>
+</ul>
+<p>All ten mains-dimmer groups, including the 48 V track's upstream control, remain on procurement hold. C37 is not cleared by the CBR position decision. Do not use a fan regulator, an undocumented phase-cut dimmer, or a dummy load to disguise incompatible equipment.</p>
+<h2 id="archived-evidence">Archived evidence</h2>
+<p>These are local copies of official publications; SHA-256 identifies the exact downloaded bytes. Historical project receipts and the previous 82/82 fixed-white verification are included separately; that result was <strong>not rerun against the latest master</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Official local document</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.meanwell.com/Upload/PDF/HLG-480H/HLG-480H-SPEC.PDF">Mean Well HLG-480H manufacturer datasheet</a></td>
+<td><code>790048cbd6b35066dc5c7a7c29ad87a52f302e0e08e92034691087dfc552171e</code></td>
+</tr>
+<tr>
+<td><a href="https://www.meanwell.com/Upload/PDF/ELG-240/ELG-240-SPEC.PDF">Mean Well ELG-240 manufacturer datasheet</a></td>
+<td><code>57af9cbbd13f025e49d25b29633f965be177b20f7e5e541ea80e2249e9c51a18</code></td>
+</tr>
+<tr>
+<td><a href="https://www.meanwell.com/Upload/PDF/ELG-150/ELG-150-SPEC.PDF">Mean Well ELG-150 manufacturer datasheet</a></td>
+<td><code>cb0a1c37dec9bd8983f5c6b20cac2280ff41af76f0c8cb281b3b941b61a68f55</code></td>
+</tr>
+<tr>
+<td><a href="https://www.meanwell.com/Upload/PDF/LED_EN.pdf">Mean Well LED-driver installation manual</a></td>
+<td><code>f07b8467541263d62eb6a515a05643ac5c56d0d21753169574cbc5505175ca10</code></td>
+</tr>
+<tr>
+<td><a href="https://www.iskydance.com/en/product/manual/id/114/index/0.html/T1-K%2CT2-K%2CT3-K.pdf">Skydance T1-K/T2-K/T3-K manufacturer manual</a></td>
+<td><code>c2ff76fa1be2faa499cec4aade28c78a93cec6ce3713b383266f7ae1e78d616b</code></td>
+</tr>
+<tr>
+<td><a href="https://www.wiprolighting.com/storage/12094/Mollis-Pro-Leaflet_Product-Basket.pdf">Wipro Mollis Pro product leaflet</a></td>
+<td><code>849fbd9d49e1c54a65300f6fc442d41677e5658d4e9f169f1d4a933dd78e38e0</code></td>
+</tr>
+<tr>
+<td><a href="https://www.wiprolighting.com/storage/12096/Mollis-range-catalogue.pdf">Wipro Mollis product catalogue</a></td>
+<td><code>2ce645919022876034ca9d6bf95afaf4aab6117c906a77ecb4101e42d8f7af75</code></td>
+</tr>
+<tr>
+<td><a href="https://www.wiprolighting.com/storage/11988/Fokus-Plus-Catalogue_Product-Basket.pdf">Wipro Fokus Plus product catalogue, image-only</a></td>
+<td><code>9d03fcf0c94822378834c8f1886736b4f8a9222add0f1a76899d4918ab97d595</code></td>
+</tr>
+<tr>
+<td><a href="https://www.docs.signify.com/assets/Leaflet/Philips_PROF/CF/en_IN/LP_CF_RS378B_EU.en_IN.PROF.CF.pdf">Signify GreenSpace Flex family leaflet</a></td>
+<td><code>322ea5416802e972f50220f874b67d0f6c3f61edc1eaeddb199e8f196bc9a0c2</code></td>
+</tr>
+<tr>
+<td><a href="https://cdn.shopify.com/s/files/1/0568/5166/0962/files/Consumer_Lighting_Catalog_-_Orient_Electric.pdf?v=1728908630">Orient Electric consumer lighting catalogue</a></td>
+<td><code>0514e344060d078ce9dbc01b27b4e54e8afc65b02ffa306a47260bce228032e0</code></td>
+</tr>
+<tr>
+<td><a href="https://assets.legrand.com/pim/NP-FT-GT/F04600EN-00.pdf">legrand-arteor-advance-F04600EN-00.pdf</a></td>
+<td><code>854f280b94e1eb7b5b1a8b4e31a59e95f590142c9555633f29bd09c77ae3b6e4</code></td>
+</tr>
+<tr>
+<td><a href="https://download.se.com/files?p_enDocType=Instruction+sheet&p_File_Name=PHA1631900.pdf&p_Doc_Ref=PHA1631900">schneider-avataron-PHA1631900.pdf</a></td>
+<td><code>ddc2234be659732353ffd219815b0eba5486930632f0bff7bc6ee69e5a5c5d8a</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Price status:</strong> no current verified Hyderabad installed quote, stock confirmation, exact SKU warranty or 480 W supply cost delta. The earlier dated allowances exclude GST, shipping, wiring/DB works and other site costs as stated in the electrical review; they are not current quotations.</p></main></body></html>

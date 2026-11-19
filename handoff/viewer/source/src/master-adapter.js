@@ -57,7 +57,7 @@ export function adaptLighting(house){
   for(const fan of house.visualization_geometry.fans||[]){
     if(!Array.isArray(fan.at_m))continue;
     const zone=zones.find(z=>z.room===fan.room);
-    if(zone)zone.fan=feet(fan.at_m);
+    if(zone){zone.fan=feet(fan.at_m);const sweep=Number(fan.proposal?.sweep_mm);if(sweep>0)zone.fanSweepM=sweep/1000;}
   }
   return {
     src:'assumed',source:'house-design.json / lighting',revision:'current',

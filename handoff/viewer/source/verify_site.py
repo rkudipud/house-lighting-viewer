@@ -188,8 +188,8 @@ def run_profile(p, name, ctx_args, crop_fn):
         lv = {p["id"]: p for p in cm["live"]}
         held_ok = all(lv[i]["held"] and not lv[i]["inEmission"] for i, e in exp.items() if e.get("held")) and lv.get("CURT-MBR-W03", {}).get("held")
         check(name, "held pocket CURT-MBR-W03 shown grey and unlit", held_ok, cm["live"])
-        check(name, "zero-lumen pocket previews remain unlit instead of exceeding the schedule",
-              all(lv[i]["inEmission"] and lv[i]["scheduledLumens"] == 0 and lv[i]["emissiveIntensity"] < .001
+        check(name, "selected pocket previews glow visually without photometric credit",
+              all(lv[i]["inEmission"] and lv[i]["scheduledLumens"] == 0 and lv[i]["emissiveIntensity"] > .01
                   for i, e in exp.items() if not e.get("held")), cm["live"])
         cb = page.evaluate("(()=>{const p=walkthrough.PLAN.curtainPockets.pockets.find(p=>p.id==='CURT-CBR');return p?{held:p.held,selected:p.selected,label:p.label}:null})()")
         check(name, "CURT-CBR selected and unheld for review, placeholder remains unmeasured", bool(cb) and cb["held"] is False and cb["selected"] is True and cb["label"] == "placeholder window, unmeasured" and not lv["CURT-CBR"]["held"], cb)
@@ -502,11 +502,23 @@ def run_profile(p, name, ctx_args, crop_fn):
     set_range(page, "low-dim", 0)
     page.wait_for_timeout(900)
     cbr_low = page.evaluate("walkthrough.model.curtainPockets.find(p=>p.id==='CURT-CBR').mat.emissiveIntensity")
+    def cbr_preview_levels():
+        return page.evaluate("""() => ['C39','C40'].map(id =>
+          walkthrough.model.emission.filter(e=>e.circuit===id).reduce((sum,e)=>
+          sum+(e.kind==='decal'?e.mat.color.r+e.mat.color.g+e.mat.color.b:e.mat.emissiveIntensity),0))""")
+    preview_off = cbr_preview_levels()
     set_range(page, "low-dim", 100)
     page.wait_for_timeout(900)
     cbr_full = page.evaluate("walkthrough.model.curtainPockets.find(p=>p.id==='CURT-CBR').mat.emissiveIntensity")
-    check(name, "held or zero-lumen children's curtain proposals do not add unbudgeted glow",
-          cbr_low < .001 and cbr_full < .001, [cbr_low, cbr_full])
+    preview_on = cbr_preview_levels()
+    check(name, "children's curtain visual preview follows LOW without scheduled lumen credit",
+          cbr_low < .001 and cbr_full > .01
+          and page.evaluate("walkthrough.lighting.groupStates['X-CURT-CBR'].fixtures.every(f=>f.visualOnly&&f.lm===0)"),
+          [cbr_low, cbr_full])
+    check(name, "held cove and shifted LINE have controllable visual-only previews without available lumen credit",
+          all(value < .01 for value in preview_off) and all(value > .1 for value in preview_on)
+          and page.evaluate("!walkthrough.lighting.groupStates.C39.on&&!walkthrough.lighting.groupStates.C40.on&&walkthrough.lighting.getLumenBudget('children').available.low===0"),
+          {"off": preview_off, "on": preview_on})
     shot("lights-children-review")
 
     calibration = {}

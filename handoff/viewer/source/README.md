@@ -19,9 +19,10 @@ to write unless the result matches the recorded HTML hash. Keep the repository `
 its PDF links.
 
 `build.mjs` rebuilds from the authoritative master and independently verified input
-packs and receipts. For the reviewed CCT revision it also requires `--prior-master`
-and Python, to validate the exact CCT-only change against the historical drawing and
-wardrobe basis before using those unchanged outputs.
+packs and receipts. It requires `--prior-master`, `--cct-master` and Python to
+validate the CCT-only revision and the subsequent provisional children's-ceiling
+revision against their predecessors. The layout views use the latest master; unchanged
+floor-plan, curtain-section and wardrobe outputs retain their verified earlier basis.
 The redacted viewer data cannot be substituted as a byte-identical master. Drawing
 generators require the corresponding current canonical master and fragments. Generated
 local verification receipts can contain local paths; review them before publication.

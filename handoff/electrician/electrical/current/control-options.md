@@ -1,6 +1,8 @@
+> Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see repository-copy-receipt.json.
+
 # Control options and switchboard choices
 
-**Master SHA-256:** `1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4`. Review/quotation only; no construction or product approval. The homeowner's current choice is **fixed-white lighting, local brightness control, no extra curtain knob and one larger living LOW supply**.
+**Master SHA-256:** `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822`. Review/quotation only; no construction or product approval. The homeowner's current choice is **fixed-white lighting, local brightness control, no extra curtain knob and one larger living LOW supply**.
 
 | Control route | Current plan | What the buyer / electrician must prove |
 |---|---|---|

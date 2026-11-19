@@ -31,10 +31,12 @@ function applyCctMap(plan, map, D) {
     f.previousViewerCct = f.cct;
     f.cct = `${m.cct_k}K`;f.cctRule = m.cct_rule;f.mapLayer = m.layer;f.groupId = m.group_id;f.groupControl = m.control;
     f.placementHoldIds = [...m.placement_hold_ids];
-    f.held = f.placementHoldIds.length > 0 || ['LIV-P1', 'LIV-P2'].includes(f.id);
+    // CBR cove/LINE stay site-held (H-CBR-CEIL) but are modelled ON with scheduled lumens for review.
+    f.siteHeldModelledOn = f.id === 'CBR-L1' || /^CBR-X[1-4]$/.test(f.id);
+    f.held = (f.placementHoldIds.length > 0 && !f.siteHeldModelledOn) || ['LIV-P1', 'LIV-P2'].includes(f.id);
     f.holdReason = f.placementHoldIds.length
       ? `${f.placementHoldIds.join(', ')}: ${f.id === 'CBR-L1' || /^CBR-X[1-4]$/.test(f.id)
-        ? 'children ceiling, cove and LINE frame require the coordinated ceiling/curtain section and selected fan.'
+        ? 'modelled ON for design review only (provisional, unmeasured); installation, ceiling/curtain section, fan clearance and actual operation remain held on site.'
         : 'placement or coordination evidence remains open.'}`
       : ['LIV-P1', 'LIV-P2'].includes(f.id)
         ? 'H-POOJA-GEOMETRY: count/load allowance only; niche placement and aim withheld.'
@@ -213,7 +215,7 @@ export function prepareTour(D, {preview, outDir, analysis, cctMap}) {
     'Master split wardrobe is approved in principle; displayed blocks and proposed interior compartments are unmeasured and not homeowner-approved for fabrication (OI-MBR-03). W03 curtain coordination remains held (OI-MBR-04).',
     D.r05ClearanceNote,
     'Bathroom basin is left on entry; kitkat tile stays on the L-shaped shower wet walls only. Door hinges, plumbing offsets, mounting and electrical wet-zone suitability need site confirmation.',
-    'Child-room HIGH fittings H1-H6 are switchable for review. CBR-L1 (C39 cove) and CBR-X1-X4 (C40 LINE) remain unlit under H-CBR-CEIL pending the ceiling/curtain section and fan selection; desk and bed fittings retain their separate holds. The selected curtain strip follows LOW. Pooja strip/spot positions and aim are not shown. The upper stair flight is omitted from the walkthrough only.',
+    'Child-room HIGH fittings H1-H6 are switchable for review. CBR-L1 (C39 cove) and CBR-X1-X4 (C40 LINE) are modelled ON for review with scheduled lumens, while installation stays site-held under H-CBR-CEIL pending the ceiling/curtain section and 1050 mm-class fan selection; desk and bed fittings retain their separate holds. The selected curtain strip follows LOW. Pooja strip/spot positions and aim are not shown. The upper stair flight is omitted from the walkthrough only.',
     'Storage/loft bounds are provisional. Granite is not waterproofing, and no loft support or load capacity is certified by this model.',
     'Dressing cabinet ST-R04a-WR01 and utility cabinet ST-R08-UC01 are homeowner-selected subject to site measurement and clearance/service checks (FH-ST-03 / FH-ST-12). Their displayed shapes are unmeasured and not construction-ready.',
     'D01 is drawn single-leaf in the model, while the architectural description says double-leaf; verify the existing entrance on site.',

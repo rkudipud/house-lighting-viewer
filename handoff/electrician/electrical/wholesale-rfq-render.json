@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-18T11:19:00+00:00",
+  "generated_utc": "2026-11-19T20:49:17+00:00",
   "mode": "final",
   "publication_hold": false,
   "pending_markers": 0,
@@ -11,7 +11,7 @@
   "overflow": [],
   "out_of_bounds_text": [],
   "near_empty_pages": [],
-  "md_sha256": "a3eafde759509a0c96fbfe29284c9fa2d2c01b7593235507ea6629551f9ab511",
-  "html_sha256": "7b04bcb40dccd5211a120b9418a9f865ccc2af0adaf41f917c67927976c0a791",
-  "pdf_sha256": "d56820de7495ea4b5ca142c2712406d159a5009ca0e0bbcbee52497edae2f47c"
+  "md_sha256": "1f09d18a0c4d41efd40e5ceb2092ff0ae72b411f3839f06e97bdb7853973e037",
+  "html_sha256": "504889f21d3b842316d48f89e865cfd4a2f3a6e085c79644fa39bc9f30498688",
+  "pdf_sha256": "0914547eb997b6216da1af5bc7860f07f6b460d84c8791d4d9e184e94702d7ac"
 }

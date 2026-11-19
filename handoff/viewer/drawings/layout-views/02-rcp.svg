@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="4085" viewBox="0 0 1700 4085" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="4103" viewBox="0 0 1700 4103" role="img" aria-labelledby="t d">
 <title id="t">Reflected ceiling plan (looking up)</title>
 <desc id="d">Read-only reflected ceiling plan from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; lighting is the OPT-1 calculated review candidate, not construction-released.</desc>
-<metadata>{&quot;sheet&quot;:&quot;02-rcp&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;fixtures&quot;:104,&quot;circuits&quot;:47,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;lighting_status&quot;:&quot;FIXED_WHITE_HOMEOWNER_SIGNED_REVIEW_CANDIDATE_NOT_CONSTRUCTION_RELEASED&quot;}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;02-rcp&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;fixtures&quot;:104,&quot;circuits&quot;:47,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;lighting_status&quot;:&quot;FIXED_WHITE_HOMEOWNER_SIGNED_REVIEW_CANDIDATE_NOT_CONSTRUCTION_RELEASED&quot;}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -16,12 +16,12 @@
 .mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
 .title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
 .halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
-<rect width="1700" height="4085" fill="#fcfdfc"/>
+<rect width="1700" height="4103" fill="#fcfdfc"/>
 <text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Reflected ceiling plan — bottoms-up</text>
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >Looking up · south-up, same as plan · OPT-1 review candidate (K-2 kitchen): 104 base fittings, 47 controlled groups · not released</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 2 / 13</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
 <g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
 <text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
@@ -78,7 +78,7 @@
 <path d="M6.4514 10.3113L8.1594 10.3113L8.1594 11.7133L6.4514 11.7133L6.4514 10.3113Z" fill="#fbf4de" stroke="#b9a36d" stroke-width="0.018" />
 </g>
 <path d="M5.7241 1.6916L7.7175 1.6916L7.7175 3.5509L5.7241 3.5509L5.7241 1.6916Z" fill="none" stroke="#9aa3ad" stroke-width="0.012" stroke-dasharray=".05 .04"/>
-<path d="M6.3154 10.1743L8.2954 10.1743L8.2954 11.8503L6.3154 11.8503L6.3154 10.1743Z" fill="none" stroke="#9aa3ad" stroke-width="0.012" stroke-dasharray=".05 .04"/>
+<path d="M6.2240 9.7841L8.3868 9.7841L8.3868 12.3289L6.2240 12.3289L6.2240 9.7841Z" fill="none" stroke="#9aa3ad" stroke-width="0.012" stroke-dasharray=".05 .04"/>
 <g data-groove="MBR">
 <path d="M5.7241 2.6213L5.7241 1.9964A0.3048 0.3048 0 0 1 6.0289 1.6916L6.7208 1.6916" fill="none" stroke="#111" stroke-width="0.05" />
 </g>
@@ -86,16 +86,16 @@
 <path d="M7.7175 2.6213L7.7175 3.2461A0.3048 0.3048 0 0 1 7.4127 3.5509L6.7208 3.5509" fill="none" stroke="#111" stroke-width="0.05" />
 </g>
 <g data-groove="CBR">
-<path d="M7.0622 10.1743L7.5486 10.1743" fill="none" stroke="#111" stroke-width="0.05" />
+<path d="M6.9707 9.7841L7.6401 9.7841" fill="none" stroke="#111" stroke-width="0.05" />
 </g>
 <g data-groove="CBR">
-<path d="M7.0622 11.8503L7.5486 11.8503" fill="none" stroke="#111" stroke-width="0.05" />
+<path d="M6.9707 12.3289L7.6401 12.3289" fill="none" stroke="#111" stroke-width="0.05" />
 </g>
 <g data-groove="CBR">
-<path d="M6.3154 10.7687L6.3154 11.2560" fill="none" stroke="#111" stroke-width="0.05" />
+<path d="M6.2240 10.3784L6.2240 11.7345" fill="none" stroke="#111" stroke-width="0.05" />
 </g>
 <g data-groove="CBR">
-<path d="M8.2954 10.7687L8.2954 11.2560" fill="none" stroke="#111" stroke-width="0.05" />
+<path d="M8.3868 10.3784L8.3868 11.7345" fill="none" stroke="#111" stroke-width="0.05" />
 </g>
 <g data-storage-id="ST-R04a-LF01" data-storage-kind="loft">
 <rect x="5.0640" y="5.0300" width="0.3400" height="1.6700" fill="url(#loft)" stroke="#526d9a" stroke-width="0.02" stroke-dasharray=".07 .04"/>
@@ -546,20 +546,20 @@
 <g data-fixture-id="CBR-H6" data-fixture-type="DL6" data-fixture-room="CBR" data-lane="HIGH">
 <g><circle cx="8.1054" cy="9.9123" r="0.0860" fill="#fff" stroke="#3d6fa5" stroke-width="0.014"/><circle cx="8.1054" cy="9.9123" r="0.0241" fill="#3d6fa5"/></g>
 </g>
-<g data-fixture-id="CBR-L1" data-fixture-type="COVE_FW" data-fixture-room="CBR" data-lane="COVE" data-inactive="placeholder">
-<path d="M6.4514 10.3113L8.1594 10.3113L8.1594 11.7133L6.4514 11.7133L6.4514 10.3113" fill="none" stroke="#c4872a" stroke-width="0.04" stroke-dasharray=".10 .05" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+<g data-fixture-id="CBR-L1" data-fixture-type="COVE_FW" data-fixture-room="CBR" data-lane="COVE">
+<path d="M6.4514 10.3113L8.1594 10.3113L8.1594 11.7133L6.4514 11.7133L6.4514 10.3113" fill="none" stroke="#c4872a" stroke-width="0.04" stroke-dasharray=".10 .05" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<g data-fixture-id="CBR-X1" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE" data-inactive="placeholder">
-<path d="M7.0622 10.1743L6.3154 10.1743L6.3154 10.7687" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+<g data-fixture-id="CBR-X1" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE">
+<path d="M6.9707 9.7841L6.2240 9.7841L6.2240 10.3784" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<g data-fixture-id="CBR-X2" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE" data-inactive="placeholder">
-<path d="M7.5486 10.1743L8.2954 10.1743L8.2954 10.7687" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+<g data-fixture-id="CBR-X2" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE">
+<path d="M7.6401 9.7841L8.3868 9.7841L8.3868 10.3784" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<g data-fixture-id="CBR-X3" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE" data-inactive="placeholder">
-<path d="M8.2954 11.2560L8.2954 11.8503L7.5486 11.8503" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+<g data-fixture-id="CBR-X3" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE">
+<path d="M8.3868 11.7345L8.3868 12.3289L7.6401 12.3289" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<g data-fixture-id="CBR-X4" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE" data-inactive="placeholder">
-<path d="M7.0622 11.8503L6.3154 11.8503L6.3154 11.2560" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+<g data-fixture-id="CBR-X4" data-fixture-type="LIN" data-fixture-room="CBR" data-lane="LINE">
+<path d="M6.9707 12.3289L6.2240 12.3289L6.2240 11.7345" fill="none" stroke="#17877e" stroke-width="0.045" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g data-fixture-id="CBR-S1" data-fixture-type="TASK_HO" data-fixture-room="CBR" data-lane="STUDY" data-inactive="placeholder">
 <path d="M6.2554 12.0124L6.2554 13.1523" fill="none" stroke="#8d6a3d" stroke-width="0.025" stroke-dasharray=".06 .03" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
@@ -661,19 +661,20 @@
 <path d="M6.7208 2.6213L6.9047 2.4374" fill="none" stroke="#4f6b73" stroke-width="0.02" />
 <text x="6.7208" y="3.0513" font-size="0.075" fill="#3f565d" text-anchor="middle" class="halo" stroke-width="0.0165" >FAN POINT</text>
 </g>
-<g data-fan-room="children" data-fan-status="pending" opacity=".6">
-<circle cx="7.3054" cy="11.0123" r=".26" fill="#fff" stroke="#4f6b73" stroke-width=".014" stroke-dasharray=".05 .04"/>
-<path d="M7.3054 11.0123L7.4892 11.1962" fill="none" stroke="#4f6b73" stroke-width="0.02" />
-<path d="M7.3054 11.0123L7.1216 11.1962" fill="none" stroke="#4f6b73" stroke-width="0.02" />
-<path d="M7.3054 11.0123L7.1216 10.8285" fill="none" stroke="#4f6b73" stroke-width="0.02" />
-<path d="M7.3054 11.0123L7.4892 10.8285" fill="none" stroke="#4f6b73" stroke-width="0.02" />
-<text x="7.3054" y="10.6523" font-size="0.075" fill="#3f565d" text-anchor="middle" class="halo" stroke-width="0.0165" >FAN — pending approval</text>
+<g data-fan-room="children" data-fan-status="provisional" opacity=".6">
+<circle data-fan-sweep-mm="1050" cx="7.0104" cy="10.8983" r="0.5250" fill="none" stroke="#4f6b73" stroke-width=".012" stroke-dasharray=".06 .05"/>
+<circle cx="7.0104" cy="10.8983" r=".26" fill="#fff" stroke="#4f6b73" stroke-width=".014" stroke-dasharray=".05 .04"/>
+<path d="M7.0104 10.8983L7.1942 11.0822" fill="none" stroke="#4f6b73" stroke-width="0.02" />
+<path d="M7.0104 10.8983L6.8266 11.0822" fill="none" stroke="#4f6b73" stroke-width="0.02" />
+<path d="M7.0104 10.8983L6.8266 10.7145" fill="none" stroke="#4f6b73" stroke-width="0.02" />
+<path d="M7.0104 10.8983L7.1942 10.7145" fill="none" stroke="#4f6b73" stroke-width="0.02" />
+<text x="7.0104" y="10.5383" font-size="0.075" fill="#3f565d" text-anchor="middle" class="halo" stroke-width="0.0165" >FAN — provisional, 1050 mm planning sweep</text>
 </g>
 <rect x="5.1054" y="0.2246" width="3.8100" height="4.6863" fill="none" stroke="#b02f2f" stroke-width="0.03" stroke-dasharray=".25 .08 .05 .08"/>
 <text x="7.0104" y="4.6309" font-size="0.11" fill="#b02f2f" text-anchor="middle" class="halo" stroke-width="0.0242" >MASTER — HELD (H-MBR-BED, H-MBR-W03)</text>
 <text x="7.0104" y="4.7609" font-size="0.075" fill="#b02f2f" text-anchor="middle" class="halo" stroke-width="0.0165" >bed position is a test centreline only (tenant bed not supplied); W03 pocket held</text>
-<text x="7.0104" y="8.8623" font-size="0.09" fill="#b02f2f" text-anchor="middle" class="halo" stroke-width="0.0198" >CHILDREN'S — H1-H6 ACTIVE FOR REVIEW</text>
-<text x="7.0104" y="8.9923" font-size="0.07" fill="#b02f2f" text-anchor="middle" class="halo" stroke-width="0.0154" >other fittings held; window and pocket unmeasured (H-CBR-*)</text>
+<text x="7.0104" y="8.8623" font-size="0.09" fill="#b02f2f" text-anchor="middle" class="halo" stroke-width="0.0198" >CHILDREN'S — H1-H6, COVE, LINE MODELLED ON</text>
+<text x="7.0104" y="8.9923" font-size="0.07" fill="#b02f2f" text-anchor="middle" class="halo" stroke-width="0.0154" >cove/LINE install, fan and pockets held, unmeasured (H-CBR-*)</text>
 <g data-pooja-light="PN1">
 <text x="0.7855" y="12.9786" font-size="0.06" fill="#4d3a5c" text-anchor="start" class="halo" stroke-width="0.0132" font-weight="700">PN1: LIV-P1 / P2 are allowances only; placement held (PG)</text>
 </g>
@@ -695,7 +696,7 @@
 </g>
 <g data-room-label="children">
 <text x="7.7500" y="12.9500" font-size="0.13" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0286" font-weight="600">R05 CHILDREN'S</text>
-<text x="7.7500" y="13.1100" font-size="0.09" fill="#5d7174" text-anchor="middle" class="halo" stroke-width="0.0198" >band 2.96 · panel unmeasured</text>
+<text x="7.7500" y="13.1100" font-size="0.09" fill="#5d7174" text-anchor="middle" class="halo" stroke-width="0.0198" >band 3.048 · centre ~3.28 (reported, unsurveyed)</text>
 </g>
 <g data-room-label="utility">
 <text x="2.2000" y="0.6200" font-size="0.13" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0286" font-weight="600">R08 UTILITY + WASH</text>
@@ -912,29 +913,30 @@
 <text x="1200.00" y="3087.00" font-size="13" class="muted" text-anchor="start" >display only. Measure pocket ends and coordinate site fit; do not</text>
 <text x="1200.00" y="3105.00" font-size="13" class="muted" text-anchor="start" >extend or cut from the model.</text>
 <text x="1200.00" y="3139.00" font-size="13" class="muted" text-anchor="start" >CHILDREN’S ROOM: CBR-H1 to H6 and the curtain strip are selected</text>
-<text x="1200.00" y="3157.00" font-size="13" class="muted" text-anchor="start" >for review; other CBR fittings remain held (H-CBR-*). C37</text>
-<text x="1200.00" y="3175.00" font-size="13" class="muted" text-anchor="start" >procurement, the fan position and window/pocket measurements</text>
-<text x="1200.00" y="3193.00" font-size="13" class="muted" text-anchor="start" >remain open.</text>
-<text x="1200.00" y="3227.00" font-size="13" class="muted" text-anchor="start" >Dining + living share one raised centre panel. The kitchen</text>
-<text x="1200.00" y="3245.00" font-size="13" class="muted" text-anchor="start" >ceiling is one flat level at band height. Black-painted grooves</text>
-<text x="1200.00" y="3263.00" font-size="13" class="muted" text-anchor="start" >are drawn only where the master records them (master and</text>
-<text x="1200.00" y="3281.00" font-size="13" class="muted" text-anchor="start" >children’s rooms).</text>
-<text x="1200.00" y="3315.00" font-size="13" class="muted" text-anchor="start" >Pooja niche PN1: already built; its east-wall relationship is</text>
-<text x="1200.00" y="3333.00" font-size="13" class="muted" text-anchor="start" >homeowner-confirmed (HD-10). HD-18 clarifies feet-and-inches</text>
-<text x="1200.00" y="3351.00" font-size="13" class="muted" text-anchor="start" >notation, but dimensions and position remain homeowner estimates,</text>
-<text x="1200.00" y="3369.00" font-size="13" class="muted" text-anchor="start" >not site measurements (OI-POOJA-01). The homeowner reports a</text>
-<text x="1200.00" y="3387.00" font-size="13" class="muted" text-anchor="start" >reinforced slab extension beyond the 9-inch wall, top to bottom</text>
-<text x="1200.00" y="3405.00" font-size="13" class="muted" text-anchor="start" >through the building. Extension geometry and load capacity are</text>
-<text x="1200.00" y="3423.00" font-size="13" class="muted" text-anchor="start" >unverified: only the estimated front outline is drawn, not a</text>
-<text x="1200.00" y="3441.00" font-size="13" class="muted" text-anchor="start" >physical back or structural section. No cutting or structural</text>
-<text x="1200.00" y="3459.00" font-size="13" class="muted" text-anchor="start" >change is requested or approved. LIV-P1 / LIV-P2 are count/load</text>
-<text x="1200.00" y="3477.00" font-size="13" class="muted" text-anchor="start" >allowances only; inherited positions are held (H-POOJA-GEOMETRY).</text>
-<text x="1200.00" y="3511.00" font-size="13" class="muted" text-anchor="start" >Fan points and lofts are assumed; curtain-pocket sizes are</text>
-<text x="1200.00" y="3529.00" font-size="13" class="muted" text-anchor="start" >indicative only (HD-14). Switch-plate zones are not drawn: the</text>
-<text x="1200.00" y="3547.00" font-size="13" class="muted" text-anchor="start" >master holds none (only the R05 latch-side strip appears on the</text>
-<text x="1200.00" y="3565.00" font-size="13" class="muted" text-anchor="start" >children’s elevation).</text>
-<text x="1200.00" y="3609.00" font-size="17" class="sect" text-anchor="start" >CONDITIONAL DETAILS (schematic, not to scale)</text>
-<g transform="translate(1200 3623)" fill="none">
+<text x="1200.00" y="3157.00" font-size="13" class="muted" text-anchor="start" >for review. The cove is retained; the outward-shifted LINE paths</text>
+<text x="1200.00" y="3175.00" font-size="13" class="muted" text-anchor="start" >and cove remain held and unlit. The fan is shown at the</text>
+<text x="1200.00" y="3193.00" font-size="13" class="muted" text-anchor="start" >unmeasured proposed cove centre. Verify fan sweep, clearances,</text>
+<text x="1200.00" y="3211.00" font-size="13" class="muted" text-anchor="start" >wiring and ceiling details (H-CBR-*).</text>
+<text x="1200.00" y="3245.00" font-size="13" class="muted" text-anchor="start" >Dining + living share one raised centre panel. The kitchen</text>
+<text x="1200.00" y="3263.00" font-size="13" class="muted" text-anchor="start" >ceiling is one flat level at band height. Black-painted grooves</text>
+<text x="1200.00" y="3281.00" font-size="13" class="muted" text-anchor="start" >are drawn only where the master records them (master and</text>
+<text x="1200.00" y="3299.00" font-size="13" class="muted" text-anchor="start" >children’s rooms).</text>
+<text x="1200.00" y="3333.00" font-size="13" class="muted" text-anchor="start" >Pooja niche PN1: already built; its east-wall relationship is</text>
+<text x="1200.00" y="3351.00" font-size="13" class="muted" text-anchor="start" >homeowner-confirmed (HD-10). HD-18 clarifies feet-and-inches</text>
+<text x="1200.00" y="3369.00" font-size="13" class="muted" text-anchor="start" >notation, but dimensions and position remain homeowner estimates,</text>
+<text x="1200.00" y="3387.00" font-size="13" class="muted" text-anchor="start" >not site measurements (OI-POOJA-01). The homeowner reports a</text>
+<text x="1200.00" y="3405.00" font-size="13" class="muted" text-anchor="start" >reinforced slab extension beyond the 9-inch wall, top to bottom</text>
+<text x="1200.00" y="3423.00" font-size="13" class="muted" text-anchor="start" >through the building. Extension geometry and load capacity are</text>
+<text x="1200.00" y="3441.00" font-size="13" class="muted" text-anchor="start" >unverified: only the estimated front outline is drawn, not a</text>
+<text x="1200.00" y="3459.00" font-size="13" class="muted" text-anchor="start" >physical back or structural section. No cutting or structural</text>
+<text x="1200.00" y="3477.00" font-size="13" class="muted" text-anchor="start" >change is requested or approved. LIV-P1 / LIV-P2 are count/load</text>
+<text x="1200.00" y="3495.00" font-size="13" class="muted" text-anchor="start" >allowances only; inherited positions are held (H-POOJA-GEOMETRY).</text>
+<text x="1200.00" y="3529.00" font-size="13" class="muted" text-anchor="start" >Fan points and lofts are assumed; curtain-pocket sizes are</text>
+<text x="1200.00" y="3547.00" font-size="13" class="muted" text-anchor="start" >indicative only (HD-14). Switch-plate zones are not drawn: the</text>
+<text x="1200.00" y="3565.00" font-size="13" class="muted" text-anchor="start" >master holds none (only the R05 latch-side strip appears on the</text>
+<text x="1200.00" y="3583.00" font-size="13" class="muted" text-anchor="start" >children’s elevation).</text>
+<text x="1200.00" y="3627.00" font-size="17" class="sect" text-anchor="start" >CONDITIONAL DETAILS (schematic, not to scale)</text>
+<g transform="translate(1200 3641)" fill="none">
 <rect x="0" y="0" width="120" height="14" fill="#d9dde0" stroke="#5d6e77"/>
 <text x="134" y="11" font-size="12.5" fill="#203b43">concrete slab (underside derived)</text>
 <rect x="15" y="14" width="90" height="40" fill="none" stroke="#8a97a0" stroke-dasharray="6 3"/>
@@ -948,22 +950,22 @@
 <text x="134" y="98" font-size="12.5" fill="#203b43">fitting: product fit, access and driver</text>
 <text x="134" y="112" font-size="12.5" fill="#203b43">location to be checked (conditional)</text>
 </g>
-<text x="1200.00" y="3755.00" font-size="12.5" class="red" text-anchor="start" >(a) Raised centre, schematic section. Not a slab chase: no cutting</text>
-<text x="1200.00" y="3771.00" font-size="12.5" class="red" text-anchor="start" >or chasing is authorised.</text>
-<g transform="translate(1200 3801)" fill="none">
+<text x="1200.00" y="3773.00" font-size="12.5" class="red" text-anchor="start" >(a) Raised centre, schematic section. Not a slab chase: no cutting</text>
+<text x="1200.00" y="3789.00" font-size="12.5" class="red" text-anchor="start" >or chasing is authorised.</text>
+<g transform="translate(1200 3819)" fill="none">
 <rect x="0" y="0" width="120" height="46" fill="#e9dff0" stroke="#7c658c" stroke-dasharray="3 2"/>
 <path d="M8 16H112" stroke="#5d6e77" stroke-width="2.5"/><path d="M8 32H112" stroke="#5d6e77" stroke-width="2.5" stroke-dasharray="8 3"/>
 <text x="134" y="19" font-size="12.5" fill="#203b43">track 1: sheer</text>
 <text x="134" y="35" font-size="12.5" fill="#203b43">track 2: blackout</text>
 </g>
-<text x="1200.00" y="3867.00" font-size="12.5" class="red" text-anchor="start" >(b) Curtain pocket, schematic plan (LIV, MBR, CBR). Clear width,</text>
-<text x="1200.00" y="3883.00" font-size="12.5" class="red" text-anchor="start" >depth and track spacing are unverified (HD-14).</text>
-<g id="north-arrow" data-north="sheet-bottom" transform="translate(1260 3975)"><circle r="40" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
+<text x="1200.00" y="3885.00" font-size="12.5" class="red" text-anchor="start" >(b) Curtain pocket, schematic plan (LIV, MBR, CBR). Clear width,</text>
+<text x="1200.00" y="3901.00" font-size="12.5" class="red" text-anchor="start" >depth and track spacing are unverified (HD-14).</text>
+<g id="north-arrow" data-north="sheet-bottom" transform="translate(1260 3993)"><circle r="40" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 34L15.2 -18.0L0 -8.0L-15.2 -18.0Z" fill="#203b43"/>
 <text y="57" font-size="16" font-weight="700" text-anchor="middle">N</text>
 <text y="-46" font-size="12" class="muted" text-anchor="middle">S</text></g>
-<text x="1320.00" y="3967.00" font-size="14" class="muted" text-anchor="start" >Approx. north points to sheet-bottom.</text>
-<path d="M60 4051H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="4073.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
-<text x="1640.00" y="4073.00" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+<text x="1320.00" y="3985.00" font-size="14" class="muted" text-anchor="start" >Approx. north points to sheet-bottom.</text>
+<path d="M60 4069H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="4091.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
+<text x="1640.00" y="4091.00" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

@@ -7,7 +7,7 @@
     "type": "DL8",
     "desc": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -32,7 +32,7 @@
     "type": "DL8",
     "desc": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -57,7 +57,7 @@
     "type": "DL8",
     "desc": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -82,7 +82,7 @@
     "type": "DL8",
     "desc": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -107,7 +107,7 @@
     "type": "DL8",
     "desc": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -132,7 +132,7 @@
     "type": "DL8",
     "desc": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -157,7 +157,7 @@
     "type": "DL8",
     "desc": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -182,7 +182,7 @@
     "type": "DL8A",
     "desc": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -207,7 +207,7 @@
     "type": "DL8A",
     "desc": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -232,7 +232,7 @@
     "type": "DL8A",
     "desc": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -568,7 +568,7 @@
     "type": "DL10",
     "desc": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 10,
     "W_envelope": 10,
@@ -593,7 +593,7 @@
     "type": "DL10",
     "desc": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 10,
     "W_envelope": 10,
@@ -618,7 +618,7 @@
     "type": "DL10",
     "desc": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 10,
     "W_envelope": 10,
@@ -643,7 +643,7 @@
     "type": "DL8V",
     "desc": "24 V recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
     "supply": "24V",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 8,
     "W_envelope": 8,
@@ -1508,7 +1508,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -1533,7 +1533,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -1558,7 +1558,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -1583,7 +1583,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -1608,7 +1608,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -1633,7 +1633,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -1658,7 +1658,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -1683,7 +1683,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -2755,7 +2755,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -2780,7 +2780,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -2805,7 +2805,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -2830,7 +2830,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -2855,7 +2855,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -2880,7 +2880,7 @@
     "type": "DL6",
     "desc": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
     "supply": "230TE",
-    "cct": "3000K",
+    "cct": "4000K",
     "cove": false,
     "W_nominal": 6,
     "W_envelope": 6,
@@ -2962,23 +2962,23 @@
     "z_ft": null,
     "path_ft": [
       [
-        23.1698,
-        33.3804
+        22.8698,
+        32.1
       ],
       [
-        20.7198,
-        33.3804
+        20.4198,
+        32.1
       ],
       [
-        20.7198,
-        35.3304
+        20.4198,
+        34.05
       ]
     ],
-    "mount_h_m": 2.9591,
+    "mount_h_m": 3.048,
     "ip": "IP20",
     "cri_min": 90,
     "r9_min": 50,
-    "note": "lit L-corner of the LINE frame; off or low in bed scenes",
+    "note": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL).",
     "tunable": false
   },
   {
@@ -3000,23 +3000,23 @@
     "z_ft": null,
     "path_ft": [
       [
-        24.7659,
-        33.3804
+        25.0659,
+        32.1
       ],
       [
-        27.2159,
-        33.3804
+        27.5159,
+        32.1
       ],
       [
-        27.2159,
-        35.3304
+        27.5159,
+        34.05
       ]
     ],
-    "mount_h_m": 2.9591,
+    "mount_h_m": 3.048,
     "ip": "IP20",
     "cri_min": 90,
     "r9_min": 50,
-    "note": "lit L-corner of the LINE frame; off or low in bed scenes",
+    "note": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL).",
     "tunable": false
   },
   {
@@ -3038,23 +3038,23 @@
     "z_ft": null,
     "path_ft": [
       [
-        27.2159,
-        36.9291
+        27.5159,
+        38.4991
       ],
       [
-        27.2159,
-        38.8791
+        27.5159,
+        40.4491
       ],
       [
-        24.7659,
-        38.8791
+        25.0659,
+        40.4491
       ]
     ],
-    "mount_h_m": 2.9591,
+    "mount_h_m": 3.048,
     "ip": "IP20",
     "cri_min": 90,
     "r9_min": 50,
-    "note": "lit L-corner of the LINE frame; off or low in bed scenes",
+    "note": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL).",
     "tunable": false
   },
   {
@@ -3076,23 +3076,23 @@
     "z_ft": null,
     "path_ft": [
       [
-        23.1698,
-        38.8791
+        22.8698,
+        40.4491
       ],
       [
-        20.7198,
-        38.8791
+        20.4198,
+        40.4491
       ],
       [
-        20.7198,
-        36.9291
+        20.4198,
+        38.4991
       ]
     ],
-    "mount_h_m": 2.9591,
+    "mount_h_m": 3.048,
     "ip": "IP20",
     "cri_min": 90,
     "r9_min": 50,
-    "note": "lit L-corner of the LINE frame; off or low in bed scenes",
+    "note": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL).",
     "tunable": false
   },
   {

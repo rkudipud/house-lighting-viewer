@@ -1,8 +1,7 @@
-# Layout views (read-only) - REVIEW DRAFT, not construction released
+# Current layout views (read-only)
 
-Drawn only from the canonical master `house-design.json`, sha256 `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac`.
-REVIEW DRAFT; not construction-released
-This is a new review edition on the integrated OPT-1 lighting master; the earlier published set (bound to master 124ef698) is a separate folder and is not overwritten or superseded by it.
+Drawn only from the canonical master `house-design.json`, sha256 `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822`.
+review drawing; not construction-released
 Nothing here edits the master, adds a design decision or replaces a drawing in it. Not a construction release.
 Sheet drawings are south-up: the page is **not rotated**, and the north arrow on every sheet points to the bottom of the page.
 
@@ -54,7 +53,7 @@ Sheet drawings are south-up: the page is **not rotated**, and the north arrow on
 - D01 is a single leaf in the model while the architectural description says double leaf. Confirm the existing entrance and swing on site.
 
 ## Source status
-- Bound master: `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac` (the file was only read).
+- Bound master: `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822` (the file was only read).
 
 ## Not elevated (and why)
 - Open edges have no wall record, so no wall is invented: living-south, dining-north (open to each other), the lobby's east edge, and the balcony's west/north/east edges. Each is noted on its sheet.

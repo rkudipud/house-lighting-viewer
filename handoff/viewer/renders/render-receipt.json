@@ -1,9 +1,9 @@
 {
   "status": "REVIEW DRAFT - not a construction release",
-  "master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
-  "viewer_html_sha256": "8fd01f6f2801ca3ba715f44109ee89aefee95e2055acd20186d8dc483c462ee5",
-  "current_fixed_cct_map_sha256": "b673bf4189c251f28fb9327bfbc7e45e2009b452bc727cdaeca158a27eb7aa4f",
-  "frozen_heatmaps_sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+  "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "viewer_html_sha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
+  "current_fixed_cct_map_sha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
+  "frozen_heatmaps_sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
   "renders": [
     {
       "file": "01-whole-flat-dollhouse.png",
@@ -18,8 +18,8 @@
       },
       "width": 1600,
       "height": 1060,
-      "bytes": 405687,
-      "sha256": "516d810f3706e2875d427f9088a31ab4f5f1fc6219af9ad84e173730eb06279e"
+      "bytes": 412284,
+      "sha256": "6c3b2f19e20d6257d5e39506b518c9af235f917d767297354eaad04e7acbb6af"
     },
     {
       "file": "02-living-light-and-curtains.png",
@@ -34,8 +34,8 @@
       },
       "width": 1600,
       "height": 1060,
-      "bytes": 445461,
-      "sha256": "af4607c503ff74525a1d96fb5ed8cfe872286812a5a266e615c3c6b39d267f17"
+      "bytes": 456674,
+      "sha256": "5caea5f0b948af115d3ed46e10883e489f52689e241eb03bb9f4a9d006def178"
     },
     {
       "file": "03-master-proposed-interiors.png",
@@ -50,8 +50,8 @@
       },
       "width": 1600,
       "height": 1060,
-      "bytes": 590325,
-      "sha256": "83971d32cf2c2e46bfb96f3c0e41d8e6f26f0676fb839fbae2f0f5a6e9aa58d5"
+      "bytes": 593081,
+      "sha256": "68e99b2522e00551576f72198a6d6616f545d5bc596b5136e5731d908a986c94"
     }
   ],
   "browser_errors": [],

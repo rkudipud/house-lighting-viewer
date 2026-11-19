@@ -21,7 +21,8 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 HOUSE = Path(r"handoff/source-basis")
 sys.path.insert(0, str(ROOT / "lighting" / "source"))
-from validate_cct_revision import PRIOR_SHA, load_verified, verify
+from validate_cct_revision import CURRENT_SHA as CCT_SHA, PRIOR_SHA, load_verified, verify
+from validate_cbr_revision import CURRENT_SHA, verify as verify_cbr
 
 
 def sha(path: Path) -> str:
@@ -41,6 +42,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--master", type=Path, default=HOUSE / "house-design.json")
     parser.add_argument("--prior-master", type=Path, required=True)
+    parser.add_argument("--cct-master", type=Path, required=True)
     parser.add_argument("--out", type=Path, default=ROOT / "final-handoff")
     args = parser.parse_args()
     out, master_path = args.out.resolve(), args.master.resolve()
@@ -55,8 +57,11 @@ def main() -> None:
 
     check("master hash", sha(master_path) == master_sha, master_sha)
     m = load(master_path)
-    delta = verify(load_verified(args.prior_master, PRIOR_SHA), m)
+    cct_master = load_verified(args.cct_master, CCT_SHA)
+    delta = verify(load_verified(args.prior_master, PRIOR_SHA), cct_master)
     check("validated CCT-only successor", ledger["cct_revision"] == delta, delta)
+    cbr_delta = verify_cbr(cct_master, load_verified(master_path, CURRENT_SHA))
+    check("validated provisional CBR successor", ledger["children_ceiling_revision"] == cbr_delta, cbr_delta)
     decision = load(out / "source-evidence" / "living-supply-and-cabinet-selections-receipt.json")
     wardrobe = load(out / "source-evidence" / "wardrobe-interiors-reference-receipt.json")
     previous = load(out / "source-evidence" / "homeowner-coordination-receipt.json")
@@ -145,7 +150,7 @@ def main() -> None:
     check("changed living drops held", all(x["modeled_dV_pct"] is None and x["status"] == "HOLD"
           for x in drops if x["circuit"] in ("C03", "C04", "C05", "X-CURT-LIV")), "not a PASS")
     check("C39/C40 marginal", next(x for x in drops if x["circuit"] == "C39")["modeled_dV_pct"] == 3.3
-          and next(x for x in drops if x["circuit"] == "C40")["modeled_dV_pct"] == 3.6, "3.3% / 3.6%")
+          and next(x for x in drops if x["circuit"] == "C40")["modeled_dV_pct"] == 3.9, "3.3% / 3.9%")
     check("LT4/LT5 held", all("invalid" in x["inrush_status"].lower()
           for x in ledger["distribution"] if x["group"] in ("LT-4", "LT-5")), "old inrush screens invalid")
 

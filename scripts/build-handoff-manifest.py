@@ -80,6 +80,7 @@ def main():
     overlay_paths = (
         "handoff/decisions/2026-11-18-material-selection-receipt.json",
         "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
+        "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
     )
     overlays = {}
     for overlay_path in overlay_paths:

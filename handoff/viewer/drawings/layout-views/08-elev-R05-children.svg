@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="3054.434" viewBox="0 0 1700 3054.434" role="img" aria-labelledby="t d">
 <title id="t">Elevations — R05 Children's bedroom</title>
 <desc id="d">Read-only interior elevations from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; wall names by compass.</desc>
-<metadata>{&quot;sheet&quot;:&quot;08-elev-R05-children&quot;,&quot;room&quot;:&quot;children&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;08-elev-R05-children&quot;,&quot;room&quot;:&quot;children&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -21,7 +21,7 @@
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >12'-6&quot; x 15' · every wall seen from inside · named by compass · HD-11 levels unmeasured</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 8 / 13</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
 <g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
 <text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
@@ -534,6 +534,6 @@
 <text x="60.00" y="2988.43" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
 <text x="60.00" y="3010.43" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
 <path d="M60 3020.434H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="3042.43" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
-<text x="1640.00" y="3042.43" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+<text x="60.00" y="3042.43" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
+<text x="1640.00" y="3042.43" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

@@ -232,11 +232,12 @@ check("master: niche extension is reported, not a surveyed structural design",
       and pn["existing_construction"]["outside_wall_extension"]["measured_geometry"] is None
       and pn["geometry_hold"]["new_or_deeper_cutting_authorized"] is False)
 
-# RCP vs raw master (CBR H1-H6 active for review; other CBR fixtures held)
+# RCP vs raw master (CBR H1-H6, cove and LINE modelled ON for review; other CBR fixtures held)
 check("rcp: all master lighting fixtures drawn, ids equal", rcp["ids"]["fixture-id"] == fx_ids and len(fx_ids) == len(set(fx_ids)), len(fx_ids))
 cbr = sorted(f["id"] for f in house["lighting"]["fixtures"] if f["room"] == "CBR")
-held_cbr = sorted(i for i in cbr if i not in {f"CBR-H{n}" for n in range(1, 7)})
-check("rcp: CBR H1-H6 active for review; remaining CBR fittings faded and held", rcp["inactiveFixtureIds"] == held_cbr and len(cbr) > len(held_cbr), rcp["inactiveFixtureIds"])
+modelled_on = {f"CBR-H{n}" for n in range(1, 7)} | {"CBR-L1"} | {f"CBR-X{n}" for n in range(1, 5)}
+held_cbr = sorted(i for i in cbr if i not in modelled_on)
+check("rcp: CBR H1-H6, cove and LINE drawn as modelled ON; remaining CBR fittings faded and held", rcp["inactiveFixtureIds"] == held_cbr and len(cbr) > len(held_cbr), rcp["inactiveFixtureIds"])
 rcp_sheet = by_id["02-rcp"]["sheet"]
 check("rcp: circuit ids reconcile with canonical controls",
       rcp_sheet["drawn"]["circuitIds"] == circuit_ids == sorted(c["circuit"] for c in lighting["controls"]["circuits"]))

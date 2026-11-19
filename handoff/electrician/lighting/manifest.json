@@ -1,11 +1,12 @@
 {
   "schema": "house-lighting-current-review/1",
-  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-  "current_design_inputs_canonical_sha256": "a8dbdf655b3534e568a44d5a282e0f71124362746cecbb80bc817407d664d8b0",
+  "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "current_design_inputs_canonical_sha256": "8caef996de6231f6adef0bb7407f1c29c8a5fbc8bd87d108782748e38087f1d7",
   "original_photometry_design_inputs_canonical_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
   "original_heatmaps_sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+  "heatmaps_sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
   "source_verification_sha256": "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9",
-  "rebind_status": "OPTICAL_SOURCE_UNCHANGED; numerical heatmaps reused, not a new photometric run",
+  "rebind_status": "CBR_ONLY_GENERIC_OPTICS_REANALYSIS; other room grids retain original optical provenance",
   "site_assumptions": "approximate lighting zones, unmeasured curtain lengths, generic optics; no curtain lux credit",
   "counts": {
     "base_fittings": 104,
@@ -40,7 +41,76 @@
       "LOB:HIGH+LOW_100"
     ],
     "original_verification_passes": 82,
-    "unchanged_optical_fixture_count": 104
+    "unchanged_optical_fixture_count": 104,
+    "current_grid_comparison": {
+      "grid_statistics_compared": 71,
+      "grids_without_reported_statistics": [
+        "UTL:LOW_100",
+        "UTL:HIGH+LOW_100",
+        "DRS:LOW_100",
+        "DRS:HIGH+LOW_100",
+        "LOB:LOW_100",
+        "LOB:HIGH+LOW_100"
+      ]
+    },
+    "cct_revision": {
+      "prior_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+      "current_master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+      "changed_fixture_ids": [
+        "CBR-H1",
+        "CBR-H2",
+        "CBR-H3",
+        "CBR-H4",
+        "CBR-H5",
+        "CBR-H6",
+        "DIN-H1",
+        "DIN-H2",
+        "DIN-H3",
+        "DIN-H6",
+        "LIV-H1",
+        "LIV-H10",
+        "LIV-H2",
+        "LIV-H3",
+        "LIV-H4",
+        "LIV-H5",
+        "LIV-H6",
+        "LIV-H7",
+        "LIV-H8",
+        "LIV-H9",
+        "MBR-H1",
+        "MBR-H2",
+        "MBR-H3",
+        "MBR-H4",
+        "MBR-H5",
+        "MBR-H6",
+        "MBR-H7",
+        "MBR-H8"
+      ],
+      "changed_circuits": [
+        "C01",
+        "C02",
+        "C09",
+        "C10",
+        "C20",
+        "C37"
+      ],
+      "note": "CCT proposal only; fixtures, circuits, lumens, watts and geometry otherwise unchanged. Prior optical outputs are inherited, not recalculated."
+    },
+    "cbr_revision": {
+      "prior_master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+      "current_master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+      "predecessor_master_sha256": "e7d2e6c7cdeedd72abb3dd236304646eb01174a2df65b5401be8c53b907853e7",
+      "changed_fixture_ids": [
+        "CBR-X1",
+        "CBR-X2",
+        "CBR-X3",
+        "CBR-X4"
+      ],
+      "heatmaps_sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
+      "r05_operations": 292,
+      "predecessor_check": "Only the proposed CBR LINE paths and directly dependent calculations changed; the existing cove, all CCTs, loads and other fixture positions are retained. H-CBR-CEIL and construction holds remain.",
+      "note": "R05 successor: fan at nominal room centre (1050 mm planning sweep, product not selected), homeowner-reported band heights (slab unmeasured) and CBR-only re-analysis with the retained cove and LINE modelled ON. H-CBR-CEIL, site, procurement and construction holds remain."
+    }
   },
   "files": {
     "bom-historical-estimate.json": {
@@ -48,19 +118,19 @@
       "bytes": 27040
     },
     "calc-results-current.json": {
-      "sha256": "ada692c3ace0aaf86447ef2e9c6c12717d93bcbc44ae726007113178245f7c43",
-      "bytes": 274744
+      "sha256": "99e309907cddb031dea971bac3460c9ba22bcda7ebb1bc858bf3f39d587187bc",
+      "bytes": 275567
     },
     "calculation-validity.json": {
-      "sha256": "d661791112d952a2835a4570697b685035b6c51e325aa2219772eb27f8832f62",
-      "bytes": 12071
+      "sha256": "c2273cc0706aaa28f16dc05f8d557d63f3d954eab2932e37c5e17ffd276c7bec",
+      "bytes": 13418
     },
     "circuit-control-psu-ledger.json": {
-      "sha256": "e090aa5acfbef834cc75c920327cc2c081bb8f8128786e352773c8c291dd6e43",
+      "sha256": "5a38eb06d3b709778e4bf7f13c94c0e13faf09536bc9a83c5c553de2a3ccf132",
       "bytes": 68635
     },
     "circuit-ledger.csv": {
-      "sha256": "3db99fd763a5752d43419dba947eadc46652443123d5e690a050ce699c2492a3",
+      "sha256": "c4a6c424bac2f014666607e68b4f3296c2a4633c00880629883bc9aec037135a",
       "bytes": 5198
     },
     "compliance-analytic-reference.csv": {
@@ -72,7 +142,7 @@
       "bytes": 39833
     },
     "curtain-pocket-s1.json": {
-      "sha256": "c2bef62a2f9927508fea09e1d4b6b3ffe07e0881d01df6acbebe3fc1cb907bd3",
+      "sha256": "1605d3187d970df6d2a5840370418a794087a01d199f2ad15724ccc2d29b71f8",
       "bytes": 41373
     },
     "curtain-strips.csv": {
@@ -80,32 +150,32 @@
       "bytes": 1092
     },
     "electrical-checks.json": {
-      "sha256": "b6d7ca623320cc6446c5d2cc44db29c27c558b6608bb6288bf42057aea17a712",
+      "sha256": "5c64709009008699b4529cc570e1475e9f7a1e13d8f954a578c09b99e57407cd",
       "bytes": 89280
     },
     "fixed-cct-map.json": {
-      "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
-      "bytes": 116779
+      "sha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
+      "bytes": 115982
     },
     "fixture-ledger.csv": {
-      "sha256": "433856feb149d5a6dcad08a194eee4c4640750ec0899633d60cbf30f221cd280",
-      "bytes": 26610
+      "sha256": "8302c2b916b41ee9137be1c5b0bc4b7de1c3ddb0351441f068c99ab83101e17f",
+      "bytes": 26594
     },
     "fixture-ledger.json": {
-      "sha256": "579933c72bd768da7ca20c8e7bcbe50a57c62ea1ecdfb2aaa97d4dc3da0c58ac",
-      "bytes": 72540
+      "sha256": "3fb36a0aca7d068116a0674421ec707896c76c2411e469450fbe26ad9e0afe48",
+      "bytes": 73300
     },
     "generic-product-search.csv": {
-      "sha256": "a046dbb096f522e7e78de3435836598e1c64f7145533660658b12b0026e37c90",
-      "bytes": 8249
+      "sha256": "e897d4ab9cba915f6fcc1d33aebcc1a4ddb5b6b4124b1afc4a0f4bdf7eec1bde",
+      "bytes": 8077
     },
     "heatmaps/BAL-analytic.png": {
       "sha256": "8aeaa62b37783a3d2b32f3819617e413c91b126667f73dd70e736a493d1abd55",
       "bytes": 77756
     },
     "heatmaps/CBR-analytic.png": {
-      "sha256": "277c3e6a99c1adda6afe9c804c3f7f93c5560782601903013df6da698a088abb",
-      "bytes": 84297
+      "sha256": "5ac79bd48cfa734b371d37b4a97edae54583702c77f311ab140b0b2d516f9e64",
+      "bytes": 85266
     },
     "heatmaps/DIN-analytic.png": {
       "sha256": "a1692362822faf5ce89d01e6de396068728ef2ac8caedc63c857aca09b994295",
@@ -148,82 +218,154 @@
       "bytes": 72391
     },
     "heatmaps-summary.pdf": {
-      "sha256": "ecf8bc45ecd55eb26b111816c33cc0a7f6026ee7c231c73b0f032f4c42a3e0c3",
-      "bytes": 151629
+      "sha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be",
+      "bytes": 152275
     },
     "heatmaps.json": {
-      "sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
-      "bytes": 1801418
+      "sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
+      "bytes": 1801309
     },
     "lighting-design-inputs.json": {
-      "sha256": "73306931b538ae39808979e9c75be4a5e30d16705353608019957decfbe84e86",
-      "bytes": 375241
+      "sha256": "67f3a43f9fd96e2cadf9b1be8202baef783ffc35185fead72ed34b2222debe1e",
+      "bytes": 377451
+    },
+    "lighting-plan-main-zoom-1.png": {
+      "sha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7",
+      "bytes": 109830
+    },
+    "lighting-plan-main-zoom-2.png": {
+      "sha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae",
+      "bytes": 101816
+    },
+    "lighting-plan-main-zoom-3.png": {
+      "sha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a",
+      "bytes": 105174
+    },
+    "lighting-plan-main-zoom-4.png": {
+      "sha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8",
+      "bytes": 121127
+    },
+    "lighting-plan-main-zoom-5.png": {
+      "sha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417",
+      "bytes": 99631
+    },
+    "lighting-plan-main-zoom-6.png": {
+      "sha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6",
+      "bytes": 91314
     },
     "lighting-plan-main.pdf": {
-      "sha256": "3db96699e6fb6badfba7b15131d31cce2740dca58cb0b2df4952383032abcfba",
-      "bytes": 44958
+      "sha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270",
+      "bytes": 122962
     },
     "lighting-plan-main.png": {
-      "sha256": "170f5ab07570082f28d2e25198c02e407f8091bf071ffe75b2fb87b8a76b13f4",
-      "bytes": 151758
+      "sha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48",
+      "bytes": 142999
     },
     "lighting-plan-main.svg": {
-      "sha256": "a462acf7fd22820f681496691f33c66ef9ef86073b7af2e83d0fc12ace2b1bd2",
-      "bytes": 135192
+      "sha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e",
+      "bytes": 121953
+    },
+    "lighting-plan-mood-zoom-1.png": {
+      "sha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9",
+      "bytes": 93915
+    },
+    "lighting-plan-mood-zoom-2.png": {
+      "sha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04",
+      "bytes": 111856
+    },
+    "lighting-plan-mood-zoom-3.png": {
+      "sha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939",
+      "bytes": 114743
+    },
+    "lighting-plan-mood-zoom-4.png": {
+      "sha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb",
+      "bytes": 115530
+    },
+    "lighting-plan-mood-zoom-5.png": {
+      "sha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee",
+      "bytes": 111193
+    },
+    "lighting-plan-mood-zoom-6.png": {
+      "sha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de",
+      "bytes": 108269
     },
     "lighting-plan-mood.pdf": {
-      "sha256": "cea24866409f4667f0761858348f5798fa1243ca0fc6b3c626d08b257966014c",
-      "bytes": 36237
+      "sha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820",
+      "bytes": 106406
     },
     "lighting-plan-mood.png": {
-      "sha256": "0f38d41aa5bcad8ad8544a96bda2f9fa44f292e79014adddd3e85d6e132f7446",
-      "bytes": 146976
+      "sha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8",
+      "bytes": 160673
     },
     "lighting-plan-mood.svg": {
-      "sha256": "058877c18a2e87e6bc3f1ced3864ca6cc45b51c80bdcd759a4e745c9e5a0067d",
-      "bytes": 115125
+      "sha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31",
+      "bytes": 139450
+    },
+    "lighting-plan-task-zoom-1.png": {
+      "sha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331",
+      "bytes": 100814
+    },
+    "lighting-plan-task-zoom-2.png": {
+      "sha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53",
+      "bytes": 103865
+    },
+    "lighting-plan-task-zoom-3.png": {
+      "sha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae",
+      "bytes": 95768
+    },
+    "lighting-plan-task-zoom-4.png": {
+      "sha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609",
+      "bytes": 113216
+    },
+    "lighting-plan-task-zoom-5.png": {
+      "sha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8",
+      "bytes": 94469
+    },
+    "lighting-plan-task-zoom-6.png": {
+      "sha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2",
+      "bytes": 96499
     },
     "lighting-plan-task.pdf": {
-      "sha256": "5f76af78b2d5fc6626f1bc2c8ec923ee5b1bd7fd7c337378caebb0f9e9b80999",
-      "bytes": 39168
+      "sha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4",
+      "bytes": 89526
     },
     "lighting-plan-task.png": {
-      "sha256": "9f1b8e6a73fceba0816d86ebcaa6920d7ca15104beb9daf5d1688721138b5072",
-      "bytes": 130651
+      "sha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0",
+      "bytes": 142647
     },
     "lighting-plan-task.svg": {
-      "sha256": "8b2aa1ed51df58e6baeaeae43004c9f1a2af962165274e23804eb55b06df0e3f",
-      "bytes": 115138
+      "sha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9",
+      "bytes": 126868
     },
     "lighting-review-schedules.pdf": {
-      "sha256": "8d38e657d05fee4cc95f3e4a0df4c535de54dd7df0b24e831727a155ab825b65",
-      "bytes": 91481
+      "sha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d",
+      "bytes": 91409
     },
     "lighting-specification.md": {
-      "sha256": "230418fdf31068930a1b3e533c1285c4e07c6950832c60b5966dc2b24478579e",
-      "bytes": 10899
+      "sha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b",
+      "bytes": 12330
     },
     "lighting-workbench.html": {
-      "sha256": "924a9056d01dcb1b1f29b56a6a1aa7574f400c9dd03c915bb817ed3853c74af2",
-      "bytes": 617518
+      "sha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822",
+      "bytes": 618701
     },
     "README.md": {
-      "sha256": "efd1a641e58236106f91b3f134fd12c90d476ebd8f508f8be376a929005639d7",
-      "bytes": 2190
+      "sha256": "2aed84ec4f590145407fff55429a5a43828d0bbe0db82eb4748c118f2bea58b8",
+      "bytes": 2768
     },
     "supply-ledger-selected-s1.csv": {
       "sha256": "84b49749c1c54ba0c14e74066b38981e6b449d32d7be1a9f50e84585fffadf08",
       "bytes": 1432
     },
     "switchboard-schedule.csv": {
-      "sha256": "afe760ae80e7f8d8792ae0a0b1469441122b7ab9630e8553b773af3c96a557a0",
+      "sha256": "901e201da88c8185c1b142e9fc8f1f0932e486b8fdb1aa6b02ad56504313a70a",
       "bytes": 5926
     },
     "voltage-drop-selected-s1.csv": {
-      "sha256": "634da4696b95a9dc1a35d697a1b7b125b7a5987f9bb11ca2b37aed87f7c76dfe",
+      "sha256": "9a6fca743354479c083f135a73674923f87cb428d5f2d83533540e0d7ce59c75",
       "bytes": 1785
     }
   },
   "verification_receipt": "verification.json binds this manifest and is excluded from files to avoid a circular hash",
-  "generated_utc": "2026-11-18T11:18:00.222045+00:00"
+  "generated_utc": "2026-11-19T20:40:35.564061+00:00"
 }

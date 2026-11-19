@@ -24,7 +24,7 @@
   .plan-head,.panel-section{padding:16px 18px}.plan-head{border-bottom:1px solid #e0e8ea;display:flex;justify-content:space-between;gap:16px;align-items:start}
   .plan-head h2{font-size:20px}.small{color:var(--muted);font-size:12px}.drawing{padding:8px 12px 12px;background:#f8fbfb}
   canvas{display:block;width:100%;background:#fbfdfd;touch-action:manipulation}.legend{display:flex;flex-wrap:wrap;gap:10px 19px;padding:12px 18px;border-top:1px solid #e0e8ea;font-size:12px}
-  .key{display:inline-flex;align-items:center;gap:6px}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.held{border:2px dashed var(--hold);background:white}
+  .key{display:inline-flex;align-items:center;gap:6px}.key svg{width:16px;height:16px;flex:none}
   .scale{display:flex;align-items:center;gap:7px;min-width:225px}.ramp{width:116px;height:9px;background:linear-gradient(90deg,#d9e8ec,#82bacb,#d8b561,#cf793d,#813931)}
   .panel-section+.panel-section{border-top:1px solid #e0e8ea}.panel h2{font-size:19px}.panel h3{font-size:15px;margin-bottom:7px}
   .readout{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.metric{border-top:2px solid #b8cfd8;padding-top:7px}
@@ -43,7 +43,7 @@
   <div class="status"><strong>Design review only</strong><br>One floor repeated four times. Site, product and electrical checks remain open.</div>
 </header>
 <main>
-  <div class="notice"><strong>Calculated, not measured.</strong> The coloured map is a saved analytic estimate using generic optics, not a live or physically validated simulation. The four selected curtain strips have no lux credit.</div>
+  <div class="notice"><strong>Calculated, not measured.</strong> The coloured map is a saved analytic estimate using generic optics, not a live or physically validated simulation. Children's maps include the held cove and LINE fittings and do not represent the currently available viewer lighting. The four selected curtain strips have no lux credit.</div>
   <div class="tools" aria-label="Plan filters">
     <label for="room">Room<select id="room"><option value="all">All rooms</option></select></label>
     <label for="scene">Saved calculation<select id="scene">
@@ -60,7 +60,10 @@
       <div class="plan-head"><div><h2 id="plan-heading">Typical floor</h2><div class="small">Lighting zones are approximate traces, not measured walls. Select a symbol or use the fitting list.</div></div><div class="small">Sheet coordinates: +x west / +z north</div></div>
       <div class="drawing"><canvas id="plan" role="img" aria-label="Lighting plan with optional calculated illuminance overlay. Use the fitting list for keyboard access."></canvas></div>
       <div class="legend">
-        <span class="key"><i class="dot" style="background:#b96b27"></i>2700 K</span><span class="key"><i class="dot" style="background:#356e8b"></i>3000 K</span><span class="key"><i class="dot" style="background:#5475ae"></i>4000 K</span><span class="key"><i class="dot held"></i>Placement / site hold</span>
+        <span class="key"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="#b44700" stroke="#111"/></svg>2700 K / circle / solid</span>
+        <span class="key"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" fill="#782596" stroke="#111"/></svg>3000 K / square / dashed</span>
+        <span class="key"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1 15 14H1Z" fill="#0059ad" stroke="#111"/></svg>4000 K / triangle / dotted</span>
+        <span class="key"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="3 2"/></svg>Placement / site hold</span>
         <span class="scale"><span>0 lx</span><i class="ramp"></i><span>750+ lx</span></span>
       </div>
     </section>
@@ -82,7 +85,7 @@
       </section>
     </aside>
   </div>
-  <footer>Master SHA-256: <span id="master-hash"></span><br>Photometry source inputs: <span id="photometry-hash"></span>. Saved maps retain their original calculation provenance; no new product photometry is claimed.</footer>
+  <footer>Master SHA-256: <span id="master-hash"></span><br>Historical photometry source inputs: <span id="photometry-hash"></span>. Children's geometry has a separate provisional reanalysis; other maps retain their original calculation provenance. No product photometry is claimed.</footer>
 </main>
 <script id="workbench-data" type="application/json">__DATA__</script>
 <script>
@@ -90,7 +93,7 @@
 const data=JSON.parse(document.getElementById("workbench-data").textContent);
 const $=id=>document.getElementById(id);
 const roomSelect=$("room"), sceneSelect=$("scene"), layerSelect=$("layer"), fixtureSelect=$("fixture"), canvas=$("plan");
-const ctx=canvas.getContext("2d"), FT=.3048, colours={2700:"#b96b27",3000:"#356e8b",4000:"#5475ae"};
+const ctx=canvas.getContext("2d"), FT=.3048, colours={2700:"#b44700",3000:"#782596",4000:"#0059ad"};
 const roomById=Object.fromEntries(data.rooms.map(r=>[r.id,r]));
 let selected="", projection=null, visibleFixtures=[];
 for(const r of data.rooms){const o=document.createElement("option");o.value=r.id;o.textContent=r.name+" ("+r.id+")";roomSelect.appendChild(o)}
@@ -126,6 +129,24 @@ function labelRoom(r){
   const [a,b]=projection.xy(x,z);ctx.font="600 11px Segoe UI";ctx.textAlign="center";ctx.textBaseline="middle";
   const text=r.id+" / "+r.name,w=ctx.measureText(text).width+8;ctx.fillStyle="rgba(255,255,255,.82)";ctx.fillRect(a-w/2,b-8,w,16);ctx.fillStyle="#274754";ctx.fillText(text,a,b);
 }
+function midpoint(pts){
+  const lengths=pts.slice(1).map((p,i)=>Math.hypot(p[0]-pts[i][0],p[1]-pts[i][1]));
+  let left=lengths.reduce((a,b)=>a+b,0)/2;
+  for(let i=0;i<lengths.length;i++){
+    if(left<=lengths[i]&&lengths[i]){const t=left/lengths[i];return pts[i].map((n,j)=>n+(pts[i+1][j]-n)*t)}
+    left-=lengths[i];
+  }
+  return pts[0];
+}
+function symbol(x,y,cct,held,selected){
+  const r=selected?7:5;ctx.beginPath();
+  if(cct===2700)ctx.arc(x,y,r,0,Math.PI*2);
+  else if(cct===3000)ctx.rect(x-r,y-r,2*r,2*r);
+  else{ctx.moveTo(x,y-r);ctx.lineTo(x+r,y+r);ctx.lineTo(x-r,y+r);ctx.closePath()}
+  ctx.fillStyle=colours[cct]||"#4b6269";ctx.fill();ctx.strokeStyle="#fff";ctx.lineWidth=2;ctx.stroke();
+  ctx.strokeStyle="#111";ctx.lineWidth=1;ctx.stroke();
+  if(held){ctx.beginPath();ctx.arc(x,y,r+5,0,Math.PI*2);ctx.setLineDash([3,3]);ctx.strokeStyle="#111";ctx.lineWidth=1.5;ctx.stroke();ctx.setLineDash([])}
+}
 function draw(){
   const width=Math.max(250,canvas.parentElement.clientWidth-24), b=bounds();
   const height=Math.min(1050,Math.max(360,Math.round(width*(b.z1-b.z0)/(b.x1-b.x0))));
@@ -155,11 +176,10 @@ function draw(){
     const isHeld=f.hold_ids.length>0, isSelected=f.id===selected, col=colours[f.cct_k]||"#4b6269";
     if(pts.length>1){
       ctx.beginPath();pts.forEach((v,i)=>{const [x,y]=projection.xy(...v);if(i)ctx.lineTo(x,y);else ctx.moveTo(x,y)});
-      ctx.setLineDash(isHeld?[5,4]:[]);ctx.strokeStyle=isSelected?"#121f2b":col;ctx.lineWidth=isSelected?4.5:3;ctx.stroke();ctx.setLineDash([]);
-    }else{
-      const [x,y]=projection.xy(...pts[0]);ctx.beginPath();ctx.arc(x,y,isSelected?6:4,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();ctx.strokeStyle="#fff";ctx.lineWidth=1;ctx.stroke();
-      if(isHeld){ctx.beginPath();ctx.arc(x,y,8,0,Math.PI*2);ctx.setLineDash([3,3]);ctx.strokeStyle="#9d4b28";ctx.lineWidth=1.5;ctx.stroke();ctx.setLineDash([])}
+      ctx.setLineDash(f.cct_k===3000?[8,4]:f.cct_k===4000?[2,3]:[]);
+      ctx.strokeStyle=isSelected?"#121f2b":col;ctx.lineWidth=isSelected?4.5:3;ctx.stroke();ctx.setLineDash([]);
     }
+    const [x,y]=projection.xy(...(pts.length>1?midpoint(pts):pts[0]));symbol(x,y,f.cct_k,isHeld,isSelected);
   }
 }
 function updateOptions(){
@@ -181,7 +201,7 @@ function updateStats(){
   $("plan-heading").textContent=id==="all"?"Typical floor":roomById[id].name+" / "+id;
   for(const key of ["avg","min","u0"])$(key).textContent="--";
   let warning="";if(id==="all"||id==="LIV")if(scene!=="HIGH_100"&&scene!=="Off"&&scene!=="Night")warning="Living LOW and scenes using accent retain an inherited pooja allowance; the revised niche is held.";
-  if(id==="CBR"||id==="all")warning+=(warning?" ":"")+"Children's room geometry is a planned, unmeasured frame; H1-H6 are shown as active, while specific ceiling, bed and desk holds remain.";
+  if(id==="CBR"||id==="all")warning+=(warning?" ":"")+"Children's geometry and outward LINE proposal are unmeasured. The saved CBR estimates include the held cove and LINE strips; they are not currently available viewer light. H1-H6 are active for review; ceiling, bed and desk holds remain.";
   if(scene==="Off"||scene==="Night"){
     $("calc-context").textContent="No stored "+scene.toLowerCase()+" room-grid calculation. No substitute grid is shown.";
   }else if(!calc){$("calc-context").textContent="Choose one room to see its saved "+scene+" statistics."}

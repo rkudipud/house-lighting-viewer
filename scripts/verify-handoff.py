@@ -117,7 +117,7 @@ def verify(root, manifest, expected_master):
             if target.suffix.lower() in {".json", ".md", ".html", ".svg", ".csv", ".py", ".js", ".mjs", ".txt", ".cal", ".rad"}:
                 if PRIVATE_PATH.search(data.decode("utf-8-sig")):
                     errors.append(f"{path}: private absolute source path")
-            if target.suffix.lower() == ".html" and not target.name.endswith(".template.html"):
+            if target.suffix.lower() == ".html" and target.name != "template.html" and not target.name.endswith(".template.html"):
                 errors.extend(check_html_links(root, target))
             if target.suffix.lower() == ".svg":
                 if ET.fromstring(data).tag.split("}")[-1] != "svg":

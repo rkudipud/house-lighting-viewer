@@ -1,10 +1,10 @@
 {
-  "status": "coordinated-electrical-review-not-procurement-approved",
+  "status": "verified-electrical-provisional-cbr-review",
   "constructionRelease": false,
-  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "basisMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "sourceManifest": "SHA256SUMS.txt",
-  "sourceManifestSha256": "859de7c2efda9ba47a97825458a81d734c544c8f33144c004f6f1c923532e081",
-  "sourceFiles": 80,
+  "sourceManifestSha256": "c42aeba7482c0baca34226af60a2c81d88907e7142d80247ff4a54a3fc33b025",
+  "sourceFiles": 79,
   "omittedFiles": [
     {
       "path": "sources/ELG-150-SPEC.PDF",
@@ -84,104 +84,104 @@
     {
       "path": "bill-of-materials-render.json",
       "bytes": 562,
-      "sha256": "e5aef196ff61ec78e89eb3d04abecdd0f415c1e4afa0fa79e164f54c873bd333",
-      "sourceSha256": "e5aef196ff61ec78e89eb3d04abecdd0f415c1e4afa0fa79e164f54c873bd333",
+      "sha256": "f263b7dcd4d08116ef82c823c3e7a22495578188e553955959a68b736d69d754",
+      "sourceSha256": "f263b7dcd4d08116ef82c823c3e7a22495578188e553955959a68b736d69d754",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "bill-of-materials.html",
-      "bytes": 13202,
-      "sha256": "62e7402a5e9982fb859407b01636b3210282141076d42e1f0c79e00342436060",
-      "sourceSha256": "444cc90b61141bdd796031a5f285378d13adf702fc0616368c08220feffb84fb",
+      "bytes": 13336,
+      "sha256": "47f8a6c4eac716c6b7b9e899e03d707dcda2063e2a53bea07a158969f049fb9b",
+      "sourceSha256": "d80ca9bd0a62189aadfae78041875701de3f30fd992f6db17da82eb90be48a9b",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "bill-of-materials.md",
-      "bytes": 6458,
-      "sha256": "72c86538cbdabe4d2bdfd529112b07f14a0909f1a6f00ed705b17cebf6c33f4a",
-      "sourceSha256": "a8236e2b2d954ff5dcd233be7360c2a28b49ac5c9d7af0f0c012aa67eab6821f",
+      "bytes": 6592,
+      "sha256": "4f78aacedc5a2b155d020e277ddd93cd0c5a32b1165d43a695476c97b3f97a49",
+      "sourceSha256": "d93b38e45be4f7df58a10e6525fcf7b314e3edbf32eb68b109f9639dff28b73c",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "bill-of-materials.pdf",
-      "bytes": 87965,
-      "sha256": "3b36b26087531b50b067755078687d72957f84d664dd91ada9054ed072fa345d",
-      "sourceSha256": "3b36b26087531b50b067755078687d72957f84d664dd91ada9054ed072fa345d",
+      "bytes": 88469,
+      "sha256": "ef0900fd0ecc27bd3d8cd8bc7bace8df8c161ad7bfb0886ba171782f235c442d",
+      "sourceSha256": "ef0900fd0ecc27bd3d8cd8bc7bace8df8c161ad7bfb0886ba171782f235c442d",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "build-context.json",
       "bytes": 887,
-      "sha256": "091386b6a7d1f8f3fd7d48981d8a7f96405dd9acf2e0f849ecd680fdcd452345",
-      "sourceSha256": "091386b6a7d1f8f3fd7d48981d8a7f96405dd9acf2e0f849ecd680fdcd452345",
+      "sha256": "7d17a7e11000a7a7a88d358e993b74d24b5f38f4f66f6368b116eb9346cfbcef",
+      "sourceSha256": "7d17a7e11000a7a7a88d358e993b74d24b5f38f4f66f6368b116eb9346cfbcef",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "control-options-render.json",
       "bytes": 562,
-      "sha256": "866e018cf6a5903664d5e05ef0e60d48a559e39b4dee34fa52d46d8147d439bf",
-      "sourceSha256": "866e018cf6a5903664d5e05ef0e60d48a559e39b4dee34fa52d46d8147d439bf",
+      "sha256": "f347f0ebe06c84fe41d7a4043b2d4b833519cb579ecbbbd0587db4680b4e706c",
+      "sourceSha256": "f347f0ebe06c84fe41d7a4043b2d4b833519cb579ecbbbd0587db4680b4e706c",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "control-options.html",
       "bytes": 9083,
-      "sha256": "78e4b632435ccee649f4365afb27c997d74b995271caf0174865f366da261a93",
-      "sourceSha256": "7a6b72577f4ea166a78faa9454b54fce961e486c05ccf7bb93828eca40033280",
+      "sha256": "82f0ea4a89bacf9555074b10d2d1df9d705bcf8b32ac0f1d47e4a0cb5aa0d9ba",
+      "sourceSha256": "4ab4d14b089f1b47bcb9d7008ba5525e72e8585cec90f7e62b42d1fc374486cb",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "control-options.md",
       "bytes": 5653,
-      "sha256": "559044675842d24093f779af6bd5128d34edba414f717e2e5c744d575f73cf2f",
-      "sourceSha256": "0cedd08c1386f9301ecee5fa9df364bb0c8f10df6ea4c91f7990568765ec43bb",
+      "sha256": "bd93bc162703a41745195bea4a12f4119a2ec8d2bb9ee83e9ab6306f9ad1ffeb",
+      "sourceSha256": "825fbbb9a22b4b2e406d259e68e9c2782e151165ccb216f377ba9465484ff64c",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "control-options.pdf",
       "bytes": 84387,
-      "sha256": "d4b71c077dd8745b8573324b9b487e6da0ecb14d54455a20523d9fe67c80288c",
-      "sourceSha256": "d4b71c077dd8745b8573324b9b487e6da0ecb14d54455a20523d9fe67c80288c",
+      "sha256": "b5af31183b6ebba59e606e99d9b4372249c7c3e98b0e9b6087212e5b205a9ccd",
+      "sourceSha256": "b5af31183b6ebba59e606e99d9b4372249c7c3e98b0e9b6087212e5b205a9ccd",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "electrical-review-render.json",
       "bytes": 829,
-      "sha256": "59a1b1fca63658eda7b3ac205b5b6b0d79d117f02ecf1437aab32d312e5fd888",
-      "sourceSha256": "59a1b1fca63658eda7b3ac205b5b6b0d79d117f02ecf1437aab32d312e5fd888",
+      "sha256": "4ea8f2ac95363c10fa97c2a0263f895481fbebc569ec91dfcfe58dc76d600bea",
+      "sourceSha256": "4ea8f2ac95363c10fa97c2a0263f895481fbebc569ec91dfcfe58dc76d600bea",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "electrical-review.html",
-      "bytes": 163479,
-      "sha256": "a037eac67d46c7f2fa25fab72dad12065205d09f343f225bb259a8c9b3dcc4a1",
-      "sourceSha256": "02d503a97538652b66ffd13277ad9a5cf025505a955bf31d53c8090d30ebbb97",
+      "bytes": 164367,
+      "sha256": "fcabe145ec74f93f153c655a59eb744b2f6f84f5040309d40cb4072e0636cee8",
+      "sourceSha256": "bf340569ba7be928e2f7e4adb5d4b6e7d27cb7f7a6856870a248d3dbba591ce9",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "electrical-review.md",
-      "bytes": 20924,
-      "sha256": "5b69c649eb8f26674851382ddd7c0630a67d1c85b2f13cbc917439cf5f205d70",
-      "sourceSha256": "4fe78eea286a386091fb98533f7b7fb5786009cd35225c6af08ccccf09c19741",
+      "bytes": 21799,
+      "sha256": "79e8a60c90b59f3d0b5dca57939228b992b8ac2795395dfe4a07d6064a346166",
+      "sourceSha256": "92a9527e0e4f7041c56e783011ea5b921c0cd5866bac4ae7a9b1360d3d0958b6",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "electrical-review.pdf",
-      "bytes": 257860,
-      "sha256": "8d518b8a7295bbe4da277cc7aec51fb9a9247922bdd591c2f8941cf985ed278d",
-      "sourceSha256": "8d518b8a7295bbe4da277cc7aec51fb9a9247922bdd591c2f8941cf985ed278d",
+      "bytes": 259243,
+      "sha256": "d8d3bdd9faf82412b530cd6859e978e2aeebfda52d4ef951482acb317233daac",
+      "sourceSha256": "d8d3bdd9faf82412b530cd6859e978e2aeebfda52d4ef951482acb317233daac",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -266,26 +266,18 @@
       "publicCopyModified": false
     },
     {
-      "path": "README.md",
-      "bytes": 4619,
-      "sha256": "99820e33495827a9a0864ea17f3f439d416478374440a3524d7b407288e98637",
-      "sourceSha256": "459f4530e530c60ff556e128887299fb5a154cd6d59010fe42df132f0a2d9526",
-      "localPathsRedacted": false,
-      "publicCopyModified": true
-    },
-    {
       "path": "receipt.json",
-      "bytes": 11137,
-      "sha256": "185fdb8018772a5c07a9dbdb65916194cff01c5e0fe5eb1b9935e080e3aaa09f",
-      "sourceSha256": "185fdb8018772a5c07a9dbdb65916194cff01c5e0fe5eb1b9935e080e3aaa09f",
+      "bytes": 11051,
+      "sha256": "55891630ea323685e143b572233586137d613ef2570ab43fcc984411320b0d17",
+      "sourceSha256": "55891630ea323685e143b572233586137d613ef2570ab43fcc984411320b0d17",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "schedules/circuit-schedule.csv",
       "bytes": 7550,
-      "sha256": "05fe700aed526ce97793a862fba84df033955b82c11a023a602f88e2b8c24beb",
-      "sourceSha256": "05fe700aed526ce97793a862fba84df033955b82c11a023a602f88e2b8c24beb",
+      "sha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d",
+      "sourceSha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -299,9 +291,9 @@
     },
     {
       "path": "schedules/electrical-ledger.json",
-      "bytes": 150541,
-      "sha256": "4a7cbe544c93a5ef1158540ce30bf88836aa6a24b9b762db67112bc9e1997f16",
-      "sourceSha256": "4a7cbe544c93a5ef1158540ce30bf88836aa6a24b9b762db67112bc9e1997f16",
+      "bytes": 152608,
+      "sha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f",
+      "sourceSha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -315,17 +307,17 @@
     },
     {
       "path": "schedules/fixture-class-specifications.csv",
-      "bytes": 8079,
-      "sha256": "b930252f74a26420d678c757bfe8f34738869aa70b3dd3082565cc7b3321e3fa",
-      "sourceSha256": "b930252f74a26420d678c757bfe8f34738869aa70b3dd3082565cc7b3321e3fa",
+      "bytes": 8072,
+      "sha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c",
+      "sourceSha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "schedules/fixtures.csv",
-      "bytes": 22941,
-      "sha256": "e37b7631d0fb147720b43ef7db823331751dca92004d45164cc1baaf0c67d21c",
-      "sourceSha256": "e37b7631d0fb147720b43ef7db823331751dca92004d45164cc1baaf0c67d21c",
+      "bytes": 22925,
+      "sha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52",
+      "sourceSha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -347,9 +339,9 @@
     },
     {
       "path": "schedules/location-linked-bom.csv",
-      "bytes": 58791,
-      "sha256": "bd76c7428e76f628cc765ec7b94120d5f44131b1c02c3c7184bdcf3ff0f65630",
-      "sourceSha256": "bd76c7428e76f628cc765ec7b94120d5f44131b1c02c3c7184bdcf3ff0f65630",
+      "bytes": 58759,
+      "sha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2",
+      "sourceSha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -388,8 +380,8 @@
     {
       "path": "schedules/voltage-drop-review.csv",
       "bytes": 2943,
-      "sha256": "b8f3deb573f0fa4dedb45ba45cda0c8fb9227f5be00d07f0e6ff133c8dbb2f9c",
-      "sourceSha256": "b8f3deb573f0fa4dedb45ba45cda0c8fb9227f5be00d07f0e6ff133c8dbb2f9c",
+      "sha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa",
+      "sourceSha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -435,8 +427,8 @@
     },
     {
       "path": "source-evidence/prior-control-plan-receipt.json",
-      "bytes": 6679,
-      "sha256": "eb2e4854b4a84a71ae5d943873ac1c1004558ed0e87297161ae5328d63f1739b",
+      "bytes": 6674,
+      "sha256": "c9ede6a4ec40367291c5477688a18760dd430961255c7c570f75df68ee677ff7",
       "sourceSha256": "b492db9852dced8af16a2e1274fe7bb0960824ead3680f5d1480a1da43f2f46c",
       "localPathsRedacted": true,
       "publicCopyModified": true
@@ -468,32 +460,32 @@
     {
       "path": "source-index-render.json",
       "bytes": 562,
-      "sha256": "ececce703376172e20b51c6f813b32b8f619082ddcd375710d6b33ac09b5b2a3",
-      "sourceSha256": "ececce703376172e20b51c6f813b32b8f619082ddcd375710d6b33ac09b5b2a3",
+      "sha256": "8ff08ca501017728a863407c8162267732de04639975b12929a0fc32215eba78",
+      "sourceSha256": "8ff08ca501017728a863407c8162267732de04639975b12929a0fc32215eba78",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "source-index.html",
-      "bytes": 16946,
-      "sha256": "614b97a26673f05fc6ffe4e8798f56dea0deea035d373d809b860b5da5b1eea5",
-      "sourceSha256": "86c2ee0bccd0fcbaafdce3e6b964f3b0ecaafda34b8ee86756f8ba48dc23ec4d",
+      "bytes": 16950,
+      "sha256": "183f34d24f8e557a3b15901c45c3aecf22afb503c5bafe5b9d0dda98aa0f1fbc",
+      "sourceSha256": "32ed80fbf47ab164d306d208e622f39bddcd9f2b6e320598f92329f2c2f71439",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "source-index.md",
-      "bytes": 12584,
-      "sha256": "afcd4c56f58c7b3071d5d5d09e12b0b874f0013bf1404d477c8843769936641b",
-      "sourceSha256": "57d622987e243cea60dd04d3e80efc0ee5d715e290d85a4725b1f6789d5201ce",
+      "bytes": 12588,
+      "sha256": "107555c9c8fc1fd3923cfdf370add3d5bebdb67b2d773b6fa5db4a44c2e7272a",
+      "sourceSha256": "47ed2e3243885ac39e9425a54126c379a00f8f7f03a0e9054b95789a181e19ea",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "source-index.pdf",
-      "bytes": 99207,
-      "sha256": "935e988f47c91802a37fd7dc4b513a3f179f43c9d7c7b31b7da660efcf88fed5",
-      "sourceSha256": "65cbbd6c4d2c4856d114f6c44eacbc319d214612c2f8108b1beafeed7df10161",
+      "bytes": 99238,
+      "sha256": "e87e0cfba73c8c4fb972b3913fafd19990bcf3fbc2e3da607e5c71a48ac675b7",
+      "sourceSha256": "533ec52851d49b2ddf6a2e1c76b50958adbcd0a617672fd071c86f0db3fc7f94",
       "localPathsRedacted": true,
       "publicCopyModified": true
     },
@@ -515,9 +507,9 @@
     },
     {
       "path": "tools/electrical-review.template.md",
-      "bytes": 13894,
-      "sha256": "12f8272f7c7531204c22e93c585f785825c52eac89dcee7d83ea3cc53df0294b",
-      "sourceSha256": "12f8272f7c7531204c22e93c585f785825c52eac89dcee7d83ea3cc53df0294b",
+      "bytes": 14667,
+      "sha256": "b2c0626256378e74bc2b13e5ecb98ebaac290adba95468e0e55e32b84ee414fe",
+      "sourceSha256": "b2c0626256378e74bc2b13e5ecb98ebaac290adba95468e0e55e32b84ee414fe",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -531,35 +523,35 @@
     },
     {
       "path": "tools/fw_final_bom.py",
-      "bytes": 15479,
-      "sha256": "ce7c48c1509e45bb78455cc59d5f581c8c39e9c61610651671bc3bf896e0d403",
-      "sourceSha256": "97a5b0d9b962a61b1e6d988f2ee5a01da6ec5ba0ae1bafa3bcf94514f90ad2fb",
-      "localPathsRedacted": true,
-      "publicCopyModified": true
+      "bytes": 15613,
+      "sha256": "eb1d03eb2b72fcb0f9db03070ee51594d7c72d189cddcae212429c2589a77533",
+      "sourceSha256": "eb1d03eb2b72fcb0f9db03070ee51594d7c72d189cddcae212429c2589a77533",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "tools/fw_final_build.py",
-      "bytes": 34604,
-      "sha256": "912c516c85f07d8af92e3dc898bf82fe8bf70fe1d88764590459553a65c308fd",
-      "sourceSha256": "a92780a32ca5fcebc09a63e1381742b06d3e765cd2f528850a313a065ed6d17d",
-      "localPathsRedacted": true,
-      "publicCopyModified": true
+      "bytes": 35459,
+      "sha256": "7e55aa7d2a4f83937a75c86b19b6247373f784cc84fdb47db760397720f1e4a1",
+      "sourceSha256": "7e55aa7d2a4f83937a75c86b19b6247373f784cc84fdb47db760397720f1e4a1",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "tools/fw_final_receipt.py",
       "bytes": 4433,
       "sha256": "0f56f024397ffe191e9fb0ab9eb90288e423f787694c3fb1bf36b1863e05aefd",
-      "sourceSha256": "568930b56199da367796a89d31e0eed32a911bf55c161389b38020e91a61a471",
-      "localPathsRedacted": true,
-      "publicCopyModified": true
+      "sourceSha256": "0f56f024397ffe191e9fb0ab9eb90288e423f787694c3fb1bf36b1863e05aefd",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "tools/fw_final_validate.py",
-      "bytes": 13865,
-      "sha256": "4485a9adc8e6f54e6db47f90ea5e9305af9f9a8c6caf4c2a00700d3744eda4db",
-      "sourceSha256": "0682e3ddb2e4af5bd8bcbbd8091bd346cbb5e33dd47478508753ce7ed356cfa7",
-      "localPathsRedacted": true,
-      "publicCopyModified": true
+      "bytes": 14638,
+      "sha256": "e56eb78a37347e1101fccd17dba627a24c610015046ea5d7e1214e99aa97f43e",
+      "sourceSha256": "e56eb78a37347e1101fccd17dba627a24c610015046ea5d7e1214e99aa97f43e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "tools/fw_render.py",
@@ -571,65 +563,65 @@
     },
     {
       "path": "tools/source-index.template.md",
-      "bytes": 9887,
-      "sha256": "14a303385a7f53448fa3309c7110ab9611dcfdb27345159321648642a7bf0b4e",
-      "sourceSha256": "14a303385a7f53448fa3309c7110ab9611dcfdb27345159321648642a7bf0b4e",
+      "bytes": 9891,
+      "sha256": "571b948e22a081a4bdaf32f28d004393d00e0524bf6f4edb471e8974fde62980",
+      "sourceSha256": "571b948e22a081a4bdaf32f28d004393d00e0524bf6f4edb471e8974fde62980",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "tools/wholesale-rfq.template.md",
-      "bytes": 11768,
-      "sha256": "7be4eb6d9b9bf1d5d0e6dff1af30e57507003679e5d8f0a0d64edd5d5834d805",
-      "sourceSha256": "7be4eb6d9b9bf1d5d0e6dff1af30e57507003679e5d8f0a0d64edd5d5834d805",
+      "bytes": 12071,
+      "sha256": "0e1cdb118710015d3732eee5c3c7d3daf97a96cf902287cb455ae0f2cb1a5b31",
+      "sourceSha256": "0e1cdb118710015d3732eee5c3c7d3daf97a96cf902287cb455ae0f2cb1a5b31",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "validation.json",
-      "bytes": 32249,
-      "sha256": "dd2bba5eabce9218e8ada7cd2e6a5321a1d6b51ea56741ae72908cd50e800967",
-      "sourceSha256": "dd2bba5eabce9218e8ada7cd2e6a5321a1d6b51ea56741ae72908cd50e800967",
+      "bytes": 34720,
+      "sha256": "5b01c1afb5aab26f5a03ec8d6947c6a8cdecbb93fb8e27189204cac002c84587",
+      "sourceSha256": "5b01c1afb5aab26f5a03ec8d6947c6a8cdecbb93fb8e27189204cac002c84587",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "wholesale-rfq-render.json",
       "bytes": 562,
-      "sha256": "9574536386d5d0f89c2a05509f7bc07b06197620e83470f3918fd20fd79fa256",
-      "sourceSha256": "9574536386d5d0f89c2a05509f7bc07b06197620e83470f3918fd20fd79fa256",
+      "sha256": "9590a312f59bf258e1b6dcb735ae37dfca216e1976489e4f68146676af3b3ca2",
+      "sourceSha256": "9590a312f59bf258e1b6dcb735ae37dfca216e1976489e4f68146676af3b3ca2",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "wholesale-rfq.html",
-      "bytes": 16340,
-      "sha256": "8264e0fdefb3ad555964be178b7625fec0858d1dcb4f5fc87e116aa3b61d5564",
-      "sourceSha256": "7b04bcb40dccd5211a120b9418a9f865ccc2af0adaf41f917c67927976c0a791",
+      "bytes": 16643,
+      "sha256": "5ea666e03951eee5c608cb764cadd9e7c6e34e6ebd1a0aad299fb55fc1ea129e",
+      "sourceSha256": "504889f21d3b842316d48f89e865cfd4a2f3a6e085c79644fa39bc9f30498688",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "wholesale-rfq.md",
-      "bytes": 12093,
-      "sha256": "5f664658f95a08a3ae1c7cb3d8877f811c96ee3978adb9d265e72948cb0b0860",
-      "sourceSha256": "a3eafde759509a0c96fbfe29284c9fa2d2c01b7593235507ea6629551f9ab511",
+      "bytes": 12396,
+      "sha256": "a175bfd5cdd316d4ea487cc8731df7f2c7cdd2f6eaa7dc025ba08ae15f7106e8",
+      "sourceSha256": "1f09d18a0c4d41efd40e5ceb2092ff0ae72b411f3839f06e97bdb7853973e037",
       "localPathsRedacted": false,
       "publicCopyModified": true
     },
     {
       "path": "wholesale-rfq.pdf",
-      "bytes": 101148,
-      "sha256": "d56820de7495ea4b5ca142c2712406d159a5009ca0e0bbcbee52497edae2f47c",
-      "sourceSha256": "d56820de7495ea4b5ca142c2712406d159a5009ca0e0bbcbee52497edae2f47c",
+      "bytes": 101862,
+      "sha256": "0914547eb997b6216da1af5bc7860f07f6b460d84c8791d4d9e184e94702d7ac",
+      "sourceSha256": "0914547eb997b6216da1af5bc7860f07f6b460d84c8791d4d9e184e94702d7ac",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
     {
       "path": "SHA256SUMS.txt",
-      "bytes": 7827,
-      "sha256": "859de7c2efda9ba47a97825458a81d734c544c8f33144c004f6f1c923532e081",
-      "sourceSha256": "859de7c2efda9ba47a97825458a81d734c544c8f33144c004f6f1c923532e081",
+      "bytes": 7750,
+      "sha256": "c42aeba7482c0baca34226af60a2c81d88907e7142d80247ff4a54a3fc33b025",
+      "sourceSha256": "c42aeba7482c0baca34226af60a2c81d88907e7142d80247ff4a54a3fc33b025",
       "localPathsRedacted": false,
       "publicCopyModified": false
     }

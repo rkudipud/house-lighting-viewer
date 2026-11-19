@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2060.556" viewBox="0 0 1700 2060.556" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2120.556" viewBox="0 0 1700 2120.556" role="img" aria-labelledby="t d">
 <title id="t">Elevations — R04a Master dressing</title>
 <desc id="d">Read-only interior elevations from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; wall names by compass.</desc>
-<metadata>{&quot;sheet&quot;:&quot;07-elev-R04a-dressing&quot;,&quot;room&quot;:&quot;dressing&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;07-elev-R04a-dressing&quot;,&quot;room&quot;:&quot;dressing&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -16,12 +16,12 @@
 .mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
 .title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
 .halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
-<rect width="1700" height="2060.556" fill="#fcfdfc"/>
+<rect width="1700" height="2120.556" fill="#fcfdfc"/>
 <text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Interior elevations — R04a Master dressing</text>
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >every wall seen from inside · named by compass · HD-11 levels unmeasured</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 7 / 13</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
 <g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
 <text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
@@ -52,7 +52,7 @@
 <rect x="774.0000000000001" y="150" width="22" height="14" fill="#f1ece2" stroke="#8a7a66" stroke-dasharray="4 3"/>
 <text x="802.00" y="162.00" font-size="12" class="muted" text-anchor="start" >Footprint only (below floor)</text>
 <g data-panel-id="dressing-s" data-room-id="dressing" data-wall-dir="S">
-<rect x="60" y="178" width="440" height="810.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<rect x="60" y="178" width="440" height="840.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
 <text x="76.00" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">Master dressing – south wall</text>
 <text x="76.00" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking SOUTH · left to right</text>
 <text x="76.00" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >1.07 m long · tag dressing-s</text>
@@ -101,7 +101,7 @@
 <rect x="0.0000" y="-2.9591" width="1.0717" height="2.9591" fill="url(#nowall)" stroke="#a9b4b4" stroke-width="0.008" stroke-dasharray=".06 .04"/>
 <g data-storage-id="ST-R04a-WR01" data-storage-kind="shallow_cabinet_conditional" data-panel-id="dressing-s">
 <rect x="0.0000" y="-2.1000" width="0.2997" height="2.0000" fill="#e6ecf4" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".06 .04"/>
-<text x="0.1499" y="-1.1221" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 0.1499 -1.1000)">Dressing cabinet</text>
+<text x="0.1499" y="-1.1221" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 0.1499 -1.1000)">shallow cabinet conditional</text>
 <text x="0.1499" y="-1.0201" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 0.1499 -1.1000)">ST-R04a-WR01</text>
 </g>
 <g data-storage-id="ST-R04a-LF01" data-storage-kind="loft" data-panel-id="dressing-s">
@@ -122,11 +122,13 @@
 <path d="M72 843.278H488" stroke="#e1e8e8"/>
 <text x="74.00" y="855.28" font-size="11" class="muted" text-anchor="start" >• OPEN EDGE 0.00–1.07 m: open to Master bedroom — no partition is drawn</text>
 <text x="84.00" y="870.28" font-size="11" class="muted" text-anchor="start" >or implied.</text>
-<text x="74.00" y="885.28" font-size="11" class="muted" text-anchor="start" >• ST-R04a-WR01 Dressing cabinet: 0.10–2.10 m — conditionally selected,</text>
-<text x="84.00" y="900.28" font-size="11" class="muted" text-anchor="start" >unmeasured placeholder; not fabrication dimensions.</text>
-<text x="74.00" y="915.28" font-size="11" class="muted" text-anchor="start" >• ST-R04a-LF01 loft: 2.13–3.08 m.</text>
-<text x="74.00" y="930.28" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
-<text x="84.00" y="945.28" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
+<text x="74.00" y="885.28" font-size="11" class="muted" text-anchor="start" >• ST-R04a-WR01 shallow cabinet conditional: 0.10–2.10 m</text>
+<text x="84.00" y="900.28" font-size="11" class="muted" text-anchor="start" >(homeowner-selected conditional; unmeasured, not construction-ready:</text>
+<text x="84.00" y="915.28" font-size="11" class="muted" text-anchor="start" >conditional on FH-ST-03 measured clear width and door/route</text>
+<text x="84.00" y="930.28" font-size="11" class="muted" text-anchor="start" >clearance).</text>
+<text x="74.00" y="945.28" font-size="11" class="muted" text-anchor="start" >• ST-R04a-LF01 loft: 2.13–3.08 m.</text>
+<text x="74.00" y="960.28" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
+<text x="84.00" y="975.28" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
 </g>
 <g data-panel-id="dressing-w" data-room-id="dressing" data-wall-dir="W">
 <rect x="530" y="178" width="440" height="720.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
@@ -194,7 +196,7 @@
 <text x="544.00" y="855.28" font-size="11" class="muted" text-anchor="start" >• D04 TL1 door: 799 mm wide, head 2.13 m (sill/head assumed).</text>
 </g>
 <g data-panel-id="dressing-n" data-room-id="dressing" data-wall-dir="N">
-<rect x="1000" y="178" width="440" height="780.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<rect x="1000" y="178" width="440" height="810.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
 <text x="1016.00" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">Master dressing – north wall</text>
 <text x="1016.00" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking NORTH · left to right</text>
 <text x="1016.00" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >1.07 m long · tag dressing-n</text>
@@ -243,7 +245,7 @@
 <rect x="0.0000" y="-2.9591" width="1.0717" height="2.9591" fill="#f4f1ea" stroke="none" stroke-width="0" />
 <g data-storage-id="ST-R04a-WR01" data-storage-kind="shallow_cabinet_conditional" data-panel-id="dressing-n">
 <rect x="0.7719" y="-2.1000" width="0.2997" height="2.0000" fill="#e6ecf4" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".06 .04"/>
-<text x="0.9218" y="-1.1221" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 0.9218 -1.1000)">Dressing cabinet</text>
+<text x="0.9218" y="-1.1221" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 0.9218 -1.1000)">shallow cabinet conditional</text>
 <text x="0.9218" y="-1.0201" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 0.9218 -1.1000)">ST-R04a-WR01</text>
 </g>
 <g data-storage-id="ST-R04a-LF01" data-storage-kind="loft" data-panel-id="dressing-n">
@@ -262,18 +264,20 @@
 </g>
 <path d="M1012 843.278H1428" stroke="#e1e8e8"/>
 <text x="1014.00" y="855.28" font-size="11" class="muted" text-anchor="start" >• ST-R04a-LF01 loft: 2.13–3.08 m.</text>
-<text x="1014.00" y="870.28" font-size="11" class="muted" text-anchor="start" >• ST-R04a-WR01 Dressing cabinet: 0.10–2.10 m — conditionally selected,</text>
-<text x="1024.00" y="885.28" font-size="11" class="muted" text-anchor="start" >unmeasured placeholder; not fabrication dimensions.</text>
-<text x="1014.00" y="900.28" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
-<text x="1024.00" y="915.28" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
+<text x="1014.00" y="870.28" font-size="11" class="muted" text-anchor="start" >• ST-R04a-WR01 shallow cabinet conditional: 0.10–2.10 m</text>
+<text x="1024.00" y="885.28" font-size="11" class="muted" text-anchor="start" >(homeowner-selected conditional; unmeasured, not construction-ready:</text>
+<text x="1024.00" y="900.28" font-size="11" class="muted" text-anchor="start" >conditional on FH-ST-03 measured clear width and door/route</text>
+<text x="1024.00" y="915.28" font-size="11" class="muted" text-anchor="start" >clearance).</text>
+<text x="1014.00" y="930.28" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
+<text x="1024.00" y="945.28" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
 </g>
 <g data-panel-id="dressing-e" data-room-id="dressing" data-wall-dir="E">
-<rect x="60" y="1018.278" width="440" height="780.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
-<text x="76.00" y="1046.28" font-size="17" class="" text-anchor="start" font-weight="600">Master dressing – east wall</text>
-<text x="76.00" y="1068.28" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
-<text x="76.00" y="1085.28" font-size="11.5" class="muted mono" text-anchor="start" >1.79 m long · tag dressing-e</text>
-<text x="76.00" y="1102.28" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
-<g data-keyplan="dressing-e" transform="translate(416.00 1058.28) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="60" y="1048.278" width="440" height="810.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="76.00" y="1076.28" font-size="17" class="" text-anchor="start" font-weight="600">Master dressing – east wall</text>
+<text x="76.00" y="1098.28" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
+<text x="76.00" y="1115.28" font-size="11.5" class="muted mono" text-anchor="start" >1.79 m long · tag dressing-e</text>
+<text x="76.00" y="1132.28" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="dressing-e" transform="translate(416.00 1088.28) scale(7.4) translate(-0.2277 -0.2246)">
 <rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
 <path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
 <path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#e9eeee" stroke="none" stroke-width="0" />
@@ -311,14 +315,14 @@
 <path d="M5.0643 4.9115L5.0643 6.7035" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
 <path d="M6.5643 5.8075L5.5143 5.8075" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
 </g>
-<text x="456.00" y="1055.28" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
-<g transform="translate(100 1663.556) scale(140)">
+<text x="456.00" y="1085.28" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(100 1693.556) scale(140)">
 <rect x="0.0000" y="-3.1877" width="1.7919" height="0.2286" fill="#e9edf1" stroke="none" stroke-width="0" />
 <rect x="1.6767" y="-2.9591" width="0.1152" height="2.9591" fill="#f4f1ea" stroke="none" stroke-width="0" />
 <rect x="0.0000" y="-2.9591" width="1.6767" height="2.9591" fill="#f4f1ea" stroke="none" stroke-width="0" />
 <g data-storage-id="ST-R04a-WR01" data-storage-kind="shallow_cabinet_conditional" data-panel-id="dressing-e">
 <rect x="0.1035" y="-2.1000" width="1.5500" height="2.0000" fill="#e6ecf4" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".06 .04"/>
-<text x="0.8785" y="-1.1221" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" >Dressing cabinet</text>
+<text x="0.8785" y="-1.1221" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" >shallow cabinet conditional</text>
 <text x="0.8785" y="-1.0201" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187" >ST-R04a-WR01</text>
 </g>
 <g data-storage-id="ST-R04a-LF01" data-storage-kind="loft" data-panel-id="dressing-e">
@@ -335,24 +339,26 @@
 <path d="M0.0000 0.0000L0.0000 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
 <path d="M1.7919 0.0000L1.7919 -2.9591" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
 </g>
-<path d="M72 1683.556H488" stroke="#e1e8e8"/>
-<text x="74.00" y="1695.56" font-size="11" class="muted" text-anchor="start" >• ST-R04a-LF01 loft: 2.13–3.08 m.</text>
-<text x="74.00" y="1710.56" font-size="11" class="muted" text-anchor="start" >• ST-R04a-WR01 Dressing cabinet: 0.10–2.10 m — conditionally selected,</text>
-<text x="84.00" y="1725.56" font-size="11" class="muted" text-anchor="start" >unmeasured placeholder; not fabrication dimensions.</text>
-<text x="74.00" y="1740.56" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
-<text x="84.00" y="1755.56" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
+<path d="M72 1713.556H488" stroke="#e1e8e8"/>
+<text x="74.00" y="1725.56" font-size="11" class="muted" text-anchor="start" >• ST-R04a-LF01 loft: 2.13–3.08 m.</text>
+<text x="74.00" y="1740.56" font-size="11" class="muted" text-anchor="start" >• ST-R04a-WR01 shallow cabinet conditional: 0.10–2.10 m</text>
+<text x="84.00" y="1755.56" font-size="11" class="muted" text-anchor="start" >(homeowner-selected conditional; unmeasured, not construction-ready:</text>
+<text x="84.00" y="1770.56" font-size="11" class="muted" text-anchor="start" >conditional on FH-ST-03 measured clear width and door/route</text>
+<text x="84.00" y="1785.56" font-size="11" class="muted" text-anchor="start" >clearance).</text>
+<text x="74.00" y="1800.56" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
+<text x="84.00" y="1815.56" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
 </g>
-<text x="60.00" y="1832.56" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
-<text x="60.00" y="1856.56" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
-<text x="60.00" y="1874.56" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
-<text x="60.00" y="1892.56" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
-<text x="60.00" y="1914.56" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
-<text x="60.00" y="1936.56" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
-<text x="60.00" y="1958.56" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
-<text x="60.00" y="1976.56" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
-<text x="60.00" y="1994.56" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
-<text x="60.00" y="2016.56" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
-<path d="M60 2026.556H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="2048.56" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
-<text x="1640.00" y="2048.56" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+<text x="60.00" y="1892.56" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
+<text x="60.00" y="1916.56" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
+<text x="60.00" y="1934.56" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
+<text x="60.00" y="1952.56" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
+<text x="60.00" y="1974.56" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
+<text x="60.00" y="1996.56" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
+<text x="60.00" y="2018.56" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
+<text x="60.00" y="2036.56" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
+<text x="60.00" y="2054.56" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
+<text x="60.00" y="2076.56" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
+<path d="M60 2086.556H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="2108.56" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
+<text x="1640.00" y="2108.56" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

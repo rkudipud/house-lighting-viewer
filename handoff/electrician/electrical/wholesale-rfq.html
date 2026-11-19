@@ -42,7 +42,7 @@ blockquote { border-left: 4px solid #b5522f; margin: 14px 0; padding: 8px 14px; 
   * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
 </style></head><body><aside style="padding:1rem;border:2px solid #98610d">Public-copy note: manufacturer PDFs are not redistributed. Links open official sources; mentions of retained archives describe the privately inspected source evidence. Source and delivered hashes differ where paths or links were adapted; see repository-copy-receipt.json.</aside><main><h1 id="wholesale-and-retailer-request-for-quotation">Wholesale and retailer request for quotation</h1>
-<p><strong>Master SHA-256:</strong> <code>b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</code>. Hyderabad, four 2BHK flats. Send this to branded manufacturers, local wholesalers and reputable importers. Generic/imported products are welcome if they meet the same written specifications, local support and acceptance tests. <strong>None is approved merely because its label resembles the target.</strong></p>
+<p><strong>Master SHA-256:</strong> <code>79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</code>. Working assumption: four storeys x one modelled 2BHK flat per floor (four flat schedules). Quote per-flat quantities and the four-flat repeat separately; actual floor and flat count, variations, site quantities and product compatibility remain unverified. Send this to branded manufacturers, local wholesalers and reputable importers. Generic/imported products are welcome if they meet the same written specifications, local support and acceptance tests. <strong>None is approved merely because its label resembles the target.</strong></p>
 <p>Quantities are modeled per flat; <code>schedules/location-linked-bom.csv</code> ties every modeled fitting, strip, profile, supply and control to a room, circuit and indicative position. Real pocket, strip and cable lengths, cutouts, profile details and four-floor repetition must be measured before ordering. Prices, stock and product approvals are open.</p>
 <h2 id="search-and-match-by-fitting-role">Search and match by fitting role</h2>
 <p>All numbers below are <strong>project targets</strong>, not verified catalogue promises. Lumens and beam values are model assumptions and must be replaced with actual luminaire/optic data and photometric rechecking where materially different. CRI/R9 are measured source properties, not inferred from a warm CCT. Typical living and bathroom targets are CRI &gt;= 90 / R9 &gt;= 50, while the pooja display and track accents target CRI &gt;= 95 / R9 &gt;= 80. The modeled utility bulkheads and PIR step lights have different, lower class targets in the detailed CSV.</p>
@@ -82,12 +82,12 @@ blockquote { border-left: 4px solid #b5522f; margin: 14px 0; padding: 8px 14px; 
 </tr>
 <tr>
 <td>Main recessed downlights</td>
-<td>Fixed <strong>3000 K</strong> for specified living/bedroom groups, <strong>4000 K</strong> for specified kitchen/task groups. Modeled deep-recessed classes: <strong>6 W / ~500 lm / 60 deg</strong>, <strong>7 W / ~600 lm / 60 deg</strong>, <strong>8 W / ~700 lm / 60 deg</strong>, and <strong>10 W / ~900 lm / 70 deg</strong>.</td>
+<td>Proposed fixed <strong>4000 K</strong> for living, dining and bedroom mains and specified task groups; lobby and balcony mains remain <strong>3000 K</strong>. Modeled deep-recessed classes: <strong>6 W / ~500 lm / 60 deg</strong>, <strong>7 W / ~600 lm / 60 deg</strong>, <strong>8 W / ~700 lm / 60 deg</strong>, and <strong>10 W / ~900 lm / 70 deg</strong>.</td>
 <td>Use actual model schedule, not one guessed universal SKU. Request complete fitting + replaceable/accessible driver + approved LED wall dimmer, cutout, recess depth, beam and glare data. Do not mix 230 V constant-current modules with a 24 V CV output.</td>
 </tr>
 <tr>
 <td>Adjustable accent / pooja pin spot</td>
-<td>Pooja: 24 V, <strong>6 W / ~480 lm / 24 deg</strong>, fixed 2700 K, CRI &gt;= 95 / R9 &gt;= 80. Some main adjustable gimbals use 8 W / ~700 lm / 50 deg / 3000 K.</td>
+<td>Pooja: 24 V, <strong>6 W / ~480 lm / 24 deg</strong>, fixed 2700 K, CRI &gt;= 95 / R9 &gt;= 80. Living main adjustable gimbals use 8 W / ~700 lm / 50 deg / proposed 4000 K.</td>
 <td>Supplier must document whether the exact fitting accepts 24 V CV PWM or requires its own compatible driver. Independently dim the pooja pin-spot. Test shadow at the actual standing position.</td>
 </tr>
 <tr>
@@ -102,8 +102,8 @@ blockquote { border-left: 4px solid #b5522f; margin: 14px 0; padding: 8px 14px; 
 </tr>
 <tr>
 <td>Integral readers / night step lights</td>
-<td>Reading: 3 W / ~200 lm / 30 deg, 3000 K, local integral dimmer. Step: 1 W / ~40 lm, 2700 K, PIR plus accessible brightness and ON/AUTO/OFF override.</td>
-<td>Four readers and two PIR units per modeled flat; match actual controls, memory, location, safety and replacement availability.</td>
+<td>Reading: 3 W / ~200 lm / 30 deg, 3000 K, local integral dimmer. Step: 1 W / ~40 lm, 2700 K, PIR switching.</td>
+<td>Four readers and two PIR units per modeled flat; dimming and ON/AUTO/OFF override are unverified and must not be assumed. Match actual controls, memory, location, safety and replacement availability.</td>
 </tr>
 <tr>
 <td>Balcony / damp utility</td>

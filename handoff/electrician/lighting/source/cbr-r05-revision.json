@@ -1,0 +1,4413 @@
+{
+ "schema": "cbr-r05-revision/1",
+ "predecessor_master_sha256": "e7d2e6c7cdeedd72abb3dd236304646eb01174a2df65b5401be8c53b907853e7",
+ "predecessor_canonical_sha256": "dcf1cd8f06fc47c1e0339ec8b45441989607267716a218609e031aceb84cb5e4",
+ "successor_master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+ "successor_canonical_sha256": "1969751ac81e8e0e8d2f4c0ebc6b19b8c4cbcef6217eb03ff4be9bb34aaa6146",
+ "basis": "Homeowner-directed R05 changes: fan at nominal room centre with a 1050 mm planning sweep (product not selected), reported 3.048 m band / approx. 3.277 m raised centre (slab unmeasured), and the CBR-only solver re-analysis with the retained cove and outward LINE modelled ON. H-CBR-CEIL and all site, procurement and construction holds remain.",
+ "operations": [
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X1",
+    "beyond_nominal_blade_tip_m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 0.418
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X1",
+    "fan_center_to_line_m"
+   ],
+   "before": 1.254,
+   "after": 0.943
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X1",
+    "high_cutout_edge_to_line_m_if_150mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 0.053
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X2",
+    "beyond_nominal_blade_tip_m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 0.755
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X2",
+    "fan_center_to_line_m"
+   ],
+   "before": 1.254,
+   "after": 1.28
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X2",
+    "high_cutout_edge_to_line_m_if_150mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 0.053
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X3",
+    "beyond_nominal_blade_tip_m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 1.038
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X3",
+    "fan_center_to_line_m"
+   ],
+   "before": 1.3,
+   "after": 1.563
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X3",
+    "high_cutout_edge_to_line_m_if_150mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 0.093
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X4",
+    "beyond_nominal_blade_tip_m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 0.623
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X4",
+    "fan_center_to_line_m"
+   ],
+   "before": 1.3,
+   "after": 1.148
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "centreline_checks_not_clearance_approval",
+    "CBR-X4",
+    "high_cutout_edge_to_line_m_if_150mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 0.092
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "cove_clearance_note"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": "Plan-only margin between the nominal blade tip and the nearest cove centreline; not a verified physical clearance. Cove section, fan drop, blade height and the chosen 1050 mm product's airflow and clearances need site and manufacturer review."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "direction"
+   ],
+   "before": "Keep the fan centred and existing cove intact; move the external LINE strips farther away.",
+   "after": "Fan at the centre of the room; keep the existing cove intact; external LINE strips stay outward, away from the fan."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "fan_airflow_note"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": "1050 mm is a planning placeholder honouring the homeowner's smaller-fan choice. Manufacturer sizing guidance (e.g. Crompton) associates 1050 mm with about 10 x 10 ft rooms, while R05 is nominally about 12.5 x 15 ft: airflow adequacy is NOT confirmed. Verify the selected model's air delivery for this room before purchase (trade-off: smaller sweep vs. airflow)."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "fan_load_note"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": "Fan electrical load is not included in the lighting-only load or inverter totals."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "fan_nominal_sweep_mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 1050
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "fan_product"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": "NOT SELECTED - make, model, downrod, blade height and manufacturer clearances pending"
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "fan_xz_m",
+    0
+   ],
+   "before": 7.3054,
+   "after": 7.0104
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "fan_xz_m",
+    1
+   ],
+   "before": 11.0123376,
+   "after": 10.8983376
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "interpretation"
+   ],
+   "before": "Fan at the previously proposed centre of the existing cove, not a surveyed room centre.",
+   "after": "Supersedes the earlier cove-centre assumption: fan at the nominal R05 rectangle centre (u 2.286, v 1.905). Surveyed room/obstruction geometry may move it."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "modeled_lighting"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": "CBR-L1 cove (C39) and CBR-X1-X4 LINE (C40) are switched ON with their scheduled lumens in the provisional design-review simulation (100% LOW and HIGH+LOW). Modelled, not measured; not installed, not site-verified, not approved; installation, procurement and actual operation remain held under H-CBR-CEIL."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "modelled_risks",
+    "CBR_HIGH_LOW_100_avg_lux"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 255
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "modelled_risks",
+    "CBR_LOW_100_avg_lux"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 130
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "modelled_risks",
+    "note"
+   ],
+   "before": "Unmeasured generic-optics and assumed cable-route diagnostics, not site clearance, measured lux, electrical design or construction approval.",
+   "after": "Modelled with CBR cove and LINE ON (provisional, unmeasured); generic optics and assumed routes, not site clearance, measured lux, electrical design or construction approval."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "modelled_risks",
+    "supine_note"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": "planned R05 frame (not surveyed); min 3.1 deg from zenith"
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "modelled_risks",
+    "wardrobe_vertical_lux_high_plus_low"
+   ],
+   "before": 149,
+   "after": 144
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "plan_checks_not_clearance_approval"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": {
+    "downlight_centre_to_fan_centre_m": {
+     "CBR-H1": 1.676,
+     "CBR-H2": 0.998,
+     "CBR-H3": 1.36,
+     "CBR-H4": 1.281,
+     "CBR-H5": 1.739,
+     "CBR-H6": 1.474
+    },
+    "nominal_sweep_beyond_cove_outline_m": {
+     "x_min_m": 0.0,
+     "x_max_m": 0.0,
+     "z_min_m": 0.0,
+     "z_max_m": 0.0
+    },
+    "fan_u_minus_loft_shutter_keep_clear_u_m": 0.611,
+    "fan_v_to_curtain_plane_m": 1.275,
+    "fan_centre_to_nearest_cove_centreline_m": 0.559,
+    "nominal_blade_tip_to_cove_centreline_plan_m": 0.034,
+    "assumed_downlight_cutout_m": 0.15,
+    "note": "Plan-only centreline/nominal checks. Cut-out sizes, strip profile widths, curtain-pocket and loft-soffit sections, blade height and product clearances are unmeasured site checks."
+   }
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "remaining"
+   ],
+   "before": "Measure the ceiling and openings; select fan/model and coordinate its sweep, downrod, ceiling structure, shutter and curtain pockets, cut-outs, wiring, service access and clearances.",
+   "after": "Survey R05 band, centre panel and slab levels; select a 1050 mm-class fan and confirm its downrod, blade height, mounting and manufacturer clearances; verify strip profiles against downlight cut-outs, loft shutter soffit and curtain pocket; wiring and service access."
+  },
+  {
+   "path": [
+    "decisions",
+    "children_ceiling_review",
+    "reported_heights_m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": {
+    "band": 3.048,
+    "raised_centre_approx": 3.2766,
+    "basis": "homeowner-reported, unsurveyed"
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculation_validity",
+    "children_ceiling_revision",
+    "baseline_heatmaps_sha256"
+   ],
+   "before": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+   "after": "a94b370c0f3b9572c104b93fce96cdc3e110b5b2062f2c426d8cb6c95811b408"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculation_validity",
+    "children_ceiling_revision",
+    "fixture_ids"
+   ],
+   "before": [
+    "CBR-X1",
+    "CBR-X2",
+    "CBR-X3",
+    "CBR-X4"
+   ],
+   "after": [
+    "CBR-L1",
+    "CBR-X1",
+    "CBR-X2",
+    "CBR-X3",
+    "CBR-X4",
+    "CBR-H1",
+    "CBR-H2",
+    "CBR-H3",
+    "CBR-H4",
+    "CBR-H5",
+    "CBR-H6"
+   ]
+  },
+  {
+   "path": [
+    "lighting",
+    "calculation_validity",
+    "children_ceiling_revision",
+    "geometry_proposal_sha256"
+   ],
+   "before": "1881e9cf2756d34b849b416ce25d43ab6d6927b3188669b721fde9320f0395e6",
+   "after": "27a5b159e0f892047299bce0eafd508979f76210da2d3699b06bbf8f2fb3c049"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculation_validity",
+    "children_ceiling_revision",
+    "note"
+   ],
+   "before": "The CBR-only analytic comparison assumes all scheduled fixtures operate at full output; the held cove and LINE remain unavailable in the viewer. Other room grids are byte-equivalent to the predecessor; their prior calculations and historical source bindings remain unchanged.",
+   "after": "R05-only re-analysis at the homeowner-reported 3.048 m band (approx. 3.277 m raised centre) with the fan at the nominal room centre (1050 mm planning sweep). The CBR cove (C39) and outward LINE (C40) are included ON with scheduled lumens in the modelled LOW_100 / HIGH+LOW_100 results. Modelled generic optics, not measured; installation, site clearance, procurement and actual operation remain held (H-CBR-CEIL). Other rooms are unchanged."
+  },
+  {
+   "path": [
+    "lighting",
+    "calculation_validity",
+    "children_ceiling_revision",
+    "predecessor_master_sha256"
+   ],
+   "before": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+   "after": "e7d2e6c7cdeedd72abb3dd236304646eb01174a2df65b5401be8c53b907853e7"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculation_validity",
+    "children_ceiling_revision",
+    "reanalysed_heatmaps_sha256"
+   ],
+   "before": "a94b370c0f3b9572c104b93fce96cdc3e110b5b2062f2c426d8cb6c95811b408",
+   "after": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculation_validity",
+    "children_ceiling_revision",
+    "status"
+   ],
+   "before": "PROVISIONAL_CBR_ONLY_REANALYSIS_HELD_SITE_COORDINATION",
+   "after": "PROVISIONAL_CBR_ONLY_REANALYSIS_MODELLED_ON_SITE_HELD"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    0,
+    "D_m"
+   ],
+   "before": 2.551,
+   "after": 2.654
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    0,
+    "H_m"
+   ],
+   "before": 2.2091,
+   "after": 2.298
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    0,
+    "S_over_H"
+   ],
+   "before": 0.5,
+   "after": 0.48
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    0,
+    "mount_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    1,
+    "D_m"
+   ],
+   "before": 2.551,
+   "after": 2.654
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    1,
+    "H_m"
+   ],
+   "before": 2.2091,
+   "after": 2.298
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    1,
+    "S_over_H"
+   ],
+   "before": 0.54,
+   "after": 0.52
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    1,
+    "mount_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    2,
+    "D_m"
+   ],
+   "before": 2.551,
+   "after": 2.654
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    2,
+    "H_m"
+   ],
+   "before": 2.2091,
+   "after": 2.298
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    2,
+    "S_over_H"
+   ],
+   "before": 0.5,
+   "after": 0.48
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    2,
+    "mount_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    3,
+    "D_m"
+   ],
+   "before": 2.551,
+   "after": 2.654
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    3,
+    "H_m"
+   ],
+   "before": 2.2091,
+   "after": 2.298
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    3,
+    "S_over_H"
+   ],
+   "before": 0.43,
+   "after": 0.41
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    3,
+    "mount_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    4,
+    "D_m"
+   ],
+   "before": 2.551,
+   "after": 2.654
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    4,
+    "H_m"
+   ],
+   "before": 2.2091,
+   "after": 2.298
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    4,
+    "S_over_H"
+   ],
+   "before": 0.43,
+   "after": 0.41
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    4,
+    "mount_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    5,
+    "D_m"
+   ],
+   "before": 2.551,
+   "after": 2.654
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    5,
+    "H_m"
+   ],
+   "before": 2.2091,
+   "after": 2.298
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    5,
+    "S_over_H"
+   ],
+   "before": 0.57,
+   "after": 0.54
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "fixtures",
+    5,
+    "mount_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "beam_spread",
+    "rooms",
+    "CBR",
+    "max_S_over_H"
+   ],
+   "before": 0.57,
+   "after": 0.54
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "F_ratio"
+   ],
+   "before": 0.874,
+   "after": 0.841
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "F_tray_to_plane"
+   ],
+   "before": 0.4282,
+   "after": 0.412
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "UF_whatif"
+   ],
+   "before": 0.175,
+   "after": 0.168
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "band_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "lux_whatif",
+    "CBR",
+    "COVE_100_whatif"
+   ],
+   "before": 39,
+   "after": 38
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "lux_whatif",
+    "CBR",
+    "LOW_100_now"
+   ],
+   "before": 133,
+   "after": 130
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "lux_whatif",
+    "CBR",
+    "LOW_100_whatif"
+   ],
+   "before": 127,
+   "after": 123
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "lux_whatif",
+    "CBR",
+    "Mood_whatif"
+   ],
+   "before": 42,
+   "after": 41
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "cove",
+    "CBR",
+    "tray_m"
+   ],
+   "before": 3.1877,
+   "after": 3.2766
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "compliance_changes"
+   ],
+   "before": [
+    {
+     "room": "LIV",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "152 lx, U0 0.4",
+     "new": "152 lx, U0 0.43",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "LIV",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 46,
+     "new": 44,
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DIN",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "154 lx, U0 0.58",
+     "new": "145 lx, U0 0.61",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DIN",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 92,
+     "new": 89,
+     "status_old": "PASS (above band at 100 %; dim)",
+     "status_new": "PASS (above band at 100 %; dim)"
+    },
+    {
+     "room": "KIT",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "267 lx, U0 0.4",
+     "new": "267 lx, U0 0.42",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "176 lx, U0 0.52",
+     "new": "164 lx, U0 0.54",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 43,
+     "new": 40,
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DRS",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "185 lx, U0 0.96",
+     "new": "157 lx, U0 0.96",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "141 lx, U0 0.6",
+     "new": "127 lx, U0 0.61",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 51,
+     "new": 44,
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "KIT",
+     "check": "Worktop HIGH+TASK 100 % (cabinet occlusion)",
+     "old": "567 avg / 274 min / U0 0.484",
+     "new": "518 avg / 323 min / U0 0.623",
+     "status_old": "MARGINAL",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Study desk, Work scene (HIGH 75 % + desk strip 100 %, shelf occlusion)",
+     "old": "617 avg / 379 min / U0 0.61",
+     "new": "609 avg / 381 min / U0 0.63",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Reading CBR-R1, queen pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 366 lx; 50 %: 610 lx (as aimed for queen: 1172 lx at 100 %)",
+     "new": "30 %: 366 lx; 50 %: 609 lx (as aimed for queen: 1172 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Reading CBR-R1, king_centred pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 421 lx; 50 %: 702 lx (as aimed for queen: 1351 lx at 100 %)",
+     "new": "30 %: 421 lx; 50 %: 702 lx (as aimed for queen: 1350 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Reading MBR-R1, queen pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1219 lx at 100 %)",
+     "new": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1218 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Reading MBR-R2, queen pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1219 lx at 100 %)",
+     "new": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1218 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Wardrobe front Ev, HIGH+LOW 100 % (vertical 0.3-2.0 m)",
+     "old": "169 avg / 125 min / U0 0.74",
+     "new": "149 avg / 113 min / U0 0.76",
+     "status_old": "PASS",
+     "status_new": "MARGINAL"
+    },
+    {
+     "room": "CBR",
+     "check": "TV viewing ambient, Mood scene (room floor avg; TV-wall Ev diagnostic)",
+     "old": "51 lx room / 35 lx on TV wall",
+     "new": "44 lx room / 31 lx on TV wall",
+     "status_old": "PASS (above band at 100 %; dim)",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Supine view: HIGH/LINE within 30 deg of zenith (PROJECT diagnostic)",
+     "old": "CBR-H5, CBR-H6, CBR-X2, CBR-X3",
+     "new": "CBR-H6, CBR-X2, CBR-X3",
+     "status_old": "MARGINAL",
+     "status_new": "MARGINAL"
+    },
+    {
+     "room": "MBR",
+     "check": "Wardrobe front Ev, HIGH+LOW 100 % (vertical 0.3-2.0 m)",
+     "old": "158 avg / 136 min / U0 0.86",
+     "new": "150 avg / 128 min / U0 0.85",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "TV viewing ambient, Mood scene (room floor avg; TV-wall Ev diagnostic)",
+     "old": "43 lx room / 33 lx on TV wall",
+     "new": "40 lx room / 31 lx on TV wall",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Night route floor (step light dimmed)",
+     "old": "8.7 avg / 1.01 min at 55 %",
+     "new": "8.7 avg / 1.0 min at 55 %",
+     "status_old": "MARGINAL",
+     "status_new": "MARGINAL"
+    },
+    {
+     "room": "MBR",
+     "check": "Night route floor: MBR-bedexit",
+     "old": "0.5 avg / 0.35 min at 100 %",
+     "new": "0.4 avg / 0.33 min at 100 %",
+     "status_old": "HOLD",
+     "status_new": "HOLD"
+    },
+    {
+     "room": "DIN",
+     "check": "Dining table Meal_commissioned (table ASSUMED)",
+     "old": "217 lx, U0 0.57",
+     "new": "216 lx, U0 0.58",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DIN",
+     "check": "Dining table Full (table ASSUMED)",
+     "old": "486 lx, U0 0.71",
+     "new": "473 lx, U0 0.7",
+     "status_old": "PASS (above band at 100 %; dim)",
+     "status_new": "PASS (above band at 100 %; dim)"
+    },
+    {
+     "room": "DIN",
+     "check": "Art evenness, track 100 %",
+     "old": "U0 0.48 (min 276, max 779)",
+     "new": "U0 0.55 (min 227, max 536)",
+     "status_old": "MARGINAL",
+     "status_new": "PASS"
+    }
+   ],
+   "after": [
+    {
+     "room": "LIV",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "152 lx, U0 0.4",
+     "new": "152 lx, U0 0.43",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "LIV",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 46,
+     "new": 44,
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DIN",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "154 lx, U0 0.58",
+     "new": "145 lx, U0 0.61",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DIN",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 92,
+     "new": 89,
+     "status_old": "PASS (above band at 100 %; dim)",
+     "status_new": "PASS (above band at 100 %; dim)"
+    },
+    {
+     "room": "KIT",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "267 lx, U0 0.4",
+     "new": "267 lx, U0 0.42",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "176 lx, U0 0.52",
+     "new": "164 lx, U0 0.54",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 43,
+     "new": 40,
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DRS",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "185 lx, U0 0.96",
+     "new": "157 lx, U0 0.96",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "HIGH Eavg / U0 (working plane, 0.5 m border excluded)",
+     "old": "141 lx, U0 0.6",
+     "new": "124 lx, U0 0.63",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Mood scene Eavg (no HIGH)",
+     "old": 51,
+     "new": 44,
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "KIT",
+     "check": "Worktop HIGH+TASK 100 % (cabinet occlusion)",
+     "old": "567 avg / 274 min / U0 0.484",
+     "new": "518 avg / 323 min / U0 0.623",
+     "status_old": "MARGINAL",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Study desk, Work scene (HIGH 75 % + desk strip 100 %, shelf occlusion)",
+     "old": "617 avg / 379 min / U0 0.61",
+     "new": "606 avg / 381 min / U0 0.63",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Reading CBR-R1, queen pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 366 lx; 50 %: 610 lx (as aimed for queen: 1172 lx at 100 %)",
+     "new": "30 %: 366 lx; 50 %: 609 lx (as aimed for queen: 1172 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Reading CBR-R1, king_centred pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 421 lx; 50 %: 702 lx (as aimed for queen: 1351 lx at 100 %)",
+     "new": "30 %: 421 lx; 50 %: 702 lx (as aimed for queen: 1350 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Reading MBR-R1, queen pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1219 lx at 100 %)",
+     "new": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1218 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Reading MBR-R2, queen pillow book point (reader alone, re-aimed)",
+     "old": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1219 lx at 100 %)",
+     "new": "30 %: 381 lx; 50 %: 635 lx (as aimed for queen: 1218 lx at 100 %)",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "CBR",
+     "check": "Wardrobe front Ev, HIGH+LOW 100 % (vertical 0.3-2.0 m)",
+     "old": "169 avg / 125 min / U0 0.74",
+     "new": "144 avg / 110 min / U0 0.77",
+     "status_old": "PASS",
+     "status_new": "MARGINAL"
+    },
+    {
+     "room": "CBR",
+     "check": "TV viewing ambient, Mood scene (room floor avg; TV-wall Ev diagnostic)",
+     "old": "51 lx room / 35 lx on TV wall",
+     "new": "44 lx room / 30 lx on TV wall",
+     "status_old": "PASS (above band at 100 %; dim)",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Wardrobe front Ev, HIGH+LOW 100 % (vertical 0.3-2.0 m)",
+     "old": "158 avg / 136 min / U0 0.86",
+     "new": "150 avg / 128 min / U0 0.85",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "TV viewing ambient, Mood scene (room floor avg; TV-wall Ev diagnostic)",
+     "old": "43 lx room / 33 lx on TV wall",
+     "new": "40 lx room / 31 lx on TV wall",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "MBR",
+     "check": "Night route floor (step light dimmed)",
+     "old": "8.7 avg / 1.01 min at 55 %",
+     "new": "8.7 avg / 1.0 min at 55 %",
+     "status_old": "MARGINAL",
+     "status_new": "MARGINAL"
+    },
+    {
+     "room": "MBR",
+     "check": "Night route floor: MBR-bedexit",
+     "old": "0.5 avg / 0.35 min at 100 %",
+     "new": "0.4 avg / 0.33 min at 100 %",
+     "status_old": "HOLD",
+     "status_new": "HOLD"
+    },
+    {
+     "room": "DIN",
+     "check": "Dining table Meal_commissioned (table ASSUMED)",
+     "old": "217 lx, U0 0.57",
+     "new": "216 lx, U0 0.58",
+     "status_old": "PASS",
+     "status_new": "PASS"
+    },
+    {
+     "room": "DIN",
+     "check": "Dining table Full (table ASSUMED)",
+     "old": "486 lx, U0 0.71",
+     "new": "473 lx, U0 0.7",
+     "status_old": "PASS (above band at 100 %; dim)",
+     "status_new": "PASS (above band at 100 %; dim)"
+    },
+    {
+     "room": "DIN",
+     "check": "Art evenness, track 100 %",
+     "old": "U0 0.48 (min 276, max 779)",
+     "new": "U0 0.55 (min 227, max 536)",
+     "status_old": "MARGINAL",
+     "status_new": "PASS"
+    }
+   ]
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    24,
+    "Eavg_new"
+   ],
+   "before": 127,
+   "after": 124
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    24,
+    "U0_new"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    24,
+    "dE_pct"
+   ],
+   "before": -9.9,
+   "after": -12.1
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    25,
+    "Eavg_new"
+   ],
+   "before": 261,
+   "after": 255
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    25,
+    "Emin_new"
+   ],
+   "before": 197,
+   "after": 193
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    25,
+    "dE_pct"
+   ],
+   "before": -11.5,
+   "after": -13.6
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    26,
+    "Emin_new"
+   ],
+   "before": 37,
+   "after": 36
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "room_lux",
+    26,
+    "U0_new"
+   ],
+   "before": 0.82,
+   "after": 0.83
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "ceiling_rebase",
+    "deltas",
+    "status_changes",
+    2,
+    "new"
+   ],
+   "before": "149 avg / 113 min / U0 0.76",
+   "after": "144 avg / 110 min / U0 0.77"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.45,
+   "after": 0.44
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 82,
+   "after": 80
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_100",
+    "max"
+   ],
+   "before": 135,
+   "after": 132
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_100",
+    "min"
+   ],
+   "before": 36,
+   "after": 35
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_100_without_shelf",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.62
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_100_without_shelf",
+    "avg"
+   ],
+   "before": 100,
+   "after": 98
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_100_without_shelf",
+    "max"
+   ],
+   "before": 135,
+   "after": 132
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_STUDY_100",
+    "avg"
+   ],
+   "before": 583,
+   "after": 581
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "HIGH_STUDY_100",
+    "max"
+   ],
+   "before": 743,
+   "after": 741
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "STUDY_100",
+    "max"
+   ],
+   "before": 652,
+   "after": 651
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "Work",
+    "avg"
+   ],
+   "before": 609,
+   "after": 606
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "desk",
+    "Work",
+    "max"
+   ],
+   "before": 769,
+   "after": 766
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "fan",
+    "status"
+   ],
+   "before": "homeowner-directed tray-centre position; fan size, downrod and clearances unverified",
+   "after": "Room-centre position on the nominal R05 rectangle, homeowner-directed; 1050 mm (approx. 42 in) nominal planning sweep chosen as a smaller practical size (homeowner will choose a smaller fan than 48 in). Fan make/model, downrod, blade height and manufacturer clearances not selected."
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "fan",
+    "sweep_mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 1050
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "fan",
+    "uv_m",
+    0
+   ],
+   "before": 2.4,
+   "after": 2.286
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "fan",
+    "uv_m",
+    1
+   ],
+   "before": 2.2,
+   "after": 1.905
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "supine_view",
+    "hits"
+   ],
+   "before": [
+    {
+     "eye": "queen R1 side",
+     "fixture": "CBR-H6",
+     "deg_from_zenith": 16.3
+    },
+    {
+     "eye": "queen R1 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 3.7
+    },
+    {
+     "eye": "queen R1 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 29.2
+    },
+    {
+     "eye": "queen R2 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 20.1
+    },
+    {
+     "eye": "queen R2 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 13.1
+    },
+    {
+     "eye": "king_centred R1 side",
+     "fixture": "CBR-H6",
+     "deg_from_zenith": 15.0
+    },
+    {
+     "eye": "king_centred R1 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 3.2
+    },
+    {
+     "eye": "king_centred R2 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 21.7
+    },
+    {
+     "eye": "king_centred R2 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 11.3
+    },
+    {
+     "eye": "king_anchored R1 side",
+     "fixture": "CBR-H6",
+     "deg_from_zenith": 17.8
+    },
+    {
+     "eye": "king_anchored R1 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 4.9
+    },
+    {
+     "eye": "king_anchored R1 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 27.7
+    },
+    {
+     "eye": "king_anchored R2 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 24.9
+    },
+    {
+     "eye": "king_anchored R2 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 7.9
+    }
+   ],
+   "after": [
+    {
+     "eye": "queen R1 side",
+     "fixture": "CBR-H6",
+     "deg_from_zenith": 15.8
+    },
+    {
+     "eye": "queen R1 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 3.5
+    },
+    {
+     "eye": "queen R1 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 28.3
+    },
+    {
+     "eye": "queen R2 side",
+     "fixture": "CBR-H6",
+     "deg_from_zenith": 29.6
+    },
+    {
+     "eye": "queen R2 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 19.4
+    },
+    {
+     "eye": "queen R2 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 12.6
+    },
+    {
+     "eye": "king_centred R1 side",
+     "fixture": "CBR-H6",
+     "deg_from_zenith": 14.5
+    },
+    {
+     "eye": "king_centred R1 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 3.1
+    },
+    {
+     "eye": "king_centred R1 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 29.7
+    },
+    {
+     "eye": "king_centred R2 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 21.0
+    },
+    {
+     "eye": "king_centred R2 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 10.9
+    },
+    {
+     "eye": "king_anchored R1 side",
+     "fixture": "CBR-H6",
+     "deg_from_zenith": 17.1
+    },
+    {
+     "eye": "king_anchored R1 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 4.7
+    },
+    {
+     "eye": "king_anchored R1 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 26.8
+    },
+    {
+     "eye": "king_anchored R2 side",
+     "fixture": "CBR-H5",
+     "deg_from_zenith": 29.1
+    },
+    {
+     "eye": "king_anchored R2 side",
+     "fixture": "CBR-X2",
+     "deg_from_zenith": 24.1
+    },
+    {
+     "eye": "king_anchored R2 side",
+     "fixture": "CBR-X3",
+     "deg_from_zenith": 7.6
+    }
+   ]
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.75,
+   "after": 0.76
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 61,
+   "after": 58
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_100",
+    "max"
+   ],
+   "before": 74,
+   "after": 71
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_100",
+    "min"
+   ],
+   "before": 45,
+   "after": 44
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_LOW_100",
+    "U0"
+   ],
+   "before": 0.84,
+   "after": 0.85
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 153,
+   "after": 148
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_LOW_100",
+    "max"
+   ],
+   "before": 173,
+   "after": 167
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 128,
+   "after": 125
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "LOW_100",
+    "avg"
+   ],
+   "before": 92,
+   "after": 90
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "LOW_100",
+    "max"
+   ],
+   "before": 99,
+   "after": 96
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "LOW_100",
+    "min"
+   ],
+   "before": 83,
+   "after": 81
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Full",
+    "U0"
+   ],
+   "before": 0.85,
+   "after": 0.86
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Full",
+    "avg"
+   ],
+   "before": 172,
+   "after": 167
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Full",
+    "max"
+   ],
+   "before": 189,
+   "after": 183
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Full",
+    "min"
+   ],
+   "before": 146,
+   "after": 143
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Mood",
+    "avg"
+   ],
+   "before": 31,
+   "after": 30
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Mood",
+    "max"
+   ],
+   "before": 33,
+   "after": 32
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Relax",
+    "avg"
+   ],
+   "before": 70,
+   "after": 68
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Relax",
+    "max"
+   ],
+   "before": 77,
+   "after": 75
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Relax",
+    "min"
+   ],
+   "before": 61,
+   "after": 59
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Work",
+    "U0"
+   ],
+   "before": 0.83,
+   "after": 0.84
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Work",
+    "avg"
+   ],
+   "before": 98,
+   "after": 95
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Work",
+    "max"
+   ],
+   "before": 108,
+   "after": 106
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "tv_wall",
+    "scenes",
+    "Work",
+    "min"
+   ],
+   "before": 81,
+   "after": 79
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 54,
+   "after": 53
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "HIGH_100",
+    "max"
+   ],
+   "before": 80,
+   "after": 78
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "HIGH_100",
+    "min"
+   ],
+   "before": 36,
+   "after": 35
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "HIGH_LOW_100",
+    "U0"
+   ],
+   "before": 0.76,
+   "after": 0.77
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 149,
+   "after": 144
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "HIGH_LOW_100",
+    "max"
+   ],
+   "before": 202,
+   "after": 194
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 113,
+   "after": 110
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "LOW_100",
+    "U0"
+   ],
+   "before": 0.82,
+   "after": 0.83
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "LOW_100",
+    "avg"
+   ],
+   "before": 94,
+   "after": 91
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "LOW_100",
+    "max"
+   ],
+   "before": 126,
+   "after": 118
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "LOW_100",
+    "min"
+   ],
+   "before": 77,
+   "after": 75
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Full",
+    "U0"
+   ],
+   "before": 0.79,
+   "after": 0.8
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Full",
+    "avg"
+   ],
+   "before": 167,
+   "after": 162
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Full",
+    "max"
+   ],
+   "before": 219,
+   "after": 209
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Full",
+    "min"
+   ],
+   "before": 132,
+   "after": 129
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Mood",
+    "U0"
+   ],
+   "before": 0.84,
+   "after": 0.85
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Mood",
+    "avg"
+   ],
+   "before": 32,
+   "after": 31
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Mood",
+    "max"
+   ],
+   "before": 41,
+   "after": 39
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Mood",
+    "min"
+   ],
+   "before": 27,
+   "after": 26
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Relax",
+    "U0"
+   ],
+   "before": 0.79,
+   "after": 0.8
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Relax",
+    "avg"
+   ],
+   "before": 69,
+   "after": 67
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Relax",
+    "max"
+   ],
+   "before": 91,
+   "after": 87
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Relax",
+    "min"
+   ],
+   "before": 55,
+   "after": 54
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Work",
+    "avg"
+   ],
+   "before": 90,
+   "after": 88
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Work",
+    "max"
+   ],
+   "before": 114,
+   "after": 111
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "children",
+    "wardrobe_face",
+    "scenes",
+    "Work",
+    "min"
+   ],
+   "before": 73,
+   "after": 72
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    19,
+    "value"
+   ],
+   "before": "127 lx, U0 0.61",
+   "after": "124 lx, U0 0.63"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    24,
+    "reason"
+   ],
+   "before": "desk strip alone 501 lx (U0 0.58); HIGH alone under the shelf 82 lx; planned R05 frame (not surveyed); TASK_HO 1400 lm/m ASSUMED, datasheet pending",
+   "after": "desk strip alone 501 lx (U0 0.58); HIGH alone under the shelf 80 lx; planned R05 frame (not surveyed); TASK_HO 1400 lm/m ASSUMED, datasheet pending"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    24,
+    "value"
+   ],
+   "before": "609 avg / 381 min / U0 0.63",
+   "after": "606 avg / 381 min / U0 0.63"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    35,
+    "reason"
+   ],
+   "before": "HIGH alone 54 lx (info); interior wardrobe light not modelled; planned R05 frame (not surveyed)",
+   "after": "HIGH alone 53 lx (info); interior wardrobe light not modelled; planned R05 frame (not surveyed)"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    35,
+    "value"
+   ],
+   "before": "149 avg / 113 min / U0 0.76",
+   "after": "144 avg / 110 min / U0 0.77"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    36,
+    "value"
+   ],
+   "before": "44 lx room / 31 lx on TV wall",
+   "after": "44 lx room / 30 lx on TV wall"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    37,
+    "reason"
+   ],
+   "before": "planned R05 frame (not surveyed); min 3.2 deg from zenith",
+   "after": "planned R05 frame (not surveyed); min 3.1 deg from zenith"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "compliance",
+    37,
+    "value"
+   ],
+   "before": "CBR-H6, CBR-X2, CBR-X3",
+   "after": "CBR-H5, CBR-H6, CBR-X2, CBR-X3"
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "base_rho_0.45_ceiling_2.9591m"
+   ],
+   "before": {
+    "HIGH_100": {
+     "avg": 127,
+     "min": 78,
+     "U0": 0.61,
+     "avg_room": 111
+    },
+    "HIGH_LOW_100": {
+     "avg": 261,
+     "min": 197,
+     "U0": 0.76,
+     "avg_room": 236
+    },
+    "HIGH_status": "PASS"
+   },
+   "after": {
+    "$absent": true
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "base_rho_0.45_ceiling_3.048m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": {
+    "HIGH_100": {
+     "avg": 124,
+     "min": 78,
+     "U0": 0.63,
+     "avg_room": 108
+    },
+    "HIGH_LOW_100": {
+     "avg": 255,
+     "min": 193,
+     "U0": 0.76,
+     "avg_room": 231
+    },
+    "HIGH_status": "PASS"
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 115,
+   "after": 112
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 100,
+   "after": 97
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "min"
+   ],
+   "before": 70,
+   "after": 71
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "U0"
+   ],
+   "before": 0.76,
+   "after": 0.77
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 248,
+   "after": 242
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "avg_room"
+   ],
+   "before": 225,
+   "after": 220
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "hd14",
+    "highs_finish",
+    "LOR_sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 189,
+   "after": 185
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "ceiling_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "checks",
+    0,
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "checks",
+    0,
+    "value"
+   ],
+   "before": 127,
+   "after": 124
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "HIGH+LOW_100",
+    "avg"
+   ],
+   "before": 261,
+   "after": 255
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "HIGH+LOW_100",
+    "avg_room"
+   ],
+   "before": 236,
+   "after": 231
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "HIGH+LOW_100",
+    "min"
+   ],
+   "before": 197,
+   "after": 193
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 127,
+   "after": 124
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 111,
+   "after": 108
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "LOW_100",
+    "U0"
+   ],
+   "before": 0.8,
+   "after": 0.81
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "LOW_100",
+    "avg"
+   ],
+   "before": 133,
+   "after": 130
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "LOW_100",
+    "avg_room"
+   ],
+   "before": 125,
+   "after": 123
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "combinations",
+    "LOW_100",
+    "min"
+   ],
+   "before": 107,
+   "after": 106
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "HIGH",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "HIGH",
+    "avg"
+   ],
+   "before": 127,
+   "after": 124
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "HIGH",
+    "avg_room"
+   ],
+   "before": 111,
+   "after": 108
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "LINE",
+    "U0"
+   ],
+   "before": 0.7,
+   "after": 0.71
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "LINE",
+    "avg"
+   ],
+   "before": 88,
+   "after": 85
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "LINE",
+    "avg_room"
+   ],
+   "before": 80,
+   "after": 78
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "LINE",
+    "min"
+   ],
+   "before": 62,
+   "after": 60
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "STUDY",
+    "U0"
+   ],
+   "before": 0.38,
+   "after": 0.37
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "lanes_at_100pct",
+    "STUDY",
+    "avg"
+   ],
+   "before": 36,
+   "after": 35
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Full",
+    "avg"
+   ],
+   "before": 319,
+   "after": 313
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Full",
+    "avg_room"
+   ],
+   "before": 308,
+   "after": 303
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Full",
+    "min"
+   ],
+   "before": 213,
+   "after": 209
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Mood",
+    "U0"
+   ],
+   "before": 0.82,
+   "after": 0.83
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Mood",
+    "avg_room"
+   ],
+   "before": 42,
+   "after": 41
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Mood",
+    "min"
+   ],
+   "before": 37,
+   "after": 36
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Relax",
+    "avg"
+   ],
+   "before": 123,
+   "after": 121
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Relax",
+    "avg_room"
+   ],
+   "before": 113,
+   "after": 111
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Relax",
+    "min"
+   ],
+   "before": 89,
+   "after": 87
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Work",
+    "avg"
+   ],
+   "before": 208,
+   "after": 205
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Work",
+    "avg_room"
+   ],
+   "before": 206,
+   "after": 203
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "rooms",
+    "CBR",
+    "scenes",
+    "Work",
+    "min"
+   ],
+   "before": 119,
+   "after": 118
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "base_rho_0.45_ceiling_2.9591m"
+   ],
+   "before": {
+    "HIGH_100": {
+     "avg": 127,
+     "min": 78,
+     "U0": 0.61,
+     "avg_room": 111
+    },
+    "HIGH_LOW_100": {
+     "avg": 261,
+     "min": 197,
+     "U0": 0.76,
+     "avg_room": 236
+    },
+    "HIGH_status": "PASS"
+   },
+   "after": {
+    "$absent": true
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "base_rho_0.45_ceiling_3.048m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": {
+    "HIGH_100": {
+     "avg": 124,
+     "min": 78,
+     "U0": 0.63,
+     "avg_room": 108
+    },
+    "HIGH_LOW_100": {
+     "avg": 255,
+     "min": 193,
+     "U0": 0.76,
+     "avg_room": 231
+    },
+    "HIGH_status": "PASS"
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 115,
+   "after": 112
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 100,
+   "after": 97
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_100",
+    "min"
+   ],
+   "before": 70,
+   "after": 71
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "U0"
+   ],
+   "before": 0.76,
+   "after": 0.77
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 248,
+   "after": 242
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "avg_room"
+   ],
+   "before": 225,
+   "after": 220
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "black_baffle_LOR_0.9",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 189,
+   "after": 185
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "ceiling_2.859m"
+   ],
+   "before": {
+    "HIGH_100": {
+     "avg": 131,
+     "min": 76,
+     "U0": 0.58,
+     "avg_room": 113
+    },
+    "HIGH_LOW_100": {
+     "avg": 268,
+     "min": 201,
+     "U0": 0.75,
+     "avg_room": 242
+    },
+    "HIGH_status": "PASS"
+   },
+   "after": {
+    "$absent": true
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "ceiling_2.948m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": {
+    "HIGH_100": {
+     "avg": 128,
+     "min": 77,
+     "U0": 0.61,
+     "avg_room": 111
+    },
+    "HIGH_LOW_100": {
+     "avg": 261,
+     "min": 197,
+     "U0": 0.75,
+     "avg_room": 237
+    },
+    "HIGH_status": "PASS"
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "ceiling_3.059m"
+   ],
+   "before": {
+    "HIGH_100": {
+     "avg": 124,
+     "min": 78,
+     "U0": 0.63,
+     "avg_room": 108
+    },
+    "HIGH_LOW_100": {
+     "avg": 254,
+     "min": 193,
+     "U0": 0.76,
+     "avg_room": 231
+    },
+    "HIGH_status": "PASS"
+   },
+   "after": {
+    "$absent": true
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "ceiling_3.148m"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": {
+    "HIGH_100": {
+     "avg": 121,
+     "min": 77,
+     "U0": 0.64,
+     "avg_room": 106
+    },
+    "HIGH_LOW_100": {
+     "avg": 248,
+     "min": 189,
+     "U0": 0.76,
+     "avg_room": 226
+    },
+    "HIGH_status": "PASS"
+   }
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 126,
+   "after": 124
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 110,
+   "after": 107
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_100",
+    "min"
+   ],
+   "before": 77,
+   "after": 78
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_LOW_100",
+    "U0"
+   ],
+   "before": 0.75,
+   "after": 0.76
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 259,
+   "after": 253
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_LOW_100",
+    "avg_room"
+   ],
+   "before": 234,
+   "after": 230
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 195,
+   "after": 192
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_dark",
+    "rho_eff"
+   ],
+   "before": 0.441,
+   "after": 0.442
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_light",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_light",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 128,
+   "after": 125
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_light",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 112,
+   "after": 109
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_light",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 263,
+   "after": 257
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_light",
+    "HIGH_LOW_100",
+    "avg_room"
+   ],
+   "before": 238,
+   "after": 233
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "curtains_closed_light",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 199,
+   "after": 195
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.3",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.57,
+   "after": 0.59
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.3",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 116,
+   "after": 113
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.3",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 99,
+   "after": 97
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.3",
+    "HIGH_100",
+    "min"
+   ],
+   "before": 66,
+   "after": 67
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.3",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 237,
+   "after": 231
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.3",
+    "HIGH_LOW_100",
+    "avg_room"
+   ],
+   "before": 212,
+   "after": 208
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.3",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 173,
+   "after": 170
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.45",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.61,
+   "after": 0.63
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.45",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 127,
+   "after": 124
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.45",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 111,
+   "after": 108
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.45",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 261,
+   "after": 255
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.45",
+    "HIGH_LOW_100",
+    "avg_room"
+   ],
+   "before": 236,
+   "after": 231
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.45",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 197,
+   "after": 193
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.6",
+    "HIGH_100",
+    "U0"
+   ],
+   "before": 0.66,
+   "after": 0.68
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.6",
+    "HIGH_100",
+    "avg"
+   ],
+   "before": 147,
+   "after": 144
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.6",
+    "HIGH_100",
+    "avg_room"
+   ],
+   "before": 131,
+   "after": 128
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.6",
+    "HIGH_LOW_100",
+    "avg"
+   ],
+   "before": 302,
+   "after": 296
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.6",
+    "HIGH_LOW_100",
+    "avg_room"
+   ],
+   "before": 278,
+   "after": 272
+  },
+  {
+   "path": [
+    "lighting",
+    "calculations",
+    "sensitivity",
+    "CBR",
+    "rho_0.6",
+    "HIGH_LOW_100",
+    "min"
+   ],
+   "before": 238,
+   "after": 234
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "calc_geometry",
+    "children",
+    "fan",
+    "status"
+   ],
+   "before": "homeowner-directed tray-centre position; fan size, downrod and clearances unverified",
+   "after": "Room-centre position on the nominal R05 rectangle, homeowner-directed; 1050 mm (approx. 42 in) nominal planning sweep chosen as a smaller practical size (homeowner will choose a smaller fan than 48 in). Fan make/model, downrod, blade height and manufacturer clearances not selected."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "calc_geometry",
+    "children",
+    "fan",
+    "sweep_mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 1050
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "calc_geometry",
+    "children",
+    "fan",
+    "uv_m",
+    0
+   ],
+   "before": 2.4,
+   "after": 2.286
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "calc_geometry",
+    "children",
+    "fan",
+    "uv_m",
+    1
+   ],
+   "before": 2.2,
+   "after": 1.905
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "ceilings",
+    "CBR",
+    "band_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "ceilings",
+    "CBR",
+    "level_basis"
+   ],
+   "before": "HD-11 calculation basis: band underside 2.9591 m; centre-panel reference 3.1877 m; reference cove step 0.2286 m. HD-14 confirms a separate panel below the slab (slab reference 3.1877 m), not zero cavity; actual panel surface and cavity depth unmeasured (OI-HEIGHT-01)",
+   "after": "Homeowner-reported approximate R05 levels: lower band 10 ft (3.048 m) AFF and raised centre about 9 in higher (approx. 10 ft 9 in, 3.2766 m). Not surveyed. R05 only; other rooms keep HD-11. CONFLICT: the reported centre is above the older drawing-derived house-wide slab-underside estimate (HD-11, 3.1877 m); bare slab height has NOT been measured, so neither value is a verified slab level. Rendering uses the reported levels without asserting a slab position; site measurement required (OI-HEIGHT-01)."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "ceilings",
+    "CBR",
+    "tray_h_m"
+   ],
+   "before": 3.1877,
+   "after": 3.2766
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "provenance",
+    "layout_basis",
+    "holds",
+    5,
+    "basis"
+   ],
+   "before": "Existing CBR cove retained around its centred fan; four LINE corners shifted outward provisionally on the unmeasured planned ceiling",
+   "after": "Existing CBR cove retained; fan at nominal room centre (1050 mm planning sweep); outward LINE retained; homeowner-reported 3.048 m band / ~3.277 m centre unsurveyed"
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "ceil_basis"
+   ],
+   "before": "HD-11 perimeter band underside (homeowner-stated/derived, unmeasured)",
+   "after": "Homeowner-reported approximate R05 levels: lower band 10 ft (3.048 m) AFF and raised centre about 9 in higher (approx. 10 ft 9 in, 3.2766 m). Not surveyed. R05 only; other rooms keep HD-11. CONFLICT: the reported centre is above the older drawing-derived house-wide slab-underside estimate (HD-11, 3.1877 m); bare slab height has NOT been measured, so neither value is a verified slab level. Rendering uses the reported levels without asserting a slab position; site measurement required (OI-HEIGHT-01)."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "ceil_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    7,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    7,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    8,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    8,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    9,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    9,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    10,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "fixtures",
+    10,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "frame",
+    "fan_proposal",
+    "global_xz_m",
+    0
+   ],
+   "before": 7.3054,
+   "after": 7.0104
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "frame",
+    "fan_proposal",
+    "global_xz_m",
+    1
+   ],
+   "before": 11.0123376,
+   "after": 10.8983376
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "frame",
+    "fan_proposal",
+    "status"
+   ],
+   "before": "homeowner-directed tray-centre position; model and site checks pending",
+   "after": "Room-centre position on the nominal R05 rectangle, homeowner-directed; 1050 mm (approx. 42 in) nominal planning sweep chosen as a smaller practical size (homeowner will choose a smaller fan than 48 in). Fan make/model, downrod, blade height and manufacturer clearances not selected."
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "frame",
+    "fan_proposal",
+    "sweep_mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 1050
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "frame",
+    "fan_proposal",
+    "uv_m",
+    0
+   ],
+   "before": 2.4,
+   "after": 2.286
+  },
+  {
+   "path": [
+    "lighting",
+    "design_inputs",
+    "rooms",
+    9,
+    "frame",
+    "fan_proposal",
+    "uv_m",
+    1
+   ],
+   "before": 2.2,
+   "after": 1.905
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    92,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    92,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    93,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    93,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    94,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    94,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    95,
+    "mount_h_m"
+   ],
+   "before": 2.9591,
+   "after": 3.048
+  },
+  {
+   "path": [
+    "lighting",
+    "fixtures",
+    95,
+    "note"
+   ],
+   "before": "Provisional outward LINE-frame relocation around the centered fan; held unlit pending measured ceiling, fan and installation coordination.",
+   "after": "Provisional outward LINE-frame relocation around the centred fan; modelled ON with scheduled lumens in the design-review simulation. Installation, procurement and operation held pending measured ceiling, fan and installation coordination (H-CBR-CEIL)."
+  },
+  {
+   "path": [
+    "lighting",
+    "supporting_outputs",
+    "files",
+    "heatmaps.json",
+    "bytes"
+   ],
+   "before": 1801458,
+   "after": 1801309
+  },
+  {
+   "path": [
+    "lighting",
+    "supporting_outputs",
+    "files",
+    "heatmaps.json",
+    "sha256"
+   ],
+   "before": "a94b370c0f3b9572c104b93fce96cdc3e110b5b2062f2c426d8cb6c95811b408",
+   "after": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6"
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "at_m",
+    0
+   ],
+   "before": 7.3054,
+   "after": 7.0104
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "at_m",
+    1
+   ],
+   "before": 11.0123376,
+   "after": 10.8983376
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "proposal",
+    "basis"
+   ],
+   "before": "storage request LCR-ST-CBR-06: centre u >= 2.0 clear of loft shutters",
+   "after": "homeowner direction: fan at centre of the room (nominal rectangle)"
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "proposal",
+    "global_xz_m",
+    0
+   ],
+   "before": 7.3054,
+   "after": 7.0104
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "proposal",
+    "global_xz_m",
+    1
+   ],
+   "before": 11.0123376,
+   "after": 10.8983376
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "proposal",
+    "local_uv_m",
+    0
+   ],
+   "before": 2.4,
+   "after": 2.286
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "proposal",
+    "local_uv_m",
+    1
+   ],
+   "before": 2.2,
+   "after": 1.905
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "proposal",
+    "sweep_mm"
+   ],
+   "before": {
+    "$absent": true
+   },
+   "after": 1050
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "src"
+   ],
+   "before": "homeowner_directed_existing_tray_centre_provisional",
+   "after": "homeowner_directed_room_centre_provisional"
+  },
+  {
+   "path": [
+    "visualization_geometry",
+    "fans",
+    2,
+    "status"
+   ],
+   "before": "provisional_visual_fan_at_cove_centre_not_site_approved",
+   "after": "provisional_visual_fan_at_nominal_room_centre_not_site_approved"
+  }
+ ]
+}

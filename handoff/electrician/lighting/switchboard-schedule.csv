@@ -4,7 +4,7 @@ SB-01,K-BAL-LOW,BAL,LOW,24 V single-colour PWM wall knob (knob group),C08,3,,270
 SB-08,K-CBR-LOW,CBR,LOW,24 V single-colour PWM wall knob (knob group),C39; C40; X-CURT-CBR,5,CURT-CBR,2700,P16,3,0,105.04,brightness only; exact products and chain unverified
 SB-08,K-CBR-STUDY,CBR,TASK,24 V single-colour PWM wall knob (knob group),C38,1,,4000,P16,1,0,15.96,brightness only; exact products and chain unverified
 SB-02,K-DIN-LOW,DIN,LOW,24 V single-colour PWM wall knob (knob group),C12; X-CURT-DIN,1,CURT-DIN,2700,P07,2,0,69.28,brightness only; exact products and chain unverified
-SB-02,K-DIN-PASSAGE,DIN,HIGH,24 V single-colour PWM wall knob (knob group),C10,1,,3000,P06,1,0,8,brightness only; exact products and chain unverified
+SB-02,K-DIN-PASSAGE,DIN,HIGH,24 V single-colour PWM wall knob (knob group),C10,1,,4000,P06,1,0,8,brightness only; exact products and chain unverified
 SB-06,K-DRS-HIGH,DRS,HIGH,24 V single-colour PWM wall knob (knob group),C27,2,,4000,P14,1,0,14,brightness only; exact products and chain unverified
 SB-03,K-KIT-LOW,KIT,LOW,24 V single-colour PWM wall knob (knob group),C17,1,,2700,P08,2,0,70.56,brightness only; exact products and chain unverified
 SB-03,K-KIT-TASK,KIT,TASK,24 V single-colour PWM wall knob (knob group),C16,4,,4000,P10,1,0,31.8,brightness only; exact products and chain unverified
@@ -20,15 +20,15 @@ SB-07B,K-TL2-FACE,TL2,FACE,24 V single-colour PWM wall knob (knob group),C35B,2,
 SB-07B,K-TL2-HIGH,TL2,HIGH,24 V single-colour PWM wall knob (knob group),C34; C35A,5,,4000,P15,2,0,43,brightness only; exact products and chain unverified
 SB-07B,K-TL2-LOW,TL2,LOW,24 V single-colour PWM wall knob (knob group),C36A; C36B,3,,2700,P15,2,0,39.12,brightness only; exact products and chain unverified
 SB-04,K-UTL-TASK,UTL,TASK,24 V single-colour PWM wall knob (knob group),C19,1,,4000,P11,1,0,11.0,brightness only; exact products and chain unverified
-SB-01,DIM-C01,LIV,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C01,5,,3000,,,0,40,brightness only; exact products and chain unverified
-SB-01,DIM-C02,LIV,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C02,5,,3000,,,0,40,brightness only; exact products and chain unverified
-SB-02,DIM-C09,DIN,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C09,3,,3000,,,0,30,brightness only; exact products and chain unverified
+SB-01,DIM-C01,LIV,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C01,5,,4000,,,0,40,brightness only; exact products and chain unverified
+SB-01,DIM-C02,LIV,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C02,5,,4000,,,0,40,brightness only; exact products and chain unverified
+SB-02,DIM-C09,DIN,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C09,3,,4000,,,0,30,brightness only; exact products and chain unverified
 SB-02,DIM-C11,DIN,PENDANT,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C11,1,,2700,,,0,12,brightness only; exact products and chain unverified
 SB-03,DIM-C14,KIT,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C14,4,,4000,,,0,40,brightness only; exact products and chain unverified
 SB-03,DIM-C15,KIT,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C15,4,,4000,,,0,31,brightness only; exact products and chain unverified
 SB-04,DIM-C18,UTL,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C18,3,,4000,,,0,36,brightness only; exact products and chain unverified
-SB-05,DIM-C20,MBR,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C20,8,,3000,,,0,48,brightness only; exact products and chain unverified
-SB-08,DIM-C37,CBR,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C37,6,,3000,,,0,36,brightness only; exact products and chain unverified
+SB-05,DIM-C20,MBR,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C20,8,,4000,,,0,48,brightness only; exact products and chain unverified
+SB-08,DIM-C37,CBR,HIGH,"230 V trailing-edge rotary dimmer (maker-listed, check minimum load)",C37,6,,4000,,,0,36,brightness only; exact products and chain unverified
 SB-05L,INT-C25,MBR,READER,integral dimmer on the fitting,C25,1,,3000,,,0,3,brightness only; exact products and chain unverified
 SB-05R,INT-C26,MBR,READER,integral dimmer on the fitting,C26,1,,3000,,,0,3,brightness only; exact products and chain unverified
 SB-08RL,INT-C41,CBR,READER,integral dimmer on the fitting,C41,1,,3000,,,0,3,brightness only; exact products and chain unverified

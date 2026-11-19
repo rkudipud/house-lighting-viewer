@@ -44,7 +44,7 @@ export function createLighting(scene,model) {
   const inputs=PLAN.fixtures.inputs;
   const selectedPockets=(PLAN.curtainPockets?.pockets||[]).filter(p=>p.selected);
   const pocketFixtures=selectedPockets.map(p=>({id:p.id,room:p.room,lane:'LOW',channel:'low',layer:'LOW',
-    type:'CURTAIN_S1',circuit:p.circuit,cct:p.cct,held:false,lm:0,rail:'low'}));
+    type:'CURTAIN_S1',circuit:p.circuit,cct:p.cct,held:false,lm:0,visualOnly:true,rail:'low'}));
   const circuits=[...PLAN.fixtures.controls.circuits,...selectedPockets.map(p=>({circuit:p.circuit,rooms:[p.room],lane:'LOW'}))];
   const allFixtures=[...zones.flatMap(z=>z.fixtures),...pocketFixtures];
   const accessoryFixtures=allFixtures.filter(f=>f.lane==='READ'||f.lane==='NIGHT');
@@ -274,8 +274,10 @@ export function createLighting(scene,model) {
     for(const e of model.emission){
       const s=e.circuit?groupStates[e.circuit]:states[zoneId(e.room)][e.layer];if(!s)throw new Error('Unscheduled emissive layer '+e.layer);
       const held=e.circuit?groupStates[e.circuit].fixtures.every(f=>f.held):e.layer==='pooja'||e.layer==='poojaSpot';
-      const scheduled=e.circuit?groupStates[e.circuit].fixtures.some(f=>!f.held&&f.lm>0):true;
-      const level=scheduled&&!held&&s.on?s.dim/100:0;
+      const scheduled=e.circuit?groupStates[e.circuit].fixtures.some(f=>!f.held&&(f.lm>0||f.visualOnly)):true;
+      const childPreview=e.circuit&&held&&s.fixtures.every(f=>/^CBR-(L1|X[1-4])$/.test(f.id));
+      const previewOn=childPreview&&masterLight.low.on&&roomsOfCircuit(e.circuit).some(room=>roomLight[room].on);
+      const level=(scheduled&&!held&&s.on)||previewOn?s.dim/100:0;
       if(e.kind==='decal'){
         const target=kelvin(s.k).multiplyScalar(level*(e.gain??1)*VISUAL_GLOW_SCALE);e.mat.color.lerp(target,t);
       }else{

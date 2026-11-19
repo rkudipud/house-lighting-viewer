@@ -23,7 +23,7 @@
       "A_per_channel": null,
       "knob_group": null,
       "cct": [
-        "3000K"
+        "4000K"
       ],
       "note": "OPT-1 regroup: window half of the living room (window line LIV-H1..H4 + LIV-H5); 40 W / 5 lamps",
       "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
@@ -60,7 +60,7 @@
       "A_per_channel": null,
       "knob_group": null,
       "cct": [
-        "3000K"
+        "4000K"
       ],
       "note": "OPT-1 regroup: TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10); 40 W / 5 lamps; DL8 and DL8A heads on one dimmer need the same driver family",
       "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
@@ -349,7 +349,7 @@
       "A_per_channel": null,
       "knob_group": null,
       "cct": [
-        "3000K"
+        "4000K"
       ],
       "note": "",
       "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
@@ -384,7 +384,7 @@
       "A_per_channel": 0.33,
       "knob_group": "K-DIN-PASSAGE",
       "cct": [
-        "3000K"
+        "4000K"
       ],
       "note": "passage; PSU mains 2-way SB-02/SB-07 (concept), knob level at SB-02",
       "control_device": "T1-K-class 24 V PWM wall knob (3 out, single colour), own 86 mm box; brightness only",
@@ -746,7 +746,7 @@
       "A_per_channel": null,
       "knob_group": null,
       "cct": [
-        "3000K"
+        "4000K"
       ],
       "note": "dimmer at door; on/off 2-way door + intermediate SB-05L + 2-way SB-05R (concept)",
       "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
@@ -1493,7 +1493,7 @@
       "A_per_channel": null,
       "knob_group": null,
       "cct": [
-        "3000K"
+        "4000K"
       ],
       "note": "dimmer at door; on/off 2-way door + intermediate at the two bed-head plates (concept)",
       "control_device": "230 V trailing-edge rotary dimmer listed by the fitting maker (check min load)",
@@ -2272,11 +2272,11 @@
         "psu": "P16",
         "board": "SB-08",
         "new_section": false,
-        "branch_m": 5.43,
+        "branch_m": 6.87,
         "feed_psu_to_board_m": 4.6,
         "feed_shared_I_A": 5.05,
-        "dV_pct_before": 3.3,
-        "dV_pct_after": 3.6,
+        "dV_pct_before": 3.6,
+        "dV_pct_after": 3.9,
         "status_before": "MARGINAL",
         "status_after": "MARGINAL",
         "min_mm2_for_target_after": 2.5,

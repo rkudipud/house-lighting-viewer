@@ -1,6 +1,6 @@
 ﻿circuit,board,rooms,lane,fixture_ids,group,supply,cct,load_W,status
-C01,SB-01,LIV,HIGH,LIV-H1; LIV-H2; LIV-H3; LIV-H4; LIV-H5,DIM-C01,,3000K,40,review; product and site holds apply
-C02,SB-01,LIV,HIGH,LIV-H6; LIV-H7; LIV-H8; LIV-H9; LIV-H10,DIM-C02,,3000K,40,review; product and site holds apply
+C01,SB-01,LIV,HIGH,LIV-H1; LIV-H2; LIV-H3; LIV-H4; LIV-H5,DIM-C01,,4000K,40,review; product and site holds apply
+C02,SB-01,LIV,HIGH,LIV-H6; LIV-H7; LIV-H8; LIV-H9; LIV-H10,DIM-C02,,4000K,40,review; product and site holds apply
 C03,SB-01,LIV,COVE,LIV-L1,K-LIV-LOW,P01,2700K,92.24,"HOLD: P01 route, voltage drop and protection"
 C04,SB-01,LIV,MOOD,LIV-L2,K-LIV-LOW,P01,2700K,10.08,"HOLD: P01 route, voltage drop and protection"
 C05,SB-01,DIN; LIV,LINE,LIV-X1; LIV-X2; DIN-X1,K-LIV-LOW,P01,2700K,59.6,"HOLD: P01 route, voltage drop and protection"
@@ -8,8 +8,8 @@ C06A,SB-01,LIV,ACCENT,LIV-P1,K-LIV-POOJA-STRIP,P04,2700K,21.72,review; product a
 C06B,SB-01,LIV,ACCENT,LIV-P2,K-LIV-POOJA-SPOT,P04,2700K,6,review; product and site holds apply
 C07,SB-01,BAL,HIGH,BAL-H1; BAL-H2,K-BAL-HIGH,P05,3000K,12,review; product and site holds apply
 C08,SB-01,BAL,MOOD,BAL-L1; BAL-L2; BAL-L3,K-BAL-LOW,P05,2700K,26.65,review; product and site holds apply
-C09,SB-02,DIN,HIGH,DIN-H1; DIN-H2; DIN-H3,DIM-C09,,3000K,30,review; product and site holds apply
-C10,SB-02,DIN,HIGH,DIN-H6,K-DIN-PASSAGE,P06,3000K,8,review; product and site holds apply
+C09,SB-02,DIN,HIGH,DIN-H1; DIN-H2; DIN-H3,DIM-C09,,4000K,30,review; product and site holds apply
+C10,SB-02,DIN,HIGH,DIN-H6,K-DIN-PASSAGE,P06,4000K,8,review; product and site holds apply
 C11,SB-02,DIN,MOOD,DIN-L1,DIM-C11,,2700K,12,review; product and site holds apply
 C12,SB-02,DIN,COVE,DIN-L2,K-DIN-LOW,P07,2700K,49.68,review; product and site holds apply
 C13,SB-02,DIN,ACCENT,FW-T1; FW-T2; FW-T3; FW-T4,TRK-C13,,3000K,26,review; product and site holds apply
@@ -19,7 +19,7 @@ C16,SB-03,KIT,TASK,KIT-T1; KIT-T2; KIT-T3; KIT-T4,K-KIT-TASK,P10,4000K,31.8,revi
 C17,SB-03,KIT,COVE,KIT-L1,K-KIT-LOW,P08,2700K,70.56,review; product and site holds apply
 C18,SB-04,UTL,HIGH,UTL-H1; UTL-H2; UTL-H3,DIM-C18,,4000K,36,review; product and site holds apply
 C19,SB-04,UTL,TASK,UTL-T1,K-UTL-TASK,P11,4000K,11.0,review; product and site holds apply
-C20,SB-05,MBR,HIGH,MBR-H1; MBR-H2; MBR-H3; MBR-H4; MBR-H5; MBR-H6; MBR-H7; MBR-H8,DIM-C20,,3000K,48,review; product and site holds apply
+C20,SB-05,MBR,HIGH,MBR-H1; MBR-H2; MBR-H3; MBR-H4; MBR-H5; MBR-H6; MBR-H7; MBR-H8,DIM-C20,,4000K,48,review; product and site holds apply
 C21,SB-05,MBR,COVE,MBR-L1,K-MBR-LOW,P12,2700K,52.24,review; product and site holds apply
 C22,SB-05,MBR,LINE,MBR-X1; MBR-X2,K-MBR-LOW,P12,2700K,30.88,review; product and site holds apply
 C23,SB-05,MBR,MOOD,MBR-L2,K-MBR-LOW,P12,2700K,7.68,review; product and site holds apply
@@ -40,7 +40,7 @@ C35A,SB-07B,TL2,MIRROR,TL2-M1; TL2-M2,K-TL2-HIGH,P15,4000K,16,review; product an
 C35B,SB-07B,TL2,FACE,TL2-F1; TL2-F2,K-TL2-FACE,P15,4000K,10,review; product and site holds apply
 C36A,SB-07B,TL2,PERIM,TL2-L1,K-TL2-LOW,P15,2700K,31.87,review; product and site holds apply
 C36B,SB-07B,TL2,MOOD,TL2-L2; TL2-L3,K-TL2-LOW,P15,2700K,7.25,review; product and site holds apply
-C37,SB-08,CBR,HIGH,CBR-H1; CBR-H2; CBR-H3; CBR-H4; CBR-H5; CBR-H6,DIM-C37,,3000K,36,C37 fitting locations released for review; dimmer procurement held
+C37,SB-08,CBR,HIGH,CBR-H1; CBR-H2; CBR-H3; CBR-H4; CBR-H5; CBR-H6,DIM-C37,,4000K,36,C37 fitting locations released for review; dimmer procurement held
 C38,SB-08,CBR,STUDY,CBR-S1,K-CBR-STUDY,P16,4000K,15.96,review; product and site holds apply
 C39,SB-08,CBR,COVE,CBR-L1,K-CBR-LOW,P16,2700K,49.76,review; product and site holds apply
 C40,SB-08,CBR,LINE,CBR-X1; CBR-X2; CBR-X3; CBR-X4,K-CBR-LOW,P16,2700K,42.88,review; product and site holds apply

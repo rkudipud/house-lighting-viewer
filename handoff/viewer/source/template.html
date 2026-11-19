@@ -34,6 +34,8 @@ h2{font-family:"Bahnschrift","Segoe UI",sans-serif;font-size:11px;letter-spacing
 .views{display:grid;grid-template-columns:1fr 1fr;gap:6px}.views button{text-align:left;font-size:12px}.views button:last-child{grid-column:1/-1}.views b{font:11px Consolas,monospace;opacity:.6;margin-right:5px}
 select{width:100%}.row{display:flex;gap:6px;align-items:center}.row>*{flex:1}
 .room-nav{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px;margin-top:9px;font-size:11px;font-weight:650}.room-nav select{min-width:0}
+.marker-legend{display:grid;grid-template-columns:1fr 1fr;gap:5px 8px;margin-top:10px;font-size:11px;line-height:1.3}
+.marker-legend strong{grid-column:1/-1}.marker-legend span{display:flex;align-items:center;gap:5px}.marker-legend svg{width:20px;height:20px;flex:none}
 .fine{font-size:11px;color:var(--muted);line-height:1.5;margin:7px 0 0}
 .subhead{font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;margin:10px 0 6px;color:var(--muted)}
 .switch{display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:650;font-size:13px;padding:2px 0 8px}
@@ -95,6 +97,14 @@ dialog{border:1px solid var(--line);border-radius:12px;color:var(--ink);backgrou
    </div>
     <label class="room-nav"><span>Room focus</span><select id="room" aria-label="Jump to a room"></select></label>
     <div class="row" style="margin-top:7px"><button id="guided">Guided walk</button><button id="help" aria-label="Controls and help">Help</button></div>
+    <div id="marker-legend" class="marker-legend" aria-label="Fitting marker legend">
+     <strong>Fitting markers</strong>
+     <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="#0072b2" stroke="#172c33"/></svg>Downlight</span>
+     <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 21 20H3Z" fill="#b0206c" stroke="#172c33"/></svg>Spot / track</span>
+     <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 22 12 12 22 2 12Z" fill="#d55e00" stroke="#172c33"/></svg>Strip / cove</span>
+     <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" fill="#007b53" stroke="#172c33"/></svg>Wall / other</span>
+     <span style="grid-column:1/-1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#172c33" stroke-width="2" stroke-dasharray="3 2"/></svg>Dashed ring: held / not released</span>
+    </div>
   </section>
   <section aria-labelledby="h-storage"><h2 id="h-storage">Storage review</h2>
     <p class="fine">Proposed interiors are shown by default. Unapproved, unmeasured approximations; not for fabrication. Verify widths, clearances and supports on site.</p>
@@ -111,7 +121,7 @@ dialog{border:1px solid var(--line);border-radius:12px;color:var(--ink);backgrou
      <div class="rail-head"><label for="master-low-dim">Brightness</label><output id="master-low-out" for="master-low-dim">100%</output></div>
      <input id="master-low-dim" aria-label="Whole-house LOW brightness" type="range" min="0" max="100" step="1" value="100">
     </div>
-    <p class="fine">Masters scale and switch each lane across the house. Room lights can still be switched and trimmed below; a room switched off stays off. Held fittings stay unlit.</p>
+    <p class="fine">Masters scale and switch each lane across the house. Room lights can still be switched and trimmed below; a room switched off stays off. Held fittings stay unlit. The children’s cove and outward strips are modelled ON with scheduled lumens for review only; their installation, fan clearance and site checks remain on hold.</p>
     <div class="subhead">Selected room</div>
    <label class="switch"><span id="room-on-label">Room lights</span><input id="room-on" type="checkbox" role="switch"></label>
    <div class="rail" id="rail-high"><div class="rail-head"><label for="high-dim">HIGH<small>main lights</small></label><output id="high-out" for="high-dim">100%</output></div><input id="high-dim" type="range" min="0" max="100" step="1" value="100"><div class="cct" id="high-cct"></div></div>
@@ -163,7 +173,7 @@ dialog{border:1px solid var(--line);border-radius:12px;color:var(--ink);backgrou
 <div id="loading"><h2>Opening the flat</h2><p>Preparing materials and lighting. Everything runs in your browser; nothing is uploaded.</p></div>
 <div id="fatal" role="alert"><h2>This browser could not open the 3D home</h2><p>Use a recent Edge, Chrome, Safari or Firefox with WebGL 2 and hardware acceleration enabled. If the graphics context was lost, close other graphics-heavy tabs and reload.</p><pre id="fatal-detail"></pre></div>
 <dialog id="help-dialog"><h2>Walk, look, light.</h2>
-<p><kbd>W A S D</kbd> or arrow keys walk, <kbd>Shift</kbd> is faster. Drag to look around. On a phone use the on-screen arrows and drag to look.</p>
+<p><kbd>W A S D</kbd> or arrow keys walk, <kbd>Shift</kbd> is faster. Mouse drag axes are inverted; touch drag retains its usual direction. On a phone use the on-screen arrows and drag to look.</p>
 <p><kbd>1</kbd> First person &nbsp; <kbd>2</kbd> Third person &nbsp; <kbd>3</kbd> Dollhouse (roof off, drag to orbit, scroll or pinch to zoom) &nbsp; <kbd>4</kbd> Light map &nbsp; <kbd>5</kbd> Ceiling plan. In Dollhouse and Ceiling plan, tap a dot to see that fitting&rsquo;s fixed colour temperature, power and circuit.</p>
 <p>Choose a room focus in the View panel or use Guided walk. In walk views the room controls follow the room you are standing in. Whole-house HIGH and LOW masters scale and switch each lane; the selected room also has an on/off switch and local HIGH/LOW trim.</p>
 <p>This is a review draft, not a construction release.</p><button id="close-help">Got it</button></dialog>

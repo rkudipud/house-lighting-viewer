@@ -1,0 +1,9 @@
+{
+  "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "files": {
+    "01-whole-flat-dollhouse.png": "6c3b2f19e20d6257d5e39506b518c9af235f917d767297354eaad04e7acbb6af",
+    "02-living-light-and-curtains.png": "5caea5f0b948af115d3ed46e10883e489f52689e241eb03bb9f4a9d006def178",
+    "03-master-proposed-interiors.png": "68e99b2522e00551576f72198a6d6616f545d5bc596b5136e5731d908a986c94",
+    "render-receipt.json": "3aec8b9c8a3347e4ba8442a0fe05d62e3dc6dcd2f70f8cc02e5a4b3f8cb51951"
+  }
+}

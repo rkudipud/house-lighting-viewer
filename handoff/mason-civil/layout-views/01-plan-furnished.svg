@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2268" viewBox="0 0 1700 2268" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2234" viewBox="0 0 1700 2234" role="img" aria-labelledby="t d">
 <title id="t">Furnished floor plan (top-down)</title>
 <desc id="d">Read-only furnished floor plan generated from the canonical master; south-up with a north arrow.</desc>
-<metadata>{&quot;sheet&quot;:&quot;01-plan-furnished&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;orientation&quot;:{&quot;+z_sheet_down&quot;:&quot;north&quot;,&quot;-z_sheet_top&quot;:&quot;south&quot;,&quot;+x_sheet_right&quot;:&quot;west&quot;,&quot;-x_sheet_left&quot;:&quot;east&quot;},&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;01-plan-furnished&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;orientation&quot;:{&quot;+z_sheet_down&quot;:&quot;north&quot;,&quot;-z_sheet_top&quot;:&quot;south&quot;,&quot;+x_sheet_right&quot;:&quot;west&quot;,&quot;-x_sheet_left&quot;:&quot;east&quot;},&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -16,12 +16,12 @@
 .mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
 .title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
 .halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
-<rect width="1700" height="2268" fill="#fcfdfc"/>
+<rect width="1700" height="2234" fill="#fcfdfc"/>
 <text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Furnished floor plan — top-down</text>
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >Hyderabad 2BHK · one floor · sheet drawn south-up (north arrow at right)</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 1 / 13</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
 <g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
 <text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
@@ -126,8 +126,8 @@
 <g data-item-id="FURN-plant-2">
 <circle cx="0.6401" cy="14.0818" r=".19" fill="#cfe2cb" stroke="#78937a" stroke-width=".012"/>
 </g>
-<g data-storage-id="ST-R04a-WR01" data-storage-kind="shallow_cabinet_conditional" data-selection="site-held">
-<rect x="5.0640" y="5.0500" width="0.3000" height="1.5500" fill="#dce4ef" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".07 .04"/>
+<g data-storage-id="ST-R04a-WR01" data-storage-kind="shallow_cabinet_conditional">
+<rect x="5.0640" y="5.0500" width="0.3000" height="1.5500" fill="#dce4ef" stroke="#5b7795" stroke-width="0.014" />
 <path d="M5.0640 5.4375L5.3640 5.4375" fill="none" stroke="#90a3b9" stroke-width="0.008" />
 <path d="M5.0640 5.8250L5.3640 5.8250" fill="none" stroke="#90a3b9" stroke-width="0.008" />
 <path d="M5.0640 6.2125L5.3640 6.2125" fill="none" stroke="#90a3b9" stroke-width="0.008" />
@@ -147,8 +147,8 @@
 <g data-storage-id="ST-R09-SH01" data-storage-kind="shoe_cabinet_exterior">
 <rect x="0.5520" y="13.4130" width="1.2000" height="0.3500" fill="#dce4ef" stroke="#5b7795" stroke-width="0.014" />
 </g>
-<g data-storage-id="ST-R08-UC01" data-storage-kind="under_counter_shutters_optional" data-selection="site-held">
-<rect x="4.4040" y="0.3050" width="0.5510" height="1.1120" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".07 .04"/>
+<g data-storage-id="ST-R08-UC01" data-storage-kind="under_counter_shutters_optional">
+<rect x="4.4040" y="0.3050" width="0.5510" height="1.1120" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
 </g>
 <g data-storage-id="ST-R08-LD01" data-storage-kind="wall_hooks_ladder_mop">
 <rect x="2.7200" y="1.3110" width="0.5600" height="0.1500" fill="#e9edf0" stroke="#5b7795" stroke-width="0.014" />
@@ -426,7 +426,7 @@
 <text x="8.1912" y="0.5246" font-size="0.1" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0220" >WARDROBE</text>
 <text x="8.1912" y="0.6546" font-size="0.1" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0220" >ZONE</text>
 <text x="7.0104" y="0.5046" font-size="0.095" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0209" >W03 BAY</text>
-<text x="7.0104" y="1.0046" font-size="0.075" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0165" >south wall: split wardrobes in principle; size held</text>
+<text x="7.0104" y="1.0046" font-size="0.085" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0187" >split wardrobe approved in principle; size unmeasured</text>
 <path d="M5.1554 1.2535L5.1554 2.0535" fill="none" stroke="#466c92" stroke-width="0.05" />
 <text x="5.2554" y="1.6835" font-size="0.1" fill="#466c92" text-anchor="start" class="halo" stroke-width="0.0220" >TV</text>
 <text x="5.2554" y="1.8135" font-size="0.075" fill="#466c92" text-anchor="start" class="halo" stroke-width="0.0165" >east wall</text>
@@ -548,7 +548,7 @@
 <rect x="1200" y="744" width="34" height="16" fill="none" stroke="#526d9a" stroke-width="2" stroke-dasharray="7 4"/>
 <text x="1248.00" y="758.00" font-size="14" class="" text-anchor="start" >Loft / overhead (dashed outline)</text>
 <rect x="1200" y="770" width="34" height="16" fill="url(#zone)" stroke="#5b7795" stroke-dasharray="5 3" transform="scale(1)"/>
-<text x="1248.00" y="784.00" font-size="14" class="" text-anchor="start" >Wardrobe zones: approved in principle, sizes held</text>
+<text x="1248.00" y="784.00" font-size="14" class="" text-anchor="start" >Split wardrobe in principle — unmeasured zones</text>
 <rect x="1200" y="796" width="34" height="16" fill="none" stroke="#6b7f95" stroke-width="2" stroke-dasharray="7 4"/>
 <text x="1248.00" y="810.00" font-size="14" class="" text-anchor="start" >Tenant's own bed: queen–king envelope</text>
 <rect x="1200" y="822" width="34" height="16" fill="#eef5f3" stroke="#6b9f99" stroke-width="3"/>
@@ -578,46 +578,45 @@
 <text x="1200.00" y="1316.00" font-size="13" class="muted" text-anchor="start" >records which are inferred or unmeasured, and most opening</text>
 <text x="1200.00" y="1334.00" font-size="13" class="muted" text-anchor="start" >offsets are inherited or placeholder (modelled plan position; not</text>
 <text x="1200.00" y="1352.00" font-size="13" class="muted" text-anchor="start" >site verified).</text>
-<text x="1200.00" y="1386.00" font-size="13" class="muted" text-anchor="start" >W03 (master window): centred (homeowner-confirmed); offsets</text>
-<text x="1200.00" y="1404.00" font-size="13" class="muted" text-anchor="start" >unmeasured. W05 (children’s window): placeholder concealed behind</text>
-<text x="1200.00" y="1422.00" font-size="13" class="muted" text-anchor="start" >the curtain. UP1 (utility parapet opening, OI-UTL-01): assumed.</text>
-<text x="1200.00" y="1456.00" font-size="13" class="muted" text-anchor="start" >Beds are the tenants’ own: dashed queen-to-king mattress</text>
-<text x="1200.00" y="1474.00" font-size="13" class="muted" text-anchor="start" >envelope, 1524–1829 × 1981 mm; no tenant frame is drawn. Fixed</text>
-<text x="1200.00" y="1492.00" font-size="13" class="muted" text-anchor="start" >bedside cabinets are omitted by the homeowner (HD-14:</text>
-<text x="1200.00" y="1510.00" font-size="13" class="muted" text-anchor="start" >ST-R04-NS01, ST-R04-NS02, ST-R05-NS01); tenants may use movable</text>
-<text x="1200.00" y="1528.00" font-size="13" class="muted" text-anchor="start" >tables. Room and bed positions are unchanged.</text>
-<text x="1200.00" y="1562.00" font-size="13" class="muted" text-anchor="start" >R05 SITE-CHECK PINCH (HD-15): approximately 387.6 mm at the</text>
-<text x="1200.00" y="1580.00" font-size="13" class="muted" text-anchor="start" >bed-foot/study-return, not a comfortable walking route. Keep room</text>
-<text x="1200.00" y="1598.00" font-size="13" class="muted" text-anchor="start" >and furniture positions unchanged. Measure the tenant bed frame,</text>
-<text x="1200.00" y="1616.00" font-size="13" class="muted" text-anchor="start" >fixed return and unobstructed route on site (OI-R05-03).</text>
-<text x="1200.00" y="1650.00" font-size="13" class="muted" text-anchor="start" >Master split wardrobe approved in principle: hatched relationship</text>
-<text x="1200.00" y="1668.00" font-size="13" class="muted" text-anchor="start" >zones only; dimensions and loft support remain site holds. OPT-E</text>
-<text x="1200.00" y="1686.00" font-size="13" class="muted" text-anchor="start" >BWP plywood carcass and laminate shutters are selected. Five</text>
-<text x="1200.00" y="1704.00" font-size="13" class="muted" text-anchor="start" >superseded ST-R04 footprints are not drawn.</text>
-<text x="1200.00" y="1738.00" font-size="13" class="muted" text-anchor="start" >Dressing cabinet ST-R04a-WR01 and utility cabinet ST-R08-UC01 are</text>
-<text x="1200.00" y="1756.00" font-size="13" class="muted" text-anchor="start" >selected subject to site fit. Dashed footprints are unmeasured</text>
-<text x="1200.00" y="1774.00" font-size="13" class="muted" text-anchor="start" >placeholders, not fabrication dimensions; verify route / door</text>
-<text x="1200.00" y="1792.00" font-size="13" class="muted" text-anchor="start" >clearance and utility services / access.</text>
-<text x="1200.00" y="1826.00" font-size="13" class="muted" text-anchor="start" >Pooja niche PN1: already built; its east-wall relationship is</text>
-<text x="1200.00" y="1844.00" font-size="13" class="muted" text-anchor="start" >homeowner-confirmed (HD-10). HD-18 clarifies feet-and-inches</text>
-<text x="1200.00" y="1862.00" font-size="13" class="muted" text-anchor="start" >notation, but dimensions and position remain homeowner estimates,</text>
-<text x="1200.00" y="1880.00" font-size="13" class="muted" text-anchor="start" >not site measurements (OI-POOJA-01). The homeowner reports a</text>
-<text x="1200.00" y="1898.00" font-size="13" class="muted" text-anchor="start" >reinforced slab extension beyond the 9-inch wall, top to bottom</text>
-<text x="1200.00" y="1916.00" font-size="13" class="muted" text-anchor="start" >through the building. Extension geometry and load capacity are</text>
-<text x="1200.00" y="1934.00" font-size="13" class="muted" text-anchor="start" >unverified: only the estimated front outline is drawn, not a</text>
-<text x="1200.00" y="1952.00" font-size="13" class="muted" text-anchor="start" >physical back or structural section. No cutting or structural</text>
-<text x="1200.00" y="1970.00" font-size="13" class="muted" text-anchor="start" >change is requested or approved.</text>
-<text x="1200.00" y="2004.00" font-size="13" class="muted" text-anchor="start" >The lift interior and the stair are drawn in plan only. Tags</text>
-<text x="1200.00" y="2022.00" font-size="13" class="muted" text-anchor="start" >W/D/G/V are opening codes used on the elevation sheets; PN1</text>
-<text x="1200.00" y="2040.00" font-size="13" class="muted" text-anchor="start" >(pooja niche), SN1/SN2 (shower niches) and UP1 are tagged on the</text>
-<text x="1200.00" y="2058.00" font-size="13" class="muted" text-anchor="start" >elevations.</text>
-<g id="north-arrow" data-north="sheet-bottom" transform="translate(1260 2158)"><circle r="40" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
+<text x="1200.00" y="1386.00" font-size="13" class="muted" text-anchor="start" >D01 is single-leaf in the model, while the architectural</text>
+<text x="1200.00" y="1404.00" font-size="13" class="muted" text-anchor="start" >description says double-leaf; confirm on site. W03 (master</text>
+<text x="1200.00" y="1422.00" font-size="13" class="muted" text-anchor="start" >window): centred (homeowner-confirmed); offsets unmeasured. W05</text>
+<text x="1200.00" y="1440.00" font-size="13" class="muted" text-anchor="start" >(children’s window): placeholder concealed behind the curtain.</text>
+<text x="1200.00" y="1458.00" font-size="13" class="muted" text-anchor="start" >UP1 (utility parapet opening, OI-UTL-01): assumed.</text>
+<text x="1200.00" y="1492.00" font-size="13" class="muted" text-anchor="start" >Beds are the tenants’ own: dashed queen-to-king mattress</text>
+<text x="1200.00" y="1510.00" font-size="13" class="muted" text-anchor="start" >envelope, 1524–1829 × 1981 mm; no tenant frame is drawn. Fixed</text>
+<text x="1200.00" y="1528.00" font-size="13" class="muted" text-anchor="start" >bedside cabinets are omitted by the homeowner (HD-14:</text>
+<text x="1200.00" y="1546.00" font-size="13" class="muted" text-anchor="start" >ST-R04-NS01, ST-R04-NS02, ST-R05-NS01); tenants may use movable</text>
+<text x="1200.00" y="1564.00" font-size="13" class="muted" text-anchor="start" >tables. Room and bed positions are unchanged.</text>
+<text x="1200.00" y="1598.00" font-size="13" class="muted" text-anchor="start" >R05 SITE-CHECK PINCH (HD-15): approximately 387.6 mm at the</text>
+<text x="1200.00" y="1616.00" font-size="13" class="muted" text-anchor="start" >bed-foot/study-return, not a comfortable walking route. Keep room</text>
+<text x="1200.00" y="1634.00" font-size="13" class="muted" text-anchor="start" >and furniture positions unchanged. Measure the tenant bed frame,</text>
+<text x="1200.00" y="1652.00" font-size="13" class="muted" text-anchor="start" >fixed return and unobstructed route on site (OI-R05-03).</text>
+<text x="1200.00" y="1686.00" font-size="13" class="muted" text-anchor="start" >Master split wardrobe is approved in principle; its hatched</text>
+<text x="1200.00" y="1704.00" font-size="13" class="muted" text-anchor="start" >zones, compartments and loft remain unmeasured. The five</text>
+<text x="1200.00" y="1722.00" font-size="13" class="muted" text-anchor="start" >superseded ST-R04 records are not drawn. Dressing and utility</text>
+<text x="1200.00" y="1740.00" font-size="13" class="muted" text-anchor="start" >cabinets are selected conditionally, subject to FH-ST-03 /</text>
+<text x="1200.00" y="1758.00" font-size="13" class="muted" text-anchor="start" >FH-ST-12 site checks.</text>
+<text x="1200.00" y="1792.00" font-size="13" class="muted" text-anchor="start" >Pooja niche PN1: already built; its east-wall relationship is</text>
+<text x="1200.00" y="1810.00" font-size="13" class="muted" text-anchor="start" >homeowner-confirmed (HD-10). HD-18 clarifies feet-and-inches</text>
+<text x="1200.00" y="1828.00" font-size="13" class="muted" text-anchor="start" >notation, but dimensions and position remain homeowner estimates,</text>
+<text x="1200.00" y="1846.00" font-size="13" class="muted" text-anchor="start" >not site measurements (OI-POOJA-01). The homeowner reports a</text>
+<text x="1200.00" y="1864.00" font-size="13" class="muted" text-anchor="start" >reinforced slab extension beyond the 9-inch wall, top to bottom</text>
+<text x="1200.00" y="1882.00" font-size="13" class="muted" text-anchor="start" >through the building. Extension geometry and load capacity are</text>
+<text x="1200.00" y="1900.00" font-size="13" class="muted" text-anchor="start" >unverified: only the estimated front outline is drawn, not a</text>
+<text x="1200.00" y="1918.00" font-size="13" class="muted" text-anchor="start" >physical back or structural section. No cutting or structural</text>
+<text x="1200.00" y="1936.00" font-size="13" class="muted" text-anchor="start" >change is requested or approved.</text>
+<text x="1200.00" y="1970.00" font-size="13" class="muted" text-anchor="start" >The lift interior and the stair are drawn in plan only. Tags</text>
+<text x="1200.00" y="1988.00" font-size="13" class="muted" text-anchor="start" >W/D/G/V are opening codes used on the elevation sheets; PN1</text>
+<text x="1200.00" y="2006.00" font-size="13" class="muted" text-anchor="start" >(pooja niche), SN1/SN2 (shower niches) and UP1 are tagged on the</text>
+<text x="1200.00" y="2024.00" font-size="13" class="muted" text-anchor="start" >elevations.</text>
+<g id="north-arrow" data-north="sheet-bottom" transform="translate(1260 2124)"><circle r="40" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 34L15.2 -18.0L0 -8.0L-15.2 -18.0Z" fill="#203b43"/>
 <text y="57" font-size="16" font-weight="700" text-anchor="middle">N</text>
 <text y="-46" font-size="12" class="muted" text-anchor="middle">S</text></g>
-<text x="1320.00" y="2148.00" font-size="14" class="muted" text-anchor="start" >Approx. north points to sheet-bottom.</text>
-<text x="1320.00" y="2168.00" font-size="14" class="muted" text-anchor="start" >The drawing is not rotated.</text>
-<path d="M60 2234H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="2256.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
-<text x="1640.00" y="2256.00" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+<text x="1320.00" y="2114.00" font-size="14" class="muted" text-anchor="start" >Approx. north points to sheet-bottom.</text>
+<text x="1320.00" y="2134.00" font-size="14" class="muted" text-anchor="start" >The drawing is not rotated.</text>
+<path d="M60 2200H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="2222.00" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
+<text x="1640.00" y="2222.00" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

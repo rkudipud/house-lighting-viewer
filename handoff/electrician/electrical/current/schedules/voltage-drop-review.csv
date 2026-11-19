@@ -31,7 +31,7 @@ C36A,all,P15,1.5,OK,S1 planning model; actual design open,run 6.64 m > 5.0 m ASS
 C36B,all,P15,1.4,OK,S1 planning model; actual design open,
 C38,all,P16,2.9,OK,S1 planning model; actual design open,
 C39,all,P16,3.3,MARGINAL,S1 planning model; actual design open,run 6.22 m > 5.0 m ASSUMED single-feed limit: feed both ends or centre-feed
-C40,all,P16,3.6,MARGINAL,S1 planning model; actual design open,
+C40,all,P16,3.9,MARGINAL,S1 planning model; actual design open,
 X-CURT-LIV,all,P01,,HOLD,S1 planning model; pocket unmeasured,No fabrication release
 X-CURT-DIN,all,P07,1.7,OK,S1 planning model; pocket unmeasured,No fabrication release
 X-CURT-MBR-S,all,P12,1.8,OK,S1 planning model; pocket unmeasured,No fabrication release

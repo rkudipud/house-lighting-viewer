@@ -5,6 +5,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
 import sys
 from urllib.parse import unquote, urlsplit
 
@@ -31,7 +32,11 @@ def main():
         "09f11696466e6a74659a8beab839fbb821963f5aa470c2368fcb7d8443c64358",
     }
     largest = {"bytes": 0}
-    for path in sorted(ROOT.rglob("*")):
+    visible = subprocess.run(
+        ["git", "-C", str(ROOT), "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+        check=True, capture_output=True,
+    ).stdout.decode("utf-8").split("\0")
+    for path in sorted({ROOT / relative for relative in visible if relative}):
         if not path.is_file() or path == OUTPUT or any(
             part in {".git", "__pycache__", "node_modules", ".venv"} for part in path.parts
         ) or path.suffix == ".pyc":
@@ -108,7 +113,7 @@ def main():
         raise SystemExit("\n".join("FAIL: " + error for error in errors))
     receipt = {
         "status": "PASS_local_render_decode_privacy_and_Markdown_link_checks",
-        "scope": "Repository content excluding git internals, dependency/cache directories and this report. Markdown navigation checks exclude generator templates whose links resolve in generated output. Final manifest integrity is checked separately.",
+        "scope": "Git-visible repository content excluding dependency/cache directories and this report. Ignored local caches are not publication inputs. Markdown navigation checks exclude generator templates whose links resolve in generated output. Final manifest integrity is checked separately.",
         "formatCounts": dict(sorted(counts.items())),
         "pdfPagesRenderedAt72Dpi": pdf_pages,
         "distinctApprovedUserSitePhotos": len(photo_hashes),

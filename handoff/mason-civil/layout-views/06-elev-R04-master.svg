@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2144.156" viewBox="0 0 1700 2144.156" role="img" aria-labelledby="t d">
 <title id="t">Elevations — R04 Master bedroom</title>
 <desc id="d">Read-only interior elevations from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; wall names by compass.</desc>
-<metadata>{&quot;sheet&quot;:&quot;06-elev-R04-master&quot;,&quot;room&quot;:&quot;master&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;06-elev-R04-master&quot;,&quot;room&quot;:&quot;master&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -21,7 +21,7 @@
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >12'-6&quot; x 15'-4.5&quot; · every wall seen from inside · named by compass · HD-11 levels unmeasured</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 6 / 13</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
 <g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
 <text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
@@ -103,11 +103,11 @@
 <rect x="0.0411" y="-2.9591" width="1.4484" height="2.9591" fill="url(#zone)" stroke="#5b7795" stroke-width="0.012" stroke-dasharray=".07 .04"/>
 <text x="0.7654" y="-1.5570" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >WARDROBE ZONE</text>
 <text x="0.7654" y="-1.4489" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >in principle</text>
-<text x="0.7654" y="-1.3410" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >sizes held</text>
+<text x="0.7654" y="-1.3410" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >unmeasured</text>
 <rect x="2.4027" y="-2.9591" width="1.4484" height="2.9591" fill="url(#zone)" stroke="#5b7795" stroke-width="0.012" stroke-dasharray=".07 .04"/>
 <text x="3.1269" y="-1.5570" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >WARDROBE ZONE</text>
 <text x="3.1269" y="-1.4489" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >in principle</text>
-<text x="3.1269" y="-1.3410" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >sizes held</text>
+<text x="3.1269" y="-1.3410" font-size="0.09" fill="#466c92" text-anchor="middle" class="halo" stroke-width="0.0198" >unmeasured</text>
 </g><g data-zone="master-loft-held">
 <rect x="0.0411" y="-3.1877" width="3.8100" height="0.2286" fill="url(#loft)" stroke="#7a6fa8" stroke-width="0.012" stroke-dasharray=".07 .04"/>
 <text x="0.0911" y="-3.0591" font-size="0.07" fill="#6a5f98" text-anchor="start" class="halo" stroke-width="0.0154" >LOFT held (H-LOFT: size, design and top not in master)</text>
@@ -135,9 +135,9 @@
 <path d="M72 843.278H667.1607200000001" stroke="#e1e8e8"/>
 <text x="74.00" y="855.28" font-size="11" class="muted" text-anchor="start" >• W03 Master window: 913 mm wide, sill 0.90 m, head 2.13 m (sill/head assumed) — centred</text>
 <text x="84.00" y="870.28" font-size="11" class="muted" text-anchor="start" >(homeowner-confirmed); offsets unmeasured.</text>
-<text x="74.00" y="885.28" font-size="11" class="muted" text-anchor="start" >• Split wardrobe around W03 approved in principle; OPT-E BWP plywood carcass and laminate shutters</text>
-<text x="84.00" y="900.28" font-size="11" class="muted" text-anchor="start" >selected. The relationship band is not fabrication geometry: dimensions remain held for site</text>
-<text x="84.00" y="915.28" font-size="11" class="muted" text-anchor="start" >measurement. Loft size and support are held.</text>
+<text x="74.00" y="885.28" font-size="11" class="muted" text-anchor="start" >• The split wardrobe around W03 is approved in principle. These are relationship bands only: size,</text>
+<text x="84.00" y="900.28" font-size="11" class="muted" text-anchor="start" >shutters and interior design remain unmeasured. Loft support and dimensions remain held; no</text>
+<text x="84.00" y="915.28" font-size="11" class="muted" text-anchor="start" >fabrication detail is drawn.</text>
 <text x="74.00" y="930.28" font-size="11" class="muted" text-anchor="start" >• Concealed ceiling curtain pocket: TWO tracks (sheer + blackout, HD-14). Clear pocket width/depth,</text>
 <text x="84.00" y="945.28" font-size="11" class="muted" text-anchor="start" >track spacing and stack are unverified; the outline is indicative only.</text>
 </g>
@@ -367,6 +367,6 @@
 <text x="60.00" y="2078.16" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
 <text x="60.00" y="2100.16" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
 <path d="M60 2110.156H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="2132.16" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
-<text x="1640.00" y="2132.16" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+<text x="60.00" y="2132.16" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
+<text x="1640.00" y="2132.16" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

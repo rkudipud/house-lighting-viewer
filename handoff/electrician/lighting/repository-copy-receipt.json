@@ -1,340 +1,532 @@
 {
-  "status": "coordinated-lighting-review-analytic-estimates-only",
+  "status": "Provisional CBR ceiling review; construction and product holds retained",
   "constructionRelease": false,
-  "basisMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "basisMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "sourceManifest": "manifest.json",
-  "sourceManifestSha256": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b",
-  "sourceFiles": 46,
-  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. This is a review pack, not a construction release.",
+  "sourceManifestSha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
+  "sourceFiles": 64,
+  "omittedFiles": [],
+  "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
   "files": [
     {
       "path": "bom-historical-estimate.json",
       "bytes": 27040,
       "sha256": "de1c83a39a944c847b7d9c9380db2f1163eeafde461619a1b9a7e06545f03d13",
       "sourceSha256": "de1c83a39a944c847b7d9c9380db2f1163eeafde461619a1b9a7e06545f03d13",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "calc-results-current.json",
-      "bytes": 274649,
-      "sha256": "e2aebe88f12977fbf460ff723a788e32c177f63706c858ff69f14bf1389abf32",
-      "sourceSha256": "ada692c3ace0aaf86447ef2e9c6c12717d93bcbc44ae726007113178245f7c43",
-      "localPathsRedacted": true
+      "bytes": 275472,
+      "sha256": "0bb2651bb0cce217b2923f4307fb0277ef8e15e766362b9f571217e765125843",
+      "sourceSha256": "99e309907cddb031dea971bac3460c9ba22bcda7ebb1bc858bf3f39d587187bc",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
     },
     {
       "path": "calculation-validity.json",
-      "bytes": 12071,
-      "sha256": "d661791112d952a2835a4570697b685035b6c51e325aa2219772eb27f8832f62",
-      "sourceSha256": "d661791112d952a2835a4570697b685035b6c51e325aa2219772eb27f8832f62",
-      "localPathsRedacted": false
+      "bytes": 13418,
+      "sha256": "c2273cc0706aaa28f16dc05f8d557d63f3d954eab2932e37c5e17ffd276c7bec",
+      "sourceSha256": "c2273cc0706aaa28f16dc05f8d557d63f3d954eab2932e37c5e17ffd276c7bec",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "circuit-control-psu-ledger.json",
       "bytes": 68635,
-      "sha256": "e090aa5acfbef834cc75c920327cc2c081bb8f8128786e352773c8c291dd6e43",
-      "sourceSha256": "e090aa5acfbef834cc75c920327cc2c081bb8f8128786e352773c8c291dd6e43",
-      "localPathsRedacted": false
+      "sha256": "5a38eb06d3b709778e4bf7f13c94c0e13faf09536bc9a83c5c553de2a3ccf132",
+      "sourceSha256": "5a38eb06d3b709778e4bf7f13c94c0e13faf09536bc9a83c5c553de2a3ccf132",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "circuit-ledger.csv",
       "bytes": 5198,
-      "sha256": "3db99fd763a5752d43419dba947eadc46652443123d5e690a050ce699c2492a3",
-      "sourceSha256": "3db99fd763a5752d43419dba947eadc46652443123d5e690a050ce699c2492a3",
-      "localPathsRedacted": false
+      "sha256": "c4a6c424bac2f014666607e68b4f3296c2a4633c00880629883bc9aec037135a",
+      "sourceSha256": "c4a6c424bac2f014666607e68b4f3296c2a4633c00880629883bc9aec037135a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "compliance-analytic-reference.csv",
       "bytes": 18598,
       "sha256": "e6b243f7a7e9357348ef4db946982f47fbe39b66e49f9d5112b6d0b69f83d3c6",
       "sourceSha256": "e6b243f7a7e9357348ef4db946982f47fbe39b66e49f9d5112b6d0b69f83d3c6",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "criteria-historical-reference.md",
       "bytes": 39756,
       "sha256": "c6f061348609cc80cb376aa592ec8abe0d700ca9a21c32a54e93846c2e376048",
       "sourceSha256": "eee2eb69c01c3cc39cec9dc90c89d1e6d30af3964ae4b70ed1cc74c2e1bb37b3",
-      "localPathsRedacted": true
+      "localPathsRedacted": true,
+      "publicCopyModified": true
     },
     {
       "path": "curtain-pocket-s1.json",
       "bytes": 41373,
-      "sha256": "c2bef62a2f9927508fea09e1d4b6b3ffe07e0881d01df6acbebe3fc1cb907bd3",
-      "sourceSha256": "c2bef62a2f9927508fea09e1d4b6b3ffe07e0881d01df6acbebe3fc1cb907bd3",
-      "localPathsRedacted": false
+      "sha256": "1605d3187d970df6d2a5840370418a794087a01d199f2ad15724ccc2d29b71f8",
+      "sourceSha256": "1605d3187d970df6d2a5840370418a794087a01d199f2ad15724ccc2d29b71f8",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "curtain-strips.csv",
       "bytes": 1092,
       "sha256": "a706b0ca3c6436e6f4fa83a7be7a40fa9223f41d10c4aec709eb0302d0ec3ba7",
       "sourceSha256": "a706b0ca3c6436e6f4fa83a7be7a40fa9223f41d10c4aec709eb0302d0ec3ba7",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "electrical-checks.json",
       "bytes": 89280,
-      "sha256": "b6d7ca623320cc6446c5d2cc44db29c27c558b6608bb6288bf42057aea17a712",
-      "sourceSha256": "b6d7ca623320cc6446c5d2cc44db29c27c558b6608bb6288bf42057aea17a712",
-      "localPathsRedacted": false
+      "sha256": "5c64709009008699b4529cc570e1475e9f7a1e13d8f954a578c09b99e57407cd",
+      "sourceSha256": "5c64709009008699b4529cc570e1475e9f7a1e13d8f954a578c09b99e57407cd",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "fixed-cct-map.json",
-      "bytes": 116779,
-      "sha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
-      "sourceSha256": "291d7aef0d70152ebb56085cdc94b49edefe1eeaa6154b5f811a17bb670fcbb4",
-      "localPathsRedacted": false
+      "bytes": 115982,
+      "sha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
+      "sourceSha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "fixture-ledger.csv",
-      "bytes": 26610,
-      "sha256": "433856feb149d5a6dcad08a194eee4c4640750ec0899633d60cbf30f221cd280",
-      "sourceSha256": "433856feb149d5a6dcad08a194eee4c4640750ec0899633d60cbf30f221cd280",
-      "localPathsRedacted": false
+      "bytes": 26594,
+      "sha256": "8302c2b916b41ee9137be1c5b0bc4b7de1c3ddb0351441f068c99ab83101e17f",
+      "sourceSha256": "8302c2b916b41ee9137be1c5b0bc4b7de1c3ddb0351441f068c99ab83101e17f",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "fixture-ledger.json",
-      "bytes": 72540,
-      "sha256": "579933c72bd768da7ca20c8e7bcbe50a57c62ea1ecdfb2aaa97d4dc3da0c58ac",
-      "sourceSha256": "579933c72bd768da7ca20c8e7bcbe50a57c62ea1ecdfb2aaa97d4dc3da0c58ac",
-      "localPathsRedacted": false
+      "bytes": 73300,
+      "sha256": "3fb36a0aca7d068116a0674421ec707896c76c2411e469450fbe26ad9e0afe48",
+      "sourceSha256": "3fb36a0aca7d068116a0674421ec707896c76c2411e469450fbe26ad9e0afe48",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "generic-product-search.csv",
-      "bytes": 8249,
-      "sha256": "a046dbb096f522e7e78de3435836598e1c64f7145533660658b12b0026e37c90",
-      "sourceSha256": "a046dbb096f522e7e78de3435836598e1c64f7145533660658b12b0026e37c90",
-      "localPathsRedacted": false
+      "bytes": 8077,
+      "sha256": "e897d4ab9cba915f6fcc1d33aebcc1a4ddb5b6b4124b1afc4a0f4bdf7eec1bde",
+      "sourceSha256": "e897d4ab9cba915f6fcc1d33aebcc1a4ddb5b6b4124b1afc4a0f4bdf7eec1bde",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/BAL-analytic.png",
       "bytes": 77756,
       "sha256": "8aeaa62b37783a3d2b32f3819617e413c91b126667f73dd70e736a493d1abd55",
       "sourceSha256": "8aeaa62b37783a3d2b32f3819617e413c91b126667f73dd70e736a493d1abd55",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/CBR-analytic.png",
-      "bytes": 84297,
-      "sha256": "277c3e6a99c1adda6afe9c804c3f7f93c5560782601903013df6da698a088abb",
-      "sourceSha256": "277c3e6a99c1adda6afe9c804c3f7f93c5560782601903013df6da698a088abb",
-      "localPathsRedacted": false
+      "bytes": 85266,
+      "sha256": "5ac79bd48cfa734b371d37b4a97edae54583702c77f311ab140b0b2d516f9e64",
+      "sourceSha256": "5ac79bd48cfa734b371d37b4a97edae54583702c77f311ab140b0b2d516f9e64",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/DIN-analytic.png",
       "bytes": 84995,
       "sha256": "a1692362822faf5ce89d01e6de396068728ef2ac8caedc63c857aca09b994295",
       "sourceSha256": "a1692362822faf5ce89d01e6de396068728ef2ac8caedc63c857aca09b994295",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/DRS-analytic.png",
       "bytes": 82154,
       "sha256": "d5521a901dbb4d4c55ebf349bedf0ca1a67b973e79d7f924bbdc1b275f80ea99",
       "sourceSha256": "d5521a901dbb4d4c55ebf349bedf0ca1a67b973e79d7f924bbdc1b275f80ea99",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/KIT-analytic.png",
       "bytes": 82137,
       "sha256": "2ad3b6148b868828636c4381e7511fa16803317958fad21dbed75284a0f3bed6",
       "sourceSha256": "2ad3b6148b868828636c4381e7511fa16803317958fad21dbed75284a0f3bed6",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/kitchen-worktop-K2-source.png",
       "bytes": 80245,
       "sha256": "6e4df30660f2dc4692c43cba11b078290b31a4963d03181ac7c9b2d290d3f2ef",
       "sourceSha256": "6e4df30660f2dc4692c43cba11b078290b31a4963d03181ac7c9b2d290d3f2ef",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/LIV-analytic.png",
       "bytes": 86743,
       "sha256": "8d3eb66a42149f20d19f1004b883ba638da4376ea896e960dfd2975ee2bb7af6",
       "sourceSha256": "8d3eb66a42149f20d19f1004b883ba638da4376ea896e960dfd2975ee2bb7af6",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/LOB-analytic.png",
       "bytes": 80629,
       "sha256": "a0180f0b943bf3c5a074209262f9696bc9bd587e3014fb1b95759227b902a4a7",
       "sourceSha256": "a0180f0b943bf3c5a074209262f9696bc9bd587e3014fb1b95759227b902a4a7",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/MBR-analytic.png",
       "bytes": 79549,
       "sha256": "bdc3bb97c18c9b81263c9560eea33046a4cf006271a95ed68271b3a503fe49b9",
       "sourceSha256": "bdc3bb97c18c9b81263c9560eea33046a4cf006271a95ed68271b3a503fe49b9",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/TL1-analytic.png",
       "bytes": 79545,
       "sha256": "51c29e6b03926ba7b1ef5b48f3b42ddf63da8cf4de2eb0cdd2962f0b2d0e07d9",
       "sourceSha256": "51c29e6b03926ba7b1ef5b48f3b42ddf63da8cf4de2eb0cdd2962f0b2d0e07d9",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/TL2-analytic.png",
       "bytes": 79652,
       "sha256": "be1d65aae0859f0d477ef6130e32cf946d04b4546f8e1c5e7a8e49a48321fffc",
       "sourceSha256": "be1d65aae0859f0d477ef6130e32cf946d04b4546f8e1c5e7a8e49a48321fffc",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps/UTL-analytic.png",
       "bytes": 72391,
       "sha256": "71a921af6837cc460080a101d395b572d83570b173bc440843dc1219928d9749",
       "sourceSha256": "71a921af6837cc460080a101d395b572d83570b173bc440843dc1219928d9749",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps-summary.pdf",
-      "bytes": 151629,
-      "sha256": "ecf8bc45ecd55eb26b111816c33cc0a7f6026ee7c231c73b0f032f4c42a3e0c3",
-      "sourceSha256": "ecf8bc45ecd55eb26b111816c33cc0a7f6026ee7c231c73b0f032f4c42a3e0c3",
-      "localPathsRedacted": false
+      "bytes": 152275,
+      "sha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be",
+      "sourceSha256": "2213c2f9415c19bfd5c7943c3b368934d79ab2741f1c5da36e713b73662db3be",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "heatmaps.json",
-      "bytes": 1801418,
-      "sha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
-      "sourceSha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
-      "localPathsRedacted": false
+      "bytes": 1801309,
+      "sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
+      "sourceSha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-design-inputs.json",
-      "bytes": 375055,
-      "sha256": "a4d99a1637aee5daf123d7f051d0a4a9e558f61568a348c35ec1290a0b62e8d0",
-      "sourceSha256": "73306931b538ae39808979e9c75be4a5e30d16705353608019957decfbe84e86",
-      "localPathsRedacted": true
+      "bytes": 377260,
+      "sha256": "f44201edb455ccc3efa2e78640273926a3596f834564effb4851159c990c6f1b",
+      "sourceSha256": "67f3a43f9fd96e2cadf9b1be8202baef783ffc35185fead72ed34b2222debe1e",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
+    },
+    {
+      "path": "lighting-plan-main-zoom-1.png",
+      "bytes": 109830,
+      "sha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7",
+      "sourceSha256": "6444b06aa5c0c4e45b728f0d6cb9a9c3b999990e9dedba21e0bd13d7c2e06fe7",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-main-zoom-2.png",
+      "bytes": 101816,
+      "sha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae",
+      "sourceSha256": "d8bf656dcbff612228ff168d9b10deea510d638b9cbf7cb07c6b47e331bd83ae",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-main-zoom-3.png",
+      "bytes": 105174,
+      "sha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a",
+      "sourceSha256": "8f07ea479b902537391f4677b197eee7fb83d8fa245a1b4236a89c45dd09db4a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-main-zoom-4.png",
+      "bytes": 121127,
+      "sha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8",
+      "sourceSha256": "119771a9201f853513ed6983ba4bd038e47ad5d3e7907f3fbb0f83459e5ba8c8",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-main-zoom-5.png",
+      "bytes": 99631,
+      "sha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417",
+      "sourceSha256": "443421c03418b6ec32b2fb30a76f4cdf5c10a70493a5be14996de9f9592b4417",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-main-zoom-6.png",
+      "bytes": 91314,
+      "sha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6",
+      "sourceSha256": "c724d990264cb8937e4f960baa069bf0e00096d1ae68ceedc4a8036b8e9594c6",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-main.pdf",
-      "bytes": 44958,
-      "sha256": "3db96699e6fb6badfba7b15131d31cce2740dca58cb0b2df4952383032abcfba",
-      "sourceSha256": "3db96699e6fb6badfba7b15131d31cce2740dca58cb0b2df4952383032abcfba",
-      "localPathsRedacted": false
+      "bytes": 122962,
+      "sha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270",
+      "sourceSha256": "0296dffa9f97cd2eb0d4ddb916b1572484f94a3aa7399487c13a72d625d47270",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-main.png",
-      "bytes": 151758,
-      "sha256": "170f5ab07570082f28d2e25198c02e407f8091bf071ffe75b2fb87b8a76b13f4",
-      "sourceSha256": "170f5ab07570082f28d2e25198c02e407f8091bf071ffe75b2fb87b8a76b13f4",
-      "localPathsRedacted": false
+      "bytes": 142999,
+      "sha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48",
+      "sourceSha256": "66fc9fc0cf06fbc7995691d5bfe951cdb26b686a97d8becf11a4945f01d68a48",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-main.svg",
-      "bytes": 135192,
-      "sha256": "a462acf7fd22820f681496691f33c66ef9ef86073b7af2e83d0fc12ace2b1bd2",
-      "sourceSha256": "a462acf7fd22820f681496691f33c66ef9ef86073b7af2e83d0fc12ace2b1bd2",
-      "localPathsRedacted": false
+      "bytes": 121953,
+      "sha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e",
+      "sourceSha256": "005f609de868b3fbfc40c9d99690c9207504f9f0f66f04eb282a590b0ddb6e4e",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-mood-zoom-1.png",
+      "bytes": 93915,
+      "sha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9",
+      "sourceSha256": "a0508ef1f5232a10e4f5665e014290def9735a11b776ea9ed06c020e0f7838d9",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-mood-zoom-2.png",
+      "bytes": 111856,
+      "sha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04",
+      "sourceSha256": "05c93e54fdf1f1cc478895fa05b056d475e5e639566adccfe91d4d2a37e2fa04",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-mood-zoom-3.png",
+      "bytes": 114743,
+      "sha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939",
+      "sourceSha256": "d251121f29337a2df213387e99ca6853a9a1ce18cacc93b91d53e401a1e77939",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-mood-zoom-4.png",
+      "bytes": 115530,
+      "sha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb",
+      "sourceSha256": "01b15bda4a65a8c69f7a00d7cae2a721b074a988a36a059fda81349412524ffb",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-mood-zoom-5.png",
+      "bytes": 111193,
+      "sha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee",
+      "sourceSha256": "f36dab5fa22a0b0708802ddc4c64982bf0a0582309dfb0fd5826ed3807b936ee",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-mood-zoom-6.png",
+      "bytes": 108269,
+      "sha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de",
+      "sourceSha256": "ee6effff8fce78935e17ec0098efa49cfb524f727d3375014da598f551cf96de",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-mood.pdf",
-      "bytes": 36237,
-      "sha256": "cea24866409f4667f0761858348f5798fa1243ca0fc6b3c626d08b257966014c",
-      "sourceSha256": "cea24866409f4667f0761858348f5798fa1243ca0fc6b3c626d08b257966014c",
-      "localPathsRedacted": false
+      "bytes": 106406,
+      "sha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820",
+      "sourceSha256": "53f92ed27b1685faf9a6829f0d1365e90dc9a0ecd7672df3c36cafe9c2063820",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-mood.png",
-      "bytes": 146976,
-      "sha256": "0f38d41aa5bcad8ad8544a96bda2f9fa44f292e79014adddd3e85d6e132f7446",
-      "sourceSha256": "0f38d41aa5bcad8ad8544a96bda2f9fa44f292e79014adddd3e85d6e132f7446",
-      "localPathsRedacted": false
+      "bytes": 160673,
+      "sha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8",
+      "sourceSha256": "07c290e5e0b90cb867be5422a3cf3d48d642f525da5c13f03bb1098422c2dcf8",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-mood.svg",
-      "bytes": 115125,
-      "sha256": "058877c18a2e87e6bc3f1ced3864ca6cc45b51c80bdcd759a4e745c9e5a0067d",
-      "sourceSha256": "058877c18a2e87e6bc3f1ced3864ca6cc45b51c80bdcd759a4e745c9e5a0067d",
-      "localPathsRedacted": false
+      "bytes": 139450,
+      "sha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31",
+      "sourceSha256": "3fbdf1c809e340ce251bf6b8814b0b2c9d3c326aeb1dbd08dfa3f4261f6c7a31",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-task-zoom-1.png",
+      "bytes": 100814,
+      "sha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331",
+      "sourceSha256": "54baf2b438c226040fc28534bceb3d53f12640e24c0b6ae91aff65d9ce512331",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-task-zoom-2.png",
+      "bytes": 103865,
+      "sha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53",
+      "sourceSha256": "47d91a10894b82ef3dbe9be5f9dd102162d0357a036ae5b98bbe814b6dd91d53",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-task-zoom-3.png",
+      "bytes": 95768,
+      "sha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae",
+      "sourceSha256": "0fb25cf093f56a3ab5ffb4e8befb30de19e006ebdf10c64cfa80d7e765715aae",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-task-zoom-4.png",
+      "bytes": 113216,
+      "sha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609",
+      "sourceSha256": "5edee7a451fb68371f0e5b9ef5d8f81991a302cdb5b53b70196a6cae77900609",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-task-zoom-5.png",
+      "bytes": 94469,
+      "sha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8",
+      "sourceSha256": "73712b8763b70288f004d991e4652e0d9a3677ccddf70aac7447bcfe219810c8",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
+    },
+    {
+      "path": "lighting-plan-task-zoom-6.png",
+      "bytes": 96499,
+      "sha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2",
+      "sourceSha256": "47cb03bd0a9a39469954512cd9036c10a9cec63951c2a8cc3dd9602eeca579b2",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-task.pdf",
-      "bytes": 39168,
-      "sha256": "5f76af78b2d5fc6626f1bc2c8ec923ee5b1bd7fd7c337378caebb0f9e9b80999",
-      "sourceSha256": "5f76af78b2d5fc6626f1bc2c8ec923ee5b1bd7fd7c337378caebb0f9e9b80999",
-      "localPathsRedacted": false
+      "bytes": 89526,
+      "sha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4",
+      "sourceSha256": "1f8ab48fa44ff566217bdb4676e5e83d09c5c926526906b9e9ebef2716b9c1e4",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-task.png",
-      "bytes": 130651,
-      "sha256": "9f1b8e6a73fceba0816d86ebcaa6920d7ca15104beb9daf5d1688721138b5072",
-      "sourceSha256": "9f1b8e6a73fceba0816d86ebcaa6920d7ca15104beb9daf5d1688721138b5072",
-      "localPathsRedacted": false
+      "bytes": 142647,
+      "sha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0",
+      "sourceSha256": "d95d6f8426f5b43cdbc795050b52916b92bfa698102c6d5b328e87faf6a175c0",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-plan-task.svg",
-      "bytes": 115138,
-      "sha256": "8b2aa1ed51df58e6baeaeae43004c9f1a2af962165274e23804eb55b06df0e3f",
-      "sourceSha256": "8b2aa1ed51df58e6baeaeae43004c9f1a2af962165274e23804eb55b06df0e3f",
-      "localPathsRedacted": false
+      "bytes": 126868,
+      "sha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9",
+      "sourceSha256": "1de64b43dfb1e8abaa9be969d429aecc398a0864b02f9079e6c7052ac227b0c9",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-review-schedules.pdf",
-      "bytes": 91481,
-      "sha256": "8d38e657d05fee4cc95f3e4a0df4c535de54dd7df0b24e831727a155ab825b65",
-      "sourceSha256": "8d38e657d05fee4cc95f3e4a0df4c535de54dd7df0b24e831727a155ab825b65",
-      "localPathsRedacted": false
+      "bytes": 91409,
+      "sha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d",
+      "sourceSha256": "f4860294acdd0e8a6c7657cb1924a52e15389799250d1d729b38f41119a91b9d",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-specification.md",
-      "bytes": 10899,
-      "sha256": "230418fdf31068930a1b3e533c1285c4e07c6950832c60b5966dc2b24478579e",
-      "sourceSha256": "230418fdf31068930a1b3e533c1285c4e07c6950832c60b5966dc2b24478579e",
-      "localPathsRedacted": false
+      "bytes": 12330,
+      "sha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b",
+      "sourceSha256": "1289bf74982e818701c838977e1d13586aaef0e13b0aca96b207af4654de8d7b",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "lighting-workbench.html",
-      "bytes": 617518,
-      "sha256": "924a9056d01dcb1b1f29b56a6a1aa7574f400c9dd03c915bb817ed3853c74af2",
-      "sourceSha256": "924a9056d01dcb1b1f29b56a6a1aa7574f400c9dd03c915bb817ed3853c74af2",
-      "localPathsRedacted": false
+      "bytes": 618701,
+      "sha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822",
+      "sourceSha256": "cb4bb057c3fd149e0d81aeec82aa183c2608915310d605b341308be1efd7c822",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "README.md",
-      "bytes": 2190,
-      "sha256": "efd1a641e58236106f91b3f134fd12c90d476ebd8f508f8be376a929005639d7",
-      "sourceSha256": "efd1a641e58236106f91b3f134fd12c90d476ebd8f508f8be376a929005639d7",
-      "localPathsRedacted": false
+      "bytes": 2768,
+      "sha256": "2aed84ec4f590145407fff55429a5a43828d0bbe0db82eb4748c118f2bea58b8",
+      "sourceSha256": "2aed84ec4f590145407fff55429a5a43828d0bbe0db82eb4748c118f2bea58b8",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "supply-ledger-selected-s1.csv",
       "bytes": 1432,
       "sha256": "84b49749c1c54ba0c14e74066b38981e6b449d32d7be1a9f50e84585fffadf08",
       "sourceSha256": "84b49749c1c54ba0c14e74066b38981e6b449d32d7be1a9f50e84585fffadf08",
-      "localPathsRedacted": false
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "switchboard-schedule.csv",
       "bytes": 5926,
-      "sha256": "afe760ae80e7f8d8792ae0a0b1469441122b7ab9630e8553b773af3c96a557a0",
-      "sourceSha256": "afe760ae80e7f8d8792ae0a0b1469441122b7ab9630e8553b773af3c96a557a0",
-      "localPathsRedacted": false
+      "sha256": "901e201da88c8185c1b142e9fc8f1f0932e486b8fdb1aa6b02ad56504313a70a",
+      "sourceSha256": "901e201da88c8185c1b142e9fc8f1f0932e486b8fdb1aa6b02ad56504313a70a",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "voltage-drop-selected-s1.csv",
       "bytes": 1785,
-      "sha256": "634da4696b95a9dc1a35d697a1b7b125b7a5987f9bb11ca2b37aed87f7c76dfe",
-      "sourceSha256": "634da4696b95a9dc1a35d697a1b7b125b7a5987f9bb11ca2b37aed87f7c76dfe",
-      "localPathsRedacted": false
+      "sha256": "9a6fca743354479c083f135a73674923f87cb428d5f2d83533540e0d7ce59c75",
+      "sourceSha256": "9a6fca743354479c083f135a73674923f87cb428d5f2d83533540e0d7ce59c75",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     },
     {
       "path": "verification.json",
-      "bytes": 4495,
-      "sha256": "4a9e817717bd1bd43f2ec7f537ec5d305bca5a72cd5594ff4cbefdd8ea3cbb36",
-      "sourceSha256": "159fef18909993180b7f634c0ad7a6da4fd0feeae89ab02604cf269fad3e61d0",
-      "localPathsRedacted": true
+      "bytes": 6515,
+      "sha256": "83ab7785544359b3c9ecd6ef3b831cb89c943c33911c704f83d77c2a1e9848b1",
+      "sourceSha256": "24245edc7bed9338a83e2d664c1f5997e97276b1fa412bfc526f8a4b3d34eb08",
+      "localPathsRedacted": true,
+      "publicCopyModified": true
     },
     {
       "path": "manifest.json",
-      "bytes": 8511,
-      "sha256": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b",
-      "sourceSha256": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b",
-      "localPathsRedacted": false
+      "bytes": 13752,
+      "sha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
+      "sourceSha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
+      "localPathsRedacted": false,
+      "publicCopyModified": false
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "product": "Hyderabad 2BHK light planner (review draft, not construction released)",
-  "masterSha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
-  "heatmapsSha256": "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a",
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "heatmapsSha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
   "fixtures": 104,
   "circuits": 47,
   "selectedCurtainStrips": 4,
   "effectiveReviewFixtures": 108,
   "effectiveReviewCircuits": 51,
   "fixedCctMapCanonicalJsonSha256": "24e143f1998950719ea273ef233d80d84f24c08cdd54fe24d8ddec29ae8bbeee",
-  "currentFixedCctMapSha256": "b673bf4189c251f28fb9327bfbc7e45e2009b452bc727cdaeca158a27eb7aa4f",
+  "currentFixedCctMapSha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
   "baseFixedCctMapSha256": "848c70dddcd902bd81cfbab6a02338d158c7410fd365063adf290cb5cfbb6396",
   "cctBins": {
     "2700": 30,
@@ -22,28 +22,28 @@
   "wardrobeStatus": "provisional_design_not_homeowner_approved_or_fabrication_released",
   "wardrobeReferenceReceiptSha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
   "supplyCabinetReceiptSha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
-  "htmlSha256": "8fd01f6f2801ca3ba715f44109ee89aefee95e2055acd20186d8dc483c462ee5",
-  "htmlBytes": 2595905,
-  "embeddedPlanDataSha256": "deed50bb3bb7d4ccdd43b29468d7d3ce05c23cd1b4aacebb9b82dd2f4298a0d8",
-  "embeddedHeatDataSha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",
+  "htmlSha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
+  "htmlBytes": 2614170,
+  "embeddedPlanDataSha256": "fea6208e9df6e8982ddf880f7e52ea1a0e1aefbb8366eb31c7e10449b96b9bec",
+  "embeddedHeatDataSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
   "downloads": [
     {
-      "href": "downloads/layout-views-review-draft-1fa6b0fa.pdf",
-      "bytes": 6815041,
-      "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3"
+      "href": "downloads/layout-views-review-draft-79ece2ae.pdf",
+      "bytes": 6849877,
+      "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0"
     },
     {
-      "href": "downloads/working-floor-plan-review-draft-1fa6b0fa.pdf",
+      "href": "downloads/working-floor-plan-review-draft-79ece2ae.pdf",
       "bytes": 864756,
       "sha256": "27e18dda6289cf7d0cb83748f956a619f4ade7504a0b9a5157eec49ceacc2603"
     },
     {
-      "href": "downloads/curtain-pocket-section-review-1fa6b0fa.pdf",
+      "href": "downloads/curtain-pocket-section-review-79ece2ae.pdf",
       "bytes": 71474,
       "sha256": "344796ad76f63af87248cd83f7becfa6ce6b0b21818ed3f6b362e135d38e4d7d"
     },
     {
-      "href": "downloads/wardrobe-interiors-review-1fa6b0fa.pdf",
+      "href": "downloads/wardrobe-interiors-review-79ece2ae.pdf",
       "bytes": 245180,
       "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3"
     }

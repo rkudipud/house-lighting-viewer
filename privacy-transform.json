@@ -1,8 +1,8 @@
 {
-  "authoritativeMasterSha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
-  "embeddedPlanDataSha256": "deed50bb3bb7d4ccdd43b29468d7d3ce05c23cd1b4aacebb9b82dd2f4298a0d8",
-  "embeddedHeatDataSha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",
-  "viewerHtmlSha256": "8fd01f6f2801ca3ba715f44109ee89aefee95e2055acd20186d8dc483c462ee5",
+  "authoritativeMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "embeddedPlanDataSha256": "fea6208e9df6e8982ddf880f7e52ea1a0e1aefbb8366eb31c7e10449b96b9bec",
+  "embeddedHeatDataSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
+  "viewerHtmlSha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
   "transformation": "The embedded plan is a derived viewer-specific selection, not a byte-identical copy of the authoritative master. The viewer omits the budget and unused source storage object, but retains derived storage items and holds. Absolute path values are replaced by basenames or a private-source marker; attachment fields are omitted. No other derived plan fields or values are changed by privacy redaction.",
   "redactions": {
     "pathBasenames": 6,

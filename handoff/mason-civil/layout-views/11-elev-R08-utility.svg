@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2234.156" viewBox="0 0 1700 2234.156" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="2264.156" viewBox="0 0 1700 2264.156" role="img" aria-labelledby="t d">
 <title id="t">Elevations — R08 Utility + washing</title>
 <desc id="d">Read-only interior elevations from the canonical master; HD-11 levels are homeowner-stated or derived and unmeasured; wall names by compass.</desc>
-<metadata>{&quot;sheet&quot;:&quot;11-elev-R08-utility&quot;,&quot;room&quot;:&quot;utility&quot;,&quot;master_sha256&quot;:&quot;b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
+<metadata>{&quot;sheet&quot;:&quot;11-elev-R08-utility&quot;,&quot;room&quot;:&quot;utility&quot;,&quot;master_sha256&quot;:&quot;79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822&quot;,&quot;heights&quot;:&quot;hd11_homeowner_stated_or_derived_unmeasured&quot;,&quot;compass&quot;:&quot;visualization_geometry.orientation&quot;}</metadata>
 <defs>
 <pattern id="hold" width=".10" height=".10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width=".10" height=".10" fill="#fbf0d7"/><path d="M0 0V.10" stroke="#cf9a43" stroke-width=".02"/></pattern>
 <pattern id="zone" width=".09" height=".09" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width=".09" height=".09" fill="#eaf0f7"/><path d="M0 0V.09" stroke="#a9bdd6" stroke-width=".011"/></pattern>
@@ -16,12 +16,12 @@
 .mono{font-family:Consolas,monospace}.muted{fill:#5d7174}.green{fill:#266c5c}.blue{fill:#3d6288}.amber{fill:#9b641c}.red{fill:#a23b3b}
 .title{font-size:34px;font-weight:600}.sub{font-size:18px}.sect{font-size:17px;font-weight:650;letter-spacing:1px}
 .halo{paint-order:stroke;stroke:#fff;stroke-linejoin:round}</style>
-<rect width="1700" height="2234.156" fill="#fcfdfc"/>
+<rect width="1700" height="2264.156" fill="#fcfdfc"/>
 <text x="60.00" y="60.00" font-size="34" class="title" text-anchor="start" >Interior elevations — R08 Utility + washing</text>
 <text x="62.00" y="92.00" font-size="18" class="muted sub" text-anchor="start" >15'-6&quot; x 4'-6&quot; · every wall seen from inside · named by compass · HD-11 levels unmeasured</text>
 <text x="1560.00" y="48.00" font-size="15" class="muted" text-anchor="end" >SHEET 11 / 13</text>
 <text x="1560.00" y="70.00" font-size="16" class="mono" text-anchor="end" >house-design.json</text>
-<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >b6f6bf1a127c7e39086deb9f…</text>
+<text x="1560.00" y="90.00" font-size="13" class="mono muted" text-anchor="end" >79ece2aef1acd63ee4017021…</text>
 <g id="north-arrow" data-north="sheet-bottom" transform="translate(1604 62)"><circle r="20" fill="#fff" stroke="#203b43" stroke-width="1.5"/>
 <path d="M0 14L7.6 -9.0L0 -4.0L-7.6 -9.0Z" fill="#203b43"/>
 <text y="37" font-size="16" font-weight="700" text-anchor="middle">N</text>
@@ -108,13 +108,11 @@
 </g>
 <g data-storage-id="ST-R08-UC01" data-storage-kind="under_counter_shutters_optional" data-panel-id="utility-s">
 <rect x="3.8337" y="-0.8000" width="0.5508" height="0.8000" fill="#e6ecf4" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".06 .04"/>
-<text x="4.1091" y="-0.4221" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 4.1091 -0.4000)">Utility cabinet</text>
-<text x="4.1091" y="-0.3201" font-size="0.085" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0187"  transform="rotate(-90 4.1091 -0.4000)">ST-R08-UC01</text>
+<text x="4.3645" y="-0.8700" font-size="0.07" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0154" >under counter shutters optional</text>
 </g>
 <g data-item-id="FURN-utility-counter" data-item-kind="counter" data-panel-id="utility-s">
 <rect x="3.8341" y="-0.8500" width="0.5505" height="0.8500" fill="#eceae1" stroke="#7d7a6a" stroke-width="0.014" />
 <rect x="3.8341" y="-0.8500" width="0.5505" height="0.0300" fill="#b9b6a8" stroke="#7d7a6a" stroke-width="0.008" />
-<text x="4.3645" y="-0.9200" font-size="0.07" fill="#203b43" text-anchor="end" class="halo" stroke-width="0.0154" >Utility counter</text>
 </g>
 <g data-storage-id="ST-R08-LF01" data-storage-kind="loft_existing_rcc_shelf_with_shutters" data-panel-id="utility-s">
 <rect x="3.8337" y="-2.9500" width="0.5508" height="1.0500" fill="url(#loft)" stroke="#7a6fa8" stroke-width="0.014" stroke-dasharray=".06 .04"/>
@@ -143,15 +141,15 @@
 <text x="74.00" y="940.88" font-size="11" class="muted" text-anchor="start" >• UP1 Utility parapet opening (assumed, OI-UTL-01): 4124 mm wide, sill 1.00 m, head 2.72 m (sill/head assumed) —</text>
 <text x="84.00" y="955.88" font-size="11" class="muted" text-anchor="start" >opening itself is ASSUMED.</text>
 <text x="74.00" y="970.88" font-size="11" class="muted" text-anchor="start" >• ST-R08-LF01 loft existing rcc shelf with shutters: 1.90–2.95 m.</text>
-<text x="74.00" y="985.88" font-size="11" class="muted" text-anchor="start" >• ST-R08-UC01 Utility cabinet: 0.00–0.80 m — conditionally selected, unmeasured placeholder; not fabrication</text>
-<text x="84.00" y="1000.88" font-size="11" class="muted" text-anchor="start" >dimensions.</text>
+<text x="74.00" y="985.88" font-size="11" class="muted" text-anchor="start" >• ST-R08-UC01 under counter shutters optional: 0.00–0.80 m (homeowner-selected conditional; unmeasured, not</text>
+<text x="84.00" y="1000.88" font-size="11" class="muted" text-anchor="start" >construction-ready: conditional on FH-ST-12 measured utility geometry and services/access).</text>
 <text x="74.00" y="1015.88" font-size="11" class="muted" text-anchor="start" >• FURN-utility-counter Utility counter: 0.00–0.85 m (counter height 0.85 m).</text>
 <text x="74.00" y="1030.88" font-size="11" class="muted" text-anchor="start" >• Items below the floor line are footprint only: their height is not in the master, so none is drawn.</text>
 <text x="74.00" y="1045.88" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is a legacy placeholder, not raised to the</text>
 <text x="84.00" y="1060.88" font-size="11" class="muted" text-anchor="start" >slab and not an approval.</text>
 </g>
 <g data-panel-id="utility-w" data-room-id="utility" data-wall-dir="W">
-<rect x="783.8367199999999" y="178" width="440" height="923.878" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<rect x="783.8367199999999" y="178" width="440" height="953.878" fill="#fff" stroke="#cfd9d9" rx="6"/>
 <text x="799.84" y="206.00" font-size="17" class="" text-anchor="start" font-weight="600">Utility + washing – west wall</text>
 <text x="799.84" y="228.00" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking WEST · left to right</text>
 <text x="799.84" y="245.00" font-size="11.5" class="muted mono" text-anchor="start" >1.23 m long · tag utility-w</text>
@@ -205,7 +203,7 @@
 </g>
 <g data-storage-id="ST-R08-UC01" data-storage-kind="under_counter_shutters_optional" data-panel-id="utility-w">
 <rect x="0.0773" y="-0.8000" width="1.1120" height="0.8000" fill="#e6ecf4" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".06 .04"/>
-<text x="0.6333" y="-0.8700" font-size="0.07" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0154" >Utility cabinet</text>
+<text x="0.6333" y="-0.8700" font-size="0.07" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0154" >under counter shutters optional</text>
 </g>
 <g data-storage-id="ST-R08-LF01" data-storage-kind="loft_existing_rcc_shelf_with_shutters" data-panel-id="utility-w">
 <rect x="0.0773" y="-2.9500" width="1.1120" height="1.0500" fill="url(#loft)" stroke="#7a6fa8" stroke-width="0.014" stroke-dasharray=".06 .04"/>
@@ -230,20 +228,22 @@
 <text x="797.84" y="940.88" font-size="11" class="muted" text-anchor="start" >• FURN-utility-counter Utility counter: 0.00–0.85 m (counter height 0.85</text>
 <text x="807.84" y="955.88" font-size="11" class="muted" text-anchor="start" >m).</text>
 <text x="797.84" y="970.88" font-size="11" class="muted" text-anchor="start" >• ST-R08-LF01 loft existing rcc shelf with shutters: 1.90–2.95 m.</text>
-<text x="797.84" y="985.88" font-size="11" class="muted" text-anchor="start" >• ST-R08-UC01 Utility cabinet: 0.00–0.80 m — conditionally selected,</text>
-<text x="807.84" y="1000.88" font-size="11" class="muted" text-anchor="start" >unmeasured placeholder; not fabrication dimensions.</text>
-<text x="797.84" y="1015.88" font-size="11" class="muted" text-anchor="start" >• Items below the floor line are footprint only: their height is not in</text>
-<text x="807.84" y="1030.88" font-size="11" class="muted" text-anchor="start" >the master, so none is drawn.</text>
-<text x="797.84" y="1045.88" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
-<text x="807.84" y="1060.88" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
+<text x="797.84" y="985.88" font-size="11" class="muted" text-anchor="start" >• ST-R08-UC01 under counter shutters optional: 0.00–0.80 m</text>
+<text x="807.84" y="1000.88" font-size="11" class="muted" text-anchor="start" >(homeowner-selected conditional; unmeasured, not construction-ready:</text>
+<text x="807.84" y="1015.88" font-size="11" class="muted" text-anchor="start" >conditional on FH-ST-12 measured utility geometry and</text>
+<text x="807.84" y="1030.88" font-size="11" class="muted" text-anchor="start" >services/access).</text>
+<text x="797.84" y="1045.88" font-size="11" class="muted" text-anchor="start" >• Items below the floor line are footprint only: their height is not in</text>
+<text x="807.84" y="1060.88" font-size="11" class="muted" text-anchor="start" >the master, so none is drawn.</text>
+<text x="797.84" y="1075.88" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is</text>
+<text x="807.84" y="1090.88" font-size="11" class="muted" text-anchor="start" >a legacy placeholder, not raised to the slab and not an approval.</text>
 </g>
 <g data-panel-id="utility-n" data-room-id="utility" data-wall-dir="N">
-<rect x="60" y="1131.8780000000002" width="693.8367199999999" height="840.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
-<text x="76.00" y="1159.88" font-size="17" class="" text-anchor="start" font-weight="600">Utility + washing – north wall</text>
-<text x="76.00" y="1181.88" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking NORTH · left to right</text>
-<text x="76.00" y="1198.88" font-size="11.5" class="muted mono" text-anchor="start" >4.38 m long · tag utility-n</text>
-<text x="76.00" y="1215.88" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
-<g data-keyplan="utility-n" transform="translate(669.84 1171.88) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="60" y="1161.8780000000002" width="693.8367199999999" height="840.278" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="76.00" y="1189.88" font-size="17" class="" text-anchor="start" font-weight="600">Utility + washing – north wall</text>
+<text x="76.00" y="1211.88" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking NORTH · left to right</text>
+<text x="76.00" y="1228.88" font-size="11.5" class="muted mono" text-anchor="start" >4.38 m long · tag utility-n</text>
+<text x="76.00" y="1245.88" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="utility-n" transform="translate(669.84 1201.88) scale(7.4) translate(-0.2277 -0.2246)">
 <rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
 <path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
 <path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
@@ -281,8 +281,8 @@
 <path d="M0.5703 1.4606L4.9548 1.4606" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
 <path d="M2.7626 -0.0394L2.7626 1.0106" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
 </g>
-<text x="709.84" y="1168.88" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
-<g transform="translate(100 1777.1560000000002) scale(140)">
+<text x="709.84" y="1198.88" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(100 1807.1560000000002) scale(140)">
 <rect x="0.0000" y="-3.1877" width="4.3845" height="0.2377" fill="#e9edf1" stroke="none" stroke-width="0" />
 <rect x="0.0000" y="-2.9500" width="4.3845" height="2.9500" fill="#f4f1ea" stroke="none" stroke-width="0" />
 <g data-opening-id="kitchen-utility-window" data-opening-code="W02" data-panel-id="utility-n">
@@ -307,7 +307,7 @@
 </g>
 <g data-storage-id="ST-R08-UC01" data-storage-kind="under_counter_shutters_optional" data-panel-id="utility-n">
 <rect x="0.0000" y="-0.8000" width="0.5508" height="0.8000" fill="#e6ecf4" stroke="#5b7795" stroke-width="0.014" stroke-dasharray=".06 .04"/>
-<text x="0.0200" y="-0.8700" font-size="0.07" fill="#203b43" text-anchor="start" class="halo" stroke-width="0.0154" >Utility cabinet</text>
+<text x="0.0200" y="-0.8700" font-size="0.07" fill="#203b43" text-anchor="start" class="halo" stroke-width="0.0154" >under counter shutters optional</text>
 </g>
 <g data-storage-id="ST-R08-LD01" data-storage-kind="wall_hooks_ladder_mop" data-panel-id="utility-n">
 <rect x="1.6748" y="-1.5500" width="0.5600" height="1.4500" fill="#eee9dc" stroke="#8b8570" stroke-width="0.014" stroke-dasharray=".06 .04"/>
@@ -328,24 +328,24 @@
 <path d="M0.0000 0.0000L0.0000 -2.9500" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
 <path d="M4.3845 0.0000L4.3845 -2.9500" fill="none" stroke="#8a9a9c" stroke-width="0.012" />
 </g>
-<path d="M72 1797.1560000000002H741.8367199999999" stroke="#e1e8e8"/>
-<text x="74.00" y="1809.16" font-size="11" class="muted" text-anchor="start" >• W02 Kitchen-to-utility window: 1219 mm wide, sill 1.07 m, head 2.13 m (sill/head assumed).</text>
-<text x="74.00" y="1824.16" font-size="11" class="muted" text-anchor="start" >• D06 Kitchen-utility double-leaf door: 910 mm wide, head 2.13 m (sill/head assumed).</text>
-<text x="74.00" y="1839.16" font-size="11" class="muted" text-anchor="start" >• FURN-utility-counter Utility counter: 0.00–0.85 m (counter height 0.85 m).</text>
-<text x="74.00" y="1854.16" font-size="11" class="muted" text-anchor="start" >• ST-R08-LF01 loft existing rcc shelf with shutters: 1.90–2.95 m.</text>
-<text x="74.00" y="1869.16" font-size="11" class="muted" text-anchor="start" >• ST-R08-UC01 Utility cabinet: 0.00–0.80 m — conditionally selected, unmeasured placeholder; not fabrication</text>
-<text x="84.00" y="1884.16" font-size="11" class="muted" text-anchor="start" >dimensions.</text>
-<text x="74.00" y="1899.16" font-size="11" class="muted" text-anchor="start" >• ST-R08-LD01 wall hooks ladder mop: 0.10–1.55 m.</text>
-<text x="74.00" y="1914.16" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is a legacy placeholder, not raised to the</text>
-<text x="84.00" y="1929.16" font-size="11" class="muted" text-anchor="start" >slab and not an approval.</text>
+<path d="M72 1827.1560000000002H741.8367199999999" stroke="#e1e8e8"/>
+<text x="74.00" y="1839.16" font-size="11" class="muted" text-anchor="start" >• W02 Kitchen-to-utility window: 1219 mm wide, sill 1.07 m, head 2.13 m (sill/head assumed).</text>
+<text x="74.00" y="1854.16" font-size="11" class="muted" text-anchor="start" >• D06 Kitchen-utility double-leaf door: 910 mm wide, head 2.13 m (sill/head assumed).</text>
+<text x="74.00" y="1869.16" font-size="11" class="muted" text-anchor="start" >• FURN-utility-counter Utility counter: 0.00–0.85 m (counter height 0.85 m).</text>
+<text x="74.00" y="1884.16" font-size="11" class="muted" text-anchor="start" >• ST-R08-LF01 loft existing rcc shelf with shutters: 1.90–2.95 m.</text>
+<text x="74.00" y="1899.16" font-size="11" class="muted" text-anchor="start" >• ST-R08-UC01 under counter shutters optional: 0.00–0.80 m (homeowner-selected conditional; unmeasured, not</text>
+<text x="84.00" y="1914.16" font-size="11" class="muted" text-anchor="start" >construction-ready: conditional on FH-ST-12 measured utility geometry and services/access).</text>
+<text x="74.00" y="1929.16" font-size="11" class="muted" text-anchor="start" >• ST-R08-LD01 wall hooks ladder mop: 0.10–1.55 m.</text>
+<text x="74.00" y="1944.16" font-size="11" class="muted" text-anchor="start" >• Loft heights are unmeasured and held (H-LOFT). Where shown, 3.08 m is a legacy placeholder, not raised to the</text>
+<text x="84.00" y="1959.16" font-size="11" class="muted" text-anchor="start" >slab and not an approval.</text>
 </g>
 <g data-panel-id="utility-e" data-room-id="utility" data-wall-dir="E">
-<rect x="783.8367199999999" y="1131.8780000000002" width="440" height="818.878" fill="#fff" stroke="#cfd9d9" rx="6"/>
-<text x="799.84" y="1159.88" font-size="17" class="" text-anchor="start" font-weight="600">Utility + washing – east wall</text>
-<text x="799.84" y="1181.88" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
-<text x="799.84" y="1198.88" font-size="11.5" class="muted mono" text-anchor="start" >1.23 m long · tag utility-e</text>
-<text x="799.84" y="1215.88" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
-<g data-keyplan="utility-e" transform="translate(1139.84 1171.88) scale(7.4) translate(-0.2277 -0.2246)">
+<rect x="783.8367199999999" y="1161.8780000000002" width="440" height="818.878" fill="#fff" stroke="#cfd9d9" rx="6"/>
+<text x="799.84" y="1189.88" font-size="17" class="" text-anchor="start" font-weight="600">Utility + washing – east wall</text>
+<text x="799.84" y="1211.88" font-size="12.5" class="muted" text-anchor="start" >Standing inside, looking EAST · left to right</text>
+<text x="799.84" y="1228.88" font-size="11.5" class="muted mono" text-anchor="start" >1.23 m long · tag utility-e</text>
+<text x="799.84" y="1245.88" font-size="11.5" class="red" text-anchor="start" font-weight="700">HD-11 LEVELS UNMEASURED · HEADS ASSUMED</text>
+<g data-keyplan="utility-e" transform="translate(1139.84 1201.88) scale(7.4) translate(-0.2277 -0.2246)">
 <rect x="0.2277" y="0.2246" width="8.9187" height="15.6280" fill="#fafbfb" stroke="#d5dddd" stroke-width="0.04" />
 <path d="M0.5703 0.2277L2.0943 0.2277L2.0943 1.4606L0.5703 1.4606Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
 <path d="M2.0943 0.2277L4.9548 0.2277L4.9548 1.4606L2.0943 1.4606Z" fill="#f9dfc9" stroke="none" stroke-width="0" />
@@ -383,8 +383,8 @@
 <path d="M0.5703 0.2277L0.5703 1.4606" fill="none" stroke="#d2552a" stroke-width="0.34" stroke-linecap="butt"/>
 <path d="M2.0703 0.8441L1.0203 0.8441" fill="none" stroke="#1d5fa8" stroke-width="0.2" marker-end="url(#arrow)"/>
 </g>
-<text x="1179.84" y="1168.88" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
-<g transform="translate(823.8367199999999 1777.1560000000002) scale(140)">
+<text x="1179.84" y="1198.88" font-size="11" class="muted" text-anchor="middle" font-weight="700">N ↓</text>
+<g transform="translate(823.8367199999999 1807.1560000000002) scale(140)">
 <rect x="0.0000" y="-3.1877" width="1.2329" height="0.2377" fill="#e9edf1" stroke="none" stroke-width="0" />
 <rect x="0.0000" y="-2.9500" width="1.2329" height="2.9500" fill="#f4f1ea" stroke="none" stroke-width="0" />
 <path d="M-0.1200 0.0000L1.3529 0.0000" fill="none" stroke="#203b43" stroke-width="0.035" />
@@ -401,21 +401,21 @@
 <text x="0.8053" y="0.5005" font-size="0.075" fill="#203b43" text-anchor="middle" class="halo" stroke-width="0.0165" >Washing machine</text>
 </g>
 </g>
-<path d="M795.8367199999999 1882.756H1211.8367199999998" stroke="#e1e8e8"/>
-<text x="797.84" y="1894.76" font-size="11" class="muted" text-anchor="start" >• Items below the floor line are footprint only: their height is not in</text>
-<text x="807.84" y="1909.76" font-size="11" class="muted" text-anchor="start" >the master, so none is drawn.</text>
+<path d="M795.8367199999999 1912.756H1211.8367199999998" stroke="#e1e8e8"/>
+<text x="797.84" y="1924.76" font-size="11" class="muted" text-anchor="start" >• Items below the floor line are footprint only: their height is not in</text>
+<text x="807.84" y="1939.76" font-size="11" class="muted" text-anchor="start" >the master, so none is drawn.</text>
 </g>
-<text x="60.00" y="2006.16" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
-<text x="60.00" y="2030.16" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
-<text x="60.00" y="2048.16" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
-<text x="60.00" y="2066.16" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
-<text x="60.00" y="2088.16" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
-<text x="60.00" y="2110.16" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
-<text x="60.00" y="2132.16" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
-<text x="60.00" y="2150.16" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
-<text x="60.00" y="2168.16" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
-<text x="60.00" y="2190.16" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
-<path d="M60 2200.156H1640" stroke="#c8d2d3"/>
-<text x="60.00" y="2222.16" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</text>
-<text x="1640.00" y="2222.16" font-size="13" class="amber" text-anchor="end" >REVIEW DRAFT · read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
+<text x="60.00" y="2036.16" font-size="15" class="sect" text-anchor="start" >ABOUT THIS SHEET</text>
+<text x="60.00" y="2060.16" font-size="12.5" class="muted" text-anchor="start" >HEIGHTS (HD-11, all unmeasured): the 11 ft floor-to-floor (3.353 m) and ~9 in (0.229 m) band drop are homeowner-stated; the band underside 2.959 m and slab underside 3.188 m are derived from them (5 in slab and 1.5 in finish assumed).</text>
+<text x="60.00" y="2078.16" font-size="12.5" class="muted" text-anchor="start" >The raised centre is a separate gypsum/POP panel below the slab (HD-14); its level and cavity depth are unmeasured, and 3.19 m is only the slab-underside reference plane. Bathrooms 2.40 m, utility 2.95 m, lobby and balcony levels were</text>
+<text x="60.00" y="2096.16" font-size="12.5" class="muted" text-anchor="start" >not provided (placeholders). Window and door heads are assumptions. Nothing is as-built.</text>
+<text x="60.00" y="2118.16" font-size="12.5" class="muted" text-anchor="start" >Drawn south-up (not rotated): sheet-top = SOUTH (utility/washing), sheet-bottom = NORTH (entrance/balcony), sheet-left = EAST (kitchen/dining/living), sheet-right = WEST (bedrooms).</text>
+<text x="60.00" y="2140.16" font-size="12.5" class="muted" text-anchor="start" >Compass: approximate homeowner north, recorded in the master (visualization_geometry.orientation): entrance/balcony/stairs face NORTH. Cardinal directions only — true bearing and magnetic declination are not surveyed.</text>
+<text x="60.00" y="2162.16" font-size="12.5" class="muted" text-anchor="start" >† marks an opening that is assumed, a placeholder, centred-but-unmeasured, or (PN1) a built niche whose size is unmeasured. Window and door positions are modelled plan positions, not site verified; sills and heads are assumptions.</text>
+<text x="60.00" y="2180.16" font-size="12.5" class="muted" text-anchor="start" >Held items (red dashed) are not approved layouts. The 2.939 m children’s curtain top is an assumed HD-11 drawing level, not measured hardware. Living, master and children’s concealed curtain pockets need two tracks (sheer + blackout,</text>
+<text x="60.00" y="2198.16" font-size="12.5" class="muted" text-anchor="start" >HD-14); their clear sizes are unverified.</text>
+<text x="60.00" y="2220.16" font-size="12.5" class="muted" text-anchor="start" >Dimensions in metres unless marked mm. Wall names are compass directions; the small sheet tags (e.g. master-s) are only drawing IDs. Items without a height in the master are shown as footprints below the floor line.</text>
+<path d="M60 2230.156H1640" stroke="#c8d2d3"/>
+<text x="60.00" y="2252.16" font-size="12.5" class="mono muted" text-anchor="start" >Master SHA256: 79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822</text>
+<text x="1640.00" y="2252.16" font-size="13" class="amber" text-anchor="end" >Read-only drawing from the canonical master · not a construction release · unmeasured levels and sizes marked</text>
 </svg>

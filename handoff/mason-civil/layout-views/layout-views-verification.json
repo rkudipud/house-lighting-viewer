@@ -1,16 +1,16 @@
 {
   "schema": "layout_views_receipt/1",
-  "verified_utc": "2026-11-18T11:20:46.857346+00:00",
+  "verified_utc": "2026-11-19T20:43:23.322440+00:00",
   "purpose": "Read-only current layout views (top-down plan, reflected ceiling plan, interior elevations) from the canonical master; not a construction release.",
   "drawing_source": {
     "staging": false,
     "final": false,
-    "publication_status": "REVIEW DRAFT; not construction-released",
-    "review_draft": true,
+    "publication_status": "review drawing; not construction-released",
+    "review_draft": false,
     "lighting_pending": false,
     "hd18": {
       "fragment": {
-        "file": "handoff/source-basis/fragments/pooja-notation-hd18.json",
+        "file": "pooja-notation-hd18.json",
         "sha256": "598796435ba3b37d6fedf655f243d87e09c663cbf338eb5fd7a25cbff37a46ec",
         "bytes": 2458
       },
@@ -46,9 +46,9 @@
     "note": "HD-18 clarifies feet-and-inches notation: sill 1 ft 5 in (0.4318 m), depth 1 ft 3 in (381 mm), north-corner gap 1 ft 4 in (0.4064 m). All remain homeowner estimates, not site measurements. Opening height 1701.8 mm is derived from the estimated top minus sill."
   },
   "source_master": {
-    "path": "handoff/source-basis/house-design.json",
-    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-    "bytes": 1591969,
+    "path": "house-design.json",
+    "sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+    "bytes": 1602914,
     "expected_sha256_matched": true
   },
   "live_master": null,
@@ -87,7 +87,7 @@
     "recheck": "Measure the actual bed frame, fixed study-return edge and unobstructed route on site; do not describe the gap as a comfortable walking route."
   },
   "open_item_compass_correction": null,
-  "lighting_status": "Homeowner-signed fixed-CCT review candidate (104 fittings, 47 controlled groups base plus four selected S1 strips): 2700 K coves and pocket strips, with CCT fixed by fitting. CBR-H1 to H6 are active/switchable at accepted positions; the C37 exact dimmer chain remains held. CURT-MBR-W03 is held and excluded. Pocket dimensions, other CBR coordination, product fit and construction release remain held. Pooja fittings LIV-P1/P2 remain count/load allowances only.",
+  "lighting_status": "OPT-1 calculated review candidate from the bound master (104 base fittings, 47 controlled groups). Four selected 2700 K curtain strips bring the review schedule to 108 fittings / 51 circuits; no new knobs or photometry credit. Kitchen task option K-2 is homeowner-selected for review: it adds the sink-end linear KIT-T4 and lowers KIT-T1 output. Generic-optics analytic estimates, not measured or manufacturer-validated; no photometry is shown on this sheet. Not construction-released; product, driver, dimmer and site-fit holds remain open. Each bathroom face-light pair has its own knob (HD-17). Pooja fittings remain count/load allowances only, with inherited positions held (H-POOJA-GEOMETRY); no corrected placement is implied.",
   "canonical_lighting_status": "FIXED_WHITE_HOMEOWNER_SIGNED_REVIEW_CANDIDATE_NOT_CONSTRUCTION_RELEASED",
   "lighting_design_inputs_sha256": "4fd1b24c521a37a0ebe7b345805827a64bf7c43579cf12133171a514b3c7f7e7",
   "lighting_selection": {
@@ -155,18 +155,18 @@
       "title": "Furnished floor plan (top-down)",
       "page_px": [
         1700.0,
-        2268.0
+        2234.0
       ],
       "png_scale": 2,
       "svg": {
         "file": "01-plan-furnished.svg",
-        "sha256": "32e31ede03506872c71dbab30c92536a107641bd638f6e6e2043edc5107fdf08",
-        "bytes": 57209
+        "sha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec",
+        "bytes": 56897
       },
       "png": {
         "file": "01-plan-furnished.png",
-        "sha256": "78fdcf4f70f77554aaf4757698246b4fc8f51a2418114a8145b79c06b30a1b05",
-        "bytes": 1165081
+        "sha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848",
+        "bytes": 1146374
       },
       "counts": {
         "rooms": 12,
@@ -179,8 +179,8 @@
         "stairParts": 3,
         "baths": 2
       },
-      "svg_elements": 532,
-      "svg_text_elements": 189,
+      "svg_elements": 531,
+      "svg_text_elements": 188,
       "pdf_page": 1
     },
     {
@@ -188,23 +188,25 @@
       "title": "Reflected ceiling plan (bottoms-up)",
       "page_px": [
         1700.0,
-        4075.0
+        4103.0
       ],
       "png_scale": 2,
       "svg": {
         "file": "02-rcp.svg",
-        "sha256": "6d757bd30411ecd295d4b4c0b885ef63c932e2501560de5699226236df41a988",
-        "bytes": 90645
+        "sha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1",
+        "bytes": 91555
       },
       "png": {
         "file": "02-rcp.png",
-        "sha256": "5a0b4e28d2d962362100864f4feb40258f8064db34a20cf86f70ce04e4b18da1",
-        "bytes": 1895888
+        "sha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2",
+        "bytes": 1905699
       },
       "counts": {
         "fixtures": 104,
         "circuits": 47,
         "selectedCurtainStrips": 4,
+        "reviewFixtures": 108,
+        "reviewCircuits": 51,
         "paths": 30,
         "points": 74,
         "fans": 3,
@@ -214,8 +216,8 @@
         "rooms": 12,
         "walls": 21
       },
-      "svg_elements": 940,
-      "svg_text_elements": 232,
+      "svg_elements": 954,
+      "svg_text_elements": 234,
       "pdf_page": 2
     },
     {
@@ -228,13 +230,13 @@
       "png_scale": 2,
       "svg": {
         "file": "03-elev-R01-living.svg",
-        "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
-        "bytes": 58459
+        "sha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8",
+        "bytes": 58443
       },
       "png": {
         "file": "03-elev-R01-living.png",
-        "sha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
-        "bytes": 1068711
+        "sha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35",
+        "bytes": 1066928
       },
       "counts": {
         "panels": 5,
@@ -258,13 +260,13 @@
       "png_scale": 2,
       "svg": {
         "file": "04-elev-R02-dining.svg",
-        "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
-        "bytes": 36369
+        "sha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60",
+        "bytes": 36353
       },
       "png": {
         "file": "04-elev-R02-dining.png",
-        "sha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
-        "bytes": 719231
+        "sha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c",
+        "bytes": 717309
       },
       "counts": {
         "panels": 3,
@@ -288,13 +290,13 @@
       "png_scale": 2,
       "svg": {
         "file": "05-elev-R03-kitchen.svg",
-        "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
-        "bytes": 47449
+        "sha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155",
+        "bytes": 47433
       },
       "png": {
         "file": "05-elev-R03-kitchen.png",
-        "sha256": "bbb588333f2d7462326ea0e945f909b458a4246bc8a2eccfee7b2bd112d2d083",
-        "bytes": 842465
+        "sha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7",
+        "bytes": 840605
       },
       "counts": {
         "panels": 4,
@@ -318,13 +320,13 @@
       "png_scale": 2,
       "svg": {
         "file": "06-elev-R04-master.svg",
-        "sha256": "29cb3e6e6a01dd0f8f860a02000e8b0631c9ad745590c70ff1de314f075aac8b",
-        "bytes": 43524
+        "sha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b",
+        "bytes": 43491
       },
       "png": {
         "file": "06-elev-R04-master.png",
-        "sha256": "f256510f8bed6ecbeb0ce0cce2c49f43737ef4930bb5ce536bf4d0652e4558c3",
-        "bytes": 835753
+        "sha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b",
+        "bytes": 830834
       },
       "counts": {
         "panels": 4,
@@ -343,18 +345,18 @@
       "title": "Elevations — R04a Master dressing",
       "page_px": [
         1700.0,
-        2060.556
+        2120.556
       ],
       "png_scale": 2,
       "svg": {
         "file": "07-elev-R04a-dressing.svg",
-        "sha256": "6f02bf5a403d4b9a53c6253bb0b283f4ad937929c908df9b53b7ed566bf39b68",
-        "bytes": 41258
+        "sha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c",
+        "bytes": 42001
       },
       "png": {
         "file": "07-elev-R04a-dressing.png",
-        "sha256": "ad09a6dc6b29c0592793e45edc43131f50b8537ad4e54694f0389a4335f97d49",
-        "bytes": 618709
+        "sha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991",
+        "bytes": 649998
       },
       "counts": {
         "panels": 4,
@@ -364,8 +366,8 @@
         "curtains": 0,
         "openEdgeNotes": 1
       },
-      "svg_elements": 349,
-      "svg_text_elements": 96,
+      "svg_elements": 355,
+      "svg_text_elements": 102,
       "pdf_page": 7
     },
     {
@@ -378,13 +380,13 @@
       "png_scale": 2,
       "svg": {
         "file": "08-elev-R05-children.svg",
-        "sha256": "cfc5a89c4379d718a17dcec32b52ee348b801e186278184f2f27f1cf187a518e",
-        "bytes": 61475
+        "sha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe",
+        "bytes": 61480
       },
       "png": {
         "file": "08-elev-R05-children.png",
-        "sha256": "61b69c6a77cb8efbbbbc203f7db4754c16aa56351dfb1386432bba8bc3a263cd",
-        "bytes": 1006732
+        "sha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40",
+        "bytes": 1008949
       },
       "counts": {
         "panels": 6,
@@ -403,18 +405,18 @@
       "title": "Elevations — R06 TL1 attached toilet",
       "page_px": [
         1700.0,
-        2015.556
+        1985.556
       ],
       "png_scale": 2,
       "svg": {
         "file": "09-elev-R06-TL1.svg",
-        "sha256": "e5ccca9c76ddd464e7ac56b02e3e19a40d355bd787ce882f5afb1cbd7d84cba5",
-        "bytes": 42722
+        "sha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1",
+        "bytes": 42179
       },
       "png": {
         "file": "09-elev-R06-TL1.png",
-        "sha256": "2c3faa390257805ce7d347506821f116a529d91ee65cf73a54de0927f55a532b",
-        "bytes": 609805
+        "sha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db",
+        "bytes": 591826
       },
       "counts": {
         "panels": 4,
@@ -424,8 +426,8 @@
         "curtains": 0,
         "openEdgeNotes": 0
       },
-      "svg_elements": 370,
-      "svg_text_elements": 99,
+      "svg_elements": 366,
+      "svg_text_elements": 95,
       "pdf_page": 9
     },
     {
@@ -433,18 +435,18 @@
       "title": "Elevations — R07 TL2 common toilet",
       "page_px": [
         1700.0,
-        2015.556
+        1985.556
       ],
       "png_scale": 2,
       "svg": {
         "file": "10-elev-R07-TL2.svg",
-        "sha256": "c4f276aa07ae40821702180a03d9acab9ac4c7dca09b316ee7a1932f9aa27b34",
-        "bytes": 42711
+        "sha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f",
+        "bytes": 42168
       },
       "png": {
         "file": "10-elev-R07-TL2.png",
-        "sha256": "0a81938a2d195f056dcc7a77968cae9d3b40a5d43b1a1b435c29639731496a5d",
-        "bytes": 612278
+        "sha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23",
+        "bytes": 594801
       },
       "counts": {
         "panels": 4,
@@ -454,8 +456,8 @@
         "curtains": 0,
         "openEdgeNotes": 0
       },
-      "svg_elements": 370,
-      "svg_text_elements": 99,
+      "svg_elements": 366,
+      "svg_text_elements": 95,
       "pdf_page": 10
     },
     {
@@ -463,18 +465,18 @@
       "title": "Elevations — R08 Utility + washing",
       "page_px": [
         1700.0,
-        2234.156
+        2264.156
       ],
       "png_scale": 2,
       "svg": {
         "file": "11-elev-R08-utility.svg",
-        "sha256": "7d9cb16e5c57a05a29560625d0bc584332ac9f51a311520c934e257dce6eac15",
-        "bytes": 48612
+        "sha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3",
+        "bytes": 48689
       },
       "png": {
         "file": "11-elev-R08-utility.png",
-        "sha256": "a166a94a2b7bbce82ad423aec393179af7420fef82abd544f0ba912569d2738f",
-        "bytes": 804039
+        "sha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a",
+        "bytes": 831466
       },
       "counts": {
         "panels": 4,
@@ -498,13 +500,13 @@
       "png_scale": 2,
       "svg": {
         "file": "12-elev-R09-entry.svg",
-        "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
-        "bytes": 18177
+        "sha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557",
+        "bytes": 18161
       },
       "png": {
         "file": "12-elev-R09-entry.png",
-        "sha256": "76132f7852185dc9c2309ba50bd327136457d7814f6a210b7b786abd32740d06",
-        "bytes": 413291
+        "sha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411",
+        "bytes": 412007
       },
       "counts": {
         "panels": 1,
@@ -528,13 +530,13 @@
       "png_scale": 2,
       "svg": {
         "file": "13-elev-R12-lobby.svg",
-        "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
-        "bytes": 30637
+        "sha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107",
+        "bytes": 30621
       },
       "png": {
         "file": "13-elev-R12-lobby.png",
-        "sha256": "7fecf904ad06bdf84af590260b056910c06639575d132f68097bc587e7e3df4a",
-        "bytes": 428073
+        "sha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896",
+        "bytes": 426200
       },
       "counts": {
         "panels": 3,
@@ -551,21 +553,21 @@
   ],
   "combined_pdf": {
     "file": "current-layout-views.pdf",
-    "sha256": "c488d3e0f5338eb4b243d596019d36a6a0b9a890cc1f82ae01eb8cace22796a4",
-    "bytes": 6804433,
+    "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
+    "bytes": 6849877,
     "pages": 13,
     "page_points": [
       [
         0.0,
         0.0,
         1275.1,
-        1702.1
+        1675.9
       ],
       [
         0.0,
         0.0,
         1275.1,
-        3057.1
+        3078.0
       ],
       [
         0.0,
@@ -595,7 +597,7 @@
         0.0,
         0.0,
         1275.1,
-        1546.1
+        1591.0
       ],
       [
         0.0,
@@ -607,19 +609,19 @@
         0.0,
         0.0,
         1275.1,
-        1512.0
+        1489.9
       ],
       [
         0.0,
         0.0,
         1275.1,
-        1512.0
+        1489.9
       ],
       [
         0.0,
         0.0,
         1275.1,
-        1675.9
+        1699.0
       ],
       [
         0.0,
@@ -639,13 +641,13 @@
   },
   "readme": {
     "file": "README.md",
-    "sha256": "7f6f2f6c7b048fe802c075f313839a32d32040eab8e658a9843ab6b3a9909462",
-    "bytes": 12210
+    "sha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445",
+    "bytes": 11128
   },
   "manifest": {
     "file": "sheets.json",
-    "sha256": "c8dba42ccecf5dcd2222501ce1d5a0084312136415eb89feb6e413807d466f75",
-    "bytes": 25474
+    "sha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288",
+    "bytes": 25260
   },
   "reconciliation": {
     "plan": {
@@ -719,31 +721,15 @@
         "C41",
         "C41b"
       ],
-      "released_CBR_H1_H6": [
-        "CBR-H1",
-        "CBR-H2",
-        "CBR-H3",
-        "CBR-H4",
-        "CBR-H5",
-        "CBR-H6"
-      ],
-      "other_CBR_fixtures_drawn_faded": [
-        "CBR-L1",
-        "CBR-R1",
-        "CBR-R2",
-        "CBR-S1",
-        "CBR-X1",
-        "CBR-X2",
-        "CBR-X3",
-        "CBR-X4"
-      ],
-      "selected_S1_curtain_strips": [
+      "held_CBR_fixtures_drawn_faded": 3,
+      "selected_curtain_strips": [
         "CURT-CBR",
         "CURT-DIN",
         "CURT-LIV",
         "CURT-MBR-S"
       ],
-      "held_W03_strip_excluded": true,
+      "review_fittings": 108,
+      "review_circuits": 51,
       "count_load_only_allowances": [
         "LIV-P1",
         "LIV-P2"
@@ -905,10 +891,6 @@
       }
     },
     {
-      "check": "plan: both selected cabinets remain dashed, conditional and unmeasured",
-      "ok": true
-    },
-    {
       "check": "plan: no superseded R04 footprint drawn as storage",
       "ok": true
     },
@@ -966,22 +948,13 @@
       "detail": 104
     },
     {
-      "check": "rcp: CBR-H1-H6 active and switchable; other CBR fixtures remain held",
+      "check": "rcp: CBR H1-H6, cove and LINE drawn as modelled ON; remaining CBR fittings faded and held",
       "ok": true,
       "detail": [
-        "CBR-L1",
         "CBR-R1",
         "CBR-R2",
-        "CBR-S1",
-        "CBR-X1",
-        "CBR-X2",
-        "CBR-X3",
-        "CBR-X4"
+        "CBR-S1"
       ]
-    },
-    {
-      "check": "rcp: four selected S1 strips drawn separately; W03 excluded",
-      "ok": true
     },
     {
       "check": "rcp: circuit ids reconcile with canonical controls",
@@ -1001,6 +974,10 @@
     },
     {
       "check": "rcp: 5 curtain pockets (4 windows + held W03)",
+      "ok": true
+    },
+    {
+      "check": "rcp: four selected strips drawn without new knobs or photometry credit",
       "ok": true
     },
     {
@@ -1271,6 +1248,18 @@
     },
     {
       "check": "rcp: integrated lighting totals and conditional status shown",
+      "ok": true
+    },
+    {
+      "check": "OPT-1: 104 fittings in 47 groups, status not construction-released, K-2 selected",
+      "ok": true
+    },
+    {
+      "check": "OPT-1 rcp: K-2 kitchen fittings KIT-T4 (new sink-end linear) and lower-output KIT-T1 are drawn as lit paths",
+      "ok": true
+    },
+    {
+      "check": "OPT-1 rcp: generic-optics estimate label shown; no heat map or numerical lighting results drawn",
       "ok": true
     },
     {
@@ -1682,7 +1671,7 @@
       "ok": true,
       "detail": {
         "fragment": {
-          "file": "handoff/source-basis/fragments/pooja-notation-hd18.json",
+          "file": "pooja-notation-hd18.json",
           "sha256": "598796435ba3b37d6fedf655f243d87e09c663cbf338eb5fd7a25cbff37a46ec",
           "bytes": 2458
         },
@@ -1721,27 +1710,23 @@
       "ok": true
     },
     {
-      "check": "review draft: every sheet and the README marked REVIEW DRAFT, not construction released, on the OPT-1 integrated master",
-      "ok": true
-    },
-    {
       "check": "open-item correction: superseded OI compass wording and loft-load figure absent from every sheet, PDF page and README",
       "ok": true,
       "detail": {}
     }
   ],
-  "checks_passed": 156,
-  "checks_total": 156,
+  "checks_passed": 157,
+  "checks_total": 157,
   "generators": {
     "layout_views.mjs": "e2491173271f00bcfbdea524e897d710b8bc4a06f165532b3cee086fb47893a7",
-    "drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656",
-    "layout_views/data.mjs": "7ea4cc5d596401193a818fdf8fbc8292a9abf30d5eeab3333940f28bd371a7c5",
-    "layout_views/elev.mjs": "7a00c4cd906af72bb614975c31bf3ebcbbf81f2b8484c837d249c6738f8363c5",
-    "layout_views/plan.mjs": "8af52d99dcd630963d711ab3a3abd3f1fc828b90b498aa3c27eea93b32053402",
-    "layout_views/rcp.mjs": "0e1750311864105116a892b8504521245cdd382cd1e5ceb7bd63b6fc558c1b41",
-    "layout_views/svg.mjs": "c85fffb5fc45075dce418312e2d8e01b2df9191d6264a2cd9c61f835465f204c",
-    "src/master-adapter.js": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da",
-    "render_layout_views.py": "f38e97620b1f411e2c10d0dbe28908667b4d63f08bce01185e6fd11ca591fa1a"
+    "drawing-source.mjs": "ccfd98b00bf665fe2b470fc8efd8ae0411da8463c7f7ff5b4f1c37be4a02444c",
+    "layout_views/data.mjs": "8f2268cbffb1d43ecc5beecf6dd2c3dfae306d8731ccbff3d7a1f7b72e653de0",
+    "layout_views/elev.mjs": "17fc2e3d4dc6e90b089af009889466efe635cfab4f580466aa6f0dc4f65e0a9f",
+    "layout_views/plan.mjs": "c9e631d9b1793db90cf1ca71d4570072182af4aace9c7e27f512cb6174654e55",
+    "layout_views/rcp.mjs": "acdb3e7d1455765dbc726f961c860c62dd695696a66c3a726c7da1a58830e836",
+    "layout_views/svg.mjs": "b0d674725edeb45234a8cd38dd520625d1e8b28aaa239a5e8e2040d81585e5e1",
+    "src/master-adapter.js": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398",
+    "render_layout_views.py": "51f22a413ca46b571bec398e0adf581b83fb2a799767f1a9f8a172fb8466ab16"
   },
   "pdf_note": "PDF carries creation timestamps; SVG/PNG are reproducible from the same master and generators."
 }

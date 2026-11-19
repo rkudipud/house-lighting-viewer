@@ -70,42 +70,17 @@ if args.generation_source:
     layout_receipt = json.loads((args.drawings / "layout-views" / "layout-views-verification.json").read_text(encoding="utf-8"))
     for name in ("floorplan.mjs", "drawing-source.mjs"):
         data = (args.generation_source / name).read_bytes()
-        if sha(data) != floor_receipt["generators"][name] or (name == "drawing-source.mjs" and sha(data) != layout_receipt["generators"][name]):
+        if sha(data) != floor_receipt["generators"][name]:
             raise ValueError(f"Original generator snapshot does not match the drawing receipt: {name}")
         target = out / "provenance" / "generation-source" / name
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
         original_generators[name] = sha(data)
+    for name, expected in layout_receipt["generators"].items():
+        if sha((root / name).read_bytes()) != expected:
+            raise ValueError(f"Current layout generator does not match the drawing receipt: {name}")
 
-readme = """# Viewer and drawing generators
-
-Review draft; not a construction release. The offline viewer is distributed separately.
-This source bundle excludes the old local master snapshot, local cache, dependencies and
-reference imagery. `src/house-data.generated.json` and `data/heat-data.json` are the
-privacy-redacted viewer inputs, not the complete authoritative master.
-
-The original master SHA-256, derived-data hashes, precise transformation and verified
-HTML hash are in `privacy-transform.json` and `public-source-manifest.json`.
-Geometry and non-path fields in the derived viewer input are unchanged by redaction;
-provisional dimensions, review status and site/professional holds remain.
-
-To reproduce the exact verified HTML with Node.js, restore the pinned packages with
-`npm ci`, then run `node rebuild-public.mjs --out <new-index.html>`. The command refuses
-to write unless the result matches the recorded HTML hash. Keep the separately supplied
-`downloads` folder alongside the rebuilt HTML for the four PDF links.
-
-`build.mjs` rebuilds from the original authoritative master and its independently
-verified input packs and receipts; it deliberately requires that original byte hash.
-The redacted viewer data cannot be substituted as a byte-identical master. Drawing
-generators require the corresponding current canonical master and fragments. Generated
-local verification receipts can contain local paths; review them before publication.
-When supplied, the `provenance` directory retains original generator snapshots for checking the drawing
-receipts; they are historical evidence, not the current generator, and can emit local
-paths if run. Current generators and the public drawing staging script avoid or remove
-those path fields.
-Three.js is bundled under MIT; see `THREE-LICENSE.txt`.
-"""
-(out / "README.md").write_text(readme, encoding="utf-8", newline="\n")
+shutil.copyfile(root / "README.md", out / "README.md")
 
 private_patterns = [
     re.compile(r"(?<![A-Za-z0-9])[A-Za-z]:[\\/]{1,2}"),

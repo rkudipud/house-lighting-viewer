@@ -31,7 +31,7 @@ C36A,all,P15,1.5,OK,
 C36B,all,P15,1.4,OK,
 C38,all,P16,2.9,OK,Planning screen only; route and protective design unverified
 C39,all,P16,3.3,MARGINAL,Planning screen only; route and protective design unverified
-C40,all,P16,3.6,MARGINAL,Planning screen only; route and protective design unverified
+C40,all,P16,3.9,MARGINAL,Planning screen only; route and protective design unverified
 X-CURT-LIV,all,P01,,HOLD,Previous split-feed result invalid for selected single supply.
 X-CURT-DIN,all,P07,1.7,OK,Planning screen only; route and protective design unverified
 X-CURT-MBR-S,all,P12,1.8,OK,Planning screen only; route and protective design unverified

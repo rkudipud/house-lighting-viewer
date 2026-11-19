@@ -73,8 +73,8 @@
     "H-POOJA-GEOMETRY"
   ],
   "compliance_summary": {
-    "PASS": 60,
-    "MARGINAL": 9,
+    "PASS": 59,
+    "MARGINAL": 10,
     "HOLD": 2
   },
   "not_verified": [
@@ -184,5 +184,29 @@
   "photometry_scope": "104 base fittings only; the four selected curtain-pocket strips have no lux/heat-map credit.",
   "photometry_source_design_inputs_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
   "post_calculation_status_delta": "CBR H1-H6 release and homeowner sign-off labels only; no coordinates, optics or calculation values changed.",
-  "electrical_source_status": "The original design_inputs electrical topology and earlier cost/optical-source outputs predate the selected one-supply revision. Current controls and S1 extension supersede them; living feeder and inrush screens are invalid. No lamp positions or optical calculations changed."
+  "electrical_source_status": "The original design_inputs electrical topology and earlier cost/optical-source outputs predate the selected one-supply revision. Current controls and S1 extension supersede them; living feeder and inrush screens are invalid. No lamp positions or optical calculations changed.",
+  "children_ceiling_revision": {
+    "status": "PROVISIONAL_CBR_ONLY_REANALYSIS_MODELLED_ON_SITE_HELD",
+    "predecessor_master_sha256": "e7d2e6c7cdeedd72abb3dd236304646eb01174a2df65b5401be8c53b907853e7",
+    "geometry_proposal_sha256": "27a5b159e0f892047299bce0eafd508979f76210da2d3699b06bbf8f2fb3c049",
+    "design_inputs_canonical_sha256": "db0dd77805418a2475aa0930a76b2b075fecb62d3e7113cadf9f408e93e50d2e",
+    "baseline_heatmaps_sha256": "a94b370c0f3b9572c104b93fce96cdc3e110b5b2062f2c426d8cb6c95811b408",
+    "reanalysed_heatmaps_sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
+    "fixture_ids": [
+      "CBR-L1",
+      "CBR-X1",
+      "CBR-X2",
+      "CBR-X3",
+      "CBR-X4",
+      "CBR-H1",
+      "CBR-H2",
+      "CBR-H3",
+      "CBR-H4",
+      "CBR-H5",
+      "CBR-H6"
+    ],
+    "retained_hold": "H-CBR-CEIL",
+    "note": "R05-only re-analysis at the homeowner-reported 3.048 m band (approx. 3.277 m raised centre) with the fan at the nominal room centre (1050 mm planning sweep). The CBR cove (C39) and outward LINE (C40) are included ON with scheduled lumens in the modelled LOW_100 / HIGH+LOW_100 results. Modelled generic optics, not measured; installation, site clearance, procurement and actual operation remain held (H-CBR-CEIL). Other rooms are unchanged.",
+    "construction_release": false
+  }
 }

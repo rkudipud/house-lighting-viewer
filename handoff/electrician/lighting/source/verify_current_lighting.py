@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import hashlib
 import json
@@ -12,7 +13,8 @@ from pathlib import Path
 import pymupdf as fitz
 from PIL import Image
 from playwright.sync_api import sync_playwright
-from validate_cct_revision import CURRENT_SHA, PRIOR_SHA, IDS, load_verified, verify
+from validate_cct_revision import CURRENT_SHA as CCT_SHA, PRIOR_SHA, IDS, load_verified, verify
+from validate_cbr_revision import CURRENT_SHA, HEATMAP_SHA, IDS as CBR_IDS, verify as verify_cbr
 
 BASE = Path(r"not-distributed/lighting-session-inputs")
 OUT = BASE / "lighting-current-review"
@@ -21,7 +23,8 @@ MASTER = Path(r"handoff/source-basis/house-design.json")
 PACK = BASE / "final-lighting-fixed-white"
 EXPECTED_MASTER = CURRENT_SHA
 EXPECTED_DI = "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e"
-EXPECTED_HEATMAP = "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a"
+EXPECTED_HEATMAP = HEATMAP_SHA
+ORIGINAL_HEATMAP = "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a"
 checks = []
 
 
@@ -136,6 +139,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--master", required=True, type=Path)
     parser.add_argument("--prior-master", required=True, type=Path)
+    parser.add_argument("--cct-master", required=True, type=Path)
     parser.add_argument("--pack", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--receipt", required=True, type=Path)
@@ -143,7 +147,9 @@ def main():
     args = parser.parse_args()
     MASTER, PACK, OUT = args.master.resolve(), args.pack.resolve(), args.out.resolve()
     receipt, EVIDENCE = args.receipt.resolve(), args.evidence_dir.resolve()
-    verify(load_verified(args.prior_master, PRIOR_SHA), load_verified(MASTER, EXPECTED_MASTER))
+    cct_master = load_verified(args.cct_master, CCT_SHA)
+    verify(load_verified(args.prior_master, PRIOR_SHA), cct_master)
+    verify_cbr(cct_master, load_verified(MASTER, EXPECTED_MASTER))
     if (receipt.is_relative_to(OUT.resolve()) and receipt != (OUT / "verification.json").resolve()
             or EVIDENCE.is_relative_to(OUT.resolve())):
         raise ValueError("Additional verification artifacts must be outside the delivered package")
@@ -162,7 +168,8 @@ def main():
     check(all(digest(OUT / name) == info["sha256"] and (OUT / name).stat().st_size == info["bytes"]
               for name, info in manifest["files"].items()), "All package file hashes and sizes match")
     check(manifest["original_photometry_design_inputs_canonical_sha256"] == EXPECTED_DI
-          and manifest["original_heatmaps_sha256"] == EXPECTED_HEATMAP, "Original photometry and heatmap basis retained")
+          and manifest["original_heatmaps_sha256"] == ORIGINAL_HEATMAP
+          and manifest["heatmaps_sha256"] == EXPECTED_HEATMAP, "Historical and CBR-reanalysed heatmap bases retained")
     check(manifest["source_comparison"]["grid_statistics_compared"] == 71
           and len(manifest["source_comparison"]["grids_without_reported_statistics"]) == 6,
           "Comparable heatmap statistics were checked; missing source statistics recorded")
@@ -179,10 +186,17 @@ def main():
     check(len(fixture_json) == len(fixture_csv) == len({x["id"] for x in fixture_csv}) == 104,
           "Base fixture CSV/JSON have 104 unique fittings")
     original = json.loads((PACK / "fixture-ledger.json").read_bytes())
+    normalized_fixtures = copy.deepcopy(fixture_json)
+    previous_fixtures = {f["id"]: f for f in cct_master["lighting"]["fixtures"]}
+    for f in normalized_fixtures:
+        if f["id"] in CBR_IDS:
+            # R05 also sets the LINE strips to the homeowner-reported band height.
+            for key in ("path_ft", "note", "mount_h_m"):
+                f[key] = copy.deepcopy(previous_fixtures[f["id"]][key])
     normalized = [{k: ("3000K" if k == "cct" and f["id"] in IDS else v)
-                   for k, v in f.items() if k != "tunable"} for f in fixture_json]
+                   for k, v in f.items() if k != "tunable"} for f in normalized_fixtures]
     check(normalized == original and all(f["tunable"] is False for f in fixture_json),
-          "All original optical fixture locations/values remain unchanged and fixed-white")
+          "Only the reviewed CBR LINE paths and R05 heights changed; other optical fixture values remain fixed-white")
     check(Counter(x["cct_K"] for x in fixture_csv) == {"2700": 30, "3000": 12, "4000": 62},
           "Fixed-CCT fixture distribution is 30/12/62")
     check(cmap["binding"]["master_sha256"] == EXPECTED_MASTER
@@ -227,29 +241,44 @@ def main():
               if x["circuit"] in {"C03", "C04", "C05", "X-CURT-LIV"}),
           "Old P01/P03 living voltage-drop results are not carried forward")
     check(next(x for x in vd_csv if x["circuit"] == "C39")["dV_pct"] == "3.3"
-          and next(x for x in vd_csv if x["circuit"] == "C40")["dV_pct"] == "3.6",
-          "C39/C40 marginal S1 voltage-drop values are preserved")
+          and next(x for x in vd_csv if x["circuit"] == "C40")["dV_pct"] == "3.9",
+          "C39/C40 marginal S1 voltage-drop values use the updated provisional route")
     check(sum(int(x["quantity_per_flat"]) for x in products) == 108,
           "Generic search list covers 104 base fittings and four selected strips")
     calculations = read("calc-results-current.json")
     k2 = calculations["kitchen_worktop"]["final_HIGH+TASK_100"]
     check((k2["avg"], k2["min"], k2["U0"]) == (518, 323, .623), "K-2 nominal worktop values preserved")
-    check(digest(OUT / "heatmaps.json") == EXPECTED_HEATMAP, "Inherited heatmap byte fingerprint preserved")
+    check(digest(OUT / "heatmaps.json") == EXPECTED_HEATMAP, "CBR-reanalysed heatmap byte fingerprint matches")
 
-    main_text = pdf_text("lighting-plan-main.pdf", 1)
-    mood_text = pdf_text("lighting-plan-mood.pdf", 1)
-    pdf_text("lighting-plan-task.pdf", 1)
+    main_text = pdf_text("lighting-plan-main.pdf", 7)
+    mood_text = pdf_text("lighting-plan-mood.pdf", 7)
+    task_text = pdf_text("lighting-plan-task.pdf", 7)
+    for name, text, types in (("main", main_text, ("Recessed downlight",)),
+                              ("mood", mood_text, ("Cove strip", "LINE strip", "Curtain-pocket strip")),
+                              ("task", task_text, ("Reading light",))):
+        doc = fitz.open(OUT / f"lighting-plan-{name}.pdf")
+        try:
+            check(all(abs(p.rect.width - 595.4) < 2 and abs(p.rect.height - 841.7) < 2 for p in doc),
+                  f"{name} plan PDF pages are A4 portrait")
+            sizes = [s["size"] for p in list(doc)[1:] for b in p.get_text("dict")["blocks"]
+                     for l in b.get("lines", []) for s in l["spans"] if "-" in s["text"] and "K" in s["text"]]
+            check(sizes and min(sizes) >= 7, f"{name} zoom-page fitting IDs print at >= 7 pt on A4")
+        finally:
+            doc.close()
+        check(all(t in text for t in types) and "Label suffix = fixed CCT" in text and "site hold" in text,
+              f"{name} plan legend shows fitting types, fixed CCT and hold marking")
     pdf_text("heatmaps-summary.pdf", 11)
     schedule_text = pdf_text("lighting-review-schedules.pdf", 11)
     check(all(f"CBR-H{i}" in main_text for i in range(1, 7)), "Main plan labels all six CBR HIGH fittings")
-    check(all(x in mood_text for x in ("CURT-LIV", "CURT-DIN", "CURT-MBR-S", "CURT-CBR")),
-          "Mood plan labels all four selected curtain strips")
+    check(all(x in mood_text for x in ("CURT-LIV", "CURT-DIN", "CURT-MBR-S", "CURT-CBR", "CBR-L1", "CBR-X1")),
+          "Mood plan labels all four selected curtain strips and the CBR cove/LINE")
     check("P01" in schedule_text and "CURT-CBR" in schedule_text, "Schedule PDF includes selected supply and curtain records")
     for kind in ("main", "mood", "task"):
         svg = (OUT / f"lighting-plan-{kind}.svg").read_text(encoding="utf-8")
         check("<svg" in svg and "NOT FOR CONSTRUCTION" in svg, f"{kind} SVG is present and review-marked")
-        with Image.open(OUT / f"lighting-plan-{kind}.png") as image:
-            check(image.width >= 1000 and image.height >= 1000, f"{kind} PNG has usable resolution")
+        for png in [f"lighting-plan-{kind}.png"] + [f"lighting-plan-{kind}-zoom-{i}.png" for i in range(1, 7)]:
+            with Image.open(OUT / png) as image:
+                check(image.width >= 1000 and image.height >= 1000, f"{png} has usable resolution")
     browser = browser_checks(calculations)
     check(digest(MASTER) == EXPECTED_MASTER, "Master remained unchanged during package verification")
     result = {
@@ -257,7 +286,8 @@ def main():
         "manifest_sha256": digest(OUT / "manifest.json"),
         "checks_passed": len(checks), "checks": checks, "browser": browser,
         "limits": [
-            "Heatmaps are inherited analytic estimates, not measured or physically validated simulation.",
+            "CBR has a targeted analytic reanalysis; other heatmaps are inherited. All are estimates, not measurements or physically validated simulation.",
+            "CBR cove (C39) and LINE (C40) are modelled ON with scheduled lumens in the provisional design/review simulation and viewer; this is not a measurement, installation, procurement or operation approval, and their physical install/site checks remain held (H-CBR-CEIL).",
             "Four selected curtain strips have no heatmap/lux credit and remain subject to site mock-up.",
             "Living feeder, branch protection and LT-4/LT-5 inrush are open; P16/C39/C40 remain marginal.",
             "All construction, product and exact-chain approvals remain false.",

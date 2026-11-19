@@ -4,32 +4,34 @@
 
 | Binding | SHA-256 |
 |---|---|
-| Current house master | `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac` |
-| Current lighting design-input record (canonical JSON) | `a8dbdf655b3534e568a44d5a282e0f71124362746cecbb80bc817407d664d8b0` |
+| Current house master | `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822` |
+| Current lighting design-input record (canonical JSON) | `8caef996de6231f6adef0bb7407f1c29c8a5fbc8bd87d108782748e38087f1d7` |
 | Original photometry calculation input (canonical JSON) | `ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e` |
-| Saved analytic heatmap | `e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a` |
+| Current mixed-provenance heatmap | `e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6` |
 
-The photometric calculations and heatmaps were **not recalculated** for this rebind. Original optical inputs, every fixture position and every room/task result were compared with the verified fixed-white source. The recent changes are status/selection and electrical topology changes. Generic optics, maintenance factor 0.8, estimated geometry and assumed reflectance remain; no measured lux or manufacturer IES/LDT equivalence is claimed.
+The children's room has a targeted generic-optics reanalysis for the provisional shifted LINE paths. Other room heatmap grids retain the original optical calculation. The CBR reanalysis includes held CBR-L1 and CBR-X1-X4 at full output; it is not the lighting currently available in the viewer. Generic optics, maintenance factor 0.8, estimated geometry and assumed reflectance remain; no measured lux or manufacturer IES/LDT equivalence is claimed.
 
 ## Fixed CCT and fitting schedule
 
-All coves, decorative strips and selected curtain strips are **2700 K**. Living, dining and bedroom mains/readers are generally **3000 K**; kitchen task, utility, dressing and bath face/task lights are **4000 K**. The CCT is fixed by fitting; the controls adjust brightness only. `fixture-ledger.csv` and `fixed-cct-map.json` give each fitting, rule and hold.
+All coves, decorative strips and selected curtain strips are **2700 K**. Living, dining and bedroom mains are proposed at **4000 K** for homeowner review; lobby and balcony HIGH fittings remain **3000 K**, as do readers and art. Kitchen task, utility, dressing and bath face/task lights are **4000 K**. The CCT is fixed by fitting; the controls adjust brightness only. `fixture-ledger.csv` and `fixed-cct-map.json` give each fitting, rule and hold.
 
 | Room | Base fittings | Fixed white bins |
 |---|---:|---|
-| Living (LIV) | 16 | 6 x 2700 K, 10 x 3000 K |
-| Dining + passage (DIN) | 11 | 3 x 2700 K, 8 x 3000 K |
+| Living (LIV) | 16 | 6 x 2700 K, 10 x 4000 K |
+| Dining + passage (DIN) | 11 | 3 x 2700 K, 4 x 3000 K, 4 x 4000 K |
 | Kitchen (KIT) | 13 | 1 x 2700 K, 12 x 4000 K |
 | Utility (open-air) (UTL) | 4 | 4 x 4000 K |
-| Master bedroom (MBR) | 15 | 5 x 2700 K, 10 x 3000 K |
+| Master bedroom (MBR) | 15 | 5 x 2700 K, 2 x 3000 K, 8 x 4000 K |
 | Dressing (DRS) | 2 | 2 x 4000 K |
 | Bath 1 (attached) (TL1) | 10 | 3 x 2700 K, 7 x 4000 K |
 | Lobby + common basin (LOB) | 4 | 1 x 2700 K, 2 x 3000 K, 1 x 4000 K |
 | Bath 2 (common) (TL2) | 10 | 3 x 2700 K, 7 x 4000 K |
-| Children's bedroom (CBR) | 14 | 5 x 2700 K, 8 x 3000 K, 1 x 4000 K |
+| Children's bedroom (CBR) | 14 | 5 x 2700 K, 2 x 3000 K, 7 x 4000 K |
 | Balcony / entry court (BAL) | 5 | 3 x 2700 K, 2 x 3000 K |
 
-Base: 104 fittings, 47 controlled groups. Selected extension: four additional curtain strips and four circuit records, with no lux credit. CBR-H1-H6 are shown as switchable review fittings on C37 at their existing locations; the C37 dimmer and other CBR ceiling/bed/desk/site holds remain.
+Base: 104 fittings, 47 controlled groups. Selected extension: four additional curtain strips and four circuit records, with no lux credit. CBR-H1-H6 are shown as switchable review fittings on C37 at their existing locations; CBR-L1 (retained cove, C39) and the outward-shifted CBR-X1-X4 (LINE, C40) are modelled ON with their scheduled lumens in the provisional review simulation (CBR LOW 100 % 130 lx, HIGH+LOW 100 % 255 lx; generic optics, not measured). Their installation, procurement and actual operation remain held under H-CBR-CEIL. The fan is shown at the nominal room centre with a 1050 mm planning sweep; no fan product is selected, its airflow for this approx. 12.5 x 15 ft room is unconfirmed, and fan load is excluded from lighting totals. R05 band 3.048 m and raised centre approx. 3.2766 m are homeowner-reported; the slab is unmeasured. The C37 dimmer and other CBR ceiling/bed/desk/site holds remain.
+
+The proposed LINE centres are 0.943 m or more from the nominal fan centre. The nominal blade tip is only approx. 0.034 m in plan from the nearest cove centreline; that is not a clearance or fit approval. The nearest HIGH centre is approximately 0.128 m from a line (approx. 0.053 m to an assumed 150 mm cut-out edge). These are plan comparisons, not safe clearances. The modelled wardrobe-front value is 144 lx against a 150 lx project target. Verify the complete ceiling, cove section, fan drop and product clearances, loft shutter and curtain pocket on site before release.
 
 ## Curtain pockets: selected, not measured
 
@@ -93,7 +95,7 @@ Kitchen K-2 (KIT-T4 plus KIT-T1 at generic 650 lm/m) retains **518 lx average / 
 | H-MBR-STACK | W03 +/-0.30 m curtain stack vs split south wardrobe fronts | actual curtain fullness/stack and W03 jambs |
 | H-DRS-SWEEP | DRS-H1/H2 (x 19.2 ft) and hatch P14 | actual shutter/loft support sweep (coordination hypothesis) |
 | H-UTL-PARAPET | UTL reflectance | measured parapet height/finish |
-| H-CBR-CEIL | CBR tray, cove and LINE frame | renderer ceiling/curtain section evidence and the fan selection (u>=2.0 is a project assumption) |
+| H-CBR-CEIL | CBR tray, cove and LINE frame | Measure ceiling, loft and curtain sections; select the fan and verify its sweep/downrod, profile and downlight cut-outs, wiring and manufacturer clearances with the responsible professionals |
 | H-CBR-CURTAIN | CBR west curtain pocket u 3.62-4.572 | measured window/jambs |
 | H-CBR-BED | CBR readers R1/R2 and plates SB-08RL/RR | tenant bed; king at the same anchor fails CC-R05-05/12 (case-specific) |
 | H-CBR-DESK | CBR-S1 desk strip | joinery drawing (shelf depth, strip lip) |

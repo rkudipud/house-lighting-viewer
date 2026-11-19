@@ -21,7 +21,7 @@
   },
   "inputs": {
     "master_house_design_json": {
-      "path": "handoff/source-basis/house-design.json",
+      "path": "not-distributed/house-design.json",
       "sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
       "edited": false
     },

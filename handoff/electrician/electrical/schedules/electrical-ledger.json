@@ -1,8 +1,66 @@
 {
   "schema": "electrical-handoff-ledger/1",
-  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "decision_receipt_sha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
   "latest_master_receipt_sha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
+  "cct_revision": {
+    "prior_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+    "current_master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+    "changed_fixture_ids": [
+      "CBR-H1",
+      "CBR-H2",
+      "CBR-H3",
+      "CBR-H4",
+      "CBR-H5",
+      "CBR-H6",
+      "DIN-H1",
+      "DIN-H2",
+      "DIN-H3",
+      "DIN-H6",
+      "LIV-H1",
+      "LIV-H10",
+      "LIV-H2",
+      "LIV-H3",
+      "LIV-H4",
+      "LIV-H5",
+      "LIV-H6",
+      "LIV-H7",
+      "LIV-H8",
+      "LIV-H9",
+      "MBR-H1",
+      "MBR-H2",
+      "MBR-H3",
+      "MBR-H4",
+      "MBR-H5",
+      "MBR-H6",
+      "MBR-H7",
+      "MBR-H8"
+    ],
+    "changed_circuits": [
+      "C01",
+      "C02",
+      "C09",
+      "C10",
+      "C20",
+      "C37"
+    ],
+    "note": "CCT proposal only; fixtures, circuits, lumens, watts and geometry otherwise unchanged. Prior optical outputs are inherited, not recalculated."
+  },
+  "children_ceiling_revision": {
+    "prior_master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+    "current_master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+    "predecessor_master_sha256": "e7d2e6c7cdeedd72abb3dd236304646eb01174a2df65b5401be8c53b907853e7",
+    "changed_fixture_ids": [
+      "CBR-X1",
+      "CBR-X2",
+      "CBR-X3",
+      "CBR-X4"
+    ],
+    "heatmaps_sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
+    "r05_operations": 292,
+    "predecessor_check": "Only the proposed CBR LINE paths and directly dependent calculations changed; the existing cove, all CCTs, loads and other fixture positions are retained. H-CBR-CEIL and construction holds remain.",
+    "note": "R05 successor: fan at nominal room centre (1050 mm planning sweep, product not selected), homeowner-reported band heights (slab unmeasured) and CBR-only re-analysis with the retained cove and LINE modelled ON. H-CBR-CEIL, site, procurement and construction holds remain."
+  },
   "one_supply_option_sha256": "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a",
   "historical_photometry": {
     "source_fragment_sha256": "31b65875cb603a43d107c91a4a54bb8afffa3134cc1134dd1cf74dc66f42be1b",
@@ -54,7 +112,7 @@
       "model_W": 40,
       "model_outputs": 1,
       "CCT": [
-        "3000K"
+        "4000K"
       ],
       "release_status": "PRODUCT / CHAIN HOLD",
       "note": "OPT-1 regroup: window half of the living room (window line LIV-H1..H4 + LIV-H5); 40 W / 5 lamps"
@@ -78,7 +136,7 @@
       "model_W": 40,
       "model_outputs": 1,
       "CCT": [
-        "3000K"
+        "4000K"
       ],
       "release_status": "PRODUCT / CHAIN HOLD",
       "note": "OPT-1 regroup: TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10); 40 W / 5 lamps; DL8 and DL8A heads on one dimmer need the same driver family"
@@ -259,7 +317,7 @@
       "model_W": 30,
       "model_outputs": 1,
       "CCT": [
-        "3000K"
+        "4000K"
       ],
       "release_status": "PRODUCT / CHAIN HOLD",
       "note": ""
@@ -281,7 +339,7 @@
       "model_W": 8,
       "model_outputs": 1,
       "CCT": [
-        "3000K"
+        "4000K"
       ],
       "release_status": "PRODUCT / CHAIN HOLD",
       "note": "passage; PSU mains 2-way SB-02/SB-07 (concept), knob level at SB-02"
@@ -510,7 +568,7 @@
       "model_W": 48,
       "model_outputs": 1,
       "CCT": [
-        "3000K"
+        "4000K"
       ],
       "release_status": "PRODUCT / CHAIN HOLD",
       "note": "dimmer at door; on/off 2-way door + intermediate SB-05L + 2-way SB-05R (concept)"
@@ -980,7 +1038,7 @@
       "model_W": 36,
       "model_outputs": 1,
       "CCT": [
-        "3000K"
+        "4000K"
       ],
       "release_status": "PRODUCT / CHAIN HOLD",
       "note": "dimmer at door; on/off 2-way door + intermediate at the two bed-head plates (concept)"
@@ -1191,7 +1249,7 @@
       "circuit": "C01",
       "fixture_class": "DL8",
       "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -1213,7 +1271,7 @@
       "circuit": "C01",
       "fixture_class": "DL8",
       "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -1235,7 +1293,7 @@
       "circuit": "C01",
       "fixture_class": "DL8",
       "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -1257,7 +1315,7 @@
       "circuit": "C01",
       "fixture_class": "DL8",
       "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -1279,7 +1337,7 @@
       "circuit": "C01",
       "fixture_class": "DL8",
       "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -1301,7 +1359,7 @@
       "circuit": "C02",
       "fixture_class": "DL8",
       "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -1323,7 +1381,7 @@
       "circuit": "C02",
       "fixture_class": "DL8",
       "description": "Recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -1345,7 +1403,7 @@
       "circuit": "C02",
       "fixture_class": "DL8A",
       "description": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 50,
@@ -1367,7 +1425,7 @@
       "circuit": "C02",
       "fixture_class": "DL8A",
       "description": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 50,
@@ -1389,7 +1447,7 @@
       "circuit": "C02",
       "fixture_class": "DL8A",
       "description": "Adjustable gimbal deep-recessed COB 8 W ~700 lm 50 deg, tilt 0-30 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 50,
@@ -1704,7 +1762,7 @@
       "circuit": "C09",
       "fixture_class": "DL10",
       "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 10,
       "model_lm": 900,
       "model_beam_deg": 70,
@@ -1726,7 +1784,7 @@
       "circuit": "C09",
       "fixture_class": "DL10",
       "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 10,
       "model_lm": 900,
       "model_beam_deg": 70,
@@ -1748,7 +1806,7 @@
       "circuit": "C09",
       "fixture_class": "DL10",
       "description": "Recessed deep anti-glare COB downlight 10 W ~900 lm 70 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 10,
       "model_lm": 900,
       "model_beam_deg": 70,
@@ -1770,7 +1828,7 @@
       "circuit": "C10",
       "fixture_class": "DL8V",
       "description": "24 V recessed deep anti-glare COB downlight 8 W ~700 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 8,
       "model_lm": 700,
       "model_beam_deg": 60,
@@ -2560,7 +2618,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -2582,7 +2640,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -2604,7 +2662,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -2626,7 +2684,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -2648,7 +2706,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -2670,7 +2728,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -2692,7 +2750,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -2714,7 +2772,7 @@
       "circuit": "C20",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -3684,7 +3742,7 @@
       "circuit": "C37",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -3706,7 +3764,7 @@
       "circuit": "C37",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -3728,7 +3786,7 @@
       "circuit": "C37",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -3750,7 +3808,7 @@
       "circuit": "C37",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -3772,7 +3830,7 @@
       "circuit": "C37",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -3794,7 +3852,7 @@
       "circuit": "C37",
       "fixture_class": "DL6",
       "description": "Recessed deep anti-glare COB downlight 6 W ~500 lm 60 deg",
-      "CCT": "3000K",
+      "CCT": "4000K",
       "model_W": 6,
       "model_lm": 500,
       "model_beam_deg": 60,
@@ -3872,16 +3930,16 @@
       "z_ft": null,
       "path_ft": [
         [
-          23.1698,
-          33.3804
+          22.8698,
+          32.1
         ],
         [
-          20.7198,
-          33.3804
+          20.4198,
+          32.1
         ],
         [
-          20.7198,
-          35.3304
+          20.4198,
+          34.05
         ]
       ],
       "photometry_credit": true,
@@ -3907,16 +3965,16 @@
       "z_ft": null,
       "path_ft": [
         [
-          24.7659,
-          33.3804
+          25.0659,
+          32.1
         ],
         [
-          27.2159,
-          33.3804
+          27.5159,
+          32.1
         ],
         [
-          27.2159,
-          35.3304
+          27.5159,
+          34.05
         ]
       ],
       "photometry_credit": true,
@@ -3942,16 +4000,16 @@
       "z_ft": null,
       "path_ft": [
         [
-          27.2159,
-          36.9291
+          27.5159,
+          38.4991
         ],
         [
-          27.2159,
-          38.8791
+          27.5159,
+          40.4491
         ],
         [
-          24.7659,
-          38.8791
+          25.0659,
+          40.4491
         ]
       ],
       "photometry_credit": true,
@@ -3977,16 +4035,16 @@
       "z_ft": null,
       "path_ft": [
         [
-          23.1698,
-          38.8791
+          22.8698,
+          40.4491
         ],
         [
-          20.7198,
-          38.8791
+          20.4198,
+          40.4491
         ],
         [
-          20.7198,
-          36.9291
+          20.4198,
+          38.4991
         ]
       ],
       "photometry_credit": true,
@@ -5637,7 +5695,7 @@
       "circuit": "C40",
       "section": "all",
       "supply_id": "P16",
-      "modeled_dV_pct": 3.6,
+      "modeled_dV_pct": 3.9,
       "status": "MARGINAL",
       "basis": "S1 planning model; actual design open",
       "note": ""

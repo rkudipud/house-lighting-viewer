@@ -16,12 +16,13 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--source", required=True, type=Path)
 ap.add_argument("--out", required=True, type=Path)
 ap.add_argument("--master", required=True)
+ap.add_argument("--prior-master", required=True, help="Verified basis of unchanged floor and curtain drawings")
 args = ap.parse_args()
 source, out = args.source.resolve(), args.out.resolve()
 if out.exists():
     raise FileExistsError("Choose a new, empty public drawing destination")
-if len(args.master) != 64:
-    raise ValueError("An explicit master SHA-256 is required")
+if not all(re.fullmatch(r"[a-f0-9]{64}", value) for value in (args.master, args.prior_master)):
+    raise ValueError("Explicit current and predecessor SHA-256 values are required")
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
@@ -33,8 +34,8 @@ def fingerprint(path):
 floor = json.loads((source / "working-plan" / "floorplan-verification.json").read_text(encoding="utf-8-sig"))
 layout = json.loads((source / "layout-views" / "layout-views-verification.json").read_text(encoding="utf-8-sig"))
 curtain = json.loads((source / "curtain-section" / "curtain-section-verification.json").read_text(encoding="utf-8-sig"))
-if (floor["source_master"]["sha256"] != args.master or layout["source_master"]["sha256"] != args.master
-        or curtain["master_sha256"] != args.master or floor["construction_release"] is not False
+if (floor["source_master"]["sha256"] != args.prior_master or layout["source_master"]["sha256"] != args.master
+        or curtain["master_sha256"] != args.prior_master or floor["construction_release"] is not False
         or layout["checks_passed"] != layout["checks_total"] or curtain["status"] != "REVIEW_DRAFT_NOT_CONSTRUCTION_RELEASED"):
     raise ValueError("Original drawing receipts do not bind the requested review master and holds")
 
@@ -75,7 +76,7 @@ if not match:
 metadata = json.loads(html.unescape(match.group(2)))
 replacements = []
 public_metadata = scrub(metadata, "metadata", replacements)
-if not replacements or public_metadata["master_sha256"] != args.master:
+if not replacements or public_metadata["master_sha256"] != args.prior_master:
     raise ValueError("Expected master path metadata or binding is missing")
 new_metadata = html.escape(json.dumps(public_metadata, separators=(",", ":"), ensure_ascii=False), quote=True)
 svg_public = svg_original[:match.start(2)] + new_metadata + svg_original[match.end(2):]
@@ -173,6 +174,7 @@ for item in curtain["artifacts"]:
 receipt = {
     "status": "REVIEW DRAFT - not a construction release",
     "authoritative_master_sha256": args.master,
+    "unchanged_floor_and_curtain_master_sha256": args.prior_master,
     "transformation": "Public derivatives replace absolute local paths with file names in SVG metadata and JSON. Receipt references to changed public artifacts were rebound. All PNG and PDF bytes and every SVG drawing outside its metadata remain unchanged. Original evidence and hashes are retained locally and recorded below.",
     "graphics_changed": False,
     "changed_files": changes,

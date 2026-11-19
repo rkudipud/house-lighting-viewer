@@ -2,12 +2,13 @@
   "schema": "lighting-fixed-cct-map/1",
   "purpose": "One fixed colour temperature per fitting plus the brightness-only control groups, for the public viewer and the controls pack. Not a product schedule.",
   "binding": {
-    "master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
-    "design_inputs_sha256": "fd3ffb1db7f447566cb1f1b0af2b8ed3b0c5a69ebfe5eb9f9745f8b3632f3fc6",
-    "fragment_file_sha256": "9a9de9788adfdce218ee12c5596c057707e9aa281e457822d34c4749c11c3f4f",
+    "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+    "design_inputs_sha256": "8caef996de6231f6adef0bb7407f1c29c8a5fbc8bd87d108782748e38087f1d7",
+    "fragment_file_sha256": "67f3a43f9fd96e2cadf9b1be8202baef783ffc35185fead72ed34b2222debe1e",
     "baseline_design_inputs_sha256": "4fd1b24c521a37a0ebe7b345805827a64bf7c43579cf12133171a514b3c7f7e7",
-    "curtain_pocket_candidate_json_sha256": "c2bef62a2f9927508fea09e1d4b6b3ffe07e0881d01df6acbebe3fc1cb907bd3",
+    "curtain_pocket_candidate_json_sha256": "1605d3187d970df6d2a5840370418a794087a01d199f2ad15724ccc2d29b71f8",
     "photometry_source_design_inputs_sha256": "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e",
+    "children_photometry_design_inputs_sha256": "8caef996de6231f6adef0bb7407f1c29c8a5fbc8bd87d108782748e38087f1d7",
     "original_map_binding": {
       "master_sha256": "e0bf1af22850905405eec2e8c07940f9e8d5a6ac04baecc03547a3fdcc733b72",
       "design_inputs_sha256": "a8dbdf655b3534e568a44d5a282e0f71124362746cecbb80bc817407d664d8b0",
@@ -15,7 +16,7 @@
       "baseline_design_inputs_sha256": "4fd1b24c521a37a0ebe7b345805827a64bf7c43579cf12133171a514b3c7f7e7",
       "curtain_pocket_candidate_json_sha256": "1135224d612b4f6cb8fb8bac6bbb87ea3e53a1b29d6a973aa8ca63e670a269d7"
     },
-    "binding_method": "Current master/selection rebind; inherited optical results are not recalculated"
+    "binding_method": "CBR-only generic-optics reanalysis; other room grids retain original optical provenance"
   },
   "status": {
     "construction_release": false,

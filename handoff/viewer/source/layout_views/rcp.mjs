@@ -70,11 +70,14 @@ function pathStyle(type,lane){
 function fansDraw(S,D){
   let n=0;
   for(const f of D.fans){
-    const pending=!f.at_m,at=f.at_m||f.proposal.global_xz_m,[x,z]=at;
-    S.add(`<g data-fan-room="${esc(f.room)}" data-fan-status="${pending?'pending':'assumed'}"${pending?' opacity=".6"':''}>`);
-    S.add(`<circle cx="${fx(x,4)}" cy="${fx(z,4)}" r=".26" fill="#fff" stroke="#4f6b73" stroke-width=".014"${pending?' stroke-dasharray=".05 .04"':''}/>`);
+    const pending=!f.at_m,provisional=pending||/^provisional/.test(f.status||''),at=f.at_m||f.proposal.global_xz_m,[x,z]=at;
+    S.add(`<g data-fan-room="${esc(f.room)}" data-fan-status="${provisional?'provisional':'assumed'}"${provisional?' opacity=".6"':''}>`);
+    // planning sweep (nominal blade-tip circle) where one is recorded; not a product clearance
+    const sweep=Number(f.proposal?.sweep_mm);
+    if(sweep>0)S.add(`<circle data-fan-sweep-mm="${sweep}" cx="${fx(x,4)}" cy="${fx(z,4)}" r="${fx(sweep/2000,4)}" fill="none" stroke="#4f6b73" stroke-width=".012" stroke-dasharray=".06 .05"/>`);
+    S.add(`<circle cx="${fx(x,4)}" cy="${fx(z,4)}" r=".26" fill="#fff" stroke="#4f6b73" stroke-width=".014"${provisional?' stroke-dasharray=".05 .04"':''}/>`);
     for(let a=0;a<4;a++){const t=a*Math.PI/2+Math.PI/4;S.line([x,z],[x+.26*Math.cos(t),z+.26*Math.sin(t)],'#4f6b73',.02);}
-    S.label(x,pending?z-.36:z+.43,pending?'FAN \u2014 pending approval':'FAN POINT',.075,'#3f565d');
+    S.label(x,provisional?z-.36:z+.43,provisional?(sweep>0?`FAN \u2014 provisional, ${sweep} mm planning sweep`:'FAN \u2014 provisional'):'FAN POINT',.075,'#3f565d');
     S.add('</g>');n++;
   }
   return n;
@@ -156,7 +159,7 @@ export function buildRcp(D,{no,total}){
   for(const f of fixtures){
     assert(LANE_COLOR[f.lane],`No RCP lane colour for ${f.lane}`);
     byRoom[f.room]=(byRoom[f.room]||0)+1;byType[f.type]=(byType[f.type]||0)+1;
-    const inactive=f.room==='CBR'&&!/^CBR-H[1-6]$/.test(f.id),allowance=HOLD_FIX['H-POOJA-GEOMETRY'].includes(f.id),ghost=inactive||allowance;
+    const inactive=f.room==='CBR'&&!/^CBR-(H[1-6]|L1|X[1-4])$/.test(f.id),allowance=HOLD_FIX['H-POOJA-GEOMETRY'].includes(f.id),ghost=inactive||allowance;
     S.add(`<g data-fixture-id="${esc(f.id)}" data-fixture-type="${esc(f.type)}" data-fixture-room="${esc(f.room)}" data-lane="${esc(f.lane)}"${inactive?' data-inactive="placeholder"':''}${allowance?' data-held-allowance="count-load-only"':''}>`);
     if(f.path_ft){
       const st=pathStyle(f.type,f.lane);
@@ -197,8 +200,8 @@ export function buildRcp(D,{no,total}){
   S.label((mr[0]+mr[2])/2,mr[3]-.28,'MASTER \u2014 HELD (H-MBR-BED, H-MBR-W03)',.11,RC);
   S.label((mr[0]+mr[2])/2,mr[3]-.15,'bed position is a test centreline only (tenant bed not supplied); W03 pocket held',.075,RC);
   const ch=D.rooms.find(r=>r.id==='children'),cx=(ch.rect[0]+ch.rect[2])/2;
-  S.label(cx,ch.rect[1]+.25,"CHILDREN'S \u2014 H1-H6 ACTIVE FOR REVIEW",.09,RC);
-  S.label(cx,ch.rect[1]+.38,'other fittings held; window and pocket unmeasured (H-CBR-*)',.07,RC);
+  S.label(cx,ch.rect[1]+.25,"CHILDREN'S \u2014 H1-H6, COVE, LINE MODELLED ON",.09,RC);
+  S.label(cx,ch.rect[1]+.38,'cove/LINE install, fan and pockets held, unmeasured (H-CBR-*)',.07,RC);
   // pooja niche PN1: its lighting is LIV-P1 (back strip) and LIV-P2 (pin spot)
   const pn=D.openings.find(o=>o.id==='pooja-niche'),pwl=D.walls.find(w=>w.id===pn.wall),pnx=Math.max(pwl.rect[0],pwl.rect[2]);
   S.add('<g data-pooja-light="PN1">');
@@ -206,7 +209,7 @@ export function buildRcp(D,{no,total}){
   S.add('</g>');
   // room labels with ceiling levels
   const pos={living:[2.3,11.5],dining:[2.8,7.45],kitchen:[2.65,3.5],master:[6.9,4.1],children:[7.75,12.95],utility:[2.2,.62],balcony:[1.9,15.2],dressing:[5.6,5.9],lobby:[5.55,7.68],bath1:[7.55,6.35],bath2:[7.55,8.15]};
-  const lev={living:'band 2.96 \u00b7 panel unmeasured',dining:'band 2.96 \u00b7 panel unmeasured',kitchen:'flat 2.96',master:'band 2.96 \u00b7 panel unmeasured',children:'band 2.96 \u00b7 panel unmeasured',utility:'2.95 (not provided)',balcony:'no ceiling recorded',dressing:'band 2.96',lobby:'2.70 (not provided)',bath1:'2.40 (not provided)',bath2:'2.40 (not provided)'};
+  const lev={living:'band 2.96 \u00b7 panel unmeasured',dining:'band 2.96 \u00b7 panel unmeasured',kitchen:'flat 2.96',master:'band 2.96 \u00b7 panel unmeasured',children:CE.CBR?.level_basis?`band ${CE.CBR.band_h_m.toFixed(3)} \u00b7 centre ~${CE.CBR.tray_h_m.toFixed(2)} (reported, unsurveyed)`:'band 2.96 \u00b7 panel unmeasured',utility:'2.95 (not provided)',balcony:'no ceiling recorded',dressing:'band 2.96',lobby:'2.70 (not provided)',bath1:'2.40 (not provided)',bath2:'2.40 (not provided)'};
   const nm={living:'LIVING',dining:'DINING',kitchen:'KITCHEN',master:'MASTER',children:"CHILDREN'S",utility:'UTILITY + WASH',balcony:'ENTRY / BALCONY',dressing:'DRESSING',lobby:'LOBBY',bath1:'TL1',bath2:'TL2'};
   for(const id of Object.keys(pos)){
     const r=D.rooms.find(r=>r.id===id),[x,z]=pos[id],small=['dressing','lobby','bath1','bath2'].includes(id);
@@ -275,7 +278,7 @@ export function buildRcp(D,{no,total}){
     'MASTER: bed position is a held test centreline (H-MBR-BED); the tenant bed is not supplied. The W03 curtain pocket is held (H-MBR-W03: pocket and loft interface unresolved; offsets unmeasured).',
     CURTAIN_NOTE,
     'S1 MODEL CLASH: assumed MBR-S and CBR strip returns each extend about 0.30 m beyond a modeled room corner. Lines are clipped for display only. Measure pocket ends and coordinate site fit; do not extend or cut from the model.',
-    `CHILDREN\u2019S ROOM: CBR-H1 to H6 and the curtain strip are selected for review; other CBR fittings remain held (H-CBR-*). C37 procurement, the fan position and window/pocket measurements remain open.`,
+    `CHILDREN\u2019S ROOM: CBR-H1 to H6 and the curtain strip are selected for review. The cove is retained; the outward-shifted LINE paths and cove remain held and unlit. The fan is shown at the unmeasured proposed cove centre. Verify fan sweep, clearances, wiring and ceiling details (H-CBR-*).`,
     'Dining + living share one raised centre panel. The kitchen ceiling is one flat level at band height. Black-painted grooves are drawn only where the master records them (master and children\u2019s rooms).',
     POOJA_NOTE+' LIV-P1 / LIV-P2 are count/load allowances only; inherited positions are held (H-POOJA-GEOMETRY).',
     'Fan points and lofts are assumed; curtain-pocket sizes are indicative only (HD-14). Switch-plate zones are not drawn: the master holds none (only the R05 latch-side strip appears on the children\u2019s elevation).'

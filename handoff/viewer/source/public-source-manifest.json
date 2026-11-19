@@ -1,27 +1,30 @@
 {
   "status": "REVIEW DRAFT - not a construction release",
-  "authoritativeMasterSha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
-  "embeddedPlanDataSha256": "584084b001ad41deb66ec518ab7fc1e171ca70b80c08eec0cdae2c020e6aa40d",
-  "embeddedHeatDataSha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",
-  "viewerHtmlSha256": "a186a05e09926947ea41461548d6346644003e10cd44581898915371292761f2",
+  "authoritativeMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "embeddedPlanDataSha256": "fea6208e9df6e8982ddf880f7e52ea1a0e1aefbb8366eb31c7e10449b96b9bec",
+  "embeddedHeatDataSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
+  "viewerHtmlSha256": "927cf29b9fc325aad335fa170122ee8cc15666c763575bd35859f89b3e5761f0",
   "privacyPathScan": "PASS for staged text, JSON values and delivered HTML; original master omitted",
-  "originalDrawingGeneratorSha256": {},
+  "originalDrawingGeneratorSha256": {
+    "floorplan.mjs": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a",
+    "drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656"
+  },
   "files": {
     "analysis-data.mjs": {
       "bytes": 7947,
       "sha256": "f220476ea027b0cb1b6cd6970f4df190d8ffe9bd3cd06390a38964b4454cd0d4"
     },
     "build.mjs": {
-      "bytes": 25326,
-      "sha256": "97f5e1209d7284c9077afe949a42db4289fc4f36dbd40b8006dc14dd923b7222"
+      "bytes": 26254,
+      "sha256": "0582af9511ee34cc01ae907311e4d136d89192ef9c89a1decdc94e213a1d4472"
     },
     "capture_review_renders.py": {
-      "bytes": 5944,
-      "sha256": "e73fe9240f4344449e5efa80146f04ea42f4ed4c792eae3cc6d52c362321fb42"
+      "bytes": 5895,
+      "sha256": "936c7e4fd86cb64f878c05772e6c2eeda01bc79cd64f0e931392098682ad5dfa"
     },
     "data/heat-data.json": {
-      "bytes": 547918,
-      "sha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866"
+      "bytes": 547809,
+      "sha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153"
     },
     "drawing-source.mjs": {
       "bytes": 3016,
@@ -44,8 +47,8 @@
       "sha256": "c9e631d9b1793db90cf1ca71d4570072182af4aace9c7e27f512cb6174654e55"
     },
     "layout_views/rcp.mjs": {
-      "bytes": 27981,
-      "sha256": "21ac2c41bed65df2d7a773e00b36aadc8ac51c17f202881c0f7ed45f4e45d2b7"
+      "bytes": 28371,
+      "sha256": "acdb3e7d1455765dbc726f961c860c62dd695696a66c3a726c7da1a58830e836"
     },
     "layout_views/svg.mjs": {
       "bytes": 8096,
@@ -65,11 +68,19 @@
     },
     "privacy-transform.json": {
       "bytes": 1185,
-      "sha256": "d17de754b5920eaad50a0e683ecdae927b40ed351efb920ca96bbfe4b79e4ca6"
+      "sha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc"
+    },
+    "provenance/generation-source/drawing-source.mjs": {
+      "bytes": 2996,
+      "sha256": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656"
+    },
+    "provenance/generation-source/floorplan.mjs": {
+      "bytes": 39598,
+      "sha256": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a"
     },
     "README.md": {
-      "bytes": 1796,
-      "sha256": "760478172b95dbe4baafdc9c7a08ee002be94632503ef5ccf2a205dbed2c9cbf"
+      "bytes": 2285,
+      "sha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016"
     },
     "rebuild-public.mjs": {
       "bytes": 2504,
@@ -84,8 +95,8 @@
       "sha256": "a5c370223cb264cfa5774e6e6a9cac90b33d41834bfb1977c983fb986c5917b2"
     },
     "render_layout_views.py": {
-      "bytes": 52015,
-      "sha256": "6765a7f18f08c200c39fca18aa090820bcf7805f96a973e49cbce59ffebac8a5"
+      "bytes": 51527,
+      "sha256": "51f22a413ca46b571bec398e0adf581b83fb2a799767f1a9f8a172fb8466ab16"
     },
     "src/analysis.js": {
       "bytes": 3429,
@@ -100,12 +111,12 @@
       "sha256": "6a9784ef4b707cb03ca76ace241e42dff2d1795e9463e8da9a9a6cc277e66a1a"
     },
     "src/ceilings.js": {
-      "bytes": 6191,
-      "sha256": "7c9a89e4d779d25997e80e273b64ead1919910ba2705f509b84beb3a0cac17ff"
+      "bytes": 6112,
+      "sha256": "1a007cfdc69e664d73876af3661aec934219398bdd98781610cc89b6a54481e1"
     },
     "src/fixtureMeshes.js": {
-      "bytes": 20683,
-      "sha256": "03479ecc33dd4117d08dd936bc39ed3cd2f47b61fa452bc5f7eaa03663e8644a"
+      "bytes": 21985,
+      "sha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1"
     },
     "src/geometry.js": {
       "bytes": 467,
@@ -116,20 +127,20 @@
       "sha256": "1ceaa2937a54bf07137c8c48c92681a4ec9f917bbd1700a934872982d3f5c177"
     },
     "src/house-data.generated.json": {
-      "bytes": 682247,
-      "sha256": "ba98d94bb409fd9495858567eb300f5d9c8769d45cbf469d99b5ac0f01fd8262"
+      "bytes": 691839,
+      "sha256": "89a56c67315c74c10af8a9a9f1535a1d17f390cd675fe1cfd156cc5163806867"
     },
     "src/lighting.js": {
-      "bytes": 23333,
-      "sha256": "a2ffda4ec4436427f99fb6d4c8d8024e7368514508a0a91eba4156d7f5aff600"
+      "bytes": 23589,
+      "sha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665"
     },
     "src/main.js": {
-      "bytes": 39616,
-      "sha256": "cc555b902ea33d528b708b4615e25df571ce31d4278e5969d6e00593d897e942"
+      "bytes": 39742,
+      "sha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31"
     },
     "src/master-adapter.js": {
-      "bytes": 11029,
-      "sha256": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da"
+      "bytes": 10948,
+      "sha256": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398"
     },
     "src/materials.js": {
       "bytes": 22267,
@@ -156,32 +167,32 @@
       "sha256": "2f93ea3258d00ac1b254d8bf0efb9ff5ce572b604bda7a66adec640173356b0e"
     },
     "stage_public_drawings.py": {
-      "bytes": 9941,
-      "sha256": "f50b5871ba9e2bd2f0135f0a75cb00124c2a501027d7d330109ca4bd8c684628"
+      "bytes": 10232,
+      "sha256": "fd22b0c28929b8657a866a8bfd09fc162cefc1a9b872b254478df3a970805f6e"
     },
     "stage_public_source.py": {
-      "bytes": 8952,
-      "sha256": "65c41a08769fb18a1b35f0adbab1fdfd7d1a0ebb58ffe90bca22197df507f8af"
+      "bytes": 7234,
+      "sha256": "91f718a54f196ef9f8da670491fd44d196919ddc493c335055c8f2f5ec32844d"
     },
     "stage_public_verification.py": {
       "bytes": 3747,
       "sha256": "66239d396fd934e14becca26732c72943d08966aee3e710dcf6c2a9b16eac546"
     },
     "template.html": {
-      "bytes": 20816,
-      "sha256": "d4ecb5c311a50130827d77222cf10e0360cda13261527acfe3c25e33fa8a4dfe"
+      "bytes": 22068,
+      "sha256": "b5ca1a56dd84a2f03bef98301ccafb967c09ed89b9ec8053bf1c1706b8f54dac"
     },
     "THREE-LICENSE.txt": {
       "bytes": 1081,
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
     },
     "tour-data.mjs": {
-      "bytes": 17571,
-      "sha256": "4373844284b86e0d00feb5ec3e69e918e51e6da1084b31a89f615863d856114b"
+      "bytes": 18470,
+      "sha256": "9c933db736a79d7d8be5c050d8fe6cee5a1b11e87dcd00b9db5cc7f82d4e9f8f"
     },
     "verify_site.py": {
-      "bytes": 42017,
-      "sha256": "2424489a1688c5a866d511ee7b98744ab021fc50c8cfba477b4fefd7987a8e2e"
+      "bytes": 48073,
+      "sha256": "d7701d46db08fe1ad5024def2f56128886a9cc2f3a63dd4dbef01ebdeddc7752"
     }
   }
 }

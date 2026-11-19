@@ -1,12 +1,12 @@
 {
   "schema": "layout_views_receipt/1",
-  "verified_utc": "2026-11-18T11:21:18.772370+00:00",
+  "verified_utc": "2026-11-19T20:43:23.322440+00:00",
   "purpose": "Read-only current layout views (top-down plan, reflected ceiling plan, interior elevations) from the canonical master; not a construction release.",
   "drawing_source": {
     "staging": false,
     "final": false,
-    "publication_status": "REVIEW DRAFT; not construction-released",
-    "review_draft": true,
+    "publication_status": "review drawing; not construction-released",
+    "review_draft": false,
     "lighting_pending": false,
     "hd18": {
       "fragment": {
@@ -47,8 +47,8 @@
   },
   "source_master": {
     "path": "house-design.json",
-    "sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-    "bytes": 1591969,
+    "sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+    "bytes": 1602914,
     "expected_sha256_matched": true
   },
   "live_master": null,
@@ -160,13 +160,13 @@
       "png_scale": 2,
       "svg": {
         "file": "01-plan-furnished.svg",
-        "sha256": "3452ab485d7cf5a402b53fb394f69aa65d579e4d2f55bde849c04c5ae45b8616",
-        "bytes": 56913
+        "sha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec",
+        "bytes": 56897
       },
       "png": {
         "file": "01-plan-furnished.png",
-        "sha256": "993833149fc7c8efe8e618b0f544fd90adc043e503996213cdcd0b8be1122a9f",
-        "bytes": 1149566
+        "sha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848",
+        "bytes": 1146374
       },
       "counts": {
         "rooms": 12,
@@ -188,18 +188,18 @@
       "title": "Reflected ceiling plan (bottoms-up)",
       "page_px": [
         1700.0,
-        4085.0
+        4103.0
       ],
       "png_scale": 2,
       "svg": {
         "file": "02-rcp.svg",
-        "sha256": "65758485b986e7943af281bb524faf08cca19ad5e7265088f592b703bab33c1f",
-        "bytes": 91415
+        "sha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1",
+        "bytes": 91555
       },
       "png": {
         "file": "02-rcp.png",
-        "sha256": "799ed5b0338af4f74b27c0fb49ff517e12d505caf5b73b47f3add34dd803a36d",
-        "bytes": 1888671
+        "sha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2",
+        "bytes": 1905699
       },
       "counts": {
         "fixtures": 104,
@@ -216,8 +216,8 @@
         "rooms": 12,
         "walls": 21
       },
-      "svg_elements": 952,
-      "svg_text_elements": 233,
+      "svg_elements": 954,
+      "svg_text_elements": 234,
       "pdf_page": 2
     },
     {
@@ -230,13 +230,13 @@
       "png_scale": 2,
       "svg": {
         "file": "03-elev-R01-living.svg",
-        "sha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
-        "bytes": 58459
+        "sha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8",
+        "bytes": 58443
       },
       "png": {
         "file": "03-elev-R01-living.png",
-        "sha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
-        "bytes": 1068711
+        "sha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35",
+        "bytes": 1066928
       },
       "counts": {
         "panels": 5,
@@ -260,13 +260,13 @@
       "png_scale": 2,
       "svg": {
         "file": "04-elev-R02-dining.svg",
-        "sha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
-        "bytes": 36369
+        "sha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60",
+        "bytes": 36353
       },
       "png": {
         "file": "04-elev-R02-dining.png",
-        "sha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
-        "bytes": 719231
+        "sha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c",
+        "bytes": 717309
       },
       "counts": {
         "panels": 3,
@@ -290,13 +290,13 @@
       "png_scale": 2,
       "svg": {
         "file": "05-elev-R03-kitchen.svg",
-        "sha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
-        "bytes": 47449
+        "sha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155",
+        "bytes": 47433
       },
       "png": {
         "file": "05-elev-R03-kitchen.png",
-        "sha256": "7459c5f3e9a526c8665dd6994c5a0bc457d1cec29f64e472d18eff9f0b83ef1e",
-        "bytes": 842465
+        "sha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7",
+        "bytes": 840605
       },
       "counts": {
         "panels": 4,
@@ -320,13 +320,13 @@
       "png_scale": 2,
       "svg": {
         "file": "06-elev-R04-master.svg",
-        "sha256": "7bf79310c91f6a7133ee3a16321578e5aa0b3a94b0840fa1f965df625e832309",
-        "bytes": 43507
+        "sha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b",
+        "bytes": 43491
       },
       "png": {
         "file": "06-elev-R04-master.png",
-        "sha256": "94b2230f591a365efe83da51f37d93033667dc314a57cc9a6136cfcca0acb9c0",
-        "bytes": 832838
+        "sha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b",
+        "bytes": 830834
       },
       "counts": {
         "panels": 4,
@@ -350,13 +350,13 @@
       "png_scale": 2,
       "svg": {
         "file": "07-elev-R04a-dressing.svg",
-        "sha256": "a638178863df93d3812895b920596f83f5c5e258aad367468c260defc840c66b",
-        "bytes": 42017
+        "sha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c",
+        "bytes": 42001
       },
       "png": {
         "file": "07-elev-R04a-dressing.png",
-        "sha256": "db1bc1b846e2b0add9007e0f2b14307b6f08ac324cf847123d0466c1692fd331",
-        "bytes": 651781
+        "sha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991",
+        "bytes": 649998
       },
       "counts": {
         "panels": 4,
@@ -380,13 +380,13 @@
       "png_scale": 2,
       "svg": {
         "file": "08-elev-R05-children.svg",
-        "sha256": "d8f02b551adc330fe59da4acea87221fc2cf9241b4eb3863598322f6799e03fa",
-        "bytes": 61496
+        "sha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe",
+        "bytes": 61480
       },
       "png": {
         "file": "08-elev-R05-children.png",
-        "sha256": "c2f561ab07ea6f8f92adb84ed2cf425ebc69302adc4a5609f50f1afbc428accd",
-        "bytes": 1010804
+        "sha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40",
+        "bytes": 1008949
       },
       "counts": {
         "panels": 6,
@@ -410,13 +410,13 @@
       "png_scale": 2,
       "svg": {
         "file": "09-elev-R06-TL1.svg",
-        "sha256": "84060a662b8752dbcee187d1f0adc7fdbe8324ccaea9a7f02499146be577df84",
-        "bytes": 42195
+        "sha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1",
+        "bytes": 42179
       },
       "png": {
         "file": "09-elev-R06-TL1.png",
-        "sha256": "fb45e4f7d14334aff83cea80dc605b12a197a5476341f941a780aede86d9bda7",
-        "bytes": 593698
+        "sha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db",
+        "bytes": 591826
       },
       "counts": {
         "panels": 4,
@@ -440,13 +440,13 @@
       "png_scale": 2,
       "svg": {
         "file": "10-elev-R07-TL2.svg",
-        "sha256": "7d3650c204fa049a1522baaec6496eba838b4975454cebab195983e315659c43",
-        "bytes": 42184
+        "sha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f",
+        "bytes": 42168
       },
       "png": {
         "file": "10-elev-R07-TL2.png",
-        "sha256": "b1d78fc8cea97d975dbecf9676d566ef9f5943d25505017ce3922c14d4c54315",
-        "bytes": 596725
+        "sha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23",
+        "bytes": 594801
       },
       "counts": {
         "panels": 4,
@@ -470,13 +470,13 @@
       "png_scale": 2,
       "svg": {
         "file": "11-elev-R08-utility.svg",
-        "sha256": "627d109d239a41a498da1a2416f8b5761699d1ea5ec78fffb14d06b482a895f8",
-        "bytes": 48705
+        "sha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3",
+        "bytes": 48689
       },
       "png": {
         "file": "11-elev-R08-utility.png",
-        "sha256": "d61ef0c5caaf8aefac91c477499c27b59e06cce6a22f1e65920e14fa51d43cf0",
-        "bytes": 833447
+        "sha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a",
+        "bytes": 831466
       },
       "counts": {
         "panels": 4,
@@ -500,13 +500,13 @@
       "png_scale": 2,
       "svg": {
         "file": "12-elev-R09-entry.svg",
-        "sha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
-        "bytes": 18177
+        "sha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557",
+        "bytes": 18161
       },
       "png": {
         "file": "12-elev-R09-entry.png",
-        "sha256": "a38d873ece403259659f32333e102244568be8623d7eb5d68114e0649262d1c4",
-        "bytes": 413294
+        "sha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411",
+        "bytes": 412007
       },
       "counts": {
         "panels": 1,
@@ -530,13 +530,13 @@
       "png_scale": 2,
       "svg": {
         "file": "13-elev-R12-lobby.svg",
-        "sha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
-        "bytes": 30637
+        "sha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107",
+        "bytes": 30621
       },
       "png": {
         "file": "13-elev-R12-lobby.png",
-        "sha256": "1b38b2a02425ffbb1157b9d50b300d5f5453e3262127ae4b72cbd406e0381f9b",
-        "bytes": 428106
+        "sha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896",
+        "bytes": 426200
       },
       "counts": {
         "panels": 3,
@@ -553,8 +553,8 @@
   ],
   "combined_pdf": {
     "file": "current-layout-views.pdf",
-    "sha256": "a16c7e8df3a4d6ba99571da72edbba820613a3f80b36e2f583b8a4ef74a8d9a3",
-    "bytes": 6815041,
+    "sha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
+    "bytes": 6849877,
     "pages": 13,
     "page_points": [
       [
@@ -567,7 +567,7 @@
         0.0,
         0.0,
         1275.1,
-        3065.0
+        3078.0
       ],
       [
         0.0,
@@ -641,13 +641,13 @@
   },
   "readme": {
     "file": "README.md",
-    "sha256": "5895543248a610b386e61f46eae54fbe9c59a351dc4900d9f46f6c66fc14d7d1",
-    "bytes": 11349
+    "sha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445",
+    "bytes": 11128
   },
   "manifest": {
     "file": "sheets.json",
-    "sha256": "28b915bc8c506df1e51c06c3b3dc84d1725932962d3e6e2d2ac398c3eadca4e6",
-    "bytes": 25257
+    "sha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288",
+    "bytes": 25260
   },
   "reconciliation": {
     "plan": {
@@ -721,7 +721,7 @@
         "C41",
         "C41b"
       ],
-      "held_CBR_fixtures_drawn_faded": 8,
+      "held_CBR_fixtures_drawn_faded": 3,
       "selected_curtain_strips": [
         "CURT-CBR",
         "CURT-DIN",
@@ -948,17 +948,12 @@
       "detail": 104
     },
     {
-      "check": "rcp: CBR H1-H6 active for review; remaining CBR fittings faded and held",
+      "check": "rcp: CBR H1-H6, cove and LINE drawn as modelled ON; remaining CBR fittings faded and held",
       "ok": true,
       "detail": [
-        "CBR-L1",
         "CBR-R1",
         "CBR-R2",
-        "CBR-S1",
-        "CBR-X1",
-        "CBR-X2",
-        "CBR-X3",
-        "CBR-X4"
+        "CBR-S1"
       ]
     },
     {
@@ -1715,27 +1710,23 @@
       "ok": true
     },
     {
-      "check": "review draft: every sheet and the README marked REVIEW DRAFT, not construction released, on the OPT-1 integrated master",
-      "ok": true
-    },
-    {
       "check": "open-item correction: superseded OI compass wording and loft-load figure absent from every sheet, PDF page and README",
       "ok": true,
       "detail": {}
     }
   ],
-  "checks_passed": 158,
-  "checks_total": 158,
+  "checks_passed": 157,
+  "checks_total": 157,
   "generators": {
     "layout_views.mjs": "e2491173271f00bcfbdea524e897d710b8bc4a06f165532b3cee086fb47893a7",
-    "drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656",
+    "drawing-source.mjs": "ccfd98b00bf665fe2b470fc8efd8ae0411da8463c7f7ff5b4f1c37be4a02444c",
     "layout_views/data.mjs": "8f2268cbffb1d43ecc5beecf6dd2c3dfae306d8731ccbff3d7a1f7b72e653de0",
     "layout_views/elev.mjs": "17fc2e3d4dc6e90b089af009889466efe635cfab4f580466aa6f0dc4f65e0a9f",
     "layout_views/plan.mjs": "c9e631d9b1793db90cf1ca71d4570072182af4aace9c7e27f512cb6174654e55",
-    "layout_views/rcp.mjs": "21ac2c41bed65df2d7a773e00b36aadc8ac51c17f202881c0f7ed45f4e45d2b7",
+    "layout_views/rcp.mjs": "acdb3e7d1455765dbc726f961c860c62dd695696a66c3a726c7da1a58830e836",
     "layout_views/svg.mjs": "b0d674725edeb45234a8cd38dd520625d1e8b28aaa239a5e8e2040d81585e5e1",
-    "src/master-adapter.js": "381e5e3f0b99b9cbd733a9b449b9fa1274c8a5c80eb8ff71ca7b3699f48471da",
-    "render_layout_views.py": "6765a7f18f08c200c39fca18aa090820bcf7805f96a973e49cbce59ffebac8a5"
+    "src/master-adapter.js": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398",
+    "render_layout_views.py": "51f22a413ca46b571bec398e0adf581b83fb2a799767f1a9f8a172fb8466ab16"
   },
   "pdf_note": "PDF carries creation timestamps; SVG/PNG are reproducible from the same master and generators."
 }

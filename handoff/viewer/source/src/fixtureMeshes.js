@@ -15,7 +15,33 @@ export const KIND_LABEL = {
   spotw: 'Deep-recessed COB spot', pin: 'Narrow COB pinhole spot', micro:'Deep-recessed adjustable micro-gimbal pin-spot', cyl: 'Surface cylinder', bulk: 'IP65/IK08 bulkhead', face: 'Vertical face-light bar',faceh:'Horizontal face-light bar',
   updn: 'Up-down wall light', read: 'Reading light', step: 'Night step light', pend: 'Decorative pendant', track: 'Magnetic-track head', hang: 'Hanging directional cylinder'
 };
-const MARK_COLOR = {high: '#2e8aa0', low: '#d38a2a', line: '#8fb7e8', task: '#78b64a', read: '#c89252', night: '#7a6cc9', mirror: '#e87a9b', pooja: '#e7bf4d', art: '#d9573c', study: '#4aa786', uv: '#d38a2a'};
+const MARKERS = {
+  downlight: {color: '#0072b2', shape: 'circle'},
+  directional: {color: '#b0206c', shape: 'triangle'},
+  linear: {color: '#d55e00', shape: 'diamond'},
+  wall: {color: '#007b53', shape: 'square'},
+};
+
+function markerType(f) {
+  if (f.pts || f.type === 'CURTAIN_S1') return 'linear';
+  const kind = KIND[f.type];
+  if (['spot', 'spotw', 'pin', 'micro', 'track', 'hang'].includes(kind)) return 'directional';
+  if (['cob', 'gimbal', 'opal', 'cyl', 'bulk'].includes(kind)) return 'downlight';
+  return 'wall';
+}
+
+function pathMidpoint(points) {
+  const lengths = points.slice(1).map((p, i) => Math.hypot(p[0] - points[i][0], p[1] - points[i][1]));
+  let remaining = lengths.reduce((a, b) => a + b, 0) / 2;
+  for (let i = 0; i < lengths.length; i++) {
+    if (remaining <= lengths[i] && lengths[i] > 0) {
+      const t = remaining / lengths[i];
+      return points[i].map((n, axis) => n + (points[i + 1][axis] - n) * t);
+    }
+    remaining -= lengths[i];
+  }
+  return points[0];
+}
 
 export const fixtureInfo = (f, zone, cat) => {
   const spec = cat?.[f.type] || {};
@@ -39,18 +65,30 @@ export function buildFixtures(env) {
     return c;
   });
 
-  // Marker sprites share one texture per channel colour; labels are produced lazily.
+  // Marker textures encode fixture type as well as color; a dashed ring indicates a hold.
   const dotTex = {};
-  const dot = col => dotTex[col] || (dotTex[col] = (() => {
-    const c = document.createElement('canvas');c.width = c.height = 48;const g = c.getContext('2d');
-    g.fillStyle = col;g.beginPath();g.arc(24, 24, 15, 0, 7);g.fill();g.lineWidth = 4;g.strokeStyle = '#fff';g.stroke();
+  const dot = (type, held) => dotTex[`${type}-${held}`] || (dotTex[`${type}-${held}`] = (() => {
+    const c = document.createElement('canvas');c.width = c.height = 64;const g = c.getContext('2d');
+    const {color, shape} = MARKERS[type];
+    g.beginPath();
+    if (shape === 'circle') g.arc(32, 32, 15, 0, Math.PI * 2);
+    else if (shape === 'triangle') {g.moveTo(32, 15);g.lineTo(49, 47);g.lineTo(15, 47);g.closePath();}
+    else if (shape === 'diamond') {g.moveTo(32, 14);g.lineTo(49, 32);g.lineTo(32, 50);g.lineTo(15, 32);g.closePath();}
+    else g.rect(17, 17, 30, 30);
+    g.fillStyle = color;g.fill();g.lineWidth = 6;g.strokeStyle = '#fff';g.stroke();
+    g.lineWidth = 2;g.strokeStyle = '#172c33';g.stroke();
+    if (held) {g.beginPath();g.arc(32, 32, 28, 0, Math.PI * 2);g.setLineDash([5, 3]);g.lineWidth = 4;g.strokeStyle = '#172c33';g.stroke();}
     const t = new T.CanvasTexture(c);t.colorSpace = T.SRGBColorSpace;return t;
   })());
-  function marker(f, zone, x, y, z) {
-    const ch = channelOf(f), s = new T.Sprite(new T.SpriteMaterial({map: dot(MARK_COLOR[ch] || '#888'), depthTest: false, transparent: true}));
-    if(f.held)s.material.opacity=.3;
-    s.position.set(x, y + .12, z);s.scale.set(.26, .26, 1);s.renderOrder = 30;s.userData.fixture = fixtureInfo(f, zone, PLAN.fixtures.cat);
+  function addMarker(info, type, x, y, z) {
+    if (![x, y, z].every(Number.isFinite)) throw new Error('Missing fixture marker position for ' + info.id);
+    const s = new T.Sprite(new T.SpriteMaterial({map: dot(type, Boolean(info.held)), depthTest: false, transparent: true, toneMapped: false}));
+    s.position.set(x, y, z);s.scale.set(.32, .32, 1);s.renderOrder = 30;
+    s.userData.fixture = info;s.userData.markerType = type;
     markers.push(s);groups.markers.add(s);
+  }
+  function marker(f, zone, x, y, z) {
+    addMarker(fixtureInfo(f, zone, PLAN.fixtures.cat), markerType(f), x, y, z);
   }
   function labels() {
     if (groups.markers.userData.labelled) return;
@@ -74,18 +112,22 @@ export function buildFixtures(env) {
     const room = zone.room;
     for (const f of zone.fixtures) {
       if(f.held){
-        if(zone.id==='CBR')marker(f,zone,(f.x??f.pts?.[0]?.[0])*FT,f.h_m??zone.ceil_m,(f.z??f.pts?.[0]?.[1])*FT);
+        if(zone.id==='CBR'){
+          const [x,z]=f.pts?pathMidpoint(f.pts):[f.x,f.z];
+          marker(f,zone,x*FT,f.h_m??zone.ceil_m,z*FT);
+        }
         continue;
       }
       const glowMat=(r,ch,gain,color)=>env.glowMat(r,ch,gain,color,f.circuit);
       const ch = channelOf(f), cat = PLAN.fixtures.cat[f.type];
       if (f.pts) {
+        const [mx,mz] = pathMidpoint(f.pts);
         // Strip-type fixtures with their own builders: COVE and LIN (ceiling), BCOVE / NICHE / VANITY (baths), LIV-P1 (pooja niche), TASKW (utility shelf)
-        if (['COVE_TW', 'COVE_FW', 'LIN', 'BCOVE', 'NICHE', 'VANITY'].includes(f.type) || f.id === 'LIV-P1') {marker(f, zone, f.pts[0][0] * FT, f.h_m ?? zone.ceil_m, f.pts[0][1] * FT);continue;}
+        if (['COVE_TW', 'COVE_FW', 'LIN', 'BCOVE', 'NICHE', 'VANITY'].includes(f.type) || f.id === 'LIV-P1') {marker(f, zone, mx * FT, f.h_m ?? zone.ceil_m, mz * FT);continue;}
         const y = f.h_m ?? (f.type === 'BACK' ? 1.5 : f.type === 'PLINTH' ? .13 : zone.plane_m + .55), gm = glowMat(room, ch, 3);
         for (let i = 1; i < f.pts.length; i++)
           line(v(f.pts[i - 1][0] * FT, y, f.pts[i - 1][1] * FT), v(f.pts[i][0] * FT, y, f.pts[i][1] * FT), .009, gm, groups.lights);
-        marker(f, zone, f.pts[0][0] * FT, y, f.pts[0][1] * FT);
+        marker(f, zone, mx * FT, y, mz * FT);
         continue;
       }
       if (f.id.startsWith('FW-')) continue;
@@ -238,9 +280,8 @@ export function buildFixtures(env) {
       wash.scale.set(Math.abs(b[1]-a[1])*FT,.85,1);wash.rotation.y=Math.PI/2;
       wash.position.set(a[0]*FT+p.intoRoomSign*.008,y-.43,(a[1]+b[1])*FT/2);wash.renderOrder=6;groups.lights.add(wash);
     }
-    const s = new T.Sprite(new T.SpriteMaterial({map: dot(MARK_COLOR.low), depthTest: false, transparent: true, opacity: p.held ? .3 : .55}));
-    s.position.set(p.polylineFt[0][0] * FT, y + .12, p.polylineFt[0][1] * FT);s.scale.set(.2, .2, 1);s.renderOrder = 30;s.userData.fixture = info;
-    markers.push(s);groups.markers.add(s);
+    const [mx,mz] = pathMidpoint(path);
+    addMarker(info, 'linear', mx * FT, y, mz * FT);
     curtainPockets.push({id: p.id, held: p.held, selected:p.selected, circuit: p.circuit, room: zone.room, mat,displayClipped:pocket?.displayClipped??false});
   }
 
@@ -251,7 +292,9 @@ export function buildFixtures(env) {
     mk(cyl(.075, .05, 16), m.white, fx, top - .02, fz, groups.fans);
     const hub = mk(geo('hub', () => new T.SphereGeometry(1, 14, 8)), m.white, fx, dy, fz, groups.fans);hub.scale.set(.12, .05, .12);
     for (let i = 0; i < 3; i++) {
-      const a = i * Math.PI * 2 / 3, b = mk(geo('blade', () => new T.BoxGeometry(.13, .022, .54)), m.white, fx + Math.sin(a) * .3, dy, fz + Math.cos(a) * .3, groups.fans);
+      // Blade tip at half the planning sweep where one is recorded; otherwise the generic 1.14 m illustration.
+      const tip = fan.sweepM ? fan.sweepM / 2 : .57, len = tip - .03, mid = (tip + .03) / 2;
+      const a = i * Math.PI * 2 / 3, b = mk(geo('blade' + len.toFixed(3), () => new T.BoxGeometry(.13, .022, len)), m.white, fx + Math.sin(a) * mid, dy, fz + Math.cos(a) * mid, groups.fans);
       b.rotation.y = a - .18;
     }
   }

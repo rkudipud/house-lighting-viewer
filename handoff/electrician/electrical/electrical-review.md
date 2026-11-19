@@ -2,9 +2,9 @@
 
 # Electrical and wall-control handoff
 
-**Review and quotation only - not for ordering, wiring or construction.** Four-storey Hyderabad house; one 2BHK per floor. All quantities below are for **one flat** unless stated otherwise.
+**Review and quotation only - not for ordering, wiring or construction.** Working assumption: four storeys with one modelled 2BHK flat per floor (four flat schedules total). All quantities below are for **one flat** unless stated otherwise; confirm the actual floor and flat count and variations on site.
 
-**Master SHA-256:** `b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac`. The one-supply decision is integrated; the latest verified receipt adds a provisional wardrobe-interior reference without changing lighting or geometry.
+**Master SHA-256:** `79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822`. The verified predecessor chain includes the fixed-CCT revision and the subsequent provisional CBR-X1-X4 relocation and route reanalysis. The cove, all other fittings, modeled loads and lumen outputs remain unchanged; the CBR ceiling hold is not released.
 
 **Release gates:** construction release **false**; product approval **false**; exact lighting/driver/control chain proven **false**. The electrician, engineer and suppliers must close the site, safety, product and performance holds before a separate construction release.
 
@@ -14,8 +14,8 @@ The homeowner selected fixed colour temperatures, four warm curtain-pocket strip
 
 * **104 base fixtures / 47 base circuits** plus four selected curtain-pocket strips and four circuit records = **108 fittings / 51 circuits**. Four added strips total **8.88 m / 71.04 W**, but their lengths are derived and **unmeasured**; they receive no lux credit.
 * **21 single-colour brightness knobs**, 38 modeled outputs, three modeled repeaters/amplifiers, ten mains-dimmer groups on procurement hold, **12 planned 24 V supplies / 1,980 W total nameplate**, and one separate 48 V track driver per flat. Device counts and reference ratings are concepts, not approved equipment.
-* Coves, decorative/mood strips and the selected pockets are fixed **2700 K**. Other lights use fixed 3000 K or 4000 K according to their room and use. LOW and HIGH have independent local controls; a single knob does not change colour temperature. App, cloud and wireless operation are not required.
-* The earlier fixed-white photometric package reported **82/82** checks on its verified source input. That historical result has **not** been rerun on this latest master; retained calculations exclude the four added pocket strips.
+* Coves, decorative/mood strips and the selected pockets are fixed **2700 K**. Lobby and balcony HIGH remain **3000 K**; other HIGH fittings are **4000 K**. LOW and HIGH have independent local controls; a single knob does not change colour temperature. App, cloud and wireless operation are not required.
+* The earlier fixed-white photometric package reported **82/82** checks on its verified source input. The children's room has a targeted generic-optics reanalysis of its provisional LINE paths; other rooms retain historical estimates. The CBR estimate includes held fittings and the four added curtain strips receive no lux credit. None are measured results.
 
 The full machine-readable schedules are in `schedules/`. `circuit-schedule.csv` lists 51 groups; `wall-control-schedule.csv` lists 31 wall dimmers/knobs; the six fitting controls and eight conceptual switch modules are separate. See `source-index.md` and `wholesale-rfq.md` for exact sources and purchasing requirements.
 
@@ -202,7 +202,7 @@ The distribution groups are conceptual allocation, not an instruction to install
 ## Voltage drop, heat and other site holds
 
 * **Living LOW:** the previous split-P01/P03 feeder and branch voltage drops do not validate the one-supply distribution. Recalculate with the actual location, route, branch currents, temperature, terminations, real copper area, strip end-to-end drop, repeater losses and protection. Split-feed/injection is a design option only when the exact strip and controller maker permits it.
-* **Children's room:** previous S1 assumptions gave C39 **3.3%** and C40 **3.6%**, both **MARGINAL**. The shared P16-to-SB-08 feed had a **2.5 mm2 candidate** for its assumed target; actual route, load, protection and current standards need the electrician's design. Do not treat 2.5 mm2 as an installation instruction. The measured strip and route may change both results.
+* **Children's room:** the assumed S1 routes give C39 **3.3%** and the provisional shifted C40 route **3.9%**, both **MARGINAL**. CBR-L1 and CBR-X1-X4 are modelled ON with their scheduled lumens in the design-review simulation only; installation, procurement and operation remain held (H-CBR-CEIL). The provisional fan is at the nominal room centre with a 1050 mm planning sweep (no product selected; fan load excluded from these lighting loads). Verify the real room centre, fan product, drop and airflow, cove section, strip, downlight-cutout and loft/curtain-pocket clearances, site route and ceiling levels before release. The shared P16-to-SB-08 feed had a **2.5 mm2 candidate** for its assumed target; actual route, load, protection and current standards need the electrician's design. Do not treat 2.5 mm2 as an installation instruction. The measured strip and route may change both results.
 * **Curtains and joinery:** measure all pocket widths/depths, returns, bracket and curtain-stack clearance; confirm the strip is hidden from seated and standing eye height. The section drawings and the 0.30 m return are assumptions. Seek the approved aluminium profile and diffuser; a site mock-up decides visibility and colour.
 * **Bathroom / balcony / utility:** the schedule's IP values are project targets, not certification or proof of zone suitability. Confirm complete luminaire, connector, driver location, ingress rating, corrosion/condensation and all current wet-zone requirements with the qualified electrician.
 * **Service:** protect and label cables, use manufacturer-approved aluminium heat-sinking, avoid enclosed hot drivers, and allow accessible isolation and replacement. Confirm power-on memory, mains-voltage range, surge coordination, inrush, power-factor/VA, thermal limits, low-level flicker and fan/strobing interaction.

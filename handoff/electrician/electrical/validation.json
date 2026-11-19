@@ -1,14 +1,80 @@
 {
-  "generated_utc": "2026-11-18T11:21:17+00:00",
-  "master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+  "generated_utc": "2026-11-19T20:49:52+00:00",
+  "master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "status": "PASS",
   "scope": "Artifact/source linkage and arithmetic only; not a new photometric, electrical-safety or manufacturer compatibility approval.",
-  "checks_passed": 243,
+  "checks_passed": 245,
   "checks": [
     {
       "check": "master hash",
       "status": "PASS",
-      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+      "detail": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+    },
+    {
+      "check": "validated CCT-only successor",
+      "status": "PASS",
+      "detail": {
+        "prior_master_sha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
+        "current_master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+        "changed_fixture_ids": [
+          "CBR-H1",
+          "CBR-H2",
+          "CBR-H3",
+          "CBR-H4",
+          "CBR-H5",
+          "CBR-H6",
+          "DIN-H1",
+          "DIN-H2",
+          "DIN-H3",
+          "DIN-H6",
+          "LIV-H1",
+          "LIV-H10",
+          "LIV-H2",
+          "LIV-H3",
+          "LIV-H4",
+          "LIV-H5",
+          "LIV-H6",
+          "LIV-H7",
+          "LIV-H8",
+          "LIV-H9",
+          "MBR-H1",
+          "MBR-H2",
+          "MBR-H3",
+          "MBR-H4",
+          "MBR-H5",
+          "MBR-H6",
+          "MBR-H7",
+          "MBR-H8"
+        ],
+        "changed_circuits": [
+          "C01",
+          "C02",
+          "C09",
+          "C10",
+          "C20",
+          "C37"
+        ],
+        "note": "CCT proposal only; fixtures, circuits, lumens, watts and geometry otherwise unchanged. Prior optical outputs are inherited, not recalculated."
+      }
+    },
+    {
+      "check": "validated provisional CBR successor",
+      "status": "PASS",
+      "detail": {
+        "prior_master_sha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+        "current_master_sha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+        "predecessor_master_sha256": "e7d2e6c7cdeedd72abb3dd236304646eb01174a2df65b5401be8c53b907853e7",
+        "changed_fixture_ids": [
+          "CBR-X1",
+          "CBR-X2",
+          "CBR-X3",
+          "CBR-X4"
+        ],
+        "heatmaps_sha256": "e935075c00174584056d8f4fb5aaac799146341c7d5923d1d45bd714a9a0e7c6",
+        "r05_operations": 292,
+        "predecessor_check": "Only the proposed CBR LINE paths and directly dependent calculations changed; the existing cove, all CCTs, loads and other fixture positions are retained. H-CBR-CEIL and construction holds remain.",
+        "note": "R05 successor: fan at nominal room centre (1050 mm planning sweep, product not selected), homeowner-reported band heights (slab unmeasured) and CBR-only re-analysis with the retained cove and LINE modelled ON. H-CBR-CEIL, site, procurement and construction holds remain."
+      }
     },
     {
       "check": "receipt chain",
@@ -887,7 +953,7 @@
     {
       "check": "C39/C40 marginal",
       "status": "PASS",
-      "detail": "3.3% / 3.6%"
+      "detail": "3.3% / 3.9%"
     },
     {
       "check": "LT4/LT5 held",
@@ -1190,7 +1256,7 @@
     {
       "check": "electrical-review bound to master",
       "status": "PASS",
-      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+      "detail": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
     },
     {
       "check": "electrical-review PDF content",
@@ -1210,7 +1276,7 @@
     {
       "check": "source-index bound to master",
       "status": "PASS",
-      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+      "detail": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
     },
     {
       "check": "source-index PDF content",
@@ -1230,7 +1296,7 @@
     {
       "check": "wholesale-rfq bound to master",
       "status": "PASS",
-      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+      "detail": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
     },
     {
       "check": "wholesale-rfq PDF content",
@@ -1250,7 +1316,7 @@
     {
       "check": "control-options bound to master",
       "status": "PASS",
-      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+      "detail": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
     },
     {
       "check": "control-options PDF content",
@@ -1270,7 +1336,7 @@
     {
       "check": "bill-of-materials bound to master",
       "status": "PASS",
-      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+      "detail": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
     },
     {
       "check": "bill-of-materials PDF content",
@@ -1285,7 +1351,7 @@
     {
       "check": "live master still unchanged",
       "status": "PASS",
-      "detail": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+      "detail": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
     }
   ]
 }

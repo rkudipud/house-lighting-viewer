@@ -127,7 +127,7 @@ for hrs in (2, 4):
     batt[f"Battery energy for {hrs} h illustrative load (kWh)"] = (f"{e:.2f}", f"{e * FLATS_PER_FLOOR:.2f}", f"{e * FLATS:.2f}")
     batt[f"{hrs} h battery capacity per flat (Ah)"] = (f"{e*1000/12:,.0f} Ah @12 V", f"{e*1000/12*FLATS_PER_FLOOR:,.0f} Ah @12 V", f"{e*1000/12*FLATS:,.0f} Ah @12 V")
 ASSUMPTIONS = [
-    f"Source: canonical master house-design.json, SHA-256 {sha} (4000 K HIGH-mains revision). 104 photometric fittings per flat; positions, lumens and wattages unchanged.",
+    f"Source: canonical master house-design.json, SHA-256 {sha} (fixed-CCT revision with the provisional CBR R05 ceiling review). 104 photometric fittings per flat; lumens and wattages unchanged; CBR-X1-X4 positions are provisional and site-held (H-CBR-CEIL).",
     "Lumens are scheduled fitting/strip output, not measured lux on the working plane. Indirect coves and strips deliver less useful light than downlights, so lm/sq ft is not comparable to delivered brightness.",
     "Contractor rules (20 lm per sq ft; 1 W per 100 lm) are rough sanity checks, not a design method. The design uses efficient LEDs (about 85 lm/W average), so actual wattage is a little higher than lm/100 for the same lumens.",
     f"Areas are approximate lighting calculation zones, not verified net floor measurements. The working building multiplier assumes {STOREYS} storeys x {FLATS_PER_FLOOR} modelled 2BHK flat per floor = {FLATS} flat schedules; confirm the actual floor and flat count, floor variations and quantities on site. Common stair/lift lobby, terrace, exterior and parking lighting are excluded.",

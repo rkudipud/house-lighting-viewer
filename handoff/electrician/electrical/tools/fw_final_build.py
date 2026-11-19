@@ -15,7 +15,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "lighting" / "source"))
-from validate_cct_revision import CURRENT_SHA, PRIOR_SHA, load_verified, verify
+from validate_cct_revision import CURRENT_SHA as CCT_SHA, PRIOR_SHA, load_verified, verify
+from validate_cbr_revision import CURRENT_SHA, verify as verify_cbr
 FIXED = ROOT / "fixed-white"
 SESSION = Path(r"not-distributed/session-state")
 HOUSE = SESSION / "c40feaae-bd23-4667-9a64-9c2a607f3cd4" / "files" / "house-current"
@@ -126,6 +127,7 @@ def main() -> None:
     ap.add_argument("--dimmer-sources", type=Path, default=FILES / "low-load-dimmer-research" / "sources")
     ap.add_argument("--master", type=Path)
     ap.add_argument("--prior-master", required=True, type=Path)
+    ap.add_argument("--cct-master", required=True, type=Path)
     ap.add_argument("--expected-master-sha", default=EXPECTED_MASTER)
     ap.add_argument("--out", type=Path, default=ROOT / "final-handoff")
     args = ap.parse_args()
@@ -136,7 +138,9 @@ def main() -> None:
     require(sha(master_path) == expected, "Master hash differs from the requested basis; no output written")
     master = load(master_path)
     previous_master = load_verified(args.prior_master, PRIOR_SHA)
-    delta = verify(previous_master, load_verified(master_path, CURRENT_SHA))
+    cct_master = load_verified(args.cct_master, CCT_SHA)
+    delta = verify(previous_master, cct_master)
+    cbr_delta = verify_cbr(cct_master, load_verified(master_path, CURRENT_SHA))
     integration_path = house / "generated" / "living-supply-and-cabinet-selections-receipt.json"
     wardrobe_path = house / "generated" / "wardrobe-interiors-reference-receipt.json"
     prior_receipt_path = house / "generated" / "homeowner-final-coordination-integration.json"
@@ -394,7 +398,7 @@ def main() -> None:
             })
     require(len(drop_rows) == 37 and Counter(x["status"] for x in drop_rows) == Counter({"OK": 30, "MARGINAL": 2, "HOLD": 5}),
             "Integrated voltage-drop statuses differ from expected 30/2/5")
-    for code, pct in (("C39", 3.3), ("C40", 3.6)):
+    for code, pct in (("C39", 3.3), ("C40", 3.9)):
         require(next(x for x in drop_rows if x["circuit"] == code)["modeled_dV_pct"] == pct,
                 f"Unexpected {code} voltage drop")
 
@@ -518,8 +522,9 @@ def main() -> None:
 
     replacements = {
         "{{MASTER_SHA}}": expected,
-        "{{MASTER_BINDING}}": ("The prior master has a verified wardrobe reference; the later reviewed CCT-only "
-                               "proposal changes selected mains to 4000 K without moving fittings or changing modeled lumens."),
+        "{{MASTER_BINDING}}": ("The verified predecessor chain includes the fixed-CCT revision and the subsequent "
+                               "provisional CBR-X1-X4 relocation and route reanalysis. The cove, all other fittings, "
+                               "modeled loads and lumen outputs remain unchanged; the CBR ceiling hold is not released."),
         "{{CIRCUIT_TABLE}}": circuit_table,
         "{{CONTROL_TABLE}}": control_table,
         "{{FITTING_CONTROLS_TABLE}}": fitting_table,
@@ -546,6 +551,7 @@ def main() -> None:
         "decision_receipt_sha256": sha(integration_path),
         "latest_master_receipt_sha256": sha(wardrobe_path),
         "cct_revision": delta,
+        "children_ceiling_revision": cbr_delta,
         "one_supply_option_sha256": OPTION_SHA,
         "historical_photometry": {
             "source_fragment_sha256": sha(fragment_path), "verification_sha256": sha(verified_path),

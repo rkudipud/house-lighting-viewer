@@ -1,0 +1,491 @@
+{
+  "schema": "post-copy-overlay/1",
+  "date": "2026-11-19",
+  "status": "REVIEW DRAFT - not a construction release",
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "scope": "Children's bedroom (R05/CBR) provisional ceiling review only: centred 1050 mm planning fan sweep (no product selected; airflow for ~12.5x15 ft room unverified), homeowner-reported 3.048 m band and ~3.28 m centre (slab unmeasured), cove CBR-L1 and LINE CBR-X1-X4 modelled ON with scheduled lumens; installation, procurement and operation held under H-CBR-CEIL.",
+  "note": "Each entry records the original copy-receipt hash, the current hash and specific evidence. Original copy receipts are left intact. No wildcard; every path is listed explicitly.",
+  "postCopyOverlays": [
+    {
+      "path": "handoff/electrician/lighting/source/export_current_lighting.py",
+      "previousCopySha256": "29ee1f5cdcd563a2fead0c4c7c465d5b3f8407bd9f48a4e6b2daaeb129e322d1",
+      "currentSha256": "7544fc9b9a272301e2d25177653efeb5992935db3f2894b6efe9551c67514ae9",
+      "originalCopyReceipt": "handoff/electrician/lighting/source/repository-copy-receipt.json",
+      "reason": "Exporter revised for type-coded (colour + dash + marker) A4 plan sheets with 7.5 pt zoom-tile IDs and provisional-ON CBR cove/LINE wording.",
+      "evidence": {
+        "kind": "generator-run",
+        "generatedPack": "handoff/electrician/lighting",
+        "packManifestSha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
+        "packVerificationSha256": "83ab7785544359b3c9ecd6ef3b831cb89c943c33911c704f83d77c2a1e9848b1",
+        "verificationResult": "PASS 92/92",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/source/lighting-workbench.template.html",
+      "previousCopySha256": "95b47a0634326ef7fb20b4f60aca34d8e332e87611d1a40788f8255ba20d97c9",
+      "currentSha256": "1130c9440d67441219d6190cf9e651b6e7c4c643d9027a94f1eb362f3a6f692b",
+      "originalCopyReceipt": "handoff/electrician/lighting/source/repository-copy-receipt.json",
+      "reason": "Workbench template revised for the provisional CBR R05 review (modelled-ON cove/LINE, site-held status).",
+      "evidence": {
+        "kind": "generator-run",
+        "generatedPack": "handoff/electrician/lighting",
+        "packManifestSha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
+        "packVerificationSha256": "83ab7785544359b3c9ecd6ef3b831cb89c943c33911c704f83d77c2a1e9848b1",
+        "verificationResult": "PASS 92/92",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/electrician/lighting/source/verify_current_lighting.py",
+      "previousCopySha256": "8e540e581a47716e6d163524aa5ebe5aef924ff35708b6157ad1c468bc18a9c5",
+      "currentSha256": "171d0f30ac696b83124553f651f75434e441e6f2732952cef9e238fb1fa25c54",
+      "originalCopyReceipt": "handoff/electrician/lighting/source/repository-copy-receipt.json",
+      "reason": "Verifier revised: corrected stale CBR \"remain unlit\" limits text; checks A4 page size, >=7 pt zoom IDs, type legend, CCT and hold text.",
+      "evidence": {
+        "kind": "generator-run",
+        "generatedPack": "handoff/electrician/lighting",
+        "packManifestSha256": "3b1b73d0e10bf4df3dc8d925a64a6d8bd8fa1c327851499ac7bcff7f81fe2f59",
+        "packVerificationSha256": "83ab7785544359b3c9ecd6ef3b831cb89c943c33911c704f83d77c2a1e9848b1",
+        "verificationResult": "PASS 92/92",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/01-plan-furnished.png",
+      "previousCopySha256": "78fdcf4f70f77554aaf4757698246b4fc8f51a2418114a8145b79c06b30a1b05",
+      "currentSha256": "3c1818199f88d89d99086339d2659013c049b95814300857600d7634504cc848",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/01-plan-furnished.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/01-plan-furnished.svg",
+      "previousCopySha256": "32e31ede03506872c71dbab30c92536a107641bd638f6e6e2043edc5107fdf08",
+      "currentSha256": "255b0fe0c4f15e94907ccba313fc02853b34e9573033bf2bc9f52be0b55df2ec",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/01-plan-furnished.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/02-rcp.png",
+      "previousCopySha256": "5a0b4e28d2d962362100864f4feb40258f8064db34a20cf86f70ce04e4b18da1",
+      "currentSha256": "cc57a07a7f79789f84db556d528a2ded3c54cb923e39b9e68ef0c74fa95b56b2",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/02-rcp.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/02-rcp.svg",
+      "previousCopySha256": "6d757bd30411ecd295d4b4c0b885ef63c932e2501560de5699226236df41a988",
+      "currentSha256": "4b5c77472772da95e4812ab27430a564c6342e480f16b5192adfa13af71201a1",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/02-rcp.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/03-elev-R01-living.png",
+      "previousCopySha256": "5d182f438c91e0f84920504018932d74dcc15ca046558766aabebea7f9ccc744",
+      "currentSha256": "f423eaad9b83e2c815cd2a745c5a682b4766d5ceb7df1631463e01eba1f62e35",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/03-elev-R01-living.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/03-elev-R01-living.svg",
+      "previousCopySha256": "4262eb42da261854ff671de1c4d0b604e9b85dd6c5963365108ab41b38a06f9b",
+      "currentSha256": "9d9b1dab8fe73ebf87c86160231972be849d3483197d2441d1c95285741966d8",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/03-elev-R01-living.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/04-elev-R02-dining.png",
+      "previousCopySha256": "580d78327788dc0afb75dd78764738d1770602940b61afee1f29189e4676cab5",
+      "currentSha256": "c7c6e439f68ca39773c30389ad12ec0c74a773ee67cd7c21ef29c19587c04f8c",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/04-elev-R02-dining.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/04-elev-R02-dining.svg",
+      "previousCopySha256": "98f00391ec63b0f610f94c8b3b364b3b52e315a344945fbc545c4c769624c56a",
+      "currentSha256": "ff01bbf7690085ac48edd98069860479ee2163c3f7b00a7794f8441177c27a60",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/04-elev-R02-dining.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/05-elev-R03-kitchen.png",
+      "previousCopySha256": "bbb588333f2d7462326ea0e945f909b458a4246bc8a2eccfee7b2bd112d2d083",
+      "currentSha256": "00814d8ebbc536d6c8dd8153559bf6d08206e8989bc93a01d9dfd864dbe0cff7",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/05-elev-R03-kitchen.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/05-elev-R03-kitchen.svg",
+      "previousCopySha256": "afc21887e114e9117bd6fac82f233e838cfbd3c2d04db31623ad3250c60133c2",
+      "currentSha256": "68a59981013e5166bf7dd9c01b2afdc6430a474184b9e09f1270c81569656155",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/05-elev-R03-kitchen.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/06-elev-R04-master.png",
+      "previousCopySha256": "f256510f8bed6ecbeb0ce0cce2c49f43737ef4930bb5ce536bf4d0652e4558c3",
+      "currentSha256": "8e3dd5455b6f62cadd00724500eda0835ecb255015ad917d3507c129274d348b",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/06-elev-R04-master.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/06-elev-R04-master.svg",
+      "previousCopySha256": "29cb3e6e6a01dd0f8f860a02000e8b0631c9ad745590c70ff1de314f075aac8b",
+      "currentSha256": "18f75e4d5695c81205ca7f09b53997911f609e3600bd6596e09e38aa26c6435b",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/06-elev-R04-master.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/07-elev-R04a-dressing.png",
+      "previousCopySha256": "ad09a6dc6b29c0592793e45edc43131f50b8537ad4e54694f0389a4335f97d49",
+      "currentSha256": "1555dbb9df77dc9bffb8d7639f42c41d08c9aab06500260ab6397cc8b8ff3991",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/07-elev-R04a-dressing.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/07-elev-R04a-dressing.svg",
+      "previousCopySha256": "6f02bf5a403d4b9a53c6253bb0b283f4ad937929c908df9b53b7ed566bf39b68",
+      "currentSha256": "ed4e85f964787882c1744bc5b97ac6324dda8b801abda67f3e027bd1d71d121c",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/07-elev-R04a-dressing.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/08-elev-R05-children.png",
+      "previousCopySha256": "61b69c6a77cb8efbbbbc203f7db4754c16aa56351dfb1386432bba8bc3a263cd",
+      "currentSha256": "04d3d942f1fa8cacde81d02d7fd20cbc97d6c1fc0fdd1c473268bd6fdcecbc40",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/08-elev-R05-children.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/08-elev-R05-children.svg",
+      "previousCopySha256": "cfc5a89c4379d718a17dcec32b52ee348b801e186278184f2f27f1cf187a518e",
+      "currentSha256": "a34f9de524299e9fa8bcce115c54b4bae834349598596b9a2635e46afd6c0bfe",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/08-elev-R05-children.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/09-elev-R06-TL1.png",
+      "previousCopySha256": "2c3faa390257805ce7d347506821f116a529d91ee65cf73a54de0927f55a532b",
+      "currentSha256": "0ba8dbdef370123a73b34486129d80398c8f32421ae83c449718f52d3a1f48db",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/09-elev-R06-TL1.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/09-elev-R06-TL1.svg",
+      "previousCopySha256": "e5ccca9c76ddd464e7ac56b02e3e19a40d355bd787ce882f5afb1cbd7d84cba5",
+      "currentSha256": "eca279e23baa4b347a9ab5661fe3416cdd6758f72eff42fb648f97cfd43a73d1",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/09-elev-R06-TL1.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/10-elev-R07-TL2.png",
+      "previousCopySha256": "0a81938a2d195f056dcc7a77968cae9d3b40a5d43b1a1b435c29639731496a5d",
+      "currentSha256": "30a3f0bd8b314b17a27972a7d053b8ac3f80cff79357d18302c56e7fcc765b23",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/10-elev-R07-TL2.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/10-elev-R07-TL2.svg",
+      "previousCopySha256": "c4f276aa07ae40821702180a03d9acab9ac4c7dca09b316ee7a1932f9aa27b34",
+      "currentSha256": "5683a418ce890ed2eae8982c8a267e629d77776b983e40a480ed74593f53545f",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/10-elev-R07-TL2.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/11-elev-R08-utility.png",
+      "previousCopySha256": "a166a94a2b7bbce82ad423aec393179af7420fef82abd544f0ba912569d2738f",
+      "currentSha256": "de77515df1fbb24359dc8f98ed2728a76764d63e1d87b84c9119c1427b05cc0a",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/11-elev-R08-utility.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/11-elev-R08-utility.svg",
+      "previousCopySha256": "7d9cb16e5c57a05a29560625d0bc584332ac9f51a311520c934e257dce6eac15",
+      "currentSha256": "7a108c1486c11c887fc73548f6a848eaf83e56171976b07f032b2d0cc0b014b3",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/11-elev-R08-utility.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/12-elev-R09-entry.png",
+      "previousCopySha256": "76132f7852185dc9c2309ba50bd327136457d7814f6a210b7b786abd32740d06",
+      "currentSha256": "c561eda9574ffde909b5416ceeba5be83b376eb0361adaa57c602290c3852411",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/12-elev-R09-entry.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/12-elev-R09-entry.svg",
+      "previousCopySha256": "39b0167c8b63f370382ec4f304617da2e19c42437b98ccbcbb92cdaf4c45229e",
+      "currentSha256": "2fe582aadc6f825d6af3203369e9fd6b93838ec5f28385fafd370f8243621557",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/12-elev-R09-entry.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/13-elev-R12-lobby.png",
+      "previousCopySha256": "7fecf904ad06bdf84af590260b056910c06639575d132f68097bc587e7e3df4a",
+      "currentSha256": "2a1b54b822318379310edd9bb5ecbefd760e26410d2ef8bf4bcd061d66367896",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/13-elev-R12-lobby.png",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/13-elev-R12-lobby.svg",
+      "previousCopySha256": "6f689e76e357b141928e53ca775486a213f89edbbe081fd3e7a2f63a92113333",
+      "currentSha256": "cdc99e750de3f18e9e647adeb1b263d5c94d21cef05a633d57f22b294acc5107",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/13-elev-R12-lobby.svg",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/README.md",
+      "previousCopySha256": "7f6f2f6c7b048fe802c075f313839a32d32040eab8e658a9843ab6b3a9909462",
+      "currentSha256": "1be0170bb9a48d5931ce7b3770676e1de4cf6e68eab7e50f48cf6cbee7ff2445",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/README.md",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/current-layout-views.pdf",
+      "previousCopySha256": "c488d3e0f5338eb4b243d596019d36a6a0b9a890cc1f82ae01eb8cace22796a4",
+      "currentSha256": "13c5d1c1c8536565447c803880f1fe4eaaf85309229e2ef046e6a9679152f8c0",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/current-layout-views.pdf",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/layout-views-verification.json",
+      "previousCopySha256": "00839d2526393c30287465c9840bfb95d76faaf21d4d202d5444e47e8d9f7115",
+      "currentSha256": "f63ed31a443fbebe2d8277b962c68b846be7b486950d34540ed72e9035665f1b",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/layout-views-verification.json",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/mason-civil/layout-views/sheets.json",
+      "previousCopySha256": "e5db606573570a5f6d9d886ca900c5a0a0623fe0271173191fc14b1ddcf79a19",
+      "currentSha256": "84a641cfedadafea4658db84673d8e35d7b20920937b22fda474569e5db0f288",
+      "originalCopyReceipt": "handoff/mason-civil/repository-copy-receipt.json",
+      "reason": "Layout views regenerated for the R05 ceiling review (centred 1050 mm planning fan sweep, homeowner-reported 3.048 m band / ~3.28 m centre label, modelled-ON cove/LINE with H-CBR-CEIL hold).",
+      "evidence": {
+        "kind": "byte-identical-to-bound-copy",
+        "boundCopy": "handoff/viewer/drawings/layout-views/sheets.json",
+        "boundCopyReceipt": "handoff/viewer/drawings/repository-copy-receipt.json",
+        "renderChecks": "157/157",
+        "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822"
+      }
+    },
+    {
+      "path": "handoff/source-basis/house-design.json",
+      "previousCopySha256": "a62024621af559191896334b9ba96235a3749d0a646ba943dee7ed2dfbe2b659",
+      "currentSha256": "542fd109bd9fbbe4f108b252f00c11e5b1ac3da8004d79d2ff2919faa84c0598",
+      "originalCopyReceipt": "handoff/source-basis/repository-copy-receipt.json",
+      "reason": "Public path-redacted copy of master 79ece2ae (R05 centred-fan, reported heights, modelled-ON cove/LINE notes) staged by stage_public_master.py.",
+      "evidence": {
+        "kind": "stage_public_master",
+        "tool": "handoff/source-basis/stage_public_master.py",
+        "status": "PASS",
+        "sourceMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+        "publicMasterSha256": "542fd109bd9fbbe4f108b252f00c11e5b1ac3da8004d79d2ff2919faa84c0598",
+        "chainValidator": "handoff/electrician/lighting/source/validate_cbr_revision.py",
+        "priorMasterSha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4"
+      }
+    }
+  ]
+}
