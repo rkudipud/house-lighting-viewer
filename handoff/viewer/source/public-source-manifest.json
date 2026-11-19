@@ -1,22 +1,19 @@
 {
   "status": "REVIEW DRAFT - not a construction release",
-  "authoritativeMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-  "embeddedPlanDataSha256": "33dd7317e805a9c9bc790c160dcfd6187c38fed9fffd97c13ba74b64267ed600",
+  "authoritativeMasterSha256": "1fa6b0fa040d2f0c81427d9277eb9b98f23170b7f63446f287000d58fc9002a4",
+  "embeddedPlanDataSha256": "584084b001ad41deb66ec518ab7fc1e171ca70b80c08eec0cdae2c020e6aa40d",
   "embeddedHeatDataSha256": "2fb076b02bced31ddfb1e31f12998f7cd83f2032a31b9dd2922450e7283f9866",
-  "viewerHtmlSha256": "fca710256b104d712ba16c2571db4be1026882d510e28a159e599ddf354d3d4d",
+  "viewerHtmlSha256": "a186a05e09926947ea41461548d6346644003e10cd44581898915371292761f2",
   "privacyPathScan": "PASS for staged text, JSON values and delivered HTML; original master omitted",
-  "originalDrawingGeneratorSha256": {
-    "floorplan.mjs": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a",
-    "drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656"
-  },
+  "originalDrawingGeneratorSha256": {},
   "files": {
     "analysis-data.mjs": {
       "bytes": 7947,
       "sha256": "f220476ea027b0cb1b6cd6970f4df190d8ffe9bd3cd06390a38964b4454cd0d4"
     },
     "build.mjs": {
-      "bytes": 24829,
-      "sha256": "190d035fa03404bed62d90f044338c35648f5fe95bb25d31283b2291c276928e"
+      "bytes": 25326,
+      "sha256": "97f5e1209d7284c9077afe949a42db4289fc4f36dbd40b8006dc14dd923b7222"
     },
     "capture_review_renders.py": {
       "bytes": 5944,
@@ -67,16 +64,8 @@
       "sha256": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a"
     },
     "privacy-transform.json": {
-      "bytes": 1186,
-      "sha256": "9acda06204affe1a39260f57e5d1d7aedf4f96724a24561ed038cfc904e71347"
-    },
-    "provenance/generation-source/drawing-source.mjs": {
-      "bytes": 2996,
-      "sha256": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656"
-    },
-    "provenance/generation-source/floorplan.mjs": {
-      "bytes": 39598,
-      "sha256": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a"
+      "bytes": 1185,
+      "sha256": "d17de754b5920eaad50a0e683ecdae927b40ed351efb920ca96bbfe4b79e4ca6"
     },
     "README.md": {
       "bytes": 1796,
@@ -127,16 +116,16 @@
       "sha256": "1ceaa2937a54bf07137c8c48c92681a4ec9f917bbd1700a934872982d3f5c177"
     },
     "src/house-data.generated.json": {
-      "bytes": 682982,
-      "sha256": "66dc8ceb7ba8ef0214e646b4ba3c510c50d8b17f5e75b33fe425c3e9b2c78017"
+      "bytes": 682247,
+      "sha256": "ba98d94bb409fd9495858567eb300f5d9c8769d45cbf469d99b5ac0f01fd8262"
     },
     "src/lighting.js": {
-      "bytes": 21180,
-      "sha256": "7066f77ba9f3217e5eaf9e424c4ed5157ea5b461aee58895d713b153d3ad9c18"
+      "bytes": 23333,
+      "sha256": "a2ffda4ec4436427f99fb6d4c8d8024e7368514508a0a91eba4156d7f5aff600"
     },
     "src/main.js": {
-      "bytes": 40163,
-      "sha256": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e"
+      "bytes": 39616,
+      "sha256": "cc555b902ea33d528b708b4615e25df571ce31d4278e5969d6e00593d897e942"
     },
     "src/master-adapter.js": {
       "bytes": 11029,
@@ -147,8 +136,8 @@
       "sha256": "9831081fc1bc67c6180f5d1244f211222048bbbb7efbfc8883ea18c61291e15d"
     },
     "src/model.js": {
-      "bytes": 23837,
-      "sha256": "5dbb9b66c247d330d66391ebc14cf394f97594f3a56e3dfd151e6ee0c47547d7"
+      "bytes": 22529,
+      "sha256": "ef6583c8ed26e56c1dec95a320d045a93b305da7f574e4ad8de07da41dac4151"
     },
     "src/navigation.js": {
       "bytes": 2482,
@@ -159,8 +148,8 @@
       "sha256": "6caaa35f85670fc6c71980c41a3419a703839fb97f9ce50783a042205a9b93b0"
     },
     "src/rooms.js": {
-      "bytes": 14306,
-      "sha256": "148d299e7523a24bb1fa7369d66f8af91bdf41ce36005785da673b2820343cec"
+      "bytes": 14207,
+      "sha256": "d31be19e40b4b82ca90330a933211837c7ff31eb973d6febe04f0fb119dc4982"
     },
     "src/schedule.js": {
       "bytes": 1997,
@@ -179,8 +168,8 @@
       "sha256": "66239d396fd934e14becca26732c72943d08966aee3e710dcf6c2a9b16eac546"
     },
     "template.html": {
-      "bytes": 16844,
-      "sha256": "e265e699a46cace3797d120ece38f259723154fe047adc1fbeeadb4d8fe128f4"
+      "bytes": 20816,
+      "sha256": "d4ecb5c311a50130827d77222cf10e0360cda13261527acfe3c25e33fa8a4dfe"
     },
     "THREE-LICENSE.txt": {
       "bytes": 1081,
@@ -188,11 +177,11 @@
     },
     "tour-data.mjs": {
       "bytes": 17571,
-      "sha256": "6c387f0ecd0709d09f6f04e166a61d81da8ffbacd009cc334c342ff5083a2833"
+      "sha256": "4373844284b86e0d00feb5ec3e69e918e51e6da1084b31a89f615863d856114b"
     },
     "verify_site.py": {
-      "bytes": 36356,
-      "sha256": "b55fd4a364487799653a099431b1b84fb8dea852f63e1a8ffcecb21befaa87f0"
+      "bytes": 42017,
+      "sha256": "2424489a1688c5a866d511ee7b98744ab021fc50c8cfba477b4fefd7987a8e2e"
     }
   }
 }

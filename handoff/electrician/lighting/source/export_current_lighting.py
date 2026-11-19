@@ -22,6 +22,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.lines import Line2D
 from matplotlib.patches import Polygon
+from validate_cct_revision import CURRENT_SHA, PRIOR_SHA, load_verified, verify
 
 SESSION = Path(r"not-distributed/lighting-session-inputs")
 MASTER = Path(r"handoff/source-basis/house-design.json")
@@ -29,13 +30,15 @@ PACK = SESSION / "final-lighting-fixed-white"
 OPT = SESSION / "final-lighting-opt1-rev1"
 SOURCE = SESSION / "lighting-integrated-current"
 OUT = SESSION / "lighting-current-review"
-EXPECTED_MASTER = "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+EXPECTED_MASTER = CURRENT_SHA
 EXPECTED_OPTICAL_DI = "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e"
 EXPECTED_HEATMAP = "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a"
 EXPECTED_OLD_VERIFICATION = "06f44f9cb2b55d977c8c806557113ccd6edb6ce9de2fe41b391b27320e4bf3c9"
 RELEASE = "REVIEW ONLY - NOT FOR CONSTRUCTION"
 KIND = {"HIGH": "main", "COVE": "mood", "MOOD": "mood", "LINE": "mood", "PERIM": "mood", "LOW": "mood"}
-COLORS = {2700: "#b96b27", 3000: "#356e8b", 4000: "#5475ae"}
+COLORS = {2700: "#b44700", 3000: "#782596", 4000: "#0059ad"}
+MARKERS = {2700: "o", 3000: "s", 4000: "^"}
+LINESTYLES = {2700: "-", 3000: "--", 4000: ":"}
 
 
 def sha(raw: bytes) -> str:
@@ -171,7 +174,7 @@ def reconcile(data):
         require(row["room"] == fixture["room"] and row["circuit"] == fixture["circuit"]
                 and f'{row["cct_k"]}K' == fixture["cct"] and row["cct_fixed"],
                 f"Fixed-CCT mapping differs for {row['id']}")
-    require(Counter(f["cct_k"] for f in cct_map["fittings"]) == {2700: 30, 3000: 40, 4000: 34},
+    require(Counter(f["cct_k"] for f in cct_map["fittings"]) == {2700: 30, 3000: 12, 4000: 62},
             "CCT distribution changed")
     require({x["id"] for x in cp["strips"]} == {"CURT-LIV", "CURT-DIN", "CURT-MBR-S", "CURT-CBR"},
             "Selected curtain strip set changed")
@@ -366,15 +369,17 @@ def plot_plans(data, plot_fixtures):
     min_x, max_x = min(p[0] for p in all_points)-.5, max(p[0] for p in all_points)+.5
     min_z, max_z = min(p[1] for p in all_points)-.5, max(p[1] for p in all_points)+.5
     legends = [
-        Line2D([0], [0], color=COLORS[2700], lw=3, label="2700 K fixed"),
-        Line2D([0], [0], color=COLORS[3000], lw=3, label="3000 K fixed"),
-        Line2D([0], [0], color=COLORS[4000], lw=3, label="4000 K fixed"),
-        Line2D([0], [0], marker="o", markersize=11, markerfacecolor="none", markeredgecolor="#a04d29",
-               linestyle="none", label="Individual placement / site hold"),
-        Line2D([0], [0], color="#a04d29", lw=2, ls="--", label="Dashed strip: placement or pocket held"),
-    ]
+        Line2D([0], [0], color=COLORS[k], lw=2, linestyle=LINESTYLES[k],
+               marker=MARKERS[k], markersize=6, markeredgecolor="black", markeredgewidth=.5,
+               label=f"{k} K: {shape} / {line}")
+        for k, shape, line in ((2700, "circle", "solid"), (3000, "square", "dashed"),
+                               (4000, "triangle", "dotted"))
+    ] + [Line2D([0], [0], marker="o", markersize=11, markerfacecolor="none",
+                markeredgecolor="black", markeredgewidth=1.5, linestyle="none",
+                label="Black ring: placement / site hold")]
     for kind, title in (("main", "Main lights"), ("mood", "Coves and mood"), ("task", "Task, accent and night")):
         fig, ax = plt.subplots(figsize=(13, 18))
+        annotations = []
         for room in rooms:
             poly = room["poly_ft"]
             ax.add_patch(Polygon(poly, closed=True, facecolor="#f5f8f8", edgecolor="#79919a", linewidth=.65, zorder=1))
@@ -391,24 +396,42 @@ def plot_plans(data, plot_fixtures):
             held = bool(f["hold_ids"])
             if len(points) > 1:
                 ax.plot([p[0] for p in points], [p[1] for p in points],
-                        color=color, linestyle="--" if held else "-", linewidth=1.6, zorder=4)
+                        color=color, linestyle=LINESTYLES[f["cct_k"]], linewidth=2.2, zorder=4)
                 x, z = points[len(points)//2]
             else:
                 x, z = points[0]
-                ax.scatter([x], [z], s=27, c=color, edgecolors="white", linewidths=.5, zorder=5)
-                if held:
-                    ax.scatter([x], [z], s=95, facecolors="none", edgecolors="#a04d29", linewidths=.8, zorder=6)
-            ax.annotate(f["id"], (x, z), xytext=(3, 3), textcoords="offset points", fontsize=4.8,
-                        color="#213842", zorder=7)
+            ax.scatter([x], [z], s=40, c=color, marker=MARKERS[f["cct_k"]],
+                       edgecolors="black", linewidths=.5, zorder=5)
+            if held:
+                ax.scatter([x], [z], s=140, facecolors="none", edgecolors="black",
+                           linewidths=1.1, zorder=6)
+            annotations.append(ax.annotate(
+                f["id"], (x, z), xytext=(3, 3), textcoords="offset points", fontsize=7,
+                color="#101820", bbox={"facecolor": "white", "edgecolor": "none", "alpha": .8, "pad": .25},
+                zorder=7))
         ax.set_xlim(min_x, max_x); ax.set_ylim(max_z, min_z); ax.set_aspect("equal")
         ax.set_xlabel("Sheet x (feet; west to right)"); ax.set_ylabel("Sheet z (feet; north downward)")
         ax.grid(color="#b4c6cc", linewidth=.3, alpha=.45)
         ax.set_title(f"{title} | typical floor\n{RELEASE}", fontsize=14, fontweight="bold", loc="left")
-        ax.legend(handles=legends, loc="upper center", bbox_to_anchor=(.5, -.055), ncol=2, fontsize=8, frameon=False)
+        ax.legend(handles=legends, loc="upper center", bbox_to_anchor=(.5, -.055), ncol=2, fontsize=9, frameon=False)
         fig.text(.09, .025, "Approximate lighting zones, not measured walls. Unringed symbols are not product or construction approval.\n"
                  "No PSU hatch location, wiring route, structural cutting or fixing detail is released. See schedules and site holds.",
                  fontsize=8, color="#744023")
         fig.tight_layout(rect=(0, .07, 1, .98))
+        fig.canvas.draw()
+        renderer = fig.canvas.get_renderer()
+        placed = []
+        for annotation in annotations:
+            for dx, dy in ((3, 3), (3, -11), (-50, 3), (-50, -11),
+                           (3, 14), (-50, 14), (3, -22), (-50, -22)):
+                annotation.set_position((dx, dy))
+                bounds = annotation.get_window_extent(renderer).expanded(1.05, 1.15)
+                if ax.bbox.contains(bounds.x0, bounds.y0) and ax.bbox.contains(bounds.x1, bounds.y1) \
+                        and not any(bounds.overlaps(other) for other in placed):
+                    break
+            else:
+                raise ValueError(f"Unable to place a readable {kind} label for {annotation.get_text()}")
+            placed.append(bounds)
         for suffix in ("pdf", "svg", "png"):
             fig.savefig(OUT / f"lighting-plan-{kind}.{suffix}", dpi=150,
                         metadata={"Creator": "House lighting review"} if suffix in ("pdf", "svg") else None)
@@ -554,7 +577,7 @@ The photometric calculations and heatmaps were **not recalculated** for this reb
 
 ## Fixed CCT and fitting schedule
 
-All coves, decorative strips and selected curtain strips are **2700 K**. Living, dining and bedroom mains/readers are generally **3000 K**; kitchen task, utility, dressing and bath face/task lights are **4000 K**. The CCT is fixed by fitting; the controls adjust brightness only. `fixture-ledger.csv` and `fixed-cct-map.json` give each fitting, rule and hold.
+All coves, decorative strips and selected curtain strips are **2700 K**. Living, dining and bedroom mains are proposed at **4000 K** for homeowner review; readers and art remain **3000 K**. Kitchen task, utility, dressing and bath face/task lights are **4000 K**. The CCT is fixed by fitting; the controls adjust brightness only. `fixture-ledger.csv` and `fixed-cct-map.json` give each fitting, rule and hold.
 
 | Room | Base fittings | Fixed white bins |
 |---|---:|---|
@@ -609,19 +632,29 @@ Also retain the ten mains-dimmer compatibility holds, bath-zone/earthing/segrega
 
 
 def main():
-    global OUT
+    global OUT, MASTER, SESSION, PACK, OPT, SOURCE
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--master", required=True, type=Path)
+    parser.add_argument("--prior-master", required=True, type=Path)
+    parser.add_argument("--inputs", required=True, type=Path, help="Original lighting producer files directory")
     parser.add_argument("--output", type=Path, default=OUT,
-                        help="New empty output directory within this session's files")
-    OUT = parser.parse_args().output.resolve()
-    require(OUT.is_relative_to(SESSION.resolve()), "Output must remain inside this session's files")
+                        help="New empty output directory")
+    args = parser.parse_args()
+    OUT, MASTER, SESSION = args.output.resolve(), args.master.resolve(), args.inputs.resolve()
+    PACK = SESSION / "final-lighting-fixed-white"
+    OPT = SESSION / "final-lighting-opt1-rev1"
+    SOURCE = SESSION / "lighting-integrated-current"
+    previous = load_verified(args.prior_master, PRIOR_SHA)
+    current = load_verified(MASTER, EXPECTED_MASTER)
+    delta = verify(previous, current)
     raw_master = MASTER.read_bytes()
     require(sha(raw_master) == EXPECTED_MASTER, f"Master changed: {sha(raw_master)}; do not rebind blindly")
     require(not OUT.exists() or not any(OUT.iterdir()),
             f"Output directory {OUT} is not empty; choose a new directory to preserve previous review evidence")
     data = json.loads(raw_master)
     heatmaps = read(PACK / "heatmaps.json")
-    optical_check = validate_optical_provenance(data, heatmaps)
+    optical_check = validate_optical_provenance(previous, heatmaps)
+    optical_check["cct_revision"] = delta
     cct_map, cp, hold_map, psu_rows, voltage_rows = reconcile(data)
     for strip in cp["strips"]:
         strip["proposed_supply_status"] = (

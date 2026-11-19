@@ -7,18 +7,21 @@ import csv
 import hashlib
 import json
 import shutil
+import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "lighting" / "source"))
+from validate_cct_revision import CURRENT_SHA, PRIOR_SHA, load_verified, verify
 FIXED = ROOT / "fixed-white"
 SESSION = Path(r"not-distributed/session-state")
 HOUSE = SESSION / "c40feaae-bd23-4667-9a64-9c2a607f3cd4" / "files" / "house-current"
 LIGHTING = SESSION / "d7d23350-9d8c-4c65-bf59-343a3e4c6a14" / "files" / "final-lighting-fixed-white"
 FILES = SESSION / "ff3336cd-ec89-4470-abbb-bd731ff9c1eb" / "files"
-EXPECTED_MASTER = "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+EXPECTED_MASTER = CURRENT_SHA
 OPTION_SHA = "2fdcce1a3fdf7ff04aae045875f6a40cfd362cc58de228f70098e4fab379726a"
 
 PDF_SOURCES = [
@@ -122,6 +125,7 @@ def main() -> None:
     ap.add_argument("--manufacturer-sources", type=Path, default=ROOT / "sources")
     ap.add_argument("--dimmer-sources", type=Path, default=FILES / "low-load-dimmer-research" / "sources")
     ap.add_argument("--master", type=Path)
+    ap.add_argument("--prior-master", required=True, type=Path)
     ap.add_argument("--expected-master-sha", default=EXPECTED_MASTER)
     ap.add_argument("--out", type=Path, default=ROOT / "final-handoff")
     args = ap.parse_args()
@@ -131,6 +135,8 @@ def main() -> None:
     expected = args.expected_master_sha.lower()
     require(sha(master_path) == expected, "Master hash differs from the requested basis; no output written")
     master = load(master_path)
+    previous_master = load_verified(args.prior_master, PRIOR_SHA)
+    delta = verify(previous_master, load_verified(master_path, CURRENT_SHA))
     integration_path = house / "generated" / "living-supply-and-cabinet-selections-receipt.json"
     wardrobe_path = house / "generated" / "wardrobe-interiors-reference-receipt.json"
     prior_receipt_path = house / "generated" / "homeowner-final-coordination-integration.json"
@@ -145,15 +151,15 @@ def main() -> None:
     )
     option, plan, verified = load(option_path), load(prior_plan_path), load(verified_path)
 
-    require(wardrobe["after_master_sha256"] == expected, "Latest wardrobe receipt is not bound to the master")
+    require(wardrobe["after_master_sha256"] == PRIOR_SHA, "Latest wardrobe receipt is not bound to the predecessor")
     require(wardrobe["before_master_sha256"] == integration["after_master_sha256"],
             "Wardrobe and supply receipt chain mismatch")
     before_wardrobe_path = house / "archive" / "before-wardrobe-interiors-review.json"
     require(sha(before_wardrobe_path) == wardrobe["before_master_sha256"], "Prior master snapshot SHA mismatch")
     before_wardrobe = load(before_wardrobe_path)
     for section in ("lighting", "visualization_geometry", "architecture", "decisions", "bathrooms", "open_items"):
-        require(master[section] == before_wardrobe[section], f"Wardrobe integration changed {section}")
-    old_storage = dict(master["storage"])
+        require(previous_master[section] == before_wardrobe[section], f"Wardrobe integration changed {section}")
+    old_storage = dict(previous_master["storage"])
     added_reference = old_storage.pop("wardrobe_interiors_review")
     require(old_storage == before_wardrobe["storage"] and added_reference == wardrobe["reference"],
             "Existing storage or the linked wardrobe reference changed")
@@ -177,9 +183,9 @@ def main() -> None:
     require(sha(old_master_path) == integration["before_master_sha256"], "Previous master snapshot SHA mismatch")
     old = load(old_master_path)
     lighting = master["lighting"]
-    require(lighting["fixtures"] == old["lighting"]["fixtures"], "Fixtures changed during the supply integration")
-    require(lighting["design_inputs"] == old["lighting"]["design_inputs"], "Lighting design inputs changed during integration")
-    require(master["visualization_geometry"] == old["visualization_geometry"], "Geometry changed during supply integration")
+    require(previous_master["lighting"]["fixtures"] == old["lighting"]["fixtures"], "Fixtures changed during the supply integration")
+    require(previous_master["lighting"]["design_inputs"] == old["lighting"]["design_inputs"], "Lighting design inputs changed during integration")
+    require(previous_master["visualization_geometry"] == old["visualization_geometry"], "Geometry changed during supply integration")
     require(len(lighting["fixtures"]) == 104 and len(lighting["controls"]["circuits"]) == 47,
             "Expected 104 base fixtures and 47 base circuits")
 
@@ -512,8 +518,8 @@ def main() -> None:
 
     replacements = {
         "{{MASTER_SHA}}": expected,
-        "{{MASTER_BINDING}}": ("The one-supply decision is integrated; the latest verified receipt adds a provisional "
-                               "wardrobe-interior reference without changing lighting or geometry."),
+        "{{MASTER_BINDING}}": ("The prior master has a verified wardrobe reference; the later reviewed CCT-only "
+                               "proposal changes selected mains to 4000 K without moving fittings or changing modeled lumens."),
         "{{CIRCUIT_TABLE}}": circuit_table,
         "{{CONTROL_TABLE}}": control_table,
         "{{FITTING_CONTROLS_TABLE}}": fitting_table,
@@ -528,7 +534,7 @@ def main() -> None:
                      ("source-index.template.md", "source-index.md"),
                      ("wholesale-rfq.template.md", "wholesale-rfq.md"),
                      ("control-options.template.md", "control-options.md")):
-        text = (fixed / "templates" / src).read_text(encoding="utf-8")
+        text = (Path(__file__).parent / src).read_text(encoding="utf-8")
         for key, value in replacements.items():
             text = text.replace(key, value)
         require("{{" not in text, f"Unresolved template placeholder in {src}")
@@ -539,6 +545,7 @@ def main() -> None:
         "master_sha256": expected,
         "decision_receipt_sha256": sha(integration_path),
         "latest_master_receipt_sha256": sha(wardrobe_path),
+        "cct_revision": delta,
         "one_supply_option_sha256": OPTION_SHA,
         "historical_photometry": {
             "source_fragment_sha256": sha(fragment_path), "verification_sha256": sha(verified_path),
@@ -570,10 +577,10 @@ def main() -> None:
         "note": "PDF/PNG export and independent validation are still required before final receipt.",
     })
     for name in ("fw_final_build.py", "fw_render.py", "export_figures_png.py"):
-        shutil.copy2(fixed / "tools" / name, out / "tools" / name)
+        shutil.copy2(Path(__file__).parent / name, out / "tools" / name)
     for name in ("electrical-review.template.md", "source-index.template.md",
                  "wholesale-rfq.template.md", "control-options.template.md"):
-        shutil.copy2(fixed / "templates" / name, out / "tools" / name)
+        shutil.copy2(Path(__file__).parent / name, out / "tools" / name)
     require(sha(master_path) == expected, "Master changed during the build; outputs are not valid")
     print(json.dumps({"master_sha256": expected, "output": str(out), "circuits": len(circuit_rows),
                       "fixtures": len(fixture_rows), "knobs": len(knob_rows), "supplies": len(supply_rows),

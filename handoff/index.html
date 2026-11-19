@@ -1,146 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>House handoff - design review</title>
-  <style>
-    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #172a35; background: #f5f4ef; }
-    body { max-width: 64rem; margin: auto; padding: 2rem 1.25rem 4rem; line-height: 1.6; }
-    h1, h2 { line-height: 1.2; }
-    nav { display: flex; flex-wrap: wrap; gap: 1rem; }
-    a { color: #075975; text-underline-offset: .2em; }
-    section, aside { background: white; border: 1px solid #c9d1d3; border-radius: .4rem; padding: 1.25rem; margin-top: 1.25rem; }
-    .hold { border-left: .35rem solid #98610d; }
-    .status { font-weight: 700; color: #744700; }
-    code { overflow-wrap: anywhere; }
-    dt { font-weight: 700; margin-top: .75rem; }
-    dd { margin-left: 0; }
-    figure { margin: 1.5rem 0; }
-    img { display: block; max-width: 100%; height: auto; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House handoff | review set</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;max-width:70ch;margin:2rem auto;padding:0 1rem;color:#20343a}
+h1{line-height:1.2}li{margin:.65rem 0}a{color:#145c63}.notice{background:#fff3d4;padding:1rem}
+</style>
 </head>
 <body>
-  <header>
-    <p class="status">DESIGN REVIEW ONLY - NOT FOR CONSTRUCTION</p>
-    <h1>House handoff</h1>
-    <p>The coordinated local review handoff includes the current viewer, three final illustrative
-      renders and all trade review packs. Coordinator review is accepted for local design review
-      only, not construction, product, procurement, fabrication or publication approval.
-      All site and professional holds remain. This dated post-master decision update is separately
-      versioned from the unchanged hash-bound models and outputs.</p>
-    <p class="hold"><a href="decisions/2026-11-18-owner-selections.md">18 November owner decision addendum</a>:
-      matte-black handles, three retained trays and six children's loft doors, with site-measured
-      unobstructed suitcase access. The earlier OPT-E matte-laminate material and master split are retained;
-      shutter mechanism, exact shade and fit are open. Pooja finish, general wardrobe interiors and soft-close
-      hardware remain proposals. Historical model, drawing and cost outputs are unchanged.
-      <a href="decisions/2026-11-18-wardrobe-review.html">Open the separate visual wardrobe review</a>
-      for the dated choice overlays and two-page PDF.</p>
-    <p class="hold"><a href="decisions/2026-11-18-material-selection.md">Additional post-master material selection</a>:
-      BWP plywood wardrobe carcasses with granite plinths; the earlier OPT-E matte-laminate shutters and
-      master split remain. Granite shelves are not selected. Separate utility aluminium and outdoor/wet-area
-      joinery are unchanged. Thickness, grade, plinth detail, waterproofing and site fit remain open.
-      Historical model, drawings and cost estimates have not been regenerated or repriced.</p>
-    <p class="status">The verified
-      <a href="electrician/simulation/revision-all-rooms/index.html">six-room sensitivity revision</a>
-      is included alongside the historical report. Its integration awaits coordinator review;
-      no technical, construction or publication approval is implied.</p>
-    <nav aria-label="Trade handoff sections">
-      <a href="#electrician">Electrician</a>
-      <a href="#mason-civil">Mason / civil</a>
-      <a href="#contractor">Contractor / joinery</a>
-      <a href="viewer/index.html">Viewer / three renders</a>
-      <a href="electrician/simulation/index.html">Exploratory simulation addendum</a>
-      <a href="#site-views">Site views</a>
-      <a href="#release">Release checks</a>
-    </nav>
-  </header>
-  <aside class="hold" aria-label="Construction holds">
-    <h2>Before ordering or site work</h2>
-    <p>Site measurements and service positions must be verified. Fixture selection, driver and dimmer
-      compatibility, wiring and protection require the responsible electrician's approval. Structural
-      work, wall changes, slab cutting and load-bearing fixings require qualified site approval.
-      Public availability of plans or images is not construction approval.</p>
-  </aside>
-  <main>
-    <section id="electrician">
-      <h2>Electrician</h2>
-      <p class="status">Current-master lighting, electrical/control-options and procurement review staged.</p>
-      <p><a href="electrician/index.html">Open the electrician and lighting pack</a>: offline workbench,
-        lighting plans, fixture/control/circuit schedules, generic product search, and inherited analytic
-        heatmaps. Maps are estimates, not measured or physically validated simulation; selected curtain
-        strips receive no lux credit. Product, protection and dimming compatibility holds remain.</p>
-    </section>
-    <section id="mason-civil">
-      <h2>Mason / civil</h2>
-      <p class="status">Civil review pack rebound to current master; construction holds remain.</p>
-      <p><a href="mason-civil/index.html">Open the civil pack</a>: source room/opening index, dimensioned
-        review floorplan, ceiling and wall sheets, PDFs, SVGs, PNGs and drawing generators.
-        Measurement and structural holds remain; retired floorplans are not the current geometry.</p>
-    </section>
-    <section id="contractor">
-      <h2>Contractor / joinery</h2>
-      <p class="status">Wardrobe pack and viewer bound to current master; interiors remain provisional.</p>
-      <p><a href="contractor/index.html">Open the wardrobe and contractor pack</a>: placement and provisional
-        interiors, PDFs, SVGs, PNGs, editable data and cost allowances. Interiors remain provisional;
-        the earlier OPT-E matte-laminate material and master split are retained; shutter mechanism,
-        exact shade, fit and professional approval remain open. Generator sources are included with explicit
-        public-copy reproducibility limits. The <a href="viewer/index.html">coordinated viewer and three renders</a>
-        illustrate the current proposals, not measured joinery.
-        Retired G-series joinery is not current.</p>
-    </section>
-    <section id="release">
-      <h2>Release checks</h2>
-      <dl>
-        <dt>Provenance</dt>
-        <dd>Final source packs must identify the coordinator-confirmed canonical master SHA-256.
-          The <a href="manifest.json">complete inventory</a> records repository-relative paths, byte sizes
-          and SHA-256 values; the <a href="integration-receipt.json">local integration receipt</a> records scope and checks.</dd>
-        <dt>Current staged source basis</dt>
-        <dd>The <a href="source-basis/house-design.json">editable public-safe master copy</a> is derived
-          from canonical SHA-256 <code>b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac</code>.
-          Path redaction changes its delivered byte hash; the
-          <a href="source-basis/repository-copy-receipt.json">source-versus-copy receipt</a> records both.
-          The <a href="source-basis/fragments/wardrobe-interiors-review.json">provisional wardrobe reference</a>
-          is included alongside it. The
-          <a href="source-basis/generated/wardrobe-interiors-provenance-correction.json">historical-manifest correction</a>
-          documents an unavailable prior lighting manifest; compatibility does not mean its missing bytes were verified.
-          Delivered trade packs and the final viewer are rebound to this source identifier.</dd>
-        <dt>Completeness</dt>
-        <dd>Trade coverage, source receipts, PDF readability, SVG and PNG rendering, relative links,
-          viewer behavior and visible review holds are checked locally. Source/public byte hashes are
-          distinguished, and unlicensed manufacturer documents are official links rather than copies.</dd>
-        <dt>Publication hold</dt>
-        <dd>This decision addendum is separately versioned from the unchanged master-bound source packs
-          for the repository's main branch/Pages. Publication does not approve
-          construction, products, procurement, fabrication or any professional/site check.</dd>
-      </dl>
-    </section>
-    <section id="site-views">
-      <h2>Site views - not measured evidence</h2>
-      <p>These three user-supplied photos are visual references only. Their filenames do not verify
-        curtain-pocket dimensions, clearances or construction geometry. Use verified site measurements
-        and the coordinated drawings for review; do not scale these photographs.</p>
-      <figure>
-        <a href="references/site-photo-hall-curtain-pocket.jpeg">
-          <img src="references/site-photo-hall-curtain-pocket.jpeg" alt="User-supplied hall site view" loading="lazy">
-        </a>
-        <figcaption>Hall site view. Pocket dimensions are unverified.</figcaption>
-      </figure>
-      <figure>
-        <a href="references/site-photo-children-curtain-pocket.jpeg">
-          <img src="references/site-photo-children-curtain-pocket.jpeg" alt="User-supplied children's room site view" loading="lazy">
-        </a>
-        <figcaption>Children's room site view. Pocket dimensions are unverified.</figcaption>
-      </figure>
-      <figure>
-        <a href="references/site-photo-hall-from-kitchen.jpeg">
-          <img src="references/site-photo-hall-from-kitchen.jpeg" alt="User-supplied hall site view looking from the kitchen" loading="lazy">
-        </a>
-        <figcaption>Hall viewed from the kitchen. Not a measured survey.</figcaption>
-      </figure>
-      <p><a href="references/receipt.json">Site-view file hashes and provenance</a></p>
-    </section>
-  </main>
+<h1>House handoff</h1>
+<p class="notice"><strong>Review set; not for construction.</strong> Verify all dimensions and existing conditions on site. Product selection, exact driver/dimmer compatibility, electrical protection and structural details remain unapproved. The fixed-CCT plan is 2700 K for LOW/cove/mood, 3000 K for reading/art plus lobby and balcony HIGH, and 4000 K for the other HIGH fittings; the homeowner should review the scoped CCT change.</p>
+<ol>
+<li><a href="mason-civil/source-index/room-opening-index.pdf">Source-based room and opening index</a> &mdash; confirm openings and dimensions on site.</li>
+<li><a href="electrician/lighting/current/lighting-workbench.html">Lighting workbench</a> &mdash; offline review of modeled fixtures and estimated light maps.</li>
+<li><a href="electrician/electrical/current/control-options.pdf">Control options</a> &mdash; conceptual comparison, not approved equipment.</li>
+<li><a href="electrician/lighting/current/lighting-review-schedules.pdf">Switchboard and control schedule</a> &mdash; proposed circuit/control grouping.</li>
+<li><a href="electrician/lighting/current/heatmaps-summary.pdf">Heatmaps</a> &mdash; inherited estimates, not measured or newly validated lux.</li>
+<li><a href="../downloads/working-floor-plan-review-draft-1fa6b0fa.pdf">Working floor plan</a> &mdash; review draft; final site measurements remain outstanding.</li>
+<li><a href="../downloads/layout-views-review-draft-1fa6b0fa.pdf">Dimensioned 2D wall layouts</a> &mdash; provisional dimensions; verify before use.</li>
+<li><a href="../index.html">Three.js walkthrough</a> and <a href="viewer/source/README.md">buildable viewer source</a>.</li>
+<li>Lighting plans: <a href="electrician/lighting/current/lighting-plan-main.pdf">main</a>, <a href="electrician/lighting/current/lighting-plan-mood.pdf">LOW/mood</a>, and <a href="electrician/lighting/current/lighting-plan-task.pdf">task</a>; supporting <a href="electrician/simulation/simulation-report.html">historical simulation summary</a> and <a href="electrician/simulation/revision-all-rooms/simulation-report-remaining.html">remaining-room sensitivity report</a>. The simulation reports use earlier geometry and were not rerun for the CCT-only revision; they are exploratory, not validated field performance. CBR-L1 and CBR-X1&ndash;X4 remain held and unlit pending ceiling/curtain evidence and fan selection.</li>
+<li><a href="electrician/electrical/current/electrical-review.pdf">Electrical and circuit review</a>. A construction-ready wiring/light layout has not been issued.</li>
+<li><a href="electrician/electrical/current/bill-of-materials.pdf">Bill of materials</a> &mdash; generic search specifications and modeled room locations; quantities/products require professional review. <a href="electrician/electrical/current/bill-of-materials.md">Readable details</a> and <a href="electrician/lighting/current/generic-product-search.csv">secondary item data</a>.</li>
+<li>Final handouts: <a href="electrician/lighting/current/lighting-specification.md">lighting specification</a>, <a href="mason-civil/contractor-civil-review.pdf">civil review</a>, <a href="contractor/wardrobe/final/wardrobe-signoff-pack.pdf">wardrobe proposal</a> and <a href="decisions/2026-11-18-owner-selections.md">owner selections</a>. Illustrative renders: <a href="viewer/renders/01-whole-flat-dollhouse.png">whole flat</a>, <a href="viewer/renders/02-living-light-and-curtains.png">living</a>, <a href="viewer/renders/03-master-proposed-interiors.png">master</a>.</li>
+</ol>
+<p><strong>Lighting load and inverter planning:</strong> <a href="electrician/lighting/lighting-load-per-room.pdf">PDF</a> and <a href="electrician/lighting/lighting-load-per-room.xlsx">workbook</a>. Building estimates assume four storeys &times; one modeled flat per floor; confirm the actual floor and flat count and any variations on site. The 20 lm/sq ft and 1 W/100 lm figures are rough sizing rules, not measured brightness or compliance criteria; PSU, floor repetition, strip-length, PF, dimming and battery values are assumptions to verify. Inverter sizing must also include any non-lighting loads.</p>
+<p>The bathroom HIGH-plus-mirror estimate is about 373 lux at full output, above the model's 150&ndash;250 lux design band. Performance and exact fitting/driver/dimmer compatibility remain unverified. PIR lights are switched, not necessarily dimmable. CBR ceiling-related holds, unmeasured curtain pockets, wardrobe/site measurements, and product, electrical and structural approvals remain open; this review set does not authorize ordering or construction.</p>
 </body>
 </html>

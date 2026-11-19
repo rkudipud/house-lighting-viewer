@@ -8,6 +8,7 @@ import hashlib
 import json
 import re
 import shutil
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -19,6 +20,8 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
 HOUSE = Path(r"handoff/source-basis")
+sys.path.insert(0, str(ROOT / "lighting" / "source"))
+from validate_cct_revision import PRIOR_SHA, load_verified, verify
 
 
 def sha(path: Path) -> str:
@@ -37,6 +40,7 @@ def read_csv(path: Path) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--master", type=Path, default=HOUSE / "house-design.json")
+    parser.add_argument("--prior-master", type=Path, required=True)
     parser.add_argument("--out", type=Path, default=ROOT / "final-handoff")
     args = parser.parse_args()
     out, master_path = args.out.resolve(), args.master.resolve()
@@ -51,12 +55,14 @@ def main() -> None:
 
     check("master hash", sha(master_path) == master_sha, master_sha)
     m = load(master_path)
+    delta = verify(load_verified(args.prior_master, PRIOR_SHA), m)
+    check("validated CCT-only successor", ledger["cct_revision"] == delta, delta)
     decision = load(out / "source-evidence" / "living-supply-and-cabinet-selections-receipt.json")
     wardrobe = load(out / "source-evidence" / "wardrobe-interiors-reference-receipt.json")
     previous = load(out / "source-evidence" / "homeowner-coordination-receipt.json")
     pooja = load(out / "source-evidence" / "pooja-display-receipt.json")
     option = out / "source-evidence" / "living-low-one-supply-option.json"
-    check("receipt chain", wardrobe["after_master_sha256"] == master_sha
+    check("receipt chain", wardrobe["after_master_sha256"] == PRIOR_SHA
           and wardrobe["before_master_sha256"] == decision["after_master_sha256"]
           and decision["before_master_sha256"] == pooja["after_master_sha256"]
           and pooja["before_master_sha256"] == previous["after_master_sha256"], "all ancestor links")

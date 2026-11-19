@@ -1,6 +1,6 @@
 # Electrical and wall-control handoff
 
-**Review and quotation only - not for ordering, wiring or construction.** Four-storey Hyderabad house; one 2BHK per floor. All quantities below are for **one flat** unless stated otherwise.
+**Review and quotation only - not for ordering, wiring or construction.** Working assumption: four storeys with one modelled 2BHK flat per floor (four flat schedules total). All quantities below are for **one flat** unless stated otherwise; confirm the actual floor and flat count and variations on site.
 
 **Master SHA-256:** `{{MASTER_SHA}}`. {{MASTER_BINDING}}
 

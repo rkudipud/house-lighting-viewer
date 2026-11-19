@@ -12,13 +12,14 @@ from pathlib import Path
 import pymupdf as fitz
 from PIL import Image
 from playwright.sync_api import sync_playwright
+from validate_cct_revision import CURRENT_SHA, PRIOR_SHA, IDS, load_verified, verify
 
 BASE = Path(r"not-distributed/lighting-session-inputs")
 OUT = BASE / "lighting-current-review"
 EVIDENCE = BASE / "lighting-integrated-current" / "verification"
 MASTER = Path(r"handoff/source-basis/house-design.json")
 PACK = BASE / "final-lighting-fixed-white"
-EXPECTED_MASTER = "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac"
+EXPECTED_MASTER = CURRENT_SHA
 EXPECTED_DI = "ca19a7b5cf2c0c92cf3120c95c812567fbdaa3325a7e18b3a132105e66aa604e"
 EXPECTED_HEATMAP = "e81bf2fbe1819f481c12b45aba9ead3352893f00abeaf6bf3fc1bbf698910b4a"
 checks = []
@@ -62,10 +63,7 @@ def browser_checks(calculations):
     EVIDENCE.mkdir(parents=True, exist_ok=True)
     errors, requests = [], []
     with sync_playwright() as playwright:
-        edge = Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
-        chrome = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
-        executable = next((str(path) for path in (edge, chrome) if path.is_file()), None)
-        browser = playwright.chromium.launch(headless=True, **({"executable_path": executable} if executable else {}))
+        browser = playwright.chromium.launch(headless=True)
         try:
             page = browser.new_page(viewport={"width": 1440, "height": 1000}, device_scale_factor=1)
             page.on("pageerror", lambda error: errors.append(str(error)))
@@ -134,16 +132,18 @@ def browser_checks(calculations):
 
 
 def main():
-    global EVIDENCE
+    global EVIDENCE, OUT, MASTER, PACK
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--receipt", type=Path, default=OUT / "verification.json",
-                        help="New receipt path within this session's files")
-    parser.add_argument("--evidence-dir", type=Path, default=EVIDENCE,
-                        help="New screenshot directory within this session's files")
+    parser.add_argument("--master", required=True, type=Path)
+    parser.add_argument("--prior-master", required=True, type=Path)
+    parser.add_argument("--pack", required=True, type=Path)
+    parser.add_argument("--out", required=True, type=Path)
+    parser.add_argument("--receipt", required=True, type=Path)
+    parser.add_argument("--evidence-dir", required=True, type=Path)
     args = parser.parse_args()
+    MASTER, PACK, OUT = args.master.resolve(), args.pack.resolve(), args.out.resolve()
     receipt, EVIDENCE = args.receipt.resolve(), args.evidence_dir.resolve()
-    if not receipt.is_relative_to(BASE.resolve()) or not EVIDENCE.is_relative_to(BASE.resolve()):
-        raise ValueError("Receipt and screenshot directory must remain inside this session's files")
+    verify(load_verified(args.prior_master, PRIOR_SHA), load_verified(MASTER, EXPECTED_MASTER))
     if (receipt.is_relative_to(OUT.resolve()) and receipt != (OUT / "verification.json").resolve()
             or EVIDENCE.is_relative_to(OUT.resolve())):
         raise ValueError("Additional verification artifacts must be outside the delivered package")
@@ -179,11 +179,12 @@ def main():
     check(len(fixture_json) == len(fixture_csv) == len({x["id"] for x in fixture_csv}) == 104,
           "Base fixture CSV/JSON have 104 unique fittings")
     original = json.loads((PACK / "fixture-ledger.json").read_bytes())
-    normalized = [{k: v for k, v in f.items() if k != "tunable"} for f in fixture_json]
+    normalized = [{k: ("3000K" if k == "cct" and f["id"] in IDS else v)
+                   for k, v in f.items() if k != "tunable"} for f in fixture_json]
     check(normalized == original and all(f["tunable"] is False for f in fixture_json),
           "All original optical fixture locations/values remain unchanged and fixed-white")
-    check(Counter(x["cct_K"] for x in fixture_csv) == {"2700": 30, "3000": 40, "4000": 34},
-          "Fixed-CCT fixture distribution is 30/40/34")
+    check(Counter(x["cct_K"] for x in fixture_csv) == {"2700": 30, "3000": 12, "4000": 62},
+          "Fixed-CCT fixture distribution is 30/12/62")
     check(cmap["binding"]["master_sha256"] == EXPECTED_MASTER
           and cmap["binding"]["design_inputs_sha256"] == canonical(master["lighting"]["design_inputs"])
           and cmap["binding"]["photometry_source_design_inputs_sha256"] == EXPECTED_DI,

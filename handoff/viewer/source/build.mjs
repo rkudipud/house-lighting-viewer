@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {dirname,join,resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
+import {execFileSync} from 'node:child_process';
 import {prepare} from './layout_views/data.mjs';
 import {prepareTour} from './tour-data.mjs';
 import {prepareAnalysis} from './analysis-data.mjs';
@@ -24,6 +25,12 @@ const bytes=await readFile(source);
 const masterSha=createHash('sha256').update(bytes).digest('hex');
 const house=JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,''));
 if(masterSha!==expected)throw new Error('Master hash differs from authorized --sha');
+const priorPath=option('--prior-master');
+if(!priorPath)throw new Error('--prior-master is required to validate the CCT-only successor.');
+const cctDelta=JSON.parse(execFileSync(process.env.PYTHON || 'python',
+  [resolve(root,'../../electrician/lighting/source/validate_cct_revision.py'),priorPath,source],{encoding:'utf8'}));
+if(cctDelta.current_master_sha256!==masterSha)throw new Error('CCT successor verification does not bind this master.');
+const priorSha=cctDelta.prior_master_sha256;
 if(!house.visualization_geometry||house.bathrooms.rooms.length!==2||!house.lighting.design_inputs)throw new Error('Required canonical design sections are missing');
 
 // Gates on structured fields (a text scan of the validity block would trip on its own "not released" wording).
@@ -41,7 +48,7 @@ const supplyReceipt=JSON.parse(supplyBytes.toString('utf8'));
 const interiorReceiptBytes=await readFile(option('--interior-receipt')||join(generated,'wardrobe-interiors-reference-receipt.json'));
 const interiorReceipt=JSON.parse(interiorReceiptBytes.toString('utf8'));
 if(coordination.after_master_sha256!==poojaReceipt.before_master_sha256||poojaReceipt.after_master_sha256!==supplyReceipt.before_master_sha256||
-   supplyReceipt.after_master_sha256!==interiorReceipt.before_master_sha256||interiorReceipt.after_master_sha256!==masterSha||
+   supplyReceipt.after_master_sha256!==interiorReceipt.before_master_sha256||interiorReceipt.after_master_sha256!==priorSha||
    coordination.verification?.house_store_validate!=='PASS'||
    poojaReceipt.decision?.decision_id!=='HS-POOJA-DISPLAY'||supplyReceipt.selected_supply?.retain_supply_id!=='P01'||
    supplyReceipt.selected_supply?.remove_supply_id!=='P03'||
@@ -68,11 +75,11 @@ if(wardrobe.schema!=='wardrobe-interiors/1'||wardrobe.source_master_sha256!==war
   throw new Error('Wardrobe interiors are not the provisional proposal referenced by the current master');
 const wardrobeReceipt=JSON.parse(await readFile(join(wardrobePackDir,'rollup-receipt.json'),'utf8'));
 const wardrobeRebind=wardrobeReceipt.interior_reference_rebind;
-if(wardrobeReceipt.source_master_sha256!==masterSha||
+if(wardrobeReceipt.source_master_sha256!==priorSha||
    wardrobeReceipt.original_interior_generation_basis_sha256!==wardrobeRef.source_master_sha256||
    wardrobeReceipt.outputs_sha256?.['wardrobe-interiors.json']!==wardrobeSha||
    wardrobeRebind?.sha256!==createHash('sha256').update(interiorReceiptBytes).digest('hex')||
-   wardrobeRebind.before_master_sha256!==wardrobeRef.source_master_sha256||wardrobeRebind.after_master_sha256!==masterSha||
+   wardrobeRebind.before_master_sha256!==wardrobeRef.source_master_sha256||wardrobeRebind.after_master_sha256!==priorSha||
    wardrobeRebind.original_interior_source_sha256!==wardrobeSha)
   throw new Error('Wardrobe rollup receipt does not bind this master, the prior interior basis and reference JSON');
 for(const id of ['R04','R05','R04a','R08','R09']){
@@ -122,6 +129,12 @@ for(const f of currentMap.fittings){
   if(!Array.isArray(f.placement_hold_ids))throw new Error(`Missing placement holds for ${f.id}`);
   if(/^CBR-H[1-6]$/.test(f.id)&&(!f.viewer_operability?.startsWith('ACTIVE_FOR_REVIEW')||f.placement_hold_ids.length))
     throw new Error(`${f.id}: current HIGH review operability differs from the lighting pack`);
+}
+const cbrCeilingHeld=new Set(['CBR-L1','CBR-X1','CBR-X2','CBR-X3','CBR-X4']);
+for(const id of cbrCeilingHeld){
+  const fitting=currentMap.fittings.find(f=>f.id===id);
+  if(!fitting?.placement_hold_ids.includes('H-CBR-CEIL'))
+    throw new Error(`${id}: explicit H-CBR-CEIL must remain attached to its viewer fixture`);
 }
 for(const p of currentMap.curtain_pocket_candidates.pockets){
   const hold=p.id==='CURT-MBR-W03'?'H-MBR-W03':'H-CURTAIN-POCKET';
@@ -188,8 +201,8 @@ if(drawings){
     const bound=receipt.source_master?.sha256??receipt.master_sha256;
     const pdf=receipt.combined_pdf??receipt.artifacts?.pdf??receipt.artifacts?.find?.(a=>a.file===name);
     const got=createHash('sha256').update(buf).digest('hex');
-    if(bound!==masterSha||pdf?.file!==name||pdf.sha256!==got||pdf.bytes!==buf.length)
-      throw new Error(`${name}: drawing receipt does not bind the current master and PDF bytes`);
+    if(bound!==priorSha||pdf?.file!==name||pdf.sha256!==got||pdf.bytes!==buf.length)
+      throw new Error(`${name}: drawing receipt does not bind the verified predecessor and PDF bytes`);
     if(dir==='layout-views'&&(receipt.checks_total!==receipt.checks_passed||receipt.combined_pdf.pages!==13))
       throw new Error(`${name}: drawing checks or page count failed`);
     if(dir==='working-plan'&&(!receipt.verified_utc||receipt.construction_release!==false||receipt.render?.pdf_pages!==1))
@@ -271,8 +284,8 @@ Colour temperatures are fixed per fitting and are not adjustable.
 - The four bedside readers and two PIR night lights are individual fitting previews, off by default; held readers cannot be enabled. The actual readers dim on the fitting and the night lights are PIR-operated, not extra wall dimmers.
 - The selected dressing and utility cabinets are unmeasured conditional illustrations (FH-ST-03 / FH-ST-12), not construction-ready. One living LOW supply is selected for review; product, protection and electrical design remain on hold.
 - Wardrobe interiors are provisional and unapproved; the viewer's open-cabinet illustration is not measured joinery. The current-bound wardrobe review PDF identifies the unchanged original interior-generation basis as 2ce3fcb4; measurement and sign-off remain open.
-- D01 is single-leaf in the model but double-leaf in the architectural description; confirm on site. Assumed MBR-S and CBR pocket returns extend about 0.30 m beyond modeled room corners. The viewer clips them only for display; actual pocket ends remain unmeasured and held.
-- Export the current view as PNG and the fixture / circuit schedules as CSV. The linked PDFs are in the adjacent \`downloads\` folder. When the viewer is opened from disk, a browser may open a PDF in a new tab; use the PDF viewer's Save button.
+- Door leaves are hidden in the viewer; openings remain in the design. D01's leaf arrangement remains a site check. Assumed MBR-S and CBR pocket returns extend about 0.30 m beyond modeled room corners. The viewer clips them only for display; actual pocket ends remain unmeasured and held.
+- The linked review PDFs are in the adjacent \`downloads\` folder. When the viewer is opened from disk, a browser may open a PDF in a new tab; use the PDF viewer's Save button.
 - Bound to the integrated lighting master SHA-256 \`${masterSha}\`.
 - Three.js 0.181.1 is bundled into \`index.html\`; its MIT notice is embedded and provided as \`THREE-LICENSE.txt\`. No CDN or network access is needed at runtime.
 `;

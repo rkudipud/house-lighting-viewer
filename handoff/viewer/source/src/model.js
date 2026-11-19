@@ -17,10 +17,7 @@ export function createModel(scene,materials) {
   const frames=[],variants={};
   let cornerStyle=PLAN.design.cornerStyle;
   const H=PLAN.heights.soffit.value;
-  // Animated or toggled parts live in noMerge groups under `world`, so view toggles keep working but the static mesh merge skips them.
-  const dynamic=new T.Group();dynamic.userData.noMerge=true;world.add(dynamic);
-  let mainDoor=null;
-  const doors=[];
+  const doorLeaves=new T.Group();doorLeaves.userData.noMerge=true;doorLeaves.visible=false;world.add(doorLeaves);
   m.greyCurtain=new T.MeshStandardMaterial({color:'#a7a29a',roughness:.95,side:T.DoubleSide});
   scene.add(world,ceiling,lights,grooves,rcp,feature,neighbours,labels,fans,markers);markers.visible=false;
   const boxGeo=new T.BoxGeometry(1,1,1),roundGeo=new RoundedBoxGeometry(1,1,1,2,.08),sphereGeo=new T.SphereGeometry(1,12,8);
@@ -38,16 +35,6 @@ export function createModel(scene,materials) {
   function solid(rect,y,h,mat=m.wood,rounded=false){
     const [x,z,X,Z]=metresRect(rect);box((x+X)/2,y,(z+Z)/2,X-x,h,Z-z,mat,world,rounded);
     collision.push({x0:x,z0:z,x1:X,z1:Z,y0:y-h/2,y1:y+h/2,kind:'furniture'});
-  }
-  function setBathDoor(id,open){
-    const d=doors.find(d=>d.id===id);
-    if(!d)throw new Error('Unknown bathroom door: '+id);
-    d.open=Boolean(open);d.pivot.rotation.y=d.open?d.sign*Math.PI/2:0;
-    d.pivot.updateMatrixWorld(true);
-    for(const [object,body] of d.colliders){
-      const bounds=new T.Box3().setFromObject(object);
-      Object.assign(body,{x0:bounds.min.x,z0:bounds.min.z,x1:bounds.max.x,z1:bounds.max.z,y0:bounds.min.y,y1:bounds.max.y});
-    }
   }
   function line(a,b,r,mat,parent=world){
     const dir=new T.Vector3().subVectors(b,a),o=cylinder((a.x+b.x)/2,(a.y+b.y)/2,(a.z+b.z)/2,r,dir.length(),mat,r,parent);
@@ -149,41 +136,33 @@ export function createModel(scene,materials) {
       local(b-jamb/2,(sill+head)/2,jamb,head-sill,.12,m.frame);
       local((a+b)/2,head,openW,.05,.13,m.frame);
       if(o.main){
-        // Single dark-wenge leaf with a long brass pull, hinged on the west jamb; opens inward when the viewer is near.
-        const pivot=new T.Group();pivot.position.set(a,0,cross);dynamic.add(pivot);
+        const pivot=new T.Group();pivot.position.set(a,0,cross);doorLeaves.add(pivot);
         const leafH=head-.04,leaf=openW-.012,lm=m.wenge;
-        box(leaf/2+.006,leafH/2+.01,0,leaf,leafH,.05,lm,pivot);
+        const panel=box(leaf/2+.006,leafH/2+.01,0,leaf,leafH,.05,lm,pivot);panel.userData.doorLeaf=o.id;
         for(const side of [-1,1]){
-          box(leaf-.07,1.12,side*.062,.024,.9,.024,m.gold,pivot);
-          for(const yy of [.72,1.52])box(leaf-.07,yy,side*.038,.02,.02,.04,m.gold,pivot);
+          box(leaf-.07,1.12,side*.062,.024,.9,.024,m.gold,pivot).userData.doorHardware=o.id;
+          for(const yy of [.72,1.52])box(leaf-.07,yy,side*.038,.02,.02,.04,m.gold,pivot).userData.doorHardware=o.id;
         }
-        mainDoor={pivot,x:(a+b)/2,z:cross,angle:0,target:0};
         continue;
       }
       if(o.kind==='door'){
         if(o.hingeEnd&&o.id.startsWith('bath')){
           if(alongX)throw new Error('Bathroom door requires an x-constant host wall');
           const sign=o.hingeEnd==='max'?-1:1,pivot=new T.Group();
-          pivot.position.set(cross,0,sign===1?a:b);dynamic.add(pivot);
+          pivot.position.set(cross,0,sign===1?a:b);doorLeaves.add(pivot);
           const leaf=box(0,(head-.07)/2,sign*openW/2,o.leafThicknessM,head-.07,openW-2*jamb,m.wood,pivot);
-          const handle=box(.055,1,sign*(openW-.12),.025,.18,.025,m.metal,pivot);
-          leaf.userData.door=o.id;
-          const colliders=[leaf,handle].map(object=>{
-            const body={kind:'door',id:o.id};collision.push(body);return [object,body];
-          });
-          doors.push({id:o.id,pivot,leaf,handle,sign,colliders,open:true});
-          setBathDoor(o.id,true);
+          leaf.userData.doorLeaf=o.id;
+          box(.055,1,sign*(openW-.12),.025,.18,.025,m.metal,pivot).userData.doorHardware=o.id;
           continue;
         }
         const n=o.double?2:1,w=openW/n;
         for(let leaf=0;leaf<n;leaf++){
-          // Door leaves are parked 90 degrees to the wall, with the full clear opening traversable.
           const hinge=leaf===0?a:b,sign=leaf===0?1:-1;
           const center=cross+o.openSide*w*.5;
           const thickness=o.leafThicknessM??.045;
-          const door=alongX?box(hinge,(head-.07)/2,center,thickness,head-.07,w,m.wood):box(center,(head-.07)/2,hinge,w,head-.07,thickness,m.wood);
-          const handle=alongX?box(hinge+sign*.05,1,center+o.openSide*w*.2,.025,.18,.025,m.metal):box(center+o.openSide*w*.2,1,hinge+sign*.05,.025,.18,.025,m.metal);
-          door.userData.door=o.id;handle.castShadow=false;
+          const door=alongX?box(hinge,(head-.07)/2,center,thickness,head-.07,w,m.wood,doorLeaves):box(center,(head-.07)/2,hinge,w,head-.07,thickness,m.wood,doorLeaves);
+          const handle=alongX?box(hinge+sign*.05,1,center+o.openSide*w*.2,.025,.18,.025,m.metal,doorLeaves):box(center+o.openSide*w*.2,1,hinge+sign*.05,.025,.18,.025,m.metal,doorLeaves);
+          door.userData.doorLeaf=o.id;handle.userData.doorHardware=o.id;handle.castShadow=false;
         }
       }else{
         local((a+b)/2,(sill+head)/2,openW-.06,head-sill-.04,.018,wall.id==='kitchen-utility'?m.glass:m.windowGlass).castShadow=false;
@@ -293,7 +272,7 @@ export function createModel(scene,materials) {
     for(let i=0;i<4;i++)box(w*(i-1.5)*.13,-h*.28,.042,.008,h*.26,.004,m.wood,g);
   }
   for(const f of PLAN.furniture)if(f.kind==='plant')plant(f.at[0]*FT,f.at[1]*FT,f.height,f.fig);
-  const ctx={m,PLAN,FT,metresRect,box,cylinder,ball,slab,solid,line,v,world,dynamic,collision,glowMat,decalMat,planeGeo,lights,chair,plant,lamp,artwork,mesh,panelFrame};
+  const ctx={m,PLAN,FT,metresRect,box,cylinder,ball,slab,solid,line,v,world,collision,glowMat,decalMat,planeGeo,lights,chair,plant,lamp,artwork,mesh,panelFrame};
   const hall=buildHall(ctx);
   const rooms=buildRooms(ctx);
   const baths=buildBaths(ctx);
@@ -365,13 +344,7 @@ export function createModel(scene,materials) {
   mergeGroup(world);mergeGroup(ceiling);mergeGroup(lights);mergeGroup(fans);
   for(const variant of Object.values(variants))for(const g of Object.values(variant.groups))mergeGroup(g);
   world.traverse(o=>{if(o.isMesh&&!o.material.transparent&&o.parent!==rooms.wardrobeProposals.interior)shadowObjects.push(o);});
-  // The main door swings inward when the viewer is within ~1.9 m.
   function update(dt,focus){
-    if(mainDoor){
-      mainDoor.target=focus&&Math.hypot(focus.x-mainDoor.x,focus.z-mainDoor.z)<1.9?1.75:0;
-      mainDoor.angle+=(mainDoor.target-mainDoor.angle)*(1-Math.exp(-dt*4));
-      mainDoor.pivot.rotation.y=mainDoor.angle;
-    }
     hall.update(dt);
   }
   function label(room){
@@ -385,5 +358,5 @@ export function createModel(scene,materials) {
   }
   PLAN.rooms.filter(r=>!['dressing','washing','lobby'].includes(r.id)).forEach(label);
   labels.visible=false;
-  return {world,ceiling,lights,grooves,rcp,feature,features:fixtures.features,neighbours,labels,fans,markers,avatar,collision,floors,emission,shadowObjects,roof,box,line,glowMat,decalMat,plan,ceilingInfo,ensureMarkerLabels:fixtures.ensureLabels,curtainPockets:fixtures.curtainPockets,lightEffects:fixtures.lightEffects,update,hall,rooms,baths,doors,setBathDoor,stairParts,variants,setCornerStyle,getCornerStyle:()=>cornerStyle,setTiles:materials.setTiles};
+  return {world,doorLeaves,ceiling,lights,grooves,rcp,feature,features:fixtures.features,neighbours,labels,fans,markers,avatar,collision,floors,emission,shadowObjects,roof,box,line,glowMat,decalMat,plan,ceilingInfo,ensureMarkerLabels:fixtures.ensureLabels,curtainPockets:fixtures.curtainPockets,lightEffects:fixtures.lightEffects,update,hall,rooms,baths,stairParts,variants,setCornerStyle,getCornerStyle:()=>cornerStyle,setTiles:materials.setTiles};
 }

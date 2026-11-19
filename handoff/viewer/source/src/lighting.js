@@ -7,7 +7,11 @@ export function kelvin(k) {
   const t=k/100,r=t<=66?255:329.698727446*Math.pow(t-60,-.1332047592);
   const g=t<=66?99.4708025861*Math.log(t)-161.1195681661:288.1221695283*Math.pow(t-60,-.0755148492);
   const b=t>=66?255:t<=19?0:138.5177312231*Math.log(t-10)-305.0447927307;
-  return new T.Color().setRGB(T.MathUtils.clamp(r/255,0,1),T.MathUtils.clamp(g/255,0,1),T.MathUtils.clamp(b/255,0,1),T.SRGBColorSpace);
+  // Visual white balance, not a spectral colour or photometric calibration.
+  const whiteG=99.4708025861*Math.log(40)-161.1195681661;
+  const whiteB=138.5177312231*Math.log(30)-305.0447927307;
+  const balance=(value,white)=>T.MathUtils.clamp(.4+.6*value/white,0,1);
+  return new T.Color().setRGB(balance(r,255),balance(g,whiteG),balance(b,whiteB),T.SRGBColorSpace);
 }
 export function solarPosition(hour,day,northFront=true){
   const rad=Math.PI/180,lat=17.385*rad,b=(day-81)*360/364*rad;
@@ -28,7 +32,8 @@ export const ipRating=type=>{
 };
 const CHANNEL_LABEL={high:'HIGH',low:'Cove (LOW)',mood:'MOOD',perim:'Bath perimeter',line:'LINE',task:'TASK',read:'READ',night:'NIGHT',mirror:'VANITY',pooja:'Pooja strip',poojaSpot:'Pooja spot',art:'ART',study:'STUDY',uv:'Under-vanity'};
 export const channelLabel=c=>CHANNEL_LABEL[c]||c;
-const SPOT_SCALE=.0062;
+const VISUAL_GLOW_SCALE=.22;
+const RAIL_OF_LANE={HIGH:'high',TASK:'high',LOW:'low',COVE:'low',LINE:'low',MOOD:'low',PERIM:'low'};
 
 export function createLighting(scene,model) {
   const numerical=PLAN.numericalLighting?.available!==false;
@@ -50,7 +55,10 @@ export function createLighting(scene,model) {
     if(!fixtures.length)throw new Error('Empty scheduled circuit '+circuit.circuit);
     groupStates[circuit.circuit]={on:false,dim:100,k:parseInt(fixtures[0].cct),auto:true,tunable:fixtures.every(f=>f.tunable),fixtures};
   }
-  const members=(room,ch)=>[...new Set(allFixtures.filter(f=>f.room===zones.find(z=>z.room===zoneId(room))?.id&&(!ch||channelOf(f)===ch)).map(f=>f.circuit))];
+  const members=(room,ch)=>[...new Set(allFixtures.filter(f=>{
+    if(f.room!==zones.find(z=>z.room===zoneId(room))?.id)return false;
+    return !ch||(ch==='high'||ch==='low'?RAIL_OF_LANE[f.lane]===ch:channelOf(f)===ch);
+  }).map(f=>f.circuit))];
   function setCircuit(id,values){
     const s=groupStates[id];
     if(!s)throw new Error('Unknown scheduled dimmer '+id);
@@ -266,46 +274,52 @@ export function createLighting(scene,model) {
     for(const e of model.emission){
       const s=e.circuit?groupStates[e.circuit]:states[zoneId(e.room)][e.layer];if(!s)throw new Error('Unscheduled emissive layer '+e.layer);
       const held=e.circuit?groupStates[e.circuit].fixtures.every(f=>f.held):e.layer==='pooja'||e.layer==='poojaSpot';
-      const level=!held&&s.on?s.dim/100:0;
+      const scheduled=e.circuit?groupStates[e.circuit].fixtures.some(f=>!f.held&&f.lm>0):true;
+      const level=scheduled&&!held&&s.on?s.dim/100:0;
       if(e.kind==='decal'){
-        const target=kelvin(s.k).multiplyScalar(level*(e.gain??1));e.mat.color.lerp(target,t);
+        const target=kelvin(s.k).multiplyScalar(level*(e.gain??1)*VISUAL_GLOW_SCALE);e.mat.color.lerp(target,t);
       }else{
-        e.mat.emissive.lerp(kelvin(s.k),t);e.mat.emissiveIntensity=T.MathUtils.lerp(e.mat.emissiveIntensity,s.on?level*(e.gain??(e.layer==='high'?3.4:2.2)):.01,t);
+        e.mat.emissive.lerp(kelvin(s.k),t);e.mat.emissiveIntensity=T.MathUtils.lerp(e.mat.emissiveIntensity,level*(e.gain??(e.layer==='high'?3.4:2.2))*VISUAL_GLOW_SCALE,t);
       }
     }
     for(const {room,light} of pools){
       const s=states[room],col=new T.Color(0,0,0);let power=0,weightSum=0;
       for(const f of fixtureCache[room]){
         const c=channelOf(f);if(c==='art')continue;
-        const lm=(f.held?0:groupWeight(f.circuit))*f.lm*(f.pts?.15:1),k=kelvin(groupStates[f.circuit].k);col.r+=k.r*lm;col.g+=k.g*lm;col.b+=k.b*lm;weightSum+=lm;power+=lm*.006;
+        const lm=(f.held?0:groupWeight(f.circuit))*f.lm,k=kelvin(groupStates[f.circuit].k);col.r+=k.r*lm;col.g+=k.g*lm;col.b+=k.b*lm;weightSum+=lm;power+=lm;
       }
       if(weightSum)col.multiplyScalar(1/weightSum);
-      light.color.lerp(col,t);light.intensity=T.MathUtils.lerp(light.intensity,Math.min(48,power),t);
+      // PointLight.power is luminous flux in lumens; keep the pooled source at the schedule total.
+      light.color.lerp(col,t);light.power=T.MathUtils.lerp(light.power,power,t);
     }
     const w=weight('dining','art'),k=kelvin(states.dining.art.k);
     for(const sp of spots){
-      if(!sp.f){sp.light.intensity=T.MathUtils.lerp(sp.light.intensity,0,t);continue;}
-      const m=Math.max(.6,Math.log(.5)/Math.log(Math.cos(sp.f.beam*Math.PI/360))),I0=sp.f.lm*(m+1)/(2*Math.PI);
-      sp.light.color.lerp(k,t);sp.light.intensity=T.MathUtils.lerp(sp.light.intensity,I0*SPOT_SCALE*w,t);
+      if(!sp.f){sp.light.power=T.MathUtils.lerp(sp.light.power,0,t);continue;}
+      sp.light.color.lerp(k,t);sp.light.power=T.MathUtils.lerp(sp.light.power,sp.f.lm*w,t);
     }
   }
   rebuild();
 
   // ---- Simple per-room rails: ON/OFF, HIGH (main) and LOW (cove / mood / line / perimeter) brightness ----
-  const RAIL_OF_LANE={HIGH:'high',LOW:'low',COVE:'low',LINE:'low',MOOD:'low',PERIM:'low'};
   const railOfCircuit=id=>RAIL_OF_LANE[groupStates[id].fixtures[0].lane]||'independent';
   const roomLight=Object.fromEntries(zones.map(z=>[z.room,{on:false,high:100,low:100}]));
+  const masterLight={high:{on:true,dim:100},low:{on:true,dim:100}};
+  const circuitLocalDim=Object.fromEntries(Object.keys(groupStates).map(id=>[id,100]));
   const roomsOfCircuit=id=>zones.filter(z=>members(z.room).includes(id)).map(z=>z.room);
   const clampPct=v=>Math.max(0,Math.min(100,Math.round(Number(v))));
+  function applyCircuit(id){
+    const s=groupStates[id],rail=railOfCircuit(id),accessory=s.fixtures.find(f=>Object.hasOwn(accessoryState,f.id));
+    const roomOn=roomsOfCircuit(id).some(r=>roomLight[r].on),held=s.fixtures.every(f=>f.held);
+    const master=rail==='high'||rail==='low'?masterLight[rail]:null;
+    s.auto=false;
+    s.on=accessory?!accessory.held&&accessoryState[accessory.id]:!held&&roomOn&&(!master||master.on);
+    s.dim=master?circuitLocalDim[id]*master.dim/100:100;
+  }
   function applyRoomLight(room){
     for(const id of members(room)){
-      const s=groupStates[id],rail=railOfCircuit(id),lane=s.fixtures[0].lane;
-      const accessory=s.fixtures.find(f=>Object.hasOwn(accessoryState,f.id));
-      s.auto=false;s.on=accessory?!accessory.held&&accessoryState[accessory.id]
-        :!s.fixtures.every(f=>f.held)&&roomsOfCircuit(id).some(r=>roomLight[r].on);
-      if(rail==='high')s.dim=roomLight[room].high;
-      else if(rail==='low')s.dim=roomLight[room].low;
-      else s.dim=100;
+      const rail=railOfCircuit(id);
+      if(rail==='high'||rail==='low')circuitLocalDim[id]=roomLight[room][rail];
+      applyCircuit(id);
     }
   }
   function setRoomLight(room,values={}){
@@ -319,12 +333,40 @@ export function createLighting(scene,model) {
     applyRoomLight(id);
     return getRoomLight(id);
   }
+  function setMasterLight(lane,values={}){
+    if(lane!=='high'&&lane!=='low')throw new Error('Unknown whole-house lighting lane '+lane);
+    const state=masterLight[lane];
+    if(values.on!=null)state.on=Boolean(values.on);
+    if(values.dim!=null){
+      if(!Number.isFinite(Number(values.dim)))throw new Error('Brightness must be a number 0-100');
+      state.dim=clampPct(values.dim);
+    }
+    for(const id of Object.keys(groupStates))if(railOfCircuit(id)===lane)applyCircuit(id);
+    recompute();
+    return getMasterLight(lane);
+  }
+  function getMasterLight(lane){
+    if(lane!=='high'&&lane!=='low')throw new Error('Unknown whole-house lighting lane '+lane);
+    return {...masterLight[lane]};
+  }
   function getRoomLight(room){
     const id=zoneId(room),r=roomLight[id],zone=zones.find(z=>z.room===id),ids=members(id);
     const active=ids.filter(id=>!groupStates[id].fixtures.every(f=>f.held));
     const rails=active.map(railOfCircuit),cct=PLAN.fixedCct?.rooms?.[zone.id]||{high:[],low:[],independent:[]};
     return {room:id,zone:zone.id,on:r.on,high:r.high,low:r.low,hasHigh:rails.includes('high'),hasLow:rails.includes('low'),
       held:active.length===0,cct,sharedLow:ids.filter(c=>railOfCircuit(c)==='low'&&roomsOfCircuit(c).length>1)};
+  }
+  function getLumenBudget(room){
+    const zone=zones.find(z=>z.room===zoneId(room));if(!zone)throw new Error('Unknown room '+room);
+    const result={scheduled:{high:0,low:0},available:{high:0,low:0},effective:{high:0,low:0}};
+    for(const f of zone.fixtures){
+      const rail=railOfCircuit(f.circuit);if(rail!=='high'&&rail!=='low')continue;
+      const lm=Number(f.lm);
+      if(!Number.isFinite(lm)||lm<0)throw new Error('Invalid scheduled lumens for '+f.id);
+      result.scheduled[rail]+=lm;
+      if(!f.held){result.available[rail]+=lm;result.effective[rail]+=lm*groupWeight(f.circuit);}
+    }
+    return result;
   }
   function setAccessory(id,on){
     const f=accessoryFixtures.find(f=>f.id===id);
@@ -352,7 +394,7 @@ export function createLighting(scene,model) {
     return avg;
   }
   return {
-    setRoomLight,getRoomLight,setAllRooms,railOfCircuit,roomLight,accessoryFixtures,accessoryState,setAccessory,
+    setRoomLight,getRoomLight,getLumenBudget,setAllRooms,setMasterLight,getMasterLight,railOfCircuit,roomLight,accessoryFixtures,accessoryState,setAccessory,
     states,groupStates,circuits,setCircuit,members,reference,grids,floorBasis,stats,overlays,pools,spots,recompute,setScene,setTime,update,heatStops,zones,readouts,setFeature,
     refreshOverlays:paintOverlays,weight,weightsOf,groupWeight,groupWeights,
     fixtures:room=>fixtureCache[zoneId(room)]||[],

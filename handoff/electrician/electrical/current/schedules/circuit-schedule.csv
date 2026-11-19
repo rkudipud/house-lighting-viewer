@@ -1,0 +1,52 @@
+﻿circuit,room,lane,fixture_ids,n_fixtures,wall_control,board,control_class,supply_id,model_W,model_outputs,CCT,release_status,note
+C01,LIV,HIGH,LIV-H1; LIV-H2; LIV-H3; LIV-H4; LIV-H5,5,D-C01,SB-01,TE,,40,1,4000K,PRODUCT / CHAIN HOLD,OPT-1 regroup: window half of the living room (window line LIV-H1..H4 + LIV-H5); 40 W / 5 lamps
+C02,LIV,HIGH,LIV-H6; LIV-H7; LIV-H8; LIV-H9; LIV-H10,5,D-C02,SB-01,TE,,40,1,4000K,PRODUCT / CHAIN HOLD,"OPT-1 regroup: TV half (LIV-H6, LIV-H7 + TV-wall gimbals LIV-H8..H10); 40 W / 5 lamps; DL8 and DL8A heads on one dimmer need the same driver family"
+C03,LIV,COVE,LIV-L1,1,K-LIV-LOW,SB-01,KNOB1,P01,92.24,2,2700K,PRODUCT / CHAIN HOLD,"2 sections on 2 knob outputs (1.92 A each, 3.84 A total) from ONE PSU P01"
+C04,LIV,MOOD,LIV-L2,1,K-LIV-LOW,SB-01,KNOB1,P01,10.08,1,2700K,PRODUCT / CHAIN HOLD,TV bias light
+C05,DIN; LIV,LINE,LIV-X1; LIV-X2; DIN-X1,3,K-LIV-LOW,SB-01,KNOB1,P01,59.6,2,2700K,PRODUCT / CHAIN HOLD,hall linear; load split over 2 knob outputs
+C06A,LIV,ACCENT,LIV-P1,1,K-LIV-POOJA-STRIP,SB-01,KNOB1,P04,21.72,1,2700K,PRODUCT / CHAIN HOLD,pooja niche strip - own knob (user decision)
+C06B,LIV,ACCENT,LIV-P2,1,K-LIV-POOJA-SPOT,SB-01,KNOB1,P04,6,1,2700K,PRODUCT / CHAIN HOLD,pooja pin-spot - own knob
+C07,BAL,HIGH,BAL-H1; BAL-H2,2,K-BAL-HIGH,SB-01,KNOB1,P05,12,1,3000K,PRODUCT / CHAIN HOLD,balcony cylinders
+C08,BAL,MOOD,BAL-L1; BAL-L2; BAL-L3,3,K-BAL-LOW,SB-01,KNOB1,P05,26.65,1,2700K,PRODUCT / CHAIN HOLD,balcony plinth + up-down
+C09,DIN,HIGH,DIN-H1; DIN-H2; DIN-H3,3,D-C09,SB-02,TE,,30,1,4000K,PRODUCT / CHAIN HOLD,
+C10,DIN,HIGH,DIN-H6,1,K-DIN-PASSAGE,SB-02,KNOB1,P06,8,1,4000K,PRODUCT / CHAIN HOLD,"passage; PSU mains 2-way SB-02/SB-07 (concept), knob level at SB-02"
+C11,DIN,MOOD,DIN-L1,1,D-C11,SB-02,TE,,12,1,2700K,PRODUCT / CHAIN HOLD,pendant; 12 W is below many dimmers' minimum load - pick a dimmer listed for it
+C12,DIN,COVE,DIN-L2,1,K-DIN-LOW,SB-02,KNOB1,P07,49.68,1,2700K,PRODUCT / CHAIN HOLD,
+C13,DIN,ACCENT,FW-T1; FW-T2; FW-T3; FW-T4,4,D-C13,SB-02,TRK,,26,1,3000K,PRODUCT / CHAIN HOLD,48 V track driver + dimmer listed by the track maker
+C14,KIT,HIGH,KIT-H1; KIT-H2; KIT-H3; KIT-H4,4,D-C14,SB-03,TE,,40,1,4000K,PRODUCT / CHAIN HOLD,counter ring
+C15,KIT,HIGH,KIT-H5; KIT-H6; KIT-H7; KIT-H8,4,D-C15,SB-03,TE,,31,1,4000K,PRODUCT / CHAIN HOLD,general
+C16,KIT,TASK,KIT-T1; KIT-T2; KIT-T3; KIT-T4,4,K-KIT-TASK,SB-03,KNOB1,P10,31.8,1,4000K,PRODUCT / CHAIN HOLD,"downward under-cabinet task + sink-end ceiling task linear (KIT-T4), one knob"
+C17,KIT,COVE,KIT-L1,1,K-KIT-LOW,SB-03,KNOB1,P08,70.56,2,2700K,PRODUCT / CHAIN HOLD,"2 sections on 2 knob outputs (1.47 A each, 2.94 A total) from ONE PSU P08"
+C18,UTL,HIGH,UTL-H1; UTL-H2; UTL-H3,3,D-C18,SB-04,TE,,36,1,4000K,PRODUCT / CHAIN HOLD,dimmable IP65 bulkheads (availability to confirm)
+C19,UTL,TASK,UTL-T1,1,K-UTL-TASK,SB-04,KNOB1,P11,11.0,1,4000K,PRODUCT / CHAIN HOLD,"IP67 PSU, knob indoors at SB-04"
+C20,MBR,HIGH,MBR-H1; MBR-H2; MBR-H3; MBR-H4; MBR-H5; MBR-H6; MBR-H7; MBR-H8,8,D-C20,SB-05,TE,,48,1,4000K,PRODUCT / CHAIN HOLD,dimmer at door; on/off 2-way door + intermediate SB-05L + 2-way SB-05R (concept)
+C21,MBR,COVE,MBR-L1,1,K-MBR-LOW,SB-05,KNOB1,P12,52.24,1,2700K,PRODUCT / CHAIN HOLD,
+C22,MBR,LINE,MBR-X1; MBR-X2,2,K-MBR-LOW,SB-05,KNOB1,P12,30.88,1,2700K,PRODUCT / CHAIN HOLD,
+C23,MBR,MOOD,MBR-L2,1,K-MBR-LOW,SB-05,KNOB1,P12,7.68,1,2700K,PRODUCT / CHAIN HOLD,headboard
+C24,MBR,NIGHT,MBR-N1,1,INTEGRAL,SB-05,PIR,,1,1,2700K,PRODUCT / CHAIN HOLD,"unswitched-live PIR, user brightness adjust on fitting, ON/AUTO/OFF"
+C25,MBR,READ,MBR-R1,1,INTEGRAL,SB-05L,INT,,3,1,3000K,PRODUCT / CHAIN HOLD,integral dimmer on fitting
+C26,MBR,READ,MBR-R2,1,INTEGRAL,SB-05R,INT,,3,1,3000K,PRODUCT / CHAIN HOLD,integral dimmer on fitting
+C27,DRS,HIGH,DRS-H1; DRS-H2,2,K-DRS-HIGH,SB-06,KNOB1,P14,14,1,4000K,PRODUCT / CHAIN HOLD,
+C28,TL1,HIGH,TL1-G1; TL1-G2; TL1-G3,3,K-TL1-HIGH,SB-06B,KNOB1,P14,27,1,4000K,PRODUCT / CHAIN HOLD,bath main: shower pair + WC (sealed diffused); knob outside bath on the latch (max-z) side of the door - site check (hinge side is a design interpretation)
+C29A,TL1,MIRROR,TL1-M1; TL1-M2,2,K-TL1-HIGH,SB-06B,KNOB1,P14,16,1,4000K,PRODUCT / CHAIN HOLD,"vanity spot pair, on the HIGH knob with the ceiling spots (grooming: HIGH knob level per calculations.baths.<TL>.grooming_setting with the face light at 100 %)"
+C29B,TL1,FACE,TL1-F1; TL1-F2,2,K-TL1-FACE,SB-06B,KNOB1,P14,10,1,4000K,PRODUCT / CHAIN HOLD,diffused face light pair (HD-14 base; HD-17 independent mirror-light wall control); own knob so it can run at 100 % while the ceiling vanity pair is dimmed
+C30A,TL1,PERIM,TL1-L1,1,K-TL1-LOW,SB-06B,KNOB1,P14,31.87,1,2700K,PRODUCT / CHAIN HOLD,bath perimeter slot (3 walls)
+C30B,TL1,MOOD,TL1-L2; TL1-L3,2,K-TL1-LOW,SB-06B,KNOB1,P14,7.25,1,2700K,PRODUCT / CHAIN HOLD,shower-niche + under-vanity strips
+C31,LOB,HIGH,LOB-H1; LOB-H2,2,K-LOB,SB-07,KNOB1,P15,14,1,3000K,PRODUCT / CHAIN HOLD,
+C32,LOB,MIRROR,LOB-F1,1,K-LOB,SB-07,KNOB1,P15,10,1,4000K,PRODUCT / CHAIN HOLD,common-basin face bar
+C33,LOB,NIGHT,LOB-N1,1,INTEGRAL,SB-07,PIR,,1,1,2700K,PRODUCT / CHAIN HOLD,"unswitched-live PIR, user brightness adjust on fitting, ON/AUTO/OFF"
+C34,TL2,HIGH,TL2-G1; TL2-G2; TL2-G3,3,K-TL2-HIGH,SB-07B,KNOB1,P15,27,1,4000K,PRODUCT / CHAIN HOLD,bath main: shower pair + WC (sealed diffused); knob outside bath on the latch (max-z) side of the door - site check (hinge side is a design interpretation)
+C35A,TL2,MIRROR,TL2-M1; TL2-M2,2,K-TL2-HIGH,SB-07B,KNOB1,P15,16,1,4000K,PRODUCT / CHAIN HOLD,"vanity spot pair, on the HIGH knob with the ceiling spots (grooming: HIGH knob level per calculations.baths.<TL>.grooming_setting with the face light at 100 %)"
+C35B,TL2,FACE,TL2-F1; TL2-F2,2,K-TL2-FACE,SB-07B,KNOB1,P15,10,1,4000K,PRODUCT / CHAIN HOLD,diffused face light pair (HD-14 base; HD-17 independent mirror-light wall control); own knob so it can run at 100 % while the ceiling vanity pair is dimmed
+C36A,TL2,PERIM,TL2-L1,1,K-TL2-LOW,SB-07B,KNOB1,P15,31.87,1,2700K,PRODUCT / CHAIN HOLD,bath perimeter slot (3 walls)
+C36B,TL2,MOOD,TL2-L2; TL2-L3,2,K-TL2-LOW,SB-07B,KNOB1,P15,7.25,1,2700K,PRODUCT / CHAIN HOLD,shower-niche + under-vanity strips
+C37,CBR,HIGH,CBR-H1; CBR-H2; CBR-H3; CBR-H4; CBR-H5; CBR-H6,6,D-C37,SB-08,TE,,36,1,4000K,PRODUCT / CHAIN HOLD,dimmer at door; on/off 2-way door + intermediate at the two bed-head plates (concept)
+C38,CBR,STUDY,CBR-S1,1,K-CBR-STUDY,SB-08,KNOB1,P16,15.96,1,4000K,PRODUCT / CHAIN HOLD,desk task strip
+C39,CBR,COVE,CBR-L1,1,K-CBR-LOW,SB-08,KNOB1,P16,49.76,1,2700K,PRODUCT / CHAIN HOLD,
+C40,CBR,LINE,CBR-X1; CBR-X2; CBR-X3; CBR-X4,4,K-CBR-LOW,SB-08,KNOB1,P16,42.88,1,2700K,PRODUCT / CHAIN HOLD,
+C41,CBR,READ,CBR-R1,1,INTEGRAL,SB-08RL,INT,,3,1,3000K,PRODUCT / CHAIN HOLD,integral dimmer on fitting
+C41b,CBR,READ,CBR-R2,1,INTEGRAL,SB-08RR,INT,,3,1,3000K,PRODUCT / CHAIN HOLD,integral dimmer on fitting
+X-CURT-LIV,LIV,LOW / CURTAIN,CURT-LIV,1,K-LIV-LOW,SB-01,KNOB1,P01,19.6,1,2700K,UNMEASURED / PRODUCT / CHAIN HOLD,Derived length; no added knob or photometry credit.
+X-CURT-DIN,DIN,LOW / CURTAIN,CURT-DIN,1,K-DIN-LOW,SB-02,KNOB1,P07,19.6,1,2700K,UNMEASURED / PRODUCT / CHAIN HOLD,Derived length; no added knob or photometry credit.
+X-CURT-MBR-S,MBR,LOW / CURTAIN,CURT-MBR-S,1,K-MBR-LOW,SB-05,KNOB1,P12,19.44,1,2700K,UNMEASURED / PRODUCT / CHAIN HOLD,Derived length; no added knob or photometry credit.
+X-CURT-CBR,CBR,LOW / CURTAIN,CURT-CBR,1,K-CBR-LOW,SB-08,KNOB1,P16,12.4,1,2700K,UNMEASURED / PRODUCT / CHAIN HOLD,Derived length; no added knob or photometry credit.

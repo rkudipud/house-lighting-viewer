@@ -4,7 +4,7 @@ usage: python verify_site.py --url URL --out DIR --master SHA --cct-map JSON --b
 """
 import argparse, io, json, hashlib, re, sys, time, traceback
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 from urllib.request import url2pathname
 from PIL import Image, ImageStat
 from playwright.sync_api import sync_playwright
@@ -64,9 +64,10 @@ def set_range(page, id_, v):
 
 def run_profile(p, name, ctx_args, crop_fn):
     msgs, errors, warnings, requests = [], [], [], []
-    browser = p.chromium.launch(channel="msedge", headless=True, args=["--enable-webgl", "--ignore-gpu-blocklist"])
+    browser = p.chromium.launch(headless=True, args=["--enable-webgl", "--ignore-gpu-blocklist"])
     ctx = browser.new_context(accept_downloads=True, **ctx_args)
     page = ctx.new_page()
+    page.set_default_timeout(90000)
     page.on("pageerror", lambda e: errors.append("pageerror: " + str(e)))
     page.on("console", lambda m: (errors if m.type == "error" else warnings if m.type == "warning" else msgs).append(m.text[:600]))
     page.on("request", lambda r: requests.append(r.url))
@@ -92,6 +93,10 @@ def run_profile(p, name, ctx_args, crop_fn):
         tunable:fx.filter(f=>f.tunable).length,risingFlight:P.stairs.risingFlightShown,k2:Boolean(P.analysis.k2),
         rangeInputs:document.querySelectorAll('input[type=range]').length,colorInputs:document.querySelectorAll('input[type=color]').length,
         rooms:[...document.querySelectorAll('#room option')].map(o=>[o.value,o.textContent]),
+        placePanel:Boolean(document.getElementById('h-place')),
+        downloadLinks:[...document.querySelectorAll('section[aria-labelledby="h-dl"] a')].map(a=>a.getAttribute('href')),
+        doorLeavesVisible:w.model.doorLeaves.visible,doorLeafGroups:w.model.doorLeaves.children.length,
+        lumenBudgets:Object.fromEntries(P.fixtures.zones.map(z=>[z.room,w.lighting.getLumenBudget(z.room)])),
         stairParts:(w.model.stairParts||[]).map(s=>s.part),title:document.title,
         heat:Boolean(w.analysis),heatSha:P.analysis.source.sha256,noRecompute:P.numericalLighting.available===false,
         holds:P.analysis.holdIds?.length}}"""
@@ -103,10 +108,52 @@ def run_profile(p, name, ctx_args, crop_fn):
     check(name, "K-2 kitchen task lighting present", d["k2"])
     check(name, "upper stair flight omitted", d["risingFlight"] is False and "rising-flight" not in d["stairParts"], d["stairParts"])
     check(name, "16 real-time lights (performance budget)", d["lights"] == 16, d["lights"])
-    check(name, "only two sliders (HIGH, LOW) and no colour/temperature input", d["rangeInputs"] == 2 and d["colorInputs"] == 0, d)
+    check(name, "four room and whole-house brightness sliders; no colour/temperature input", d["rangeInputs"] == 4 and d["colorInputs"] == 0, d)
+    check(name, "Place section removed while Room focus navigation remains", not d["placePanel"] and page.locator(".room-nav").count() == 1, d["rooms"])
+    check(name, "all modeled door leaves are hidden without removing designed openings", d["doorLeavesVisible"] is False and d["doorLeafGroups"] > 0 and page.evaluate("walkthrough.PLAN.openings.length > 0"))
+    check(name, "PDF handoff exposes only PDF links and no CSV/PNG download controls",
+          bool(d["downloadLinks"]) and all(h and h.lower().split("?")[0].endswith(".pdf") for h in d["downloadLinks"]) and
+          all(page.locator(f"#{id_}").count() == 0 for id_ in ["dl-png", "dl-schedule", "dl-groups"]), d["downloadLinks"])
+    check(name, "scheduled HIGH/LOW lumen budgets include held and available fixture totals",
+          all(set(v) == {"scheduled", "available", "effective"} and
+              set(v["scheduled"]) == {"high", "low"} for v in d["lumenBudgets"].values()), d["lumenBudgets"])
     check(name, "room list covers every room + balcony/entry", len(d["rooms"]) == 12 and any("alcon" in t for _, t in d["rooms"]), d["rooms"])
     check(name, "16 holds carried", d["holds"] == 16, d["holds"])
     check(name, "frozen heatmap is bound and live lux recomputation is disabled", d["heat"] and d["heatSha"] == BUILD["heatmapsSha256"] and d["noRecompute"], d)
+    if name == "desktop":
+        for room, label in (("living", "living"), ("kitchen", "kitchen"), ("master", "master"), ("children", "children")):
+            page.evaluate(
+                """([rooms,target])=>rooms.forEach(([id])=>
+                  walkthrough.setRoomLight(id,{on:id===target,high:100,low:100}))""",
+                [d["rooms"], room],
+            )
+            page.locator("#room").select_option(room)
+            set_range(page, "master-high-dim", 100)
+            set_range(page, "master-low-dim", 0)
+            set_range(page, "high-dim", 100)
+            set_range(page, "low-dim", 0)
+            page.wait_for_timeout(500)
+            high_only = page.evaluate(f"walkthrough.getRoomLight('{room}')")
+            high_master = page.evaluate("walkthrough.lighting.getMasterLight('high').dim===100&&walkthrough.lighting.getMasterLight('low').dim===0")
+            check(name, f"{label} HIGH-only screenshot state", high_only["on"] and high_only["high"] == 100 and high_only["low"] == 0 and high_master, high_only)
+            shot(f"{label}-night-high-only")
+            set_range(page, "master-high-dim", 0)
+            set_range(page, "master-low-dim", 100)
+            set_range(page, "high-dim", 0)
+            set_range(page, "low-dim", 100)
+            page.wait_for_timeout(500)
+            low_only = page.evaluate(f"walkthrough.getRoomLight('{room}')")
+            low_master = page.evaluate("walkthrough.lighting.getMasterLight('high').dim===0&&walkthrough.lighting.getMasterLight('low').dim===100")
+            check(name, f"{label} LOW-only screenshot state", low_only["on"] and low_only["high"] == 0 and low_only["low"] == 100 and low_master, low_only)
+            shot(f"{label}-night-low-only")
+        page.evaluate(
+            """rooms=>rooms.forEach(([id])=>
+              walkthrough.setRoomLight(id,{on:true,high:100,low:100}))""",
+            d["rooms"],
+        )
+        page.locator("#room").select_option("children")
+        set_range(page, "master-high-dim", 100)
+        set_range(page, "master-low-dim", 100)
     check(name, "bundled Three.js copyright and MIT permission notice are present", "Copyright" in page.content() and "Permission is hereby granted, free of charge" in page.content())
     txt = page.locator("#desk").inner_text().lower()
     check(name, "caveats visible (review draft, not construction, not recomputed)", all(k in txt for k in ["review draft", "construction", "lux"]), None)
@@ -117,7 +164,9 @@ def run_profile(p, name, ctx_args, crop_fn):
             rules:Object.fromEntries(fx.map(f=>[f.id,f.cctRule])),holds:Object.fromEntries(fx.map(f=>[f.id,f.placementHoldIds])),src:P.fixedCct?.source||null,
             mixed:P.fixtures.controls.circuits.filter(c=>new Set(fx.filter(f=>f.circuit===c.circuit).map(f=>f.cct)).size>1).map(c=>c.circuit),
             pockets:(P.curtainPockets?.pockets||[]).map(p=>({id:p.id,held:p.held,selected:p.selected,cct:p.cct,lane:p.lane,circuit:p.circuit,holds:p.placementHoldIds})),
-            live:(w.model.curtainPockets||[]).map(p=>({id:p.id,held:p.held,selected:p.selected,emissive:!!p.mat.emissive,inEmission:w.model.emission.some(e=>e.mat===p.mat)})),
+            live:(w.model.curtainPockets||[]).map(p=>{const s=P.curtainPockets.pockets.find(s=>s.id===p.id),g=s?.circuit?w.lighting.groupStates[s.circuit]:null;
+              return {id:p.id,held:p.held,selected:p.selected,emissive:!!p.mat.emissive,inEmission:w.model.emission.some(e=>e.mat===p.mat),
+              emissiveIntensity:p.mat.emissiveIntensity,circuit:s?.circuit,scheduledLumens:g?.fixtures.reduce((sum,f)=>sum+(+f.lm||0),0)}}),
             counted:fx.filter(f=>/^CURT-/.test(f.id)).length}}"""
         )
         report_p["cctMap"] = cm
@@ -128,7 +177,7 @@ def run_profile(p, name, ctx_args, crop_fn):
         bins = {}
         for v in cm["cct"].values():
             bins[v] = bins.get(v, 0) + 1
-        check(name, "CCT bins 30 x 2700 / 40 x 3000 / 34 x 4000", bins == {2700: 30, 3000: 40, 4000: 34}, bins)
+        check(name, "CCT bins 30 x 2700 / 12 x 3000 / 62 x 4000", bins == {2700: 30, 3000: 12, 4000: 62}, bins)
         check(name, "fixed-CCT source bound to map SHA-256", (cm["src"] or {}).get("sha256") == CMAP["_sha256"], cm["src"])
         check(name, "signed original fixed-CCT map provenance retained", (cm["src"] or {}).get("baseMapSha256") == BUILD["baseFixedCctMapSha256"], cm["src"])
         check(name, "no circuit mixes colour temperatures", not cm["mixed"], cm["mixed"])
@@ -139,7 +188,9 @@ def run_profile(p, name, ctx_args, crop_fn):
         lv = {p["id"]: p for p in cm["live"]}
         held_ok = all(lv[i]["held"] and not lv[i]["inEmission"] for i, e in exp.items() if e.get("held")) and lv.get("CURT-MBR-W03", {}).get("held")
         check(name, "held pocket CURT-MBR-W03 shown grey and unlit", held_ok, cm["live"])
-        check(name, "unheld pockets follow their LOW circuit (emissive)", all(lv[i]["inEmission"] for i, e in exp.items() if not e.get("held")), cm["live"])
+        check(name, "zero-lumen pocket previews remain unlit instead of exceeding the schedule",
+              all(lv[i]["inEmission"] and lv[i]["scheduledLumens"] == 0 and lv[i]["emissiveIntensity"] < .001
+                  for i, e in exp.items() if not e.get("held")), cm["live"])
         cb = page.evaluate("(()=>{const p=walkthrough.PLAN.curtainPockets.pockets.find(p=>p.id==='CURT-CBR');return p?{held:p.held,selected:p.selected,label:p.label}:null})()")
         check(name, "CURT-CBR selected and unheld for review, placeholder remains unmeasured", bool(cb) and cb["held"] is False and cb["selected"] is True and cb["label"] == "placeholder window, unmeasured" and not lv["CURT-CBR"]["held"], cb)
     accessories = page.evaluate("walkthrough.lighting.accessoryFixtures.map(f=>({id:f.id,held:f.held,on:walkthrough.lighting.groupStates[f.circuit].on}))")
@@ -152,11 +203,10 @@ def run_profile(p, name, ctx_args, crop_fn):
             (b["id"], b["kind"], len(b["shelf_heights_ffl_mm"]), len(b["rail_heights_ffl_mm"]), len(b["drawers_ffl_mm"]), len(b["pullouts_ffl_mm"]))
             for b in source["bays"]
         ] == [(b["id"], b["kind"], b["shelves"], b["rails"], b["drawers"], b["pullouts"]) for b in record["features"]]
-    check(name, "six unmeasured wardrobe sections match the referenced proposal", len(wardrobe["records"]) == 6 and all(wardrobe_ok(r) for r in wardrobe["records"]) and wardrobe["source"] == WARDROBE_SHA and not wardrobe["visible"] and wardrobe["closed"], wardrobe)
-    page.locator("#interiors").click()
-    check(name, "proposed wardrobe interiors open through the control", page.evaluate("walkthrough.getState().interiors") and page.locator("#interiors").get_attribute("aria-pressed") == "true")
-    page.locator("#interiors").click()
-    check(name, "proposed wardrobe interiors can be hidden again", not page.evaluate("walkthrough.getState().interiors"))
+    check(name, "six unmeasured wardrobe sections are visible by default and match the proposal",
+          len(wardrobe["records"]) == 6 and all(wardrobe_ok(r) for r in wardrobe["records"]) and
+          wardrobe["source"] == WARDROBE_SHA and wardrobe["visible"] and not wardrobe["closed"] and
+          page.locator("#interiors").count() == 0, wardrobe)
     representation = page.evaluate("""()=>{const m=walkthrough.model;return {
       effects:[m.lightEffects.floorPools.length,m.lightEffects.ceilingHalos.length,m.lightEffects.wallScallops.length],trays:m.ceilingInfo.trays,
       pockets:m.ceilingInfo.pockets,utility:m.rooms.renderedItems.filter(x=>x.id==='ST-R08-UC01'),
@@ -170,16 +220,59 @@ def run_profile(p, name, ctx_args, crop_fn):
     check(name, "loft display clipping retains H-LOFT site hold", bool(representation["lofts"]) and any(x["displayOnlyClip"] for x in representation["lofts"]) and all(x["hold"] == "H-LOFT" for x in representation["lofts"]), representation["lofts"])
     page.locator("#room").select_option("master")
     page.locator("#individual-lights summary").click()
-    page.locator('[data-individual="MBR-R1"]').check()
-    check(name, "master reader can be previewed individually", page.evaluate("walkthrough.lighting.groupStates.C25.on"))
+    reader_hold = page.evaluate("""()=>{const f=walkthrough.PLAN.fixtures.zones.find(z=>z.id==='MBR').fixtures.find(f=>f.id==='MBR-R1');
+      return {held:f.held,holds:f.placementHoldIds,on:walkthrough.lighting.groupStates.C25.on,disabled:document.querySelector('[data-individual="MBR-R1"]').disabled}}""")
+    check(name, "held master reader remains unlit and disabled under its placement hold",
+          reader_hold["held"] and not reader_hold["on"] and reader_hold["disabled"] and bool(reader_hold["holds"]), reader_hold)
     page.locator('[data-individual="MBR-N1"]').check()
     check(name, "master PIR light can be previewed individually", page.evaluate("walkthrough.lighting.groupStates.C24.on"))
     page.locator("#room-on").uncheck()
-    check(name, "individual readers and PIR previews are independent of room switch", page.evaluate("walkthrough.lighting.groupStates.C25.on && walkthrough.lighting.groupStates.C24.on"))
-    page.locator("#all-off").click()
-    check(name, "all rooms off also clears individual previews", page.evaluate("Object.values(walkthrough.lighting.accessoryState).every(v=>!v)"))
-    page.locator("#all-on").click()
-    check(name, "all rooms on leaves individual previews off", page.evaluate("Object.values(walkthrough.lighting.accessoryState).every(v=>!v)"))
+    check(name, "unheld PIR preview is independent of the room switch", page.evaluate("walkthrough.lighting.groupStates.C24.on"))
+    page.locator("#room-on").check()
+    page.locator("#master-high-on").uncheck()
+    page.wait_for_timeout(300)
+    master_high = page.evaluate("""()=>{const l=walkthrough.lighting,ids=Object.keys(l.groupStates).filter(id=>l.railOfCircuit(id)==='high');
+      return {master:l.getMasterLight('high'),allOff:ids.every(id=>!l.groupStates[id].on),
+      lowStillOn:Object.keys(l.groupStates).some(id=>l.railOfCircuit(id)==='low'&&l.groupStates[id].on)}}""")
+    check(name, "whole-house HIGH switch affects every room without switching LOW off",
+          not master_high["master"]["on"] and master_high["allOff"] and master_high["lowStillOn"], master_high)
+    page.locator("#master-high-on").check()
+    set_range(page, "master-high-dim", 50)
+    page.wait_for_timeout(300)
+    high_budget = page.evaluate("""()=>{const l=walkthrough.lighting,b=l.getLumenBudget('living');
+      return {master:l.getMasterLight('high'),groups:Object.keys(l.groupStates).filter(id=>l.railOfCircuit(id)==='high').map(id=>l.groupStates[id].dim),
+      budget:b,budgets:Object.fromEntries(l.zones.map(z=>[z.room,l.getLumenBudget(z.room)])),
+      roomOn:Object.fromEntries(l.zones.map(z=>[z.room,l.getRoomLight(z.room).on]))}}""")
+    check(name, "whole-house HIGH 50% scales the full schedule with no boost",
+          high_budget["master"]["dim"] == 50 and all(x == 50 for x in high_budget["groups"]) and
+          all(abs(b["effective"]["high"]-b["available"]["high"]*(.5 if high_budget["roomOn"][r] else 0)) < 1e-6
+              for r,b in high_budget["budgets"].items()),
+          high_budget)
+    page.locator("#master-low-on").uncheck()
+    low_off = page.evaluate("""()=>{const l=walkthrough.lighting,ids=Object.keys(l.groupStates).filter(id=>l.railOfCircuit(id)==='low');
+      return {master:l.getMasterLight('low'),allOff:ids.every(id=>!l.groupStates[id].on)}}""")
+    check(name, "whole-house LOW switch affects every room in the LOW lane",
+          not low_off["master"]["on"] and low_off["allOff"], low_off)
+    page.locator("#master-low-on").check()
+    set_range(page, "master-low-dim", 50)
+    low_budget = page.evaluate("""()=>{const l=walkthrough.lighting,b=l.getLumenBudget('living');
+      return {master:l.getMasterLight('low'),groups:Object.keys(l.groupStates).filter(id=>l.railOfCircuit(id)==='low').map(id=>l.groupStates[id].dim),
+      budget:b,budgets:Object.fromEntries(l.zones.map(z=>[z.room,l.getLumenBudget(z.room)])),
+      roomOn:Object.fromEntries(l.zones.map(z=>[z.room,l.getRoomLight(z.room).on]))}}""")
+    check(name, "whole-house LOW 50% scales the full schedule with no boost",
+          low_budget["master"]["dim"] == 50 and all(x == 50 for x in low_budget["groups"]) and
+          all(abs(b["effective"]["low"]-b["available"]["low"]*(.5 if low_budget["roomOn"][r] else 0)) < 1e-6
+              for r,b in low_budget["budgets"].items()),
+          low_budget)
+    page.locator("#room").select_option("living")
+    set_range(page, "high-dim", 50)
+    local_budget = page.evaluate("walkthrough.lighting.getLumenBudget('living')")
+    check(name, "room and whole-house brightness multiply rather than normalize",
+          abs(local_budget["effective"]["high"]-local_budget["available"]["high"]*.25) < 1e-6 and
+          abs(local_budget["effective"]["low"]-local_budget["available"]["low"]*.5) < 1e-6, local_budget)
+    set_range(page, "high-dim", 100)
+    set_range(page, "master-high-dim", 100)
+    set_range(page, "master-low-dim", 100)
     page.locator("#room").select_option("children")
     check(name, "held children's readers are visible but disabled", page.locator('[data-individual="CBR-R1"]').is_disabled() and page.locator('[data-individual="CBR-R2"]').is_disabled())
     page.locator("#room").select_option("living")
@@ -233,12 +326,28 @@ def run_profile(p, name, ctx_args, crop_fn):
     page.locator("#room").select_option("living")
     page.wait_for_timeout(800)
     page.locator("#view").click(position={"x": 700, "y": 400}) if name == "desktop" else None
+    # Start at a collision-free room spawn and choose a clear direction.
+    route = page.evaluate("""() => {
+      const [x,z] = walkthrough.navigation.spawns.living;
+      const ft=.3048, dirs=[[0,-1],[1,0],[0,1],[-1,0],[.707,-.707],[.707,.707],[-.707,.707],[-.707,-.707]];
+      const [dx,dz]=dirs.find(([a,b])=>[.35,.7,1.05].every(r=>!walkthrough.solidAt((x+a*r/ft)*ft,(z+b*r/ft)*ft)))||[];
+      if(dx===undefined)return null;
+      return {x,z,forward:Math.atan2(-dx,-dz),strafe:Math.atan2(-dz,dx)};
+    }""")
+    if route:
+        page.evaluate("(p) => walkthrough.setPose(p.x,p.z,p.forward,0)", route)
+    # Room selection leaves focus on the select, which intentionally disables global movement keys.
+    page.evaluate("document.activeElement?.blur()")
     s0 = state()
-    for key in ["w"]:
-        page.keyboard.down(key)
-        page.wait_for_timeout(1200)
-        page.keyboard.up(key)
-    s1 = state()
+    page.keyboard.down("w")
+    s1 = s0
+    for _ in range(18):
+        page.wait_for_timeout(1000)
+        s1 = state()
+        dist = ((s1["position"][0] - s0["position"][0]) ** 2 + (s1["position"][2] - s0["position"][2]) ** 2) ** .5
+        if dist > 0.15:
+            break
+    page.keyboard.up("w")
     dist = ((s1["position"][0] - s0["position"][0]) ** 2 + (s1["position"][2] - s0["position"][2]) ** 2) ** .5
     if name == "desktop":
         check(name, "first-person W key walks forward", dist > 0.15, round(dist, 2))
@@ -260,9 +369,14 @@ def run_profile(p, name, ctx_args, crop_fn):
             x, y = b["x"] + b["width"] / 2, b["y"] + b["height"] / 2
             s0 = state()
             cdp.send("Input.dispatchTouchEvent", {"type": "touchStart", "touchPoints": [{"x": x, "y": y}]})
-            page.wait_for_timeout(1400)
+            s1 = s0
+            for _ in range(18):
+                page.wait_for_timeout(1000)
+                s1 = state()
+                dist = ((s1["position"][0] - s0["position"][0]) ** 2 + (s1["position"][2] - s0["position"][2]) ** 2) ** .5
+                if dist > 0.15:
+                    break
             cdp.send("Input.dispatchTouchEvent", {"type": "touchEnd", "touchPoints": []})
-            s1 = state()
             dist = ((s1["position"][0] - s0["position"][0]) ** 2 + (s1["position"][2] - s0["position"][2]) ** 2) ** .5
             check(name, "touch-holding the walk pad moves forward", dist > 0.15, round(dist, 2))
             y0 = state()["yaw"]
@@ -277,11 +391,19 @@ def run_profile(p, name, ctx_args, crop_fn):
             check(name, "touch drag turns the view (first person)", abs(state()["yaw"] - y0) > 0.05, [y0, state()["yaw"]])
     page.locator("[data-view=third]").click()
     page.wait_for_timeout(700)
+    if route:
+        page.evaluate("(p) => walkthrough.setPose(p.x,p.z,p.strafe,0)", route)
+    page.evaluate("document.activeElement?.blur()")
     s0 = state()
     page.keyboard.down("d")
-    page.wait_for_timeout(1000)
+    s1 = s0
+    for _ in range(18):
+        page.wait_for_timeout(1000)
+        s1 = state()
+        dist = ((s1["position"][0] - s0["position"][0]) ** 2 + (s1["position"][2] - s0["position"][2]) ** 2) ** .5
+        if dist > 0.1:
+            break
     page.keyboard.up("d")
-    s1 = state()
     dist = ((s1["position"][0] - s0["position"][0]) ** 2 + (s1["position"][2] - s0["position"][2]) ** 2) ** .5
     if name == "desktop":
         check(name, "third-person walk (D key) moves the avatar", dist > 0.1, round(dist, 2))
@@ -327,36 +449,25 @@ def run_profile(p, name, ctx_args, crop_fn):
         set_range(page, "low-dim", 100)
         page.wait_for_timeout(700)
         pe100 = page.evaluate("(()=>{const p=walkthrough.model.curtainPockets.find(p=>p.id==='CURT-LIV');return p?p.mat.emissiveIntensity:null})()")
-        check(name, "living curtain pocket dims with the LOW slider", pe is not None and pe100 is not None and pe < pe100 * 0.2, [pe, pe100])
+        check(name, "zero-lumen living curtain placeholder stays dark at all LOW settings",
+              pe is not None and pe100 is not None and pe < .001 and pe100 < .001, [pe, pe100])
         set_range(page, "low-dim", 0)
         page.wait_for_timeout(700)
     check(name, "LOW at 0 visibly changes the room", abs(m_low[0] - base[0]) > 0.5, [base, m_low])
     set_range(page, "low-dim", 100)
     page.wait_for_timeout(300)
-    page.locator(".switch").click()
+    page.locator("#room-on").uncheck()
     page.wait_for_timeout(900)
     m_off = bright()
     rl4 = page.evaluate("walkthrough.getRoomLight('living')")
     check(name, "room on/off switch turns the room off", rl4["on"] is False and m_off[0] < base[0] - 1.5, [rl4["on"], base, m_off])
-    page.locator(".switch").click()
+    page.locator("#room-on").check()
     page.wait_for_timeout(900)
     check(name, "room on/off switch turns it back on", page.evaluate("walkthrough.getRoomLight('living').on") is True)
-    # kitchen: CCT of task lighting differs and K-2 present in inspector data
-    page.locator("#all-off").click()
-    page.wait_for_timeout(1000)
-    off_state = page.evaluate("Object.fromEntries(walkthrough.PLAN.rooms.map(r=>[r.id,walkthrough.getRoomLight(r.id).on]))")
-    m_alloff = bright()
-    check(name, "All rooms off turns every room off", not any(off_state.values()), off_state)
-    check(name, "All rooms off darkens the scene", m_alloff[0] < base[0] - 3, [base, m_alloff])
-    shot("all-off")
-    page.locator("#all-on").click()
-    page.wait_for_timeout(1000)
-    on_state = page.evaluate("Object.fromEntries(walkthrough.PLAN.rooms.map(r=>[r.id,walkthrough.getRoomLight(r.id).on]))")
-    check(name, "All rooms on turns all active rooms on including the children's room", all(on_state.values()), on_state)
-    # slider while off turns room on
+    # kitchen: task lights are included on HIGH; the cove remains LOW.
     page.locator("#room").select_option("kitchen")
     page.wait_for_timeout(500)
-    page.locator(".switch").click()
+    page.locator("#room-on").uncheck()
     page.wait_for_timeout(300)
     set_range(page, "high-dim", 60)
     page.wait_for_timeout(300)
@@ -373,16 +484,76 @@ def run_profile(p, name, ctx_args, crop_fn):
     ch = page.evaluate("walkthrough.getRoomLight('children')")
     cbr = page.evaluate("""()=>{const w=walkthrough,fx=w.PLAN.fixtures.zones.find(z=>z.id==='CBR').fixtures;
       return {high:fx.filter(f=>/^CBR-H[1-6]$/.test(f.id)).map(f=>({id:f.id,held:f.held,on:w.lighting.groupStates[f.circuit].on})),
-      other:fx.filter(f=>!/^CBR-H[1-6]$/.test(f.id)).map(f=>({id:f.id,held:f.held,on:w.lighting.groupStates[f.circuit].on}))}}""")
+      other:fx.filter(f=>!/^CBR-H[1-6]$/.test(f.id)).map(f=>({id:f.id,held:f.held,on:w.lighting.groupStates[f.circuit].on,holdIds:f.placementHoldIds,holdReason:f.holdReason})),
+      lowBudget:w.lighting.getLumenBudget('children'),
+      lowCircuits:Object.fromEntries(['C39','C40'].map(id=>[id,{on:w.lighting.groupStates[id].on,fixtures:w.lighting.groupStates[id].fixtures.map(f=>({id:f.id,lm:f.lm,held:f.held}))}]))}}""")
     check(name, "children's six HIGH fittings are switchable; other CBR fixtures remain held", not ch["held"] and ch["on"] and len(cbr["high"]) == 6 and all(not f["held"] and f["on"] for f in cbr["high"]) and all(f["held"] and not f["on"] for f in cbr["other"]), cbr)
+    cbr_cove = next(f for f in cbr["other"] if f["id"] == "CBR-L1")
+    cbr_line = [f for f in cbr["other"] if f["id"] in {"CBR-X1", "CBR-X2", "CBR-X3", "CBR-X4"}]
+    check(name, "CBR cove and LINE remain held only by their explicit ceiling coordination hold",
+          cbr_cove["held"] and not cbr_cove["on"] and cbr_cove["holdIds"] == ["H-CBR-CEIL"]
+          and len(cbr_line) == 4 and all(f["held"] and not f["on"] and f["holdIds"] == ["H-CBR-CEIL"] for f in cbr_line)
+          and cbr_cove["holdReason"].startswith("H-CBR-CEIL")
+          and cbr["lowCircuits"]["C39"]["on"] is False
+          and cbr["lowCircuits"]["C40"]["on"] is False
+          and cbr["lowBudget"]["scheduled"]["low"] == 7698
+          and cbr["lowBudget"]["available"]["low"] == 0,
+          {"cove": cbr_cove, "line": cbr_line, "lowCircuits": cbr["lowCircuits"], "lowBudget": cbr["lowBudget"]})
     set_range(page, "low-dim", 0)
     page.wait_for_timeout(900)
     cbr_low = page.evaluate("walkthrough.model.curtainPockets.find(p=>p.id==='CURT-CBR').mat.emissiveIntensity")
     set_range(page, "low-dim", 100)
     page.wait_for_timeout(900)
     cbr_full = page.evaluate("walkthrough.model.curtainPockets.find(p=>p.id==='CURT-CBR').mat.emissiveIntensity")
-    check(name, "selected children's curtain strip follows LOW brightness", cbr_full > 0.1 and cbr_low < cbr_full * .2, [cbr_low, cbr_full])
+    check(name, "held or zero-lumen children's curtain proposals do not add unbudgeted glow",
+          cbr_low < .001 and cbr_full < .001, [cbr_low, cbr_full])
     shot("lights-children-review")
+
+    calibration = {}
+    if name == "desktop":
+        def capture_calibration(room, key, on, high, low):
+            page.evaluate("walkthrough.lighting.setAllRooms(false)")
+            page.locator("#room").select_option(room)
+            page.locator("#room-on").uncheck()
+            set_range(page, "high-dim", high)
+            set_range(page, "low-dim", low)
+            if on:
+                page.locator("#room-on").check()
+            else:
+                page.locator("#room-on").uncheck()
+            page.wait_for_timeout(900)
+            mean, sd = bright()
+            shot(f"cal-{room}-{key}")
+            budget = page.evaluate("(room)=>walkthrough.lighting.getLumenBudget(room)", room)
+            return {"meanLuminance": mean, "stddev": sd, "highPercent": high, "lowPercent": low,
+                    "on": on, "budget": budget}
+
+        for room in ["living", "kitchen", "master", "children"]:
+            states = {}
+            for key, on, high, low in [
+                ("off", False, 100, 100), ("low-100", True, 0, 100),
+                ("high-100", True, 100, 0), ("both-100", True, 100, 100),
+                ("both-50", True, 50, 50), ("both-25", True, 25, 25),
+            ]:
+                states[key] = capture_calibration(room, key, on, high, low)
+                b = states[key]["budget"]
+                factor = {"off": 0, "low-100": 1, "high-100": 1, "both-100": 1,
+                          "both-50": .5, "both-25": .25}[key]
+                expected_high = b["available"]["high"] * (0 if key in ["off", "low-100"] else factor)
+                expected_low = b["available"]["low"] * (0 if key in ["off", "high-100"] else factor)
+                check(name, f"{room} {key} output matches scheduled lumens and control multipliers",
+                      abs(b["effective"]["high"]-expected_high) < 1e-6 and
+                      abs(b["effective"]["low"]-expected_low) < 1e-6, b)
+            calibration[room] = states
+            a, b, c, off = (states[k]["meanLuminance"] for k in ["both-100", "both-50", "both-25", "off"])
+            check(name, f"{room} rendered pixels visibly respond to 100/50/25% output",
+                  a > b + .2 and b > c + .2 and a > off + .2, [off, c, b, a])
+            budget = states["both-100"]["budget"]
+            check(name, f"{room} schedule LOW/HIGH source-lumen relationship is reported as authored",
+                  all(abs(budget["effective"][lane]-budget["available"][lane]) < 1e-6 for lane in ["high", "low"]),
+                  {"available": budget["available"],
+                   "lowVsHigh": budget["available"]["low"] / budget["available"]["high"] if budget["available"]["high"] else None})
+        report_p["calibration"] = calibration
     page.locator("#room").select_option("living")
 
     # ---- inspector (tap fitting in dollhouse)
@@ -415,32 +586,25 @@ def run_profile(p, name, ctx_args, crop_fn):
         dl.save_as(str(path))
         ex[label] = {"file": dl.suggested_filename, "bytes": path.stat().st_size, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
         return path
-    p_png = grab("#dl-png", "png")
-    im = Image.open(p_png)
-    check(name, "PNG screenshot downloads (image, caption bar)", im.size[0] > 300 and p_png.stat().st_size > 15000 and p_png.read_bytes()[:4] == b"\x89PNG", [im.size, ex["png"]["bytes"]])
-    p_csv = grab("#dl-schedule", "schedule")
-    rows = p_csv.read_text(encoding="utf-8-sig").splitlines()
-    import csv
-    parsed = list(csv.DictReader(rows))
-    cols = [c.lower() for c in parsed[0].keys()]
-    check(name, "fixture schedule CSV: 108 rows with fixed CCT, circuit, rail and placement holds", len(parsed) == 108 and any("cct" in c for c in cols) and any("circuit" in c for c in cols) and any("rail" in c for c in cols) and "placement_hold_ids" in parsed[0], [len(parsed), cols])
-    ex["scheduleColumns"] = list(parsed[0].keys())
-    if CMAP:
-        rows_by_id = {r["fixture_id"]: r for r in parsed}
-        mism = [fid for fid, f in CMAP["_fixtures"].items() if fid not in rows_by_id or
-                str(f["cct_k"]) != rows_by_id[fid]["fixed_cct_K"] or f["cct_rule"] != rows_by_id[fid]["cct_rule"] or
-                f["placement_hold_ids"] != [h for h in rows_by_id[fid]["placement_hold_ids"].split("; ") if h]]
-        selected = set(CMAP["selected_curtain_S1"]["strips"])
-        check(name, "all 104 schedule CCTs, rules and placement holds match the current map", not mism and "brightness_group" in parsed[0] and set(rows_by_id) == set(CMAP["_cct"]) | selected, mism)
-        check(name, "four selected schedule strips are warm, held for site and carry no lux credit",
-              all(rows_by_id[i]["fixed_cct_K"] == "2700" and "H-CURTAIN-POCKET" in rows_by_id[i]["placement_hold_ids"] and
-                  "no lux credit" in rows_by_id[i]["note"].lower() for i in selected), selected)
-    p_grp = grab("#dl-groups", "groups")
-    parsed_g = list(csv.DictReader(p_grp.read_text(encoding="utf-8-sig").splitlines()))
-    check(name, "circuit-group CSV: 51 rows", len(parsed_g) == 51 and len({r["circuit"] for r in parsed_g}) == 51, len(parsed_g))
     links = page.evaluate("[...document.querySelectorAll('#pdf-links a')].map(a=>a.getAttribute('href'))")
     expected_downloads = {d["href"]: d for d in BUILD["downloads"]}
     check(name, "four current review PDF links present", len(links) == 4 and set(links) == set(expected_downloads), links)
+    all_pdf_links = page.evaluate("""()=>[...document.querySelectorAll('section[aria-labelledby="h-dl"] a')].map(a=>a.href)""")
+    check(name, "every handoff option is a PDF link", bool(all_pdf_links) and
+          all(h and h.lower().split("?")[0].endswith(".pdf") for h in all_pdf_links), all_pdf_links)
+    resolved = {}
+    for h in all_pdf_links:
+        if origin.scheme == "file":
+            pth = Path(url2pathname(urlparse(h).path)).resolve()
+            body = pth.read_bytes() if pth.is_file() else b""
+            status = 200 if pth.is_file() else 404
+        else:
+            response = page.request.get(urljoin(args.url, h))
+            body, status = response.body(), response.status
+        resolved[h] = {"status": status, "bytes": len(body), "pdf": body[:5] == b"%PDF-"}
+    check(name, "all current viewer PDF links resolve to readable PDF bytes",
+          all(v["status"] == 200 and v["pdf"] for v in resolved.values()), resolved)
+    ex["allPdfLinks"] = resolved
     for i, h in enumerate(links):
         selector = f"#pdf-links a:nth-of-type({i+1})"
         if origin.scheme == "file":

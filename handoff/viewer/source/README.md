@@ -10,13 +10,18 @@ HTML hash are in `privacy-transform.json` and `public-source-manifest.json`.
 Geometry and non-path fields in the derived viewer input are unchanged by redaction;
 provisional dimensions, review status and site/professional holds remain.
 
-To reproduce the exact verified HTML with Node.js, restore the pinned packages with
-`npm ci`, then run `node rebuild-public.mjs --out <new-index.html>`. The command refuses
-to write unless the result matches the recorded HTML hash. Keep the separately supplied
-`downloads` folder alongside the rebuilt HTML for the four PDF links.
+The viewer hides architectural door leaves, shows provisional storage interiors by default,
+and offers whole-house HIGH/LOW masters plus selected-room lighting controls. Its downloads
+are PDF-only. To reproduce the exact verified HTML with Node.js, restore the pinned packages
+with `npm ci`, then run `node rebuild-public.mjs --out <new-index.html>`. The command refuses
+to write unless the result matches the recorded HTML hash. Keep the repository `downloads`,
+`handoff/electrician`, and `handoff/mason-civil` folders alongside the published viewer for
+its PDF links.
 
-`build.mjs` rebuilds from the original authoritative master and its independently
-verified input packs and receipts; it deliberately requires that original byte hash.
+`build.mjs` rebuilds from the authoritative master and independently verified input
+packs and receipts. For the reviewed CCT revision it also requires `--prior-master`
+and Python, to validate the exact CCT-only change against the historical drawing and
+wardrobe basis before using those unchanged outputs.
 The redacted viewer data cannot be substituted as a byte-identical master. Drawing
 generators require the corresponding current canonical master and fragments. Generated
 local verification receipts can contain local paths; review them before publication.
