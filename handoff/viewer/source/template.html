@@ -101,14 +101,13 @@ dialog{border:1px solid var(--line);border-radius:12px;color:var(--ink);backgrou
    </div>
     <label class="room-nav"><span>Room focus</span><select id="room" aria-label="Jump to a room"></select></label>
     <div class="row" style="margin-top:7px"><button id="guided">Guided walk</button><button id="help" aria-label="Controls and help">Help</button></div>
-    <div id="marker-legend" class="marker-legend" aria-label="Fitting marker legend">
-     <strong>Fitting markers</strong>
+    <details id="marker-legend"><summary>Marker key</summary><div class="marker-legend" aria-label="Fitting marker legend">
      <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="#0072b2" stroke="#172c33"/></svg>Downlight</span>
      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 21 20H3Z" fill="#b0206c" stroke="#172c33"/></svg>Spot / track</span>
      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 22 12 12 22 2 12Z" fill="#d55e00" stroke="#172c33"/></svg>Strip / cove</span>
      <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" fill="#007b53" stroke="#172c33"/></svg>Wall / other</span>
      <span style="grid-column:1/-1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#172c33" stroke-width="2" stroke-dasharray="3 2"/></svg>Dashed ring: held / not released</span>
-    </div>
+    </div></details>
   </section>
   <section aria-labelledby="light-title" id="sec-lights"><h2 id="light-title">Lights</h2>
     <div class="subhead">Whole home</div>

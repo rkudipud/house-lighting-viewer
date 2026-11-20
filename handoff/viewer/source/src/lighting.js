@@ -291,8 +291,9 @@ export function createLighting(scene,model) {
       const col=new T.Color(0,0,0);let lumens=0;
       for(const f of fixtureCache[room]){
         const c=channelOf(f);if(c==='art')continue;
-        const rail=RAIL_OF_LANE[f.lane]||'high';if(rail!==lane)continue;
-        const lm=(f.held?0:groupWeight(f.circuit))*f.lm,k=kelvin(groupStates[f.circuit].k);col.r+=k.r*lm;col.g+=k.g*lm;col.b+=k.b*lm;lumens+=lm;
+        const rail=RAIL_OF_LANE[f.lane];if((rail||'high')!==lane)continue;
+        // Independent task fittings stay local; they should not saturate the room bounce.
+        const lm=(f.held?0:groupWeight(f.circuit))*f.lm*(rail?1:.22),k=kelvin(groupStates[f.circuit].k);col.r+=k.r*lm;col.g+=k.g*lm;col.b+=k.b*lm;lumens+=lm;
       }
       if(lumens)col.multiplyScalar(1/lumens);
       // These are soft visual bounce sources, not photometric emitters. Compress by room

@@ -196,7 +196,7 @@ function start(){
   }
 
   // ---------- room lights ----------
-  const fmtK=a=>a&&a.length?a.map(k=>String(k).replace(/\s*K$/i,'')).join(' / ')+' K fixed':'';
+  const fmtK=a=>a&&a.length?a.map(k=>String(k).replace(/\s*K$/i,'')).join(' / ')+' K':'';
   function syncMasterLights(){
     for(const lane of ['high','low']){
       const state=lighting.getMasterLight(lane),id='master-'+lane;
@@ -263,7 +263,7 @@ function start(){
     const cct=i.cct==null?'Not specified':String(i.cct).replace(/\s*K$/i,'')+' K';
     const row=(name,value)=>`<dt>${name}</dt><dd>${esc(value??'Not specified')}</dd>`;
     $('inspector-body').innerHTML=`<div class="insp-id">Light details</div><dl>`+
-      row('Name',i.kind)+row('Type',i.type??'LED strip')+
+      row('Name',`${i.room} ${i.kind.toLowerCase()}`)+row('Type',i.type??'LED strip')+
       row('Wattage',i.W!=null?`${Number(Number(i.W).toFixed(1))} W`:null)+
       row('Lumens',i.candidate?'No lux credit':i.lm!=null?`${Math.round(i.lm)} lm`:null)+
       row('Spec',[i.ip,i.lane,i.circuit].filter(Boolean).join(' / '))+
