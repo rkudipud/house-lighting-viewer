@@ -56,11 +56,11 @@
     {
       "path": "build-info.json",
       "bytes": 2404,
-      "sha256": "3b4ea1de8bd5f79d76ca3021a2cfcc37c20b2ab6363e0d0ca2091d32f5cef56e",
+      "sha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "3b4ea1de8bd5f79d76ca3021a2cfcc37c20b2ab6363e0d0ca2091d32f5cef56e"
+      "sourceSha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8"
     },
     {
       "path": "downloads/curtain-pocket-review.pdf",
@@ -4234,7 +4234,7 @@
     {
       "path": "handoff/local-artifact-verification.json",
       "bytes": 1194,
-      "sha256": "884fd8d9929e58e0967a13791bb4198c63433119dc6c565836c29e1f90fc44b5",
+      "sha256": "f08d6002473ab4e5924c1baa9f08072ecd0ebb5d621a21cb610c30a000711ec3",
       "coverage": [
         "editable-sources"
       ]
@@ -5622,7 +5622,7 @@
     {
       "path": "handoff/viewer/site-repository-copy-receipt.json",
       "bytes": 2556,
-      "sha256": "001781a05f67718c8a25f4ec728babd64a7af95b82f355f0efda5e272518bd1a",
+      "sha256": "51de600189fa03ee5f8d8d2e959f7fa69ce3e65b73690ca1d5cf8f11acdcca89",
       "coverage": [
         "editable-sources"
       ]
@@ -5677,7 +5677,7 @@
     {
       "path": "handoff/viewer/source/final-review-source-copy.json",
       "bytes": 16090,
-      "sha256": "c3d7b6d63d3ebfa068f31cf07c986306e77ab4928d1b16713934fd27c063ad74",
+      "sha256": "5cdbd336ff8e2916ab25209b1a977268b21f36481000f0006e039b653c4fb160",
       "coverage": [
         "editable-sources"
       ]
@@ -5769,7 +5769,7 @@
     {
       "path": "handoff/viewer/source/privacy-transform.json",
       "bytes": 1185,
-      "sha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
+      "sha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
       "coverage": [
         "editable-sources"
       ],
@@ -5797,7 +5797,7 @@
     {
       "path": "handoff/viewer/source/public-file-hashes.json",
       "bytes": 4518,
-      "sha256": "eb0653473ce47b002f4d0204393cb5b4e31bae0247baa946e8db16afab2f3432",
+      "sha256": "d8b4fdbb8976ed110c380bb9a9808cdcdd7ea4ada412fd3b0f9014d0b66b7ba7",
       "coverage": [
         "editable-sources"
       ]
@@ -5805,7 +5805,7 @@
     {
       "path": "handoff/viewer/source/public-source-manifest.json",
       "bytes": 7430,
-      "sha256": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
+      "sha256": "16aae2695a8a899788652a43b0b940ce1b13359904df3efd6bce856a5feb2907",
       "coverage": [
         "editable-sources"
       ],
@@ -5948,11 +5948,12 @@
     },
     {
       "path": "handoff/viewer/source/src/main.js",
-      "bytes": 39742,
-      "sha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31",
+      "bytes": 39712,
+      "sha256": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
       "sourceSha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31"
     },
     {
@@ -6098,8 +6099,8 @@
     },
     {
       "path": "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
-      "bytes": 127206,
-      "sha256": "1316b08ac0308e58ab9ce91a9c8b88685d8df28a0e005f7184ef7246c8317e2e",
+      "bytes": 128010,
+      "sha256": "2a36709ff846c20556d79153721be445b6c949aae0fe6775f97332e3cf1311f3",
       "coverage": [
         "editable-sources"
       ]
@@ -6123,21 +6124,21 @@
     },
     {
       "path": "index.html",
-      "bytes": 2613988,
-      "sha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
+      "bytes": 2613979,
+      "sha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
       "coverage": [
         "threejs-viewer"
       ],
-      "sourceSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29"
+      "sourceSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c"
     },
     {
       "path": "privacy-transform.json",
       "bytes": 1185,
-      "sha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
+      "sha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
       "coverage": [
         "editable-sources"
       ],
-      "sourceSha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce"
+      "sourceSha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99"
     },
     {
       "path": "README.md",
@@ -6213,6 +6214,14 @@
       "path": "scripts/stage-reviewed-pack.py",
       "bytes": 13199,
       "sha256": "3bd73d54b5fb3d1ba05734c0184240e956bef59b52457d17de0d7d7300177ceb",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "scripts/verify-drag-directions.py",
+      "bytes": 6037,
+      "sha256": "beccf25aa5b8ffbbd19b6514c046877df1365c2ff07ed268a2358f4499491033",
       "coverage": [
         "editable-sources"
       ]

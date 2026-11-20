@@ -13,7 +13,7 @@
   "layout_views.mjs": "e2491173271f00bcfbdea524e897d710b8bc4a06f165532b3cee086fb47893a7",
   "package-lock.json": "1d69187824d4ce1c3a966d97de825638f2bc37e7ec272464308cc413be28137e",
   "package.json": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a",
-  "privacy-transform.json": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
+  "privacy-transform.json": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
   "provenance/generation-source/drawing-source.mjs": "6ee7d04d08a8a0344c584a48abf788e41d6c350008e5daa5f884d0aea2f70656",
   "provenance/generation-source/floorplan.mjs": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a",
   "README.md": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016",
@@ -30,7 +30,7 @@
   "src/hall.js": "1ceaa2937a54bf07137c8c48c92681a4ec9f917bbd1700a934872982d3f5c177",
   "src/house-data.generated.json": "d26163411ebd885914d5347740539954b5ed186dbd21d5302a9acf5bd6c3ddae",
   "src/lighting.js": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665",
-  "src/main.js": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31",
+  "src/main.js": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056",
   "src/master-adapter.js": "9f1ae621d1547fb09c55e9e06b90d519937ce8b0ebcf0e8ccc16396372d76398",
   "src/materials.js": "9831081fc1bc67c6180f5d1244f211222048bbbb7efbfc8883ea18c61291e15d",
   "src/model.js": "ef6583c8ed26e56c1dec95a320d045a93b305da7f574e4ad8de07da41dac4151",
@@ -45,6 +45,6 @@
   "THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
   "tour-data.mjs": "e71d5ab476584c0f5d49518529e549ec1098ee3d31617a905ad2749ab3a1ed6b",
   "verify_site.py": "9e888373bcc8815a62fc2648668086fc00669eec2cac303af63f68cae926feaf",
-  "public-source-manifest.json": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
-  "final-review-source-copy.json": "c3d7b6d63d3ebfa068f31cf07c986306e77ab4928d1b16713934fd27c063ad74"
+  "public-source-manifest.json": "16aae2695a8a899788652a43b0b940ce1b13359904df3efd6bce856a5feb2907",
+  "final-review-source-copy.json": "5cdbd336ff8e2916ab25209b1a977268b21f36481000f0006e039b653c4fb160"
 }

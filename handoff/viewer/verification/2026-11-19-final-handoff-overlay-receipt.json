@@ -8,7 +8,7 @@
     "handoff/electrician/electrical/final-review-source-copy.json": "dc8f588aa75c50ccf5fac5fff2773a6bd485cb61d06cb598417d11bb73b1a167",
     "handoff/mason-civil/final-review-source-copy.json": "61f1c49a56c709312c352b190b308c37b7d30918bc08e4f0907c9a84b2be4f72",
     "handoff/viewer/drawings/final-review-source-copy.json": "0b2b8988aeb32f9b73fe9b363cc05f358c77ffe5b0d73f49f53b42fcfa8e87ed",
-    "handoff/viewer/source/final-review-source-copy.json": "c3d7b6d63d3ebfa068f31cf07c986306e77ab4928d1b16713934fd27c063ad74",
+    "handoff/viewer/source/final-review-source-copy.json": "5cdbd336ff8e2916ab25209b1a977268b21f36481000f0006e039b653c4fb160",
     "handoff/viewer/renders/final-review-source-copy.json": "76e9b48a5f2ced297610275fcc189967b1a093640e184bec04e37cc277252f8a"
   },
   "lightingLoadSheet": {
@@ -2100,7 +2100,7 @@
       "path": "handoff/viewer/source/privacy-transform.json",
       "previousCopySha256": "60d1462257d3ab6bc4197232f505edeee805d3b3d8ad72cd8358e2a8575126bc",
       "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
-      "currentSha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
+      "currentSha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
       "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
       "evidence": {
         "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
@@ -2115,7 +2115,7 @@
       "path": "handoff/viewer/source/public-source-manifest.json",
       "previousCopySha256": "aaa3f8de95001aee68784cec8fa51aadf8bc351d1696c6569daec2bc24a05658",
       "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
-      "currentSha256": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
+      "currentSha256": "16aae2695a8a899788652a43b0b940ce1b13359904df3efd6bce856a5feb2907",
       "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
       "evidence": {
         "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
@@ -2146,6 +2146,21 @@
       "evidence": {
         "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
         "sourcePath": "src/house-data.generated.json"
+      }
+    },
+    {
+      "path": "handoff/viewer/source/src/main.js",
+      "previousCopySha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31",
+      "originalCopyReceipt": "handoff/viewer/source/repository-copy-receipt.json",
+      "currentSha256": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056",
+      "reason": "Updated the privacy-safe source for the verified current viewer and drawings.",
+      "evidence": {
+        "copyReceipt": "handoff/viewer/source/final-review-source-copy.json",
+        "sourcePath": "src/main.js"
+      },
+      "previousOverlay": {
+        "receipt": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
+        "currentSha256": "8f877e99c167776fc3d689df3131ec5b2ec190968172a654156afd057651c50e"
       }
     },
     {

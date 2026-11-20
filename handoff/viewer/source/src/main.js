@@ -394,9 +394,9 @@ function start(){
       pinch=d;return;
     }
     const direction=e.pointerType==='mouse'?-1:1;
-    if(mode==='rcp'){const k=2*rcp.half/innerHeight;rcp.x-=dx*k*direction;rcp.z-=dy*k*direction;}
-    else if(mode==='doll'||mode==='heat'){orbitYaw-=dx*.006*direction;orbitPitch=T.MathUtils.clamp(orbitPitch+dy*.005*direction,.25,Math.PI/2-.01);}
-    else{yaw-=dx*.004*direction;pitch=T.MathUtils.clamp(pitch-dy*.004*direction,-1.4,1.4);}
+    if(mode==='rcp'){const k=2*rcp.half/innerHeight;rcp.x-=dx*k;rcp.z-=dy*k*direction;}
+    else if(mode==='doll'||mode==='heat'){orbitYaw-=dx*.006;orbitPitch=T.MathUtils.clamp(orbitPitch+dy*.005*direction,.25,Math.PI/2-.01);}
+    else{yaw-=dx*.004;pitch=T.MathUtils.clamp(pitch-dy*.004*direction,-1.4,1.4);}
   });
   const release=e=>{
     const had=pointers.delete(e.pointerId);if(pointers.size<2)pinch=0;

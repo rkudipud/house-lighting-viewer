@@ -6,21 +6,21 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 2613988,
-      "sha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
-      "sourceSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29"
+      "bytes": 2613979,
+      "sha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
+      "sourceSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c"
     },
     {
       "path": "build-info.json",
       "bytes": 2404,
-      "sha256": "3b4ea1de8bd5f79d76ca3021a2cfcc37c20b2ab6363e0d0ca2091d32f5cef56e",
-      "sourceSha256": "3b4ea1de8bd5f79d76ca3021a2cfcc37c20b2ab6363e0d0ca2091d32f5cef56e"
+      "sha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8",
+      "sourceSha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8"
     },
     {
       "path": "privacy-transform.json",
       "bytes": 1185,
-      "sha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
-      "sourceSha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce"
+      "sha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
+      "sourceSha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99"
     },
     {
       "path": "THREE-LICENSE.txt",

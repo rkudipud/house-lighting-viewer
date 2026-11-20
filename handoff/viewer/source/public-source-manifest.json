@@ -3,7 +3,7 @@
   "authoritativeMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "embeddedPlanDataSha256": "a75aeb46650e0ff46f0d29e94baf6e6e8cea2f8c3719928243feeb95036ee9cf",
   "embeddedHeatDataSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
-  "viewerHtmlSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
+  "viewerHtmlSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
   "privacyPathScan": "PASS for staged text, JSON values and delivered HTML; original master omitted",
   "originalDrawingGeneratorSha256": {
     "floorplan.mjs": "6083c691f9c4fb3ca901f3bb5548a369ef202420e898f6fc554f21266c567d7a",
@@ -68,7 +68,7 @@
     },
     "privacy-transform.json": {
       "bytes": 1185,
-      "sha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce"
+      "sha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99"
     },
     "provenance/generation-source/drawing-source.mjs": {
       "bytes": 2996,
@@ -135,8 +135,8 @@
       "sha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665"
     },
     "src/main.js": {
-      "bytes": 39742,
-      "sha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31"
+      "bytes": 39712,
+      "sha256": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056"
     },
     "src/master-adapter.js": {
       "bytes": 10948,

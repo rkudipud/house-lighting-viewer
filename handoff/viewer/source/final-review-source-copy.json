@@ -3,7 +3,7 @@
   "constructionRelease": false,
   "basisMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "sourceManifest": "public-source-manifest.json",
-  "sourceManifestSha256": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
+  "sourceManifestSha256": "16aae2695a8a899788652a43b0b940ce1b13359904df3efd6bce856a5feb2907",
   "sourceFiles": 46,
   "omittedFiles": [],
   "note": "Original source files are untouched. Local absolute paths in public metadata copies are replaced by repository-relative references, or not-distributed source labels for source material not included here. Copied upstream hash manifests and verification receipts describe original source bytes; use this receipt for public-copy hashes. When literature is omitted, public HTML/Markdown and PDF links target official publications and adapted PDFs include a public-copy notice. This is a review pack, not a construction release.",
@@ -123,8 +123,8 @@
     {
       "path": "privacy-transform.json",
       "bytes": 1185,
-      "sha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
-      "sourceSha256": "cf1dea85c5bd7a58f88320c5a897c96f161d45077a6272478a5cfce154f531ce",
+      "sha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
+      "sourceSha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -258,9 +258,9 @@
     },
     {
       "path": "src/main.js",
-      "bytes": 39742,
-      "sha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31",
-      "sourceSha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31",
+      "bytes": 39712,
+      "sha256": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056",
+      "sourceSha256": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056",
       "localPathsRedacted": false,
       "publicCopyModified": false
     },
@@ -379,8 +379,8 @@
     {
       "path": "public-source-manifest.json",
       "bytes": 7430,
-      "sha256": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
-      "sourceSha256": "c7e9c5c8536850b33603236ea01d36bc506e99462918a003e659cb16c7c42b31",
+      "sha256": "16aae2695a8a899788652a43b0b940ce1b13359904df3efd6bce856a5feb2907",
+      "sourceSha256": "16aae2695a8a899788652a43b0b940ce1b13359904df3efd6bce856a5feb2907",
       "localPathsRedacted": false,
       "publicCopyModified": false
     }

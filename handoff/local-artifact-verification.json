@@ -13,7 +13,7 @@
     ".mjs": 22,
     ".pdf": 35,
     ".png": 142,
-    ".py": 44,
+    ".py": 45,
     ".rad": 54,
     ".svg": 91,
     ".txt": 5,
@@ -26,7 +26,7 @@
     "bytes": 7094341
   },
   "privacyScope": "Text source files; every PDF page text, standard/XML metadata, links and decoded object dictionaries; approved photographs checked for EXIF and exact allowlisted hashes.",
-  "htmlSha256": "7dd1d2686340c76a98553d6aa24735ff1e31f9ff5003f9823f055ee0dab93e29",
+  "htmlSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
   "errors": [],
   "constructionRelease": false
 }
