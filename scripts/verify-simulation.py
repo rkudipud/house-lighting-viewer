@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import re
+from statistics import fmean
 import xml.etree.ElementTree as ET
 
 from PIL import Image
@@ -37,6 +38,8 @@ def main():
         if next(reader) != ["room", "scene", "x_ft", "z_ft", "maintained_lux", "inside_grid_mask"]:
             raise ValueError("CSV header mismatch")
         for room, grid in grids.items():
+            if room == "CBR":
+                continue
             for scene, values in grid["layers"].items():
                 svg = PACK / "heatmaps" / f"{room}-{scene}.svg"
                 tree = ET.fromstring(svg.read_bytes())
@@ -77,8 +80,33 @@ def main():
                             raise ValueError("PNG/SVG pixel mismatch")
         if next(reader, None) is not None:
             raise ValueError("Unexpected extra CSV data")
-    if images["svgNumericalCellsAndMaskVerified"] != total_cells or images["mapPairs"] != 33:
+    if images["svgNumericalCellsAndMaskVerified"] != total_cells or images["mapPairs"] != 30:
         raise ValueError("Derived receipt counts differ from independently checked files")
+    if images["rooms"] != 10 or images["sourceRooms"] != 11 or set(images["omittedDerivedRooms"]) != {"CBR"}:
+        raise ValueError("Derived room coverage does not exclude only superseded CBR")
+    if any((PACK / "heatmaps" / f"CBR-{scene}.{suffix}").exists()
+           for scene in ("HIGH_100", "LOW_100", "HIGH+LOW_100") for suffix in ("svg", "png")):
+        raise ValueError("Superseded CBR image derivative was reintroduced")
+    reference = json.loads((PACK / "runs" / "smoke3" / "sim-results.json").read_text())
+    test = json.loads((PACK / "runs" / "smoke4" / "sim-results.json").read_text())
+    convergence = json.loads((PACK / "analysis" / "sim-summary.json").read_text())["sampling_convergence"]
+    a = reference["enclosures"]["KIT"]["fixtures"]
+    b = test["enclosures"]["KIT"]["fixtures"]
+    if set(a) != set(b) or set(a) != set(convergence["per_fixture"]):
+        raise ValueError("KIT convergence fixture coverage differs from its retained raw inputs")
+    for fitting in a:
+        x, y = a[fitting]["E"]["grid:KIT"], b[fitting]["E"]["grid:KIT"]
+        if not x or len(x) != len(y):
+            raise ValueError("KIT convergence input vectors differ in length")
+        mean_x, mean_y = fmean(x), fmean(y)
+        actual = {
+            "mean_ad1024": round(mean_x, 2),
+            "mean_ad128": round(mean_y, 2),
+            "mean_diff_pct": round(100 * (mean_y / mean_x - 1), 2),
+            "point_rms_pct": round(100 * math.sqrt(fmean((v - u) ** 2 for u, v in zip(x, y))) / mean_x, 1),
+        }
+        if actual != convergence["per_fixture"][fitting]:
+            raise ValueError(f"KIT convergence table differs from its raw inputs: {fitting}")
     for path in PACK.rglob("*"):
         if path.suffix in {".json", ".md", ".py", ".html", ".cal", ".svg", ".csv"}:
             text = path.read_text(encoding="utf-8-sig").lower()
@@ -92,11 +120,15 @@ def main():
         "heatmapPairs": images["mapPairs"], "nonNullSvgCellsVerified": total_cells,
         "csvRowsIncludingMaskedCellsVerified": rows_verified,
         "pngPixelChecks": "First and peak-value source cells in every map match SVG colours within 2 RGB levels.",
+        "samplingConvergenceFixturesRecomputed": len(a),
+        "retainedConvergenceInputs": ["runs/smoke3/sim-results.json", "runs/smoke4/sim-results.json"],
+        "supersededCbrDerivativesAbsent": True,
         "privateComputeDetails": "No private network domain, shared-host path or job-system markers in public addendum.",
         "constructionRelease": False, "publicationAuthorized": False,
     }
     (PACK / "local-simulation-verification.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
-    print(f"PASS: {numeric_files} unchanged numeric files, 33 map pairs, {total_cells} SVG cells, {rows_verified} CSV rows")
+    print(f"PASS: {numeric_files} unchanged numeric files, 30 map pairs, {total_cells} SVG cells, "
+          f"{rows_verified} CSV rows, {len(a)} KIT convergence fixtures recomputed")
 
 
 if __name__ == "__main__":

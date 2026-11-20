@@ -22,6 +22,17 @@ def file_hash(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def verify_cleanup(root, cleanup, master_sha256):
+    if cleanup["masterSha256"] != master_sha256:
+        raise ValueError("Cleanup receipt is bound to a different master")
+    for item in cleanup["removedArtifacts"]:
+        if repository_path(root, item["path"]).exists():
+            raise ValueError(f"Retired artifact was reintroduced: {item['path']}")
+    for item in cleanup["retainedEvidence"]:
+        if file_hash(repository_path(root, item["path"])) != item["sha256"]:
+            raise ValueError(f"Required cleanup evidence changed: {item['path']}")
+
+
 def verify_review_overlay(root, overlay, master_sha256):
     """Recheck each successor copy against its pinned receipt and source manifest."""
     if overlay.get("masterSha256") != master_sha256:
@@ -172,6 +183,8 @@ def main():
     build = json.loads((root / "build-info.json").read_text())
     if build["masterSha256"] != args.master_sha256:
         parser.error("Integrated viewer does not match the confirmed canonical master")
+    cleanup = json.loads((root / "handoff" / "cleanup-receipt.json").read_text(encoding="utf-8"))
+    verify_cleanup(root, cleanup, args.master_sha256)
     imported = {}
     for receipt_path in (root / "handoff").rglob("*repository-copy-receipt.json"):
         receipt = json.loads(receipt_path.read_text())

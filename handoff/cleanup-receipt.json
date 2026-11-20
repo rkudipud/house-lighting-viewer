@@ -1,0 +1,140 @@
+{
+  "schema": "house-handoff-cleanup/1",
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "baselineCommit": "393d85bccce2d965227ce622425760ebf08fe806",
+  "policy": "Exact named artifacts were hash-checked against the published baseline before removal. Original source/copy receipts remain unchanged; their retired entries describe historical imports, not current delivered files. Current inventory is handoff/manifest.json.",
+  "removedArtifacts": [
+    {
+      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH+LOW_100.png",
+      "bytes": 113640,
+      "sha256": "1b9857b306d86a6d791c25082dac46bfafec1220484f9928976ad457c0788786",
+      "reason": "Superseded CBR Radiance image derivative; current shifted-LINE heatmaps are in the lighting review pack."
+    },
+    {
+      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH+LOW_100.svg",
+      "bytes": 397450,
+      "sha256": "2ffa8361e22a4bac0f9edc60ed0e1b86652735e6d3185a29e7fc213e5175498b",
+      "reason": "Superseded CBR Radiance image derivative; current shifted-LINE heatmaps are in the lighting review pack."
+    },
+    {
+      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH_100.png",
+      "bytes": 107784,
+      "sha256": "5d81e05a26b14176656fdf5742515822a8f253b4bd23eef259f156cb159cd236",
+      "reason": "Superseded CBR Radiance image derivative; current shifted-LINE heatmaps are in the lighting review pack."
+    },
+    {
+      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH_100.svg",
+      "bytes": 396634,
+      "sha256": "b858659beba66e235ebd21ed3cf2f40f1b932063676bac8c38ac8753b82aa6aa",
+      "reason": "Superseded CBR Radiance image derivative; current shifted-LINE heatmaps are in the lighting review pack."
+    },
+    {
+      "path": "handoff/electrician/simulation/heatmaps/CBR-LOW_100.png",
+      "bytes": 110806,
+      "sha256": "23fc7814e555e3b7abb94d67d718869f250f41fc6061877b83b5dd40ce3e457c",
+      "reason": "Superseded CBR Radiance image derivative; current shifted-LINE heatmaps are in the lighting review pack."
+    },
+    {
+      "path": "handoff/electrician/simulation/heatmaps/CBR-LOW_100.svg",
+      "bytes": 397237,
+      "sha256": "1b2dc1ae206ffc8814947db028d200fd636c833666b1a2ae17bd5ef07a5d5922",
+      "reason": "Superseded CBR Radiance image derivative; current shifted-LINE heatmaps are in the lighting review pack."
+    },
+    {
+      "path": "handoff/viewer/local-rebuild-verification.json",
+      "bytes": 663,
+      "sha256": "a22f709f6b11c43002ad16d0ef1b1cc43797c15b58cad3b2686a7fdac4e16c88",
+      "reason": "Prior-master rebuild result, not evidence for the current byte-identical public-source build."
+    },
+    {
+      "path": "handoff/viewer/source-delivery-manifest.json",
+      "bytes": 4126,
+      "sha256": "1f0f021b5f693da9dec62213d3c28f31011863b39c41e02955b7c2d7d13b162a",
+      "reason": "Superseded prior-master delivery summary; current source/copy manifests bind the final viewer."
+    },
+    {
+      "path": "handoff/viewer/verification/2026-11-18-local-reverification.json",
+      "bytes": 3987,
+      "sha256": "f29ef1d3a892622de003944f1b4a16ffe56649b977d22ae932cfc7f616a59e8d",
+      "reason": "Unused older browser narrative describing superseded CBR geometry and unlit behaviour."
+    },
+    {
+      "path": "handoff/viewer/verification/browser-verification-review.json",
+      "bytes": 158403,
+      "sha256": "e61fd4072f3ca93a6f7ea7ff79377c7ddf68c0c5867b7af887f7c2102c8edfbf",
+      "reason": "Verbose prior-master browser log; not a dependency of the current viewer or source-bound overlay."
+    },
+    {
+      "path": "handoff/viewer/verification/public-file-hashes.json",
+      "bytes": 430,
+      "sha256": "66de99572abf558221c8f7d8644b3539c217d6a5bf286d1e2693c87eb189fb4c",
+      "reason": "Redundant hash list for the retired browser log; original source/copy receipts remain unchanged."
+    },
+    {
+      "path": "handoff/viewer/verification/verification-privacy-receipt.json",
+      "bytes": 944,
+      "sha256": "bfc665c3bad5311f1a72bfea0b70444cf7fc613ffa5535157d7cd99a79f9f7dc",
+      "reason": "Privacy transformation detail for the retired historical browser log only."
+    },
+    {
+      "path": "scripts/check-local-viewer.py",
+      "bytes": 11520,
+      "sha256": "59008de987527cd7229b0707ba4944ca6b3b2dd5d314a7d36112423891ceaafa",
+      "reason": "Obsolete broad test asserts the former held-unlit CBR state; current source verifier and current lighting verifier remain."
+    }
+  ],
+  "retainedEvidence": [
+    {
+      "path": "handoff/electrician/simulation/runs/smoke3/sim-results.json",
+      "sha256": "e00d67f50d3d2536ab1f4d8b753202ad0ac8260de9ddbf62a5652d70002055a9",
+      "reason": "Raw KIT ad1024 reference for the retained D0 sampling-convergence table; independently recomputed by verify-simulation.py."
+    },
+    {
+      "path": "handoff/electrician/simulation/runs/smoke4/sim-results.json",
+      "sha256": "c962636ef2818faebe59e5089f63fe26a886fdb057818908028f74e170087205",
+      "reason": "Raw KIT ad128 comparison for the retained D0 sampling-convergence table; independently recomputed by verify-simulation.py."
+    },
+    {
+      "path": "handoff/electrician/simulation/analysis/sim-heatmaps.json",
+      "sha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98",
+      "reason": "Immutable original multi-room source for the retained historical maps. Its embedded CBR data are not republished as images, CSV rows or current results."
+    },
+    {
+      "path": "handoff/electrician/simulation/runs/base/sim-results.json",
+      "sha256": "9729b22945ba944e204e3e1537a414f58b9ea634dc46487a4b9b271cf7028e40",
+      "reason": "Original per-fitting vectors supporting retained non-CBR results and historical numerical checks; mixed-room source bytes are preserved."
+    },
+    {
+      "path": "handoff/electrician/simulation/analysis/sim-summary.json",
+      "sha256": "cd99054fcf2592828b255c2f815785b82f9c9a8e203a5e642babc84d2c63575c",
+      "reason": "Original numerical convergence and paired-sensitivity tables supported by the retained raw runs."
+    },
+    {
+      "path": "handoff/electrician/simulation/analysis/checks.json",
+      "sha256": "9738c2137747be814452299db785d49c870559f270ae24b5d04d6313d4a12fbf",
+      "reason": "Original generic-engine and calculation checks, not current product/site approval."
+    },
+    {
+      "path": "handoff/electrician/simulation/repository-copy-receipt.json",
+      "sha256": "afde55c9a39bd5a0689f670dd568dbf188ea038a65feeb7a183237320ce85667",
+      "reason": "Unmodified source-to-public copy proof for the retained numerical/source pack."
+    },
+    {
+      "path": "handoff/viewer/verification/repository-copy-receipt.json",
+      "sha256": "dbef7506dfc007bdc0ddb378bd8f1c07d277881b16c989892fb535994458d75b",
+      "reason": "Unmodified historical copy proof. Two previously copied process files are explicitly retired by this receipt, not silently relabeled as delivered."
+    },
+    {
+      "path": "handoff/viewer/verification/selected-source-file-hashes.json",
+      "sha256": "f9df0e9821e3a9dbc8a206a9ac19cd3c98fa7ad19c4fd6b11a7446be2fd63a54",
+      "reason": "Original source-manifest bytes pinned by the historical verification copy receipt."
+    },
+    {
+      "path": "handoff/viewer/local-browser-verification.json",
+      "sha256": "6242f51b8800b1ae8310f903027fb4df62a26d510cee4c7fa53bab27d51d5a52",
+      "reason": "Small historical receipt required by the prior-hash correction basis in 2026-11-18-viewer-update-receipt.json; not current browser validation."
+    }
+  ],
+  "derivedCleanup": "CBR is excluded from historical image generation, gallery anchors and derived CSV rows. The original multi-room numerical source remains byte-identical.",
+  "constructionRelease": false
+}

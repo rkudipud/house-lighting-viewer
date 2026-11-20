@@ -91,6 +91,14 @@
       "sourceSha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3"
     },
     {
+      "path": "handoff/cleanup-receipt.json",
+      "bytes": 7938,
+      "sha256": "eb5704474cc17be84173cd57c037e63078746d9446763cf204cec1bb0acf8d11",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
       "path": "handoff/contractor/index.html",
       "bytes": 7685,
       "sha256": "fc68988c2aaee9225dc40279bbdf6f13465a68e0f8dce5697048b20817e90b9b",
@@ -2693,16 +2701,16 @@
     },
     {
       "path": "handoff/electrician/simulation/derived-evidence-receipt.json",
-      "bytes": 19545,
-      "sha256": "54a9a9b69c1acfabffc85b9fb9f900acb589ac63a96a23764c05ec63389dbfff",
+      "bytes": 17973,
+      "sha256": "4c7866a968552fbff4aeb20ef358bcfa1124fb35b6a8c392c8926678070008ea",
       "coverage": [
         "editable-sources"
       ]
     },
     {
       "path": "handoff/electrician/simulation/heatmap-cells.csv",
-      "bytes": 1968366,
-      "sha256": "36d0478a7b11746dbc5f52c66a562eb5b4c7765c252fd7efe2bc949c8fd6ff98",
+      "bytes": 1647903,
+      "sha256": "f0f3c1c9496214525ac980d578106a61165c092000232c5de9ba2dc2bd7a4464",
       "coverage": [
         "editable-sources"
       ]
@@ -2745,48 +2753,6 @@
       "path": "handoff/electrician/simulation/heatmaps/BAL-LOW_100.svg",
       "bytes": 211274,
       "sha256": "e9ab999ff6877a5eec29584b8d8a122beaba97e4ee6a52ee991bd684d2652903",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH+LOW_100.png",
-      "bytes": 113640,
-      "sha256": "1b9857b306d86a6d791c25082dac46bfafec1220484f9928976ad457c0788786",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH+LOW_100.svg",
-      "bytes": 397450,
-      "sha256": "2ffa8361e22a4bac0f9edc60ed0e1b86652735e6d3185a29e7fc213e5175498b",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH_100.png",
-      "bytes": 107784,
-      "sha256": "5d81e05a26b14176656fdf5742515822a8f253b4bd23eef259f156cb159cd236",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/simulation/heatmaps/CBR-HIGH_100.svg",
-      "bytes": 396634,
-      "sha256": "b858659beba66e235ebd21ed3cf2f40f1b932063676bac8c38ac8753b82aa6aa",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/simulation/heatmaps/CBR-LOW_100.png",
-      "bytes": 110806,
-      "sha256": "23fc7814e555e3b7abb94d67d718869f250f41fc6061877b83b5dd40ce3e457c",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/simulation/heatmaps/CBR-LOW_100.svg",
-      "bytes": 397237,
-      "sha256": "1b2dc1ae206ffc8814947db028d200fd636c833666b1a2ae17bd5ef07a5d5922",
       "coverage": [
         "editable-sources"
       ]
@@ -3171,14 +3137,14 @@
     },
     {
       "path": "handoff/electrician/simulation/index.html",
-      "bytes": 25206,
-      "sha256": "d6189a63927ca13b8e572060c107448e0645d4835382ca8d056f76408afdb206",
+      "bytes": 23394,
+      "sha256": "7f8e13f76f9bb53c9f77ac82b9c3b66d48c130e0722472930a7ebe5672eb0b52",
       "coverage": []
     },
     {
       "path": "handoff/electrician/simulation/local-simulation-verification.json",
-      "bytes": 548,
-      "sha256": "e6d557ded7bb2b2cbde3588d2974cc92bc0a7d7b37c4abb38cef791406d8d116",
+      "bytes": 752,
+      "sha256": "6823439edc0fd4bd3a806cc3f42ead628b5eb522ff5ff82a57848b4e39374f6d",
       "coverage": [
         "editable-sources"
       ]
@@ -3193,8 +3159,8 @@
     },
     {
       "path": "handoff/electrician/simulation/README.md",
-      "bytes": 7316,
-      "sha256": "2bb7fa810950d8338635aafb29e6ca023a9a7547d031d0d12ae25eab61659f1a",
+      "bytes": 3377,
+      "sha256": "1cf8165ac5d82ca1abb086880a69939e03745fce5c162cbf0a35192bc83db6f3",
       "coverage": []
     },
     {
@@ -4259,8 +4225,8 @@
     },
     {
       "path": "handoff/integration-receipt.json",
-      "bytes": 14422,
-      "sha256": "f1981e1236cfe9729f8749853f78982d6bbc99accb0f0c3afec6fb6e39eccec1",
+      "bytes": 2188,
+      "sha256": "86e09802ddf1c833f2b4ee0caf91535d1ce6fb5e4136ffdcfe8e11d284446410",
       "coverage": [
         "editable-sources"
       ]
@@ -4268,7 +4234,7 @@
     {
       "path": "handoff/local-artifact-verification.json",
       "bytes": 1194,
-      "sha256": "1130118ba6ac4766fa02642791da6352af7acf1c6dfe07b0a4d0477fbe66135d",
+      "sha256": "884fd8d9929e58e0967a13791bb4198c63433119dc6c565836c29e1f90fc44b5",
       "coverage": [
         "editable-sources"
       ]
@@ -5580,14 +5546,6 @@
       ]
     },
     {
-      "path": "handoff/viewer/local-rebuild-verification.json",
-      "bytes": 663,
-      "sha256": "a22f709f6b11c43002ad16d0ef1b1cc43797c15b58cad3b2686a7fdac4e16c88",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
       "path": "handoff/viewer/renders/01-whole-flat-dollhouse.png",
       "bytes": 388952,
       "sha256": "47e1d9fd50604a09c6b533ee44f13f30c1f652b34d6c5fc075b30d33734dbd4e",
@@ -6123,22 +6081,6 @@
       "sourceSha256": "d7701d46db08fe1ad5024def2f56128886a9cc2f3a63dd4dbef01ebdeddc7752"
     },
     {
-      "path": "handoff/viewer/source-delivery-manifest.json",
-      "bytes": 4126,
-      "sha256": "1f0f021b5f693da9dec62213d3c28f31011863b39c41e02955b7c2d7d13b162a",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/viewer/verification/2026-11-18-local-reverification.json",
-      "bytes": 3987,
-      "sha256": "f29ef1d3a892622de003944f1b4a16ffe56649b977d22ae932cfc7f616a59e8d",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
       "path": "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
       "bytes": 2382,
       "sha256": "4ecac73ea5a6446ad5c5a9519b0f64b9fa6d6ce008c46479ab2bfce0600f782b",
@@ -6163,23 +6105,6 @@
       ]
     },
     {
-      "path": "handoff/viewer/verification/browser-verification-review.json",
-      "bytes": 158403,
-      "sha256": "e61fd4072f3ca93a6f7ea7ff79377c7ddf68c0c5867b7af887f7c2102c8edfbf",
-      "coverage": [
-        "editable-sources"
-      ],
-      "sourceSha256": "e61fd4072f3ca93a6f7ea7ff79377c7ddf68c0c5867b7af887f7c2102c8edfbf"
-    },
-    {
-      "path": "handoff/viewer/verification/public-file-hashes.json",
-      "bytes": 430,
-      "sha256": "66de99572abf558221c8f7d8644b3539c217d6a5bf286d1e2693c87eb189fb4c",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
       "path": "handoff/viewer/verification/repository-copy-receipt.json",
       "bytes": 1942,
       "sha256": "dbef7506dfc007bdc0ddb378bd8f1c07d277881b16c989892fb535994458d75b",
@@ -6195,15 +6120,6 @@
         "editable-sources"
       ],
       "sourceSha256": "f9df0e9821e3a9dbc8a206a9ac19cd3c98fa7ad19c4fd6b11a7446be2fd63a54"
-    },
-    {
-      "path": "handoff/viewer/verification/verification-privacy-receipt.json",
-      "bytes": 944,
-      "sha256": "bfc665c3bad5311f1a72bfea0b70444cf7fc613ffa5535157d7cd99a79f9f7dc",
-      "coverage": [
-        "editable-sources"
-      ],
-      "sourceSha256": "bfc665c3bad5311f1a72bfea0b70444cf7fc613ffa5535157d7cd99a79f9f7dc"
     },
     {
       "path": "index.html",
@@ -6231,8 +6147,8 @@
     },
     {
       "path": "scripts/build-handoff-manifest.py",
-      "bytes": 16609,
-      "sha256": "39262bb59b610059caaf54426b2b8793a09ca2aa004042c08ed68d2cf0b0fe74",
+      "bytes": 17340,
+      "sha256": "f0deafd144b5a168e4a0517aaa9b528dec00c61e371ff809950dadadd1623355",
       "coverage": [
         "editable-sources"
       ]
@@ -6241,14 +6157,6 @@
       "path": "scripts/check-handoff-artifacts.py",
       "bytes": 7283,
       "sha256": "d69d0fbc582609e9e7d1c081ae28a944ee9cfb8390bbc962af3163fd14db4f6a",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "scripts/check-local-viewer.py",
-      "bytes": 11520,
-      "sha256": "59008de987527cd7229b0707ba4944ca6b3b2dd5d314a7d36112423891ceaafa",
       "coverage": [
         "editable-sources"
       ]
@@ -6295,8 +6203,8 @@
     },
     {
       "path": "scripts/render-simulation-evidence.py",
-      "bytes": 14671,
-      "sha256": "4c137133349d13ad7dd5a43ba36e89ee9a3d47abfb25652d55ceb74430bbebca",
+      "bytes": 14527,
+      "sha256": "e0701bc7770a897a350547b8e0ae00ab0fe9aa10446ff05513e97d15ef0a4d0c",
       "coverage": [
         "editable-sources"
       ]
@@ -6327,8 +6235,8 @@
     },
     {
       "path": "scripts/verify-simulation.py",
-      "bytes": 5680,
-      "sha256": "5d009e926254d187958a22a489359d0210c5f21d08b89bf0d1bf5968e29b3f5c",
+      "bytes": 7743,
+      "sha256": "5f007584d0b9f18740bba46b0fdec155ee96452005fa8d1540b0b527e613d665",
       "coverage": [
         "editable-sources"
       ]

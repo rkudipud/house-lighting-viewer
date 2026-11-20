@@ -4,11 +4,15 @@
   "constructionRelease": false,
   "publicationAuthorized": false,
   "sourceHeatmapsSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98",
-  "rooms": 11,
-  "mapPairs": 33,
-  "svgNumericalCellsAndMaskVerified": 55371,
+  "sourceRooms": 11,
+  "rooms": 10,
+  "omittedDerivedRooms": {
+    "CBR": "Superseded geometry; current CBR results are in the lighting review pack."
+  },
+  "mapPairs": 30,
+  "svgNumericalCellsAndMaskVerified": 47199,
   "csv": "heatmap-cells.csv",
-  "csvSha256": "36d0478a7b11746dbc5f52c66a562eb5b4c7765c252fd7efe2bc949c8fd6ff98",
+  "csvSha256": "f0f3c1c9496214525ac980d578106a61165c092000232c5de9ba2dc2bd7a4464",
   "rendering": "SVG rectangles preserve every supplied non-null value and mask; PNGs rasterize those SVGs at 1100x1030. Fixed scale 0-750 lux clips colour only, never numerical exports.",
   "files": [
     {
@@ -152,42 +156,6 @@
     {
       "path": "heatmaps/MBR-HIGH+LOW_100.png",
       "sha256": "0b439ea4c412c43cfb227e52360f1ffb7b988db89e73457056faa9d3b27970dd",
-      "sourcePath": "analysis/sim-heatmaps.json",
-      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
-    },
-    {
-      "path": "heatmaps/CBR-HIGH_100.svg",
-      "sha256": "b858659beba66e235ebd21ed3cf2f40f1b932063676bac8c38ac8753b82aa6aa",
-      "sourcePath": "analysis/sim-heatmaps.json",
-      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
-    },
-    {
-      "path": "heatmaps/CBR-HIGH_100.png",
-      "sha256": "5d81e05a26b14176656fdf5742515822a8f253b4bd23eef259f156cb159cd236",
-      "sourcePath": "analysis/sim-heatmaps.json",
-      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
-    },
-    {
-      "path": "heatmaps/CBR-LOW_100.svg",
-      "sha256": "1b2dc1ae206ffc8814947db028d200fd636c833666b1a2ae17bd5ef07a5d5922",
-      "sourcePath": "analysis/sim-heatmaps.json",
-      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
-    },
-    {
-      "path": "heatmaps/CBR-LOW_100.png",
-      "sha256": "23fc7814e555e3b7abb94d67d718869f250f41fc6061877b83b5dd40ce3e457c",
-      "sourcePath": "analysis/sim-heatmaps.json",
-      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
-    },
-    {
-      "path": "heatmaps/CBR-HIGH+LOW_100.svg",
-      "sha256": "2ffa8361e22a4bac0f9edc60ed0e1b86652735e6d3185a29e7fc213e5175498b",
-      "sourcePath": "analysis/sim-heatmaps.json",
-      "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
-    },
-    {
-      "path": "heatmaps/CBR-HIGH+LOW_100.png",
-      "sha256": "1b9857b306d86a6d791c25082dac46bfafec1220484f9928976ad457c0788786",
       "sourcePath": "analysis/sim-heatmaps.json",
       "sourceSha256": "aae1a092a49b131c50f50e885eb231ec2e1bb61c5bbdbf4347316ac1fff22d98"
     },

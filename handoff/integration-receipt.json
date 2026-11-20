@@ -1,13 +1,12 @@
 {
-  "schema": "house-local-integration/1",
-  "historicalNotice": "This records an earlier local integration only. Current master, viewer, deliveries and holds are documented by the current handoff and copy receipts; earlier counts and publication statements below are historical.",
-  "status": "local-design-review-simulation-addendum-awaiting-review",
+  "schema": "house-local-integration/2",
+  "status": "current-design-review-not-construction-released",
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "constructionRelease": false,
   "productRelease": false,
-  "fabricationRelease": false,
   "procurementRelease": false,
-  "publicationAuthorized": false,
-  "remoteWritesPerformed": false,
+  "fabricationRelease": false,
+  "publicationAuthorized": true,
   "coordinatorReview": {
     "status": "accepted",
     "scope": "local-design-review-only",
@@ -20,192 +19,27 @@
       "publication"
     ]
   },
-  "branch": "yadavmad-final-house-handoff-integration",
-  "baselineCommit": "8f7d037a4372a370797c3aae1028c6c260611ded",
-  "newCommitCreated": false,
-  "fileTracking": {
-    "intendedManifestEntries": 593,
-    "intendedTrackedExisting": 5,
-    "intendedUntrackedGitVisible": 588,
-    "inventoryManifestAlsoUntrackedAndVisible": true,
-    "allDeliveredFilesGitVisibleIncludingManifest": 594,
-    "ignoredIntendedOrManifestFiles": 0,
-    "missingFromGitVisibility": 0,
-    "stagedPaths": 0,
-    "trackedDeletedBaselineFiles": [
-      "downloads/layout-views-review-draft-e0bf1af2.pdf",
-      "downloads/working-floor-plan-review-draft-e0bf1af2.pdf"
-    ],
-    "method": "Compared all intended paths and the manifest against git ls-files --cached and --others --exclude-standard; git check-ignore --no-index inspected every delivered path including tracked files; git diff --cached confirmed an empty index diff."
-  },
-  "originalMasterSha256": "b6f6bf1a127c7e39086deb9fd1d2c0dff79a495381e1a4b9457f6a9a468f23ac",
-  "simulationAddendum": {
-    "status": "historical_report_and_verified_remaining_room_revision_integrated",
-    "integrationReview": "pending",
-    "pendingSmallRoomRevision": false,
-    "overallHandoffFinal": false,
-    "sourceReportSha256": "bcf194bdf33ea3a78bd10aafa7bdb211a346925fd1374ca050308305d280b2dd",
-    "sourceReceiptSha256": "504395aadbff043b1e5d2e4fad7ed9356b974ec44e8f3d4dc4a8a6446b6f0960",
-    "entry": "handoff/electrician/simulation/index.html",
-    "publicCopyProvenance": "handoff/electrician/simulation/repository-copy-receipt.json",
-    "derivedFigures": "handoff/electrician/simulation/derived-evidence-receipt.json",
-    "localFidelityChecks": "handoff/electrician/simulation/local-simulation-verification.json",
-    "remainingRoomRevision": {
-      "entry": "handoff/electrician/simulation/revision-all-rooms/index.html",
-      "sourceReportSha256": "520968933b162cf398eb57368195f83f5e4a298a9528a74c89e26b74d8653759",
-      "sourceReceiptSha256": "0a28c98621b2523156370f062d922d6872850af4438824d2ca7776f8f686dbcb",
-      "sourceIndependentVerificationSha256": "0f6f13e09f85961d163db80548b4208f36f481499f730232ece6979fdb068cc5",
-      "publicCopyProvenance": "handoff/electrician/simulation/revision-all-rooms/repository-copy-receipt.json",
-      "localFidelityChecks": "handoff/electrician/simulation/revision-all-rooms/local-revision-verification.json",
-      "supersedes": "Only the earlier report's small-room-sensitivity-not-run statement; historical report/receipt bytes remain unchanged.",
-      "upstreamReceiptEntriesHashVerified": 128,
-      "boundedPublicCopies": 69,
-      "omittedOperationalOrCompiledArtifacts": 61,
-      "modelPayloadDigestsUnchanged": 10,
-      "roomVariantCases": 54,
-      "editableScenesByteIdentical": 54,
-      "rawStatisticSetsRecomputedLocally": 612,
-      "pairedPhysicalSensitivityTableRowsChecked": 36,
-      "identicalSceneControlComparisons": 12,
-      "publicModeVerifiesMasterApprovalChain": false,
-      "radianceExecutedDuringIntegration": false,
-      "limitations": [
-        "Pocket narrow/wide are identical-scene controls, not physical pocket sensitivity or confidence intervals",
-        "UTL/BAL remain enclosed approximations of open-air spaces",
-        "Bathroom results are floor-plane, samples 0.0005 m above floor; no face-plane or bathroom-safety validation",
-        "DRS/LOB task U0 uses only 12/8 points and is not whole-room uniformity",
-        "Generic optics, assumed reflectances and dimensions; no selected-product, measured, glare/UGR or daylight validation",
-        "All earlier pooja, KIT-L1, curtain-strip, electrical, structural and professional holds remain",
-        "Original/public hashes differ after host/CPU/path metadata removal; no private master/receipt-chain reproduction claim"
-      ]
-    },
-    "scope": "Generic provisional Radiance ray tracing with assumed geometry, reflectances and source shapes; not measured, dynamically updated or product-specific.",
-    "fixturesMoved": false,
-    "canonicalMasterModified": false,
-    "radianceExecutedDuringIntegration": false,
-    "validation": {
-      "upstreamReceiptEntriesHashVerified": 40,
-      "boundedPublicCopies": 38,
-      "sourceNumericalFilesByteIdentical": 33,
-      "heatmapSvgPngPairs": 33,
-      "nonNullSvgCellsVerified": 55371,
-      "csvRowsIncludingMasksVerified": 57096,
-      "pngFidelity": "Every map has first/peak-value pixel checks against its SVG colours; all images decoded.",
-      "protectedExistingArtifacts": "All original master/fixture, viewer/workbench, plan, source-pack and render bytes remain unchanged."
-    },
-    "holds": [
-      "LIV-P1 excluded because its strip record is outside the canonical niche; LIV-P2 aim misses the niche and remains held",
-      "KIT-L1 cove path overruns the kitchen polygon by 0.4 ft; slot/pocket dimensions remain unmeasured and held",
-      "Living and kitchen main-light evenness are marginal under the stated model, not relocation instructions",
-      "UTL/BAL model assumes enclosure and can overestimate open-air spaces",
-      "Remaining-room sensitivity is included separately; pocket narrow/wide remain identical-scene controls, not physical pocket sensitivity",
-      "Bathroom floor-plane and DRS/LOB 12/8-point task masks limit interpretation",
-      "Glare/UGR, daylight, flicker and thermal behaviour not included",
-      "Curtain strips excluded with no lux credit; all original approval holds unchanged"
-    ]
-  },
-  "publicMasterCopy": "handoff/source-basis/house-design.json",
-  "publicMasterCopyNote": "Absolute source paths were redacted; delivered bytes have a different hash from the canonical original. Source and delivered hashes are preserved in pack copy receipts and the final inventory.",
-  "viewer": {
-    "path": "index.html",
-    "htmlSha256": "0eccefc1c77db1a16089b498d63c5ec8ba2147f589c8750924534635c50e2e3e",
-    "derivedPlanSha256": "33dd7317e805a9c9bc790c160dcfd6187c38fed9fffd97c13ba74b64267ed600",
-    "producerDeliveryManifestSha256": "bb643fb1539550aaba2c182a607154a64bd37222d9cd030d868a26acec93b75c",
-    "approvedFoldersOnly": [
-      "site-final",
-      "source-release",
-      "public-drawings-verified",
-      "renders-final",
-      "public-verification"
-    ],
-    "sourceDeliveryManifest": "handoff/viewer/source-delivery-manifest.json",
-    "rootFileReceipt": "handoff/viewer/site-repository-copy-receipt.json",
-    "exactRebuildEvidence": "handoff/viewer/local-rebuild-verification.json",
-    "localBrowserEvidence": "handoff/viewer/local-browser-verification.json"
-  },
+  "coordinatorReviewNote": "The preserved acceptance above is the earlier local review, not current construction or product approval. Publication of the current review handoff was separately delegated.",
+  "currentEvidence": [
+    "build-info.json",
+    "handoff/viewer/source/public-source-manifest.json",
+    "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
+    "handoff/electrician/lighting/verification.json",
+    "handoff/mason-civil/layout-views/layout-views-verification.json",
+    "handoff/local-artifact-verification.json"
+  ],
   "navigation": {
-    "tradeHandoff": "handoff/index.html",
-    "electrician": "handoff/electrician/index.html",
-    "masonCivil": "handoff/mason-civil/index.html",
-    "contractorWardrobes": "handoff/contractor/index.html",
-    "viewerDrawingsAndThreeRenders": "handoff/viewer/index.html",
-    "exploratorySimulation": "handoff/electrician/simulation/index.html",
-    "remainingRoomSensitivity": "handoff/electrician/simulation/revision-all-rooms/index.html",
-    "inventory": "handoff/manifest.json",
-    "renderDecodePrivacyEvidence": "handoff/local-artifact-verification.json"
+    "handoff": "handoff/index.html",
+    "viewer": "index.html",
+    "renders": "handoff/viewer/renders/render-receipt.json",
+    "historicalSimulation": "handoff/electrician/simulation/index.html",
+    "currentHeatmaps": "handoff/electrician/lighting/current/heatmaps-summary.pdf"
   },
-  "localValidation": {
-    "integratedBrowserChecksPassed": 49,
-    "browserExceptions": 0,
-    "externalRuntimeRequests": 0,
-    "pdfFiles": 22,
-    "pdfPagesRenderedAt72Dpi": 163,
-    "svgFilesRendered": 85,
-    "everySvgHasPngCounterpart": true,
-    "pngFilesDecoded": 100,
-    "jpegFilesDecoded": 5,
-    "distinctApprovedUserSitePhotos": 3,
-    "jpegNote": "Two approved photos also appear within electrical figures; five JPEG files contain only the three allowlisted photographs.",
-    "pdfPrivacyScope": "Every page text, standard/XML metadata, links and decoded PDF object dictionaries were inspected for private absolute source paths.",
-    "navigationScope": "All delivered relative HTML links/fragments and Markdown targets; generator-template links are evaluated in generated output, not the template source directory.",
-    "downloadScope": "All four viewer PDFs fetched and hash-checked using a localhost Pages-style repository prefix; CSV contents and PNG export checked.",
-    "workingTree": "Local uncommitted integration; no PR, commit, push or publication performed."
-  },
-  "sourceManifestPins": {
-    "civilSHA256SUMS.txt": "0f08ed432850a1f8e2d4fd21b0d93d35b02715ce4b79817b69150d4d8d7d1e40",
-    "civilArtifactReceipt": "02c8849b529cd81f43b9991f6014e908ca8d3f7f2440db3866f6c737ff546f06",
-    "lightingManifest": "a852f20037011bc2fd7eee335dfe29aca6b9480e5e3ff0e9d64fdfae9741e11b",
-    "lightingVerification": "159fef18909993180b7f634c0ad7a6da4fd0feeae89ab02604cf269fad3e61d0",
-    "electricalSHA256SUMS.txt": "859de7c2efda9ba47a97825458a81d734c544c8f33144c004f6f1c923532e081",
-    "electricalReceipt": "185fdb8018772a5c07a9dbdb65916194cff01c5e0fe5eb1b9935e080e3aaa09f",
-    "wardrobeFinalFileHashes": "4989fed36352b5e45a73eeac68821712d3da7b8bc49bc6337f024f309a531db6",
-    "isolatedWardrobePublicSHA256SUMS.json": "90001ce78593faf8e3d8c49591cd1c29598f50891a830e4de5806942d1e3f5f9",
-    "isolatedWardrobePublicReceipt": "a813758652392bdfe13374000578dc7836ec64cf8c5674426fa3c8ea9b89bd5a",
-    "wardrobeReferenceReceipt": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
-    "historicalLightingProvenanceCorrection": "9d713dfe690c629c61241795b2a4689b6688dd4f704e5989042e5f58249ffc42",
-    "exploratorySimulationReceipt": "504395aadbff043b1e5d2e4fad7ed9356b974ec44e8f3d4dc4a8a6446b6f0960",
-    "remainingRoomSimulationReceipt": "0a28c98621b2523156370f062d922d6872850af4438824d2ca7776f8f686dbcb"
-  },
-  "reproduction": {
-    "viewer": "Independently rebuilt from an isolated public-source copy using pinned dependencies; byte-identical to the integrated HTML; private master not used.",
-    "wardrobe": "Isolated allowlisted public bundle regenerated and passed its public verifier: 31 byte-identical outputs and all 17 PDF pages text/render-identical; seven private inputs absent. Snapshot contents, 21 cost calculations, interiors equality and holds are covered, not private master/approval chains or historical original bytes. PDF trailer IDs are nondeterministic.",
-    "lightingElectricalCivil": "Editable generator/exporter snapshots and their documented dependencies are retained. Repository-portable end-to-end regeneration is not claimed where original/session-local inputs remain required."
-  },
-  "rightsAndPrivacy": {
-    "sourcePacksModified": false,
-    "thirdPartyManufacturerPdfsOmitted": 12,
-    "manufacturerPolicy": "Official source links replace redistributed manufacturer files; source-versus-public changes and omissions are recorded in the electrical copy receipt.",
-    "approvedUserSitePhotos": 3,
-    "sitePhotoLimit": "Site views only, not measured evidence; filenames do not establish curtain-pocket dimensions.",
-    "excluded": [
-      "Retired original floorplans and old G-series joinery",
-      "Legacy library/contact sheets and unlicensed third-party renders",
-      "Private viewer raw drawings and verification-release",
-      "Private wardrobe master snapshots",
-      "Dependency and cache directories"
-    ]
-  },
-  "lightingLimits": {
-    "opticalBaselineFixtures": 104,
-    "opticalBaselineCircuits": 47,
-    "reviewFixturesIncludingSelectedCurtainStrips": 108,
-    "reviewCircuitsIncludingSelectedCurtainStrips": 51,
-    "simulation": "Viewer/workbench visual dimming and frozen analytic maps are unchanged. Separate generic provisional Radiance estimates and the remaining-room sensitivity revision are included for review; not measured, dynamically recomputed or product-specific/site-validated.",
-    "curtainStripLuxCredit": false,
-    "childrenMap": "Older children's-room grid is withheld in the current 3D viewer. Historical workbench estimates do not validate corrected geometry."
-  },
-  "unresolvedHolds": [
-    "Simulation revision is integrated and awaits coordinator review; prior acceptance is scoped to the base local design-review handoff, not this new addition or construction",
-    "Explicit later user publication go-ahead remains required; coordinator acceptance is local design review only, with no staging, commit, push, account switching or remote update authorized",
-    "Professional site measurement, room/opening dimensions, D01 leaf-count conflict, routes and clearances",
-    "Unmeasured curtain pockets/returns; W03 optional pocket remains excluded/held",
-    "Wardrobe interiors/shutters remain provisional; loft/support loads, fixing design and fabrication approval required",
-    "Wall changes and structural modifications require professional approval",
-    "Electrical protection, earthing, bathroom zones, branch sizing and installation routing require professional checks",
-    "P01 480 W living supply chain/current protection/repeaters, voltage drop and LT4/LT5 inrush remain held; P03 removed",
-    "P16/C39/C40 marginal; C37 exact dimmer chain remains on procurement hold",
-    "Measured installed quotation and selected 480 W supply price delta are unverified; historical S1 budget excludes this price",
-    "Unavailable historical intermediate lighting-manifest bytes remain an explicit provenance gap; compatibility is not verification of the missing manifest",
-    "Actual physically validated photometry is not supplied by these review outputs"
+  "cleanupReceipt": "handoff/cleanup-receipt.json",
+  "limits": [
+    "Generic estimates, not measured lux or manufacturer photometry.",
+    "CBR cove and shifted LINE contribute to the provisional simulation; physical installation and operation remain held.",
+    "Site dimensions, fan airflow/clearances, ceiling/slab levels, electrical protection, dimming compatibility and structural/fabrication approvals remain open.",
+    "Wardrobe decisions are separate review addenda; older joinery drawings and costs are not a current measured fabrication or purchase release."
   ]
 }

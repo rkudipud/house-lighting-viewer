@@ -62,6 +62,8 @@ def main():
         writer = csv.writer(stream)
         writer.writerow(["room", "scene", "x_ft", "z_ft", "maintained_lux", "inside_grid_mask"])
         for room, grid in grids.items():
+            if room == "CBR":
+                continue
             cards.append(f'<section id="{room}"><h2>{html.escape(ROOMS[room])}</h2><div class="maps">')
             xs, zs = grid["x_ft"], grid["z_ft"]
             step = grid["step_ft"]
@@ -72,10 +74,7 @@ def main():
             for scene, values in grid["layers"].items():
                 if len(values) != len(zs) or any(len(row) != len(xs) for row in values):
                     raise ValueError("Grid shape mismatch")
-                title = room + " / " + scene + (
-                    " / historical Radiance baseline, superseded" if room == "CBR"
-                    else " / exploratory Radiance estimate"
-                )
+                title = room + " / " + scene + " / exploratory Radiance estimate"
                 lines = [
                     '<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1030" viewBox="0 0 1100 1030">',
                     f"<title>{html.escape(title)}</title>",
@@ -87,9 +86,7 @@ def main():
                     '<text x="80" y="815" font-size="17">Plan x / ft; plan z increases down the page. Blank cells are outside the source mask.</text>',
                     '<text x="50" y="860" font-size="17">P1 excluded; pooja strip/spot and KIT-L1 cove remain HELD. No fixtures moved.</text>',
                     '<text x="50" y="888" font-size="17">Curtain strips have no lux credit. UTL/BAL assume enclosure, not real open-air conditions.</text>',
-                    ('<text x="50" y="916" font-size="17">HISTORICAL CBR: geometry and LOW are superseded; use current review heatmaps.</text>'
-                     if room == "CBR" else
-                     '<text x="50" y="916" font-size="17">Base-run map; see separate six-room revision. Glare/UGR and daylight not computed; holds remain.</text>'),
+                    '<text x="50" y="916" font-size="17">Base-run map; see separate six-room revision. Glare/UGR and daylight not computed; holds remain.</text>',
                     '<text x="50" y="944" font-size="17">Viewer/workbench maps remain separate frozen analytic estimates, not this ray-tracing result.</text>',
                     '<text x="50" y="982" font-size="14">Source: analysis/sim-heatmaps.json. Values are supplied rounded lux; no lighting recalculated.</text>',
                     "</g>", '<g id="cells">',
@@ -142,8 +139,7 @@ def main():
                     f'alt="{html.escape(title)}; generic unmeasured estimate; all holds remain"></a>'
                     f'<figcaption>{html.escape(scene)}: <a href="heatmaps/{stem}.png">PNG</a> / '
                     f'<a href="heatmaps/{stem}.svg">editable SVG</a>. '
-                    + ('Historical CBR geometry and LOW state are superseded; use the current heatmaps. ' if room == "CBR" else '')
-                    + 'Fixed 0-750 lux colour scale; higher colours clipped, numerical values retained. '
+                    'Fixed 0-750 lux colour scale; higher colours clipped, numerical values retained. '
                     'A zero LOW grid means no modelled LOW contribution, not a missing mask.</figcaption></figure>'
                 )
             cards.append("</div></section>")
@@ -161,8 +157,9 @@ def main():
 <a href="../index.html">Electrician handoff</a>
 <h1>Historical exploratory Radiance evidence</h1>
 <p class="hold"><strong>Historical baseline, not the current children's-room design.</strong>
-The CBR grids below predate the centred fan, shifted LINE and modelled-ON LOW simulation.
+The superseded CBR image derivatives and CSV rows have been removed.
 Use the <a href="../lighting/current/heatmaps-summary.pdf">current review heatmaps</a> for CBR.
+The original multi-room numerical source is retained unchanged for provenance, not as the current CBR result.
 The <a href="revision-all-rooms/index.html">verified six-room small-room sensitivity revision</a>
 is now included. It supersedes only the historical report's not-run statement.
 This page preserves the earlier report and base grids; it is not a construction release.</p>
@@ -198,7 +195,7 @@ not independent product or site validation.</p>
 <p>Source grids retain their delivered rounding and masks. Grid-cell colours must not be read
 as task-area minimum/uniformity figures: use the report's defined task areas and scene accounting.</p>
 """
-    anchors = " / ".join(f'<a href="#{room}">{html.escape(name)}</a>' for room, name in ROOMS.items())
+    anchors = " / ".join(f'<a href="#{room}">{html.escape(name)}</a>' for room, name in ROOMS.items() if room != "CBR")
     raw_links = "".join(
         f'<li><a href="{path.relative_to(PACK).as_posix()}">{path.relative_to(PACK).as_posix()}</a></li>'
         for path in sorted((PACK / "runs").rglob("sim-results.json"))
@@ -208,7 +205,8 @@ as task-area minimum/uniformity figures: use the report's defined task areas and
     summary = {
         "status": "PASS_supplied_grid_fidelity_not_a_simulation_rerun",
         "radianceExecuted": False, "constructionRelease": False, "publicationAuthorized": False,
-        "sourceHeatmapsSha256": digest(source), "rooms": len(grids),
+        "sourceHeatmapsSha256": digest(source), "sourceRooms": len(grids), "rooms": len(grids) - 1,
+        "omittedDerivedRooms": {"CBR": "Superseded geometry; current CBR results are in the lighting review pack."},
         "mapPairs": len(derived) // 2, "svgNumericalCellsAndMaskVerified": cells_verified,
         "csv": "heatmap-cells.csv", "csvSha256": digest(PACK / "heatmap-cells.csv"),
         "rendering": "SVG rectangles preserve every supplied non-null value and mask; PNGs rasterize those SVGs at 1100x1030. Fixed scale 0-750 lux clips colour only, never numerical exports.",

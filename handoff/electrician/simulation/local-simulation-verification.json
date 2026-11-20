@@ -2,10 +2,16 @@
   "status": "PASS_public_simulation_fidelity_without_Radiance",
   "radianceExecuted": false,
   "sourceNumericalFilesByteIdentical": 33,
-  "heatmapPairs": 33,
-  "nonNullSvgCellsVerified": 55371,
-  "csvRowsIncludingMaskedCellsVerified": 57096,
+  "heatmapPairs": 30,
+  "nonNullSvgCellsVerified": 47199,
+  "csvRowsIncludingMaskedCellsVerified": 48096,
   "pngPixelChecks": "First and peak-value source cells in every map match SVG colours within 2 RGB levels.",
+  "samplingConvergenceFixturesRecomputed": 13,
+  "retainedConvergenceInputs": [
+    "runs/smoke3/sim-results.json",
+    "runs/smoke4/sim-results.json"
+  ],
+  "supersededCbrDerivativesAbsent": true,
   "privateComputeDetails": "No private network domain, shared-host path or job-system markers in public addendum.",
   "constructionRelease": false,
   "publicationAuthorized": false
