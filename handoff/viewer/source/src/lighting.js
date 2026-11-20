@@ -1,6 +1,6 @@
 import * as T from 'three';
 import {PLAN,FT} from './geometry.js';
-import {CH,channelOf,buildGrid,gridStats,patchStats,directAt,nicheStripE} from './photometry.js';
+import {CH,channelOf,areaPerimeter,buildGrid,gridStats,patchStats,directAt,nicheStripE} from './photometry.js';
 import {arange} from './schedule.js';
 
 export function kelvin(k) {
@@ -98,9 +98,12 @@ export function createLighting(scene,model) {
     }
     states[z.room]=state;
     const p=z.poly.map(p=>p.map(n=>n*FT)),xs=p.map(p=>p[0]),zs=p.map(p=>p[1]);
-    const light=new T.PointLight('#fff0d7',0,Math.min(4,Math.max(Math.max(...xs)-Math.min(...xs),Math.max(...zs)-Math.min(...zs))*.85),2);
-    light.position.set((Math.min(...xs)+Math.max(...xs))/2,Math.min(2.15,z.ceil_m-.4),(Math.min(...zs)+Math.max(...zs))/2);
-    scene.add(light);pools.push({room:z.room,light});
+    const area=areaPerimeter(z.poly).A;
+    for(const lane of ['high','low']){
+      const light=new T.PointLight('#fff0d7',0,Math.max(3,Math.hypot(Math.max(...xs)-Math.min(...xs),Math.max(...zs)-Math.min(...zs))),2);
+      light.position.set((Math.min(...xs)+Math.max(...xs))/2,z.ceil_m-(lane==='high'?.55:.25),(Math.min(...zs)+Math.max(...zs))/2);
+      scene.add(light);pools.push({room:z.room,lane,area,light});
+    }
   }
   states.washing=states.utility;
   // Real feature-wall spot lights (non-shadow). Three always exist so the shader light count never changes.
@@ -284,20 +287,24 @@ export function createLighting(scene,model) {
         e.mat.emissive.lerp(kelvin(s.k),t);e.mat.emissiveIntensity=T.MathUtils.lerp(e.mat.emissiveIntensity,level*(e.gain??(e.layer==='high'?3.4:2.2))*VISUAL_GLOW_SCALE,t);
       }
     }
-    for(const {room,light} of pools){
-      const s=states[room],col=new T.Color(0,0,0);let power=0,weightSum=0;
+    for(const {room,lane,area,light} of pools){
+      const col=new T.Color(0,0,0);let lumens=0;
       for(const f of fixtureCache[room]){
         const c=channelOf(f);if(c==='art')continue;
-        const lm=(f.held?0:groupWeight(f.circuit))*f.lm,k=kelvin(groupStates[f.circuit].k);col.r+=k.r*lm;col.g+=k.g*lm;col.b+=k.b*lm;weightSum+=lm;power+=lm;
+        const rail=RAIL_OF_LANE[f.lane];if((rail||'high')!==lane)continue;
+        // Independent task fittings stay local; they should not saturate the room bounce.
+        const lm=(f.held?0:groupWeight(f.circuit))*f.lm*(rail?1:.22),k=kelvin(groupStates[f.circuit].k);col.r+=k.r*lm;col.g+=k.g*lm;col.b+=k.b*lm;lumens+=lm;
       }
-      if(weightSum)col.multiplyScalar(1/weightSum);
-      // PointLight.power is luminous flux in lumens; keep the pooled source at the schedule total.
+      if(lumens)col.multiplyScalar(1/lumens);
+      // These are soft visual bounce sources, not photometric emitters. Compress by room
+      // area so long strips do not overpower the main lights or clip the room to white.
+      const power=area*(lane==='high'?16:7)*(1-Math.exp(-lumens/(area*220)));
       light.color.lerp(col,t);light.power=T.MathUtils.lerp(light.power,power,t);
     }
     const w=weight('dining','art'),k=kelvin(states.dining.art.k);
     for(const sp of spots){
       if(!sp.f){sp.light.power=T.MathUtils.lerp(sp.light.power,0,t);continue;}
-      sp.light.color.lerp(k,t);sp.light.power=T.MathUtils.lerp(sp.light.power,sp.f.lm*w,t);
+      sp.light.color.lerp(k,t);sp.light.power=T.MathUtils.lerp(sp.light.power,sp.f.lm*w*.06,t);
     }
   }
   rebuild();

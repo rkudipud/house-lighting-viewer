@@ -33,7 +33,7 @@ def verify_cleanup(root, cleanup, master_sha256):
             raise ValueError(f"Required cleanup evidence changed: {item['path']}")
 
 
-def verify_review_overlay(root, overlay, master_sha256):
+def verify_review_overlay(root, overlay, master_sha256, viewer_successors):
     """Recheck each successor copy against its pinned receipt and source manifest."""
     if overlay.get("masterSha256") != master_sha256:
         raise ValueError("Final overlay is bound to a different master")
@@ -65,7 +65,15 @@ def verify_review_overlay(root, overlay, master_sha256):
             }
         for name, item in entries.items():
             path = repository_path(root, (receipt_path.parent / name).relative_to(root).as_posix())
-            if path.stat().st_size != item["bytes"] or file_hash(path) != item["sha256"]:
+            relative = path.relative_to(root).as_posix()
+            successor = viewer_successors.get(relative)
+            digest = file_hash(path)
+            if successor:
+                if receipt_name != "handoff/viewer/source/final-review-source-copy.json" or (
+                    successor["previousReviewedSha256"] != item["sha256"] or successor["currentSha256"] != digest
+                ):
+                    raise ValueError(f"Viewer successor differs from {receipt_name}: {name}")
+            elif path.stat().st_size != item["bytes"] or digest != item["sha256"]:
                 raise ValueError(f"Reviewed copy differs from {receipt_name}: {name}")
             if name != manifest_name and name not in source_files:
                 if receipt_name != "handoff/electrician/lighting/final-review-source-copy.json" or name != "verification.json":
@@ -199,17 +207,23 @@ def main():
             if not path.is_relative_to(root):
                 raise ValueError("A copy receipt points outside the repository")
             imported[path.relative_to(root).as_posix()] = item
+    viewer_overlay_path = "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json"
+    viewer_overlay = json.loads((root / viewer_overlay_path).read_text(encoding="utf-8"))
+    if viewer_overlay["masterSha256"] != args.master_sha256 or viewer_overlay["constructionRelease"] is not False:
+        raise ValueError("Viewer overlay has an invalid basis")
+    viewer_successors = {item["path"]: item for item in viewer_overlay["postCopyOverlays"]}
     overlay_paths = (
         "handoff/decisions/2026-11-18-material-selection-receipt.json",
         "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
         "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
         "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
+        viewer_overlay_path,
     )
     overlays = {}
     for overlay_path in overlay_paths:
         overlay_data = json.loads((root / overlay_path).read_text())
         if overlay_path.endswith("2026-11-19-final-handoff-overlay-receipt.json"):
-            verify_review_overlay(root, overlay_data, args.master_sha256)
+            verify_review_overlay(root, overlay_data, args.master_sha256, viewer_successors)
         overlays.update({item["path"]: (item, overlay_path) for item in overlay_data["postCopyOverlays"]})
     paths = [
         root / name for name in (

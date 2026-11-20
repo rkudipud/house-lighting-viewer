@@ -1,4 +1,0 @@
-﻿circuit,room,switch_modules,positions,note
-C10,DIN,2,SB-02; SB-07,"passage; PSU mains 2-way SB-02/SB-07 (concept), knob level at SB-02"
-C20,MBR,3,SB-05; SB-05L; SB-05R,dimmer at door; on/off 2-way door + intermediate SB-05L + 2-way SB-05R (concept)
-C37,CBR,3,SB-08; SB-08RL; SB-08RR,dimmer at door; on/off 2-way door + intermediate at the two bed-head plates (concept)

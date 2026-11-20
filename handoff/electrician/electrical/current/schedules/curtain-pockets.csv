@@ -1,5 +1,0 @@
-﻿fixture_id,circuit,room,length_m_derived,power_W_per_m_assumed,power_W_unrounded_model,cct_K,wall_control,supply_id,site_photo_in_master,site_photo_sha256,site_photo_in_pack,measurement_status,photometry_credit,fabrication_release
-CURT-LIV,X-CURT-LIV,LIV,2.45,8,19.6,2700,K-LIV-LOW,P01,library/02-references/site-photo-hall-curtain-pocket.jpeg,cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f,figures/photos/site-photo-hall-curtain-pocket.jpeg,"OPEN - derived, not measured",False,False
-CURT-DIN,X-CURT-DIN,DIN,2.45,8,19.6,2700,K-DIN-LOW,P07,library/02-references/site-photo-hall-curtain-pocket.jpeg,cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f,figures/photos/site-photo-hall-curtain-pocket.jpeg,"OPEN - derived, not measured",False,False
-CURT-MBR-S,X-CURT-MBR-S,MBR,2.43,8,19.44,2700,K-MBR-LOW,P12,,,,"OPEN - derived, not measured",False,False
-CURT-CBR,X-CURT-CBR,CBR,1.55,8,12.4,2700,K-CBR-LOW,P16,library/02-references/site-photo-children-curtain-pocket.jpeg,b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2,figures/photos/site-photo-children-curtain-pocket.jpeg,"OPEN - derived, not measured",False,False

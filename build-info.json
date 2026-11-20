@@ -22,8 +22,8 @@
   "wardrobeStatus": "provisional_design_not_homeowner_approved_or_fabrication_released",
   "wardrobeReferenceReceiptSha256": "dd70972b605d730260f2f0dd7037a36efdbc861fef5b309fd5094308d2b7ad8a",
   "supplyCabinetReceiptSha256": "72a4ff46d9b68e6cc85452e40cb15019d7f699d181f89fa07e9ad08efb066927",
-  "htmlSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
-  "htmlBytes": 2613979,
+  "htmlSha256": "d0358d2670e5d65b4a5d5526498b30b55e80d67fad9c83b4595d0a42f2392c61",
+  "htmlBytes": 2607478,
   "embeddedPlanDataSha256": "a75aeb46650e0ff46f0d29e94baf6e6e8cea2f8c3719928243feeb95036ee9cf",
   "embeddedHeatDataSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
   "downloads": [
@@ -48,5 +48,7 @@
       "sha256": "57b69b4003116aa5d2c109232134c66d8a167419576b9c9f155d9ddfc07c53a3"
     }
   ],
-  "threeJs": "0.181.1 (bundled; no runtime network access)"
+  "threeJs": "0.181.1 (bundled; no runtime network access)",
+  "originalVerifiedHtmlSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
+  "viewerRevision": "Simple HIGH/LOW switches and balanced visual lighting; source data unchanged"
 }

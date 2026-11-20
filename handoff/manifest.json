@@ -42,8 +42,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 89,
-      "sha256": "b47cc48eb92b9d43b5c1dd431695301f9c7589a074ad871d209ce8b3f4208e14",
+      "bytes": 107,
+      "sha256": "f5a4fb4e3f6173a7db25f5d4f872f7036ee4713626541507eb75903f8bd1dc1f",
       "coverage": []
     },
     {
@@ -55,11 +55,12 @@
     },
     {
       "path": "build-info.json",
-      "bytes": 2404,
-      "sha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8",
+      "bytes": 2605,
+      "sha256": "b5b8b7dacad74c8d6a9f25ba6f8db085f79a6e6e238d3dffcfc4e686cbf7b5aa",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8"
     },
     {
@@ -92,8 +93,8 @@
     },
     {
       "path": "handoff/cleanup-receipt.json",
-      "bytes": 7938,
-      "sha256": "eb5704474cc17be84173cd57c037e63078746d9446763cf204cec1bb0acf8d11",
+      "bytes": 34381,
+      "sha256": "534b49c9dd6a8ac45f916627c72226f4b593489ba9a59903fa9c8612c2c7104b",
       "coverage": [
         "editable-sources"
       ]
@@ -747,302 +748,6 @@
       "sourceSha256": "b5af31183b6ebba59e606e99d9b4372249c7c3e98b0e9b6087212e5b205a9ccd"
     },
     {
-      "path": "handoff/electrician/electrical/current/bill-of-materials.html",
-      "bytes": 13337,
-      "sha256": "80389ded928593c42b0c045662c458124a5d2df8756fb86b01279c3705d86ff1",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/bill-of-materials.md",
-      "bytes": 6593,
-      "sha256": "5e19b11cbe4c2e248d5c7c614ef9af016b6c7204e922161d69ad6509b16e74b6",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/bill-of-materials.pdf",
-      "bytes": 88469,
-      "sha256": "ac95775fe567cc7e7f4d6ef89633da55d5933b5297275d46e99415555ad3b59c",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/control-options.html",
-      "bytes": 9084,
-      "sha256": "a21f56c65185c70e22b2bcc36917902f8d033fbab1b67ebbdd6d6e1b61247ac3",
-      "coverage": [
-        "control-options"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/control-options.md",
-      "bytes": 5654,
-      "sha256": "8b2dc85b2405cb9852e8ae826a9a1f77f564a29d68a0b4f8ae798acbadeb1890",
-      "coverage": [
-        "control-options"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/control-options.pdf",
-      "bytes": 84387,
-      "sha256": "99ed7151b6a8f7c2a0507940520b6e295549acc339390dd585f1d18936ddfa48",
-      "coverage": [
-        "control-options"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/electrical-review.html",
-      "bytes": 177354,
-      "sha256": "f616c56b673c73a26f95a61cda17fcf189b2cf696b77c2f04de283cff56748a6",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/electrical-review.md",
-      "bytes": 21806,
-      "sha256": "44992aa5f3cb3b3acf725c5a4ec14f2c691650a7b2007934749bb223cad1f711",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/electrical-review.pdf",
-      "bytes": 264205,
-      "sha256": "ccecde80c4aa01c0c0d1518c6856e49b898a639eecb9e67d8d8723680b02f0db",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/concept-flat.png",
-      "bytes": 197819,
-      "sha256": "4a11e5e767118d7c0e6d7617dbcc2388c704596f62183b01832b27e3aca687d6",
-      "coverage": [
-        "wiring-electrical-layout"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/concept-flat.svg",
-      "bytes": 4083,
-      "sha256": "1a253f54e27c462e6974b44f688249a1ca4f60f0e223ad5b3c86eb29cbc1bab7",
-      "coverage": [
-        "editable-sources",
-        "wiring-electrical-layout"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/concept-living-low.png",
-      "bytes": 232858,
-      "sha256": "b2080b4020ac0919a95ae3507bd637009973bc9ce17d7e5a277e5e590ce0c5fd",
-      "coverage": [
-        "wiring-electrical-layout"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/concept-living-low.svg",
-      "bytes": 4962,
-      "sha256": "03f1db7ebebfe54fb962580ef549c417f765cc98c0ffee244647eb70af616ab2",
-      "coverage": [
-        "editable-sources",
-        "wiring-electrical-layout"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/controls-plan.png",
-      "bytes": 249842,
-      "sha256": "00b190d4d66febb43085e7ea5e4c6e3c89d99eb932cc526fc4243f1c5f7fc218",
-      "coverage": [
-        "wiring-electrical-layout"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/controls-plan.svg",
-      "bytes": 37674,
-      "sha256": "872b816672afd3f3d82502ffe3bda030b6e6e4e472cb973c3bfd6eb860fba896",
-      "coverage": [
-        "editable-sources",
-        "wiring-electrical-layout"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/curtain-pocket.png",
-      "bytes": 123121,
-      "sha256": "8eba55060b504415b2fe8f2fba7858f60500b7804fc5a7a4f4f572b73b03a808",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/curtain-pocket.svg",
-      "bytes": 5690,
-      "sha256": "728ce233cbc516f49817acd28cf99c1bffb9b749b85dadd2e9d9807f364c5cac",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/photos/site-photo-children-curtain-pocket.jpeg",
-      "bytes": 30783,
-      "sha256": "b3fdb9a4c247959bc8b6a3701fd3e2cb5004d069dfd25a279d5c056a855a56a2",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/figures/photos/site-photo-hall-curtain-pocket.jpeg",
-      "bytes": 25671,
-      "sha256": "cbe2ec6b6a22db6e5d3165f734406cfd5f04ba431db36f0316d79532d7a2ba0f",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/circuit-schedule.csv",
-      "bytes": 7550,
-      "sha256": "32df9f3c5efde164a37ad65f4a52a15c0d804607a69f526c44ddb63dced1a32d",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/curtain-pockets.csv",
-      "bytes": 1169,
-      "sha256": "074f4198ebe9f73b7b7f3a4e3e90eb030041312a6f4fea4ef175adf259fda26b",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/electrical-ledger.json",
-      "bytes": 152608,
-      "sha256": "2743bfd259676015a99773b3f1593a610087caaf82c83dbf6c82670f81aa8e5f",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/fitting-controls.csv",
-      "bytes": 630,
-      "sha256": "aa4976abbe98f4efb86cd8e4bb2b0223277ae3c17e231f935160e5f985c9dbce",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/fixture-class-specifications.csv",
-      "bytes": 8072,
-      "sha256": "8beda5b8f63ac52d00e4243a830ced6aa6765fc782d5ce0c1b26fea762050d0c",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/fixtures.csv",
-      "bytes": 22925,
-      "sha256": "bbc262136d7f0d578077f6a31f5029ba3a5ca056c465b90ad172c6ee302d2f52",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/knob-groups.csv",
-      "bytes": 2502,
-      "sha256": "4bbe04d7b6c806336c3799bb7d17476e324a9712ce2527fc24bfceafc7881a8c",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/lighting-distribution.csv",
-      "bytes": 971,
-      "sha256": "c74870239c110736dfd68dc3135872bfa6aa97a932c9e894c5e85222ed97102c",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/location-linked-bom.csv",
-      "bytes": 58759,
-      "sha256": "3c72367dd4f1a0628014aafbaa50a0a23e2ba1b91b88619e21ad66a8f5bdbfa2",
-      "coverage": [
-        "editable-sources",
-        "location-specification-bom"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/mains-dimmer-check.csv",
-      "bytes": 901,
-      "sha256": "0667c571c117946dc50b7f2be4a2a29b087284b99016b4ee4f93d54613322620",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/supplementary-switches.csv",
-      "bytes": 376,
-      "sha256": "a6c41f664f4cb4b435436f797fb3742fb2950e056ff2c3542badadb436baefe1",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/supply-schedule.csv",
-      "bytes": 1955,
-      "sha256": "3bca4d3886985dec83bb50a219cb1b629ea3c5bcfd09d2fb184264f08e211d44",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/switchboard-schedule.csv",
-      "bytes": 1717,
-      "sha256": "f09654234309806937d571819ac9f9c5f945e9af1a3accfbb50967595da09dab",
-      "coverage": [
-        "editable-sources",
-        "switchboard-control-schedule"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/voltage-drop-review.csv",
-      "bytes": 2943,
-      "sha256": "1ebb2c5b5e48a85db49627199ad522c5e79c43cdace1cf0ae90dbec9547144fa",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/schedules/wall-control-schedule.csv",
-      "bytes": 4406,
-      "sha256": "753f80b7d563a6385f089aa54ea6653655f81703d15750c08792d98f5d1af51a",
-      "coverage": [
-        "editable-sources",
-        "switchboard-control-schedule"
-      ]
-    },
-    {
-      "path": "handoff/electrician/electrical/current/source-index.html",
-      "bytes": 16951,
-      "sha256": "8f7c249cb14849ce10b9c5a6f59ae8530c24e06335c5c6185cfb018c9cb56d0b",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/source-index.md",
-      "bytes": 12589,
-      "sha256": "43264b971e4e2da012129f62446f0c809a6e646c0b1a5a59ad9fa867bb3d5c88",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/source-index.pdf",
-      "bytes": 99241,
-      "sha256": "91d4fe56e33287cd61fbc73f0c192c607d69c2c5d719e0ca24f60e180856371a",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/wholesale-rfq.html",
-      "bytes": 16644,
-      "sha256": "fa6a45001dc708e5b051201adac9aca589d8384e848cdbdb8136430e90d95b63",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/wholesale-rfq.md",
-      "bytes": 12397,
-      "sha256": "c20187efe5801410468c5d7b2b6dd2fb3abc32db346d53a513a4ebccf0b84536",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/electrical/current/wholesale-rfq.pdf",
-      "bytes": 101862,
-      "sha256": "411450791a2dabfe2e469de452833ad60e99c2ce9b996fd5648b0747d1255560",
-      "coverage": []
-    },
-    {
       "path": "handoff/electrician/electrical/electrical-review-render.json",
       "bytes": 829,
       "sha256": "77af489f9e82292d99183570b219b165a1d3957facca826a4bf665bb7727aceb",
@@ -1606,8 +1311,8 @@
     },
     {
       "path": "handoff/electrician/index.html",
-      "bytes": 3316,
-      "sha256": "f9bba52c915ec678bc3b6477df34aa50282c15616706fa522988bd11f24ee908",
+      "bytes": 3188,
+      "sha256": "188174c7c6924dac64730a187879d5ec3c2e37b7cdeada867b92e9f3d25e8f4d",
       "coverage": []
     },
     {
@@ -1670,302 +1375,6 @@
       "sha256": "c6f061348609cc80cb376aa592ec8abe0d700ca9a21c32a54e93846c2e376048",
       "coverage": [],
       "sourceSha256": "eee2eb69c01c3cc39cec9dc90c89d1e6d30af3964ae4b70ed1cc74c2e1bb37b3"
-    },
-    {
-      "path": "handoff/electrician/lighting/current/circuit-ledger.csv",
-      "bytes": 5198,
-      "sha256": "c4a6c424bac2f014666607e68b4f3296c2a4633c00880629883bc9aec037135a",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/curtain-strips.csv",
-      "bytes": 1092,
-      "sha256": "a706b0ca3c6436e6f4fa83a7be7a40fa9223f41d10c4aec709eb0302d0ec3ba7",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/fixed-cct-map.json",
-      "bytes": 115982,
-      "sha256": "7c3bf50665fa81f2c72a502340dd1949bf054d8d9a16446d36a0f11e0a9e44f1",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/fixture-ledger.csv",
-      "bytes": 26594,
-      "sha256": "8302c2b916b41ee9137be1c5b0bc4b7de1c3ddb0351441f068c99ab83101e17f",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/generic-product-search.csv",
-      "bytes": 8077,
-      "sha256": "e897d4ab9cba915f6fcc1d33aebcc1a4ddb5b6b4124b1afc4a0f4bdf7eec1bde",
-      "coverage": [
-        "editable-sources"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/heatmaps-summary.pdf",
-      "bytes": 152840,
-      "sha256": "ae22a8b5b24fd0fbece07e1da62024553aa32ffbf48d898f401ba5e99bf3b8c2",
-      "coverage": [
-        "heatmaps"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-1.png",
-      "bytes": 116956,
-      "sha256": "a4a12d8e0727f96ab86ee79d3cf1630ae64e0b26e98f966cb6ced27105eebf68",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-2.png",
-      "bytes": 105729,
-      "sha256": "c8f81db7303f1e8865ad6823afcd50854056b2a1207e29cb6469ab284ae7417a",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-3.png",
-      "bytes": 109060,
-      "sha256": "5643875fcaa5d7e9ee642c49a6de11a0f92efee6df38482c595b05cb0d270254",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-4.png",
-      "bytes": 127800,
-      "sha256": "cccfd17a1f6f63ef3c30f47f66c035bf2643ad529253d97a045e5bd8dc4d11be",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-5.png",
-      "bytes": 102946,
-      "sha256": "e0fa792a17eaded26b6ace32528a700ec266a74344f004fd10346ec65b9a28b7",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main-zoom-6.png",
-      "bytes": 93620,
-      "sha256": "a1800ef103b913d20fd03e70c168d0218a5b0852e3e06adbfb3c04ac29919174",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main.pdf",
-      "bytes": 121919,
-      "sha256": "26038838343e89348c596f3bd8e64e06c9a805d841af61a44941b38fb9ce3b44",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main.png",
-      "bytes": 143022,
-      "sha256": "28b1a41e5cb7032db8f89ca4ccb26a848a4bfd54b7809ec3f697d6623b6db26a",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-main.svg",
-      "bytes": 115229,
-      "sha256": "9dd52437b9db3f37a2b9d795d2866fa040887df7169db7cb52c5edd558ad1ab1",
-      "coverage": [
-        "editable-sources",
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-1.png",
-      "bytes": 98265,
-      "sha256": "4f3e251a013499a212a7181396b7295a9aeed9f8732dd955a415aa19fcddd4e2",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-2.png",
-      "bytes": 117142,
-      "sha256": "8d3d39650cf25af269d9991b11479b1414382664321a842d5ed904ce3690d335",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-3.png",
-      "bytes": 121256,
-      "sha256": "bc34dfad364aa7321553a7d120058f14c984300365b93a6273191d12ce843914",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-4.png",
-      "bytes": 125550,
-      "sha256": "f231d255f10fe4d7b9ad9b72cbb6d7c47a964cb4ed9d240c887f3745215878ac",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-5.png",
-      "bytes": 118860,
-      "sha256": "da42ccd5164e960bd9b206d7ae5ca529a004fbabae7519163dabf675fe343085",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood-zoom-6.png",
-      "bytes": 115344,
-      "sha256": "0869af49b7d2a3a2a38057eb5845358590819cca3482dc0efe8a80457ae4a6b2",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood.pdf",
-      "bytes": 107985,
-      "sha256": "3021fbcebf11b89893dafe8626b3d72d15973bfe04c4379947cc7f2e3ffaa91f",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood.png",
-      "bytes": 164424,
-      "sha256": "0b38ce770c95e86b3751282f88a1c6621bebed02059ec5283e78f9d2a6ae75ed",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-mood.svg",
-      "bytes": 134747,
-      "sha256": "3951dbae886958f8fc96f7459139da64ce077f0d98df8ef32be805813caa7ab9",
-      "coverage": [
-        "editable-sources",
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-1.png",
-      "bytes": 104528,
-      "sha256": "1b5683705161016784e6cd4a79726bc3daef3a6c4e3d0941af84cf1fd3f6b0a2",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-2.png",
-      "bytes": 107990,
-      "sha256": "6b9c4c96d799781811b4f610ee3f72dd55b35441beb1b2b0a8627b3286f6a98f",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-3.png",
-      "bytes": 97488,
-      "sha256": "dceb61af0a505e0825c957fb7115a70f7dfdffd05b39090b0839c7b2975c7c61",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-4.png",
-      "bytes": 121407,
-      "sha256": "0f9718fb62a8406c03831192e79d2abd2bf644adb81c5b4883eaae5abc741b48",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-5.png",
-      "bytes": 96815,
-      "sha256": "069d20cbad7de00f3c768d0fc1cb8cf7a6c7a0a1f196419da9d1e990132c213b",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task-zoom-6.png",
-      "bytes": 98468,
-      "sha256": "e48579fab7af065faa9a243bcb6ad88d60c81be3e6494ff1ec57d42d556af494",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task.pdf",
-      "bytes": 89296,
-      "sha256": "4708926b102ed2d3a07a932be6583fd9292bcb565e3d4c8dab6036827bce73f7",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task.png",
-      "bytes": 142639,
-      "sha256": "f36284bd62cda7e25ac3066145bbd7f72332872775173f8e2928a4760172e6eb",
-      "coverage": [
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-plan-task.svg",
-      "bytes": 119944,
-      "sha256": "d92187b8a49744be5f8b9e4f5675b2fbf0501b13d89931c599873e30c4f94321",
-      "coverage": [
-        "editable-sources",
-        "lighting-placement"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-review-schedules.pdf",
-      "bytes": 91409,
-      "sha256": "1a30e615ec29a1e66df9e57a26e39f447adf3a4188f6ea35d10ab2f475ac1179",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-specification.md",
-      "bytes": 12332,
-      "sha256": "755f6653f2aafd22d454e303e17e4ac29af82179d1a9263201922006ca063d58",
-      "coverage": []
-    },
-    {
-      "path": "handoff/electrician/lighting/current/lighting-workbench.html",
-      "bytes": 618756,
-      "sha256": "0b3de3c60361d0d55f46de1710cef1bb66fd722dacc77cd35d5c91a345fb0dc7",
-      "coverage": [
-        "lighting-workbench"
-      ]
-    },
-    {
-      "path": "handoff/electrician/lighting/current/switchboard-schedule.csv",
-      "bytes": 5926,
-      "sha256": "901e201da88c8185c1b142e9fc8f1f0932e486b8fdb1aa6b02ad56504313a70a",
-      "coverage": [
-        "editable-sources",
-        "switchboard-control-schedule"
-      ]
     },
     {
       "path": "handoff/electrician/lighting/curtain-pocket-s1.json",
@@ -3163,8 +2572,8 @@
     },
     {
       "path": "handoff/electrician/simulation/index.html",
-      "bytes": 23394,
-      "sha256": "7f8e13f76f9bb53c9f77ac82b9c3b66d48c130e0722472930a7ebe5672eb0b52",
+      "bytes": 23386,
+      "sha256": "48fa8e6323f8d14b4411802f0f35895a75f32830d79f76e9c7c3b859f15de410",
       "coverage": []
     },
     {
@@ -3185,8 +2594,8 @@
     },
     {
       "path": "handoff/electrician/simulation/README.md",
-      "bytes": 3377,
-      "sha256": "1cf8165ac5d82ca1abb086880a69939e03745fce5c162cbf0a35192bc83db6f3",
+      "bytes": 3369,
+      "sha256": "038c1bb5ea0dcfd9b577f8f1afbe85ad92d89ea0272f348e4d92a231b10f5e82",
       "coverage": []
     },
     {
@@ -3229,8 +2638,8 @@
     },
     {
       "path": "handoff/electrician/simulation/revision-all-rooms/index.html",
-      "bytes": 11032,
-      "sha256": "07015c6ee4902695a7618928f4c50c177df3eab01333bb650dd19672ed0a1ecc",
+      "bytes": 11024,
+      "sha256": "b5d3667a32e455f86b802914c48db324d5f80a6ddbf9f689252559140c6a9445",
       "coverage": [
         "remaining-room-sensitivity"
       ]
@@ -4228,8 +3637,8 @@
     },
     {
       "path": "handoff/electrician/simulation/simulation-report.html",
-      "bytes": 24866,
-      "sha256": "b46095ac1c169c7f921d85b9de72cf237239697bfc43d903812893c0a03b7668",
+      "bytes": 24858,
+      "sha256": "a9ce0ae6344fed94c82f258e42f660854b5b14ff793cbb89f6f8f434f569c507",
       "coverage": [
         "exploratory-raytracing"
       ]
@@ -4245,14 +3654,14 @@
     },
     {
       "path": "handoff/index.html",
-      "bytes": 6496,
-      "sha256": "5f87d3ba09aa50f96371a79735e0ebeb69290ebcd1cc3001b88665b07b1c526a",
+      "bytes": 6368,
+      "sha256": "19e1205ae7d9deecd7dadedbda449b256e23053d6d3fe23991c9637b9dedac79",
       "coverage": []
     },
     {
       "path": "handoff/integration-receipt.json",
-      "bytes": 2188,
-      "sha256": "86e09802ddf1c833f2b4ee0caf91535d1ce6fb5e4136ffdcfe8e11d284446410",
+      "bytes": 2180,
+      "sha256": "0f0f68d888cf72d0cb3b7b46e98ad667142be8179504248972b53259bf619c50",
       "coverage": [
         "editable-sources"
       ]
@@ -5785,11 +5194,12 @@
     },
     {
       "path": "handoff/viewer/source/package.json",
-      "bytes": 250,
-      "sha256": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a",
+      "bytes": 308,
+      "sha256": "4ae8b67fc582baaaf76afa63570a1bdc205ca4c65b9dc6ec86e898af16c8ef11",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a"
     },
     {
@@ -5840,18 +5250,20 @@
     },
     {
       "path": "handoff/viewer/source/README.md",
-      "bytes": 2285,
-      "sha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016",
+      "bytes": 2991,
+      "sha256": "5dee488e4b34c67cb6c3e161705456acd9fb27bad9a02e64ea8d5603386d6ff5",
       "coverage": [],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016"
     },
     {
       "path": "handoff/viewer/source/rebuild-public.mjs",
-      "bytes": 2504,
-      "sha256": "1301895ef2f3f7b534749ca44063db2f0d252f56df81b3453cadbf40f3d550c4",
+      "bytes": 3399,
+      "sha256": "2ff7e25c992f42386cafb30e84fe70a241943d57cdbff9626168a75a2cf6c47f",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "1301895ef2f3f7b534749ca44063db2f0d252f56df81b3453cadbf40f3d550c4"
     },
     {
@@ -5928,11 +5340,12 @@
     },
     {
       "path": "handoff/viewer/source/src/fixtureMeshes.js",
-      "bytes": 21985,
-      "sha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1",
+      "bytes": 21886,
+      "sha256": "443b84fce53aaeefef63bc8d6cb7aebcd4d67d0ada71d3bb7b880ae554910515",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1"
     },
     {
@@ -5965,21 +5378,22 @@
     },
     {
       "path": "handoff/viewer/source/src/lighting.js",
-      "bytes": 23589,
-      "sha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665",
+      "bytes": 24020,
+      "sha256": "27a5cdf0eb9f70a7d2d5b66bd4d8a8bff7ffda01b7b3212fcf89002868abb061",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665"
     },
     {
       "path": "handoff/viewer/source/src/main.js",
-      "bytes": 39712,
-      "sha256": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056",
+      "bytes": 35848,
+      "sha256": "4217deb3f7e12b43473f286e767d9ebf1614f469bd97a4c7d218b04102b4eb34",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31"
     },
     {
@@ -6074,10 +5488,10 @@
     },
     {
       "path": "handoff/viewer/source/template.html",
-      "bytes": 22074,
-      "sha256": "de1f007c530027651752ce930452ff42e56ff24979f1514121f1fe87e1192c9c",
+      "bytes": 18965,
+      "sha256": "277a13ac61c7276b58b23ca5ee30eedc1cd24bc50344206dc753f63780035997",
       "coverage": [],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "b5ca1a56dd84a2f03bef98301ccafb967c09ed89b9ec8053bf1c1706b8f54dac"
     },
     {
@@ -6132,6 +5546,14 @@
       ]
     },
     {
+      "path": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "bytes": 3431,
+      "sha256": "d906c10d3b6af165c121c5fe8431f0bc7e5cd31d4f4b6e516d4d83828952f775",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
       "path": "handoff/viewer/verification/repository-copy-receipt.json",
       "bytes": 1942,
       "sha256": "dbef7506dfc007bdc0ddb378bd8f1c07d277881b16c989892fb535994458d75b",
@@ -6150,32 +5572,34 @@
     },
     {
       "path": "index.html",
-      "bytes": 2613979,
-      "sha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
+      "bytes": 2607478,
+      "sha256": "d0358d2670e5d65b4a5d5526498b30b55e80d67fad9c83b4595d0a42f2392c61",
       "coverage": [
         "threejs-viewer"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c"
     },
     {
       "path": "privacy-transform.json",
-      "bytes": 1185,
-      "sha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
+      "bytes": 1292,
+      "sha256": "ae519345b6df2a75bb9485d24a33964d49907d344e26d79060b54a08e2430207",
       "coverage": [
         "editable-sources"
       ],
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
       "sourceSha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99"
     },
     {
       "path": "README.md",
-      "bytes": 2929,
-      "sha256": "c44c576439a660ce395df0a6c3b76b5618071f139ee557b60c6117eae87b48de",
+      "bytes": 3394,
+      "sha256": "d6181566b9095d47c9459978655c37d44ee7760dffc3ebf2706ea3f4b9da76f1",
       "coverage": []
     },
     {
       "path": "scripts/build-handoff-manifest.py",
-      "bytes": 17340,
-      "sha256": "f0deafd144b5a168e4a0517aaa9b528dec00c61e371ff809950dadadd1623355",
+      "bytes": 18376,
+      "sha256": "ce086cc3a44fb3721eb179acdd68bb31a356b75bf5b18a1dcaca10aa8988b09f",
       "coverage": [
         "editable-sources"
       ]
@@ -6190,8 +5614,8 @@
     },
     {
       "path": "scripts/import-remaining-sensitivity.py",
-      "bytes": 13340,
-      "sha256": "8fcabc8f86e90237f590060a2ca13de18b7b6d017de294736cf3695a280eeb9d",
+      "bytes": 13332,
+      "sha256": "543bc5e4d3a639eb1cef2077e516d3924a929f6d100bc06b1bfc35b2e06b28ae",
       "coverage": [
         "editable-sources"
       ]
@@ -6230,8 +5654,8 @@
     },
     {
       "path": "scripts/render-simulation-evidence.py",
-      "bytes": 14527,
-      "sha256": "e0701bc7770a897a350547b8e0ae00ab0fe9aa10446ff05513e97d15ef0a4d0c",
+      "bytes": 14511,
+      "sha256": "620e2082b2797292f0a64b4b54f771577d63ae01a3e62bf1ad65b363e7cecb28",
       "coverage": [
         "editable-sources"
       ]
@@ -6272,6 +5696,14 @@
       "path": "scripts/verify-remaining-sensitivity.py",
       "bytes": 9248,
       "sha256": "89cd7530dd29df2842bbdca1d61badcd8222dcda146703b659ea4e62b0889f89",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "scripts/verify-simple-lighting.py",
+      "bytes": 7083,
+      "sha256": "f5703d3502a47707be2ecd961b0f945a59ddbfa9ea8efcc91fcbfc13568ff1f8",
       "coverage": [
         "editable-sources"
       ]

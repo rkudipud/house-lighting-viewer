@@ -1,8 +1,0 @@
-﻿group,description,kind,members,modeled_lighting_W,inrush_status,inverter_concept
-LT-1,"230 V fittings, living side",230 V,C01; C02; C09; C11; C13; C14; C15; C18,255,OPEN - historical reference screen is not approval,True
-LT-2,"230 V fittings, bedroom side",230 V,C20; C24; C25; C26; C33; C37; C41; C41b,98,OPEN - historical reference screen is not approval,True
-LT-3,"24 V essentials: passage, dressing, both baths, lobby, children's room",24 V,P06; P14; P15; P16,351.24,OPEN - historical reference screen is not approval,True
-LT-4,24 V coves: living and dining,24 V,P01; P07,250.8,HOLD - previous screen invalid,False
-LT-5,"24 V living mood, hall line, pooja, balcony",24 V,P04; P05,66.37,HOLD - previous screen invalid,False
-LT-6,24 V kitchen and utility,24 V,P08; P10; P11,113.36,OPEN - historical reference screen is not approval,False
-LT-7,"24 V master bedroom cove, line and mood",24 V,P12,110.24,OPEN - historical reference screen is not approval,False

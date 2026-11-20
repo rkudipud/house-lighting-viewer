@@ -6,8 +6,10 @@ import {createHash} from 'node:crypto';
 
 const root=dirname(fileURLToPath(import.meta.url));
 const args=process.argv.slice(2);
-if(args.length!==2||args[0]!=='--out')throw new Error('Usage: node rebuild-public.mjs --out <new HTML file>');
-const output=resolve(args[1]);
+const publish=args.length===1&&args[0]==='--publish';
+if(!publish&&(args.length!==2||args[0]!=='--out'))throw new Error('Usage: node rebuild-public.mjs --out <new HTML file> | --publish');
+const site=resolve(root,'../../..');
+const output=publish?join(site,'index.html'):resolve(args[1]);
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const receipt=JSON.parse(await readFile(join(root,'public-source-manifest.json'),'utf8'));
 const generated=JSON.parse(await readFile(join(root,'src','house-data.generated.json'),'utf8'));
@@ -28,6 +30,17 @@ html=html.replace('<!--__PLAN_DATA__-->',()=>`<script id="plan-data" type="appli
   .replace('/*__BUNDLE__*/',()=>js)
   .replace('</head>',()=>`<!-- Bundled Three.js licence:\n${license}\n-->\n</head>`);
 const actual=sha(html);
-if(actual!==receipt.viewerHtmlSha256)throw new Error(`Rebuilt HTML differs from the verified viewer (${actual})`);
-await writeFile(output,html,{flag:'wx'});
-console.log(`Rebuilt verified viewer SHA-256 ${actual}`);
+const infoPath=join(site,'build-info.json'),info=JSON.parse(await readFile(infoPath,'utf8'));
+if(!publish&&actual!==info.htmlSha256)throw new Error(`Rebuilt HTML differs from the published viewer (${actual}); use --publish for intentional source updates`);
+await writeFile(output,html,{flag:publish?'w':'wx'});
+if(publish){
+  info.originalVerifiedHtmlSha256??=receipt.viewerHtmlSha256;
+  info.htmlSha256=actual;info.htmlBytes=Buffer.byteLength(html);
+  info.viewerRevision='Simple HIGH/LOW switches and balanced visual lighting; source data unchanged';
+  const privacyPath=join(site,'privacy-transform.json'),privacy=JSON.parse(await readFile(privacyPath,'utf8'));
+  privacy.originalVerifiedViewerHtmlSha256??=privacy.viewerHtmlSha256;
+  privacy.viewerHtmlSha256=actual;
+  await writeFile(infoPath,JSON.stringify(info,null,2)+'\n');
+  await writeFile(privacyPath,JSON.stringify(privacy,null,2)+'\n');
+}
+console.log(`Built viewer SHA-256 ${actual}`);
