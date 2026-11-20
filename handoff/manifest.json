@@ -100,8 +100,8 @@
     },
     {
       "path": "handoff/contractor/index.html",
-      "bytes": 7685,
-      "sha256": "fc68988c2aaee9225dc40279bbdf6f13465a68e0f8dce5697048b20817e90b9b",
+      "bytes": 8197,
+      "sha256": "7e1c2978faa8ba31eb2ebe04edf5050539558f784578ab68792a3208607a4c75",
       "coverage": []
     },
     {
@@ -128,6 +128,26 @@
         "editable-sources"
       ],
       "sourceSha256": "e5f2c57d762c8285e3f4bedcc80d0cc708298b4d9003193a7ab9f8f391cc3471"
+    },
+    {
+      "path": "handoff/contractor/wardrobe/current/wardrobe-and-granite-plinth.pdf",
+      "bytes": 67297,
+      "sha256": "a1343b0ab3d3b09d63cf9967d0b42447858f56bec526c6e7f6e249f07adddcf9",
+      "coverage": []
+    },
+    {
+      "path": "handoff/contractor/wardrobe/current/wardrobe-and-granite-plinth.png",
+      "bytes": 193798,
+      "sha256": "7d51b31cd4f63d0bc625a41a4c39b3c39640b1a47211e73a71aa1868a0942203",
+      "coverage": []
+    },
+    {
+      "path": "handoff/contractor/wardrobe/current/wardrobe-and-granite-plinth.svg",
+      "bytes": 10133,
+      "sha256": "2f571f91e020570516f6fc4ff13110b0adccdfc4f027cfa8ffac9027e74f7cb4",
+      "coverage": [
+        "editable-sources"
+      ]
     },
     {
       "path": "handoff/contractor/wardrobe/final/CLEANUP-MANIFEST.md",
@@ -585,8 +605,8 @@
     },
     {
       "path": "handoff/decisions/2026-11-18-wardrobe-review.html",
-      "bytes": 4591,
-      "sha256": "4e2af52c0596c75a29d731137dbe2ca9ffe48cc99b0ac9b6ad792b7cc9881d3b",
+      "bytes": 4948,
+      "sha256": "f7ece1d854cd24a72483ab459fb2333df8a55430222df1a38c68a7648c951d86",
       "coverage": [
         "owner-decision-addendum"
       ]
@@ -1586,8 +1606,8 @@
     },
     {
       "path": "handoff/electrician/index.html",
-      "bytes": 3028,
-      "sha256": "4a14ad0a7d346c10bc46000069d3b21bede737528a7d59d77f3d4f4c7d502580",
+      "bytes": 3316,
+      "sha256": "f9bba52c915ec678bc3b6477df34aa50282c15616706fa522988bd11f24ee908",
       "coverage": []
     },
     {
@@ -2155,6 +2175,12 @@
         "editable-sources"
       ],
       "sourceSha256": "67f3a43f9fd96e2cadf9b1be8202baef783ffc35185fead72ed34b2222debe1e"
+    },
+    {
+      "path": "handoff/electrician/lighting/lighting-fixture-list.pdf",
+      "bytes": 30335,
+      "sha256": "07c214ba1bdbe8c47cb56a7c75183f6f626e1115d2ade6c0567eeb30cc01935d",
+      "coverage": []
     },
     {
       "path": "handoff/electrician/lighting/lighting-load-per-room.pdf",
@@ -4219,8 +4245,8 @@
     },
     {
       "path": "handoff/index.html",
-      "bytes": 5508,
-      "sha256": "5b838d7455bbdb0a853dcfcb54b04fc1721450bdd0368bdeac4b4281d27dcdf6",
+      "bytes": 6496,
+      "sha256": "5f87d3ba09aa50f96371a79735e0ebeb69290ebcd1cc3001b88665b07b1c526a",
       "coverage": []
     },
     {
@@ -4234,7 +4260,7 @@
     {
       "path": "handoff/local-artifact-verification.json",
       "bytes": 1194,
-      "sha256": "f08d6002473ab4e5924c1baa9f08072ecd0ebb5d621a21cb610c30a000711ec3",
+      "sha256": "1bd11ab48308f51d0826283ed2e14f32f28a9eab6dec3f09c2116c01389e3604",
       "coverage": [
         "editable-sources"
       ]
@@ -6206,6 +6232,14 @@
       "path": "scripts/render-simulation-evidence.py",
       "bytes": 14527,
       "sha256": "e0701bc7770a897a350547b8e0ae00ab0fe9aa10446ff05513e97d15ef0a4d0c",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
+      "path": "scripts/render-wardrobe-plinth.py",
+      "bytes": 1134,
+      "sha256": "69e97fdd1a9153ad2ae517b521403aabf182e102f2a9753933fe1ce4d84e6977",
       "coverage": [
         "editable-sources"
       ]
