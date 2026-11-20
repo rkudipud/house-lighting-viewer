@@ -23,14 +23,14 @@ function start(){
   const BASE_RATIO=Math.min(devicePixelRatio,1);
   renderer.setPixelRatio(BASE_RATIO);renderer.setSize(innerWidth,innerHeight);
   renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
-  renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.10;
+  renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.85;
   $('view').appendChild(renderer.domElement);
   renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();fatal('WebGL context lost. Reload the page to restart the view.');});
   const scene=new T.Scene();scene.background=new T.Color('#1d2a36');
   const camera=new T.PerspectiveCamera(65,innerWidth/innerHeight,.04,100);
   const ortho=new T.OrthographicCamera(-1,1,1,-1,.1,4);
   const pmrem=new T.PMREMGenerator(renderer),environment=new RoomEnvironment();
-  const env=pmrem.fromScene(environment,.04);scene.environment=env.texture;scene.environmentIntensity=.08;
+  const env=pmrem.fromScene(environment,.04);scene.environment=env.texture;scene.environmentIntensity=.3;
   environment.dispose();pmrem.dispose();
   const materials=createMaterials(renderer),model=createModel(scene,materials),lighting=createLighting(scene,model);
   const navigation=prepareNavigation(PLAN,model.collision);
@@ -38,9 +38,9 @@ function start(){
   const cameraObstacles=[...model.shadowObjects,model.ceiling];
   model.neighbours.visible=false;
 
-  // Fixed evening scene: a faint cool fill so the fittings carry the picture. There is no time-of-day control.
+  // Fixed exposure and a soft orientation fill keep unlit rooms readable without hiding lane changes.
   materials.setDaylight(.08,10);
-  const hemi=new T.HemisphereLight('#cfdcf2','#8e8573',.22);scene.add(hemi);
+  const hemi=new T.HemisphereLight('#e5e9ef','#aaa497',.65);scene.add(hemi);
   const sun=new T.DirectionalLight('#9fb2da',.08);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);
   sun.shadow.camera.left=-11;sun.shadow.camera.right=11;sun.shadow.camera.top=11;sun.shadow.camera.bottom=-11;sun.shadow.camera.near=.1;sun.shadow.camera.far=65;
   sun.shadow.normalBias=.025;sun.shadow.bias=-.00008;sun.shadow.radius=3;scene.add(sun,sun.target);
@@ -116,7 +116,7 @@ function start(){
   const overviewDistance=()=>{const a=innerWidth/Math.max(240,innerHeight-sheetPx);return a>=1.05?20:a>=.7?24:29;};
 
   // ---------- views ----------
-  const VIEW_TEXT={first:'FIRST PERSON',third:'THIRD PERSON',doll:'DOLLHOUSE / ROOF OFF',heat:'LIGHT MAP / FROZEN ESTIMATE',rcp:'CEILING PLAN / LOOKING UP'};
+  const VIEW_TEXT={first:'First person',third:'Third person',doll:'Dollhouse',heat:'Light map / saved estimate',rcp:'Ceiling plan'};
   const HINT={
     first:'Drag to look / WASD or arrows to walk / Shift is faster',third:'Drag to look / WASD or arrows to walk / Shift is faster',
     doll:'Drag to orbit / scroll or pinch to zoom / tap a dot for fitting details',heat:'Drag to orbit / scroll or pinch to zoom',rcp:'Drag to pan / scroll or pinch to zoom / tap a dot for fitting details',
@@ -197,14 +197,10 @@ function start(){
 
   // ---------- room lights ----------
   const fmtK=a=>a&&a.length?a.map(k=>String(k).replace(/\s*K$/i,'')).join(' / ')+' K fixed':'';
-  const INDEPENDENT_NAME={MIRROR:'mirror',FACE:'face',READ:'reading',STUDY:'study',ACCENT:'accent'};
   function syncMasterLights(){
     for(const lane of ['high','low']){
       const state=lighting.getMasterLight(lane),id='master-'+lane;
       $(id+'-on').checked=state.on;
-      $(id+'-dim').value=state.dim;
-      $(id+'-out').value=state.dim+'%';
-      $('master-rail-'+lane).classList.toggle('off',!state.on);
     }
   }
   function syncLights(){
@@ -215,25 +211,15 @@ function start(){
     $('room-on-label').textContent=g.held?'Room lights (on hold)':'Room lights';
     for(const lane of ['high','low']){
       const has=lane==='high'?g.hasHigh:g.hasLow,off=!has||g.held;
-      $(lane+'-dim').value=g[lane];$(lane+'-dim').disabled=off;
-      $(lane+'-out').value=has&&!g.held?g[lane]+'%':'--';
-      $('rail-'+lane).classList.toggle('off',off);
-      $(lane+'-cct').textContent=g.held?'Inactive placeholder':has?fmtK(g.cct[lane]):'No '+lane.toUpperCase()+' lane in this room';
+      $(lane+'-on').checked=g.on&&g[lane]>0;$(lane+'-on').disabled=off;
+      $(lane+'-cct').textContent=g.held?'On hold':has?fmtK(g.cct[lane]):'Not fitted';
     }
-    const ids=lighting.members(lr),notes=[];
-    if(g.held)notes.push('The fittings in this room are held for coordination.');
-    else{
-      const lanes=[...new Set(ids.filter(c=>!lighting.groupStates[c].fixtures.every(f=>f.held)).map(c=>lighting.groupStates[c].fixtures[0].lane))];
-      const extra=lanes.filter(l=>!['READ','NIGHT'].includes(l)).map(l=>INDEPENDENT_NAME[l]).filter(Boolean);
-      if(extra.length)notes.push(`Also on with the room, not dimmed here: ${extra.join(', ')}${g.cct.independent.length?' ('+fmtK(g.cct.independent)+')':''}.`);
-      if(g.sharedLow.length)notes.push('The living and dining line profile shares one LOW level: the last slider moved wins.');
-      if(g.zone==='CBR')notes.push('H1-H6, the retained cove (C39) and outward LINE strips (C40) are modelled ON with scheduled lumens for design review: provisional, unmeasured, not installed or approved. Fan at room centre, 1050 mm planning sweep (model not selected; airflow for this room unconfirmed). Reported band 3.048 m / centre approx. 3.277 m, slab unmeasured. Cove, LINE, fan, pockets and clearances stay site-held (H-CBR-CEIL). Black grooves are not lights. Bedside and desk fittings and C37 dimmer procurement remain held.');
+    const fittings=$('fixture-list');fittings.replaceChildren();
+    for(const i of model.markers.children.map(m=>m.userData.fixture).filter(i=>i&&i.room===roomName(lr))){
+      const b=document.createElement('button');b.type='button';
+      b.innerHTML=`<span>${esc(i.kind)}</span><small>${esc(i.id)}</small>`;
+      b.addEventListener('click',()=>showInspector(i));fittings.appendChild(b);
     }
-    const pockets=(PLAN.curtainPockets?.pockets||[]).filter(p=>p.room===g.zone);
-    if(pockets.some(p=>p.selected))notes.push(pockets.filter(p=>p.selected).map(p=>`Curtain strip ${p.id} (${p.label}): selected for review, 2700 K; unmeasured visual preview follows LOW and carries no lux credit.`).join(' '));
-    if(pockets.some(p=>p.held))notes.push(`${pockets.filter(p=>p.held).map(p=>p.id).join(', ')} is held (shown grey, unlit).`);
-    if(['MBR','CBR'].includes(g.zone))notes.push('Site hold: assumed strip return extends about 0.30 m beyond the modeled room corner. The viewer clips it only for display; actual pocket ends are unmeasured.');
-    $('light-note').textContent=notes.join(' ');
     const individual=lighting.accessoryFixtures.filter(f=>f.room===g.zone),list=$('individual-list');
     $('individual-lights').hidden=individual.length===0;list.replaceChildren();
     for(const f of individual){
@@ -248,17 +234,12 @@ function start(){
     const r=lighting.setRoomLight(lightRoomOf(id),values);syncLights();return r;
   }
   $('room-on').addEventListener('change',e=>setRoomLight(selectedRoom,{on:e.target.checked}));
-  for(const lane of ['high','low'])$(lane+'-dim').addEventListener('input',e=>{
-    const v=Number(e.target.value),g=lighting.getRoomLight(lightRoomOf(selectedRoom));
-    setRoomLight(selectedRoom,{[lane]:v,...(!g.on&&v>0?{on:true}:{})});
+  for(const lane of ['high','low'])$(lane+'-on').addEventListener('change',e=>{
+    setRoomLight(selectedRoom,{[lane]:e.target.checked?100:0,...(e.target.checked?{on:true}:{})});
   });
   for(const lane of ['high','low']){
     const id='master-'+lane;
     $(id+'-on').addEventListener('change',e=>{lighting.setMasterLight(lane,{on:e.target.checked});syncLights();});
-    $(id+'-dim').addEventListener('input',e=>{
-      const v=Number(e.target.value),state=lighting.getMasterLight(lane);
-      lighting.setMasterLight(lane,{dim:v,...(!state.on&&v>0?{on:true}:{})});syncLights();
-    });
   }
 
   // ---------- light-map (frozen) ----------
@@ -266,15 +247,12 @@ function start(){
     if(!analysis)return;
     const meta=PLAN.analysis,scene=analysis.scene||mapScene;
     for(const b of document.querySelectorAll('[data-map]')){const on=b.dataset.map===scene;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));}
-    const label=meta.scenes.find(s=>s.id===scene)?.label||scene;
-    $('map-note').textContent=`Frozen generic-optics estimate at ${label}. Provisional geometry, not measured, not recomputed by the sliders. UGR not calculated.`;
-    const planes=[...new Set(meta.rooms.map(r=>r.plane_m))];
+    $('map-note').textContent='Saved estimate / not live lux';
     $('lux-table').querySelector('tbody').innerHTML=meta.rooms.filter(r=>r.id!=='CBR').map(r=>{
       const s=r.stats?.[scene],n=v=>v==null||!Number.isFinite(v)?'--':Math.round(v);
       return `<tr title="${r.name}: grid plane ${r.plane_m} m, ceiling ${r.ceiling_m} m"><td>${r.name}</td><td>${s?n(s.avg):'--'}</td><td>${s?n(s.min):'--'}</td><td>${s&&Number.isFinite(s.U0)?s.U0.toFixed(2):'--'}</td></tr>`;
     }).join('');
-    const c=meta.complianceCounts||{},k=meta.k2;
-    $('map-flags').textContent=`Work plane ${planes.filter(p=>p>0).join(' / ')} m (baths and balcony at floor level). The children\u2019s-room estimate includes held fittings and is withheld; selected curtain strips have no lux credit. Checks vs criteria: ${c.PASS??0} pass, ${c.MARGINAL??0} marginal, ${c.HOLD??0} hold. K-2 kitchen worktop (selected for review): ${k.nominal}; marginal in sensitivity cases.`;
+    $('map-flags').textContent='Children: withheld / curtain strips: no lux credit';
   }
   for(const b of document.querySelectorAll('[data-map]'))b.addEventListener('click',()=>{mapScene=b.dataset.map;analysis?.setScene(mapScene);renderMap();});
   if(analysis)analysis.setScene(mapScene);
@@ -282,15 +260,16 @@ function start(){
   // ---------- fitting inspector ----------
   function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
   function showInspector(i){
-    const st=lighting.groupStates[i.circuit],cct=i.cct==null?'n/a':String(i.cct).replace(/\s*K$/i,'')+' K fixed';
-    $('inspector-body').innerHTML=`<p class="fine" style="margin:0 0 6px">${esc(i.status||'Review draft / not construction-released')}</p><div class="insp-id">${esc(i.id)}</div><div class="insp-kind">${esc(i.kind)}</div><dl>`+
-      `<dt>Room</dt><dd>${esc(i.room)}</dd>`+
-      `<dt>Colour temp.</dt><dd>${esc(cct)}${i.cctSource?`<br><small>${esc(i.cctSource)}</small>`:''}</dd>`+
-      `<dt>Rail</dt><dd>${i.rail==='high'?'HIGH (main)':i.rail==='low'?'LOW (cove / mood)':'Independent circuit'} / ${esc(i.lane||i.layer)}</dd>`+
-      `<dt>Circuit</dt><dd>${esc(i.circuit)}${st?` / ${st.on?st.dim+'%':'off'}`:''}${i.groupId?`<br><small>Brightness group ${esc(i.groupId)} (no colour control)</small>`:''}</dd>`+
-      `<dt>Power</dt><dd>${i.W!=null?i.W+' W'+(i.length_m?` (${Number(i.length_m).toFixed(2)} m run)`:''):'n/a'}</dd>`+
-      `<dt>Output</dt><dd>${i.candidate?'Not credited to the frozen lux estimate':i.lm!=null?Math.round(i.lm)+' lm':'n/a'}</dd>`+
-      `<dt>Beam</dt><dd>${i.beam!=null?i.beam+'&deg;':'n/a'}</dd><dt>Ingress</dt><dd>${esc(i.ip)}</dd>${i.h_m!=null?`<dt>Mount height</dt><dd>${esc(i.h_m)} m</dd>`:''}${i.placementHoldIds?.length?`<dt>Site holds</dt><dd>${esc(i.placementHoldIds.join(', '))}</dd>`:''}</dl>${i.desc?`<p class="fine">${esc(i.desc)}</p>`:''}`;
+    const cct=i.cct==null?'Not specified':String(i.cct).replace(/\s*K$/i,'')+' K';
+    const row=(name,value)=>`<dt>${name}</dt><dd>${esc(value??'Not specified')}</dd>`;
+    $('inspector-body').innerHTML=`<div class="insp-id">Light details</div><dl>`+
+      row('Name',i.kind)+row('Type',i.type??'LED strip')+
+      row('Wattage',i.W!=null?`${Number(Number(i.W).toFixed(1))} W`:null)+
+      row('Lumens',i.candidate?'No lux credit':i.lm!=null?`${Math.round(i.lm)} lm`:null)+
+      row('Spec',[i.ip,i.lane,i.circuit].filter(Boolean).join(' / '))+
+      row('Beam angle',i.beam!=null?`${i.beam}\u00b0`:null)+
+      row('Color',cct)+row('Location',i.room+(i.h_m!=null?` / ${i.h_m} m high`:''))+row('Code',i.id)+
+      `</dl>${i.held||i.placementHoldIds?.length?`<div class="spec-status">${i.held?'On hold':'Site check'}${i.placementHoldIds?.length?' / '+esc(i.placementHoldIds.join(', ')):''}</div>`:''}`;
     $('inspector').hidden=false;
   }
   function inspectAt(clientX,clientY,pointerType){
@@ -349,8 +328,6 @@ function start(){
     if(guided){cancelGuided();return;}
     setMode('first');guided=true;routeIndex=1;routePause=0;routeProgress=0;pos.set(path[0][0]*FT,0,path[0][1]*FT);$('guided').textContent='Stop walk';
   });
-  for(const note of PLAN.surveyNotes){const li=document.createElement('li');li.textContent=note;$('about-notes').appendChild(li);}
-  $('master-fingerprint').textContent='Source record SHA-256: '+PLAN.master.sha256+(PLAN.analysis?.source?.sha256?' / heat-map pack '+PLAN.analysis.source.sha256:'');
   addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);syncSheet();});
   if(typeof ResizeObserver==='function')new ResizeObserver(()=>syncSheet()).observe($('desk'));
 
@@ -435,7 +412,7 @@ function start(){
   function titleUpdate(force){
     const r=roomById(selectedRoom);
     $('room-title').textContent=guided?path[Math.min(routeIndex,path.length-1)][2]:(mode==='heat'?'Light map / '+roomName(selectedRoom):roomName(selectedRoom));
-    $('room-dim').textContent=isWalk()?(r?.dimension?.text||'Review draft / provisional placement'):mode==='rcp'?`Ceiling plan / floor-plan orientation / heights assumed (band ${PLAN.heights.band.value} m)`:mode==='heat'?'Frozen generic-optics estimate / not recomputed / not construction-released':'Review draft / not construction-released';
+    $('room-dim').textContent=isWalk()?(r?.dimension?.text||'Provisional dimensions'):mode==='rcp'?`Band height: ${PLAN.heights.band.value} m (assumed)`:mode==='heat'?'Saved estimate / not measured':'Roof off';
   }
 
   // ---------- exports ----------
@@ -494,7 +471,7 @@ function start(){
   }
   for(const d of PLAN.downloads||[]){
     const a=document.createElement('a');a.href=d.href;a.download=d.href.split('/').pop();a.target='_blank';a.rel='noopener';
-    a.innerHTML=`${esc(d.label)}<small>${esc(d.note)} / PDF</small>`;$('pdf-links').appendChild(a);
+    a.textContent=d.label;$('pdf-links').appendChild(a);
   }
 
   // ---------- frame loop ----------
@@ -526,7 +503,7 @@ function start(){
       materials.update(reduced?1:dt);model.update(reduced?1:dt,isWalk()?pos:null);lighting.update(reduced?1:dt);cameraUpdate();
       renderer.render(scene,active());
       frames++;frameElapsed+=elapsed;
-      if(frameElapsed>=1){fps=frames/frameElapsed;$('perf').textContent=`${Math.round(fps)} fps / ${renderer.info.render.calls} draws`;frames=0;frameElapsed=0;}
+      if(frameElapsed>=1){fps=frames/frameElapsed;frames=0;frameElapsed=0;}
       if(++tick%5===0){
         if(isWalk()){const r=roomAt(pos.x,pos.z);if(r&&r.id!==selectedRoom)selectRoom(r.id,{fromWalk:true});}
         if(!matchMedia('(max-width:900px)').matches)drawMinimap();

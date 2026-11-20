@@ -11,8 +11,8 @@ const KIND = {
 };
 Object.assign(KIND,{DL8V:'cob',DL7V:'cob',DL6V:'cob',SPOT7V:'spotw',SPOT5V:'spotw',SPOT3V:'spot',BSPOT8V:'cob',BDIF9V:'opal',FACEV:'face',FACE10V:'faceh',PIN6V:'micro',CYLSV:'cyl',UPDNV:'updn',BULKD:'bulk'});
 export const KIND_LABEL = {
-  cob: 'COB deep-recessed anti-glare downlight', gimbal: 'Adjustable gimbal COB downlight', opal: 'Diffused opal downlight', spot: 'COB spot',
-  spotw: 'Deep-recessed COB spot', pin: 'Narrow COB pinhole spot', micro:'Deep-recessed adjustable micro-gimbal pin-spot', cyl: 'Surface cylinder', bulk: 'IP65/IK08 bulkhead', face: 'Vertical face-light bar',faceh:'Horizontal face-light bar',
+  cob: 'Downlight', gimbal: 'Adjustable downlight', opal: 'Diffused downlight', spot: 'Spotlight',
+  spotw: 'Recessed spotlight', pin: 'Pinhole spotlight', micro:'Micro spotlight', cyl: 'Surface cylinder', bulk: 'Bulkhead', face: 'Vertical mirror light',faceh:'Horizontal mirror light',
   updn: 'Up-down wall light', read: 'Reading light', step: 'Night step light', pend: 'Decorative pendant', track: 'Magnetic-track head', hang: 'Hanging directional cylinder'
 };
 const MARKERS = {

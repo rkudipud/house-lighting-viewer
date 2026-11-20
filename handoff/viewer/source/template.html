@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Review a 2BHK home in 3D with whole-house HIGH and LOW lighting masters, room-level trims, open storage interiors, and trade PDFs. Review draft, not a construction release.">
+<meta name="description" content="Explore a 2BHK home, compare main and mood lighting, and view fitting specifications. Design review only.">
 <script>
 if(/\/handoff\/viewer(?:\/|$)/i.test(location.pathname)){
  const base=document.createElement('base');base.href=new URL('../../',location.href).href;document.head.appendChild(base);
@@ -31,6 +31,10 @@ h1{font:600 25px "Bahnschrift","Segoe UI",sans-serif;letter-spacing:-.6px;margin
 .scroll{overflow:auto;padding:0 16px 14px;scrollbar-width:thin;scrollbar-color:#b2c6ba transparent;overscroll-behavior:contain}
 section{padding:13px 0;border-bottom:1px solid var(--line)}section:last-child{border:0}
 h2{font-family:"Bahnschrift","Segoe UI",sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin:0 0 9px;font-weight:700}
+.light-switches{display:grid;grid-template-columns:1fr 1fr;gap:8px}.light-switches .switch{display:grid;gap:8px;background:#e6ece4;border-radius:8px;padding:12px}.light-switches small{display:block;color:var(--muted);font-size:11px;font-weight:400;margin-top:3px}
+.fixture-list{display:grid;gap:4px;max-height:200px;overflow:auto;margin-top:8px}.fixture-list button{text-align:left;display:flex;justify-content:space-between;align-items:center;gap:8px}.fixture-list small{color:var(--muted);font:10px Consolas,monospace}
+button,select{transition:background 160ms ease,border-color 160ms ease}button:active{transform:translateY(1px)}
+.spec-status{font-size:11px;color:#6a4a12;margin-top:10px}.help-keys{display:grid;grid-template-columns:auto 1fr;gap:12px;margin:18px 0}.help-keys dd{margin:0}
 .views{display:grid;grid-template-columns:1fr 1fr;gap:6px}.views button{text-align:left;font-size:12px}.views button:last-child{grid-column:1/-1}.views b{font:11px Consolas,monospace;opacity:.6;margin-right:5px}
 select{width:100%}.row{display:flex;gap:6px;align-items:center}.row>*{flex:1}
 .room-nav{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px;margin-top:9px;font-size:11px;font-weight:650}.room-nav select{min-width:0}
@@ -93,7 +97,7 @@ dialog{border:1px solid var(--line);border-radius:12px;color:var(--ink);backgrou
    <div class="views">
     <button data-view="first"><b>1</b>First person</button><button data-view="third"><b>2</b>Third person</button>
     <button data-view="doll"><b>3</b>Dollhouse</button><button data-view="heat"><b>4</b>Light map</button>
-    <button data-view="rcp"><b>5</b>Ceiling plan (looking up)</button>
+    <button data-view="rcp"><b>5</b>Ceiling plan</button>
    </div>
     <label class="room-nav"><span>Room focus</span><select id="room" aria-label="Jump to a room"></select></label>
     <div class="row" style="margin-top:7px"><button id="guided">Guided walk</button><button id="help" aria-label="Controls and help">Help</button></div>
@@ -106,77 +110,64 @@ dialog{border:1px solid var(--line);border-radius:12px;color:var(--ink);backgrou
      <span style="grid-column:1/-1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#172c33" stroke-width="2" stroke-dasharray="3 2"/></svg>Dashed ring: held / not released</span>
     </div>
   </section>
-  <section aria-labelledby="h-storage"><h2 id="h-storage">Storage review</h2>
-    <p class="fine">Proposed interiors are shown by default. Unapproved, unmeasured approximations; not for fabrication. Verify widths, clearances and supports on site.</p>
-  </section>
   <section aria-labelledby="light-title" id="sec-lights"><h2 id="light-title">Lights</h2>
-    <div class="subhead">Whole-house masters</div>
-    <div class="rail" id="master-rail-high">
-     <label class="switch"><span>HIGH / main</span><input id="master-high-on" type="checkbox" role="switch" aria-label="Whole-house HIGH lights"></label>
-     <div class="rail-head"><label for="master-high-dim">Brightness</label><output id="master-high-out" for="master-high-dim">100%</output></div>
-     <input id="master-high-dim" aria-label="Whole-house HIGH brightness" type="range" min="0" max="100" step="1" value="100">
+    <div class="subhead">Whole home</div>
+    <div class="light-switches">
+     <label class="switch"><span>HIGH<small>Main lights</small></span><input id="master-high-on" type="checkbox" role="switch" aria-label="Whole-house HIGH lights"></label>
+     <label class="switch"><span>LOW<small>Cove &amp; mood</small></span><input id="master-low-on" type="checkbox" role="switch" aria-label="Whole-house LOW lights"></label>
     </div>
-    <div class="rail" id="master-rail-low">
-     <label class="switch"><span>LOW / cove &amp; mood</span><input id="master-low-on" type="checkbox" role="switch" aria-label="Whole-house LOW lights"></label>
-     <div class="rail-head"><label for="master-low-dim">Brightness</label><output id="master-low-out" for="master-low-dim">100%</output></div>
-     <input id="master-low-dim" aria-label="Whole-house LOW brightness" type="range" min="0" max="100" step="1" value="100">
-    </div>
-    <p class="fine">Masters scale and switch each lane across the house. Room lights can still be switched and trimmed below; a room switched off stays off. Other held fittings stay unlit. The children’s cove and outward strips are modelled ON with scheduled lumens for review only; their installation, fan clearance and site checks remain on hold.</p>
     <div class="subhead">Selected room</div>
    <label class="switch"><span id="room-on-label">Room lights</span><input id="room-on" type="checkbox" role="switch"></label>
-   <div class="rail" id="rail-high"><div class="rail-head"><label for="high-dim">HIGH<small>main lights</small></label><output id="high-out" for="high-dim">100%</output></div><input id="high-dim" type="range" min="0" max="100" step="1" value="100"><div class="cct" id="high-cct"></div></div>
-   <div class="rail" id="rail-low"><div class="rail-head"><label for="low-dim">LOW<small>cove / mood</small></label><output id="low-out" for="low-dim">100%</output></div><input id="low-dim" type="range" min="0" max="100" step="1" value="100"><div class="cct" id="low-cct"></div></div>
-   <p class="fine" id="light-note"></p>
-   <details id="individual-lights" hidden><summary>Individual lights</summary><div id="individual-list"></div><p class="fine">Readers are dimmed on the fitting. Night lights use PIR sensors; switches here preview them only. Held fittings cannot be enabled.</p></details>
-    <p class="fine">Colour temperature is fixed per fitting. Dimming changes rendered light only; it does not recompute lux.</p>
+   <div class="light-switches">
+    <label class="switch"><span>HIGH<small id="high-cct">Main lights</small></span><input id="high-on" type="checkbox" role="switch" aria-label="Room HIGH lights"></label>
+    <label class="switch"><span>LOW<small id="low-cct">Cove &amp; mood</small></span><input id="low-on" type="checkbox" role="switch" aria-label="Room LOW lights"></label>
+   </div>
+   <details id="individual-lights" hidden><summary>Readers &amp; night lights</summary><div id="individual-list"></div></details>
+   <details><summary>Light specifications</summary><div id="fixture-list" class="fixture-list"></div></details>
   </section>
   <section id="sec-map" aria-labelledby="h-map" hidden><h2 id="h-map">Light map &middot; frozen estimate</h2>
    <div class="views" style="grid-template-columns:1fr 1fr 1fr"><button data-map="HIGH_100" style="text-align:center">HIGH</button><button data-map="LOW_100" style="text-align:center">LOW</button><button data-map="HIGH+LOW_100" style="text-align:center">Both</button></div>
-   <p class="fine" id="map-note"></p>
+   <div class="fine" id="map-note"></div>
    <div class="heat-bar"></div><div class="range-ends"><span>0</span><span>100</span><span>300</span><span>750+ lx</span></div>
    <table id="lux-table"><thead><tr><th>Room</th><th>Avg lx</th><th>Min lx</th><th>U0</th></tr></thead><tbody></tbody></table>
-   <p class="fine" id="map-flags"></p>
+   <div class="fine" id="map-flags"></div>
   </section>
   <section aria-labelledby="h-dl"><h2 id="h-dl">PDF handoff</h2>
-   <details open><summary>Lighting and electrical</summary><div class="dl">
-    <a href="handoff/electrician/electrical/electrical-review.pdf">Electrical / wall-control review<small>Conceptual block diagrams and circuit schedule; not wiring approval</small></a>
-    <a href="handoff/electrician/electrical/bill-of-materials.pdf">Lighting bill of materials<small>Location-linked review quantities; not a purchase list</small></a>
-    <a href="handoff/electrician/lighting/room-lighting-load.pdf">Lighting load and inverter planning<small>Provisional estimates; site and electrician checks required</small></a>
-    <a href="handoff/electrician/electrical/control-options.pdf">Lighting control options<small>Review and quotation only</small></a>
-    <a href="handoff/electrician/lighting/lighting-review-schedules.pdf">Lighting and circuit review schedules<small>Fittings, circuit quantities, controls and holds</small></a>
-    <a href="handoff/electrician/lighting/lighting-plan-main.pdf">Main / HIGH lighting plan<small>PDF review drawing</small></a>
-    <a href="handoff/electrician/lighting/lighting-plan-mood.pdf">Mood / LOW lighting plan<small>Includes selected curtain strips; unmeasured</small></a>
-    <a href="handoff/electrician/lighting/lighting-plan-task.pdf">Task lighting plan<small>PDF review drawing</small></a>
-    <a href="handoff/electrician/lighting/heatmaps-summary.pdf">Analytic heatmap summary<small>Generic saved estimates; not measured or recalculated by controls</small></a>
-    <a href="handoff/electrician/electrical/wholesale-rfq.pdf">Generic / branded procurement RFQ<small>Reference only; no products are approved</small></a>
-    <a href="handoff/electrician/electrical/source-index.pdf">Manufacturer sourcing index<small>Public link edition; references only</small></a>
-   </div><p class="fine">No approved construction wiring or terminal-layout PDF is issued. The electrical review contains conceptual diagrams and a review circuit schedule; site and licensed-professional checks remain open.</p></details>
+   <details><summary>Lighting and electrical</summary><div class="dl">
+    <a href="handoff/electrician/electrical/electrical-review.pdf">Electrical review</a>
+    <a href="handoff/electrician/electrical/bill-of-materials.pdf">Bill of materials</a>
+    <a href="handoff/electrician/lighting/room-lighting-load.pdf">Lighting loads</a>
+    <a href="handoff/electrician/electrical/control-options.pdf">Control options</a>
+    <a href="handoff/electrician/lighting/lighting-review-schedules.pdf">Fittings &amp; circuits</a>
+    <a href="handoff/electrician/lighting/lighting-plan-main.pdf">HIGH plan</a>
+    <a href="handoff/electrician/lighting/lighting-plan-mood.pdf">LOW plan</a>
+    <a href="handoff/electrician/lighting/lighting-plan-task.pdf">Task plan</a>
+    <a href="handoff/electrician/lighting/heatmaps-summary.pdf">Light maps</a>
+    <a href="handoff/electrician/electrical/wholesale-rfq.pdf">Procurement RFQ</a>
+    <a href="handoff/electrician/electrical/source-index.pdf">Manufacturer index</a>
+   </div></details>
    <details><summary>Plans and site coordination</summary><div class="dl">
-    <a href="handoff/mason-civil/contractor-civil-review.pdf">Civil review pack<small>Provisional drawings and site holds; not setting-out</small></a>
-    <a href="handoff/mason-civil/site-details/site-coordination-details.pdf">Site coordination details<small>Schematic sections; verify dimensions on site</small></a>
-    <a href="handoff/mason-civil/source-index/room-opening-index.pdf">Room and opening index<small>Source-based review index; field check required</small></a>
+    <a href="handoff/mason-civil/contractor-civil-review.pdf">Civil review</a>
+    <a href="handoff/mason-civil/site-details/site-coordination-details.pdf">Site details</a>
+    <a href="handoff/mason-civil/source-index/room-opening-index.pdf">Rooms &amp; openings</a>
    </div></details>
    <details><summary>Viewer plans and storage proposal</summary><div class="dl" id="pdf-links"></div>
-    <p class="fine">The wardrobe PDF is a master-bound review pack and predates the later BWP / granite-plinth decision addendum. Interiors and dimensions remain unapproved.</p>
    </details>
   </section>
-  <details id="about"><summary>About this draft</summary><ul id="about-notes"></ul><p class="fine" id="master-fingerprint"></p></details>
  </div>
 </aside>
 <button id="restore" aria-label="Show panel">Show panel</button>
 <div id="place"><div id="room-title">Balcony / entrance</div><div id="room-dim">Review draft &middot; not construction released</div></div>
-<aside id="mini-panel"><canvas id="minimap" width="264" height="418" aria-label="Floor plan showing your position"></canvas><p id="north-label">Approx. north: sheet-bottom &middot; not surveyed</p></aside>
-<div id="status"><span id="view-status">DOLLHOUSE</span><span id="perf">Loading</span></div>
+<aside id="mini-panel"><canvas id="minimap" width="264" height="418" aria-label="Floor plan showing your position"></canvas><div class="fine" id="north-label">North: approximate</div></aside>
+<div id="status"><span id="view-status">Dollhouse</span><span>Visual estimate</span></div>
 <div id="hint"></div>
 <div id="dpad" aria-label="Walk controls"><button data-pad="w" aria-label="Walk forward">&#9650;</button><button data-pad="a" aria-label="Step left">&#9664;</button><button data-pad="s" aria-label="Walk back">&#9660;</button><button data-pad="d" aria-label="Step right">&#9654;</button></div>
 <aside id="inspector" hidden aria-live="polite"><button id="close-inspector" aria-label="Close fitting details">&times;</button><div id="inspector-body"></div></aside>
-<div id="loading"><h2>Opening the flat</h2><p>Preparing materials and lighting. Everything runs in your browser; nothing is uploaded.</p></div>
-<div id="fatal" role="alert"><h2>This browser could not open the 3D home</h2><p>Use a recent Edge, Chrome, Safari or Firefox with WebGL 2 and hardware acceleration enabled. If the graphics context was lost, close other graphics-heavy tabs and reload.</p><pre id="fatal-detail"></pre></div>
-<dialog id="help-dialog"><h2>Walk, look, light.</h2>
-<p><kbd>W A S D</kbd> or arrow keys walk, <kbd>Shift</kbd> is faster. Mouse drag axes are inverted; touch drag retains its usual direction. On a phone use the on-screen arrows and drag to look.</p>
-<p><kbd>1</kbd> First person &nbsp; <kbd>2</kbd> Third person &nbsp; <kbd>3</kbd> Dollhouse (roof off, drag to orbit, scroll or pinch to zoom) &nbsp; <kbd>4</kbd> Light map &nbsp; <kbd>5</kbd> Ceiling plan. In Dollhouse and Ceiling plan, tap a dot to see that fitting&rsquo;s fixed colour temperature, power and circuit.</p>
-<p>Choose a room focus in the View panel or use Guided walk. In walk views the room controls follow the room you are standing in. Whole-house HIGH and LOW masters scale and switch each lane; the selected room also has an on/off switch and local HIGH/LOW trim.</p>
-<p>This is a review draft, not a construction release.</p><button id="close-help">Got it</button></dialog>
+<div id="loading"><h2>Opening the flat</h2></div>
+<div id="fatal" role="alert"><h2>3D view unavailable</h2><div>Enable WebGL 2 and hardware acceleration, then reload.</div><pre id="fatal-detail"></pre></div>
+<dialog id="help-dialog"><h2>Controls</h2>
+<dl class="help-keys"><dt>Look / orbit</dt><dd>Drag</dd><dt>Zoom</dt><dd>Scroll or pinch</dd><dt>Walk</dt><dd><kbd>W A S D</kbd> / arrows</dd><dt>Faster</dt><dd><kbd>Shift</kbd></dd><dt>Views</dt><dd><kbd>1</kbd> &ndash; <kbd>5</kbd></dd><dt>Light details</dt><dd>Tap a marker or a light in the list</dd><dt>HIGH</dt><dd>Main lighting</dd><dt>LOW</dt><dd>Cove &amp; mood lighting</dd></dl>
+<button id="close-help">Done</button></dialog>
 <!--__PLAN_DATA__-->
 <!--__HEAT_DATA__-->
 <script>/*__BUNDLE__*/</script>

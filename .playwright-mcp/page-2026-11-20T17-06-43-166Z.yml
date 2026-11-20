@@ -1,0 +1,142 @@
+- generic [active]:
+  - main "Interactive 3D home. Drag to look around; W A S D to walk." [ref=e1]
+  - complementary "Lighting planner" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: Hyderabad · 2BHK · light planning
+      - heading "Light & living" [level=1] [ref=e6]
+      - generic [ref=e7]: Review draft · not for construction
+      - button "Hide panel" [expanded] [ref=e8] [cursor=pointer]: −
+    - generic [ref=e9]:
+      - region "View" [ref=e10]:
+        - heading "View" [level=2] [ref=e11]
+        - generic [ref=e12]:
+          - button "1First person" [pressed] [ref=e13] [cursor=pointer]
+          - button "2Third person" [ref=e14] [cursor=pointer]
+          - button "3Dollhouse" [ref=e15] [cursor=pointer]
+          - button "4Light map" [ref=e16] [cursor=pointer]
+          - button "5Ceiling plan (looking up)" [ref=e17] [cursor=pointer]
+        - generic [ref=e18]:
+          - generic [ref=e19]: Room focus
+          - combobox "Jump to a room" [ref=e20]:
+            - option "Balcony / entrance"
+            - option "Living" [selected]
+            - option "Dining"
+            - option "Kitchen"
+            - option "Utility"
+            - option "Washing"
+            - option "Master bedroom"
+            - option "Dressing"
+            - option "Attached bathroom"
+            - option "Common lobby"
+            - option "Common bathroom"
+            - option "Children bedroom"
+        - generic [ref=e21]:
+          - button "Guided walk" [ref=e22] [cursor=pointer]
+          - button "Controls and help" [ref=e23] [cursor=pointer]: Help
+      - region "Storage review" [ref=e24]:
+        - heading "Storage review" [level=2] [ref=e25]
+        - paragraph [ref=e26]: Proposed interiors are shown by default. Unapproved, unmeasured approximations; not for fabrication. Verify widths, clearances and supports on site.
+      - region "Lights / Living" [ref=e27]:
+        - heading "Lights / Living" [level=2] [ref=e28]
+        - generic [ref=e29]: Whole-house masters
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]: HIGH / main
+            - switch "Whole-house HIGH lights" [checked] [ref=e33] [cursor=pointer]
+          - generic [ref=e34]:
+            - generic [ref=e35]: Brightness
+            - status [ref=e36]: 100%
+          - slider "Whole-house HIGH brightness" [ref=e37]: "100"
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - generic [ref=e40]: LOW / cove & mood
+            - switch "Whole-house LOW lights" [checked] [ref=e41] [cursor=pointer]
+          - generic [ref=e42]:
+            - generic [ref=e43]: Brightness
+            - status [ref=e44]: 100%
+          - slider "Whole-house LOW brightness" [ref=e45]: "100"
+        - paragraph [ref=e46]: Masters scale and switch each lane across the house. Room lights can still be switched and trimmed below; a room switched off stays off. Other held fittings stay unlit. The children’s cove and outward strips are modelled ON with scheduled lumens for review only; their installation, fan clearance and site checks remain on hold.
+        - generic [ref=e47]: Selected room
+        - generic [ref=e48]:
+          - generic [ref=e49]: Room lights
+          - switch "Room lights" [checked] [ref=e50] [cursor=pointer]
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: HIGHmain lights
+            - status [ref=e54]: 100%
+          - slider "HIGHmain lights" [ref=e55]: "100"
+          - generic [ref=e56]: 4000 K fixed
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: LOWcove / mood
+            - status [ref=e60]: 100%
+          - slider "LOWcove / mood" [ref=e61]: "100"
+          - generic [ref=e62]: 2700 K fixed
+        - paragraph [ref=e63]: "The living and dining line profile shares one LOW level: the last slider moved wins. Curtain strip CURT-LIV (unmeasured): selected for review, 2700 K; unmeasured visual preview follows LOW and carries no lux credit."
+        - paragraph [ref=e64]: Colour temperature is fixed per fitting. Dimming changes rendered light only; it does not recompute lux.
+      - region "PDF handoff" [ref=e65]:
+        - heading "PDF handoff" [level=2] [ref=e66]
+        - group [ref=e67]:
+          - generic "Lighting and electrical" [ref=e68] [cursor=pointer]
+          - generic [ref=e69]:
+            - link "Electrical / wall-control review Conceptual block diagrams and circuit schedule; not wiring approval" [ref=e70] [cursor=pointer]:
+              - /url: handoff/electrician/electrical/electrical-review.pdf
+              - text: Electrical / wall-control review
+              - generic [ref=e71]: Conceptual block diagrams and circuit schedule; not wiring approval
+            - link "Lighting bill of materials Location-linked review quantities; not a purchase list" [ref=e72] [cursor=pointer]:
+              - /url: handoff/electrician/electrical/bill-of-materials.pdf
+              - text: Lighting bill of materials
+              - generic [ref=e73]: Location-linked review quantities; not a purchase list
+            - link "Lighting load and inverter planning Provisional estimates; site and electrician checks required" [ref=e74] [cursor=pointer]:
+              - /url: handoff/electrician/lighting/room-lighting-load.pdf
+              - text: Lighting load and inverter planning
+              - generic [ref=e75]: Provisional estimates; site and electrician checks required
+            - link "Lighting control options Review and quotation only" [ref=e76] [cursor=pointer]:
+              - /url: handoff/electrician/electrical/control-options.pdf
+              - text: Lighting control options
+              - generic [ref=e77]: Review and quotation only
+            - link "Lighting and circuit review schedules Fittings, circuit quantities, controls and holds" [ref=e78] [cursor=pointer]:
+              - /url: handoff/electrician/lighting/lighting-review-schedules.pdf
+              - text: Lighting and circuit review schedules
+              - generic [ref=e79]: Fittings, circuit quantities, controls and holds
+            - link "Main / HIGH lighting plan PDF review drawing" [ref=e80] [cursor=pointer]:
+              - /url: handoff/electrician/lighting/lighting-plan-main.pdf
+              - text: Main / HIGH lighting plan
+              - generic [ref=e81]: PDF review drawing
+            - link "Mood / LOW lighting plan Includes selected curtain strips; unmeasured" [ref=e82] [cursor=pointer]:
+              - /url: handoff/electrician/lighting/lighting-plan-mood.pdf
+              - text: Mood / LOW lighting plan
+              - generic [ref=e83]: Includes selected curtain strips; unmeasured
+            - link "Task lighting plan PDF review drawing" [ref=e84] [cursor=pointer]:
+              - /url: handoff/electrician/lighting/lighting-plan-task.pdf
+              - text: Task lighting plan
+              - generic [ref=e85]: PDF review drawing
+            - link "Analytic heatmap summary Generic saved estimates; not measured or recalculated by controls" [ref=e86] [cursor=pointer]:
+              - /url: handoff/electrician/lighting/heatmaps-summary.pdf
+              - text: Analytic heatmap summary
+              - generic [ref=e87]: Generic saved estimates; not measured or recalculated by controls
+            - link "Generic / branded procurement RFQ Reference only; no products are approved" [ref=e88] [cursor=pointer]:
+              - /url: handoff/electrician/electrical/wholesale-rfq.pdf
+              - text: Generic / branded procurement RFQ
+              - generic [ref=e89]: Reference only; no products are approved
+            - link "Manufacturer sourcing index Public link edition; references only" [ref=e90] [cursor=pointer]:
+              - /url: handoff/electrician/electrical/source-index.pdf
+              - text: Manufacturer sourcing index
+              - generic [ref=e91]: Public link edition; references only
+          - paragraph [ref=e92]: No approved construction wiring or terminal-layout PDF is issued. The electrical review contains conceptual diagrams and a review circuit schedule; site and licensed-professional checks remain open.
+        - group [ref=e93]:
+          - generic "Plans and site coordination" [ref=e94] [cursor=pointer]
+        - group [ref=e95]:
+          - generic "Viewer plans and storage proposal" [ref=e96] [cursor=pointer]
+      - group [ref=e97]:
+        - generic "About this draft" [ref=e98] [cursor=pointer]
+  - generic:
+    - generic: Living
+    - generic: 14' x 17'-6"
+  - complementary [ref=e99]:
+    - generic "Floor plan showing your position" [ref=e100]
+    - paragraph [ref=e101]: "Approx. north: sheet-bottom · not surveyed"
+  - generic [ref=e102]:
+    - generic [ref=e103]: FIRST PERSON
+    - generic [ref=e104]: 1 fps / 105 draws
+  - generic: Drag to look / WASD or arrows to walk / Shift is faster
