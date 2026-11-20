@@ -44,7 +44,8 @@ def main():
             page.add_init_script("window.requestAnimationFrame = () => 0")
             page.goto(args.url, wait_until="networkidle", timeout=180000)
             assert page.evaluate("window.walkthrough?.ready"), page.locator("#fatal-detail").text_content()
-            assert page.locator("input[type=range], #about, #h-storage").count() == 0
+            assert page.locator("#sec-lights input[type=range]").count() == 2
+            assert page.locator("#room-on, #high-on, #low-on, #individual-lights, #about, #h-storage").count() == 0
             assert page.locator("#desk p, #help-dialog p").count() == 0
             def click(selector):
                 page.locator(selector).first.evaluate("(element) => element.click()")
@@ -54,17 +55,30 @@ def main():
                     select.value=room;select.dispatchEvent(new Event('change'));
                 }""", room)
 
+            def set_slider(lane, value):
+                page.locator(f"#master-{lane}").evaluate("""(input, value) => {
+                    input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));
+                }""", value)
+
             select_room("living")
-            click("#high-on")
-            assert page.evaluate("walkthrough.getRoomLight('living').high") == 0
-            click("#high-on")
-            assert page.evaluate("walkthrough.getRoomLight('living').high") == 100
-            click("#low-on")
+            for value in (0, 50, 100):
+                set_slider("high", value)
+                assert page.locator("#master-high-value").text_content() == f"{value}%"
+                for room in ("living", "master", "kitchen"):
+                    budget = page.evaluate("room => walkthrough.lighting.getLumenBudget(room)", room)
+                    assert budget["available"]["high"] > 0
+                    assert abs(budget["effective"]["high"] - budget["available"]["high"] * value / 100) < 1e-6
+            set_slider("low", 35)
             select_room("dining")
-            assert page.locator("#low-on").is_checked(), "Other room LOW lights must stay on"
+            assert page.locator("#master-low").input_value() == "35"
+            assert page.evaluate("walkthrough.getMasterLight('low').dim") == 35
+            for room in ("living", "master"):
+                budget = page.evaluate("room => walkthrough.lighting.getLumenBudget(room)", room)
+                assert budget["available"]["low"] > 0
+                assert abs(budget["effective"]["low"] - budget["available"]["low"] * .35) < 1e-6
             assert not page.evaluate("walkthrough.lighting.groupStates.C05.on"), "Held shared LINE must stay off"
             select_room("living")
-            click("#low-on")
+            set_slider("low", 100)
             page.locator("#fixture-list").locator("..").locator("summary").evaluate("(el) => el.click()")
             click("#fixture-list button")
             fields = page.locator("#inspector dt").all_text_contents()
@@ -103,6 +117,10 @@ def main():
             mobile.add_init_script("window.requestAnimationFrame = () => 0")
             mobile.goto(args.url, wait_until="networkidle", timeout=180000)
             assert mobile.evaluate("window.walkthrough?.ready"), mobile.locator("#fatal-detail").text_content()
+            mobile.locator("#master-high").evaluate("""input => {
+                input.value=25;input.dispatchEvent(new Event('input',{bubbles:true}));
+            }""")
+            assert mobile.locator("#master-high-value").text_content() == "25%"
             mobile.locator("#room").evaluate("""select => {
                 select.value='master';select.dispatchEvent(new Event('change'));
             }""")
@@ -120,7 +138,7 @@ def main():
             browser.close()
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print("PASS simple switches, room isolation, held circuits, fitting details, five views, mobile layout and HIGH/LOW rendering")
+    print("PASS whole-house sliders, held circuits, fitting details, five views, mobile layout and HIGH/LOW rendering")
 
 
 if __name__ == "__main__":

@@ -31,7 +31,7 @@ h1{font:600 25px "Bahnschrift","Segoe UI",sans-serif;letter-spacing:-.6px;margin
 .scroll{overflow:auto;padding:0 16px 14px;scrollbar-width:thin;scrollbar-color:#b2c6ba transparent;overscroll-behavior:contain}
 section{padding:13px 0;border-bottom:1px solid var(--line)}section:last-child{border:0}
 h2{font-family:"Bahnschrift","Segoe UI",sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin:0 0 9px;font-weight:700}
-.light-switches{display:grid;grid-template-columns:1fr 1fr;gap:8px}.light-switches .switch{display:grid;gap:8px;background:#e6ece4;border-radius:8px;padding:12px}.light-switches small{display:block;color:var(--muted);font-size:11px;font-weight:400;margin-top:3px}
+.light-sliders{display:grid;gap:8px}.light-sliders label{display:block;background:#e6ece4;border-radius:8px;padding:10px 12px}.light-sliders span{display:flex;justify-content:space-between;font-weight:650}.light-sliders output{font:12px Consolas,monospace}
 .fixture-list{display:grid;gap:4px;max-height:200px;overflow:auto;margin-top:8px}.fixture-list button{text-align:left;display:flex;justify-content:space-between;align-items:center;gap:8px}.fixture-list small{color:var(--muted);font:10px Consolas,monospace}
 button,select{transition:background 160ms ease,border-color 160ms ease}button:active{transform:translateY(1px)}
 .spec-status{font-size:11px;color:#6a4a12;margin-top:10px}.help-keys{display:grid;grid-template-columns:auto 1fr;gap:12px;margin:18px 0}.help-keys dd{margin:0}
@@ -110,18 +110,10 @@ dialog{border:1px solid var(--line);border-radius:12px;color:var(--ink);backgrou
     </div></details>
   </section>
   <section aria-labelledby="light-title" id="sec-lights"><h2 id="light-title">Lights</h2>
-    <div class="subhead">Whole home</div>
-    <div class="light-switches">
-     <label class="switch"><span>HIGH<small>Main lights</small></span><input id="master-high-on" type="checkbox" role="switch" aria-label="Whole-house HIGH lights"></label>
-     <label class="switch"><span>LOW<small>Cove &amp; mood</small></span><input id="master-low-on" type="checkbox" role="switch" aria-label="Whole-house LOW lights"></label>
+    <div class="light-sliders">
+     <label><span>HIGH / Main lights <output id="master-high-value">100%</output></span><input id="master-high" type="range" min="0" max="100" step="1" value="100" aria-label="Whole-house HIGH brightness"></label>
+     <label><span>LOW / Cove &amp; mood <output id="master-low-value">100%</output></span><input id="master-low" type="range" min="0" max="100" step="1" value="100" aria-label="Whole-house LOW brightness"></label>
     </div>
-    <div class="subhead">Selected room</div>
-   <label class="switch"><span id="room-on-label">Room lights</span><input id="room-on" type="checkbox" role="switch"></label>
-   <div class="light-switches">
-    <label class="switch"><span>HIGH<small id="high-cct">Main lights</small></span><input id="high-on" type="checkbox" role="switch" aria-label="Room HIGH lights"></label>
-    <label class="switch"><span>LOW<small id="low-cct">Cove &amp; mood</small></span><input id="low-on" type="checkbox" role="switch" aria-label="Room LOW lights"></label>
-   </div>
-   <details id="individual-lights" hidden><summary>Readers &amp; night lights</summary><div id="individual-list"></div></details>
    <details><summary>Light specifications</summary><div id="fixture-list" class="fixture-list"></div></details>
   </section>
   <section id="sec-map" aria-labelledby="h-map" hidden><h2 id="h-map">Light map &middot; frozen estimate</h2>

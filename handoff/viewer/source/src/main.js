@@ -195,51 +195,30 @@ function start(){
     syncLights();titleUpdate(true);
   }
 
-  // ---------- room lights ----------
-  const fmtK=a=>a&&a.length?a.map(k=>String(k).replace(/\s*K$/i,'')).join(' / ')+' K':'';
+  // ---------- whole-house lights ----------
   function syncMasterLights(){
     for(const lane of ['high','low']){
       const state=lighting.getMasterLight(lane),id='master-'+lane;
-      $(id+'-on').checked=state.on;
+      $(id).value=state.on?state.dim:0;
+      $(id+'-value').textContent=$(id).value+'%';
     }
   }
   function syncLights(){
     syncMasterLights();
-    const lr=lightRoomOf(selectedRoom),g=lighting.getRoomLight(lr);
-    $('light-title').textContent='Lights / '+(lr!==selectedRoom?`${roomName(lr)} (incl. ${roomName(selectedRoom).toLowerCase()})`:roomName(lr));
-    $('room-on').checked=g.on;$('room-on').disabled=g.held;
-    $('room-on-label').textContent=g.held?'Room lights (on hold)':'Room lights';
-    for(const lane of ['high','low']){
-      const has=lane==='high'?g.hasHigh:g.hasLow,off=!has||g.held;
-      $(lane+'-on').checked=g.on&&g[lane]>0;$(lane+'-on').disabled=off;
-      $(lane+'-cct').textContent=g.held?'On hold':has?fmtK(g.cct[lane]):'Not fitted';
-    }
+    const lr=lightRoomOf(selectedRoom);
     const fittings=$('fixture-list');fittings.replaceChildren();
     for(const i of model.markers.children.map(m=>m.userData.fixture).filter(i=>i&&i.room===roomName(lr))){
       const b=document.createElement('button');b.type='button';
       b.innerHTML=`<span>${esc(i.kind)}</span><small>${esc(i.id)}</small>`;
       b.addEventListener('click',()=>showInspector(i));fittings.appendChild(b);
     }
-    const individual=lighting.accessoryFixtures.filter(f=>f.room===g.zone),list=$('individual-list');
-    $('individual-lights').hidden=individual.length===0;list.replaceChildren();
-    for(const f of individual){
-      const label=document.createElement('label'),input=document.createElement('input');
-      label.className='accessory';label.textContent=`${f.id} / ${f.lane==='READ'?'reader':'PIR preview'}${f.held?' (held)':''}`;
-      input.type='checkbox';input.checked=lighting.accessoryState[f.id];input.disabled=Boolean(f.held);input.dataset.individual=f.id;
-      input.addEventListener('change',()=>{lighting.setAccessory(f.id,input.checked);syncLights();});
-      label.appendChild(input);list.appendChild(label);
-    }
   }
   function setRoomLight(id,values){
     const r=lighting.setRoomLight(lightRoomOf(id),values);syncLights();return r;
   }
-  $('room-on').addEventListener('change',e=>setRoomLight(selectedRoom,{on:e.target.checked}));
-  for(const lane of ['high','low'])$(lane+'-on').addEventListener('change',e=>{
-    setRoomLight(selectedRoom,{[lane]:e.target.checked?100:0,...(e.target.checked?{on:true}:{})});
-  });
   for(const lane of ['high','low']){
     const id='master-'+lane;
-    $(id+'-on').addEventListener('change',e=>{lighting.setMasterLight(lane,{on:e.target.checked});syncLights();});
+    $(id).addEventListener('input',e=>{lighting.setMasterLight(lane,{on:true,dim:Number(e.target.value)});syncLights();});
   }
 
   // ---------- light-map (frozen) ----------

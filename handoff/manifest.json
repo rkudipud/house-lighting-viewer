@@ -55,12 +55,12 @@
     },
     {
       "path": "build-info.json",
-      "bytes": 2605,
-      "sha256": "b5b8b7dacad74c8d6a9f25ba6f8db085f79a6e6e238d3dffcfc4e686cbf7b5aa",
+      "bytes": 2621,
+      "sha256": "d2eab0fafaeb6af8b43db228e464c0cdfe9dd130e2891f4d1231c1f97fe98c3b",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8"
     },
     {
@@ -5199,7 +5199,7 @@
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a"
     },
     {
@@ -5250,20 +5250,20 @@
     },
     {
       "path": "handoff/viewer/source/README.md",
-      "bytes": 2991,
-      "sha256": "5dee488e4b34c67cb6c3e161705456acd9fb27bad9a02e64ea8d5603386d6ff5",
+      "bytes": 2983,
+      "sha256": "c0b803d4dae91ff006c8939529fd7cc73eada28fd7ccb34a7464fb188ad0f4d4",
       "coverage": [],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016"
     },
     {
       "path": "handoff/viewer/source/rebuild-public.mjs",
-      "bytes": 3399,
-      "sha256": "2ff7e25c992f42386cafb30e84fe70a241943d57cdbff9626168a75a2cf6c47f",
+      "bytes": 3415,
+      "sha256": "7c13afce8b217e1d110959d93e273b5d923a48d740480a0fa975ed004b4339e7",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "1301895ef2f3f7b534749ca44063db2f0d252f56df81b3453cadbf40f3d550c4"
     },
     {
@@ -5345,7 +5345,7 @@
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1"
     },
     {
@@ -5383,17 +5383,17 @@
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665"
     },
     {
       "path": "handoff/viewer/source/src/main.js",
-      "bytes": 35848,
-      "sha256": "4217deb3f7e12b43473f286e767d9ebf1614f469bd97a4c7d218b04102b4eb34",
+      "bytes": 34233,
+      "sha256": "175387ba7133c8c95fe416fdda71b6401ef32df24e6c6c467989614d05c1e3f1",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31"
     },
     {
@@ -5488,10 +5488,10 @@
     },
     {
       "path": "handoff/viewer/source/template.html",
-      "bytes": 18965,
-      "sha256": "277a13ac61c7276b58b23ca5ee30eedc1cd24bc50344206dc753f63780035997",
+      "bytes": 18308,
+      "sha256": "aebe6f9954fee664cee111105c48ef22427928002bf765ef3b13468214892d44",
       "coverage": [],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "b5ca1a56dd84a2f03bef98301ccafb967c09ed89b9ec8053bf1c1706b8f54dac"
     },
     {
@@ -5554,6 +5554,14 @@
       ]
     },
     {
+      "path": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
+      "bytes": 4496,
+      "sha256": "7bb4982f6ec234d7abeaee0d35f19a0b1af2d2ffcb24d887e70f99c4dea4d936",
+      "coverage": [
+        "editable-sources"
+      ]
+    },
+    {
       "path": "handoff/viewer/verification/repository-copy-receipt.json",
       "bytes": 1942,
       "sha256": "dbef7506dfc007bdc0ddb378bd8f1c07d277881b16c989892fb535994458d75b",
@@ -5572,34 +5580,34 @@
     },
     {
       "path": "index.html",
-      "bytes": 2607478,
-      "sha256": "d0358d2670e5d65b4a5d5526498b30b55e80d67fad9c83b4595d0a42f2392c61",
+      "bytes": 2605519,
+      "sha256": "759f7144d07255797bc0443217e070b137ec7bef3e237bc8e1a54532d415305c",
       "coverage": [
         "threejs-viewer"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c"
     },
     {
       "path": "privacy-transform.json",
       "bytes": 1292,
-      "sha256": "ae519345b6df2a75bb9485d24a33964d49907d344e26d79060b54a08e2430207",
+      "sha256": "67af46568cd25b17643181976b4246629ab97fc322dcfd62e8de934ff42292f2",
       "coverage": [
         "editable-sources"
       ],
-      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json",
+      "postCopyOverlayReceipt": "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json",
       "sourceSha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99"
     },
     {
       "path": "README.md",
-      "bytes": 3394,
-      "sha256": "d6181566b9095d47c9459978655c37d44ee7760dffc3ebf2706ea3f4b9da76f1",
+      "bytes": 3359,
+      "sha256": "91808e15f466540fbb72f4937362ced5333fcc8eaa3e4188fc5617616eac2a51",
       "coverage": []
     },
     {
       "path": "scripts/build-handoff-manifest.py",
-      "bytes": 18376,
-      "sha256": "ce086cc3a44fb3721eb179acdd68bb31a356b75bf5b18a1dcaca10aa8988b09f",
+      "bytes": 19328,
+      "sha256": "c13ce0dd5315104ac3b96a10de9762625a544bad1fe81f059a880e74cd4271f2",
       "coverage": [
         "editable-sources"
       ]
@@ -5702,8 +5710,8 @@
     },
     {
       "path": "scripts/verify-simple-lighting.py",
-      "bytes": 7083,
-      "sha256": "f5703d3502a47707be2ecd961b0f945a59ddbfa9ea8efcc91fcbfc13568ff1f8",
+      "bytes": 8332,
+      "sha256": "ef25a2804038621fae04712b8c88f0c3c511e7f469b841260ea95e55356459eb",
       "coverage": [
         "editable-sources"
       ]

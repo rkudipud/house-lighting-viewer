@@ -1,0 +1,75 @@
+{
+  "schema": "house-handoff-viewer-overlay/1",
+  "status": "visual-only-viewer-update-not-construction-released",
+  "masterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
+  "constructionRelease": false,
+  "postCopyOverlays": [
+    {
+      "path": "index.html",
+      "previousCopySha256": "70840705437ad53b4333d72063af5535ffca3df31ccf04447ef30b28e3b9bc5c",
+      "currentSha256": "759f7144d07255797bc0443217e070b137ec7bef3e237bc8e1a54532d415305c",
+      "previousVersionSha256": "d0358d2670e5d65b4a5d5526498b30b55e80d67fad9c83b4595d0a42f2392c61"
+    },
+    {
+      "path": "build-info.json",
+      "previousCopySha256": "a17572f772531c7c94fd1928e74135ab54e18066fa5e930f9c7bde16aa6f89f8",
+      "currentSha256": "d2eab0fafaeb6af8b43db228e464c0cdfe9dd130e2891f4d1231c1f97fe98c3b",
+      "previousVersionSha256": "b5b8b7dacad74c8d6a9f25ba6f8db085f79a6e6e238d3dffcfc4e686cbf7b5aa"
+    },
+    {
+      "path": "privacy-transform.json",
+      "previousCopySha256": "cc641109f7e09d5e9b5b8845495d779a15dd67206cc7ee8728e6040ca5fa3c99",
+      "currentSha256": "67af46568cd25b17643181976b4246629ab97fc322dcfd62e8de934ff42292f2",
+      "previousVersionSha256": "ae519345b6df2a75bb9485d24a33964d49907d344e26d79060b54a08e2430207"
+    },
+    {
+      "path": "handoff/viewer/source/package.json",
+      "previousCopySha256": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a",
+      "currentSha256": "4ae8b67fc582baaaf76afa63570a1bdc205ca4c65b9dc6ec86e898af16c8ef11",
+      "previousReviewedSha256": "6b7879c675ca9400c65f922c8a9e341d4a1a1fabccd1296129939a06a726893a",
+      "previousVersionSha256": "4ae8b67fc582baaaf76afa63570a1bdc205ca4c65b9dc6ec86e898af16c8ef11"
+    },
+    {
+      "path": "handoff/viewer/source/README.md",
+      "previousCopySha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016",
+      "currentSha256": "c0b803d4dae91ff006c8939529fd7cc73eada28fd7ccb34a7464fb188ad0f4d4",
+      "previousReviewedSha256": "965aafff3d55c92f9f911c62085ce49272a8a49bb281b66fe9367887439ec016",
+      "previousVersionSha256": "5dee488e4b34c67cb6c3e161705456acd9fb27bad9a02e64ea8d5603386d6ff5"
+    },
+    {
+      "path": "handoff/viewer/source/rebuild-public.mjs",
+      "previousCopySha256": "1301895ef2f3f7b534749ca44063db2f0d252f56df81b3453cadbf40f3d550c4",
+      "currentSha256": "7c13afce8b217e1d110959d93e273b5d923a48d740480a0fa975ed004b4339e7",
+      "previousReviewedSha256": "1301895ef2f3f7b534749ca44063db2f0d252f56df81b3453cadbf40f3d550c4",
+      "previousVersionSha256": "2ff7e25c992f42386cafb30e84fe70a241943d57cdbff9626168a75a2cf6c47f"
+    },
+    {
+      "path": "handoff/viewer/source/src/fixtureMeshes.js",
+      "previousCopySha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1",
+      "currentSha256": "443b84fce53aaeefef63bc8d6cb7aebcd4d67d0ada71d3bb7b880ae554910515",
+      "previousReviewedSha256": "0d90e649c065707e182d11c2124abfb79a1ed3429909dea6491f03d04cca9da1",
+      "previousVersionSha256": "443b84fce53aaeefef63bc8d6cb7aebcd4d67d0ada71d3bb7b880ae554910515"
+    },
+    {
+      "path": "handoff/viewer/source/src/lighting.js",
+      "previousCopySha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665",
+      "currentSha256": "27a5cdf0eb9f70a7d2d5b66bd4d8a8bff7ffda01b7b3212fcf89002868abb061",
+      "previousReviewedSha256": "0df7969caf5b6aeddd8a27d53425056f73e9c668a7fe6ee24849ddd584456665",
+      "previousVersionSha256": "27a5cdf0eb9f70a7d2d5b66bd4d8a8bff7ffda01b7b3212fcf89002868abb061"
+    },
+    {
+      "path": "handoff/viewer/source/src/main.js",
+      "previousCopySha256": "ba703fc2b101a93a9a8c32d4df86c71fe3ab8d5391ef41673e48c1a6b271bc31",
+      "currentSha256": "175387ba7133c8c95fe416fdda71b6401ef32df24e6c6c467989614d05c1e3f1",
+      "previousReviewedSha256": "9ae35738742dcfe87290d767f4b866dbc87c832ab3e8d92cd418a408753a3056",
+      "previousVersionSha256": "4217deb3f7e12b43473f286e767d9ebf1614f469bd97a4c7d218b04102b4eb34"
+    },
+    {
+      "path": "handoff/viewer/source/template.html",
+      "previousCopySha256": "b5ca1a56dd84a2f03bef98301ccafb967c09ed89b9ec8053bf1c1706b8f54dac",
+      "currentSha256": "aebe6f9954fee664cee111105c48ef22427928002bf765ef3b13468214892d44",
+      "previousReviewedSha256": "de1f007c530027651752ce930452ff42e56ff24979f1514121f1fe87e1192c9c",
+      "previousVersionSha256": "277a13ac61c7276b58b23ca5ee30eedc1cd24bc50344206dc753f63780035997"
+    }
+  ]
+}

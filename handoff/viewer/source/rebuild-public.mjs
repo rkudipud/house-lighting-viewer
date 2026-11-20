@@ -36,7 +36,7 @@ await writeFile(output,html,{flag:publish?'w':'wx'});
 if(publish){
   info.originalVerifiedHtmlSha256??=receipt.viewerHtmlSha256;
   info.htmlSha256=actual;info.htmlBytes=Buffer.byteLength(html);
-  info.viewerRevision='Simple HIGH/LOW switches and balanced visual lighting; source data unchanged';
+  info.viewerRevision='Whole-house HIGH/LOW brightness controls and balanced visual lighting; source data unchanged';
   const privacyPath=join(site,'privacy-transform.json'),privacy=JSON.parse(await readFile(privacyPath,'utf8'));
   privacy.originalVerifiedViewerHtmlSha256??=privacy.viewerHtmlSha256;
   privacy.viewerHtmlSha256=actual;

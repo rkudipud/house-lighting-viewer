@@ -207,16 +207,28 @@ def main():
             if not path.is_relative_to(root):
                 raise ValueError("A copy receipt points outside the repository")
             imported[path.relative_to(root).as_posix()] = item
-    viewer_overlay_path = "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json"
+    prior_viewer_overlay_path = "handoff/viewer/verification/2026-11-20-simple-lighting-overlay-receipt.json"
+    viewer_overlay_path = "handoff/viewer/verification/2026-11-20-whole-house-lighting-overlay-receipt.json"
+    prior_viewer_overlay = json.loads((root / prior_viewer_overlay_path).read_text(encoding="utf-8"))
     viewer_overlay = json.loads((root / viewer_overlay_path).read_text(encoding="utf-8"))
     if viewer_overlay["masterSha256"] != args.master_sha256 or viewer_overlay["constructionRelease"] is not False:
         raise ValueError("Viewer overlay has an invalid basis")
     viewer_successors = {item["path"]: item for item in viewer_overlay["postCopyOverlays"]}
+    prior_successors = {item["path"]: item for item in prior_viewer_overlay["postCopyOverlays"]}
+    if viewer_successors.keys() != prior_successors.keys():
+        raise ValueError("Viewer overlay must preserve the prior successor paths")
+    for path, successor in viewer_successors.items():
+        prior = prior_successors[path]
+        if (successor.get("previousCopySha256") != prior.get("previousCopySha256")
+                or successor.get("previousReviewedSha256") != prior.get("previousReviewedSha256")
+                or successor.get("previousVersionSha256") != prior["currentSha256"]):
+            raise ValueError(f"Viewer successor is not bound to prior overlay: {path}")
     overlay_paths = (
         "handoff/decisions/2026-11-18-material-selection-receipt.json",
         "handoff/viewer/verification/2026-11-18-viewer-update-receipt.json",
         "handoff/viewer/verification/2026-11-19-cbr-r05-overlay-receipt.json",
         "handoff/viewer/verification/2026-11-19-final-handoff-overlay-receipt.json",
+        prior_viewer_overlay_path,
         viewer_overlay_path,
     )
     overlays = {}

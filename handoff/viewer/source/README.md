@@ -11,7 +11,7 @@ Geometry and non-path fields in the derived viewer input are unchanged by redact
 provisional dimensions, review status and site/professional holds remain.
 
 The viewer hides architectural door leaves, shows provisional storage interiors by default,
-and offers whole-house and selected-room HIGH/LOW switches, plus a compact fitting list. Its downloads
+and offers whole-house HIGH/LOW brightness sliders, plus a compact fitting list. Its downloads
 are PDF-only. To reproduce the current published HTML with Node.js, restore the pinned packages
 with `npm ci`, then run `node rebuild-public.mjs --out <new-index.html>`. The command refuses
 to write unless the result matches the current `build-info.json` HTML hash.

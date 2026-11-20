@@ -2,7 +2,7 @@
   "authoritativeMasterSha256": "79ece2aef1acd63ee401702149a91e29a6ed660123c4d9d3640ab5304ed89822",
   "embeddedPlanDataSha256": "a75aeb46650e0ff46f0d29e94baf6e6e8cea2f8c3719928243feeb95036ee9cf",
   "embeddedHeatDataSha256": "36d07644496c8480e2a506150ea383b450364f83d17eafc03e13a2cba1660153",
-  "viewerHtmlSha256": "d0358d2670e5d65b4a5d5526498b30b55e80d67fad9c83b4595d0a42f2392c61",
+  "viewerHtmlSha256": "759f7144d07255797bc0443217e070b137ec7bef3e237bc8e1a54532d415305c",
   "transformation": "The embedded plan is a derived viewer-specific selection, not a byte-identical copy of the authoritative master. The viewer omits the budget and unused source storage object, but retains derived storage items and holds. Absolute path values are replaced by basenames or a private-source marker; attachment fields are omitted. No other derived plan fields or values are changed by privacy redaction.",
   "redactions": {
     "pathBasenames": 6,
