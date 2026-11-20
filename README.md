@@ -19,5 +19,5 @@ Colour temperatures are fixed per fitting and are not adjustable.
 - Wardrobe interiors are provisional and unapproved; the viewer's open-cabinet illustration is not measured joinery. Measurement and sign-off remain open.
 - Door leaves are hidden in the viewer; openings remain in the design. D01's leaf arrangement remains a site check. Assumed MBR-S and CBR pocket returns extend about 0.30 m beyond modeled room corners. The viewer clips them only for display; actual pocket ends remain unmeasured and held.
 - The linked review PDFs are in the adjacent `downloads` folder. When the viewer is opened from disk, a browser may open a PDF in a new tab; use the PDF viewer's Save button.
-- The [trade handoff](handoff/index.html) links the current plans, schedules, drawings and renders. Build provenance is retained in `build-info.json`.
+- The [trade handoff](handoff/index.html) links the current plans, schedules, drawings and renders. Canonical lighting and electrical handouts are in `handoff/electrician/lighting/` and `handoff/electrician/electrical/`; use those paths rather than the retired `current/` copies. Build provenance is retained in `build-info.json`.
 - Three.js 0.181.1 is bundled into `index.html`; its MIT notice is embedded and provided as `THREE-LICENSE.txt`. No CDN or network access is needed at runtime.

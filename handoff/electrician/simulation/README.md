@@ -3,7 +3,7 @@
 **Generic, unmeasured estimates; not product validation or construction approval.**
 The [gallery](index.html) contains 30 SVG/PNG pairs for ten rooms.
 Superseded children's-room images and derived CSV rows have been removed.
-Use the [current review heatmaps](../lighting/current/heatmaps-summary.pdf) for CBR.
+Use the [current review heatmaps](../lighting/heatmaps-summary.pdf) for CBR.
 The [historical report](simulation-report.html) is not current CBR photometry.
 Viewer/workbench maps are separate frozen analytic estimates, not dynamic ray tracing.
 

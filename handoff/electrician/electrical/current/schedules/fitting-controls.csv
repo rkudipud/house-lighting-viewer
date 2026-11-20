@@ -1,7 +1,0 @@
-﻿circuit,room,board,device,model_W,CCT,status
-C24,MBR,SB-05,"PIR night step light, brightness set on the fitting",1,2700K,PRODUCT / SITE HOLD
-C25,MBR,SB-05L,reading light with integral dimmer (on the fitting),3,3000K,PRODUCT / SITE HOLD
-C26,MBR,SB-05R,reading light with integral dimmer (on the fitting),3,3000K,PRODUCT / SITE HOLD
-C33,LOB,SB-07,"PIR night step light, brightness set on the fitting",1,2700K,PRODUCT / SITE HOLD
-C41,CBR,SB-08RL,reading light with integral dimmer (on the fitting),3,3000K,PRODUCT / SITE HOLD
-C41b,CBR,SB-08RR,reading light with integral dimmer (on the fitting),3,3000K,PRODUCT / SITE HOLD

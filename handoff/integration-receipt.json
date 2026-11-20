@@ -33,7 +33,7 @@
     "viewer": "index.html",
     "renders": "handoff/viewer/renders/render-receipt.json",
     "historicalSimulation": "handoff/electrician/simulation/index.html",
-    "currentHeatmaps": "handoff/electrician/lighting/current/heatmaps-summary.pdf"
+    "currentHeatmaps": "handoff/electrician/lighting/heatmaps-summary.pdf"
   },
   "cleanupReceipt": "handoff/cleanup-receipt.json",
   "limits": [

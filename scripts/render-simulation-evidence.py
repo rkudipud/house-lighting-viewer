@@ -148,7 +148,7 @@ def main():
     (PACK / "simulation-report.html").write_text(
         page("Exploratory simulation report", '<a href="index.html">Simulation evidence and heatmaps</a>'
              '<p class="hold">Historical report: CBR geometry and LOW state predate the current design; use the '
-             '<a href="../lighting/current/heatmaps-summary.pdf">current review heatmaps</a>. Its small-room '
+             '<a href="../lighting/heatmaps-summary.pdf">current review heatmaps</a>. Its small-room '
              'sensitivity not-run statement is superseded by the '
              '<a href="revision-all-rooms/index.html">six-room revision</a>. Limitations and holds remain.</p>' + report_body),
         encoding="utf-8",
@@ -158,7 +158,7 @@ def main():
 <h1>Historical exploratory Radiance evidence</h1>
 <p class="hold"><strong>Historical baseline, not the current children's-room design.</strong>
 The superseded CBR image derivatives and CSV rows have been removed.
-Use the <a href="../lighting/current/heatmaps-summary.pdf">current review heatmaps</a> for CBR.
+Use the <a href="../lighting/heatmaps-summary.pdf">current review heatmaps</a> for CBR.
 The original multi-room numerical source is retained unchanged for provenance, not as the current CBR result.
 The <a href="revision-all-rooms/index.html">verified six-room small-room sensitivity revision</a>
 is now included. It supersedes only the historical report's not-run statement.
